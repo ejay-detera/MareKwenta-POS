@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Detera\\source\\repos\\MareKwent-POS\\Mare-POS\\Mare-POS.csproj": {}
+    "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Detera\\source\\repos\\MareKwent-POS\\Mare-POS\\Mare-POS.csproj": {
+    "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Detera\\source\\repos\\MareKwent-POS\\Mare-POS\\Mare-POS.csproj",
+        "projectUniqueName": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj",
         "projectName": "Mare-POS",
-        "projectPath": "C:\\Users\\Detera\\source\\repos\\MareKwent-POS\\Mare-POS\\Mare-POS.csproj",
+        "projectPath": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj",
         "packagesPath": "C:\\Users\\Detera\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Detera\\source\\repos\\MareKwent-POS\\Mare-POS\\obj\\",
+        "outputPath": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -49,6 +49,22 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.13, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
