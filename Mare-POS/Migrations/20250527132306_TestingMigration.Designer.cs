@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Mare_POS.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20250526151442_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20250527132306_TestingMigration")]
+    partial class TestingMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,7 +24,7 @@ namespace Mare_POS.Migrations
 
             MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
 
-            modelBuilder.Entity("Mare_POS.Models.User", b =>
+            modelBuilder.Entity("Mare_POS.Models.Testing", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -32,17 +32,17 @@ namespace Mare_POS.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Password")
+                    b.Property<string>("Testing1")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("Username")
+                    b.Property<string>("Testing2")
                         .IsRequired()
                         .HasColumnType("longtext");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.ToTable("Testings");
                 });
 #pragma warning restore 612, 618
         }

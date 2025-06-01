@@ -21,15 +21,33 @@ namespace Mare_POS.Migrations
 
             MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
 
-            modelBuilder.Entity("Mare_POS.Models.User", b =>
+            modelBuilder.Entity("Mare_POS.Models.Employee", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("EmployeeID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("EmployeeID"));
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("MiddleName")
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("OwnerID")
+                        .HasColumnType("int");
 
                     b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Role")
                         .IsRequired()
                         .HasColumnType("longtext");
 
@@ -37,9 +55,48 @@ namespace Mare_POS.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.HasKey("EmployeeID");
+
+                    b.HasIndex("OwnerID");
+
+                    b.ToTable("Employees");
+                });
+
+            modelBuilder.Entity("Mare_POS.Models.Testing", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Testing1")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Testing2")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.ToTable("Testing");
+                });
+
+            modelBuilder.Entity("Mare_POS.Models.Employee", b =>
+                {
+                    b.HasOne("Mare_POS.Models.Employee", "Owner")
+                        .WithMany("OwnedEmployees")
+                        .HasForeignKey("OwnerID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Owner");
+                });
+
+            modelBuilder.Entity("Mare_POS.Models.Employee", b =>
+                {
+                    b.Navigation("OwnedEmployees");
                 });
 #pragma warning restore 612, 618
         }

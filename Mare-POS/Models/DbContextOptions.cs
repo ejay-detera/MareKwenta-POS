@@ -13,4 +13,4 @@ optionsBuilder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionStr
 using var context = new MyDbContext(optionsBuilder.Options);
 
 // 4. Now you can use your context like normal
-var users = context.Users.ToList();
+var users = context.Employees.ToList();

@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace Mare_POS.Models
 {
@@ -8,7 +9,9 @@ namespace Mare_POS.Models
         {
         }
 
-        public DbSet<User> Users { get; set; } // Example DbSet
+        public DbSet<Employee> Employees { get; set; }
+
+        public DbSet<Testing> Testing { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -86,7 +86,6 @@ C:\Users\Detera\Desktop\C# WINFORMS\MareKwenta-POS\Mare-POS\bin\Debug\net8.0-win
 C:\Users\Detera\Desktop\C# WINFORMS\MareKwenta-POS\Mare-POS\bin\Debug\net8.0-windows\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Detera\Desktop\C# WINFORMS\MareKwenta-POS\Mare-POS\bin\Debug\net8.0-windows\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Detera\Desktop\C# WINFORMS\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare-POS.csproj.AssemblyReference.cache
-C:\Users\Detera\Desktop\C# WINFORMS\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.Form1.resources
 C:\Users\Detera\Desktop\C# WINFORMS\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare-POS.csproj.GenerateResource.cache
 C:\Users\Detera\Desktop\C# WINFORMS\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare-POS.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Detera\Desktop\C# WINFORMS\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare-POS.AssemblyInfoInputs.cache
@@ -99,3 +98,5 @@ C:\Users\Detera\Desktop\C# WINFORMS\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-win
 C:\Users\Detera\Desktop\C# WINFORMS\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare-POS.pdb
 C:\Users\Detera\Desktop\C# WINFORMS\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare-POS.genruntimeconfig.cache
 C:\Users\Detera\Desktop\C# WINFORMS\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\ref\Mare-POS.dll
+C:\Users\Detera\Desktop\C# WINFORMS\MareKwenta-POS\Mare-POS\bin\Debug\net8.0-windows\CuoreUI.dll
+C:\Users\Detera\Desktop\C# WINFORMS\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.Login.resources
