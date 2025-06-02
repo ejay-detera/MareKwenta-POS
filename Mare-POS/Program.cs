@@ -13,6 +13,7 @@ namespace Mare_POS
             {
                 ApplicationConfiguration.Initialize();
                 Application.Run(new Inventory()); // Ensure you start the application with a form
+                Application.Run(new Form1()); // This line is redundant if you already have a main form
             }
             catch (Exception ex)
             {
