@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "9QomLqHFll0=",
   "success": true,
   "projectFilePath": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj",
@@ -34,6 +35,13 @@
     "C:\\Users\\Detera\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\Detera\\.nuget\\packages\\system.windows.extensions\\8.0.0\\system.windows.extensions.8.0.0.nupkg.sha512",
     "C:\\Users\\Detera\\.nuget\\packages\\zstdsharp.port\\0.8.5\\zstdsharp.port.0.8.5.nupkg.sha512"
+=======
+  "dgSpecHash": "InD36il98KU=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Detera\\.nuget\\packages\\cuoreui.winforms\\2025.5.7\\cuoreui.winforms.2025.5.7.nupkg.sha512"
+>>>>>>> dev-angela
   ],
   "logs": []
 }

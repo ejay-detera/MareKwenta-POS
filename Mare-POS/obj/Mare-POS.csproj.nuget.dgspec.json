@@ -53,10 +53,13 @@
             "CuoreUI.Winforms": {
               "target": "Package",
               "version": "[2025.5.7, )"
+<<<<<<< HEAD
             },
             "MySql.Data": {
               "target": "Package",
               "version": "[9.3.0, )"
+=======
+>>>>>>> dev-angela
             }
           },
           "imports": [
