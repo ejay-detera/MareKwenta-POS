@@ -48,6 +48,10 @@
           "SelectedChildIndex": 6,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "20250526151442_InitialCreate.cs",
@@ -57,8 +61,7 @@
               "RelativeToolTip": "Migrations\\20250526151442_InitialCreate.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T15:15:54.261Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-26T15:15:54.261Z"
             },
             {
               "$type": "Document",
@@ -70,8 +73,7 @@
               "RelativeToolTip": "Models\\IDesignTimeDbContextFactory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T15:08:49.368Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-26T15:08:49.368Z"
             },
             {
               "$type": "Document",
@@ -83,8 +85,7 @@
               "RelativeToolTip": "..\\..\\..\\C",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-05-26T15:08:22.512Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-26T15:08:22.512Z"
             },
             {
               "$type": "Document",
@@ -96,8 +97,7 @@
               "RelativeToolTip": "Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T15:05:21.617Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-26T15:05:21.617Z"
             },
             {
               "$type": "Document",
@@ -109,12 +109,7 @@
               "RelativeToolTip": "Models\\DbContextOptions.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T15:05:18.329Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "WhenOpened": "2025-05-26T15:05:18.329Z"
             },
             {
               "$type": "Document",
@@ -139,8 +134,7 @@
               "RelativeToolTip": "Models\\MyDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T14:48:51.394Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-26T14:48:51.394Z"
             },
             {
               "$type": "Document",
@@ -152,7 +146,8 @@
               "RelativeToolTip": "Mare-POS.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-05-26T14:42:21.317Z"
+              "WhenOpened": "2025-05-26T14:42:21.317Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
