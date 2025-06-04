@@ -48,7 +48,7 @@ namespace Mare_POS
         // Method to update sidebar button visibility based on user type
         private void UpdateSidebarVisibility()
         {
-            if (currentUserType == UserType.User)
+            if (currentUserType == UserType.Admin)
             {
                 // Admin sees all buttons
                 ShowAllButtons();
@@ -141,31 +141,31 @@ namespace Mare_POS
 
         private void btn_staff_Click(object sender, EventArgs e)
         {
-            LoadPage(new StaffPage());
+            LoadPage(new StaffPage()); // change the "StaffPage" to the name of you user control
             HighlightButton((Button)sender);
         }
 
         private void btn_receipt_Click(object sender, EventArgs e)
         {
-            LoadPage(new ReceiptPage());
+            LoadPage(new ReceiptPage()); // change the "ReceiptPage" to the name of you user control
             HighlightButton((Button)sender);
         }
 
         private void btn_cashbox_Click(object sender, EventArgs e)
         {
-            LoadPage(new CashboxPage());
+            LoadPage(new CashboxForm());
             HighlightButton((Button)sender);
         }
 
         private void btn_ticket_Click(object sender, EventArgs e)
         {
-            LoadPage(new TicketPage());
+            LoadPage(new TicketPage()); // change the "TicketPage" to the name of you user control
             HighlightButton((Button)sender);
         }
 
         private void btn_dashboard_Click(object sender, EventArgs e)
         {
-            LoadPage(new DashboardPage());
+            LoadPage(new DashboardPage()); // change the "DashboardPage" to the name of you user control
             HighlightButton((Button)sender);
         }
 
@@ -179,6 +179,11 @@ namespace Mare_POS
         private void bottomMarker_Paint(object sender, PaintEventArgs e) { }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void logo_Click(object sender, EventArgs e)
         {
 
         }

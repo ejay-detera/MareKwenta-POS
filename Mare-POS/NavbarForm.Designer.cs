@@ -34,7 +34,6 @@
             btn_cashbox = new Button();
             btn_receipt = new Button();
             btn_staff = new Button();
-            logo_line = new Panel();
             logo = new Label();
             btn_inventory = new Button();
             panel1 = new Panel();
@@ -46,11 +45,10 @@
             navbarPanel.BackColor = Color.FromArgb(242, 239, 234);
             navbarPanel.Controls.Add(btn_dashboard);
             navbarPanel.Controls.Add(btn_ticket);
+            navbarPanel.Controls.Add(logo);
             navbarPanel.Controls.Add(btn_cashbox);
             navbarPanel.Controls.Add(btn_receipt);
             navbarPanel.Controls.Add(btn_staff);
-            navbarPanel.Controls.Add(logo_line);
-            navbarPanel.Controls.Add(logo);
             navbarPanel.Controls.Add(btn_inventory);
             navbarPanel.Dock = DockStyle.Left;
             navbarPanel.Location = new Point(0, 0);
@@ -71,7 +69,7 @@
             btn_dashboard.Margin = new Padding(0);
             btn_dashboard.Name = "btn_dashboard";
             btn_dashboard.RightToLeft = RightToLeft.No;
-            btn_dashboard.Size = new Size(118, 87);
+            btn_dashboard.Size = new Size(120, 87);
             btn_dashboard.TabIndex = 5;
             btn_dashboard.Text = "Dashboard";
             btn_dashboard.TextAlign = ContentAlignment.BottomCenter;
@@ -131,7 +129,7 @@
             btn_receipt.Margin = new Padding(0);
             btn_receipt.Name = "btn_receipt";
             btn_receipt.RightToLeft = RightToLeft.No;
-            btn_receipt.Size = new Size(119, 87);
+            btn_receipt.Size = new Size(120, 87);
             btn_receipt.TabIndex = 7;
             btn_receipt.Text = "Receipt";
             btn_receipt.TextAlign = ContentAlignment.BottomCenter;
@@ -151,7 +149,7 @@
             btn_staff.Margin = new Padding(0);
             btn_staff.Name = "btn_staff";
             btn_staff.RightToLeft = RightToLeft.No;
-            btn_staff.Size = new Size(119, 87);
+            btn_staff.Size = new Size(120, 87);
             btn_staff.TabIndex = 5;
             btn_staff.Text = "Staff";
             btn_staff.TextAlign = ContentAlignment.BottomCenter;
@@ -159,19 +157,11 @@
             btn_staff.UseVisualStyleBackColor = false;
             btn_staff.Click += btn_staff_Click;
             // 
-            // logo_line
-            // 
-            logo_line.BackColor = Color.FromArgb(78, 45, 24);
-            logo_line.Location = new Point(20, 62);
-            logo_line.Name = "logo_line";
-            logo_line.Size = new Size(75, 4);
-            logo_line.TabIndex = 2;
-            // 
             // logo
             // 
             logo.AutoSize = true;
             logo.BackColor = Color.Transparent;
-            logo.Font = new Font("Unbounded Medium", 27.7499962F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            logo.Font = new Font("Unbounded Medium", 27.7499962F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
             logo.ForeColor = Color.FromArgb(78, 45, 24);
             logo.Location = new Point(8, 9);
             logo.Margin = new Padding(0);
@@ -180,6 +170,7 @@
             logo.Size = new Size(103, 58);
             logo.TabIndex = 0;
             logo.Text = "MK";
+            logo.Click += logo_Click;
             // 
             // btn_inventory
             // 
@@ -236,7 +227,6 @@
 
         private Panel navbarPanel;
         private Label logo;
-        private Panel logo_line;
         private Button btn_inventory;
         private Button btn_dashboard;
         private Button btn_ticket;
