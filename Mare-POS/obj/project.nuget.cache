@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "InD36il98KU=",
+  "dgSpecHash": "OlhKZguKOJ0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj",
+  "projectFilePath": "C:\\Users\\Angela Raquedan\\Source\\Repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Detera\\.nuget\\packages\\cuoreui.winforms\\2025.5.7\\cuoreui.winforms.2025.5.7.nupkg.sha512"
+    "C:\\Users\\Angela Raquedan\\.nuget\\packages\\cuoreui.winforms\\2025.5.7\\cuoreui.winforms.2025.5.7.nupkg.sha512"
   ],
   "logs": []
 }
