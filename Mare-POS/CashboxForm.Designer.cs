@@ -99,6 +99,7 @@
             cashboxHeader.Font = new Font("Unbounded Medium", 27.7499962F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cashboxHeader.ForeColor = Color.FromArgb(78, 45, 24);
             cashboxHeader.Location = new Point(0, 0);
+            cashboxHeader.Margin = new Padding(20, 0, 20, 0);
             cashboxHeader.Name = "cashboxHeader";
             cashboxHeader.Padding = new Padding(20, 10, 10, 10);
             cashboxHeader.Size = new Size(276, 78);
@@ -123,6 +124,7 @@
             label17.Font = new Font("Unbounded", 23.9999962F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label17.ForeColor = Color.FromArgb(78, 45, 24);
             label17.Location = new Point(1014, 17);
+            label17.Margin = new Padding(20, 0, 20, 0);
             label17.Name = "label17";
             label17.Size = new Size(270, 49);
             label17.TabIndex = 1;
@@ -171,6 +173,7 @@
             MayaLabel.Font = new Font("Inter 24pt 24pt Medium", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             MayaLabel.ForeColor = Color.FromArgb(0, 137, 76);
             MayaLabel.Location = new Point(80, 32);
+            MayaLabel.Margin = new Padding(12, 0, 12, 0);
             MayaLabel.Name = "MayaLabel";
             MayaLabel.Size = new Size(91, 36);
             MayaLabel.TabIndex = 3;
@@ -183,6 +186,7 @@
             MayaLabel1.Font = new Font("Inter 28pt 28pt SemiBold", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             MayaLabel1.ForeColor = Color.FromArgb(0, 137, 76);
             MayaLabel1.Location = new Point(26, 80);
+            MayaLabel1.Margin = new Padding(12, 0, 12, 0);
             MayaLabel1.Name = "MayaLabel1";
             MayaLabel1.Size = new Size(200, 44);
             MayaLabel1.TabIndex = 2;
@@ -211,6 +215,7 @@
             GcashLabel.Font = new Font("Inter 24pt 24pt Medium", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             GcashLabel.ForeColor = Color.FromArgb(0, 145, 247);
             GcashLabel.Location = new Point(74, 32);
+            GcashLabel.Margin = new Padding(12, 0, 12, 0);
             GcashLabel.Name = "GcashLabel";
             GcashLabel.Size = new Size(107, 36);
             GcashLabel.TabIndex = 1;
@@ -223,6 +228,7 @@
             GcashLabel1.Font = new Font("Inter 28pt 28pt SemiBold", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             GcashLabel1.ForeColor = Color.FromArgb(0, 145, 247);
             GcashLabel1.Location = new Point(26, 80);
+            GcashLabel1.Margin = new Padding(12, 0, 12, 0);
             GcashLabel1.Name = "GcashLabel1";
             GcashLabel1.Size = new Size(200, 44);
             GcashLabel1.TabIndex = 2;
@@ -251,6 +257,7 @@
             CashLabel.Font = new Font("Inter 24pt 24pt Medium", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             CashLabel.ForeColor = Color.FromArgb(78, 45, 24);
             CashLabel.Location = new Point(82, 32);
+            CashLabel.Margin = new Padding(12, 0, 12, 0);
             CashLabel.Name = "CashLabel";
             CashLabel.Size = new Size(89, 36);
             CashLabel.TabIndex = 0;
@@ -263,6 +270,7 @@
             CashLabel1.Font = new Font("Inter 28pt 28pt SemiBold", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             CashLabel1.ForeColor = Color.FromArgb(78, 45, 24);
             CashLabel1.Location = new Point(26, 80);
+            CashLabel1.Margin = new Padding(12, 0, 12, 0);
             CashLabel1.Name = "CashLabel1";
             CashLabel1.Size = new Size(200, 44);
             CashLabel1.TabIndex = 1;
@@ -271,6 +279,7 @@
             // 
             // pnl_counters
             // 
+            pnl_counters.AutoScroll = true;
             pnl_counters.BackColor = Color.FromArgb(242, 239, 234);
             pnl_counters.Controls.Add(cuiPanel1);
             pnl_counters.Controls.Add(tableLayoutPanel1);
@@ -312,6 +321,7 @@
             // 
             // cuiPanel6
             // 
+            cuiPanel6.AutoScroll = true;
             cuiPanel6.Controls.Add(cuiPanel8);
             cuiPanel6.Controls.Add(cuiPanel7);
             cuiPanel6.Controls.Add(btn_addExpense);
@@ -470,17 +480,16 @@
             // cuiPanel7
             // 
             cuiPanel7.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            cuiPanel7.BorderStyle = BorderStyle.FixedSingle;
             cuiPanel7.Controls.Add(label12);
             cuiPanel7.Controls.Add(label11);
             cuiPanel7.Controls.Add(label10);
             cuiPanel7.Controls.Add(cuiButton3);
             cuiPanel7.Controls.Add(cuiButton2);
-            cuiPanel7.Location = new Point(0, 64);
+            cuiPanel7.Location = new Point(1, 64);
             cuiPanel7.Name = "cuiPanel7";
             cuiPanel7.OutlineThickness = 1F;
             cuiPanel7.PanelColor = Color.Transparent;
-            cuiPanel7.PanelOutlineColor = Color.Transparent;
+            cuiPanel7.PanelOutlineColor = Color.FromArgb(78, 45, 24);
             cuiPanel7.Rounding = new Padding(0);
             cuiPanel7.Size = new Size(1192, 65);
             cuiPanel7.TabIndex = 7;
@@ -491,7 +500,7 @@
             label12.AutoSize = true;
             label12.Font = new Font("Inter 28pt 28pt", 12F);
             label12.ForeColor = Color.FromArgb(78, 45, 24);
-            label12.Location = new Point(1097, 23);
+            label12.Location = new Point(1099, 24);
             label12.Name = "label12";
             label12.Size = new Size(72, 18);
             label12.TabIndex = 11;
@@ -540,7 +549,8 @@
             cuiButton3.ImageAutoCenter = true;
             cuiButton3.ImageExpand = new Point(6, 6);
             cuiButton3.ImageOffset = new Point(0, 0);
-            cuiButton3.Location = new Point(69, 12);
+            cuiButton3.Location = new Point(69, 13);
+            cuiButton3.Margin = new Padding(12);
             cuiButton3.Name = "cuiButton3";
             cuiButton3.NormalBackground = Color.White;
             cuiButton3.NormalForeColor = Color.Transparent;
@@ -578,7 +588,8 @@
             cuiButton2.ImageAutoCenter = true;
             cuiButton2.ImageExpand = new Point(6, 6);
             cuiButton2.ImageOffset = new Point(0, 0);
-            cuiButton2.Location = new Point(21, 12);
+            cuiButton2.Location = new Point(21, 13);
+            cuiButton2.Margin = new Padding(12);
             cuiButton2.Name = "cuiButton2";
             cuiButton2.NormalBackground = Color.White;
             cuiButton2.NormalForeColor = Color.Transparent;
@@ -617,6 +628,7 @@
             btn_addExpense.ImageExpand = new Point(12, 12);
             btn_addExpense.ImageOffset = new Point(0, 0);
             btn_addExpense.Location = new Point(1131, 14);
+            btn_addExpense.Margin = new Padding(12);
             btn_addExpense.Name = "btn_addExpense";
             btn_addExpense.NormalBackground = Color.White;
             btn_addExpense.NormalForeColor = Color.Transparent;
@@ -640,6 +652,7 @@
             label9.Font = new Font("Inter 18pt 18pt SemiBold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label9.ForeColor = Color.FromArgb(78, 45, 24);
             label9.Location = new Point(22, 18);
+            label9.Margin = new Padding(20, 0, 20, 0);
             label9.Name = "label9";
             label9.Size = new Size(192, 29);
             label9.TabIndex = 3;
@@ -672,7 +685,7 @@
             cuiPanel5.Controls.Add(label7);
             cuiPanel5.Controls.Add(label8);
             cuiPanel5.Location = new Point(981, 22);
-            cuiPanel5.Margin = new Padding(0);
+            cuiPanel5.Margin = new Padding(12, 0, 12, 0);
             cuiPanel5.Name = "cuiPanel5";
             cuiPanel5.OutlineThickness = 3F;
             cuiPanel5.PanelColor = Color.FromArgb(78, 45, 24);
@@ -713,7 +726,7 @@
             cuiPanel4.Controls.Add(label5);
             cuiPanel4.Controls.Add(label6);
             cuiPanel4.Location = new Point(665, 22);
-            cuiPanel4.Margin = new Padding(0);
+            cuiPanel4.Margin = new Padding(12, 0, 12, 0);
             cuiPanel4.Name = "cuiPanel4";
             cuiPanel4.OutlineThickness = 3F;
             cuiPanel4.PanelColor = Color.FromArgb(78, 45, 24);
@@ -753,7 +766,7 @@
             cuiPanel3.Controls.Add(label3);
             cuiPanel3.Controls.Add(label4);
             cuiPanel3.Location = new Point(349, 22);
-            cuiPanel3.Margin = new Padding(0);
+            cuiPanel3.Margin = new Padding(12, 0, 12, 0);
             cuiPanel3.Name = "cuiPanel3";
             cuiPanel3.OutlineThickness = 3F;
             cuiPanel3.PanelColor = Color.FromArgb(78, 45, 24);
@@ -793,7 +806,7 @@
             cuiPanel2.Controls.Add(label1);
             cuiPanel2.Controls.Add(label2);
             cuiPanel2.Location = new Point(33, 22);
-            cuiPanel2.Margin = new Padding(0);
+            cuiPanel2.Margin = new Padding(12, 0, 12, 0);
             cuiPanel2.Name = "cuiPanel2";
             cuiPanel2.OutlineThickness = 3F;
             cuiPanel2.PanelColor = Color.FromArgb(78, 45, 24);

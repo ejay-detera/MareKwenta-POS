@@ -48,7 +48,7 @@ namespace Mare_POS
         // Method to update sidebar button visibility based on user type
         private void UpdateSidebarVisibility()
         {
-            if (currentUserType == UserType.Admin)
+            if (currentUserType == UserType.User)
             {
                 // Admin sees all buttons
                 ShowAllButtons();
