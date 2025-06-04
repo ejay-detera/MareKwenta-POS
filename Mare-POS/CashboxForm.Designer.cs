@@ -59,7 +59,7 @@
             label10 = new Label();
             cuiButton3 = new CuoreUI.Controls.cuiButton();
             cuiButton2 = new CuoreUI.Controls.cuiButton();
-            cuiButton1 = new CuoreUI.Controls.cuiButton();
+            btn_addExpense = new CuoreUI.Controls.cuiButton();
             label9 = new Label();
             tableLayoutPanel2 = new TableLayoutPanel();
             cuiPanel5 = new CuoreUI.Controls.cuiPanel();
@@ -314,7 +314,7 @@
             // 
             cuiPanel6.Controls.Add(cuiPanel8);
             cuiPanel6.Controls.Add(cuiPanel7);
-            cuiPanel6.Controls.Add(cuiButton1);
+            cuiPanel6.Controls.Add(btn_addExpense);
             cuiPanel6.Controls.Add(label9);
             cuiPanel6.Dock = DockStyle.Fill;
             cuiPanel6.Location = new Point(3, 3);
@@ -470,6 +470,7 @@
             // cuiPanel7
             // 
             cuiPanel7.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            cuiPanel7.BorderStyle = BorderStyle.FixedSingle;
             cuiPanel7.Controls.Add(label12);
             cuiPanel7.Controls.Add(label11);
             cuiPanel7.Controls.Add(label10);
@@ -490,7 +491,7 @@
             label12.AutoSize = true;
             label12.Font = new Font("Inter 28pt 28pt", 12F);
             label12.ForeColor = Color.FromArgb(78, 45, 24);
-            label12.Location = new Point(1099, 24);
+            label12.Location = new Point(1097, 23);
             label12.Name = "label12";
             label12.Size = new Size(72, 18);
             label12.TabIndex = 11;
@@ -539,7 +540,7 @@
             cuiButton3.ImageAutoCenter = true;
             cuiButton3.ImageExpand = new Point(6, 6);
             cuiButton3.ImageOffset = new Point(0, 0);
-            cuiButton3.Location = new Point(69, 13);
+            cuiButton3.Location = new Point(69, 12);
             cuiButton3.Name = "cuiButton3";
             cuiButton3.NormalBackground = Color.White;
             cuiButton3.NormalForeColor = Color.Transparent;
@@ -577,7 +578,7 @@
             cuiButton2.ImageAutoCenter = true;
             cuiButton2.ImageExpand = new Point(6, 6);
             cuiButton2.ImageOffset = new Point(0, 0);
-            cuiButton2.Location = new Point(21, 13);
+            cuiButton2.Location = new Point(21, 12);
             cuiButton2.Name = "cuiButton2";
             cuiButton2.NormalBackground = Color.White;
             cuiButton2.NormalForeColor = Color.Transparent;
@@ -594,44 +595,44 @@
             cuiButton2.TextAlignment = StringAlignment.Center;
             cuiButton2.TextOffset = new Point(0, 0);
             // 
-            // cuiButton1
+            // btn_addExpense
             // 
-            cuiButton1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            cuiButton1.CheckButton = false;
-            cuiButton1.Checked = false;
-            cuiButton1.CheckedBackground = Color.FromArgb(255, 106, 0);
-            cuiButton1.CheckedForeColor = Color.White;
-            cuiButton1.CheckedImageTint = Color.White;
-            cuiButton1.CheckedOutline = Color.FromArgb(255, 106, 0);
-            cuiButton1.Content = "";
-            cuiButton1.DialogResult = DialogResult.None;
-            cuiButton1.Font = new Font("Microsoft Sans Serif", 9.75F);
-            cuiButton1.ForeColor = Color.Transparent;
-            cuiButton1.HoverBackground = Color.FromArgb(60, 78, 45, 24);
-            cuiButton1.HoveredImageTint = Color.White;
-            cuiButton1.HoverForeColor = Color.Transparent;
-            cuiButton1.HoverOutline = Color.Transparent;
-            cuiButton1.Image = (Image)resources.GetObject("cuiButton1.Image");
-            cuiButton1.ImageAutoCenter = true;
-            cuiButton1.ImageExpand = new Point(12, 12);
-            cuiButton1.ImageOffset = new Point(0, 0);
-            cuiButton1.Location = new Point(1131, 14);
-            cuiButton1.Name = "cuiButton1";
-            cuiButton1.NormalBackground = Color.White;
-            cuiButton1.NormalForeColor = Color.Transparent;
-            cuiButton1.NormalImageTint = Color.White;
-            cuiButton1.NormalOutline = Color.Transparent;
-            cuiButton1.OutlineThickness = 1F;
-            cuiButton1.PressedBackground = Color.FromArgb(60, 78, 45, 24);
-            cuiButton1.PressedForeColor = Color.Transparent;
-            cuiButton1.PressedImageTint = Color.FromArgb(78, 45, 24);
-            cuiButton1.PressedOutline = Color.Transparent;
-            cuiButton1.Rounding = new Padding(8);
-            cuiButton1.Size = new Size(40, 40);
-            cuiButton1.TabIndex = 6;
-            cuiButton1.TextAlignment = StringAlignment.Center;
-            cuiButton1.TextOffset = new Point(0, 0);
-            cuiButton1.Click += cuiButton1_Click;
+            btn_addExpense.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btn_addExpense.CheckButton = false;
+            btn_addExpense.Checked = false;
+            btn_addExpense.CheckedBackground = Color.FromArgb(255, 106, 0);
+            btn_addExpense.CheckedForeColor = Color.White;
+            btn_addExpense.CheckedImageTint = Color.White;
+            btn_addExpense.CheckedOutline = Color.FromArgb(255, 106, 0);
+            btn_addExpense.Content = "";
+            btn_addExpense.DialogResult = DialogResult.None;
+            btn_addExpense.Font = new Font("Microsoft Sans Serif", 9.75F);
+            btn_addExpense.ForeColor = Color.Transparent;
+            btn_addExpense.HoverBackground = Color.FromArgb(60, 78, 45, 24);
+            btn_addExpense.HoveredImageTint = Color.White;
+            btn_addExpense.HoverForeColor = Color.Transparent;
+            btn_addExpense.HoverOutline = Color.Transparent;
+            btn_addExpense.Image = (Image)resources.GetObject("btn_addExpense.Image");
+            btn_addExpense.ImageAutoCenter = true;
+            btn_addExpense.ImageExpand = new Point(12, 12);
+            btn_addExpense.ImageOffset = new Point(0, 0);
+            btn_addExpense.Location = new Point(1131, 14);
+            btn_addExpense.Name = "btn_addExpense";
+            btn_addExpense.NormalBackground = Color.White;
+            btn_addExpense.NormalForeColor = Color.Transparent;
+            btn_addExpense.NormalImageTint = Color.White;
+            btn_addExpense.NormalOutline = Color.Transparent;
+            btn_addExpense.OutlineThickness = 1F;
+            btn_addExpense.PressedBackground = Color.FromArgb(60, 78, 45, 24);
+            btn_addExpense.PressedForeColor = Color.Transparent;
+            btn_addExpense.PressedImageTint = Color.FromArgb(78, 45, 24);
+            btn_addExpense.PressedOutline = Color.Transparent;
+            btn_addExpense.Rounding = new Padding(8);
+            btn_addExpense.Size = new Size(40, 40);
+            btn_addExpense.TabIndex = 6;
+            btn_addExpense.TextAlignment = StringAlignment.Center;
+            btn_addExpense.TextOffset = new Point(0, 0);
+            btn_addExpense.Click += cuiButton1_Click;
             // 
             // label9
             // 
@@ -896,7 +897,7 @@
         private Label label5;
         private Label label6;
         private Label label9;
-        private CuoreUI.Controls.cuiButton cuiButton1;
+        private CuoreUI.Controls.cuiButton btn_addExpense;
         private TableLayoutPanel tableLayoutPanel3;
         private CuoreUI.Controls.cuiPanel cuiPanel6;
         private CuoreUI.Controls.cuiPanel cuiPanel7;

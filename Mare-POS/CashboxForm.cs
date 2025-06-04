@@ -15,8 +15,16 @@ namespace Mare_POS
         public CashboxForm()
         {
             InitializeComponent();
+
+            this.btn_addExpense.Click += new System.EventHandler(this.btn_plus_Click);
         }
 
+        private void btn_plus_Click(object? sender, EventArgs e)
+        {
+            AddExpenseForm addExpenseForm = new AddExpenseForm();
+            addExpenseForm.StartPosition = FormStartPosition.CenterParent;
+            addExpenseForm.ShowDialog();
+        }
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -56,5 +64,6 @@ namespace Mare_POS
         {
 
         }
+
     }
 }
