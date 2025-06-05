@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Update="EmployeeCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -16,5 +17,16 @@
     <Compile Update="PasswordPrompt.cs">
       <SubType>Form</SubType>
     </Compile>
+=======
+    <Compile Update="AddExpenseComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="NavbarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CashboxForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+>>>>>>> origin/dev-angela
   </ItemGroup>
 </Project>

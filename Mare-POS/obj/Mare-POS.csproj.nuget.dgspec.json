@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Aliah\\source\\repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj": {}
   },
   "projects": {
@@ -12,12 +13,29 @@
         "projectPath": "C:\\Users\\Aliah\\source\\repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj",
         "packagesPath": "C:\\Users\\Aliah\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Aliah\\source\\repos\\MareKwenta-POS\\Mare-POS\\obj\\",
+=======
+    "C:\\Users\\Angela Raquedan\\Source\\Repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Angela Raquedan\\Source\\Repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Angela Raquedan\\Source\\Repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj",
+        "projectName": "Mare-POS",
+        "projectPath": "C:\\Users\\Angela Raquedan\\Source\\Repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj",
+        "packagesPath": "C:\\Users\\Angela Raquedan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Angela Raquedan\\Source\\Repos\\MareKwenta-POS\\Mare-POS\\obj\\",
+>>>>>>> origin/dev-angela
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\Aliah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\Angela Raquedan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> origin/dev-angela
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -53,10 +71,13 @@
             "CuoreUI.Winforms": {
               "target": "Package",
               "version": "[2025.5.7, )"
+<<<<<<< HEAD
             },
             "MySql.Data": {
               "target": "Package",
               "version": "[9.3.0, )"
+=======
+>>>>>>> origin/dev-angela
             }
           },
           "imports": [

@@ -12,7 +12,10 @@
 
   <ItemGroup>
     <PackageReference Include="CuoreUI.Winforms" Version="2025.5.7" />
+<<<<<<< HEAD
     <PackageReference Include="MySql.Data" Version="9.3.0" />
+=======
+>>>>>>> origin/dev-angela
   </ItemGroup>
 
 </Project>
