@@ -12,6 +12,7 @@ namespace Mare_POS
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new TicketForm());
+            Application.Run(new NavbarForm());
         }
     }
 }

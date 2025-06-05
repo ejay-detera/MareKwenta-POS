@@ -99,6 +99,7 @@ C:\Users\Detera\Desktop\C# WINFORMS\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-win
 C:\Users\Detera\Desktop\C# WINFORMS\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare-POS.pdb
 C:\Users\Detera\Desktop\C# WINFORMS\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare-POS.genruntimeconfig.cache
 C:\Users\Detera\Desktop\C# WINFORMS\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\ref\Mare-POS.dll
+<<<<<<< HEAD
 C:\Users\Liberty Keith\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare-POS.csproj.AssemblyReference.cache
 C:\Users\Liberty Keith\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.Form1.resources
 C:\Users\Liberty Keith\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.TicketForm.resources
@@ -202,3 +203,28 @@ C:\Users\Liberty Keith\Source\Repos\MareKwenta-POS\Mare-POS\bin\Debug\net8.0-win
 C:\Users\Liberty Keith\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare-POS.csproj.Up2Date
 C:\Users\Liberty Keith\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare-POS.genruntimeconfig.cache
 C:\Users\Liberty Keith\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\ref\Mare-POS.dll
+=======
+C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\bin\Debug\net8.0-windows\Mare-POS.exe
+C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\bin\Debug\net8.0-windows\Mare-POS.deps.json
+C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\bin\Debug\net8.0-windows\Mare-POS.runtimeconfig.json
+C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\bin\Debug\net8.0-windows\Mare-POS.dll
+C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\bin\Debug\net8.0-windows\Mare-POS.pdb
+C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\bin\Debug\net8.0-windows\CuoreUI.dll
+C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare-POS.csproj.AssemblyReference.cache
+C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.CashboxForm.resources
+C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.NavbarForm.resources
+C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.Properties.Resources.resources
+C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare-POS.csproj.GenerateResource.cache
+C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare-POS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare-POS.AssemblyInfoInputs.cache
+C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare-POS.AssemblyInfo.cs
+C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare-POS.csproj.CoreCompileInputs.cache
+C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare-POS.sourcelink.json
+C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare-POS.csproj.Up2Date
+C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare-POS.dll
+C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\refint\Mare-POS.dll
+C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare-POS.pdb
+C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare-POS.genruntimeconfig.cache
+C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\ref\Mare-POS.dll
+C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.AddExpenseForm.resources
+>>>>>>> origin/dev-angela

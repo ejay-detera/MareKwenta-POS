@@ -14,7 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mare-POS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+65c8c5d731faf8b67acb2654ecc322e93125a05b")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+17075b77e088c92ba426b5b3eb9cf5a662a19aa9")]
+>>>>>>> origin/dev-angela
 [assembly: System.Reflection.AssemblyProductAttribute("Mare-POS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mare-POS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
