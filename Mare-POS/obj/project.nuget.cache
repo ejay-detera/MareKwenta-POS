@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rWVqKwx2OHU=",
+  "dgSpecHash": "rXCf+ZJ5b9I=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Aliah\\Source\\Repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj",
+  "projectFilePath": "C:\\Users\\Aliah\\source\\repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Aliah\\.nuget\\packages\\bouncycastle.cryptography\\2.5.1\\bouncycastle.cryptography.2.5.1.nupkg.sha512",
     "C:\\Users\\Aliah\\.nuget\\packages\\cuoreui.winforms\\2025.5.7\\cuoreui.winforms.2025.5.7.nupkg.sha512",
