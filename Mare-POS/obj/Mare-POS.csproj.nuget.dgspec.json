@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj": {}
+    "C:\\Users\\Aliah\\Source\\Repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj": {
+    "C:\\Users\\Aliah\\Source\\Repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj",
+        "projectUniqueName": "C:\\Users\\Aliah\\Source\\Repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj",
         "projectName": "Mare-POS",
-        "projectPath": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj",
-        "packagesPath": "C:\\Users\\Detera\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\obj\\",
+        "projectPath": "C:\\Users\\Aliah\\Source\\Repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj",
+        "packagesPath": "C:\\Users\\Aliah\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Aliah\\Source\\Repos\\MareKwenta-POS\\Mare-POS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Detera\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Aliah\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,25 +44,19 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
+            "CuoreUI.Winforms": {
               "target": "Package",
-              "version": "[8.0.13, )"
+              "version": "[2025.5.7, )"
             },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
+            "MySql.Data": {
               "target": "Package",
-              "version": "[8.0.13, )"
-            },
-            "Pomelo.EntityFrameworkCore.MySql": {
-              "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[9.3.0, )"
             }
           },
           "imports": [
@@ -84,7 +78,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
