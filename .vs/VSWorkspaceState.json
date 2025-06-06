@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Mare-POS"
   ],
-  "SelectedNode": "\\Mare-POS.sln",
+  "SelectedNode": "\\Mare-POS\\PasswordPrompt.resx",
   "PreviewInSolutionExplorer": false
 }

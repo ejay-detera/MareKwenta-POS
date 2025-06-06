@@ -16,7 +16,9 @@ namespace Mare_POS
         {
             InitializeComponent();
             this.Load += MainWindow_Load;
-            
+            var navbar = new NavbarForm();
+            navbar.Dock = DockStyle.Top; // or Left, depending on your layout
+            this.Controls.Add(navbar);
 
         }
 
