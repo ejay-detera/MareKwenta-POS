@@ -1,3 +1,5 @@
+using Mare_POS.SaleshistoryFolder;
+
 namespace Mare_POS
 {
     public partial class NavbarForm : Form
@@ -40,7 +42,7 @@ namespace Mare_POS
             contentPanel.BackColor = Color.White;
             contentPanel.Location = new Point(navbarPanel.Width, 0);
             contentPanel.Name = "contentPanel";
-            contentPanel.Size = new Size(1304, 985);
+            contentPanel.Size = new Size(1440, 1024);
             Controls.Add(contentPanel);
             Controls.SetChildIndex(contentPanel, 0);
         }
@@ -48,7 +50,7 @@ namespace Mare_POS
         // Method to update sidebar button visibility based on user type
         private void UpdateSidebarVisibility()
         {
-            if (currentUserType == UserType.User)
+            if (currentUserType == UserType.Admin)
             {
                 // Admin sees all buttons
                 ShowAllButtons();
@@ -147,7 +149,7 @@ namespace Mare_POS
 
         private void btn_receipt_Click(object sender, EventArgs e)
         {
-            LoadPage(new ReceiptPage()); // change the "ReceiptPage" to the name of you user control
+            LoadPage(new SaleshistoryForm()); // change the "ReceiptPage" to the name of you user control
             HighlightButton((Button)sender);
         }
 
@@ -175,15 +177,9 @@ namespace Mare_POS
             HighlightButton(btn_ticket);
         }
 
-        private void navbarPanel_Paint_1(object sender, PaintEventArgs e) { }
         private void bottomMarker_Paint(object sender, PaintEventArgs e) { }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void logo_Click(object sender, EventArgs e)
         {
 
         }

@@ -122,3 +122,4 @@ C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-w
 C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare-POS.genruntimeconfig.cache
 C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\ref\Mare-POS.dll
 C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.AddExpenseForm.resources
+C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.SaleshistoryFolder.SaleshistoryForm.resources
