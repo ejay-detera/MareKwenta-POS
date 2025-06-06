@@ -2,7 +2,6 @@
   "version": 3,
   "targets": {
     "net8.0-windows7.0": {
-<<<<<<< HEAD
       "BouncyCastle.Cryptography/2.5.1": {
         "type": "package",
         "compile": {
@@ -484,21 +483,11 @@
         },
         "runtime": {
           "lib/net8.0/ZstdSharp.dll": {}
-=======
-      "CuoreUI.Winforms/2025.5.7": {
-        "type": "package",
-        "compile": {
-          "lib/net8.0/CuoreUI.dll": {}
-        },
-        "runtime": {
-          "lib/net8.0/CuoreUI.dll": {}
->>>>>>> dev-angela
         }
       }
     }
   },
   "libraries": {
-<<<<<<< HEAD
     "BouncyCastle.Cryptography/2.5.1": {
       "sha512": "zy8TMeTP+1FH2NrLaNZtdRbBdq7u5MI+NFZQOBSM69u5RFkciinwzV2eveY6Kjf5MzgsYvvl6kTStsj3JrXqkg==",
       "type": "package",
@@ -522,11 +511,6 @@
     "CuoreUI.Winforms/2025.5.7": {
       "sha512": "TFlTIjzuVHM4o69i1lhhQrOm0WadG3k2tM+C0FpT3lHLiFi2Fsv2l0BfxY7M5mJwVdsAE42iJXKIHlmNZkY33g==",
       "type": "package",
-=======
-    "CuoreUI.Winforms/2025.5.7": {
-      "sha512": "TFlTIjzuVHM4o69i1lhhQrOm0WadG3k2tM+C0FpT3lHLiFi2Fsv2l0BfxY7M5mJwVdsAE42iJXKIHlmNZkY33g==",
-      "type": "package",
->>>>>>> dev-angela
       "path": "cuoreui.winforms/2025.5.7",
       "files": [
         ".nupkg.metadata",
@@ -536,7 +520,6 @@
         "icon.png",
         "lib/net8.0/CuoreUI.dll",
         "lib/netstandard2.0/CuoreUI.dll"
-<<<<<<< HEAD
       ]
     },
     "Google.Protobuf/3.30.0": {
@@ -1620,8 +1603,6 @@
         "system.windows.extensions.8.0.0.nupkg.sha512",
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
-=======
->>>>>>> dev-angela
       ]
     },
     "ZstdSharp.Port/0.8.5": {
@@ -1647,12 +1628,8 @@
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
-<<<<<<< HEAD
       "CuoreUI.Winforms >= 2025.5.7",
       "MySql.Data >= 9.3.0"
-=======
-      "CuoreUI.Winforms >= 2025.5.7"
->>>>>>> dev-angela
     ]
   },
   "packageFolders": {
@@ -1708,13 +1685,10 @@
           "CuoreUI.Winforms": {
             "target": "Package",
             "version": "[2025.5.7, )"
-<<<<<<< HEAD
           },
           "MySql.Data": {
             "target": "Package",
             "version": "[9.3.0, )"
-=======
->>>>>>> dev-angela
           }
         },
         "imports": [
