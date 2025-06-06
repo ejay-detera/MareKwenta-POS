@@ -1,0 +1,22 @@
+﻿# Ignore build outputs and VS settings
+
+## Build results
+bin/
+obj/
+
+## VS config
+.vs/
+*.user
+*.suo
+
+## NuGet
+*.nupkg
+packages/
+
+## Logs
+*.log
+
+## Others
+*.cache
+*.dbmdl
+*.DS_Store

@@ -1633,23 +1633,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Detera\\.nuget\\packages\\": {},
+    "C:\\Users\\Angela Raquedan\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj",
+      "projectUniqueName": "C:\\Users\\Angela Raquedan\\Source\\Repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj",
       "projectName": "Mare-POS",
-      "projectPath": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj",
-      "packagesPath": "C:\\Users\\Detera\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\obj\\",
+      "projectPath": "C:\\Users\\Angela Raquedan\\Source\\Repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj",
+      "packagesPath": "C:\\Users\\Angela Raquedan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Angela Raquedan\\Source\\Repos\\MareKwenta-POS\\Mare-POS\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Detera\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Angela Raquedan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1676,7 +1676,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0-windows7.0": {
@@ -1710,7 +1710,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
