@@ -115,7 +115,8 @@ namespace Mare_POS
         public class Employee
         {
             public required string Name { get; set; }
-            public TimeSpan Duration { get; set; }
+            public DateTime? LoginTime { get; set; }
+            public DateTime? LogoutTime { get; set; }
             public required string Password { get; set; }
         }
         private void LoadEmployeeCards(DateTime date)
@@ -125,9 +126,9 @@ namespace Mare_POS
             // Simulate some data
             var employees = new List<Employee>
             {
-                new Employee { Name = "Employee 1", Duration = TimeSpan.Zero, Password = "pass1" },
-                new Employee { Name = "Employee 2", Duration = TimeSpan.FromHours(8), Password = "pass2" },
-                new Employee { Name = "Employee 3", Duration = TimeSpan.FromHours(4.5), Password = "pass3" }
+                new Employee { Name = "Employee 1", LoginTime = new DateTime(date.Year, date.Month, date.Day, 8, 0, 0), Password = "pass1" },
+                new Employee { Name = "Employee 2", LoginTime = new DateTime(date.Year, date.Month, date.Day, 9, 30, 0), LogoutTime = new DateTime(date.Year, date.Month, date.Day, 17, 30, 0), Password = "pass2" },
+                new Employee { Name = "Employee 3", LogoutTime = new DateTime(date.Year, date.Month, date.Day, 14, 0, 0), Password = "pass3" }
             };
 
             foreach (var emp in employees)
@@ -135,7 +136,7 @@ namespace Mare_POS
                 var card = new EmployeeCard
                 {
                     EmployeeName = emp.Name,
-                    WorkDuration = emp.Duration,
+                    WorkStatusTime = emp.LoginTime?.ToString("hh:mm tt") ?? emp.LogoutTime?.ToString("hh:mm tt") ?? "Not logged",
                     EmployeePassword = emp.Password,
                     Width = PanelEmployeeCards.Width - 20,
                     Margin = new Padding(10),
@@ -157,14 +158,19 @@ namespace Mare_POS
             if (sender is EmployeeCard card)
             {
                 using var prompt = new PasswordPrompt(card.EmployeeName);
-                if (prompt.ShowDialog() == DialogResult.OK && prompt.EnteredPassword == card.EmployeePassword)
+                var result = prompt.ShowDialog();
+
+                if (result == DialogResult.OK)
                 {
-                    card.LoadStatus(true, false);
-                    MessageBox.Show($"{card.EmployeeName} clocked IN");
-                }
-                else
-                {
-                    MessageBox.Show("Incorrect password.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    if (prompt.EnteredPassword == card.EmployeePassword)
+                    {
+                        card.LoadStatus(true, false);
+                        MessageBox.Show($"{card.EmployeeName} clocked IN");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Incorrect password.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
             }
         }

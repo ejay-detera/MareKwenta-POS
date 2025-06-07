@@ -19,9 +19,15 @@ namespace Mare_POS
             set => lblName.Text = value;
         }
 
-        public TimeSpan WorkDuration
+        private string _workStatusTime;
+        public string WorkStatusTime
         {
-            set => lblDuration.Text = $"{value.Hours} hrs {value.Minutes} mins";
+            get => _workStatusTime;
+            set
+            {
+                _workStatusTime = value;
+                lblWorkStatusTime.Text = value; // Assume this label exists on your card
+            }
         }
         public string EmployeePassword { get; set; } = "";
         public event EventHandler? InClicked;

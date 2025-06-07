@@ -19,7 +19,7 @@ namespace Mare_POS
         private void InitializeComponent()
         {
             lblName = new Label();
-            lblDuration = new Label();
+            lblWorkStatusTime = new Label();
             btnIn = new cuiButton();
             btnOut = new cuiButton();
             SuspendLayout();
@@ -35,12 +35,12 @@ namespace Mare_POS
             // 
             // lblDuration
             // 
-            lblDuration.AutoSize = true;
-            lblDuration.Font = new Font("Unbounded", 10F);
-            lblDuration.Location = new Point(25, 75);
-            lblDuration.Name = "lblDuration";
-            lblDuration.Size = new Size(0, 22);
-            lblDuration.TabIndex = 1;
+            lblWorkStatusTime.AutoSize = true;
+            lblWorkStatusTime.Font = new Font("Unbounded", 10F);
+            lblWorkStatusTime.Location = new Point(25, 75);
+            lblWorkStatusTime.Name = "lblWorkStatusTime";
+            lblWorkStatusTime.Size = new Size(0, 22);
+            lblWorkStatusTime.TabIndex = 1;
             // 
             // btnIn
             // 
@@ -122,7 +122,7 @@ namespace Mare_POS
             // 
             BackColor = Color.White;
             Controls.Add(lblName);
-            Controls.Add(lblDuration);
+            Controls.Add(lblWorkStatusTime);
             Controls.Add(btnIn);
             Controls.Add(btnOut);
             Name = "EmployeeCard";
@@ -136,7 +136,7 @@ namespace Mare_POS
         #endregion
 
         private Label lblName;
-        private Label lblDuration;
+        private Label lblWorkStatusTime;
         private CuoreUI.Controls.cuiButton btnIn;
         private CuoreUI.Controls.cuiButton btnOut;
     }
