@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Mare_POS
 {
-    public partial class EmployeeLogsEmployee : UserControl
+    public partial class StaffPage : UserControl
     {
-        public EmployeeLogsEmployee()
+        public StaffPage()
         {
             InitializeComponent();
             this.Dock = DockStyle.Fill;
@@ -210,6 +210,11 @@ namespace Mare_POS
         {
 
 
+
+        }
+
+        private void cuiLabel1_Load(object sender, EventArgs e)
+        {
 
         }
     }

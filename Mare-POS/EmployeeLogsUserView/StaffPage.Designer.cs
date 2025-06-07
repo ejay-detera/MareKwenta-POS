@@ -1,7 +1,7 @@
 ﻿namespace Mare_POS
 {
     
-    public partial class EmployeeLogsEmployee : UserControl
+    public partial class StaffPage : UserControl
     {
         /// <summary>
         ///  Required designer variable.
@@ -39,19 +39,20 @@
             // 
             cuiLabel1.BackColor = Color.Transparent;
             cuiLabel1.Content = "Staff";
-            cuiLabel1.Font = new Font("Unbounded Medium", 18F, FontStyle.Bold);
+            cuiLabel1.Font = new Font("Unbounded Medium", 27F, FontStyle.Bold);
             cuiLabel1.ForeColor = Color.FromArgb(78, 45, 24);
-            cuiLabel1.HorizontalAlignment = StringAlignment.Center;
-            cuiLabel1.Location = new Point(79, 35);
+            cuiLabel1.HorizontalAlignment = StringAlignment.Near;
+            cuiLabel1.Location = new Point(31, 27);
             cuiLabel1.Margin = new Padding(5);
             cuiLabel1.Name = "cuiLabel1";
-            cuiLabel1.Size = new Size(126, 48);
+            cuiLabel1.Size = new Size(182, 48);
             cuiLabel1.TabIndex = 1;
             cuiLabel1.VerticalAlignment = StringAlignment.Center;
+            cuiLabel1.Load += cuiLabel1_Load;
             // 
             // panelDates
             // 
-            panelDates.Location = new Point(79, 121);
+            panelDates.Location = new Point(31, 96);
             panelDates.Margin = new Padding(3, 4, 3, 4);
             panelDates.Name = "panelDates";
             panelDates.OutlineThickness = 1F;
@@ -66,35 +67,36 @@
             // 
             PanelEmployeeCards.AutoScroll = true;
             PanelEmployeeCards.FlowDirection = FlowDirection.TopDown;
-            PanelEmployeeCards.Location = new Point(374, 121);
+            PanelEmployeeCards.Location = new Point(309, 96);
             PanelEmployeeCards.Margin = new Padding(3, 4, 3, 4);
             PanelEmployeeCards.Name = "PanelEmployeeCards";
             PanelEmployeeCards.Padding = new Padding(5);
-            PanelEmployeeCards.Size = new Size(1202, 1176);
+            PanelEmployeeCards.Size = new Size(973, 985);
             PanelEmployeeCards.TabIndex = 4;
             PanelEmployeeCards.WrapContents = false;
             // 
             // dateHeader
             // 
-            dateHeader.Content = "";
-            dateHeader.Font = new Font("Unbounded", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dateHeader.Content = "June\\ 05,\\ 2024";
+            dateHeader.Font = new Font("Unbounded", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dateHeader.ForeColor = Color.FromArgb(78, 45, 24);
-            dateHeader.HorizontalAlignment = StringAlignment.Center;
-            dateHeader.Location = new Point(1226, 67);
+            dateHeader.HorizontalAlignment = StringAlignment.Far;
+            dateHeader.Location = new Point(932, 30);
             dateHeader.Margin = new Padding(4, 5, 4, 5);
             dateHeader.Name = "dateHeader";
             dateHeader.Size = new Size(350, 45);
             dateHeader.TabIndex = 5;
             dateHeader.VerticalAlignment = StringAlignment.Far;
             // 
-            // EmployeeLogsEmployee
+            // StaffPage
             // 
-            Name = "EmployeeLogsEmployee";
-            Size = new Size(1347, 891);
-            this.Controls.Add(cuiLabel1);
-            this.Controls.Add(panelDates);
-            this.Controls.Add(PanelEmployeeCards);
-            this.Controls.Add(dateHeader);
+            BackColor = Color.FromArgb(242, 239, 234);
+            Controls.Add(cuiLabel1);
+            Controls.Add(panelDates);
+            Controls.Add(PanelEmployeeCards);
+            Controls.Add(dateHeader);
+            Name = "StaffPage";
+            Size = new Size(1304, 985);
             ResumeLayout(false);
             // 
 

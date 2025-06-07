@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Reflection.Metadata;
 
 namespace Mare_POS
 {
@@ -17,6 +18,7 @@ namespace Mare_POS
             InitializeComponent();
 
             this.btn_addExpense.Click += new System.EventHandler(this.btn_plus_Click);
+            label17.Text = DateTime.Now.ToString("MMMM dd, yyyy");
         }
 
         private void btn_plus_Click(object? sender, EventArgs e)

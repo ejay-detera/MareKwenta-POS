@@ -12,13 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-<<<<<<< HEAD
       "C:\\Users\\Aliah\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\Aliah\\.nuget\\packages",
-=======
-      "C:\\Users\\Angela Raquedan\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Angela Raquedan\\.nuget\\packages",
->>>>>>> origin/dev-angela
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {

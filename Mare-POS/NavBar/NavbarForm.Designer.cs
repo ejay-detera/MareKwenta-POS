@@ -218,7 +218,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(242, 239, 234);
-            ClientSize = new Size(1424, 985);
+            this.Size = new Size(120, 985);
             Controls.Add(panel1);
             Controls.Add(navbarPanel);
             Name = "NavbarForm";
@@ -248,5 +248,11 @@
         private Button btn_staff;
         private Panel panel1;
         private FlowLayoutPanel flowLayoutPanel1;
+
+        
     }
+
+
+
+       
 }

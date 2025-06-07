@@ -1,32 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
   <ItemGroup>
-<<<<<<< HEAD
-    <Compile Update="EmployeeCard.cs">
+    <Compile Update="CashBox\CashboxForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="EmployeeLogsEmployee.cs">
+    <Compile Update="EmployeeCard\EmployeeCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="EmployeeLogsAdmin.cs">
+    <Compile Update="EmployeeLogsUserView\StaffPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="MainWindow.cs">
+    <Compile Update="ExpensesComponet\AddExpenseComponent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="PasswordPrompt.cs">
+    <Compile Update="NavBar\MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-=======
-    <Compile Update="AddExpenseComponent.cs">
+    <Compile Update="NavBar\NavbarForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="NavbarForm.cs">
+    <Compile Update="PasswordPrompt\PasswordPrompt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="CashboxForm.cs">
+    <Compile Update="StaffPageAdmin.cs">
       <SubType>UserControl</SubType>
     </Compile>
->>>>>>> origin/dev-angela
   </ItemGroup>
 </Project>

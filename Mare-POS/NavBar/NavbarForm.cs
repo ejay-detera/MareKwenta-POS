@@ -31,7 +31,7 @@ namespace Mare_POS
             InitializeComponent();
             InitializeContentPanel();
             // Set default user type (you can change this based on login)
-            CurrentUserType = UserType.Admin; // Default to User access
+            CurrentUserType = UserType.Admin;
         }
 
         private void InitializeContentPanel()
@@ -48,7 +48,7 @@ namespace Mare_POS
         // Method to update sidebar button visibility based on user type
         private void UpdateSidebarVisibility()
         {
-            if (currentUserType == UserType.User)
+            if (currentUserType == UserType.Admin)
             {
                 // Admin sees all buttons
                 ShowAllButtons();
@@ -141,7 +141,16 @@ namespace Mare_POS
 
         private void btn_staff_Click(object sender, EventArgs e)
         {
-            LoadPage(new StaffPage()); // change the "StaffPage" to the name of you user control
+            
+            if (CurrentUserType == UserType.Admin)
+            {
+                LoadPage(new StaffPageAdmin()); 
+            }
+            else
+            {
+                LoadPage(new StaffPage()); 
+            }
+            
             HighlightButton((Button)sender);
         }
 
@@ -208,24 +217,7 @@ namespace Mare_POS
         }
     }
 
-    public class StaffPage : UserControl
-    {
-        public StaffPage()
-        {
-            InitializeComponent();
-        }
-
-        private void InitializeComponent()
-        {
-            this.BackColor = Color.FromArgb(242, 239, 234);
-            Label label = new Label();
-            label.Text = "This is the Staff Page";
-            label.Font = new Font("Segoe UI", 16);
-            label.Dock = DockStyle.Fill;
-            label.TextAlign = ContentAlignment.MiddleCenter;
-            Controls.Add(label);
-        }
-    }
+    
 
     public class ReceiptPage : UserControl
     {

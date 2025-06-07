@@ -121,12 +121,12 @@
             // 
             label17.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label17.AutoSize = true;
-            label17.Font = new Font("Unbounded", 23.9999962F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label17.Font = new Font("Unbounded", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label17.ForeColor = Color.FromArgb(78, 45, 24);
-            label17.Location = new Point(1014, 17);
+            label17.Location = new Point(1062, 26);
             label17.Margin = new Padding(20, 0, 20, 0);
             label17.Name = "label17";
-            label17.Size = new Size(270, 49);
+            label17.Size = new Size(203, 37);
             label17.TabIndex = 1;
             label17.Text = "June 3, 2025";
             // 

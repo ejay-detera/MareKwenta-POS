@@ -15,17 +15,14 @@ namespace Mare_POS
         public MainWindow()
         {
             InitializeComponent();
-            this.Load += MainWindow_Load;
-            var navbar = new NavbarForm();
-            navbar.Dock = DockStyle.Top; // or Left, depending on your layout
-            this.Controls.Add(navbar);
+            //this.Load += MainWindow_Load;
 
         }
 
-        private void MainWindow_Load(object? sender, EventArgs e)
-        {
-            LoadUserControl(new EmployeeLogsEmployee()); // default view on startup
-        }
+        //private void MainWindow_Load(object? sender, EventArgs e)
+       // {
+            //LoadUserControl(new StaffPage()); // default view on startup
+        //}
 
         private void LoadUserControl(UserControl uc)
         {
@@ -34,13 +31,13 @@ namespace Mare_POS
             mainPanel.Controls.Add(uc);
         }
 
-        private void btnEmployeeView_Click(object sender, EventArgs e)
-        {
-            LoadUserControl(new EmployeeLogsEmployee());
-        }
+        //private void btnEmployeeView_Click(object sender, EventArgs e)
+        //{
+            //LoadUserControl(new StaffPage());
+        //}
         private void btnAdminView_Click(object sender, EventArgs e)
         {
-            LoadUserControl(new EmployeeLogsAdmin());
+            LoadUserControl(new StaffPageAdmin());
         }
     }
 }
