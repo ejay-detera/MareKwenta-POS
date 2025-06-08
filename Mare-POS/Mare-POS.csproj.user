@@ -4,11 +4,11 @@
     <Compile Update="CashboxFolder\AddExpenseComponent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="NavbarFolder\NavbarForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="CashboxFolder\CashboxForm.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="NavbarFolder\NavbarForm.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Update="SaleshistoryFolder\SaleshistoryForm.cs">
       <SubType>UserControl</SubType>

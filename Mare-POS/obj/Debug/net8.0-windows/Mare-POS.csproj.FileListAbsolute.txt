@@ -106,7 +106,6 @@ C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\bin\Debug\net8.0-w
 C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\bin\Debug\net8.0-windows\Mare-POS.pdb
 C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\bin\Debug\net8.0-windows\CuoreUI.dll
 C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare-POS.csproj.AssemblyReference.cache
-C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.CashboxForm.resources
 C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.NavbarForm.resources
 C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.Properties.Resources.resources
 C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare-POS.csproj.GenerateResource.cache
@@ -123,3 +122,4 @@ C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-w
 C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\ref\Mare-POS.dll
 C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.AddExpenseForm.resources
 C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.SaleshistoryFolder.SaleshistoryForm.resources
+C:\Users\Angela Raquedan\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.CashboxFolder.CashboxForm.resources

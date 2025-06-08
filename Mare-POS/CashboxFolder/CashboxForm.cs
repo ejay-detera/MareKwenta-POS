@@ -8,62 +8,31 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Mare_POS
+namespace Mare_POS.CashboxFolder
 {
     public partial class CashboxForm : UserControl
     {
         public CashboxForm()
         {
             InitializeComponent();
-
-            this.btn_addExpense.Click += new System.EventHandler(this.btn_plus_Click);
         }
 
-        private void btn_plus_Click(object? sender, EventArgs e)
-        {
-            AddExpenseForm addExpenseForm = new AddExpenseForm();
-            addExpenseForm.StartPosition = FormStartPosition.CenterParent;
-            addExpenseForm.ShowDialog();
-        }
         private void label2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label2_Click_1(object sender, EventArgs e)
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void addExpenseButton_Click(object sender, EventArgs e)
         {
-
+            AddExpenseForm popup = new AddExpenseForm();
+            popup.ShowDialog(); // This pops it up as a modal
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cuiButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cuiButton5_Click(object sender, EventArgs e)
-        {
-
-        }
 
     }
 }
