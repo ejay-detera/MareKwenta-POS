@@ -1,41 +1,23 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "C:\\Users\\Liberty Keith\\source\\repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj": {}
+    "C:\\Users\\Liberty Keith\\Source\\Repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Liberty Keith\\source\\repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj": {
+    "C:\\Users\\Liberty Keith\\Source\\Repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Liberty Keith\\source\\repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj",
+        "projectUniqueName": "C:\\Users\\Liberty Keith\\Source\\Repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj",
         "projectName": "Mare-POS",
-        "projectPath": "C:\\Users\\Liberty Keith\\source\\repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj",
+        "projectPath": "C:\\Users\\Liberty Keith\\Source\\Repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj",
         "packagesPath": "C:\\Users\\Liberty Keith\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Liberty Keith\\source\\repos\\MareKwenta-POS\\Mare-POS\\obj\\",
-=======
-    "C:\\Users\\Angela Raquedan\\Source\\Repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\Angela Raquedan\\Source\\Repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\Angela Raquedan\\Source\\Repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj",
-        "projectName": "Mare-POS",
-        "projectPath": "C:\\Users\\Angela Raquedan\\Source\\Repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj",
-        "packagesPath": "C:\\Users\\Angela Raquedan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Angela Raquedan\\Source\\Repos\\MareKwenta-POS\\Mare-POS\\obj\\",
->>>>>>> origin/dev-angela
+        "outputPath": "C:\\Users\\Liberty Keith\\Source\\Repos\\MareKwenta-POS\\Mare-POS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-<<<<<<< HEAD
           "C:\\Users\\Liberty Keith\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-          "C:\\Users\\Angela Raquedan\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> origin/dev-angela
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -62,22 +44,15 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
             "CuoreUI.Winforms": {
-<<<<<<< HEAD
               "target": "Package",
-              "version": "[2025.5.7, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-=======
->>>>>>> origin/dev-angela
-              "target": "Package",
-              "version": "[2025.5.7, )"
+              "version": "[2025.6.5, )"
             }
           },
           "imports": [
@@ -99,7 +74,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

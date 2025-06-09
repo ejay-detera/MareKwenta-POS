@@ -10,7 +10,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CuoreUI.Winforms" Version="2025.5.7" />
+    <Compile Remove="Ticket Dashboard\**" />
+    <Compile Remove="Ticket\**" />
+    <EmbeddedResource Remove="Ticket Dashboard\**" />
+    <EmbeddedResource Remove="Ticket\**" />
+    <None Remove="Ticket Dashboard\**" />
+    <None Remove="Ticket\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CuoreUI.Winforms" Version="2025.6.5" />
   </ItemGroup>
 
 </Project>

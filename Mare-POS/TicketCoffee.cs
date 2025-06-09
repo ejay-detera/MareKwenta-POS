@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Mare_POS
+namespace Mare_POS.Ticket_Components
 {
-    public partial class AddExpenseForm : Form
+    public partial class TicketCoffee : UserControl
     {
-        public AddExpenseForm()
+        public TicketCoffee()
         {
             InitializeComponent();
         }
 
-        private void AddExpenseForm_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }

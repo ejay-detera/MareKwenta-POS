@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Mare_POS
 {
-    public partial class AddExpenseForm : Form
+    public partial class TicketNonCoffee : UserControl
     {
-        public AddExpenseForm()
+        public TicketNonCoffee()
         {
             InitializeComponent();
-        }
-
-        private void AddExpenseForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

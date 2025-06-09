@@ -159,7 +159,7 @@ namespace Mare_POS
 
         private void btn_ticket_Click(object sender, EventArgs e)
         {
-            LoadPage(new TicketPage()); // change the "TicketPage" to the name of you user control
+            LoadPage(new TicketForm()); // change the "TicketPage" to the name of you user control
             HighlightButton((Button)sender);
         }
 
@@ -171,7 +171,7 @@ namespace Mare_POS
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            LoadPage(new TicketPage());
+            LoadPage(new TicketForm());
             HighlightButton(btn_ticket);
         }
 

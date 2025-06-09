@@ -10,16 +10,21 @@ using System.Windows.Forms;
 
 namespace Mare_POS
 {
-    public partial class AddExpenseForm : Form
+    public partial class PopUpSplitComponent : Form
     {
-        public AddExpenseForm()
+        public PopUpSplitComponent()
         {
             InitializeComponent();
         }
 
-        private void AddExpenseForm_Load(object sender, EventArgs e)
+        private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cuiButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

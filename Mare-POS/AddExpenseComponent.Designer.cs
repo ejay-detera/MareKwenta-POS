@@ -44,9 +44,9 @@
             label1.AutoSize = true;
             label1.Font = new Font("Inter 18pt 18pt SemiBold", 18F, FontStyle.Bold);
             label1.ForeColor = Color.FromArgb(78, 45, 24);
-            label1.Location = new Point(8, 11);
+            label1.Location = new Point(9, 15);
             label1.Name = "label1";
-            label1.Size = new Size(165, 29);
+            label1.Size = new Size(204, 35);
             label1.TabIndex = 0;
             label1.Text = "Add Expense";
             // 
@@ -63,17 +63,17 @@
             cuiTextBox1.Image = null;
             cuiTextBox1.ImageExpand = new Point(0, 0);
             cuiTextBox1.ImageOffset = new Point(0, 0);
-            cuiTextBox1.Location = new Point(13, 89);
-            cuiTextBox1.Margin = new Padding(4);
+            cuiTextBox1.Location = new Point(15, 119);
+            cuiTextBox1.Margin = new Padding(5);
             cuiTextBox1.Multiline = false;
             cuiTextBox1.Name = "cuiTextBox1";
             cuiTextBox1.NormalImageTint = Color.White;
-            cuiTextBox1.Padding = new Padding(20, 10, 20, 0);
+            cuiTextBox1.Padding = new Padding(25, 14, 25, 0);
             cuiTextBox1.PasswordChar = false;
             cuiTextBox1.PlaceholderColor = Color.White;
             cuiTextBox1.PlaceholderText = "Value";
             cuiTextBox1.Rounding = new Padding(12);
-            cuiTextBox1.Size = new Size(273, 40);
+            cuiTextBox1.Size = new Size(312, 53);
             cuiTextBox1.TabIndex = 1;
             cuiTextBox1.TextOffset = new Size(0, 0);
             cuiTextBox1.UnderlinedStyle = true;
@@ -91,17 +91,17 @@
             cuiTextBox2.Image = null;
             cuiTextBox2.ImageExpand = new Point(0, 0);
             cuiTextBox2.ImageOffset = new Point(0, 0);
-            cuiTextBox2.Location = new Point(13, 169);
-            cuiTextBox2.Margin = new Padding(4);
+            cuiTextBox2.Location = new Point(15, 225);
+            cuiTextBox2.Margin = new Padding(5);
             cuiTextBox2.Multiline = false;
             cuiTextBox2.Name = "cuiTextBox2";
             cuiTextBox2.NormalImageTint = Color.White;
-            cuiTextBox2.Padding = new Padding(20, 10, 20, 0);
+            cuiTextBox2.Padding = new Padding(25, 14, 25, 0);
             cuiTextBox2.PasswordChar = false;
             cuiTextBox2.PlaceholderColor = Color.White;
             cuiTextBox2.PlaceholderText = "Value";
             cuiTextBox2.Rounding = new Padding(12);
-            cuiTextBox2.Size = new Size(273, 40);
+            cuiTextBox2.Size = new Size(312, 53);
             cuiTextBox2.TabIndex = 2;
             cuiTextBox2.TextOffset = new Size(0, 0);
             cuiTextBox2.UnderlinedStyle = true;
@@ -111,9 +111,9 @@
             label2.AutoSize = true;
             label2.Font = new Font("Inter 28pt 28pt", 12F);
             label2.ForeColor = Color.FromArgb(78, 45, 24);
-            label2.Location = new Point(13, 64);
+            label2.Location = new Point(15, 85);
             label2.Name = "label2";
-            label2.Size = new Size(115, 18);
+            label2.Size = new Size(142, 23);
             label2.TabIndex = 3;
             label2.Text = "Expense Name";
             // 
@@ -122,9 +122,9 @@
             label3.AutoSize = true;
             label3.Font = new Font("Inter 28pt 28pt", 12F);
             label3.ForeColor = Color.FromArgb(78, 45, 24);
-            label3.Location = new Point(13, 147);
+            label3.Location = new Point(15, 196);
             label3.Name = "label3";
-            label3.Size = new Size(125, 18);
+            label3.Size = new Size(156, 23);
             label3.TabIndex = 4;
             label3.Text = "Expense Amount";
             // 
@@ -133,9 +133,9 @@
             label4.AutoSize = true;
             label4.Font = new Font("Inter 28pt 28pt", 12F);
             label4.ForeColor = Color.FromArgb(78, 45, 24);
-            label4.Location = new Point(13, 228);
+            label4.Location = new Point(15, 304);
             label4.Name = "label4";
-            label4.Size = new Size(98, 18);
+            label4.Size = new Size(123, 23);
             label4.TabIndex = 5;
             label4.Text = "Expense Tag";
             // 
@@ -146,9 +146,10 @@
             radioButton1.FlatStyle = FlatStyle.Flat;
             radioButton1.Font = new Font("Inter 28pt 28pt", 12F);
             radioButton1.ForeColor = Color.FromArgb(78, 45, 24);
-            radioButton1.Location = new Point(32, 254);
+            radioButton1.Location = new Point(37, 339);
+            radioButton1.Margin = new Padding(3, 4, 3, 4);
             radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(62, 22);
+            radioButton1.Size = new Size(75, 27);
             radioButton1.TabIndex = 6;
             radioButton1.TabStop = true;
             radioButton1.Text = "Cash";
@@ -160,9 +161,10 @@
             radioButton2.FlatStyle = FlatStyle.Flat;
             radioButton2.Font = new Font("Inter 28pt 28pt", 12F);
             radioButton2.ForeColor = Color.FromArgb(78, 45, 24);
-            radioButton2.Location = new Point(32, 282);
+            radioButton2.Location = new Point(37, 376);
+            radioButton2.Margin = new Padding(3, 4, 3, 4);
             radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(95, 22);
+            radioButton2.Size = new Size(116, 27);
             radioButton2.TabIndex = 7;
             radioButton2.TabStop = true;
             radioButton2.Text = "Non-Cash";
@@ -188,7 +190,8 @@
             cuiButton1.ImageAutoCenter = true;
             cuiButton1.ImageExpand = new Point(0, 0);
             cuiButton1.ImageOffset = new Point(0, 0);
-            cuiButton1.Location = new Point(202, 289);
+            cuiButton1.Location = new Point(231, 385);
+            cuiButton1.Margin = new Padding(3, 4, 3, 4);
             cuiButton1.Name = "cuiButton1";
             cuiButton1.NormalBackground = Color.FromArgb(78, 45, 24);
             cuiButton1.NormalForeColor = Color.White;
@@ -200,17 +203,17 @@
             cuiButton1.PressedImageTint = Color.White;
             cuiButton1.PressedOutline = Color.FromArgb(64, 128, 128, 128);
             cuiButton1.Rounding = new Padding(8);
-            cuiButton1.Size = new Size(85, 45);
+            cuiButton1.Size = new Size(97, 60);
             cuiButton1.TabIndex = 8;
             cuiButton1.TextAlignment = StringAlignment.Center;
             cuiButton1.TextOffset = new Point(0, 0);
             // 
             // AddExpenseForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(242, 239, 234);
-            ClientSize = new Size(299, 346);
+            ClientSize = new Size(342, 461);
             Controls.Add(cuiButton1);
             Controls.Add(radioButton2);
             Controls.Add(radioButton1);
@@ -220,9 +223,11 @@
             Controls.Add(cuiTextBox2);
             Controls.Add(cuiTextBox1);
             Controls.Add(label1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "AddExpenseForm";
             ShowIcon = false;
             Text = "Add Expense";
+            Load += AddExpenseForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
