@@ -1,4 +1,5 @@
-﻿using Mare_POS.Authentication;
+using Mare_POS.Authentication;
+using Mare_POS.CashboxFolder;
 using Mare_POS.SaleshistoryFolder;
 
 namespace Mare_POS
@@ -253,24 +254,24 @@ namespace Mare_POS
         }
     }
 
-    public class CashboxPage : UserControl
-    {
-        public CashboxPage()
-        {
-            InitializeComponent();
-        }
+    //public class CashboxPage : UserControl
+    //{
+    //    public CashboxPage()
+    //    {
+    //        InitializeComponent();
+    //    }
 
-        private void InitializeComponent()
-        {
-            this.BackColor = Color.FromArgb(242, 239, 234);
-            Label label = new Label();
-            label.Text = "This is the Cashbox Page";
-            label.Font = new Font("Segoe UI", 16);
-            label.Dock = DockStyle.Fill;
-            label.TextAlign = ContentAlignment.MiddleCenter;
-            Controls.Add(label);
-        }
-    }
+    //    private void InitializeComponent()
+    //    {
+    //        this.BackColor = Color.FromArgb(242, 239, 234);
+    //        Label label = new Label();
+    //        label.Text = "This is the Cashbox Page";
+    //        label.Font = new Font("Segoe UI", 16);
+    //        label.Dock = DockStyle.Fill;
+    //        label.TextAlign = ContentAlignment.MiddleCenter;
+    //        Controls.Add(label);
+    //    }
+    //}
 
     public class TicketPage : UserControl
     {
