@@ -47,7 +47,7 @@
             chkSoloShot = new CheckBox();
             label4 = new Label();
             panel4 = new Panel();
-            btnDone = new CuoreUI.Controls.cuiButton();
+            cuiButton1 = new CuoreUI.Controls.cuiButton();
             label5 = new Label();
             panel5 = new Panel();
             cuiPanel6 = new CuoreUI.Controls.cuiPanel();
@@ -284,50 +284,50 @@
             // 
             // panel4
             // 
-            panel4.Controls.Add(btnDone);
+            panel4.Controls.Add(cuiButton1);
             panel4.Dock = DockStyle.Bottom;
             panel4.Location = new Point(0, 494);
             panel4.Name = "panel4";
             panel4.Size = new Size(702, 84);
             panel4.TabIndex = 9;
             // 
-            // btnDone
+            // cuiButton1
             // 
-            btnDone.BackColor = Color.FromArgb(242, 239, 234);
-            btnDone.CheckButton = false;
-            btnDone.Checked = false;
-            btnDone.CheckedBackground = Color.FromArgb(255, 106, 0);
-            btnDone.CheckedForeColor = Color.White;
-            btnDone.CheckedImageTint = Color.White;
-            btnDone.CheckedOutline = Color.FromArgb(255, 106, 0);
-            btnDone.Content = "DONE";
-            btnDone.DialogResult = DialogResult.None;
-            btnDone.Font = new Font("Unbounded Light", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnDone.ForeColor = Color.White;
-            btnDone.HoverBackground = Color.White;
-            btnDone.HoveredImageTint = Color.White;
-            btnDone.HoverForeColor = Color.Black;
-            btnDone.HoverOutline = Color.FromArgb(32, 128, 128, 128);
-            btnDone.Image = null;
-            btnDone.ImageAutoCenter = true;
-            btnDone.ImageExpand = new Point(0, 0);
-            btnDone.ImageOffset = new Point(0, 0);
-            btnDone.Location = new Point(578, 16);
-            btnDone.Name = "btnDone";
-            btnDone.NormalBackground = Color.FromArgb(78, 45, 24);
-            btnDone.NormalForeColor = Color.White;
-            btnDone.NormalImageTint = Color.White;
-            btnDone.NormalOutline = Color.Transparent;
-            btnDone.OutlineThickness = 1F;
-            btnDone.PressedBackground = Color.WhiteSmoke;
-            btnDone.PressedForeColor = Color.FromArgb(32, 32, 32);
-            btnDone.PressedImageTint = Color.White;
-            btnDone.PressedOutline = Color.FromArgb(64, 128, 128, 128);
-            btnDone.Rounding = new Padding(8);
-            btnDone.Size = new Size(101, 47);
-            btnDone.TabIndex = 0;
-            btnDone.TextAlignment = StringAlignment.Center;
-            btnDone.TextOffset = new Point(0, 0);
+            cuiButton1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            cuiButton1.CheckButton = false;
+            cuiButton1.Checked = false;
+            cuiButton1.CheckedBackground = Color.FromArgb(255, 106, 0);
+            cuiButton1.CheckedForeColor = Color.White;
+            cuiButton1.CheckedImageTint = Color.White;
+            cuiButton1.CheckedOutline = Color.FromArgb(255, 106, 0);
+            cuiButton1.Content = "DONE";
+            cuiButton1.DialogResult = DialogResult.None;
+            cuiButton1.Font = new Font("Unbounded", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cuiButton1.ForeColor = Color.White;
+            cuiButton1.HoverBackground = Color.White;
+            cuiButton1.HoveredImageTint = Color.White;
+            cuiButton1.HoverForeColor = Color.Black;
+            cuiButton1.HoverOutline = Color.FromArgb(32, 128, 128, 128);
+            cuiButton1.Image = null;
+            cuiButton1.ImageAutoCenter = true;
+            cuiButton1.ImageExpand = new Point(0, 0);
+            cuiButton1.ImageOffset = new Point(0, 0);
+            cuiButton1.Location = new Point(566, 17);
+            cuiButton1.Name = "cuiButton1";
+            cuiButton1.NormalBackground = Color.FromArgb(78, 45, 24);
+            cuiButton1.NormalForeColor = Color.White;
+            cuiButton1.NormalImageTint = Color.White;
+            cuiButton1.NormalOutline = Color.FromArgb(64, 128, 128, 128);
+            cuiButton1.OutlineThickness = 1F;
+            cuiButton1.PressedBackground = Color.WhiteSmoke;
+            cuiButton1.PressedForeColor = Color.FromArgb(32, 32, 32);
+            cuiButton1.PressedImageTint = Color.White;
+            cuiButton1.PressedOutline = Color.FromArgb(64, 128, 128, 128);
+            cuiButton1.Rounding = new Padding(8);
+            cuiButton1.Size = new Size(101, 47);
+            cuiButton1.TabIndex = 7;
+            cuiButton1.TextAlignment = StringAlignment.Center;
+            cuiButton1.TextOffset = new Point(0, 0);
             // 
             // label5
             // 
@@ -414,10 +414,10 @@
             cuiButton3.DialogResult = DialogResult.None;
             cuiButton3.Font = new Font("Unbounded SemiBold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiButton3.ForeColor = Color.Black;
-            cuiButton3.HoverBackground = Color.White;
-            cuiButton3.HoveredImageTint = Color.White;
+            cuiButton3.HoverBackground = Color.FromArgb(242, 239, 234);
+            cuiButton3.HoveredImageTint = Color.Transparent;
             cuiButton3.HoverForeColor = Color.Black;
-            cuiButton3.HoverOutline = Color.FromArgb(32, 128, 128, 128);
+            cuiButton3.HoverOutline = Color.Transparent;
             cuiButton3.Image = null;
             cuiButton3.ImageAutoCenter = true;
             cuiButton3.ImageExpand = new Point(0, 0);
@@ -451,10 +451,10 @@
             cuiButton2.DialogResult = DialogResult.None;
             cuiButton2.Font = new Font("Unbounded SemiBold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiButton2.ForeColor = Color.Black;
-            cuiButton2.HoverBackground = Color.White;
-            cuiButton2.HoveredImageTint = Color.White;
+            cuiButton2.HoverBackground = Color.FromArgb(242, 239, 234);
+            cuiButton2.HoveredImageTint = Color.Transparent;
             cuiButton2.HoverForeColor = Color.Black;
-            cuiButton2.HoverOutline = Color.FromArgb(32, 128, 128, 128);
+            cuiButton2.HoverOutline = Color.Transparent;
             cuiButton2.Image = null;
             cuiButton2.ImageAutoCenter = true;
             cuiButton2.ImageExpand = new Point(0, 0);
@@ -541,7 +541,6 @@
         private CheckBox chkSoloShot;
         private Label label4;
         private Panel panel4;
-        private CuoreUI.Controls.cuiButton btnDone;
         private CuoreUI.Controls.cuiPanel cuiPanel1;
         private CuoreUI.Controls.cuiPanel cuiPanel2;
         private RadioButton radioGrande;
@@ -559,5 +558,6 @@
         private CuoreUI.Controls.cuiButton cuiButton3;
         private CuoreUI.Controls.cuiButton cuiButton2;
         private Label label6;
+        private CuoreUI.Controls.cuiButton cuiButton1;
     }
 }

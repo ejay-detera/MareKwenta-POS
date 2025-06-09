@@ -247,6 +247,7 @@
             label39.Size = new Size(177, 48);
             label39.TabIndex = 3;
             label39.Text = "Chocolate Chip Frappe";
+            label39.Click += label39_Click;
             // 
             // pictureBox8
             // 
@@ -295,6 +296,7 @@
             cuiButton15.TabIndex = 0;
             cuiButton15.TextAlignment = StringAlignment.Center;
             cuiButton15.TextOffset = new Point(0, 0);
+            cuiButton15.Click += cuiButton15_Click;
             // 
             // tableLayoutPanel3
             // 
@@ -383,6 +385,7 @@
             cuiButton2.TabIndex = 0;
             cuiButton2.TextAlignment = StringAlignment.Center;
             cuiButton2.TextOffset = new Point(0, 0);
+            cuiButton2.Click += cuiButton2_Click;
             // 
             // panel6
             // 
@@ -452,6 +455,7 @@
             cuiButton3.TabIndex = 0;
             cuiButton3.TextAlignment = StringAlignment.Center;
             cuiButton3.TextOffset = new Point(0, 0);
+            cuiButton3.Click += cuiButton3_Click;
             // 
             // panel2
             // 
@@ -521,6 +525,7 @@
             cuiButton1.TabIndex = 0;
             cuiButton1.TextAlignment = StringAlignment.Center;
             cuiButton1.TextOffset = new Point(0, 0);
+            cuiButton1.Click += cuiButton1_Click;
             // 
             // panel8
             // 
@@ -590,6 +595,7 @@
             cuiButton4.TabIndex = 0;
             cuiButton4.TextAlignment = StringAlignment.Center;
             cuiButton4.TextOffset = new Point(0, 0);
+            cuiButton4.Click += cuiButton4_Click;
             // 
             // panel4
             // 
@@ -852,6 +858,7 @@
             cuiButton25.TabIndex = 3;
             cuiButton25.TextAlignment = StringAlignment.Center;
             cuiButton25.TextOffset = new Point(0, 0);
+            cuiButton25.Click += cuiButton25_Click;
             // 
             // cuiButton23
             // 
@@ -930,6 +937,7 @@
             cuiButton24.TabIndex = 2;
             cuiButton24.TextAlignment = StringAlignment.Center;
             cuiButton24.TextOffset = new Point(0, 0);
+            cuiButton24.Click += cuiButton24_Click;
             // 
             // tableLayoutPanel10
             // 

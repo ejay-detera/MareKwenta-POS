@@ -27,3 +27,4 @@ C:\Users\Liberty Keith\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-win
 C:\Users\Liberty Keith\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.TicketNonCoffee.resources
 C:\Users\Liberty Keith\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.TicketFood.resources
 C:\Users\Liberty Keith\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.PopUpSplitComponent.resources
+C:\Users\Liberty Keith\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.ReceiptForm.resources

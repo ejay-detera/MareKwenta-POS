@@ -1,9 +1,12 @@
+using Mare_POS.Ticket_Components;
+
 namespace Mare_POS
 {
     public partial class NavbarForm : Form
     {
         private Panel contentPanel = new Panel();
         private Button activeButton = new Button();
+
 
         // Enum to define user types
         public enum UserType

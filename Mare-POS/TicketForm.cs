@@ -14,6 +14,8 @@ namespace Mare_POS
 {
     public partial class TicketForm : UserControl
     {
+        public event Action NavigateToTicketCoffee;
+        public event Action NavigateToTicketForm;
         public TicketForm()
         {
             InitializeComponent();
@@ -108,13 +110,16 @@ namespace Mare_POS
         {
             //panelMain.Controls.Clear();
 
-            // TicketCoffee coffeeControl = new TicketCoffee();
+            //TicketCoffee coffeeControl = new TicketCoffee();
             //coffeeControl.AutoScroll = true; // allow scroll if content exceeds visible area
-            // coffeeControl.Dock = DockStyle.Fill; // <-- Remove this
+            //coffeeControl.Dock = DockStyle.Fill; // <-- Remove this
             //coffeeControl.Anchor = AnchorStyles.Top | AnchorStyles.Left; // optional
 
             //panelMain.Controls.Add(coffeeControl);
-            
+
+            NavigateToTicketCoffee?.Invoke();
+
+
         }
 
         private void btnAmericano_Click_1(object sender, EventArgs e)
@@ -140,7 +145,7 @@ namespace Mare_POS
 
         private void btnNonCoffee_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void cuiButton24_Click(object sender, EventArgs e)
@@ -153,9 +158,304 @@ namespace Mare_POS
                 // Access public properties from SplitForm
                 //string part1 = splitForm.Part1;
                 //string part2 = splitForm.Part2;
-               
+
                 //MessageBox.Show($"Split result:\nPart 1: {part1}\nPart 2: {part2}");
             }
+        }
+
+        private void cuiButton25_Click(object sender, EventArgs e)
+        {
+            // Create and show the ReceiptForm
+            ReceiptForm receiptForm = new ReceiptForm();
+            receiptForm.ShowDialog(); // Use Show() if you don't want it modal
+        }
+
+        private void btnCafeLatte_Click(object sender, EventArgs e)
+        {
+            var popup = new ProductComponent();
+            popup.StartPosition = FormStartPosition.CenterParent;  // Center the popup on the current form
+
+            if (popup.ShowDialog(this) == DialogResult.OK)  // Block parent form until popup is done
+            {
+                // Access the selected values
+                string size = popup.SelectedSize ?? "N/A";
+                string type = popup.SelectedType ?? "N/A";
+                int qty = popup.Quantity;
+                string extras = popup.SelectedExtras.Count > 0 ? string.Join(", ", popup.SelectedExtras) : "None";
+
+                // Display the result (or add to order/cart)
+                MessageBox.Show($"Added {qty}x Americano\n" +
+                                $"Size: {size}\n" +
+                                $"Type: {type}\n" +
+                                $"Extras: {extras}", "Order Summary");
+            }
+        }
+
+        private void cuiButton2_Click(object sender, EventArgs e)
+        {
+            var popup = new ProductComponent();
+            popup.StartPosition = FormStartPosition.CenterParent;  // Center the popup on the current form
+
+            if (popup.ShowDialog(this) == DialogResult.OK)  // Block parent form until popup is done
+            {
+                // Access the selected values
+                string size = popup.SelectedSize ?? "N/A";
+                string type = popup.SelectedType ?? "N/A";
+                int qty = popup.Quantity;
+                string extras = popup.SelectedExtras.Count > 0 ? string.Join(", ", popup.SelectedExtras) : "None";
+
+                // Display the result (or add to order/cart)
+                MessageBox.Show($"Added {qty}x Americano\n" +
+                                $"Size: {size}\n" +
+                                $"Type: {type}\n" +
+                                $"Extras: {extras}", "Order Summary");
+            }
+        }
+
+        private void cuiButton3_Click(object sender, EventArgs e)
+        {
+            var popup = new ProductComponent();
+            popup.StartPosition = FormStartPosition.CenterParent;  // Center the popup on the current form
+
+            if (popup.ShowDialog(this) == DialogResult.OK)  // Block parent form until popup is done
+            {
+                // Access the selected values
+                string size = popup.SelectedSize ?? "N/A";
+                string type = popup.SelectedType ?? "N/A";
+                int qty = popup.Quantity;
+                string extras = popup.SelectedExtras.Count > 0 ? string.Join(", ", popup.SelectedExtras) : "None";
+
+                // Display the result (or add to order/cart)
+                MessageBox.Show($"Added {qty}x Americano\n" +
+                                $"Size: {size}\n" +
+                                $"Type: {type}\n" +
+                                $"Extras: {extras}", "Order Summary");
+            }
+        }
+
+        private void cuiButton5_Click(object sender, EventArgs e)
+        {
+            var popup = new ProductComponent();
+            popup.StartPosition = FormStartPosition.CenterParent;  // Center the popup on the current form
+
+            if (popup.ShowDialog(this) == DialogResult.OK)  // Block parent form until popup is done
+            {
+                // Access the selected values
+                string size = popup.SelectedSize ?? "N/A";
+                string type = popup.SelectedType ?? "N/A";
+                int qty = popup.Quantity;
+                string extras = popup.SelectedExtras.Count > 0 ? string.Join(", ", popup.SelectedExtras) : "None";
+
+                // Display the result (or add to order/cart)
+                MessageBox.Show($"Added {qty}x Americano\n" +
+                                $"Size: {size}\n" +
+                                $"Type: {type}\n" +
+                                $"Extras: {extras}", "Order Summary");
+            }
+        }
+
+        private void cuiButton17_Click(object sender, EventArgs e)
+        {
+            var popup = new ProductComponent();
+            popup.StartPosition = FormStartPosition.CenterParent;  // Center the popup on the current form
+
+            if (popup.ShowDialog(this) == DialogResult.OK)  // Block parent form until popup is done
+            {
+                // Access the selected values
+                string size = popup.SelectedSize ?? "N/A";
+                string type = popup.SelectedType ?? "N/A";
+                int qty = popup.Quantity;
+                string extras = popup.SelectedExtras.Count > 0 ? string.Join(", ", popup.SelectedExtras) : "None";
+
+                // Display the result (or add to order/cart)
+                MessageBox.Show($"Added {qty}x Americano\n" +
+                                $"Size: {size}\n" +
+                                $"Type: {type}\n" +
+                                $"Extras: {extras}", "Order Summary");
+            }
+        }
+
+        private void cuiButton16_Click(object sender, EventArgs e)
+        {
+            var popup = new ProductComponent();
+            popup.StartPosition = FormStartPosition.CenterParent;  // Center the popup on the current form
+
+            if (popup.ShowDialog(this) == DialogResult.OK)  // Block parent form until popup is done
+            {
+                // Access the selected values
+                string size = popup.SelectedSize ?? "N/A";
+                string type = popup.SelectedType ?? "N/A";
+                int qty = popup.Quantity;
+                string extras = popup.SelectedExtras.Count > 0 ? string.Join(", ", popup.SelectedExtras) : "None";
+
+                // Display the result (or add to order/cart)
+                MessageBox.Show($"Added {qty}x Americano\n" +
+                                $"Size: {size}\n" +
+                                $"Type: {type}\n" +
+                                $"Extras: {extras}", "Order Summary");
+            }
+        }
+
+        private void label32_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cuiButton15_Click_1(object sender, EventArgs e)
+        {
+            var popup = new ProductComponent();
+            popup.StartPosition = FormStartPosition.CenterParent;  // Center the popup on the current form
+
+            if (popup.ShowDialog(this) == DialogResult.OK)  // Block parent form until popup is done
+            {
+                // Access the selected values
+                string size = popup.SelectedSize ?? "N/A";
+                string type = popup.SelectedType ?? "N/A";
+                int qty = popup.Quantity;
+                string extras = popup.SelectedExtras.Count > 0 ? string.Join(", ", popup.SelectedExtras) : "None";
+
+                // Display the result (or add to order/cart)
+                MessageBox.Show($"Added {qty}x Americano\n" +
+                                $"Size: {size}\n" +
+                                $"Type: {type}\n" +
+                                $"Extras: {extras}", "Order Summary");
+            }
+        }
+
+        private void cuiButton14_Click(object sender, EventArgs e)
+        {
+            var popup = new ProductComponent();
+            popup.StartPosition = FormStartPosition.CenterParent;  // Center the popup on the current form
+
+            if (popup.ShowDialog(this) == DialogResult.OK)  // Block parent form until popup is done
+            {
+                // Access the selected values
+                string size = popup.SelectedSize ?? "N/A";
+                string type = popup.SelectedType ?? "N/A";
+                int qty = popup.Quantity;
+                string extras = popup.SelectedExtras.Count > 0 ? string.Join(", ", popup.SelectedExtras) : "None";
+
+                // Display the result (or add to order/cart)
+                MessageBox.Show($"Added {qty}x Americano\n" +
+                                $"Size: {size}\n" +
+                                $"Type: {type}\n" +
+                                $"Extras: {extras}", "Order Summary");
+            }
+        }
+
+        private void cuiButton13_Click(object sender, EventArgs e)
+        {
+            var popup = new ProductComponent();
+            popup.StartPosition = FormStartPosition.CenterParent;  // Center the popup on the current form
+
+            if (popup.ShowDialog(this) == DialogResult.OK)  // Block parent form until popup is done
+            {
+                // Access the selected values
+                string size = popup.SelectedSize ?? "N/A";
+                string type = popup.SelectedType ?? "N/A";
+                int qty = popup.Quantity;
+                string extras = popup.SelectedExtras.Count > 0 ? string.Join(", ", popup.SelectedExtras) : "None";
+
+                // Display the result (or add to order/cart)
+                MessageBox.Show($"Added {qty}x Americano\n" +
+                                $"Size: {size}\n" +
+                                $"Type: {type}\n" +
+                                $"Extras: {extras}", "Order Summary");
+            }
+        }
+
+        private void cuiButton26_Click(object sender, EventArgs e)
+        {
+            var popup = new ProductComponent();
+            popup.StartPosition = FormStartPosition.CenterParent;  // Center the popup on the current form
+
+            if (popup.ShowDialog(this) == DialogResult.OK)  // Block parent form until popup is done
+            {
+                // Access the selected values
+                string size = popup.SelectedSize ?? "N/A";
+                string type = popup.SelectedType ?? "N/A";
+                int qty = popup.Quantity;
+                string extras = popup.SelectedExtras.Count > 0 ? string.Join(", ", popup.SelectedExtras) : "None";
+
+                // Display the result (or add to order/cart)
+                MessageBox.Show($"Added {qty}x Americano\n" +
+                                $"Size: {size}\n" +
+                                $"Type: {type}\n" +
+                                $"Extras: {extras}", "Order Summary");
+            }
+        }
+
+        private void label38_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cuiButton21_Click(object sender, EventArgs e)
+        {
+            var popup = new ProductComponent();
+            popup.StartPosition = FormStartPosition.CenterParent;  // Center the popup on the current form
+
+            if (popup.ShowDialog(this) == DialogResult.OK)  // Block parent form until popup is done
+            {
+                // Access the selected values
+                string size = popup.SelectedSize ?? "N/A";
+                string type = popup.SelectedType ?? "N/A";
+                int qty = popup.Quantity;
+                string extras = popup.SelectedExtras.Count > 0 ? string.Join(", ", popup.SelectedExtras) : "None";
+
+                // Display the result (or add to order/cart)
+                MessageBox.Show($"Added {qty}x Americano\n" +
+                                $"Size: {size}\n" +
+                                $"Type: {type}\n" +
+                                $"Extras: {extras}", "Order Summary");
+            }
+        }
+
+        private void cuiButton20_Click(object sender, EventArgs e)
+        {
+            var popup = new ProductComponent();
+            popup.StartPosition = FormStartPosition.CenterParent;  // Center the popup on the current form
+
+            if (popup.ShowDialog(this) == DialogResult.OK)  // Block parent form until popup is done
+            {
+                // Access the selected values
+                string size = popup.SelectedSize ?? "N/A";
+                string type = popup.SelectedType ?? "N/A";
+                int qty = popup.Quantity;
+                string extras = popup.SelectedExtras.Count > 0 ? string.Join(", ", popup.SelectedExtras) : "None";
+
+                // Display the result (or add to order/cart)
+                MessageBox.Show($"Added {qty}x Americano\n" +
+                                $"Size: {size}\n" +
+                                $"Type: {type}\n" +
+                                $"Extras: {extras}", "Order Summary");
+            }
+        }
+
+        private void cuiButton19_Click(object sender, EventArgs e)
+        {
+            var popup = new ProductComponent();
+            popup.StartPosition = FormStartPosition.CenterParent;  // Center the popup on the current form
+
+            if (popup.ShowDialog(this) == DialogResult.OK)  // Block parent form until popup is done
+            {
+                // Access the selected values
+                string size = popup.SelectedSize ?? "N/A";
+                string type = popup.SelectedType ?? "N/A";
+                int qty = popup.Quantity;
+                string extras = popup.SelectedExtras.Count > 0 ? string.Join(", ", popup.SelectedExtras) : "None";
+
+                // Display the result (or add to order/cart)
+                MessageBox.Show($"Added {qty}x Americano\n" +
+                                $"Size: {size}\n" +
+                                $"Type: {type}\n" +
+                                $"Extras: {extras}", "Order Summary");
+            }
+        }
+
+        private void btnAll_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

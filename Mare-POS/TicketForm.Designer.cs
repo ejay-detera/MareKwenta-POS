@@ -85,7 +85,7 @@
             panel7 = new Panel();
             label2 = new Label();
             pictureBox1 = new PictureBox();
-            cuiButton1 = new CuoreUI.Controls.cuiButton();
+            btnCafeLatte = new CuoreUI.Controls.cuiButton();
             panel8 = new Panel();
             label5 = new Label();
             pictureBox4 = new PictureBox();
@@ -346,6 +346,7 @@
             cuiButton19.TabIndex = 0;
             cuiButton19.TextAlignment = StringAlignment.Center;
             cuiButton19.TextOffset = new Point(0, 0);
+            cuiButton19.Click += cuiButton19_Click;
             // 
             // panel24
             // 
@@ -415,6 +416,7 @@
             cuiButton20.TabIndex = 0;
             cuiButton20.TextAlignment = StringAlignment.Center;
             cuiButton20.TextOffset = new Point(0, 0);
+            cuiButton20.Click += cuiButton20_Click;
             // 
             // panel25
             // 
@@ -436,6 +438,7 @@
             label38.Size = new Size(139, 25);
             label38.TabIndex = 3;
             label38.Text = "Garlic Rice";
+            label38.Click += label38_Click;
             // 
             // pictureBox14
             // 
@@ -484,6 +487,7 @@
             cuiButton21.TabIndex = 0;
             cuiButton21.TextAlignment = StringAlignment.Center;
             cuiButton21.TextOffset = new Point(0, 0);
+            cuiButton21.Click += cuiButton21_Click;
             // 
             // panel26
             // 
@@ -552,6 +556,7 @@
             cuiButton26.TabIndex = 0;
             cuiButton26.TextAlignment = StringAlignment.Center;
             cuiButton26.TextOffset = new Point(0, 0);
+            cuiButton26.Click += cuiButton26_Click;
             // 
             // tableLayoutPanel12
             // 
@@ -642,6 +647,7 @@
             cuiButton13.TabIndex = 0;
             cuiButton13.TextAlignment = StringAlignment.Center;
             cuiButton13.TextOffset = new Point(0, 0);
+            cuiButton13.Click += cuiButton13_Click;
             // 
             // panel18
             // 
@@ -711,6 +717,7 @@
             cuiButton14.TabIndex = 0;
             cuiButton14.TextAlignment = StringAlignment.Center;
             cuiButton14.TextOffset = new Point(0, 0);
+            cuiButton14.Click += cuiButton14_Click;
             // 
             // panel19
             // 
@@ -732,6 +739,7 @@
             label32.Size = new Size(139, 50);
             label32.TabIndex = 3;
             label32.Text = "Strawberry Frappe";
+            label32.Click += label32_Click;
             // 
             // pictureBox8
             // 
@@ -780,6 +788,7 @@
             cuiButton15.TabIndex = 0;
             cuiButton15.TextAlignment = StringAlignment.Center;
             cuiButton15.TextOffset = new Point(0, 0);
+            cuiButton15.Click += cuiButton15_Click_1;
             // 
             // panel20
             // 
@@ -849,6 +858,7 @@
             cuiButton16.TabIndex = 0;
             cuiButton16.TextAlignment = StringAlignment.Center;
             cuiButton16.TextOffset = new Point(0, 0);
+            cuiButton16.Click += cuiButton16_Click;
             // 
             // panel21
             // 
@@ -917,6 +927,7 @@
             cuiButton17.TabIndex = 0;
             cuiButton17.TextAlignment = StringAlignment.Center;
             cuiButton17.TextOffset = new Point(0, 0);
+            cuiButton17.Click += cuiButton17_Click;
             // 
             // tableLayoutPanel2
             // 
@@ -1007,6 +1018,7 @@
             cuiButton5.TabIndex = 0;
             cuiButton5.TextAlignment = StringAlignment.Center;
             cuiButton5.TextOffset = new Point(0, 0);
+            cuiButton5.Click += cuiButton5_Click;
             // 
             // panel5
             // 
@@ -1076,6 +1088,7 @@
             cuiButton3.TabIndex = 0;
             cuiButton3.TextAlignment = StringAlignment.Center;
             cuiButton3.TextOffset = new Point(0, 0);
+            cuiButton3.Click += cuiButton3_Click;
             // 
             // panel6
             // 
@@ -1145,12 +1158,13 @@
             cuiButton2.TabIndex = 0;
             cuiButton2.TextAlignment = StringAlignment.Center;
             cuiButton2.TextOffset = new Point(0, 0);
+            cuiButton2.Click += cuiButton2_Click;
             // 
             // panel7
             // 
             panel7.Controls.Add(label2);
             panel7.Controls.Add(pictureBox1);
-            panel7.Controls.Add(cuiButton1);
+            panel7.Controls.Add(btnCafeLatte);
             panel7.Location = new Point(199, 3);
             panel7.Name = "panel7";
             panel7.Size = new Size(176, 215);
@@ -1177,44 +1191,45 @@
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
-            // cuiButton1
+            // btnCafeLatte
             // 
-            cuiButton1.CheckButton = false;
-            cuiButton1.Checked = false;
-            cuiButton1.CheckedBackground = Color.FromArgb(255, 106, 0);
-            cuiButton1.CheckedForeColor = Color.White;
-            cuiButton1.CheckedImageTint = Color.White;
-            cuiButton1.CheckedOutline = Color.FromArgb(255, 106, 0);
-            cuiButton1.Content = "";
-            cuiButton1.DialogResult = DialogResult.None;
-            cuiButton1.Dock = DockStyle.Fill;
-            cuiButton1.Font = new Font("Microsoft Sans Serif", 9.75F);
-            cuiButton1.ForeColor = Color.Black;
-            cuiButton1.HoverBackground = Color.White;
-            cuiButton1.HoveredImageTint = Color.White;
-            cuiButton1.HoverForeColor = Color.Black;
-            cuiButton1.HoverOutline = Color.FromArgb(32, 128, 128, 128);
-            cuiButton1.Image = null;
-            cuiButton1.ImageAutoCenter = true;
-            cuiButton1.ImageExpand = new Point(0, 0);
-            cuiButton1.ImageOffset = new Point(0, 0);
-            cuiButton1.Location = new Point(0, 0);
-            cuiButton1.Name = "cuiButton1";
-            cuiButton1.NormalBackground = Color.White;
-            cuiButton1.NormalForeColor = Color.Black;
-            cuiButton1.NormalImageTint = Color.White;
-            cuiButton1.NormalOutline = Color.FromArgb(64, 128, 128, 128);
-            cuiButton1.OutlineThickness = 1F;
-            cuiButton1.Padding = new Padding(5);
-            cuiButton1.PressedBackground = Color.WhiteSmoke;
-            cuiButton1.PressedForeColor = Color.FromArgb(32, 32, 32);
-            cuiButton1.PressedImageTint = Color.White;
-            cuiButton1.PressedOutline = Color.FromArgb(64, 128, 128, 128);
-            cuiButton1.Rounding = new Padding(8);
-            cuiButton1.Size = new Size(176, 215);
-            cuiButton1.TabIndex = 0;
-            cuiButton1.TextAlignment = StringAlignment.Center;
-            cuiButton1.TextOffset = new Point(0, 0);
+            btnCafeLatte.CheckButton = false;
+            btnCafeLatte.Checked = false;
+            btnCafeLatte.CheckedBackground = Color.FromArgb(255, 106, 0);
+            btnCafeLatte.CheckedForeColor = Color.White;
+            btnCafeLatte.CheckedImageTint = Color.White;
+            btnCafeLatte.CheckedOutline = Color.FromArgb(255, 106, 0);
+            btnCafeLatte.Content = "";
+            btnCafeLatte.DialogResult = DialogResult.None;
+            btnCafeLatte.Dock = DockStyle.Fill;
+            btnCafeLatte.Font = new Font("Microsoft Sans Serif", 9.75F);
+            btnCafeLatte.ForeColor = Color.Black;
+            btnCafeLatte.HoverBackground = Color.White;
+            btnCafeLatte.HoveredImageTint = Color.White;
+            btnCafeLatte.HoverForeColor = Color.Black;
+            btnCafeLatte.HoverOutline = Color.FromArgb(32, 128, 128, 128);
+            btnCafeLatte.Image = null;
+            btnCafeLatte.ImageAutoCenter = true;
+            btnCafeLatte.ImageExpand = new Point(0, 0);
+            btnCafeLatte.ImageOffset = new Point(0, 0);
+            btnCafeLatte.Location = new Point(0, 0);
+            btnCafeLatte.Name = "btnCafeLatte";
+            btnCafeLatte.NormalBackground = Color.White;
+            btnCafeLatte.NormalForeColor = Color.Black;
+            btnCafeLatte.NormalImageTint = Color.White;
+            btnCafeLatte.NormalOutline = Color.FromArgb(64, 128, 128, 128);
+            btnCafeLatte.OutlineThickness = 1F;
+            btnCafeLatte.Padding = new Padding(5);
+            btnCafeLatte.PressedBackground = Color.WhiteSmoke;
+            btnCafeLatte.PressedForeColor = Color.FromArgb(32, 32, 32);
+            btnCafeLatte.PressedImageTint = Color.White;
+            btnCafeLatte.PressedOutline = Color.FromArgb(64, 128, 128, 128);
+            btnCafeLatte.Rounding = new Padding(8);
+            btnCafeLatte.Size = new Size(176, 215);
+            btnCafeLatte.TabIndex = 0;
+            btnCafeLatte.TextAlignment = StringAlignment.Center;
+            btnCafeLatte.TextOffset = new Point(0, 0);
+            btnCafeLatte.Click += btnCafeLatte_Click;
             // 
             // panel8
             // 
@@ -1374,6 +1389,7 @@
             btnAll.TabIndex = 0;
             btnAll.Text = "All";
             btnAll.UseVisualStyleBackColor = true;
+            btnAll.Click += btnAll_Click_1;
             // 
             // btnCoffee
             // 
@@ -1549,6 +1565,7 @@
             cuiButton25.TabIndex = 3;
             cuiButton25.TextAlignment = StringAlignment.Center;
             cuiButton25.TextOffset = new Point(0, 0);
+            cuiButton25.Click += cuiButton25_Click;
             // 
             // cuiButton23
             // 
@@ -2648,7 +2665,7 @@
         private CuoreUI.Controls.cuiButton cuiButton2;
         private Panel panel7;
         private PictureBox pictureBox1;
-        private CuoreUI.Controls.cuiButton cuiButton1;
+        private CuoreUI.Controls.cuiButton btnCafeLatte;
         private Panel panel8;
         private PictureBox pictureBox4;
         private CuoreUI.Controls.cuiButton btnAmericano;

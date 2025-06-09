@@ -182,15 +182,15 @@
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.AutoScroll = true;
-            tableLayoutPanel1.AutoSize = true;
             tableLayoutPanel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             tableLayoutPanel1.ColumnCount = 2;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 65.65656F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 34.3434334F));
             tableLayoutPanel1.Controls.Add(panel1, 0, 0);
             tableLayoutPanel1.Controls.Add(cuiPanel1, 1, 0);
-            tableLayoutPanel1.Dock = DockStyle.Top;
+            tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Margin = new Padding(4, 3, 3, 4);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
@@ -207,9 +207,10 @@
             panel1.Controls.Add(panel4);
             panel1.Controls.Add(panel3);
             panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(3, 3);
+            panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(939, 1018);
+            panel1.Size = new Size(945, 1024);
             panel1.TabIndex = 0;
             // 
             // tableLayoutPanel13
@@ -362,6 +363,7 @@
             cuiButton2.TabIndex = 0;
             cuiButton2.TextAlignment = StringAlignment.Center;
             cuiButton2.TextOffset = new Point(0, 0);
+            cuiButton2.Click += cuiButton2_Click;
             // 
             // tableLayoutPanel3
             // 
@@ -449,6 +451,7 @@
             cuiButton3.TabIndex = 0;
             cuiButton3.TextAlignment = StringAlignment.Center;
             cuiButton3.TextOffset = new Point(0, 0);
+            cuiButton3.Click += cuiButton3_Click;
             // 
             // panel2
             // 
@@ -518,6 +521,7 @@
             cuiButton1.TabIndex = 0;
             cuiButton1.TextAlignment = StringAlignment.Center;
             cuiButton1.TextOffset = new Point(0, 0);
+            cuiButton1.Click += cuiButton1_Click;
             // 
             // panel8
             // 
@@ -587,6 +591,7 @@
             cuiButton4.TabIndex = 0;
             cuiButton4.TextAlignment = StringAlignment.Center;
             cuiButton4.TextOffset = new Point(0, 0);
+            cuiButton4.Click += cuiButton4_Click;
             // 
             // panel4
             // 
@@ -595,7 +600,7 @@
             panel4.Location = new Point(0, 87);
             panel4.Margin = new Padding(3, 4, 3, 4);
             panel4.Name = "panel4";
-            panel4.Size = new Size(939, 92);
+            panel4.Size = new Size(945, 92);
             panel4.TabIndex = 7;
             // 
             // tableLayoutPanel2
@@ -610,7 +615,7 @@
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 1;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.Size = new Size(760, 58);
+            tableLayoutPanel2.Size = new Size(766, 58);
             tableLayoutPanel2.TabIndex = 24;
             // 
             // cuiPanel4
@@ -624,7 +629,7 @@
             cuiPanel4.PanelColor = Color.FromArgb(242, 239, 234);
             cuiPanel4.PanelOutlineColor = Color.Silver;
             cuiPanel4.Rounding = new Padding(0);
-            cuiPanel4.Size = new Size(760, 58);
+            cuiPanel4.Size = new Size(766, 58);
             cuiPanel4.TabIndex = 0;
             // 
             // tableLayoutPanel14
@@ -717,7 +722,7 @@
             panel3.Location = new Point(0, 0);
             panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(939, 87);
+            panel3.Size = new Size(945, 87);
             panel3.TabIndex = 6;
             // 
             // label1
@@ -733,9 +738,7 @@
             // 
             // cuiPanel1
             // 
-            cuiPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             cuiPanel1.AutoScroll = true;
-            cuiPanel1.AutoSize = true;
             cuiPanel1.Controls.Add(tableLayoutPanel12);
             cuiPanel1.Controls.Add(tableLayoutPanel10);
             cuiPanel1.Controls.Add(tableLayoutPanel11);
@@ -746,6 +749,7 @@
             cuiPanel1.Controls.Add(tableLayoutPanel4);
             cuiPanel1.Controls.Add(tableLayoutPanel5);
             cuiPanel1.Controls.Add(panel7);
+            cuiPanel1.Dock = DockStyle.Fill;
             cuiPanel1.Location = new Point(948, 3);
             cuiPanel1.Name = "cuiPanel1";
             cuiPanel1.OutlineThickness = 1F;
@@ -851,6 +855,7 @@
             cuiButton25.TabIndex = 3;
             cuiButton25.TextAlignment = StringAlignment.Center;
             cuiButton25.TextOffset = new Point(0, 0);
+            cuiButton25.Click += cuiButton25_Click;
             // 
             // cuiButton23
             // 
@@ -929,6 +934,7 @@
             cuiButton24.TabIndex = 2;
             cuiButton24.TextAlignment = StringAlignment.Center;
             cuiButton24.TextOffset = new Point(0, 0);
+            cuiButton24.Click += cuiButton24_Click;
             // 
             // tableLayoutPanel10
             // 
@@ -1992,7 +1998,6 @@
             Name = "TicketCoffee";
             Size = new Size(1440, 1024);
             tableLayoutPanel1.ResumeLayout(false);
-            tableLayoutPanel1.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             tableLayoutPanel13.ResumeLayout(false);
@@ -2038,7 +2043,6 @@
             cuiPanel18.ResumeLayout(false);
             panel7.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion

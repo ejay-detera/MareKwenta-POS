@@ -39,12 +39,10 @@
             label2 = new Label();
             cuiLabel3 = new CuoreUI.Controls.cuiLabel();
             panel3 = new Panel();
+            comboBox1 = new ComboBox();
             cuiSeparator2 = new CuoreUI.Controls.cuiSeparator();
             cuiSeparator1 = new CuoreUI.Controls.cuiSeparator();
-            cuiButton5 = new CuoreUI.Controls.cuiButton();
             label5 = new Label();
-            comboBox1 = new ComboBox();
-            label4 = new Label();
             cuiButton4 = new CuoreUI.Controls.cuiButton();
             panel4 = new Panel();
             cuiSeparator3 = new CuoreUI.Controls.cuiSeparator();
@@ -52,7 +50,6 @@
             cuiButton6 = new CuoreUI.Controls.cuiButton();
             label6 = new Label();
             comboBox2 = new ComboBox();
-            label7 = new Label();
             cuiButton7 = new CuoreUI.Controls.cuiButton();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -127,7 +124,7 @@
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 72);
             panel2.Name = "panel2";
-            panel2.Size = new Size(493, 131);
+            panel2.Size = new Size(493, 115);
             panel2.TabIndex = 1;
             // 
             // cuiButton3
@@ -150,7 +147,7 @@
             cuiButton3.ImageAutoCenter = true;
             cuiButton3.ImageExpand = new Point(0, 0);
             cuiButton3.ImageOffset = new Point(0, 0);
-            cuiButton3.Location = new Point(275, 55);
+            cuiButton3.Location = new Point(275, 48);
             cuiButton3.Name = "cuiButton3";
             cuiButton3.NormalBackground = Color.Transparent;
             cuiButton3.NormalForeColor = Color.Black;
@@ -187,7 +184,7 @@
             cuiButton2.ImageAutoCenter = true;
             cuiButton2.ImageExpand = new Point(0, 0);
             cuiButton2.ImageOffset = new Point(0, 0);
-            cuiButton2.Location = new Point(135, 55);
+            cuiButton2.Location = new Point(135, 48);
             cuiButton2.Name = "cuiButton2";
             cuiButton2.NormalBackground = Color.Transparent;
             cuiButton2.NormalForeColor = Color.Black;
@@ -208,7 +205,7 @@
             // 
             label3.Font = new Font("Unbounded", 22.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.FromArgb(112, 138, 46);
-            label3.Location = new Point(213, 52);
+            label3.Location = new Point(213, 45);
             label3.Name = "label3";
             label3.Size = new Size(48, 64);
             label3.TabIndex = 1;
@@ -218,7 +215,7 @@
             // 
             label2.Font = new Font("Unbounded Medium", 13.7999992F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.FromArgb(78, 45, 24);
-            label2.Location = new Point(152, 16);
+            label2.Location = new Point(152, 9);
             label2.Name = "label2";
             label2.Size = new Size(176, 36);
             label2.TabIndex = 0;
@@ -232,7 +229,7 @@
             cuiLabel3.Font = new Font("Unbounded Medium", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiLabel3.ForeColor = Color.FromArgb(78, 45, 24);
             cuiLabel3.HorizontalAlignment = StringAlignment.Center;
-            cuiLabel3.Location = new Point(24, 211);
+            cuiLabel3.Location = new Point(24, 194);
             cuiLabel3.Margin = new Padding(5);
             cuiLabel3.Name = "cuiLabel3";
             cuiLabel3.Size = new Size(439, 23);
@@ -241,22 +238,33 @@
             // 
             // panel3
             // 
+            panel3.Controls.Add(comboBox1);
             panel3.Controls.Add(cuiSeparator2);
             panel3.Controls.Add(cuiSeparator1);
-            panel3.Controls.Add(cuiButton5);
             panel3.Controls.Add(label5);
-            panel3.Controls.Add(comboBox1);
-            panel3.Controls.Add(label4);
             panel3.Controls.Add(cuiButton4);
-            panel3.Location = new Point(0, 236);
+            panel3.Location = new Point(0, 221);
             panel3.Name = "panel3";
-            panel3.Size = new Size(493, 79);
+            panel3.Size = new Size(493, 69);
             panel3.TabIndex = 32;
+            // 
+            // comboBox1
+            // 
+            comboBox1.BackColor = Color.White;
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox1.Font = new Font("Inter 28pt 28pt", 10F, FontStyle.Bold);
+            comboBox1.ForeColor = Color.Black;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Cash", "Gcash", "Maya" });
+            comboBox1.Location = new Point(107, 19);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(154, 27);
+            comboBox1.TabIndex = 35;
             // 
             // cuiSeparator2
             // 
             cuiSeparator2.ForeColor = Color.FromArgb(78, 45, 24);
-            cuiSeparator2.Location = new Point(232, 52);
+            cuiSeparator2.Location = new Point(277, 46);
             cuiSeparator2.Margin = new Padding(4, 5, 4, 5);
             cuiSeparator2.Name = "cuiSeparator2";
             cuiSeparator2.SeparatorMargin = 8;
@@ -268,7 +276,7 @@
             // cuiSeparator1
             // 
             cuiSeparator1.ForeColor = Color.FromArgb(78, 45, 24);
-            cuiSeparator1.Location = new Point(51, 52);
+            cuiSeparator1.Location = new Point(96, 46);
             cuiSeparator1.Margin = new Padding(4, 5, 4, 5);
             cuiSeparator1.Name = "cuiSeparator1";
             cuiSeparator1.SeparatorMargin = 8;
@@ -277,74 +285,15 @@
             cuiSeparator1.Thickness = 0.5F;
             cuiSeparator1.Vertical = false;
             // 
-            // cuiButton5
-            // 
-            cuiButton5.CheckButton = false;
-            cuiButton5.Checked = false;
-            cuiButton5.CheckedBackground = Color.FromArgb(255, 106, 0);
-            cuiButton5.CheckedForeColor = Color.White;
-            cuiButton5.CheckedImageTint = Color.White;
-            cuiButton5.CheckedOutline = Color.FromArgb(255, 106, 0);
-            cuiButton5.Content = "CHARGE";
-            cuiButton5.DialogResult = DialogResult.None;
-            cuiButton5.Font = new Font("Unbounded", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiButton5.ForeColor = Color.White;
-            cuiButton5.HoverBackground = Color.White;
-            cuiButton5.HoveredImageTint = Color.White;
-            cuiButton5.HoverForeColor = Color.Black;
-            cuiButton5.HoverOutline = Color.FromArgb(32, 128, 128, 128);
-            cuiButton5.Image = null;
-            cuiButton5.ImageAutoCenter = true;
-            cuiButton5.ImageExpand = new Point(6, 6);
-            cuiButton5.ImageOffset = new Point(0, 0);
-            cuiButton5.Location = new Point(368, 24);
-            cuiButton5.Name = "cuiButton5";
-            cuiButton5.NormalBackground = Color.FromArgb(112, 138, 46);
-            cuiButton5.NormalForeColor = Color.White;
-            cuiButton5.NormalImageTint = Color.White;
-            cuiButton5.NormalOutline = Color.Transparent;
-            cuiButton5.OutlineThickness = 1F;
-            cuiButton5.PressedBackground = Color.WhiteSmoke;
-            cuiButton5.PressedForeColor = Color.FromArgb(32, 32, 32);
-            cuiButton5.PressedImageTint = Color.White;
-            cuiButton5.PressedOutline = Color.FromArgb(64, 128, 128, 128);
-            cuiButton5.Rounding = new Padding(8);
-            cuiButton5.Size = new Size(104, 35);
-            cuiButton5.TabIndex = 5;
-            cuiButton5.TextAlignment = StringAlignment.Center;
-            cuiButton5.TextOffset = new Point(0, 0);
-            // 
             // label5
             // 
             label5.Font = new Font("Unbounded", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.FromArgb(78, 45, 24);
-            label5.Location = new Point(289, 27);
+            label5.Location = new Point(334, 22);
             label5.Name = "label5";
             label5.Size = new Size(65, 29);
             label5.TabIndex = 4;
             label5.Text = "₱ 90";
-            // 
-            // comboBox1
-            // 
-            comboBox1.BackColor = Color.White;
-            comboBox1.ForeColor = Color.Black;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Gcash", "Maya" });
-            comboBox1.Location = new Point(128, 27);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(88, 28);
-            comboBox1.TabIndex = 3;
-            // 
-            // label4
-            // 
-            label4.Font = new Font("Unbounded", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.FromArgb(78, 45, 24);
-            label4.Location = new Point(57, 27);
-            label4.Name = "label4";
-            label4.Size = new Size(80, 29);
-            label4.TabIndex = 2;
-            label4.Text = "Cash";
-            label4.Click += label4_Click;
             // 
             // cuiButton4
             // 
@@ -366,7 +315,7 @@
             cuiButton4.ImageAutoCenter = true;
             cuiButton4.ImageExpand = new Point(6, 6);
             cuiButton4.ImageOffset = new Point(0, 0);
-            cuiButton4.Location = new Point(12, 12);
+            cuiButton4.Location = new Point(57, 7);
             cuiButton4.Name = "cuiButton4";
             cuiButton4.NormalBackground = Color.Transparent;
             cuiButton4.NormalForeColor = Color.Black;
@@ -387,20 +336,18 @@
             // 
             panel4.Controls.Add(cuiSeparator3);
             panel4.Controls.Add(cuiSeparator4);
-            panel4.Controls.Add(cuiButton6);
             panel4.Controls.Add(label6);
             panel4.Controls.Add(comboBox2);
-            panel4.Controls.Add(label7);
             panel4.Controls.Add(cuiButton7);
-            panel4.Location = new Point(0, 313);
+            panel4.Location = new Point(0, 291);
             panel4.Name = "panel4";
-            panel4.Size = new Size(493, 79);
+            panel4.Size = new Size(493, 66);
             panel4.TabIndex = 33;
             // 
             // cuiSeparator3
             // 
             cuiSeparator3.ForeColor = Color.FromArgb(78, 45, 24);
-            cuiSeparator3.Location = new Point(232, 52);
+            cuiSeparator3.Location = new Point(280, 47);
             cuiSeparator3.Margin = new Padding(4, 5, 4, 5);
             cuiSeparator3.Name = "cuiSeparator3";
             cuiSeparator3.SeparatorMargin = 8;
@@ -412,7 +359,7 @@
             // cuiSeparator4
             // 
             cuiSeparator4.ForeColor = Color.FromArgb(78, 45, 24);
-            cuiSeparator4.Location = new Point(51, 52);
+            cuiSeparator4.Location = new Point(94, 47);
             cuiSeparator4.Margin = new Padding(4, 5, 4, 5);
             cuiSeparator4.Name = "cuiSeparator4";
             cuiSeparator4.SeparatorMargin = 8;
@@ -441,7 +388,7 @@
             cuiButton6.ImageAutoCenter = true;
             cuiButton6.ImageExpand = new Point(6, 6);
             cuiButton6.ImageOffset = new Point(0, 0);
-            cuiButton6.Location = new Point(368, 24);
+            cuiButton6.Location = new Point(368, 374);
             cuiButton6.Name = "cuiButton6";
             cuiButton6.NormalBackground = Color.FromArgb(112, 138, 46);
             cuiButton6.NormalForeColor = Color.White;
@@ -462,7 +409,7 @@
             // 
             label6.Font = new Font("Unbounded", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.FromArgb(78, 45, 24);
-            label6.Location = new Point(289, 27);
+            label6.Location = new Point(335, 21);
             label6.Name = "label6";
             label6.Size = new Size(65, 29);
             label6.TabIndex = 4;
@@ -471,23 +418,15 @@
             // comboBox2
             // 
             comboBox2.BackColor = Color.White;
+            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox2.Font = new Font("Inter 28pt 28pt", 10F, FontStyle.Bold);
             comboBox2.ForeColor = Color.Black;
             comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Gcash", "Maya" });
-            comboBox2.Location = new Point(128, 27);
+            comboBox2.Items.AddRange(new object[] { "Cash", "Gcash", "Maya" });
+            comboBox2.Location = new Point(108, 18);
             comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(88, 28);
+            comboBox2.Size = new Size(154, 27);
             comboBox2.TabIndex = 3;
-            // 
-            // label7
-            // 
-            label7.Font = new Font("Unbounded", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.FromArgb(78, 45, 24);
-            label7.Location = new Point(57, 27);
-            label7.Name = "label7";
-            label7.Size = new Size(80, 29);
-            label7.TabIndex = 2;
-            label7.Text = "Cash";
             // 
             // cuiButton7
             // 
@@ -509,7 +448,7 @@
             cuiButton7.ImageAutoCenter = true;
             cuiButton7.ImageExpand = new Point(6, 6);
             cuiButton7.ImageOffset = new Point(0, 0);
-            cuiButton7.Location = new Point(12, 12);
+            cuiButton7.Location = new Point(58, 6);
             cuiButton7.Name = "cuiButton7";
             cuiButton7.NormalBackground = Color.Transparent;
             cuiButton7.NormalForeColor = Color.Black;
@@ -535,6 +474,7 @@
             ControlBox = false;
             Controls.Add(panel4);
             Controls.Add(panel3);
+            Controls.Add(cuiButton6);
             Controls.Add(cuiLabel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -563,10 +503,7 @@
         private CuoreUI.Controls.cuiButton cuiButton3;
         private CuoreUI.Controls.cuiLabel cuiLabel3;
         private Panel panel3;
-        private Label label4;
         private CuoreUI.Controls.cuiButton cuiButton4;
-        private ComboBox comboBox1;
-        private CuoreUI.Controls.cuiButton cuiButton5;
         private Label label5;
         private CuoreUI.Controls.cuiSeparator cuiSeparator1;
         private CuoreUI.Controls.cuiSeparator cuiSeparator2;
@@ -576,7 +513,7 @@
         private CuoreUI.Controls.cuiButton cuiButton6;
         private Label label6;
         private ComboBox comboBox2;
-        private Label label7;
         private CuoreUI.Controls.cuiButton cuiButton7;
+        private ComboBox comboBox1;
     }
 }
