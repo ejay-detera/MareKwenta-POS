@@ -174,14 +174,22 @@ namespace Mare_POS
 
         private void btn_dashboard_Click(object sender, EventArgs e)
         {
-            LoadPage(new DashboardPage()); // change the "DashboardPage" to the name of you user control
+            LoadPage(new DashboardAdmin()); 
             HighlightButton((Button)sender);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            LoadPage(new TicketPage());
-            HighlightButton(btn_ticket);
+            if (CurrentUserType == UserType.Admin)
+            {
+                LoadPage(new DashboardAdmin());
+                HighlightButton(btn_dashboard);
+            }
+            else
+            {
+                LoadPage(new TicketPage());
+                HighlightButton(btn_ticket);
+            }
         }
 
         private void navbarPanel_Paint_1(object sender, PaintEventArgs e) { }

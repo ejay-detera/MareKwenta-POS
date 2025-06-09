@@ -56,7 +56,7 @@ namespace Mare_POS
             // dateHeader
             // 
             dateHeader.Content = "";
-            dateHeader.Font = new Font("Unbounded", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dateHeader.Font = new Font("Unbounded Medium", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dateHeader.ForeColor = Color.FromArgb(78, 45, 24);
             dateHeader.HorizontalAlignment = StringAlignment.Far;
             dateHeader.Location = new Point(1056, 40);

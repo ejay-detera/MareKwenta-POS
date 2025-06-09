@@ -49,8 +49,9 @@
             navbarPanel.Controls.Add(flowLayoutPanel1);
             navbarPanel.Dock = DockStyle.Left;
             navbarPanel.Location = new Point(0, 0);
+            navbarPanel.Margin = new Padding(3, 4, 3, 4);
             navbarPanel.Name = "navbarPanel";
-            navbarPanel.Size = new Size(120, 985);
+            navbarPanel.Size = new Size(137, 1055);
             navbarPanel.TabIndex = 1;
             navbarPanel.Paint += navbarPanel_Paint_1;
             // 
@@ -60,11 +61,11 @@
             logo.BackColor = Color.Transparent;
             logo.Font = new Font("Unbounded Medium", 27.7499962F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
             logo.ForeColor = Color.FromArgb(78, 45, 24);
-            logo.Location = new Point(8, 9);
+            logo.Location = new Point(9, 12);
             logo.Margin = new Padding(0);
             logo.Name = "logo";
             logo.RightToLeft = RightToLeft.Yes;
-            logo.Size = new Size(103, 58);
+            logo.Size = new Size(129, 72);
             logo.TabIndex = 0;
             logo.Text = "MK";
             logo.Click += logo_Click;
@@ -79,9 +80,10 @@
             flowLayoutPanel1.Controls.Add(btn_ticket);
             flowLayoutPanel1.Controls.Add(btn_dashboard);
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel1.Location = new Point(0, 161);
+            flowLayoutPanel1.Location = new Point(0, 215);
+            flowLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(120, 824);
+            flowLayoutPanel1.Size = new Size(137, 1099);
             flowLayoutPanel1.TabIndex = 1;
             // 
             // btn_inventory
@@ -93,10 +95,10 @@
             btn_inventory.ForeColor = Color.FromArgb(78, 45, 24);
             btn_inventory.Image = Properties.Resources.Archive;
             btn_inventory.Location = new Point(0, 0);
-            btn_inventory.Margin = new Padding(0, 0, 0, 14);
+            btn_inventory.Margin = new Padding(0, 0, 0, 19);
             btn_inventory.Name = "btn_inventory";
             btn_inventory.RightToLeft = RightToLeft.No;
-            btn_inventory.Size = new Size(119, 87);
+            btn_inventory.Size = new Size(136, 116);
             btn_inventory.TabIndex = 3;
             btn_inventory.Text = "Inventory";
             btn_inventory.TextAlign = ContentAlignment.BottomCenter;
@@ -112,11 +114,11 @@
             btn_staff.Font = new Font("Unbounded Light", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_staff.ForeColor = Color.FromArgb(78, 45, 24);
             btn_staff.Image = Properties.Resources.User;
-            btn_staff.Location = new Point(0, 101);
-            btn_staff.Margin = new Padding(0, 0, 0, 14);
+            btn_staff.Location = new Point(0, 135);
+            btn_staff.Margin = new Padding(0, 0, 0, 19);
             btn_staff.Name = "btn_staff";
             btn_staff.RightToLeft = RightToLeft.No;
-            btn_staff.Size = new Size(120, 87);
+            btn_staff.Size = new Size(137, 116);
             btn_staff.TabIndex = 5;
             btn_staff.Text = "Staff";
             btn_staff.TextAlign = ContentAlignment.BottomCenter;
@@ -132,11 +134,11 @@
             btn_receipt.Font = new Font("Unbounded Light", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_receipt.ForeColor = Color.FromArgb(78, 45, 24);
             btn_receipt.Image = Properties.Resources.List;
-            btn_receipt.Location = new Point(0, 202);
-            btn_receipt.Margin = new Padding(0, 0, 0, 15);
+            btn_receipt.Location = new Point(0, 270);
+            btn_receipt.Margin = new Padding(0, 0, 0, 20);
             btn_receipt.Name = "btn_receipt";
             btn_receipt.RightToLeft = RightToLeft.No;
-            btn_receipt.Size = new Size(120, 87);
+            btn_receipt.Size = new Size(137, 116);
             btn_receipt.TabIndex = 7;
             btn_receipt.Text = "Receipt";
             btn_receipt.TextAlign = ContentAlignment.BottomCenter;
@@ -152,11 +154,11 @@
             btn_cashbox.Font = new Font("Unbounded Light", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_cashbox.ForeColor = Color.FromArgb(78, 45, 24);
             btn_cashbox.Image = Properties.Resources.DollarSign;
-            btn_cashbox.Location = new Point(0, 304);
-            btn_cashbox.Margin = new Padding(0, 0, 0, 15);
+            btn_cashbox.Location = new Point(0, 406);
+            btn_cashbox.Margin = new Padding(0, 0, 0, 20);
             btn_cashbox.Name = "btn_cashbox";
             btn_cashbox.RightToLeft = RightToLeft.No;
-            btn_cashbox.Size = new Size(120, 87);
+            btn_cashbox.Size = new Size(137, 116);
             btn_cashbox.TabIndex = 5;
             btn_cashbox.Text = "Cash Box";
             btn_cashbox.TextAlign = ContentAlignment.BottomCenter;
@@ -172,11 +174,11 @@
             btn_ticket.Font = new Font("Unbounded Light", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_ticket.ForeColor = Color.FromArgb(78, 45, 24);
             btn_ticket.Image = Properties.Resources.Ticket;
-            btn_ticket.Location = new Point(0, 406);
-            btn_ticket.Margin = new Padding(0, 0, 0, 15);
+            btn_ticket.Location = new Point(0, 542);
+            btn_ticket.Margin = new Padding(0, 0, 0, 20);
             btn_ticket.Name = "btn_ticket";
             btn_ticket.RightToLeft = RightToLeft.No;
-            btn_ticket.Size = new Size(120, 87);
+            btn_ticket.Size = new Size(137, 116);
             btn_ticket.TabIndex = 9;
             btn_ticket.Text = "Ticket";
             btn_ticket.TextAlign = ContentAlignment.BottomCenter;
@@ -192,11 +194,11 @@
             btn_dashboard.Font = new Font("Unbounded Light", 11.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_dashboard.ForeColor = Color.FromArgb(78, 45, 24);
             btn_dashboard.Image = Properties.Resources.BarChart;
-            btn_dashboard.Location = new Point(0, 508);
+            btn_dashboard.Location = new Point(0, 678);
             btn_dashboard.Margin = new Padding(0);
             btn_dashboard.Name = "btn_dashboard";
             btn_dashboard.RightToLeft = RightToLeft.No;
-            btn_dashboard.Size = new Size(120, 87);
+            btn_dashboard.Size = new Size(137, 116);
             btn_dashboard.TabIndex = 5;
             btn_dashboard.Text = "Dashboard";
             btn_dashboard.TextAlign = ContentAlignment.BottomCenter;
@@ -207,20 +209,22 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(20, 78, 45, 24);
-            panel1.Location = new Point(118, 0);
+            panel1.Location = new Point(135, 0);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(3, 985);
+            panel1.Size = new Size(3, 1313);
             panel1.TabIndex = 2;
             panel1.Paint += panel1_Paint;
             // 
             // NavbarForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(242, 239, 234);
-            this.Size = new Size(120, 985);
+            ClientSize = new Size(1640, 1055);
             Controls.Add(panel1);
             Controls.Add(navbarPanel);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "NavbarForm";
             Text = "Form1";
             Load += Form1_Load;

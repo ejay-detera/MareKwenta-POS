@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mare-POS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9dd73be1ae250da45e5f5c9ee9011f1c21ee0cf7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a8762a6cfa5bf070dc3dc11d963fd6b39d0b971")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mare-POS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mare-POS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

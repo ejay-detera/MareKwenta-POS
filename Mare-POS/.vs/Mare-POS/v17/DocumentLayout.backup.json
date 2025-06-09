@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Aliah\\source\\repos\\MareKwenta-POS\\Mare-POS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\aliah\\source\\repos\\marekwenta-pos\\mare-pos\\employeelogsuserview\\staffpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:employeelogsuserview\\staffpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\aliah\\source\\repos\\marekwenta-pos\\mare-pos\\dashboardadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:dashboardadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\aliah\\source\\repos\\marekwenta-pos\\mare-pos\\employeecard\\employeecard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:employeecard\\employeecard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|C:\\Users\\Aliah\\source\\repos\\MareKwenta-POS\\Mare-POS\\dashboardadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:dashboardadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\aliah\\source\\repos\\marekwenta-pos\\mare-pos\\employeecard\\employeecard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:employeecard\\employeecard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\aliah\\source\\repos\\marekwenta-pos\\mare-pos\\dashboardadmin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:dashboardadmin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\aliah\\source\\repos\\marekwenta-pos\\mare-pos\\staffpageadmin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:staffpageadmin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|C:\\Users\\Aliah\\source\\repos\\MareKwenta-POS\\Mare-POS\\navbar\\navbarform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:navbar\\navbarform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\aliah\\source\\repos\\marekwenta-pos\\mare-pos\\navbar\\navbarform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:navbar\\navbarform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\aliah\\source\\repos\\marekwenta-pos\\mare-pos\\mare-pos.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:mare-pos.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\aliah\\source\\repos\\marekwenta-pos\\mare-pos\\staffpageadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,12 +31,8 @@
       "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:staffpageadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\aliah\\source\\repos\\marekwenta-pos\\mare-pos\\employeelogsuserview\\staffpage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:employeelogsuserview\\staffpage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|C:\\Users\\Aliah\\source\\repos\\MareKwenta-POS\\Mare-POS\\navbar\\navbarform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:navbar\\navbarform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\aliah\\source\\repos\\marekwenta-pos\\mare-pos\\navbar\\navbarform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:navbar\\navbarform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\aliah\\source\\repos\\marekwenta-pos\\mare-pos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,53 +58,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EmployeeCard.cs",
-              "DocumentMoniker": "C:\\Users\\Aliah\\source\\repos\\MareKwenta-POS\\Mare-POS\\EmployeeCard\\EmployeeCard.cs",
-              "RelativeDocumentMoniker": "EmployeeCard\\EmployeeCard.cs",
-              "ToolTip": "C:\\Users\\Aliah\\source\\repos\\MareKwenta-POS\\Mare-POS\\EmployeeCard\\EmployeeCard.cs",
-              "RelativeToolTip": "EmployeeCard\\EmployeeCard.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T12:15:18.209Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EmployeeCard.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Aliah\\source\\repos\\MareKwenta-POS\\Mare-POS\\EmployeeCard\\EmployeeCard.cs",
-              "RelativeDocumentMoniker": "EmployeeCard\\EmployeeCard.cs",
-              "ToolTip": "C:\\Users\\Aliah\\source\\repos\\MareKwenta-POS\\Mare-POS\\EmployeeCard\\EmployeeCard.cs [Design]",
-              "RelativeToolTip": "EmployeeCard\\EmployeeCard.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T12:15:15.424Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "StaffPageAdmin.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Aliah\\source\\repos\\MareKwenta-POS\\Mare-POS\\StaffPageAdmin.Designer.cs",
-              "RelativeDocumentMoniker": "StaffPageAdmin.Designer.cs",
-              "ToolTip": "C:\\Users\\Aliah\\source\\repos\\MareKwenta-POS\\Mare-POS\\StaffPageAdmin.Designer.cs",
-              "RelativeToolTip": "StaffPageAdmin.Designer.cs",
-              "ViewState": "AgIAAEoAAAAAAAAAAAAqwHwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T09:39:47.207Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
               "Title": "StaffPageAdmin.cs",
               "DocumentMoniker": "C:\\Users\\Aliah\\source\\repos\\MareKwenta-POS\\Mare-POS\\StaffPageAdmin.cs",
               "RelativeDocumentMoniker": "StaffPageAdmin.cs",
               "ToolTip": "C:\\Users\\Aliah\\source\\repos\\MareKwenta-POS\\Mare-POS\\StaffPageAdmin.cs",
               "RelativeToolTip": "StaffPageAdmin.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAkwBsAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAgwCEAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T09:39:57.878Z",
+              "WhenOpened": "2025-06-08T13:38:30.813Z",
               "EditorCaption": ""
             },
             {
@@ -120,62 +78,83 @@
               "ToolTip": "C:\\Users\\Aliah\\source\\repos\\MareKwenta-POS\\Mare-POS\\StaffPageAdmin.cs [Design]",
               "RelativeToolTip": "StaffPageAdmin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T09:38:57.993Z",
+              "WhenOpened": "2025-06-08T13:38:25.963Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Mare-POS",
+              "DocumentMoniker": "C:\\Users\\Aliah\\Source\\Repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj",
+              "RelativeDocumentMoniker": "Mare-POS.csproj",
+              "ToolTip": "C:\\Users\\Aliah\\Source\\Repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj",
+              "RelativeToolTip": "Mare-POS.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-08T06:36:55.391Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DashboardAdmin.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Aliah\\source\\repos\\MareKwenta-POS\\Mare-POS\\DashboardAdmin.cs",
+              "RelativeDocumentMoniker": "DashboardAdmin.cs",
+              "ToolTip": "C:\\Users\\Aliah\\source\\repos\\MareKwenta-POS\\Mare-POS\\DashboardAdmin.cs [Design]*",
+              "RelativeToolTip": "DashboardAdmin.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T14:43:50.138Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "StaffPage.cs",
-              "DocumentMoniker": "C:\\Users\\Aliah\\source\\repos\\MareKwenta-POS\\Mare-POS\\EmployeeLogsUserView\\StaffPage.cs",
-              "RelativeDocumentMoniker": "EmployeeLogsUserView\\StaffPage.cs",
-              "ToolTip": "C:\\Users\\Aliah\\source\\repos\\MareKwenta-POS\\Mare-POS\\EmployeeLogsUserView\\StaffPage.cs",
-              "RelativeToolTip": "EmployeeLogsUserView\\StaffPage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKIAAABHAAAAAAAAAA==",
+              "Title": "DashboardAdmin.cs",
+              "DocumentMoniker": "C:\\Users\\Aliah\\source\\repos\\MareKwenta-POS\\Mare-POS\\DashboardAdmin.cs",
+              "RelativeDocumentMoniker": "DashboardAdmin.cs",
+              "ToolTip": "C:\\Users\\Aliah\\source\\repos\\MareKwenta-POS\\Mare-POS\\DashboardAdmin.cs*",
+              "RelativeToolTip": "DashboardAdmin.cs*",
+              "ViewState": "AgIAAOAAAAAAAAAAAAAYwAgBAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T09:42:57.064Z",
+              "WhenOpened": "2025-06-07T15:35:09.641Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "StaffPage.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Aliah\\source\\repos\\MareKwenta-POS\\Mare-POS\\EmployeeLogsUserView\\StaffPage.Designer.cs",
-              "RelativeDocumentMoniker": "EmployeeLogsUserView\\StaffPage.Designer.cs",
-              "ToolTip": "C:\\Users\\Aliah\\source\\repos\\MareKwenta-POS\\Mare-POS\\EmployeeLogsUserView\\StaffPage.Designer.cs",
-              "RelativeToolTip": "EmployeeLogsUserView\\StaffPage.Designer.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAowGkAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "DashboardAdmin.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Aliah\\source\\repos\\MareKwenta-POS\\Mare-POS\\DashboardAdmin.Designer.cs",
+              "RelativeDocumentMoniker": "DashboardAdmin.Designer.cs",
+              "ToolTip": "C:\\Users\\Aliah\\source\\repos\\MareKwenta-POS\\Mare-POS\\DashboardAdmin.Designer.cs",
+              "RelativeToolTip": "DashboardAdmin.Designer.cs",
+              "ViewState": "AgIAAN0AAAAAAAAAAAAqwOMAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T09:39:23.199Z"
+              "WhenOpened": "2025-06-07T15:34:17.932Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
               "Title": "NavbarForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Aliah\\source\\repos\\MareKwenta-POS\\Mare-POS\\NavBar\\NavbarForm.cs",
               "RelativeDocumentMoniker": "NavBar\\NavbarForm.cs",
               "ToolTip": "C:\\Users\\Aliah\\source\\repos\\MareKwenta-POS\\Mare-POS\\NavBar\\NavbarForm.cs [Design]",
               "RelativeToolTip": "NavBar\\NavbarForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T07:27:30.112Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-06T07:27:30.112Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "NavbarForm.cs",
               "DocumentMoniker": "C:\\Users\\Aliah\\source\\repos\\MareKwenta-POS\\Mare-POS\\NavBar\\NavbarForm.cs",
               "RelativeDocumentMoniker": "NavBar\\NavbarForm.cs",
               "ToolTip": "C:\\Users\\Aliah\\source\\repos\\MareKwenta-POS\\Mare-POS\\NavBar\\NavbarForm.cs",
               "RelativeToolTip": "NavBar\\NavbarForm.cs",
-              "ViewState": "AgIAAHcAAAAAAAAAAAAAwI8AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAJYAAAAAAAAAAIBZwLMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T08:08:55.478Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-06T08:08:55.478Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Aliah\\source\\repos\\MareKwenta-POS\\Mare-POS\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
