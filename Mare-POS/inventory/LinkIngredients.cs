@@ -15,7 +15,6 @@ namespace Mare_POS.inventory
         public LinkIngredients()
         {
             InitializeComponent();
-            americanocollapse.Visible = false;
         }
 
         private void cuiScrollbar1_Paint(object sender, PaintEventArgs e)
@@ -30,7 +29,6 @@ namespace Mare_POS.inventory
 
         private void label7_Click(object sender, EventArgs e)
         {
-            americanocollapse.Visible = true;
         }
     }
 }

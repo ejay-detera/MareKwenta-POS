@@ -1,4 +1,6 @@
 ﻿using CuoreUI.Controls;
+using Mare_POS.Authentication;
+using Mare_POS.inventory;
 using MySql.Data.MySqlClient; // Ensure you have the MySQL Connector/NET installed
 using Mysqlx.Resultset;
 using System;
@@ -13,7 +15,7 @@ using System.Windows.Forms;
 
 namespace Mare_POS
 {
-    public partial class Inventory : Form
+    public partial class Inventory : UserControl
     {
         public Inventory()
         {
@@ -47,11 +49,6 @@ namespace Mare_POS
 
         }
 
-        private void cuiComboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void cuiButton1_Click(object sender, EventArgs e)
         {
 
@@ -72,6 +69,18 @@ namespace Mare_POS
 
         }
 
+        private void UserLoggedIn()
+        {
+            if (SessionManager.IsLoggedIn)
+            {
+                // Get the full user object
+                EmployeeInfo currentUser = SessionManager.CurrentUser;
+
+                // Extract just the username
+                string username = currentUser.FirstName;
+                User.Text = username;
+            }
+        }
 
         private void cuiButton1_Click_1(object sender, EventArgs e)
         {
@@ -190,13 +199,12 @@ namespace Mare_POS
         {
             InventorySeparator.Visible = true;
             LinkIngredientSeparator.Visible = false;
-            linkingredientspanel.Visible = false; // Hide the link ingredients panel initially
-            LoadInventoryItems(); // Load inventory items when the 
+            LoadInventoryItems(); 
+            UserLoggedIn(); // Call to set the username in the UI
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
-            linkingredientspanel.Visible = false; // Hide the link ingredients panel
             InventoryPanel.Visible = true;
             LinkIngredientSeparator.Visible = false;
             InventorySeparator.Visible = true;
@@ -244,12 +252,15 @@ namespace Mare_POS
         private void LinkIngredientName_Click(object sender, EventArgs e)
         {
             // Hide the InventoryPanel
-            linkingredientspanel.Visible = true;
             InventoryPanel.Visible = false;
             LinkIngredientSeparator.Visible = true;
             InventorySeparator.Visible = false;
         }
 
+        private void LinkIngredientSeparator_Load(object sender, EventArgs e)
+        {
+
+        }
         private void cuiSeparator3_Load(object sender, EventArgs e)
         {
 
@@ -351,6 +362,7 @@ namespace Mare_POS
                 Anchor = InventoryRow.Anchor,
                 Margin = InventoryRow.Margin,
                 Padding = InventoryRow.Padding,
+                Location = new Point(InventoryRow.Location.X, InventoryRow.Location.Y + (index * (InventoryRow.Height + 5))),
                 Tag = index // Store the row index for reference
             };
 
@@ -390,9 +402,9 @@ namespace Mare_POS
             {
                 cloned = new cuiSeparator();
             }
-            else if (original is ComboBox)
+            else if (original is cuiComboBox)
             {
-                cloned = new ComboBox();
+                cloned = new cuiComboBox();
             }
             else if (original is PictureBox)
             {
@@ -427,74 +439,34 @@ namespace Mare_POS
                     clonedLabel.AutoSize = originalLabel.AutoSize;
                     clonedLabel.BorderStyle = originalLabel.BorderStyle;
                     clonedLabel.Tag = originalLabel.Tag;
-                }
-
-                // Copy specific properties for Buttons
-                if (original is cuiButton originalButton && cloned is cuiButton clonedButton)
-                {
-                    clonedButton.BackColor = originalButton.BackColor;
-                    clonedButton.ForeColor = originalButton.ForeColor;
-                    clonedButton.HoverForeColor = originalButton.HoverForeColor;
-                    clonedButton.NormalForeColor = originalButton.NormalForeColor;
-                    clonedButton.Size = originalButton.Size;
-                    clonedButton.NormalOutline = originalButton.NormalOutline;
-                    clonedButton.TextAlignment = originalButton.TextAlignment;
-                    clonedButton.Content = originalButton.Content;
-                    clonedButton.CheckedBackground = originalButton.CheckedBackground;
-                    clonedButton.CheckedForeColor = originalButton.CheckedForeColor;
-                    clonedButton.NormalBackground = originalButton.NormalBackground;
-                    clonedButton.NormalForeColor = originalButton.NormalForeColor;
-                    clonedButton.CheckButton = originalButton.CheckButton;
-                    clonedButton.Checked = originalButton.Checked;
-                    clonedButton.Name = originalButton.Name;
-                    clonedButton.Font = originalButton.Font?.Clone() as Font;
-                    clonedButton.Text = originalButton.Text;
-                    clonedButton.Enabled = originalButton.Enabled;
-                    clonedButton.Visible = originalButton.Visible;
-                    clonedButton.Cursor = originalButton.Cursor;
-                    clonedButton.Tag = originalButton.Tag;
-                    // Special handling for AddQuantity buttons
-                    if (original.Name.StartsWith("AddQuantityButton") || original.Name.Contains("AddQuantity"))
-                    {
-                        clonedButton.Click += (sender, e) => AddQuantityButton_Click(sender, e, index);
-                    }
-                }
-
-                // Copy specific properties for TextBoxes
-                if (original is cuiTextBox originalTextBox && cloned is cuiTextBox clonedTextBox)
-                {
-                    clonedTextBox.Multiline = originalTextBox.Multiline;
-                    clonedTextBox.BackColor = originalTextBox.BackColor;
-                    clonedTextBox.BorderStyle = originalTextBox.BorderStyle;
-                    clonedTextBox.ForeColor = originalTextBox.ForeColor;
-                    clonedTextBox.Margin = originalTextBox.Margin;
-                    clonedTextBox.Padding = originalTextBox.Padding;
-                    clonedTextBox.Content = originalTextBox.Content;
-                    clonedTextBox.PlaceholderColor = originalTextBox.PlaceholderColor;
-                    clonedTextBox.PlaceholderText = originalTextBox.PlaceholderText;
-                    clonedTextBox.Location = originalTextBox.Location;
-                    clonedTextBox.Size = originalTextBox.Size;
-                    clonedTextBox.Anchor = originalTextBox.Anchor;
-                    clonedTextBox.BorderColor = originalTextBox.BorderColor;
-                    clonedTextBox.FocusBorderColor = originalTextBox.FocusBorderColor;
-                    clonedTextBox.AccessibleName = originalTextBox.AccessibleName;
-                    clonedTextBox.Name = originalTextBox.Name;
-                    clonedTextBox.AccessibleName = originalTextBox.AccessibleName ?? originalTextBox.Name;
-                    clonedTextBox.Tag = originalTextBox.Tag;
-                    // Special handling for AddQuantityPerIngredient textbox
-                    if (original.Name.StartsWith("AddQuantityToIngredient"))
-                    {
-                        // Clear the content for new input
-                        clonedTextBox.Content = "";
-                    }
+                    clonedLabel.AccessibleName = originalLabel.AccessibleName ?? originalLabel.Name;
+                    clonedLabel.Location = originalLabel.Location; // Preserve the location
+                    clonedLabel.Size = originalLabel.Size; // Preserve the size
                 }
 
                 // Copy specific properties for ComboBoxes
-                if (original is ComboBox originalComboBox && cloned is ComboBox clonedComboBox)
+                if (original is cuiComboBox originalComboBox && cloned is cuiComboBox clonedComboBox)
                 {
-                    clonedComboBox.DropDownStyle = originalComboBox.DropDownStyle;
-                    clonedComboBox.Items.AddRange(originalComboBox.Items.Cast<object>().ToArray());
-                    clonedComboBox.SelectedIndex = originalComboBox.SelectedIndex;
+                    clonedComboBox.BackColor = originalComboBox.BackColor;
+                    clonedComboBox.ForeColor = originalComboBox.ForeColor;
+                    clonedComboBox.Font = originalComboBox.Font?.Clone() as Font;
+                    clonedComboBox.Visible = originalComboBox.Visible;
+                    clonedComboBox.Enabled = originalComboBox.Enabled;
+                    clonedComboBox.Name = originalComboBox.Name;
+                    clonedComboBox.BackgroundColor = originalComboBox.BackgroundColor;
+                    clonedComboBox.ButtonCursor = originalComboBox.ButtonCursor;
+                    clonedComboBox.ButtonHoverBackground = originalComboBox.ButtonHoverBackground;
+                    clonedComboBox.ButtonHoverOutline = originalComboBox.ButtonHoverOutline;
+                    clonedComboBox.ButtonNormalBackground = originalComboBox.ButtonNormalBackground;
+                    clonedComboBox.ButtonNormalOutline = originalComboBox.ButtonNormalOutline;
+                    clonedComboBox.ButtonPressedBackground = originalComboBox.ButtonPressedBackground;
+                    clonedComboBox.ButtonPressedOutline = originalComboBox.ButtonPressedOutline;
+                    clonedComboBox.Items = originalComboBox.Items;
+                    clonedComboBox.NoSelectionDropdownText = originalComboBox.NoSelectionDropdownText;
+                    clonedComboBox.OutlineColor = originalComboBox.OutlineColor;
+                    clonedComboBox.NoSelectionText = originalComboBox.NoSelectionText;
+                    clonedComboBox.DropDownBackgroundColor = originalComboBox.DropDownBackgroundColor;
+                    clonedComboBox.DropDownOutlineColor = originalComboBox.DropDownOutlineColor;
                 }
 
                 // Copy specific properties for PictureBoxes
@@ -520,62 +492,7 @@ namespace Mare_POS
         }
 
 
-        // FIXED METHOD: Handle Add Quantity button click
-        private void HandleAddQuantityButtonClick(cuiTextBox AddQuantityToIngredient, int inventoryId)
-        {
-            try
-            {
-                // Get the quantity to add from the textbox
-                var quantityText = AddQuantityToIngredient.Content?.Trim() ?? "";
 
-                if (string.IsNullOrWhiteSpace(quantityText))
-                {
-                    MessageBox.Show("Please enter a quantity to add.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    AddQuantityToIngredient.Focus();
-                    return;
-                }
-
-                // Validate that the input is a valid number
-                if (!int.TryParse(quantityText, out int quantityToAdd))
-                {
-                    MessageBox.Show("Please enter a valid numeric quantity.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    AddQuantityToIngredient.Focus();
-                    return;
-                }
-
-                if (quantityToAdd <= 0)
-                {
-                    MessageBox.Show("Please enter a positive quantity.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    AddQuantityToIngredient.Focus();
-                    return;
-                }
-
-                // Use the inventoryId parameter directly (no need to call GetInventoryIdForRow)
-                if (inventoryId <= 0)
-                {
-                    MessageBox.Show("Could not identify the inventory item for this row.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                // Add the quantity to the database
-                bool success = dbHelper.AddQuantityToInventoryItem(inventoryId, quantityToAdd);
-                if (success)
-                {
-
-                    // Reload the inventory to show updated quantities
-                    LoadInventoryItems();
-                    MessageBox.Show($"Successfully added {quantityToAdd} to inventory!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Failed to add quantity to inventory.", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error adding quantity: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
 
         // NEW METHOD: Get InventoryID for a specific row
         private int GetInventoryIdForRow(int rowIndex)
@@ -601,7 +518,6 @@ namespace Mare_POS
             }
         }
 
-        // Method to update the cloned row with database data
         private void UpdateRowData(Panel clonedRow, DataRow dataRow, int rowIndex)
         {
             InventoryRow.Visible = true;
@@ -612,6 +528,13 @@ namespace Mare_POS
             {
                 inventoryId = Convert.ToInt32(dataRow["InventoryID"]);
                 clonedRow.Tag = inventoryId;
+            }
+
+            // Get quantity for status calculation
+            decimal quantity = 0;
+            if (dataRow["Quantity"] != DBNull.Value)
+            {
+                quantity = Convert.ToDecimal(dataRow["Quantity"]);
             }
 
             foreach (Control control in clonedRow.Controls)
@@ -625,6 +548,10 @@ namespace Mare_POS
                 else if (control.Name.StartsWith("Quantity"))
                 {
                     control.Text = dataRow["Quantity"]?.ToString() ?? "";
+                }
+                else if (control.Name.StartsWith("Actions"))
+                {
+                    Action.SelectedIndexChanged += (sender, e) => Action_SelectedIndexChanged(sender, e, rowIndex);
                 }
                 // Update Price field
                 else if (control.Name.StartsWith("Price"))
@@ -640,187 +567,73 @@ namespace Mare_POS
                     }
                 }
                 // Update Date fields
-                else if (control.Name.StartsWith("ExpiryDate") || control.Name.StartsWith("DateAdded"))
+                else if (control.Name.StartsWith("MeasurementText"))
                 {
-                    string columnName = control.Name.StartsWith("ExpiryDate") ? "ExpiryDate" : "DateAdded";
-                    if (dataRow[columnName] != DBNull.Value)
-                    {
-                        DateTime date = Convert.ToDateTime(dataRow[columnName]);
-                        control.Text = date.ToString("MM/dd/yyyy");
-                    }
-                    else
-                    {
-                        control.Text = "";
-                    }
+                    control.Text = dataRow["IngredientMeasurement"]?.ToString() ?? "";
                 }
                 // Update Category field
                 else if (control.Name.StartsWith("Category"))
                 {
                     control.Text = dataRow["Category"]?.ToString() ?? "";
                 }
-                // Handle AddQuantityPerIngredient textbox
-                else if (control.Name.StartsWith($"AddQuantityToIngredient") && control is cuiTextBox addQtyTextBox)
+                // UPDATE STATUS FIELD - NEW CODE
+                else if (control.Name.StartsWith("statusControl"))
                 {
-                    // Clear the content and set the tag with inventory ID
-                    addQtyTextBox.Content = "";
-                    addQtyTextBox.Tag = inventoryId; // Set the inventory ID as tag
+                    UpdateStatusLabel(control, quantity);
                 }
-                // Handle AddQuantity button
-                else if (control.Name.StartsWith("AddQuantityButton") && control is cuiButton addQtyButton)
+                else if (control.Name.StartsWith("Action") && control is cuiComboBox actionCombo)
                 {
-                    // Set the inventory ID as the button's tag
-                    addQtyButton.Tag = inventoryId;
-
                     // Remove any existing event handlers to prevent duplicates
-                    addQtyButton.Click -= (sender, e) => AddQuantityButton_Click(sender, e, rowIndex);
+                    actionCombo.SelectedIndexChanged -= (s, e) => Action_SelectedIndexChanged(s, e, rowIndex);
 
-                    // Add the event handler with the correct row index
-                    addQtyButton.Click += (sender, e) => AddQuantityButton_Click(sender, e, rowIndex);
+                    // Add the event handler
+                    actionCombo.SelectedIndexChanged += (s, e) => Action_SelectedIndexChanged(s, e, rowIndex);
                 }
 
-                // Handle nested controls (if any controls contain other controls)
                 if (control.HasChildren)
                 {
                     UpdateNestedControls(control, dataRow, rowIndex, inventoryId);
                 }
             }
         }
-
-        // Helper method to find the corresponding textbox for a button
-        // Helper method to find the corresponding textbox for a button - FIXED VERSION
-        private cuiTextBox FindCorrespondingTextBox(cuiButton button, int inventoryId)
+        private void UpdateStatusLabel(Control statusControl, decimal quantity)
         {
-            try
+            if (quantity == 0)
             {
-                // First, check if the button has a parent
-                Control parentPanel = button.Parent;
-
-                if (parentPanel == null)
-                {
-                    // If direct parent is null, try to find the textbox in all inventory rows
-                    return FindTextBoxByInventoryId(inventoryId);
-                }
-
-                // Look for AddQuantityToIngredient textbox in the same panel
-                foreach (Control control in parentPanel.Controls)
-                {
-                    if (control is cuiTextBox cuiTextBox &&
-                        control.Name.StartsWith("AddQuantityToIngredient"))
-                    {
-                        return cuiTextBox;
-                    }
-
-                    // Also check nested controls if needed
-                    if (control.HasChildren)
-                    {
-                        cuiTextBox nestedTextBox = FindTextBoxInNestedControls(control);
-                        if (nestedTextBox != null)
-                        {
-                            return nestedTextBox;
-                        }
-                    }
-                }
-
-                // If not found in direct parent, try to find by inventory ID
-                return FindTextBoxByInventoryId(inventoryId);
+                // No Stock - Black
+                statusControl.Text = "No Stock";
+                statusControl.ForeColor = Color.Black;
             }
-            catch (Exception ex)
+            else if (quantity <= 10.00m)
             {
-                System.Diagnostics.Debug.WriteLine($"Error finding corresponding textbox: {ex.Message}");
-                return FindTextBoxByInventoryId(inventoryId);
+                // Low Stock - Dark Red
+                statusControl.Text = "Low Stock";
+                statusControl.ForeColor = Color.DarkRed;
+            }
+            else
+            {
+                // Stocked - Green
+                statusControl.Text = "In Stock";
+                statusControl.ForeColor = Color.Green;
+            }
+
+            // Optional: Make the text bold for better visibility
+            if (statusControl.Font != null)
+            {
+                statusControl.Font = new Font(statusControl.Font, FontStyle.Bold);
             }
         }
 
-        // New method to find textbox by inventory ID across all rows
-        private cuiTextBox FindTextBoxByInventoryId(int inventoryId)
-        {
-            try
-            {
-                // Get the parent container that holds all inventory rows
-                Control mainContainer = InventoryRow.Parent;
 
-                if (mainContainer == null) return null;
 
-                // Search through all controls in the main container
-                foreach (Control control in mainContainer.Controls)
-                {
-                    // Check if this is an inventory row (original or cloned)
-                    if (control is Panel panel &&
-                        (control.Name == "InventoryRow" || control.Name.StartsWith("InventoryRow_Clone_")))
-                    {
-                        // Check if this panel has the matching inventory ID
-                        if (panel.Tag != null && panel.Tag.ToString() == inventoryId.ToString())
-                        {
-                            // Look for the textbox in this panel
-                            cuiTextBox textBox = FindTextBoxInPanel(panel);
-                            if (textBox != null)
-                            {
-                                return textBox;
-                            }
-                        }
-                    }
-                }
-
-                return null;
-            }
-            catch (Exception ex)
-            {
-                System.Diagnostics.Debug.WriteLine($"Error finding textbox by inventory ID: {ex.Message}");
-                return null;
-            }
-        }
-
-        // Helper method to find textbox within a specific panel
-        private cuiTextBox FindTextBoxInPanel(Panel panel)
-        {
-            foreach (Control control in panel.Controls)
-            {
-                if (control is cuiTextBox textBox &&
-                    control.Name.StartsWith("AddQuantityToIngredient"))
-                {
-                    return textBox;
-                }
-
-                // Check nested controls recursively
-                if (control.HasChildren)
-                {
-                    cuiTextBox nestedTextBox = FindTextBoxInNestedControls(control);
-                    if (nestedTextBox != null)
-                    {
-                        return nestedTextBox;
-                    }
-                }
-            }
-
-            return null;
-        }
-        // Helper method to find textbox in nested controls
-        private cuiTextBox FindTextBoxInNestedControls(Control parent)
-        {
-            foreach (Control control in parent.Controls)
-            {
-                if (control is cuiTextBox textBox &&
-                    control.Name.StartsWith("AddQuantityToIngredient"))
-                {
-                    return textBox;
-                }
-
-                if (control.HasChildren)
-                {
-                    cuiTextBox nestedTextBox = FindTextBoxInNestedControls(control);
-                    if (nestedTextBox != null)
-                    {
-                        return nestedTextBox;
-                    }
-                }
-            }
-
-            return null;
-        }
-
-        // Helper method to handle nested controls - Updated with inventoryId parameter
         private void UpdateNestedControls(Control parentControl, DataRow dataRow, int rowIndex, int inventoryId)
         {
+            decimal quantity = 0;
+            if (dataRow["Quantity"] != DBNull.Value)
+            {
+                quantity = Convert.ToDecimal(dataRow["Quantity"]);
+            }
+
             foreach (Control childControl in parentControl.Controls)
             {
                 // Apply the same logic as UpdateRowData for child controls
@@ -832,9 +645,21 @@ namespace Mare_POS
                 {
                     childControl.Text = dataRow["Quantity"]?.ToString() ?? "";
                 }
+                else if (childControl.Name.StartsWith("MeasurementText"))
+                {
+                    childControl.Text = dataRow["IngredientMeasurement"]?.ToString() ?? "";
+                }
                 else if (childControl.Name.StartsWith("Notes") && childControl is TextBox)
                 {
                     childControl.Text = dataRow["Notes"]?.ToString() ?? "";
+                }
+                else if (childControl.Name.StartsWith("Action") && childControl is cuiComboBox actionCombo)
+                {
+                    // Remove any existing event handlers to prevent duplicates
+                    actionCombo.SelectedIndexChanged -= (s, e) => Action_SelectedIndexChanged(s, e, rowIndex);
+
+                    // Add the event handler
+                    actionCombo.SelectedIndexChanged += (s, e) => Action_SelectedIndexChanged(s, e, rowIndex);
                 }
                 else if (childControl.Name.StartsWith("Price"))
                 {
@@ -848,23 +673,10 @@ namespace Mare_POS
                         childControl.Text = "";
                     }
                 }
-                // Handle AddQuantityPerIngredient textbox in nested controls
-                else if (childControl.Name.StartsWith("AddQuantityToIngredient") && childControl is cuiTextBox addQtyTextBox)
+                // UPDATE STATUS FIELD IN NESTED CONTROLS - NEW CODE
+                else if (childControl.Name.StartsWith("statusControl"))
                 {
-                    addQtyTextBox.Content = "";
-                    addQtyTextBox.Tag = inventoryId; // Set the inventory ID as tag
-                }
-                // Handle AddQuantity button in nested controls
-                else if (childControl.Name.StartsWith("AddQuantityButton") && childControl is cuiButton addQtyButton)
-                {
-                    // Set the inventory ID as the button's tag
-                    addQtyButton.Tag = inventoryId;
-
-                    // Remove any existing event handlers to prevent duplicates
-                    addQtyButton.Click -= (sender, e) => AddQuantityButton_Click(sender, e, rowIndex);
-
-                    // Add the event handler with the correct row index
-                    addQtyButton.Click += (sender, e) => AddQuantityButton_Click(sender, e, rowIndex);
+                    UpdateStatusLabel(childControl, quantity);
                 }
 
                 // Recursively handle deeper nesting if needed
@@ -921,53 +733,6 @@ namespace Mare_POS
 
         }
 
-        private void AddQuantityButton_Click(object sender, EventArgs e, int rowIndex)
-        {
-            try
-            {
-                // Get the button that was clicked
-                cuiButton clickedButton = sender as cuiButton;
-
-                if (clickedButton == null)
-                {
-                    MessageBox.Show("Button is null!", "Debug Error");
-                    return;
-                }
-
-                // Debug: Show button information
-
-                // Get the inventory ID from the button's Tag property
-                if (clickedButton.Tag != null && int.TryParse(clickedButton.Tag.ToString(), out int inventoryId))
-                {
-
-                    // Find the corresponding textbox in the same row
-                    cuiTextBox correspondingTextBox = FindCorrespondingTextBox(clickedButton, inventoryId);
-
-                    if (correspondingTextBox != null)
-                    {
-                        HandleAddQuantityButtonClick(correspondingTextBox, inventoryId);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Could not find the quantity input textbox for this row.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show($"Button Tag is: {clickedButton.Tag ?? "NULL"}", "Debug Error");
-                    MessageBox.Show("Could not determine the inventory ID for this button.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error in button click handler: {ex.Message}\n\nStack Trace: {ex.StackTrace}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        private void AddQuantityButton_Click(object sender, EventArgs e)
-        {
-
-
-        }
 
         private void cuiPanel4_Paint(object sender, PaintEventArgs e)
         {
@@ -978,5 +743,88 @@ namespace Mare_POS
         {
 
         }
+
+        private void navbarForm1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void navbarForm1_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IngredientName1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Action_SelectedIndexChanged(object sender, EventArgs e, int rowIndex)
+        {
+            // Get the ComboBox that triggered the event
+            cuiComboBox actionComboBox = sender as cuiComboBox;
+            if (actionComboBox == null) return;
+
+            // Get the InventoryID for the selected row
+            int inventoryId = GetInventoryIdForRow(rowIndex);
+            if (inventoryId == -1)
+            {
+                MessageBox.Show("Unable to find InventoryID for the selected row.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (actionComboBox.SelectedItem != null)
+            {
+                string selectedAction = actionComboBox.SelectedItem.ToString();
+
+                if (selectedAction == "Add")
+                {
+                    try
+                    {
+
+                        using (var addQuantityForm = new AddQuantityComponent(InventoryRow, inventoryId))
+                        {
+                            DialogResult result = MessageBox.Show("Do you want to add quantity to this ingredient?", "Add Quantity", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                            addQuantityForm.ShowDialog();
+                            if (result == DialogResult.Yes)
+                            {
+                                LoadInventoryItems(); // Reload inventory items after adding 
+                            }// Reload inventory items after adding quantity
+                            else
+                            {
+                                MessageBox.Show("Add Quantity operation cancelled.", "Cancelled", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error opening Add Quantity form: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else if (selectedAction == "Delete")
+                {
+                    // Confirm deletion
+                    DialogResult result = MessageBox.Show("Are you sure you want to remove this ingredient?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (result == DialogResult.Yes)
+                    {
+                        try
+                        {
+                            dbHelper.DeleteInventoryItem(inventoryId);
+                            LoadInventoryItems();
+                            MessageBox.Show("Ingredient removed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Error removing ingredient: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+
+                // Reset the ComboBox selection to prevent accidental re-triggers
+                actionComboBox.SelectedItem = actionComboBox.Items[0];
+            }
+        }
+
     }
 }

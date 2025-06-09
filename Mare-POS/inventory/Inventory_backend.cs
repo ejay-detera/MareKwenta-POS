@@ -72,7 +72,7 @@ namespace Mare_POS
                         CREATE TABLE IF NOT EXISTS `inventory` (
                             `InventoryID` INT AUTO_INCREMENT PRIMARY KEY,
                             `IngredientName` VARCHAR(255) NOT NULL,
-                            `Quantity` INT NOT NULL DEFAULT 0,
+                            `Quantity` Decimal(10,2) NOT NULL DEFAULT 0,
                             `IngredientCost` DECIMAL(10,2) NOT NULL DEFAULT 0,
                             `IngredientMeasurement` VARCHAR(5) NOT NULL,
                             `DateAdded` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -149,6 +149,10 @@ namespace Mare_POS
 
         public void AddIngredientToInventory(string ingredientName, decimal quantity, string measurement, decimal cost)
         {
+            // Round to 2 decimal places before inserting
+            quantity = Math.Round(quantity, 2);
+            cost = Math.Round(cost, 2);
+
             using (MySqlConnection con = new MySqlConnection(connectionString))
             {
                 try
@@ -210,12 +214,15 @@ namespace Mare_POS
 
         public bool UpdateInventoryItem(int id, string ingredientName, decimal quantity, string measurement)
         {
+            // Round to 2 decimal places
+            quantity = Math.Round(quantity, 2);
+
             using (MySqlConnection con = new MySqlConnection(connectionString))
             {
                 try
                 {
                     con.Open();
-                    string query = "UPDATE inventory SET IngredientName = @IngredientName, Quantity = @Quantity, IngredientMeasurement = @IngredientMeasurement WHERE id = @id";
+                    string query = "UPDATE inventory SET IngredientName = @IngredientName, Quantity = @Quantity, IngredientMeasurement = @IngredientMeasurement WHERE InventoryID = @id";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, con))
                     {
@@ -235,6 +242,7 @@ namespace Mare_POS
             }
         }
 
+        // Fixed DeleteInventoryItem method
         public bool DeleteInventoryItem(int id)
         {
             using (MySqlConnection con = new MySqlConnection(connectionString))
@@ -242,7 +250,7 @@ namespace Mare_POS
                 try
                 {
                     con.Open();
-                    string query = "DELETE FROM inventory WHERE id = @id";
+                    string query = "DELETE FROM inventory WHERE InventoryID = @id"; // Changed from 'id' to 'InventoryID'
 
                     using (MySqlCommand cmd = new MySqlCommand(query, con))
                     {
@@ -259,7 +267,10 @@ namespace Mare_POS
         }
         public void UpdateIngredientQuantity(int ingredientId, decimal quantityToAdd)
         {
-            string query = "UPDATE inventory SET quantity = quantity + @quantityToAdd WHERE id = @ingredientId";
+            // Round to 2 decimal places
+            quantityToAdd = Math.Round(quantityToAdd, 2);
+
+            string query = "UPDATE inventory SET Quantity = ROUND(Quantity + @quantityToAdd, 2) WHERE InventoryID = @ingredientId";
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 using (MySqlCommand command = new MySqlCommand(query, connection))
@@ -275,7 +286,10 @@ namespace Mare_POS
 
         public void DeductIngredientQuantity(int ingredientId, decimal quantityToDeduct, string reason)
         {
-            string updateQuery = "UPDATE inventory SET quantity = quantity - @quantityToDeduct WHERE id = @ingredientId";
+            // Round to 2 decimal places
+            quantityToDeduct = Math.Round(quantityToDeduct, 2);
+
+            string updateQuery = "UPDATE inventory SET Quantity = ROUND(Quantity - @quantityToDeduct, 2) WHERE InventoryID = @ingredientId";
             string logQuery = "INSERT INTO ingredient_usage_log (ingredient_id, quantity_used, reason, date_used) VALUES (@ingredientId, @quantityUsed, @reason, @dateUsed)";
 
             using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -313,60 +327,61 @@ namespace Mare_POS
                 }
             }
         }
-            public bool AddQuantityToInventoryItem(int inventoryId, int quantityToAdd)
+        public bool AddQuantityToInventoryItem(int inventoryId, decimal quantityToAdd)
+        {
+            try
             {
-                try
+                // Round to 2 decimal places
+                quantityToAdd = Math.Round(quantityToAdd, 2);
+
+                using (MySqlConnection connection = GetConnection())
                 {
-                    using (MySqlConnection connection = GetConnection())
+                    connection.Open();
+
+                    // First, get the current quantity
+                    string selectQuery = "SELECT Quantity FROM inventory WHERE InventoryID = @inventoryId";
+                    decimal currentQuantity = 0;
+
+                    using (MySqlCommand selectCmd = new MySqlCommand(selectQuery, connection))
                     {
-                        connection.Open();
+                        selectCmd.Parameters.AddWithValue("@inventoryId", inventoryId);
+                        object result = selectCmd.ExecuteScalar();
 
-                        // First, get the current quantity
-                        string selectQuery = "SELECT Quantity FROM inventory WHERE InventoryID = @inventoryId";
-                        int currentQuantity = 0;
-
-                        using (MySqlCommand selectCmd = new MySqlCommand(selectQuery, connection))
+                        if (result != null && result != DBNull.Value)
                         {
-                            selectCmd.Parameters.AddWithValue("@inventoryId", inventoryId);
-                            object result = selectCmd.ExecuteScalar();
-
-                            if (result != null && result != DBNull.Value)
-                            {
-                                currentQuantity = Convert.ToInt16(result);
-                            }
-                            else
-                            {
-                                // Inventory item not found
-                                return false;
-                            }
+                            currentQuantity = Convert.ToDecimal(result);
                         }
-
-                        // Calculate the new quantity
-                        int newQuantity = currentQuantity + quantityToAdd;
-
-                        // Update the inventory with the new quantity
-                        string updateQuery = "UPDATE inventory SET Quantity = @newQuantity WHERE InventoryID = @inventoryId";
-
-                        using (MySqlCommand updateCmd = new MySqlCommand(updateQuery, connection))
+                        else
                         {
-                            updateCmd.Parameters.AddWithValue("@newQuantity", newQuantity);
-                            updateCmd.Parameters.AddWithValue("@inventoryId", inventoryId);
-
-                            int rowsAffected = updateCmd.ExecuteNonQuery();
-                            return rowsAffected > 0;
+                            // Inventory item not found
+                            return false;
                         }
                     }
-                }
-                catch (Exception ex)
-                {
-                    // Log the error or handle it as needed
-                    System.Diagnostics.Debug.WriteLine($"Error adding quantity to inventory: {ex.Message}");
-                    return false;
+
+                    // Calculate the new quantity and round it
+                    decimal newQuantity = Math.Round(currentQuantity + quantityToAdd, 2);
+
+                    // Update the inventory with the new quantity
+                    string updateQuery = "UPDATE inventory SET Quantity = @newQuantity WHERE InventoryID = @inventoryId";
+
+                    using (MySqlCommand updateCmd = new MySqlCommand(updateQuery, connection))
+                    {
+                        updateCmd.Parameters.AddWithValue("@newQuantity", newQuantity);
+                        updateCmd.Parameters.AddWithValue("@inventoryId", inventoryId);
+
+                        int rowsAffected = updateCmd.ExecuteNonQuery();
+                        return rowsAffected > 0;
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error adding quantity to inventory: {ex.Message}");
+                return false;
+            }
+        }
         private MySqlConnection GetConnection()
         {
-            // Replace with your actual connection string
             string connectionString = "server=localhost;uid=root;pwd=ejaydetera12;database=marepos-db;";
             return new MySqlConnection(connectionString);
         }

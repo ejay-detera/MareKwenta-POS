@@ -1,3 +1,4 @@
+﻿using Mare_POS.Authentication;
 using Mare_POS.SaleshistoryFolder;
 
 namespace Mare_POS
@@ -10,7 +11,7 @@ namespace Mare_POS
         // Enum to define user types
         public enum UserType
         {
-            User,
+            Employee,
             Admin
         }
 
@@ -50,14 +51,19 @@ namespace Mare_POS
         // Method to update sidebar button visibility based on user type
         private void UpdateSidebarVisibility()
         {
-            if (currentUserType == UserType.Admin)
+            if (!SessionManager.IsLoggedIn)
             {
-                // Admin sees all buttons
+                this.Close();
+                return;
+            }
+
+            // Show/hide buttons based on user role
+            if (SessionManager.HasRole("Admin"))
+            {
                 ShowAllButtons();
             }
             else
             {
-                // User sees only specific buttons
                 ShowUserButtons();
             }
         }
@@ -97,20 +103,20 @@ namespace Mare_POS
             }
             else
             {
-                CurrentUserType = UserType.User;
+                CurrentUserType = UserType.Employee;
             }
         }
 
         // Alternative method using boolean
         public void SetUserAccess(bool isAdmin)
         {
-            CurrentUserType = isAdmin ? UserType.Admin : UserType.User;
+            CurrentUserType = isAdmin ? UserType.Admin : UserType.Employee;
         }
 
         // Method to toggle between user types (for testing purposes)
         public void ToggleUserType()
         {
-            CurrentUserType = (currentUserType == UserType.Admin) ? UserType.User : UserType.Admin;
+            CurrentUserType = (currentUserType == UserType.Admin) ? UserType.Employee : UserType.Admin;
         }
 
         private void LoadPage(UserControl page)
@@ -137,7 +143,7 @@ namespace Mare_POS
 
         private void btn_inventory_Click(object sender, EventArgs e)
         {
-            LoadPage(new InventoryPage());
+            LoadPage(new Inventory());
             HighlightButton((Button)sender);
         }
 
@@ -173,8 +179,13 @@ namespace Mare_POS
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            LoadPage(new TicketPage());
-            HighlightButton(btn_ticket);
+            if (!SessionManager.RequireAuthentication())
+            {
+                this.Close();
+                return;
+            }
+            LoadPage(new Inventory());
+            HighlightButton(btn_inventory);
         }
 
         private void bottomMarker_Paint(object sender, PaintEventArgs e) { }
