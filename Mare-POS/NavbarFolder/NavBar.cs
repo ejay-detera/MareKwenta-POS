@@ -52,7 +52,6 @@ namespace Mare_POS
         // Method to update sidebar button visibility based on user type
         private void UpdateSidebarVisibility()
         {
-<<<<<<<< HEAD:Mare-POS/NavbarFolder/NavBar.cs
             if (!SessionManager.IsLoggedIn)
             {
                 this.Close();
@@ -61,9 +60,6 @@ namespace Mare_POS
 
             // Show/hide buttons based on user role
             if (SessionManager.HasRole("Admin"))
-========
-            if (currentUserType == UserType.Admin)
->>>>>>>> origin/dev-aya:Mare-POS/NavBar/NavbarForm.cs
             {
                 ShowAllButtons();
             }
@@ -193,7 +189,6 @@ namespace Mare_POS
 
         private void Form1_Load(object sender, EventArgs e)
         {
-<<<<<<<< HEAD:Mare-POS/NavbarFolder/NavBar.cs
             if (!SessionManager.RequireAuthentication())
             {
                 this.Close();
@@ -201,18 +196,6 @@ namespace Mare_POS
             }
             LoadPage(new Inventory());
             HighlightButton(btn_inventory);
-========
-            if (CurrentUserType == UserType.Admin)
-            {
-                LoadPage(new DashboardAdmin());
-                HighlightButton(btn_dashboard);
-            }
-            else
-            {
-                LoadPage(new TicketPage());
-                HighlightButton(btn_ticket);
-            }
->>>>>>>> origin/dev-aya:Mare-POS/NavBar/NavbarForm.cs
         }
 
         private void bottomMarker_Paint(object sender, PaintEventArgs e) { }
