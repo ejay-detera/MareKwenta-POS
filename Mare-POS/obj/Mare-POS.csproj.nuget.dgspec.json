@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Iyah\\Source\\Repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj": {}
+    "C:\\Users\\Iyah\\source\\repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Iyah\\Source\\Repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj": {
+    "C:\\Users\\Iyah\\source\\repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Iyah\\Source\\Repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj",
+        "projectUniqueName": "C:\\Users\\Iyah\\source\\repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj",
         "projectName": "Mare-POS",
-        "projectPath": "C:\\Users\\Iyah\\Source\\Repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj",
+        "projectPath": "C:\\Users\\Iyah\\source\\repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj",
         "packagesPath": "C:\\Users\\Iyah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Iyah\\Source\\Repos\\MareKwenta-POS\\Mare-POS\\obj\\",
+        "outputPath": "C:\\Users\\Iyah\\source\\repos\\MareKwenta-POS\\Mare-POS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

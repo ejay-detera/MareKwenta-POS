@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Q5pAug9zZ9Q=",
+  "dgSpecHash": "QyX1tbXb0LQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Iyah\\Source\\Repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj",
+  "projectFilePath": "C:\\Users\\Iyah\\source\\repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Iyah\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Iyah\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
