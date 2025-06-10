@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NavbarForm));
             navbarPanel = new Panel();
             logo = new Label();
             flowLayoutPanel1 = new FlowLayoutPanel();
@@ -38,6 +39,7 @@
             btn_ticket = new Button();
             btn_dashboard = new Button();
             panel1 = new Panel();
+            button1 = new Button();
             navbarPanel.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
@@ -76,10 +78,11 @@
             flowLayoutPanel1.Controls.Add(btn_cashbox);
             flowLayoutPanel1.Controls.Add(btn_ticket);
             flowLayoutPanel1.Controls.Add(btn_dashboard);
+            flowLayoutPanel1.Controls.Add(button1);
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel1.Location = new Point(0, 161);
+            flowLayoutPanel1.Location = new Point(0, 132);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(120, 824);
+            flowLayoutPanel1.Size = new Size(120, 853);
             flowLayoutPanel1.TabIndex = 1;
             // 
             // btn_inventory
@@ -211,6 +214,26 @@
             panel1.TabIndex = 2;
             panel1.Paint += panel1_Paint;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(242, 239, 234);
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Unbounded Light", 11.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.FromArgb(78, 45, 24);
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.Location = new Point(0, 633);
+            button1.Margin = new Padding(0, 20, 0, 0);
+            button1.Name = "button1";
+            button1.RightToLeft = RightToLeft.No;
+            button1.Size = new Size(120, 90);
+            button1.TabIndex = 10;
+            button1.Text = "LOG OUT";
+            button1.TextAlign = ContentAlignment.BottomCenter;
+            button1.TextImageRelation = TextImageRelation.ImageAboveText;
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_1;
+            // 
             // NavbarForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -247,5 +270,6 @@
         private Button btn_staff;
         private Panel panel1;
         private FlowLayoutPanel flowLayoutPanel1;
+        private Button button1;
     }
 }
