@@ -69,18 +69,6 @@ namespace Mare_POS
 
         }
 
-        private void UserLoggedIn()
-        {
-            if (SessionManager.IsLoggedIn)
-            {
-                // Get the full user object
-                EmployeeInfo currentUser = SessionManager.CurrentUser;
-
-                // Extract just the username
-                string username = currentUser.FirstName;
-                User.Text = username;
-            }
-        }
 
         private void cuiButton1_Click_1(object sender, EventArgs e)
         {
@@ -199,8 +187,7 @@ namespace Mare_POS
         {
             InventorySeparator.Visible = true;
             LinkIngredientSeparator.Visible = false;
-            LoadInventoryItems(); 
-            UserLoggedIn(); // Call to set the username in the UI
+            LoadInventoryItems();
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -781,21 +768,20 @@ namespace Mare_POS
                 {
                     try
                     {
+                        DialogResult result = MessageBox.Show("Do you want to add quantity to this ingredient?", "Add Quantity", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                        using (var addQuantityForm = new AddQuantityComponent(InventoryRow, inventoryId))
+                        if (result == DialogResult.Yes)
                         {
-                            DialogResult result = MessageBox.Show("Do you want to add quantity to this ingredient?", "Add Quantity", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                            addQuantityForm.ShowDialog();
-                            if (result == DialogResult.Yes)
+                            using (var addQuantityForm = new AddQuantityComponent(InventoryRow, inventoryId))
                             {
-                                LoadInventoryItems(); // Reload inventory items after adding 
-                            }// Reload inventory items after adding quantity
-                            else
-                            {
-                                MessageBox.Show("Add Quantity operation cancelled.", "Cancelled", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                addQuantityForm.ShowDialog();
+                                LoadInventoryItems(); // Reload inventory items after adding quantity
                             }
                         }
+                        else
+                        {
 
+                        }
                     }
                     catch (Exception ex)
                     {
@@ -826,5 +812,14 @@ namespace Mare_POS
             }
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Action_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

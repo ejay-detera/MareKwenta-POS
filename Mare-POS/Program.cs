@@ -13,6 +13,7 @@ namespace Mare_POS
         {
             try
             {
+                new DatabaseSeeder().SeedDatabase();
                 ApplicationConfiguration.Initialize();
                 Application.Run(new Log_In());
             }

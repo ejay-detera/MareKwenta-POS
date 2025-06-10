@@ -175,6 +175,7 @@
             PasswordText.TabIndex = 6;
             PasswordText.TextOffset = new Size(0, 0);
             PasswordText.UnderlinedStyle = true;
+            PasswordText.ContentChanged += PasswordText_ContentChanged;
             // 
             // UsernameText
             // 

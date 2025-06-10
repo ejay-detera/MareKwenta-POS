@@ -111,45 +111,7 @@ namespace Mare_POS.Authentication
             UsernameText.Select();
         }
 
-        private void RedirectBasedOnRole(string role)
-        {
-            try
-            {
-                Form nextForm = null;
 
-                switch (role.ToUpper())
-                {
-                    case "ADMIN":
-                        MessageBox.Show("Redirecting to Admin Dashboard...", "Access Granted");
-                        nextForm = new NavbarForm(); // Create admin dashboard form
-                        break;
-
-                    case "EMPLOYEE":
-                        MessageBox.Show("Redirecting to Employee Dashboard...", "Access Granted");
-                        nextForm = new NavbarForm(); // Create employee dashboard form
-                        break;
-
-                    default:
-                        MessageBox.Show($"Role '{role}' is not recognized. Contact administrator.",
-                            "Access Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                }
-
-                // Hide the login form
-                this.Hide();
-
-                // Set up event handler to close login form when next form closes
-                nextForm.FormClosed += (s, e) => this.Close();
-
-                // Show the next form
-                nextForm.Show();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error redirecting user: {ex.Message}", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
 
         // Event handlers for Enter key navigation
         private void UsernameText_KeyPress(object sender, KeyPressEventArgs e)
@@ -168,6 +130,11 @@ namespace Mare_POS.Authentication
                 PerformLogin();
                 e.Handled = true;
             }
+        }
+
+        private void PasswordText_ContentChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

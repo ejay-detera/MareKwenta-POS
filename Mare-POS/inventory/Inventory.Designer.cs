@@ -31,7 +31,6 @@
             label1 = new Label();
             tabPage1 = new TabPage();
             tabPage2 = new TabPage();
-            User = new Label();
             InventoryName = new Label();
             LinkIngredientName = new Label();
             InventorySeparator = new CuoreUI.Controls.cuiSeparator();
@@ -72,13 +71,14 @@
             // 
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
-            label1.Font = new Font("Unbounded", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Unbounded", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(78, 45, 24);
-            label1.Location = new Point(120, 39);
+            label1.Location = new Point(120, 40);
             label1.Name = "label1";
-            label1.Size = new Size(140, 53);
+            label1.Size = new Size(271, 61);
             label1.TabIndex = 1;
-            label1.Text = "Hello!";
+            label1.Text = "Inventory";
+            label1.Click += label1_Click;
             // 
             // tabPage1
             // 
@@ -100,20 +100,6 @@
             tabPage2.TabIndex = 1;
             tabPage2.Text = "tabPage2";
             tabPage2.Click += tabPage2_Click;
-            // 
-            // User
-            // 
-            User.Anchor = AnchorStyles.None;
-            User.AutoSize = true;
-            User.Font = new Font("Unbounded", 18.8000011F, FontStyle.Bold);
-            User.ForeColor = Color.FromArgb(78, 45, 24);
-            User.ImageAlign = ContentAlignment.TopCenter;
-            User.Location = new Point(252, 43);
-            User.Name = "User";
-            User.Size = new Size(115, 49);
-            User.TabIndex = 3;
-            User.Text = "User";
-            User.Click += label2_Click;
             // 
             // InventoryName
             // 
@@ -383,7 +369,7 @@
     "grams",
     "ml",
     "oz",
-    "pc/s"
+    "pcs"
     };
             UnitOfMeasurement.Location = new Point(888, 55);
             UnitOfMeasurement.Margin = new Padding(4, 5, 4, 5);
@@ -543,6 +529,7 @@
             Action.Rounding = 8;
             Action.Size = new Size(173, 57);
             Action.TabIndex = 8;
+            Action.SelectedIndexChanged += Action_SelectedIndexChanged;
             // 
             // IngredientName1
             // 
@@ -658,7 +645,6 @@
             Controls.Add(LinkIngredientName);
             Controls.Add(InventoryName);
             Controls.Add(InventoryPanel);
-            Controls.Add(User);
             Controls.Add(label1);
             Controls.Add(InventorySeparator);
             Controls.Add(LinkIngredientSeparator);
@@ -681,7 +667,6 @@
         private Label label1;
         private TabPage tabPage1;
         private TabPage tabPage2;
-        private Label User;
         private Label InventoryName;
         private Label LinkIngredientName;
         private CuoreUI.Controls.cuiSeparator InventorySeparator;

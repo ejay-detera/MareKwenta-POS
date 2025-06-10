@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CashboxForm));
             CashboxHeader = new Label();
             cuiPanel8 = new CuoreUI.Controls.cuiPanel();
-            label18 = new Label();
+            DateToday = new Label();
             label17 = new Label();
             cashSales = new CuoreUI.Controls.cuiPanel();
             cuiButton10 = new CuoreUI.Controls.cuiButton();
@@ -63,20 +63,12 @@
             label5 = new Label();
             addExpenseButton = new CuoreUI.Controls.cuiButton();
             label6 = new Label();
-            cuiPanel5 = new CuoreUI.Controls.cuiPanel();
-            label14 = new Label();
-            label13 = new Label();
-            label8 = new Label();
-            label12 = new Label();
-            cuiButton6 = new CuoreUI.Controls.cuiButton();
-            cuiButton7 = new CuoreUI.Controls.cuiButton();
-            cuiPanel6 = new CuoreUI.Controls.cuiPanel();
-            label35 = new Label();
-            label10 = new Label();
-            label21 = new Label();
-            label22 = new Label();
-            cuiButton8 = new CuoreUI.Controls.cuiButton();
-            cuiButton9 = new CuoreUI.Controls.cuiButton();
+            ExpenseRow = new CuoreUI.Controls.cuiPanel();
+            ExpenseAmount = new Label();
+            Category = new Label();
+            ExpenseName = new Label();
+            DeleteButton = new CuoreUI.Controls.cuiButton();
+            EditButton = new CuoreUI.Controls.cuiButton();
             tableLayoutPanel1 = new TableLayoutPanel();
             casH = new CuoreUI.Controls.cuiPanel();
             cuiButton2 = new CuoreUI.Controls.cuiButton();
@@ -97,8 +89,7 @@
             cuiPanel2.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
             cuiPanel3.SuspendLayout();
-            cuiPanel5.SuspendLayout();
-            cuiPanel6.SuspendLayout();
+            ExpenseRow.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             casH.SuspendLayout();
             pettyCash.SuspendLayout();
@@ -110,13 +101,13 @@
             CashboxHeader.BackColor = Color.Transparent;
             CashboxHeader.Dock = DockStyle.Top;
             CashboxHeader.FlatStyle = FlatStyle.Flat;
-            CashboxHeader.Font = new Font("Unbounded Medium", 27.7499962F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            CashboxHeader.Font = new Font("Unbounded", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             CashboxHeader.ForeColor = Color.FromArgb(78, 45, 24);
             CashboxHeader.Location = new Point(0, 0);
             CashboxHeader.Margin = new Padding(20, 0, 20, 20);
             CashboxHeader.Name = "CashboxHeader";
             CashboxHeader.Padding = new Padding(20, 10, 10, 10);
-            CashboxHeader.Size = new Size(276, 78);
+            CashboxHeader.Size = new Size(293, 81);
             CashboxHeader.TabIndex = 2;
             CashboxHeader.Text = "Cash Box";
             // 
@@ -124,36 +115,37 @@
             // 
             cuiPanel8.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             cuiPanel8.BackColor = Color.FromArgb(242, 239, 234);
-            cuiPanel8.Controls.Add(label18);
+            cuiPanel8.Controls.Add(DateToday);
             cuiPanel8.Controls.Add(label17);
-            cuiPanel8.Location = new Point(1145, 15);
+            cuiPanel8.Location = new Point(1126, 21);
             cuiPanel8.Name = "cuiPanel8";
             cuiPanel8.OutlineThickness = 1F;
             cuiPanel8.PanelColor = Color.FromArgb(242, 239, 234);
             cuiPanel8.PanelOutlineColor = Color.FromArgb(78, 45, 24);
             cuiPanel8.Rounding = new Padding(12);
-            cuiPanel8.Size = new Size(280, 48);
+            cuiPanel8.Size = new Size(304, 48);
             cuiPanel8.TabIndex = 4;
             // 
-            // label18
+            // DateToday
             // 
-            label18.AutoSize = true;
-            label18.Font = new Font("Inter 28pt 28pt", 14F, FontStyle.Bold);
-            label18.ForeColor = Color.FromArgb(78, 45, 24);
-            label18.Location = new Point(121, 13);
-            label18.Name = "label18";
-            label18.Size = new Size(137, 22);
-            label18.TabIndex = 2;
-            label18.Text = "June 10, 2025";
+            DateToday.AutoSize = true;
+            DateToday.Font = new Font("Inter", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            DateToday.ForeColor = Color.FromArgb(78, 45, 24);
+            DateToday.Location = new Point(121, 13);
+            DateToday.Name = "DateToday";
+            DateToday.Size = new Size(51, 32);
+            DateToday.TabIndex = 2;
+            DateToday.Text = "Try";
+            DateToday.Click += label18_Click;
             // 
             // label17
             // 
             label17.AutoSize = true;
-            label17.Font = new Font("Inter 28pt 28pt", 14F);
+            label17.Font = new Font("Inter", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label17.ForeColor = Color.FromArgb(78, 45, 24);
             label17.Location = new Point(9, 13);
             label17.Name = "label17";
-            label17.Size = new Size(66, 22);
+            label17.Size = new Size(80, 32);
             label17.TabIndex = 1;
             label17.Text = "DATE:";
             // 
@@ -217,22 +209,22 @@
             // label23
             // 
             label23.AutoSize = true;
-            label23.Font = new Font("Inter 28pt 28pt", 26F, FontStyle.Bold);
+            label23.Font = new Font("Inter SemiBold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label23.ForeColor = Color.FromArgb(78, 45, 24);
-            label23.Location = new Point(13, 82);
+            label23.Location = new Point(29, 92);
             label23.Name = "label23";
-            label23.Size = new Size(185, 41);
+            label23.Size = new Size(174, 43);
             label23.TabIndex = 2;
             label23.Text = "₱ 3,100.00";
             // 
             // label24
             // 
             label24.AutoSize = true;
-            label24.Font = new Font("Inter 28pt 28pt", 14F);
+            label24.Font = new Font("Microsoft Sans Serif", 14F);
             label24.ForeColor = Color.FromArgb(78, 45, 24);
             label24.Location = new Point(11, 23);
             label24.Name = "label24";
-            label24.Size = new Size(131, 22);
+            label24.Size = new Size(160, 29);
             label24.TabIndex = 0;
             label24.Text = "CASH SALES";
             // 
@@ -258,11 +250,11 @@
             // label25
             // 
             label25.AutoSize = true;
-            label25.Font = new Font("Inter 28pt 28pt", 14F);
+            label25.Font = new Font("Microsoft Sans Serif", 14F);
             label25.ForeColor = Color.FromArgb(78, 45, 24);
             label25.Location = new Point(13, 40);
             label25.Name = "label25";
-            label25.Size = new Size(114, 22);
+            label25.Size = new Size(144, 29);
             label25.TabIndex = 4;
             label25.Text = "EXPENSES";
             // 
@@ -308,22 +300,22 @@
             // label26
             // 
             label26.AutoSize = true;
-            label26.Font = new Font("Inter 28pt 28pt", 26F, FontStyle.Bold);
+            label26.Font = new Font("Inter SemiBold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label26.ForeColor = Color.FromArgb(78, 45, 24);
-            label26.Location = new Point(13, 82);
+            label26.Location = new Point(29, 92);
             label26.Name = "label26";
-            label26.Size = new Size(185, 41);
+            label26.Size = new Size(174, 43);
             label26.TabIndex = 2;
             label26.Text = "₱ 3,100.00";
             // 
             // label27
             // 
             label27.AutoSize = true;
-            label27.Font = new Font("Inter 28pt 28pt", 14F);
+            label27.Font = new Font("Microsoft Sans Serif", 14F);
             label27.ForeColor = Color.FromArgb(78, 45, 24);
             label27.Location = new Point(13, 15);
             label27.Name = "label27";
-            label27.Size = new Size(63, 22);
+            label27.Size = new Size(78, 29);
             label27.TabIndex = 0;
             label27.Text = "CASH";
             // 
@@ -349,11 +341,11 @@
             // label28
             // 
             label28.AutoSize = true;
-            label28.Font = new Font("Inter 28pt 28pt", 14F);
+            label28.Font = new Font("Microsoft Sans Serif", 14F);
             label28.ForeColor = Color.FromArgb(78, 45, 24);
             label28.Location = new Point(13, 40);
             label28.Name = "label28";
-            label28.Size = new Size(114, 22);
+            label28.Size = new Size(144, 29);
             label28.TabIndex = 4;
             label28.Text = "EXPENSES";
             // 
@@ -399,22 +391,22 @@
             // label29
             // 
             label29.AutoSize = true;
-            label29.Font = new Font("Inter 28pt 28pt", 26F, FontStyle.Bold);
+            label29.Font = new Font("Inter SemiBold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label29.ForeColor = Color.FromArgb(78, 45, 24);
-            label29.Location = new Point(13, 86);
+            label29.Location = new Point(29, 96);
             label29.Name = "label29";
-            label29.Size = new Size(185, 41);
+            label29.Size = new Size(174, 43);
             label29.TabIndex = 2;
             label29.Text = "₱ 3,100.00";
             // 
             // label30
             // 
             label30.AutoSize = true;
-            label30.Font = new Font("Inter 28pt 28pt", 14F);
+            label30.Font = new Font("Microsoft Sans Serif", 14F);
             label30.ForeColor = Color.FromArgb(78, 45, 24);
             label30.Location = new Point(13, 15);
             label30.Name = "label30";
-            label30.Size = new Size(120, 22);
+            label30.Size = new Size(153, 29);
             label30.TabIndex = 0;
             label30.Text = "NON - CASH";
             // 
@@ -479,22 +471,23 @@
             // label31
             // 
             label31.AutoSize = true;
-            label31.Font = new Font("Inter 28pt 28pt", 26F, FontStyle.Bold);
+            label31.Font = new Font("Inter SemiBold", 18.2F, FontStyle.Bold);
             label31.ForeColor = Color.FromArgb(0, 145, 247);
-            label31.Location = new Point(11, 82);
+            label31.Location = new Point(13, 84);
             label31.Name = "label31";
-            label31.Size = new Size(223, 41);
+            label31.Size = new Size(216, 44);
             label31.TabIndex = 2;
             label31.Text = "₱ 893,100.00";
+            label31.Click += label31_Click;
             // 
             // label32
             // 
             label32.AutoSize = true;
-            label32.Font = new Font("Inter 28pt 28pt", 14F);
+            label32.Font = new Font("Microsoft Sans Serif", 14F);
             label32.ForeColor = Color.FromArgb(0, 145, 247);
             label32.Location = new Point(13, 23);
             label32.Name = "label32";
-            label32.Size = new Size(78, 22);
+            label32.Size = new Size(96, 29);
             label32.TabIndex = 0;
             label32.Text = "GCASH";
             // 
@@ -559,22 +552,22 @@
             // label33
             // 
             label33.AutoSize = true;
-            label33.Font = new Font("Inter 28pt 28pt", 26F, FontStyle.Bold);
+            label33.Font = new Font("Inter SemiBold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label33.ForeColor = Color.FromArgb(0, 137, 76);
-            label33.Location = new Point(13, 82);
+            label33.Location = new Point(33, 90);
             label33.Name = "label33";
-            label33.Size = new Size(185, 41);
+            label33.Size = new Size(174, 43);
             label33.TabIndex = 2;
             label33.Text = "₱ 3,100.00";
             // 
             // label34
             // 
             label34.AutoSize = true;
-            label34.Font = new Font("Inter 28pt 28pt", 14F);
+            label34.Font = new Font("Microsoft Sans Serif", 14F);
             label34.ForeColor = Color.FromArgb(0, 137, 76);
             label34.Location = new Point(13, 15);
             label34.Name = "label34";
-            label34.Size = new Size(61, 22);
+            label34.Size = new Size(79, 29);
             label34.TabIndex = 0;
             label34.Text = "MAYA";
             // 
@@ -583,8 +576,7 @@
             cuiPanel1.AutoScroll = true;
             cuiPanel1.Controls.Add(tableLayoutPanel2);
             cuiPanel1.Controls.Add(tableLayoutPanel1);
-            cuiPanel1.Dock = DockStyle.Fill;
-            cuiPanel1.Location = new Point(0, 78);
+            cuiPanel1.Location = new Point(0, 81);
             cuiPanel1.Margin = new Padding(20);
             cuiPanel1.Name = "cuiPanel1";
             cuiPanel1.OutlineThickness = 1F;
@@ -592,29 +584,29 @@
             cuiPanel1.PanelColor = Color.FromArgb(242, 239, 234);
             cuiPanel1.PanelOutlineColor = Color.Transparent;
             cuiPanel1.Rounding = new Padding(0);
-            cuiPanel1.Size = new Size(1440, 946);
+            cuiPanel1.Size = new Size(1440, 943);
             cuiPanel1.TabIndex = 8;
             // 
             // tableLayoutPanel2
             // 
+            tableLayoutPanel2.Anchor = AnchorStyles.None;
+            tableLayoutPanel2.AutoScroll = true;
             tableLayoutPanel2.ColumnCount = 1;
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel2.Controls.Add(cuiPanel2, 0, 0);
-            tableLayoutPanel2.Dock = DockStyle.Fill;
             tableLayoutPanel2.Location = new Point(550, 50);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.Padding = new Padding(20, 12, 20, 20);
             tableLayoutPanel2.RowCount = 1;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.Size = new Size(860, 866);
+            tableLayoutPanel2.Size = new Size(860, 863);
             tableLayoutPanel2.TabIndex = 8;
             // 
             // cuiPanel2
             // 
-            cuiPanel2.AutoScroll = true;
+            cuiPanel2.Anchor = AnchorStyles.None;
             cuiPanel2.BackColor = Color.Transparent;
             cuiPanel2.Controls.Add(tableLayoutPanel3);
-            cuiPanel2.Dock = DockStyle.Fill;
             cuiPanel2.Location = new Point(20, 12);
             cuiPanel2.Margin = new Padding(0);
             cuiPanel2.Name = "cuiPanel2";
@@ -623,19 +615,19 @@
             cuiPanel2.PanelColor = Color.White;
             cuiPanel2.PanelOutlineColor = Color.Transparent;
             cuiPanel2.Rounding = new Padding(14);
-            cuiPanel2.Size = new Size(820, 834);
+            cuiPanel2.Size = new Size(820, 831);
             cuiPanel2.TabIndex = 0;
             // 
             // tableLayoutPanel3
             // 
+            tableLayoutPanel3.Anchor = AnchorStyles.None;
+            tableLayoutPanel3.AutoScroll = true;
             tableLayoutPanel3.AutoSize = true;
             tableLayoutPanel3.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
             tableLayoutPanel3.ColumnCount = 1;
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel3.Controls.Add(cuiPanel3, 0, 0);
-            tableLayoutPanel3.Controls.Add(cuiPanel5, 0, 1);
-            tableLayoutPanel3.Controls.Add(cuiPanel6, 0, 2);
-            tableLayoutPanel3.Dock = DockStyle.Fill;
+            tableLayoutPanel3.Controls.Add(ExpenseRow, 0, 1);
             tableLayoutPanel3.Location = new Point(20, 20);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 11;
@@ -650,15 +642,16 @@
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 9.091074F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 9.090165F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 9.090165F));
-            tableLayoutPanel3.Size = new Size(780, 794);
+            tableLayoutPanel3.Size = new Size(780, 791);
             tableLayoutPanel3.TabIndex = 0;
             // 
             // cuiPanel3
             // 
+            cuiPanel3.Anchor = AnchorStyles.None;
             cuiPanel3.Controls.Add(label5);
             cuiPanel3.Controls.Add(addExpenseButton);
             cuiPanel3.Controls.Add(label6);
-            cuiPanel3.Location = new Point(1, 1);
+            cuiPanel3.Location = new Point(3, 2);
             cuiPanel3.Margin = new Padding(0);
             cuiPanel3.Name = "cuiPanel3";
             cuiPanel3.OutlineThickness = 0.8F;
@@ -667,31 +660,33 @@
             cuiPanel3.Rounding = new Padding(0);
             cuiPanel3.Size = new Size(774, 68);
             cuiPanel3.TabIndex = 4;
+            cuiPanel3.Paint += cuiPanel3_Paint;
             // 
             // label5
             // 
+            label5.Anchor = AnchorStyles.None;
             label5.AutoSize = true;
             label5.BackColor = Color.White;
-            label5.Font = new Font("Inter 28pt 28pt", 18F, FontStyle.Bold);
+            label5.Font = new Font("Unbounded Medium", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.FromArgb(78, 45, 24);
-            label5.Location = new Point(6, 18);
+            label5.Location = new Point(11, 9);
             label5.Margin = new Padding(0);
             label5.Name = "label5";
-            label5.Size = new Size(192, 29);
+            label5.Size = new Size(283, 43);
             label5.TabIndex = 0;
             label5.Text = "Expense Added";
             label5.Click += label5_Click;
             // 
             // addExpenseButton
             // 
-            addExpenseButton.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            addExpenseButton.Anchor = AnchorStyles.None;
             addExpenseButton.BackColor = Color.White;
             addExpenseButton.CheckButton = false;
             addExpenseButton.Checked = false;
-            addExpenseButton.CheckedBackground = Color.FromArgb(255, 106, 0);
+            addExpenseButton.CheckedBackground = Color.White;
             addExpenseButton.CheckedForeColor = Color.White;
             addExpenseButton.CheckedImageTint = Color.White;
-            addExpenseButton.CheckedOutline = Color.FromArgb(255, 106, 0);
+            addExpenseButton.CheckedOutline = Color.White;
             addExpenseButton.Content = "";
             addExpenseButton.DialogResult = DialogResult.None;
             addExpenseButton.Font = new Font("Microsoft Sans Serif", 9.75F);
@@ -704,7 +699,7 @@
             addExpenseButton.ImageAutoCenter = true;
             addExpenseButton.ImageExpand = new Point(4, 4);
             addExpenseButton.ImageOffset = new Point(0, 0);
-            addExpenseButton.Location = new Point(723, 16);
+            addExpenseButton.Location = new Point(704, 16);
             addExpenseButton.Margin = new Padding(0);
             addExpenseButton.Name = "addExpenseButton";
             addExpenseButton.NormalBackground = Color.FromArgb(30, 78, 45, 24);
@@ -728,305 +723,151 @@
             label6.Anchor = AnchorStyles.Right;
             label6.AutoSize = true;
             label6.BackColor = Color.White;
-            label6.Font = new Font("Inter 28pt 28pt", 14F, FontStyle.Bold);
+            label6.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold);
             label6.ForeColor = Color.FromArgb(78, 45, 24);
             label6.Location = new Point(1100, -16);
             label6.Name = "label6";
-            label6.Size = new Size(88, 22);
+            label6.Size = new Size(114, 29);
             label6.TabIndex = 9;
             label6.Text = "₱ 300.00";
             // 
-            // cuiPanel5
+            // ExpenseRow
             // 
-            cuiPanel5.Controls.Add(label14);
-            cuiPanel5.Controls.Add(label13);
-            cuiPanel5.Controls.Add(label8);
-            cuiPanel5.Controls.Add(label12);
-            cuiPanel5.Controls.Add(cuiButton6);
-            cuiPanel5.Controls.Add(cuiButton7);
-            cuiPanel5.Location = new Point(1, 73);
-            cuiPanel5.Margin = new Padding(0);
-            cuiPanel5.Name = "cuiPanel5";
-            cuiPanel5.OutlineThickness = 0.8F;
-            cuiPanel5.PanelColor = Color.White;
-            cuiPanel5.PanelOutlineColor = Color.Transparent;
-            cuiPanel5.Rounding = new Padding(0);
-            cuiPanel5.Size = new Size(774, 68);
-            cuiPanel5.TabIndex = 7;
+            ExpenseRow.Anchor = AnchorStyles.None;
+            ExpenseRow.Controls.Add(ExpenseAmount);
+            ExpenseRow.Controls.Add(Category);
+            ExpenseRow.Controls.Add(ExpenseName);
+            ExpenseRow.Controls.Add(DeleteButton);
+            ExpenseRow.Controls.Add(EditButton);
+            ExpenseRow.Location = new Point(3, 73);
+            ExpenseRow.Margin = new Padding(0);
+            ExpenseRow.Name = "ExpenseRow";
+            ExpenseRow.OutlineThickness = 0.8F;
+            ExpenseRow.PanelColor = Color.White;
+            ExpenseRow.PanelOutlineColor = Color.Transparent;
+            ExpenseRow.Rounding = new Padding(0);
+            ExpenseRow.Size = new Size(774, 68);
+            ExpenseRow.TabIndex = 7;
             // 
-            // label14
+            // ExpenseAmount
             // 
-            label14.AutoSize = true;
-            label14.BackColor = Color.White;
-            label14.Font = new Font("Inter 28pt 28pt", 12F);
-            label14.ForeColor = Color.FromArgb(78, 45, 24);
-            label14.Location = new Point(11, 24);
-            label14.Name = "label14";
-            label14.Size = new Size(17, 18);
-            label14.TabIndex = 11;
-            label14.Text = "1";
+            ExpenseAmount.Anchor = AnchorStyles.None;
+            ExpenseAmount.AutoSize = true;
+            ExpenseAmount.BackColor = Color.White;
+            ExpenseAmount.Font = new Font("Inter", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ExpenseAmount.ForeColor = Color.FromArgb(78, 45, 24);
+            ExpenseAmount.Location = new Point(585, 16);
+            ExpenseAmount.Name = "ExpenseAmount";
+            ExpenseAmount.Size = new Size(120, 32);
+            ExpenseAmount.TabIndex = 10;
+            ExpenseAmount.Text = "₱ 300.00";
             // 
-            // label13
+            // Category
             // 
-            label13.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            label13.AutoSize = true;
-            label13.BackColor = Color.White;
-            label13.Font = new Font("Inter 28pt 28pt", 14F, FontStyle.Bold);
-            label13.ForeColor = Color.FromArgb(78, 45, 24);
-            label13.Location = new Point(676, 26);
-            label13.Name = "label13";
-            label13.Size = new Size(88, 22);
-            label13.TabIndex = 10;
-            label13.Text = "₱ 300.00";
+            Category.AutoSize = true;
+            Category.BackColor = Color.White;
+            Category.Font = new Font("Inter", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Category.ForeColor = Color.FromArgb(78, 45, 24);
+            Category.Location = new Point(142, 37);
+            Category.Name = "Category";
+            Category.Size = new Size(58, 24);
+            Category.TabIndex = 8;
+            Category.Text = "CASH";
+            Category.Click += Category_Click;
             // 
-            // label8
+            // ExpenseName
             // 
-            label8.AutoSize = true;
-            label8.BackColor = Color.White;
-            label8.Font = new Font("Inter 28pt 28pt", 12F);
-            label8.ForeColor = Color.FromArgb(78, 45, 24);
-            label8.Location = new Point(202, 40);
-            label8.Name = "label8";
-            label8.Size = new Size(53, 18);
-            label8.TabIndex = 8;
-            label8.Text = "CASH";
+            ExpenseName.AutoSize = true;
+            ExpenseName.BackColor = Color.White;
+            ExpenseName.Font = new Font("Inter", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ExpenseName.ForeColor = Color.FromArgb(78, 45, 24);
+            ExpenseName.Location = new Point(142, 11);
+            ExpenseName.Name = "ExpenseName";
+            ExpenseName.Size = new Size(132, 26);
+            ExpenseName.TabIndex = 7;
+            ExpenseName.Text = "1 Sack of Rice";
             // 
-            // label12
+            // DeleteButton
             // 
-            label12.AutoSize = true;
-            label12.BackColor = Color.White;
-            label12.Font = new Font("Inter 28pt 28pt", 14F, FontStyle.Bold);
-            label12.ForeColor = Color.FromArgb(78, 45, 24);
-            label12.Location = new Point(202, 10);
-            label12.Name = "label12";
-            label12.Size = new Size(140, 22);
-            label12.TabIndex = 7;
-            label12.Text = "1 Sack of Rice";
+            DeleteButton.Anchor = AnchorStyles.None;
+            DeleteButton.AutoSize = true;
+            DeleteButton.BackColor = Color.White;
+            DeleteButton.CheckButton = false;
+            DeleteButton.Checked = false;
+            DeleteButton.CheckedBackground = Color.FromArgb(255, 106, 0);
+            DeleteButton.CheckedForeColor = Color.White;
+            DeleteButton.CheckedImageTint = Color.White;
+            DeleteButton.CheckedOutline = Color.FromArgb(255, 106, 0);
+            DeleteButton.Content = "";
+            DeleteButton.DialogResult = DialogResult.None;
+            DeleteButton.Font = new Font("Microsoft Sans Serif", 9.75F);
+            DeleteButton.ForeColor = Color.FromArgb(195, 14, 14);
+            DeleteButton.HoverBackground = Color.FromArgb(60, 195, 14, 14);
+            DeleteButton.HoveredImageTint = Color.FromArgb(195, 14, 14);
+            DeleteButton.HoverForeColor = Color.Black;
+            DeleteButton.HoverOutline = Color.FromArgb(195, 14, 14);
+            DeleteButton.Image = (Image)resources.GetObject("DeleteButton.Image");
+            DeleteButton.ImageAutoCenter = true;
+            DeleteButton.ImageExpand = new Point(4, 4);
+            DeleteButton.ImageOffset = new Point(0, 0);
+            DeleteButton.Location = new Point(22, 16);
+            DeleteButton.Margin = new Padding(0);
+            DeleteButton.Name = "DeleteButton";
+            DeleteButton.NormalBackground = Color.FromArgb(30, 195, 14, 14);
+            DeleteButton.NormalForeColor = Color.FromArgb(195, 14, 14);
+            DeleteButton.NormalImageTint = Color.White;
+            DeleteButton.NormalOutline = Color.FromArgb(195, 14, 14);
+            DeleteButton.OutlineThickness = 1F;
+            DeleteButton.PressedBackground = Color.FromArgb(60, 195, 14, 14);
+            DeleteButton.PressedForeColor = Color.FromArgb(195, 14, 14);
+            DeleteButton.PressedImageTint = Color.FromArgb(195, 14, 14);
+            DeleteButton.PressedOutline = Color.FromArgb(195, 14, 14);
+            DeleteButton.Rounding = new Padding(8);
+            DeleteButton.Size = new Size(40, 40);
+            DeleteButton.TabIndex = 6;
+            DeleteButton.TextAlignment = StringAlignment.Center;
+            DeleteButton.TextOffset = new Point(0, 0);
             // 
-            // cuiButton6
+            // EditButton
             // 
-            cuiButton6.AutoSize = true;
-            cuiButton6.BackColor = Color.White;
-            cuiButton6.CheckButton = false;
-            cuiButton6.Checked = false;
-            cuiButton6.CheckedBackground = Color.FromArgb(255, 106, 0);
-            cuiButton6.CheckedForeColor = Color.White;
-            cuiButton6.CheckedImageTint = Color.White;
-            cuiButton6.CheckedOutline = Color.FromArgb(255, 106, 0);
-            cuiButton6.Content = "";
-            cuiButton6.DialogResult = DialogResult.None;
-            cuiButton6.Font = new Font("Microsoft Sans Serif", 9.75F);
-            cuiButton6.ForeColor = Color.FromArgb(195, 14, 14);
-            cuiButton6.HoverBackground = Color.FromArgb(60, 195, 14, 14);
-            cuiButton6.HoveredImageTint = Color.FromArgb(195, 14, 14);
-            cuiButton6.HoverForeColor = Color.Black;
-            cuiButton6.HoverOutline = Color.FromArgb(195, 14, 14);
-            cuiButton6.Image = (Image)resources.GetObject("cuiButton6.Image");
-            cuiButton6.ImageAutoCenter = true;
-            cuiButton6.ImageExpand = new Point(4, 4);
-            cuiButton6.ImageOffset = new Point(0, 0);
-            cuiButton6.Location = new Point(82, 14);
-            cuiButton6.Margin = new Padding(0);
-            cuiButton6.Name = "cuiButton6";
-            cuiButton6.NormalBackground = Color.FromArgb(30, 195, 14, 14);
-            cuiButton6.NormalForeColor = Color.FromArgb(195, 14, 14);
-            cuiButton6.NormalImageTint = Color.White;
-            cuiButton6.NormalOutline = Color.FromArgb(195, 14, 14);
-            cuiButton6.OutlineThickness = 1F;
-            cuiButton6.PressedBackground = Color.FromArgb(60, 195, 14, 14);
-            cuiButton6.PressedForeColor = Color.FromArgb(195, 14, 14);
-            cuiButton6.PressedImageTint = Color.FromArgb(195, 14, 14);
-            cuiButton6.PressedOutline = Color.FromArgb(195, 14, 14);
-            cuiButton6.Rounding = new Padding(8);
-            cuiButton6.Size = new Size(40, 40);
-            cuiButton6.TabIndex = 6;
-            cuiButton6.TextAlignment = StringAlignment.Center;
-            cuiButton6.TextOffset = new Point(0, 0);
-            // 
-            // cuiButton7
-            // 
-            cuiButton7.BackColor = Color.White;
-            cuiButton7.CheckButton = false;
-            cuiButton7.Checked = false;
-            cuiButton7.CheckedBackground = Color.FromArgb(255, 106, 0);
-            cuiButton7.CheckedForeColor = Color.White;
-            cuiButton7.CheckedImageTint = Color.White;
-            cuiButton7.CheckedOutline = Color.FromArgb(255, 106, 0);
-            cuiButton7.Content = "";
-            cuiButton7.DialogResult = DialogResult.None;
-            cuiButton7.Font = new Font("Microsoft Sans Serif", 9.75F);
-            cuiButton7.ForeColor = Color.FromArgb(0, 137, 76);
-            cuiButton7.HoverBackground = Color.FromArgb(60, 0, 137, 76);
-            cuiButton7.HoveredImageTint = Color.FromArgb(0, 137, 76);
-            cuiButton7.HoverForeColor = Color.Black;
-            cuiButton7.HoverOutline = Color.FromArgb(0, 137, 76);
-            cuiButton7.Image = (Image)resources.GetObject("cuiButton7.Image");
-            cuiButton7.ImageAutoCenter = true;
-            cuiButton7.ImageExpand = new Point(4, 4);
-            cuiButton7.ImageOffset = new Point(0, 0);
-            cuiButton7.Location = new Point(130, 14);
-            cuiButton7.Margin = new Padding(0);
-            cuiButton7.Name = "cuiButton7";
-            cuiButton7.NormalBackground = Color.FromArgb(30, 0, 137, 76);
-            cuiButton7.NormalForeColor = Color.FromArgb(0, 137, 76);
-            cuiButton7.NormalImageTint = Color.White;
-            cuiButton7.NormalOutline = Color.FromArgb(0, 137, 76);
-            cuiButton7.OutlineThickness = 1F;
-            cuiButton7.PressedBackground = Color.FromArgb(60, 0, 137, 76);
-            cuiButton7.PressedForeColor = Color.FromArgb(0, 137, 76);
-            cuiButton7.PressedImageTint = Color.FromArgb(0, 137, 76);
-            cuiButton7.PressedOutline = Color.FromArgb(0, 137, 76);
-            cuiButton7.Rounding = new Padding(8);
-            cuiButton7.Size = new Size(40, 40);
-            cuiButton7.TabIndex = 5;
-            cuiButton7.TextAlignment = StringAlignment.Center;
-            cuiButton7.TextOffset = new Point(0, 0);
-            // 
-            // cuiPanel6
-            // 
-            cuiPanel6.Controls.Add(label35);
-            cuiPanel6.Controls.Add(label10);
-            cuiPanel6.Controls.Add(label21);
-            cuiPanel6.Controls.Add(label22);
-            cuiPanel6.Controls.Add(cuiButton8);
-            cuiPanel6.Controls.Add(cuiButton9);
-            cuiPanel6.Location = new Point(1, 145);
-            cuiPanel6.Margin = new Padding(0);
-            cuiPanel6.Name = "cuiPanel6";
-            cuiPanel6.OutlineThickness = 0.8F;
-            cuiPanel6.PanelColor = Color.White;
-            cuiPanel6.PanelOutlineColor = Color.Transparent;
-            cuiPanel6.Rounding = new Padding(0);
-            cuiPanel6.Size = new Size(774, 68);
-            cuiPanel6.TabIndex = 9;
-            // 
-            // label35
-            // 
-            label35.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            label35.AutoSize = true;
-            label35.BackColor = Color.White;
-            label35.Font = new Font("Inter 28pt 28pt", 14F, FontStyle.Bold);
-            label35.ForeColor = Color.FromArgb(78, 45, 24);
-            label35.Location = new Point(673, 21);
-            label35.Name = "label35";
-            label35.Size = new Size(88, 22);
-            label35.TabIndex = 12;
-            label35.Text = "₱ 300.00";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.BackColor = Color.White;
-            label10.Font = new Font("Inter 28pt 28pt", 12F);
-            label10.ForeColor = Color.FromArgb(78, 45, 24);
-            label10.Location = new Point(11, 24);
-            label10.Name = "label10";
-            label10.Size = new Size(17, 18);
-            label10.TabIndex = 11;
-            label10.Text = "2";
-            // 
-            // label21
-            // 
-            label21.AutoSize = true;
-            label21.BackColor = Color.White;
-            label21.Font = new Font("Inter 28pt 28pt", 12F);
-            label21.ForeColor = Color.FromArgb(78, 45, 24);
-            label21.Location = new Point(202, 40);
-            label21.Name = "label21";
-            label21.Size = new Size(53, 18);
-            label21.TabIndex = 8;
-            label21.Text = "CASH";
-            // 
-            // label22
-            // 
-            label22.AutoSize = true;
-            label22.BackColor = Color.White;
-            label22.Font = new Font("Inter 28pt 28pt", 14F, FontStyle.Bold);
-            label22.ForeColor = Color.FromArgb(78, 45, 24);
-            label22.Location = new Point(202, 10);
-            label22.Name = "label22";
-            label22.Size = new Size(140, 22);
-            label22.TabIndex = 7;
-            label22.Text = "1 Sack of Rice";
-            // 
-            // cuiButton8
-            // 
-            cuiButton8.AutoSize = true;
-            cuiButton8.BackColor = Color.White;
-            cuiButton8.CheckButton = false;
-            cuiButton8.Checked = false;
-            cuiButton8.CheckedBackground = Color.FromArgb(255, 106, 0);
-            cuiButton8.CheckedForeColor = Color.White;
-            cuiButton8.CheckedImageTint = Color.White;
-            cuiButton8.CheckedOutline = Color.FromArgb(255, 106, 0);
-            cuiButton8.Content = "";
-            cuiButton8.DialogResult = DialogResult.None;
-            cuiButton8.Font = new Font("Microsoft Sans Serif", 9.75F);
-            cuiButton8.ForeColor = Color.FromArgb(195, 14, 14);
-            cuiButton8.HoverBackground = Color.FromArgb(60, 195, 14, 14);
-            cuiButton8.HoveredImageTint = Color.FromArgb(195, 14, 14);
-            cuiButton8.HoverForeColor = Color.Black;
-            cuiButton8.HoverOutline = Color.FromArgb(195, 14, 14);
-            cuiButton8.Image = (Image)resources.GetObject("cuiButton8.Image");
-            cuiButton8.ImageAutoCenter = true;
-            cuiButton8.ImageExpand = new Point(4, 4);
-            cuiButton8.ImageOffset = new Point(0, 0);
-            cuiButton8.Location = new Point(82, 14);
-            cuiButton8.Margin = new Padding(0);
-            cuiButton8.Name = "cuiButton8";
-            cuiButton8.NormalBackground = Color.FromArgb(30, 195, 14, 14);
-            cuiButton8.NormalForeColor = Color.FromArgb(195, 14, 14);
-            cuiButton8.NormalImageTint = Color.White;
-            cuiButton8.NormalOutline = Color.FromArgb(195, 14, 14);
-            cuiButton8.OutlineThickness = 1F;
-            cuiButton8.PressedBackground = Color.FromArgb(60, 195, 14, 14);
-            cuiButton8.PressedForeColor = Color.FromArgb(195, 14, 14);
-            cuiButton8.PressedImageTint = Color.FromArgb(195, 14, 14);
-            cuiButton8.PressedOutline = Color.FromArgb(195, 14, 14);
-            cuiButton8.Rounding = new Padding(8);
-            cuiButton8.Size = new Size(40, 40);
-            cuiButton8.TabIndex = 6;
-            cuiButton8.TextAlignment = StringAlignment.Center;
-            cuiButton8.TextOffset = new Point(0, 0);
-            // 
-            // cuiButton9
-            // 
-            cuiButton9.BackColor = Color.White;
-            cuiButton9.CheckButton = false;
-            cuiButton9.Checked = false;
-            cuiButton9.CheckedBackground = Color.FromArgb(255, 106, 0);
-            cuiButton9.CheckedForeColor = Color.White;
-            cuiButton9.CheckedImageTint = Color.White;
-            cuiButton9.CheckedOutline = Color.FromArgb(255, 106, 0);
-            cuiButton9.Content = "";
-            cuiButton9.DialogResult = DialogResult.None;
-            cuiButton9.Font = new Font("Microsoft Sans Serif", 9.75F);
-            cuiButton9.ForeColor = Color.FromArgb(0, 137, 76);
-            cuiButton9.HoverBackground = Color.FromArgb(60, 0, 137, 76);
-            cuiButton9.HoveredImageTint = Color.FromArgb(0, 137, 76);
-            cuiButton9.HoverForeColor = Color.Black;
-            cuiButton9.HoverOutline = Color.FromArgb(0, 137, 76);
-            cuiButton9.Image = (Image)resources.GetObject("cuiButton9.Image");
-            cuiButton9.ImageAutoCenter = true;
-            cuiButton9.ImageExpand = new Point(4, 4);
-            cuiButton9.ImageOffset = new Point(0, 0);
-            cuiButton9.Location = new Point(130, 14);
-            cuiButton9.Margin = new Padding(0);
-            cuiButton9.Name = "cuiButton9";
-            cuiButton9.NormalBackground = Color.FromArgb(30, 0, 137, 76);
-            cuiButton9.NormalForeColor = Color.FromArgb(0, 137, 76);
-            cuiButton9.NormalImageTint = Color.White;
-            cuiButton9.NormalOutline = Color.FromArgb(0, 137, 76);
-            cuiButton9.OutlineThickness = 1F;
-            cuiButton9.PressedBackground = Color.FromArgb(60, 0, 137, 76);
-            cuiButton9.PressedForeColor = Color.FromArgb(0, 137, 76);
-            cuiButton9.PressedImageTint = Color.FromArgb(0, 137, 76);
-            cuiButton9.PressedOutline = Color.FromArgb(0, 137, 76);
-            cuiButton9.Rounding = new Padding(8);
-            cuiButton9.Size = new Size(40, 40);
-            cuiButton9.TabIndex = 5;
-            cuiButton9.TextAlignment = StringAlignment.Center;
-            cuiButton9.TextOffset = new Point(0, 0);
+            EditButton.Anchor = AnchorStyles.None;
+            EditButton.BackColor = Color.White;
+            EditButton.CheckButton = false;
+            EditButton.Checked = false;
+            EditButton.CheckedBackground = Color.FromArgb(255, 106, 0);
+            EditButton.CheckedForeColor = Color.White;
+            EditButton.CheckedImageTint = Color.White;
+            EditButton.CheckedOutline = Color.FromArgb(255, 106, 0);
+            EditButton.Content = "";
+            EditButton.DialogResult = DialogResult.None;
+            EditButton.Font = new Font("Microsoft Sans Serif", 9.75F);
+            EditButton.ForeColor = Color.FromArgb(0, 137, 76);
+            EditButton.HoverBackground = Color.FromArgb(60, 0, 137, 76);
+            EditButton.HoveredImageTint = Color.FromArgb(0, 137, 76);
+            EditButton.HoverForeColor = Color.Black;
+            EditButton.HoverOutline = Color.FromArgb(0, 137, 76);
+            EditButton.Image = (Image)resources.GetObject("EditButton.Image");
+            EditButton.ImageAutoCenter = true;
+            EditButton.ImageExpand = new Point(4, 4);
+            EditButton.ImageOffset = new Point(0, 0);
+            EditButton.Location = new Point(78, 16);
+            EditButton.Margin = new Padding(0);
+            EditButton.Name = "EditButton";
+            EditButton.NormalBackground = Color.FromArgb(30, 0, 137, 76);
+            EditButton.NormalForeColor = Color.FromArgb(0, 137, 76);
+            EditButton.NormalImageTint = Color.White;
+            EditButton.NormalOutline = Color.FromArgb(0, 137, 76);
+            EditButton.OutlineThickness = 1F;
+            EditButton.PressedBackground = Color.FromArgb(60, 0, 137, 76);
+            EditButton.PressedForeColor = Color.FromArgb(0, 137, 76);
+            EditButton.PressedImageTint = Color.FromArgb(0, 137, 76);
+            EditButton.PressedOutline = Color.FromArgb(0, 137, 76);
+            EditButton.Rounding = new Padding(8);
+            EditButton.Size = new Size(40, 40);
+            EditButton.TabIndex = 5;
+            EditButton.TextAlignment = StringAlignment.Center;
+            EditButton.TextOffset = new Point(0, 0);
+            EditButton.Click += EditButton_Click;
             // 
             // tableLayoutPanel1
             // 
@@ -1052,7 +893,7 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.Size = new Size(520, 866);
+            tableLayoutPanel1.Size = new Size(520, 863);
             tableLayoutPanel1.TabIndex = 7;
             // 
             // casH
@@ -1115,23 +956,23 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Inter 28pt 28pt", 26F, FontStyle.Bold);
+            label3.Font = new Font("Inter SemiBold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.FromArgb(78, 45, 24);
-            label3.Location = new Point(13, 82);
+            label3.Location = new Point(29, 85);
             label3.Margin = new Padding(0);
             label3.Name = "label3";
-            label3.Size = new Size(185, 41);
+            label3.Size = new Size(174, 43);
             label3.TabIndex = 2;
             label3.Text = "₱ 3,100.00";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Inter 28pt 28pt", 14F);
+            label4.Font = new Font("Microsoft Sans Serif", 14F);
             label4.ForeColor = Color.FromArgb(78, 45, 24);
             label4.Location = new Point(11, 23);
             label4.Name = "label4";
-            label4.Size = new Size(63, 22);
+            label4.Size = new Size(78, 29);
             label4.TabIndex = 0;
             label4.Text = "CASH";
             // 
@@ -1195,22 +1036,22 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Inter 28pt 28pt", 26F, FontStyle.Bold);
+            label1.Font = new Font("Inter SemiBold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(78, 45, 24);
-            label1.Location = new Point(13, 82);
+            label1.Location = new Point(29, 90);
             label1.Name = "label1";
-            label1.Size = new Size(185, 41);
+            label1.Size = new Size(174, 43);
             label1.TabIndex = 2;
             label1.Text = "₱ 3,100.00";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Inter 28pt 28pt", 14F);
+            label2.Font = new Font("Microsoft Sans Serif", 14F);
             label2.ForeColor = Color.FromArgb(78, 45, 24);
             label2.Location = new Point(11, 23);
             label2.Name = "label2";
-            label2.Size = new Size(130, 22);
+            label2.Size = new Size(164, 29);
             label2.TabIndex = 0;
             label2.Text = "PETTY CASH";
             // 
@@ -1224,7 +1065,7 @@
             Controls.Add(cuiPanel8);
             Controls.Add(CashboxHeader);
             Name = "CashboxForm";
-            Size = new Size(1440, 1024);
+            Size = new Size(1460, 1044);
             cuiPanel8.ResumeLayout(false);
             cuiPanel8.PerformLayout();
             cashSales.ResumeLayout(false);
@@ -1244,10 +1085,8 @@
             tableLayoutPanel3.ResumeLayout(false);
             cuiPanel3.ResumeLayout(false);
             cuiPanel3.PerformLayout();
-            cuiPanel5.ResumeLayout(false);
-            cuiPanel5.PerformLayout();
-            cuiPanel6.ResumeLayout(false);
-            cuiPanel6.PerformLayout();
+            ExpenseRow.ResumeLayout(false);
+            ExpenseRow.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
             casH.ResumeLayout(false);
             casH.PerformLayout();
@@ -1261,7 +1100,7 @@
 
         private Label CashboxHeader;
         private CuoreUI.Controls.cuiPanel cuiPanel8;
-        private Label label18;
+        private Label DateToday;
         private Label label17;
 
         private CuoreUI.Controls.cuiPanel cashSales;
@@ -1308,20 +1147,12 @@
         private CuoreUI.Controls.cuiPanel cuiPanel2;
         private CuoreUI.Controls.cuiPanel cuiPanel3;
         private Label label6;
-        private CuoreUI.Controls.cuiPanel cuiPanel5;
-        private Label label8;
-        private Label label12;
-        private CuoreUI.Controls.cuiButton cuiButton6;
-        private CuoreUI.Controls.cuiButton cuiButton7;
-        private Label label13;
-        private Label label14;
+        private CuoreUI.Controls.cuiPanel ExpenseRow;
+        private Label Category;
+        private Label ExpenseName;
+        private CuoreUI.Controls.cuiButton DeleteButton;
+        private CuoreUI.Controls.cuiButton EditButton;
+        private Label ExpenseAmount;
         private TableLayoutPanel tableLayoutPanel3;
-        private CuoreUI.Controls.cuiPanel cuiPanel6;
-        private Label label35;
-        private Label label10;
-        private Label label21;
-        private Label label22;
-        private CuoreUI.Controls.cuiButton cuiButton8;
-        private CuoreUI.Controls.cuiButton cuiButton9;
     }
 }

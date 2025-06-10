@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            cuiTextBox1 = new CuoreUI.Controls.cuiTextBox();
-            cuiTextBox2 = new CuoreUI.Controls.cuiTextBox();
+            ExpenseNameText = new CuoreUI.Controls.cuiTextBox();
+            ExpenseAmountText = new CuoreUI.Controls.cuiTextBox();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            radioButton1 = new RadioButton();
-            radioButton2 = new RadioButton();
-            cuiButton1 = new CuoreUI.Controls.cuiButton();
+            CashRadio = new RadioButton();
+            NonCashRadio = new RadioButton();
+            AddExpenseButton = new CuoreUI.Controls.cuiButton();
             SuspendLayout();
             // 
             // label1
@@ -50,61 +50,61 @@
             label1.TabIndex = 0;
             label1.Text = "Add Expense";
             // 
-            // cuiTextBox1
+            // ExpenseNameText
             // 
-            cuiTextBox1.BackgroundColor = Color.White;
-            cuiTextBox1.BorderColor = Color.FromArgb(128, 128, 128, 128);
-            cuiTextBox1.Content = "";
-            cuiTextBox1.FocusBackgroundColor = Color.White;
-            cuiTextBox1.FocusBorderColor = Color.FromArgb(78, 45, 24);
-            cuiTextBox1.FocusImageTint = Color.White;
-            cuiTextBox1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiTextBox1.ForeColor = Color.FromArgb(78, 45, 24);
-            cuiTextBox1.Image = null;
-            cuiTextBox1.ImageExpand = new Point(0, 0);
-            cuiTextBox1.ImageOffset = new Point(0, 0);
-            cuiTextBox1.Location = new Point(52, 123);
-            cuiTextBox1.Margin = new Padding(5);
-            cuiTextBox1.Multiline = false;
-            cuiTextBox1.Name = "cuiTextBox1";
-            cuiTextBox1.NormalImageTint = Color.White;
-            cuiTextBox1.Padding = new Padding(23, 15, 23, 0);
-            cuiTextBox1.PasswordChar = false;
-            cuiTextBox1.PlaceholderColor = Color.White;
-            cuiTextBox1.PlaceholderText = "";
-            cuiTextBox1.Rounding = new Padding(12);
-            cuiTextBox1.Size = new Size(312, 53);
-            cuiTextBox1.TabIndex = 1;
-            cuiTextBox1.TextOffset = new Size(0, 0);
-            cuiTextBox1.UnderlinedStyle = true;
+            ExpenseNameText.BackgroundColor = Color.White;
+            ExpenseNameText.BorderColor = Color.FromArgb(128, 128, 128, 128);
+            ExpenseNameText.Content = "";
+            ExpenseNameText.FocusBackgroundColor = Color.White;
+            ExpenseNameText.FocusBorderColor = Color.FromArgb(78, 45, 24);
+            ExpenseNameText.FocusImageTint = Color.White;
+            ExpenseNameText.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ExpenseNameText.ForeColor = Color.FromArgb(78, 45, 24);
+            ExpenseNameText.Image = null;
+            ExpenseNameText.ImageExpand = new Point(0, 0);
+            ExpenseNameText.ImageOffset = new Point(0, 0);
+            ExpenseNameText.Location = new Point(52, 123);
+            ExpenseNameText.Margin = new Padding(5);
+            ExpenseNameText.Multiline = false;
+            ExpenseNameText.Name = "ExpenseNameText";
+            ExpenseNameText.NormalImageTint = Color.White;
+            ExpenseNameText.Padding = new Padding(23, 15, 23, 0);
+            ExpenseNameText.PasswordChar = false;
+            ExpenseNameText.PlaceholderColor = Color.White;
+            ExpenseNameText.PlaceholderText = "";
+            ExpenseNameText.Rounding = new Padding(12);
+            ExpenseNameText.Size = new Size(312, 53);
+            ExpenseNameText.TabIndex = 1;
+            ExpenseNameText.TextOffset = new Size(0, 0);
+            ExpenseNameText.UnderlinedStyle = true;
             // 
-            // cuiTextBox2
+            // ExpenseAmountText
             // 
-            cuiTextBox2.BackgroundColor = Color.White;
-            cuiTextBox2.BorderColor = Color.FromArgb(128, 128, 128, 128);
-            cuiTextBox2.Content = "";
-            cuiTextBox2.FocusBackgroundColor = Color.White;
-            cuiTextBox2.FocusBorderColor = Color.FromArgb(78, 45, 24);
-            cuiTextBox2.FocusImageTint = Color.White;
-            cuiTextBox2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiTextBox2.ForeColor = Color.FromArgb(78, 45, 24);
-            cuiTextBox2.Image = null;
-            cuiTextBox2.ImageExpand = new Point(0, 0);
-            cuiTextBox2.ImageOffset = new Point(0, 0);
-            cuiTextBox2.Location = new Point(52, 225);
-            cuiTextBox2.Margin = new Padding(5);
-            cuiTextBox2.Multiline = false;
-            cuiTextBox2.Name = "cuiTextBox2";
-            cuiTextBox2.NormalImageTint = Color.White;
-            cuiTextBox2.Padding = new Padding(23, 15, 23, 0);
-            cuiTextBox2.PasswordChar = false;
-            cuiTextBox2.PlaceholderColor = Color.White;
-            cuiTextBox2.PlaceholderText = "";
-            cuiTextBox2.Rounding = new Padding(12);
-            cuiTextBox2.Size = new Size(312, 53);
-            cuiTextBox2.TabIndex = 2;
-            cuiTextBox2.TextOffset = new Size(0, 0);
-            cuiTextBox2.UnderlinedStyle = true;
+            ExpenseAmountText.BackgroundColor = Color.White;
+            ExpenseAmountText.BorderColor = Color.FromArgb(128, 128, 128, 128);
+            ExpenseAmountText.Content = "";
+            ExpenseAmountText.FocusBackgroundColor = Color.White;
+            ExpenseAmountText.FocusBorderColor = Color.FromArgb(78, 45, 24);
+            ExpenseAmountText.FocusImageTint = Color.White;
+            ExpenseAmountText.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ExpenseAmountText.ForeColor = Color.FromArgb(78, 45, 24);
+            ExpenseAmountText.Image = null;
+            ExpenseAmountText.ImageExpand = new Point(0, 0);
+            ExpenseAmountText.ImageOffset = new Point(0, 0);
+            ExpenseAmountText.Location = new Point(52, 225);
+            ExpenseAmountText.Margin = new Padding(5);
+            ExpenseAmountText.Multiline = false;
+            ExpenseAmountText.Name = "ExpenseAmountText";
+            ExpenseAmountText.NormalImageTint = Color.White;
+            ExpenseAmountText.Padding = new Padding(23, 15, 23, 0);
+            ExpenseAmountText.PasswordChar = false;
+            ExpenseAmountText.PlaceholderColor = Color.White;
+            ExpenseAmountText.PlaceholderText = "";
+            ExpenseAmountText.Rounding = new Padding(12);
+            ExpenseAmountText.Size = new Size(312, 53);
+            ExpenseAmountText.TabIndex = 2;
+            ExpenseAmountText.TextOffset = new Size(0, 0);
+            ExpenseAmountText.UnderlinedStyle = true;
             // 
             // label2
             // 
@@ -139,74 +139,75 @@
             label4.TabIndex = 5;
             label4.Text = "Expense Tag";
             // 
-            // radioButton1
+            // CashRadio
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.FlatAppearance.CheckedBackColor = Color.FromArgb(78, 45, 24);
-            radioButton1.FlatStyle = FlatStyle.Flat;
-            radioButton1.Font = new Font("Microsoft Sans Serif", 12F);
-            radioButton1.ForeColor = Color.FromArgb(78, 45, 24);
-            radioButton1.Location = new Point(37, 339);
-            radioButton1.Margin = new Padding(3, 4, 3, 4);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(79, 29);
-            radioButton1.TabIndex = 6;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Cash";
-            radioButton1.UseVisualStyleBackColor = true;
+            CashRadio.AutoSize = true;
+            CashRadio.FlatAppearance.CheckedBackColor = Color.FromArgb(78, 45, 24);
+            CashRadio.FlatStyle = FlatStyle.Flat;
+            CashRadio.Font = new Font("Microsoft Sans Serif", 12F);
+            CashRadio.ForeColor = Color.FromArgb(78, 45, 24);
+            CashRadio.Location = new Point(37, 339);
+            CashRadio.Margin = new Padding(3, 4, 3, 4);
+            CashRadio.Name = "CashRadio";
+            CashRadio.Size = new Size(79, 29);
+            CashRadio.TabIndex = 6;
+            CashRadio.TabStop = true;
+            CashRadio.Text = "Cash";
+            CashRadio.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // NonCashRadio
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.FlatStyle = FlatStyle.Flat;
-            radioButton2.Font = new Font("Microsoft Sans Serif", 12F);
-            radioButton2.ForeColor = Color.FromArgb(78, 45, 24);
-            radioButton2.Location = new Point(37, 376);
-            radioButton2.Margin = new Padding(3, 4, 3, 4);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(122, 29);
-            radioButton2.TabIndex = 7;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "Non-Cash";
-            radioButton2.UseVisualStyleBackColor = true;
+            NonCashRadio.AutoSize = true;
+            NonCashRadio.FlatStyle = FlatStyle.Flat;
+            NonCashRadio.Font = new Font("Microsoft Sans Serif", 12F);
+            NonCashRadio.ForeColor = Color.FromArgb(78, 45, 24);
+            NonCashRadio.Location = new Point(37, 376);
+            NonCashRadio.Margin = new Padding(3, 4, 3, 4);
+            NonCashRadio.Name = "NonCashRadio";
+            NonCashRadio.Size = new Size(122, 29);
+            NonCashRadio.TabIndex = 7;
+            NonCashRadio.TabStop = true;
+            NonCashRadio.Text = "Non-Cash";
+            NonCashRadio.UseVisualStyleBackColor = true;
             // 
-            // cuiButton1
+            // AddExpenseButton
             // 
-            cuiButton1.CheckButton = false;
-            cuiButton1.Checked = false;
-            cuiButton1.CheckedBackground = Color.FromArgb(255, 106, 0);
-            cuiButton1.CheckedForeColor = Color.White;
-            cuiButton1.CheckedImageTint = Color.White;
-            cuiButton1.CheckedOutline = Color.FromArgb(255, 106, 0);
-            cuiButton1.Content = "Add";
-            cuiButton1.DialogResult = DialogResult.None;
-            cuiButton1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
-            cuiButton1.ForeColor = Color.White;
-            cuiButton1.HoverBackground = Color.FromArgb(50, 78, 45, 24);
-            cuiButton1.HoveredImageTint = Color.White;
-            cuiButton1.HoverForeColor = Color.FromArgb(78, 45, 24);
-            cuiButton1.HoverOutline = Color.FromArgb(32, 128, 128, 128);
-            cuiButton1.Image = null;
-            cuiButton1.ImageAutoCenter = true;
-            cuiButton1.ImageExpand = new Point(0, 0);
-            cuiButton1.ImageOffset = new Point(0, 0);
-            cuiButton1.Location = new Point(284, 376);
-            cuiButton1.Margin = new Padding(3, 4, 3, 4);
-            cuiButton1.Name = "cuiButton1";
-            cuiButton1.NormalBackground = Color.FromArgb(78, 45, 24);
-            cuiButton1.NormalForeColor = Color.White;
-            cuiButton1.NormalImageTint = Color.White;
-            cuiButton1.NormalOutline = Color.FromArgb(64, 128, 128, 128);
-            cuiButton1.OutlineThickness = 1F;
-            cuiButton1.PressedBackground = Color.WhiteSmoke;
-            cuiButton1.PressedForeColor = Color.FromArgb(32, 32, 32);
-            cuiButton1.PressedImageTint = Color.White;
-            cuiButton1.PressedOutline = Color.FromArgb(64, 128, 128, 128);
-            cuiButton1.Rounding = new Padding(8);
-            cuiButton1.Size = new Size(97, 60);
-            cuiButton1.TabIndex = 8;
-            cuiButton1.TextAlignment = StringAlignment.Center;
-            cuiButton1.TextOffset = new Point(0, 0);
+            AddExpenseButton.CheckButton = false;
+            AddExpenseButton.Checked = false;
+            AddExpenseButton.CheckedBackground = Color.FromArgb(255, 106, 0);
+            AddExpenseButton.CheckedForeColor = Color.White;
+            AddExpenseButton.CheckedImageTint = Color.White;
+            AddExpenseButton.CheckedOutline = Color.FromArgb(255, 106, 0);
+            AddExpenseButton.Content = "Add";
+            AddExpenseButton.DialogResult = DialogResult.None;
+            AddExpenseButton.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
+            AddExpenseButton.ForeColor = Color.White;
+            AddExpenseButton.HoverBackground = Color.FromArgb(50, 78, 45, 24);
+            AddExpenseButton.HoveredImageTint = Color.White;
+            AddExpenseButton.HoverForeColor = Color.FromArgb(78, 45, 24);
+            AddExpenseButton.HoverOutline = Color.FromArgb(32, 128, 128, 128);
+            AddExpenseButton.Image = null;
+            AddExpenseButton.ImageAutoCenter = true;
+            AddExpenseButton.ImageExpand = new Point(0, 0);
+            AddExpenseButton.ImageOffset = new Point(0, 0);
+            AddExpenseButton.Location = new Point(284, 376);
+            AddExpenseButton.Margin = new Padding(3, 4, 3, 4);
+            AddExpenseButton.Name = "AddExpenseButton";
+            AddExpenseButton.NormalBackground = Color.FromArgb(78, 45, 24);
+            AddExpenseButton.NormalForeColor = Color.White;
+            AddExpenseButton.NormalImageTint = Color.White;
+            AddExpenseButton.NormalOutline = Color.FromArgb(64, 128, 128, 128);
+            AddExpenseButton.OutlineThickness = 1F;
+            AddExpenseButton.PressedBackground = Color.WhiteSmoke;
+            AddExpenseButton.PressedForeColor = Color.FromArgb(32, 32, 32);
+            AddExpenseButton.PressedImageTint = Color.White;
+            AddExpenseButton.PressedOutline = Color.FromArgb(64, 128, 128, 128);
+            AddExpenseButton.Rounding = new Padding(8);
+            AddExpenseButton.Size = new Size(97, 60);
+            AddExpenseButton.TabIndex = 8;
+            AddExpenseButton.TextAlignment = StringAlignment.Center;
+            AddExpenseButton.TextOffset = new Point(0, 0);
+            AddExpenseButton.Click += AddExpenseButton_Click;
             // 
             // AddExpenseForm
             // 
@@ -214,14 +215,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(242, 239, 234);
             ClientSize = new Size(422, 461);
-            Controls.Add(cuiButton1);
-            Controls.Add(radioButton2);
-            Controls.Add(radioButton1);
+            Controls.Add(AddExpenseButton);
+            Controls.Add(NonCashRadio);
+            Controls.Add(CashRadio);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(cuiTextBox2);
-            Controls.Add(cuiTextBox1);
+            Controls.Add(ExpenseAmountText);
+            Controls.Add(ExpenseNameText);
             Controls.Add(label1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "AddExpenseForm";
@@ -233,13 +234,13 @@
         #endregion
 
         private Label label1;
-        private CuoreUI.Controls.cuiTextBox cuiTextBox1;
-        private CuoreUI.Controls.cuiTextBox cuiTextBox2;
+        private CuoreUI.Controls.cuiTextBox ExpenseNameText;
+        private CuoreUI.Controls.cuiTextBox ExpenseAmountText;
         private Label label2;
         private Label label3;
         private Label label4;
-        private RadioButton radioButton1;
-        private RadioButton radioButton2;
-        private CuoreUI.Controls.cuiButton cuiButton1;
+        private RadioButton CashRadio;
+        private RadioButton NonCashRadio;
+        private CuoreUI.Controls.cuiButton AddExpenseButton;
     }
 }

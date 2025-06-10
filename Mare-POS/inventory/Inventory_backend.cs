@@ -93,7 +93,7 @@ namespace Mare_POS
                 }
             }
 
-            // Optional: Create the ingredient_usage_log table as well since it's referenced in your code
+
             public void CreateIngredientUsageLogTable()
             {
                 using (MySqlConnection connection = new MySqlConnection(databaseConnectionString))

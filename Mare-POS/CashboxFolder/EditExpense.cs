@@ -8,39 +8,66 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Mare_POS
+namespace Mare_POS.CashboxFolder
 {
-    public partial class AddExpenseForm : Form
+    public partial class EditExpense : Form
     {
         private Cashbox_backend cashboxBackend;
+        private int expenseId;
 
-        public AddExpenseForm()
+        public EditExpense()
         {
             InitializeComponent();
             cashboxBackend = new Cashbox_backend();
             InitializeFormSettings();
         }
 
+        private void EditExpense_Load(object sender, EventArgs e)
+        {
+
+        }
         private void InitializeFormSettings()
         {
             // Set default radio button selection
             CashRadio.Checked = true;
 
-            // Add event handlers
-            this.Load += AddExpenseForm_Load;
+            // Set form properties
+            this.Text = "Edit Expense";
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.StartPosition = FormStartPosition.CenterParent;
         }
-
-        private void AddExpenseForm_Load(object sender, EventArgs e)
+        public void LoadExpenseData(int id, string expenseName, decimal expenseAmount, string category)
         {
-            // Test database connection on form load
-            if (!cashboxBackend.TestConnection())
+            expenseId = id;
+            ExpenseNameText.Content = expenseName;
+            ExpenseAmountText.Content = expenseAmount.ToString("F2");
+
+            // Set the appropriate radio button based on category
+            if (category.Equals("Cash", StringComparison.OrdinalIgnoreCase))
             {
-                MessageBox.Show("Unable to connect to database. Please check your connection settings.",
-                              "Database Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CashRadio.Checked = true;
+                NonCashRadio.Checked = false;
+            }
+            else
+            {
+                NonCashRadio.Checked = true;
+                CashRadio.Checked = false;
             }
         }
 
-        private void AddExpenseButton_Click(object sender, EventArgs e)
+        private void ExpenseNameText_ContentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NonCashRadio_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SaveButton_Click(object sender, EventArgs e)
         {
             if (ValidateInput())
             {
@@ -50,16 +77,16 @@ namespace Mare_POS
 
                 if (decimal.TryParse(ExpenseAmountText.Content.Trim(), out expenseAmount))
                 {
-                    if (cashboxBackend.AddExpense(expenseName, expenseAmount, category))
+                    if (cashboxBackend.UpdateExpense(expenseId, expenseName, expenseAmount, category))
                     {
-                        MessageBox.Show("Expense added successfully!", "Success",
+                        MessageBox.Show("Expense updated successfully!", "Success",
                                       MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        ClearForm();
-                        this.Close(); 
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
                     }
                     else
                     {
-                        MessageBox.Show("Failed to add expense. Please try again.", "Error",
+                        MessageBox.Show("Failed to update expense. Please try again.", "Error",
                                       MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
@@ -111,37 +138,15 @@ namespace Mare_POS
                 return false;
             }
 
-            // Check if neither radio button is selected (shouldn't happen with default selection)
-            if (!CashRadio.Checked && !NonCashRadio.Checked)
-            {
-                MessageBox.Show("Please select a payment type.", "Validation Error",
-                              MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-
             return true;
-        }
-
-        private void ClearForm()
-        {
-            ExpenseNameText.Content = "";
-            ExpenseAmountText.Content = "";
-            CashRadio.Checked = true;
-            NonCashRadio.Checked = false;
-            ExpenseNameText.Focus();
-        }
-
-        private void ClearButton_Click(object sender, EventArgs e)
-        {
-            ClearForm();
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
 
-        // Event handler for Enter key press to add expense
         private void ExpenseAmountText_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Allow only digits, decimal point, and control keys
@@ -155,14 +160,7 @@ namespace Mare_POS
             {
                 e.Handled = true;
             }
-
-            // Handle Enter key to add expense
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-                AddExpenseButton_Click(sender, e);
-            }
         }
-
         private void ExpenseNameText_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Handle Enter key to move to next field
@@ -170,21 +168,6 @@ namespace Mare_POS
             {
                 ExpenseAmountText.Focus();
             }
-        }
-
-        // Method to get current expense totals (useful for reporting)
-        public void ShowExpenseTotals()
-        {
-            decimal cashTotal = cashboxBackend.GetTotalExpensesByCategory("Cash");
-            decimal nonCashTotal = cashboxBackend.GetTotalExpensesByCategory("Non-Cash");
-            decimal grandTotal = cashTotal + nonCashTotal;
-
-            string message = $"Expense Totals:\n\n" +
-                           $"Cash Expenses: ₱{cashTotal:N2}\n" +
-                           $"Non-Cash Expenses: ₱{nonCashTotal:N2}\n" +
-                           $"Total Expenses: ₱{grandTotal:N2}";
-
-            MessageBox.Show(message, "Expense Summary", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
