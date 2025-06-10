@@ -35,7 +35,7 @@ namespace Mare_POS
             InitializeComponent();
             InitializeContentPanel();
             // Set default user type (you can change this based on login)
-            CurrentUserType = UserType.Admin; // Default to User access
+            CurrentUserType = UserType.Admin;
         }
 
         private void InitializeContentPanel()
@@ -52,6 +52,7 @@ namespace Mare_POS
         // Method to update sidebar button visibility based on user type
         private void UpdateSidebarVisibility()
         {
+<<<<<<<< HEAD:Mare-POS/NavbarFolder/NavBar.cs
             if (!SessionManager.IsLoggedIn)
             {
                 this.Close();
@@ -60,6 +61,9 @@ namespace Mare_POS
 
             // Show/hide buttons based on user role
             if (SessionManager.HasRole("Admin"))
+========
+            if (currentUserType == UserType.Admin)
+>>>>>>>> origin/dev-aya:Mare-POS/NavBar/NavbarForm.cs
             {
                 ShowAllButtons();
             }
@@ -150,7 +154,16 @@ namespace Mare_POS
 
         private void btn_staff_Click(object sender, EventArgs e)
         {
-            LoadPage(new StaffPage()); // change the "StaffPage" to the name of you user control
+            
+            if (CurrentUserType == UserType.Admin)
+            {
+                LoadPage(new StaffPageAdmin()); 
+            }
+            else
+            {
+                LoadPage(new StaffPage()); 
+            }
+            
             HighlightButton((Button)sender);
         }
 
@@ -174,12 +187,13 @@ namespace Mare_POS
 
         private void btn_dashboard_Click(object sender, EventArgs e)
         {
-            LoadPage(new DashboardPage()); // change the "DashboardPage" to the name of you user control
+            LoadPage(new DashboardAdmin()); 
             HighlightButton((Button)sender);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+<<<<<<<< HEAD:Mare-POS/NavbarFolder/NavBar.cs
             if (!SessionManager.RequireAuthentication())
             {
                 this.Close();
@@ -187,6 +201,18 @@ namespace Mare_POS
             }
             LoadPage(new Inventory());
             HighlightButton(btn_inventory);
+========
+            if (CurrentUserType == UserType.Admin)
+            {
+                LoadPage(new DashboardAdmin());
+                HighlightButton(btn_dashboard);
+            }
+            else
+            {
+                LoadPage(new TicketPage());
+                HighlightButton(btn_ticket);
+            }
+>>>>>>>> origin/dev-aya:Mare-POS/NavBar/NavbarForm.cs
         }
 
         private void bottomMarker_Paint(object sender, PaintEventArgs e) { }
@@ -216,24 +242,7 @@ namespace Mare_POS
         }
     }
 
-    public class StaffPage : UserControl
-    {
-        public StaffPage()
-        {
-            InitializeComponent();
-        }
-
-        private void InitializeComponent()
-        {
-            this.BackColor = Color.FromArgb(242, 239, 234);
-            Label label = new Label();
-            label.Text = "This is the Staff Page";
-            label.Font = new Font("Segoe UI", 16);
-            label.Dock = DockStyle.Fill;
-            label.TextAlign = ContentAlignment.MiddleCenter;
-            Controls.Add(label);
-        }
-    }
+    
 
     public class ReceiptPage : UserControl
     {
