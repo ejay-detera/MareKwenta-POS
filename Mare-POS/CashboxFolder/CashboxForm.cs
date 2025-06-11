@@ -644,5 +644,20 @@ namespace Mare_POS.CashboxFolder
         {
 
         }
+
+        private void ExpenseRow_Paint(object sender, PaintEventArgs e)
+        {
+            // Optional: Custom painting logic for the ExpenseRow can be added here
+        }
+
+        private void CashboxHeader_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ExpenseRow_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

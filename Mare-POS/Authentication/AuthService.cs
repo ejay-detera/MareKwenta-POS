@@ -1,9 +1,10 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic; // Added missing using statement
-using MySql.Data.MySqlClient;
+using System.Configuration;
+using System.Data;
 using System.Security.Cryptography;
 using System.Text;
-using System.Configuration;
 
 namespace Mare_POS.Authentication
 {
@@ -22,6 +23,34 @@ namespace Mare_POS.Authentication
                 connectionString = "server=localhost;uid=root;pwd=ejaydetera12;database=marepos-db;";
             }
         }
+
+        public DataTable GetAllEmployee()
+        {
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string query = "SELECT EmployeeID, LastName, FirstName, MiddleName, Role, Password, Username, TimeIn, TimeOut FROM employees";
+
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+                        return dataTable;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error retrieving expenses: {ex.Message}", "Database Error",
+                              MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return new DataTable();
+            }
+        }
+
 
         // Overload constructor for custom connection string
         public AuthService(string customConnectionString)
@@ -225,7 +254,7 @@ namespace Mare_POS.Authentication
             }
         }
 
-        // Create new employee (for admin functions)
+
         public bool CreateEmployee(string lastName, string firstName, string middleName, string role, string username, string password, int? ownerID = null)
         {
             try
@@ -260,7 +289,30 @@ namespace Mare_POS.Authentication
             }
         }
 
-        // Removed duplicate GetConnection method since we're using the connectionString field
+        public bool ResetPassword(string username, string newPassword)
+        {
+            try
+            {
+                string hashedPassword = HashPassword(newPassword);
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = @"UPDATE employees SET Password = @Password WHERE Username = @Username";
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Username", username);
+                        command.Parameters.AddWithValue("@Password", hashedPassword);
+                        int rowsAffected = command.ExecuteNonQuery();
+                        return rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error resetting password: {ex.Message}");
+            }
+        }
+
     }
 
     public class EmployeeInfo

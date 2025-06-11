@@ -150,8 +150,8 @@ namespace Mare_POS
 
         private void btn_staff_Click(object sender, EventArgs e)
         {
-            
-            if (CurrentUserType == UserType.Admin)
+
+            if (SessionManager.HasRole("Admin"))
             {
                 LoadPage(new StaffPageAdmin()); 
             }
@@ -159,13 +159,13 @@ namespace Mare_POS
             {
                 LoadPage(new StaffPage()); 
             }
-            
+
             HighlightButton((Button)sender);
         }
 
         private void btn_receipt_Click(object sender, EventArgs e)
         {
-            LoadPage(new SaleshistoryForm()); // change the "ReceiptPage" to the name of you user control
+            LoadPage(new SaleshistoryForm()); 
             HighlightButton((Button)sender);
         }
 
@@ -194,8 +194,17 @@ namespace Mare_POS
                 this.Close();
                 return;
             }
-            LoadPage(new Inventory());
-            HighlightButton(btn_inventory);
+            
+            if (SessionManager.HasRole("Admin"))
+            {
+                LoadPage(new Inventory()); 
+                HighlightButton(btn_inventory);
+            }
+            else
+            {
+                LoadPage(new StaffPage());
+                HighlightButton(btn_staff);
+            }
         }
 
         private void bottomMarker_Paint(object sender, PaintEventArgs e) { }

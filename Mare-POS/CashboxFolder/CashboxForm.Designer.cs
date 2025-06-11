@@ -2,10 +2,10 @@
 {
     partial class CashboxForm
     {
-            /// <summary> 
-            /// Required designer variable.
-            /// </summary>
-            private System.ComponentModel.IContainer components = null;
+        /// <summary> 
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
 
         /// <summary> 
         /// Clean up any resources being used.
@@ -110,6 +110,7 @@
             CashboxHeader.Size = new Size(293, 81);
             CashboxHeader.TabIndex = 2;
             CashboxHeader.Text = "Cash Box";
+            CashboxHeader.Click += CashboxHeader_Click;
             // 
             // cuiPanel8
             // 
@@ -117,7 +118,7 @@
             cuiPanel8.BackColor = Color.FromArgb(242, 239, 234);
             cuiPanel8.Controls.Add(DateToday);
             cuiPanel8.Controls.Add(label17);
-            cuiPanel8.Location = new Point(1126, 21);
+            cuiPanel8.Location = new Point(1106, 45);
             cuiPanel8.Name = "cuiPanel8";
             cuiPanel8.OutlineThickness = 1F;
             cuiPanel8.PanelColor = Color.FromArgb(242, 239, 234);
@@ -642,7 +643,7 @@
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 9.091074F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 9.090165F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 9.090165F));
-            tableLayoutPanel3.Size = new Size(780, 791);
+            tableLayoutPanel3.Size = new Size(780, 760);
             tableLayoutPanel3.TabIndex = 0;
             // 
             // cuiPanel3
@@ -651,7 +652,7 @@
             cuiPanel3.Controls.Add(label5);
             cuiPanel3.Controls.Add(addExpenseButton);
             cuiPanel3.Controls.Add(label6);
-            cuiPanel3.Location = new Point(3, 2);
+            cuiPanel3.Location = new Point(3, 1);
             cuiPanel3.Margin = new Padding(0);
             cuiPanel3.Name = "cuiPanel3";
             cuiPanel3.OutlineThickness = 0.8F;
@@ -739,7 +740,7 @@
             ExpenseRow.Controls.Add(ExpenseName);
             ExpenseRow.Controls.Add(DeleteButton);
             ExpenseRow.Controls.Add(EditButton);
-            ExpenseRow.Location = new Point(3, 73);
+            ExpenseRow.Location = new Point(3, 70);
             ExpenseRow.Margin = new Padding(0);
             ExpenseRow.Name = "ExpenseRow";
             ExpenseRow.OutlineThickness = 0.8F;
@@ -748,6 +749,7 @@
             ExpenseRow.Rounding = new Padding(0);
             ExpenseRow.Size = new Size(774, 68);
             ExpenseRow.TabIndex = 7;
+            ExpenseRow.Paint += ExpenseRow_Paint_1;
             // 
             // ExpenseAmount
             // 
@@ -1061,8 +1063,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = Color.FromArgb(242, 239, 234);
-            Controls.Add(cuiPanel1);
             Controls.Add(cuiPanel8);
+            Controls.Add(cuiPanel1);
             Controls.Add(CashboxHeader);
             Name = "CashboxForm";
             Size = new Size(1460, 1044);

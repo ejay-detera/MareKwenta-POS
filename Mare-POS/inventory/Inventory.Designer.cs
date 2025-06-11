@@ -320,7 +320,7 @@
             CreateIngredient.DialogResult = DialogResult.None;
             CreateIngredient.Font = new Font("Arial", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             CreateIngredient.ForeColor = Color.FromArgb(64, 64, 64);
-            CreateIngredient.HoverBackground = Color.Transparent;
+            CreateIngredient.HoverBackground = Color.LightGray;
             CreateIngredient.HoveredImageTint = Color.Transparent;
             CreateIngredient.HoverForeColor = Color.Black;
             CreateIngredient.HoverOutline = Color.Transparent;

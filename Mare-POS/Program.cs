@@ -12,9 +12,9 @@ namespace Mare_POS
         static void Main()
         {
             try
-            {
-                new DatabaseSeeder().SeedDatabase();
+            { 
                 ApplicationConfiguration.Initialize();
+                new DatabaseSeeder().SeedDatabase();
                 Application.Run(new Log_In());
             }
             catch (Exception ex)
@@ -22,9 +22,6 @@ namespace Mare_POS
                 DialogResult dialogResult = MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
 
         }
     }

@@ -90,10 +90,6 @@ namespace Mare_POS.Authentication
 
         private void HandleSuccessfulLogin()
         {
-            MessageBox.Show($"Welcome, {SessionManager.CurrentUser.FullName}!\nRole: {SessionManager.CurrentUser.Role}",
-                "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            // Hide login form and show main application
             this.Hide();
             NavbarForm mainForm = new NavbarForm();
             mainForm.FormClosed += (s, e) => this.Close();
@@ -133,6 +129,11 @@ namespace Mare_POS.Authentication
         }
 
         private void PasswordText_ContentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cuiPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

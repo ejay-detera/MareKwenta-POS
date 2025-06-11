@@ -22,6 +22,13 @@ public class DatabaseSeeder
         {
             connection.Open();
 
+            // Check if database has already been seeded
+            if (IsDatabaseSeeded(connection))
+            {
+                Console.WriteLine("Database has already been seeded. Skipping seeding process.");
+                return;
+            }
+
             // Clear existing data (optional - uncomment if you want to reset)
             // ClearTables(connection);
 
@@ -32,6 +39,18 @@ public class DatabaseSeeder
             Console.WriteLine("Database seeding completed successfully!");
         }
     }
+
+    private bool IsDatabaseSeeded(MySqlConnection connection)
+    {
+        // Check if any employees exist (you can check any table)
+        string checkQuery = "SELECT COUNT(*) FROM employees";
+        using (MySqlCommand cmd = new MySqlCommand(checkQuery, connection))
+        {
+            int count = Convert.ToInt32(cmd.ExecuteScalar());
+            return count > 0;
+        }
+    }
+
     private string HashPassword(string password)
     {
         using (SHA256 sha256Hash = SHA256.Create())
@@ -43,23 +62,6 @@ public class DatabaseSeeder
                 builder.Append(bytes[i].ToString("x2"));
             }
             return builder.ToString();
-        }
-    }
-
-    private void ClearTables(MySqlConnection connection)
-    {
-        string[] clearQueries = {
-            "DELETE FROM expense",
-            "DELETE FROM inventory",
-            "DELETE FROM employee"
-        };
-
-        foreach (string query in clearQueries)
-        {
-            using (MySqlCommand cmd = new MySqlCommand(query, connection))
-            {
-                cmd.ExecuteNonQuery();
-            }
         }
     }
 

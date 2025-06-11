@@ -95,6 +95,7 @@
             cuiPanel1.Rounding = new Padding(24);
             cuiPanel1.Size = new Size(495, 337);
             cuiPanel1.TabIndex = 3;
+            cuiPanel1.Paint += cuiPanel1_Paint;
             // 
             // LoginButton
             // 

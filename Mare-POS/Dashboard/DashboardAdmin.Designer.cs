@@ -117,6 +117,7 @@ namespace Mare_POS
             chartContainer.Name = "chartContainer";
             chartContainer.Size = new Size(1419, 802);
             chartContainer.TabIndex = 3;
+            chartContainer.Paint += chartContainer_Paint;
             // 
             // panelRoundedContainer
             // 

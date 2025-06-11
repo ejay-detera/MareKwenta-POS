@@ -39,19 +39,18 @@
             lblPrompt.Anchor = AnchorStyles.Top;
             lblPrompt.AutoSize = true;
             lblPrompt.Font = new Font("Inter SemiBold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblPrompt.Location = new Point(13, 32);
+            lblPrompt.Location = new Point(15, 43);
             lblPrompt.Name = "lblPrompt";
-            lblPrompt.Size = new Size(99, 17);
+            lblPrompt.Size = new Size(124, 22);
             lblPrompt.TabIndex = 0;
             lblPrompt.Text = "Enter Password";
             lblPrompt.TextAlign = ContentAlignment.TopCenter;
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(13, 60);
-            txtPassword.Margin = new Padding(3, 2, 3, 2);
+            txtPassword.Location = new Point(15, 80);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(322, 23);
+            txtPassword.Size = new Size(367, 27);
             txtPassword.TabIndex = 1;
             // 
             // buttonOk
@@ -65,17 +64,16 @@
             buttonOk.Content = "OK";
             buttonOk.DialogResult = DialogResult.None;
             buttonOk.Font = new Font("Microsoft Sans Serif", 9.75F);
-            buttonOk.ForeColor = Color.Black;
+            buttonOk.ForeColor = Color.White;
             buttonOk.HoverBackground = Color.White;
             buttonOk.HoveredImageTint = Color.White;
-            buttonOk.HoverForeColor = Color.FromArgb(78, 45, 24); ;
+            buttonOk.HoverForeColor = Color.FromArgb(78, 45, 24);
             buttonOk.HoverOutline = Color.FromArgb(32, 128, 128, 128);
             buttonOk.Image = null;
             buttonOk.ImageAutoCenter = true;
             buttonOk.ImageExpand = new Point(0, 0);
             buttonOk.ImageOffset = new Point(0, 0);
-            buttonOk.Location = new Point(123, 98);
-            buttonOk.Margin = new Padding(3, 2, 3, 2);
+            buttonOk.Location = new Point(141, 131);
             buttonOk.Name = "buttonOk";
             buttonOk.NormalBackground = Color.FromArgb(78, 45, 24);
             buttonOk.NormalForeColor = Color.White;
@@ -87,7 +85,7 @@
             buttonOk.PressedImageTint = Color.White;
             buttonOk.PressedOutline = Color.FromArgb(64, 128, 128, 128);
             buttonOk.Rounding = new Padding(8);
-            buttonOk.Size = new Size(103, 23);
+            buttonOk.Size = new Size(118, 31);
             buttonOk.TabIndex = 2;
             buttonOk.TextAlignment = StringAlignment.Center;
             buttonOk.TextOffset = new Point(0, 0);
@@ -103,7 +101,7 @@
             buttonCancel.Content = "Cancel";
             buttonCancel.DialogResult = DialogResult.None;
             buttonCancel.Font = new Font("Microsoft Sans Serif", 9.75F);
-            buttonCancel.ForeColor = Color.Black;
+            buttonCancel.ForeColor = Color.White;
             buttonCancel.HoverBackground = Color.White;
             buttonCancel.HoveredImageTint = Color.White;
             buttonCancel.HoverForeColor = Color.FromArgb(78, 45, 24);
@@ -112,10 +110,9 @@
             buttonCancel.ImageAutoCenter = true;
             buttonCancel.ImageExpand = new Point(0, 0);
             buttonCancel.ImageOffset = new Point(0, 0);
-            buttonCancel.Location = new Point(232, 98);
-            buttonCancel.Margin = new Padding(3, 2, 3, 2);
+            buttonCancel.Location = new Point(265, 131);
             buttonCancel.Name = "buttonCancel";
-            buttonCancel.NormalBackground = Color.FromArgb(78, 45, 24); 
+            buttonCancel.NormalBackground = Color.FromArgb(78, 45, 24);
             buttonCancel.NormalForeColor = Color.White;
             buttonCancel.NormalImageTint = Color.White;
             buttonCancel.NormalOutline = Color.FromArgb(64, 128, 128, 128);
@@ -125,26 +122,25 @@
             buttonCancel.PressedImageTint = Color.White;
             buttonCancel.PressedOutline = Color.FromArgb(64, 128, 128, 128);
             buttonCancel.Rounding = new Padding(8);
-            buttonCancel.Size = new Size(103, 25);
+            buttonCancel.Size = new Size(118, 33);
             buttonCancel.TabIndex = 3;
             buttonCancel.TextAlignment = StringAlignment.Center;
             buttonCancel.TextOffset = new Point(0, 0);
             // 
             // PasswordPrompt
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(242, 239, 234);
-            ClientSize = new Size(357, 151);
+            ClientSize = new Size(406, 191);
             Controls.Add(buttonCancel);
             Controls.Add(buttonOk);
             Controls.Add(txtPassword);
             Controls.Add(lblPrompt);
-            Margin = new Padding(3, 2, 3, 2);
-            MaximumSize = new Size(373, 190);
-            MinimumSize = new Size(373, 190);
+            MaximumSize = new Size(424, 238);
+            MinimumSize = new Size(424, 238);
             Name = "PasswordPrompt";
-            Text = "PasswordPrompt";
+            Text = "Enter Password";
             ResumeLayout(false);
             PerformLayout();
         }

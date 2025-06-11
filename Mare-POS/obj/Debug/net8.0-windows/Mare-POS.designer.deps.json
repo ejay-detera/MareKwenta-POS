@@ -30,8 +30,6 @@
           }
         }
       },
-<<<<<<< HEAD
-=======
       "HarfBuzzSharp/8.3.0.1": {
         "dependencies": {
           "HarfBuzzSharp.NativeAssets.Win32": "8.3.0.1",
@@ -72,7 +70,6 @@
           }
         }
       },
->>>>>>> origin/dev-aya
       "K4os.Compression.LZ4/1.3.8": {
         "runtime": {
           "lib/net6.0/K4os.Compression.LZ4.dll": {
@@ -102,8 +99,6 @@
           }
         }
       },
-<<<<<<< HEAD
-=======
       "LiveChartsCore/2.0.0-rc5.4": {
         "runtime": {
           "lib/net8.0-windows7.0/LiveChartsCore.dll": {
@@ -138,7 +133,6 @@
           }
         }
       },
->>>>>>> origin/dev-aya
       "Microsoft.NETCore.Platforms/1.1.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
       "MySql.Data/9.3.0": {
@@ -191,8 +185,6 @@
           }
         }
       },
-<<<<<<< HEAD
-=======
       "OpenTK/3.1.0": {
         "runtime": {
           "lib/net20/OpenTK.dll": {
@@ -289,7 +281,6 @@
           }
         }
       },
->>>>>>> origin/dev-aya
       "System.Buffers/4.5.1": {},
       "System.Configuration.ConfigurationManager/8.0.0": {
         "dependencies": {
@@ -519,8 +510,6 @@
       "path": "google.protobuf/3.30.0",
       "hashPath": "google.protobuf.3.30.0.nupkg.sha512"
     },
-<<<<<<< HEAD
-=======
     "HarfBuzzSharp/8.3.0.1": {
       "type": "package",
       "serviceable": true,
@@ -542,7 +531,6 @@
       "path": "harfbuzzsharp.nativeassets.win32/8.3.0.1",
       "hashPath": "harfbuzzsharp.nativeassets.win32.8.3.0.1.nupkg.sha512"
     },
->>>>>>> origin/dev-aya
     "K4os.Compression.LZ4/1.3.8": {
       "type": "package",
       "serviceable": true,
@@ -564,8 +552,6 @@
       "path": "k4os.hash.xxhash/1.0.8",
       "hashPath": "k4os.hash.xxhash.1.0.8.nupkg.sha512"
     },
-<<<<<<< HEAD
-=======
     "LiveChartsCore/2.0.0-rc5.4": {
       "type": "package",
       "serviceable": true,
@@ -587,7 +573,6 @@
       "path": "livechartscore.skiasharpview.winforms/2.0.0-rc5.4",
       "hashPath": "livechartscore.skiasharpview.winforms.2.0.0-rc5.4.nupkg.sha512"
     },
->>>>>>> origin/dev-aya
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
       "serviceable": true,
@@ -609,8 +594,6 @@
       "path": "mysql.data/9.3.0",
       "hashPath": "mysql.data.9.3.0.nupkg.sha512"
     },
-<<<<<<< HEAD
-=======
     "OpenTK/3.1.0": {
       "type": "package",
       "serviceable": true,
@@ -667,7 +650,6 @@
       "path": "skiasharp.views.windowsforms/3.116.1",
       "hashPath": "skiasharp.views.windowsforms.3.116.1.nupkg.sha512"
     },
->>>>>>> origin/dev-aya
     "System.Buffers/4.5.1": {
       "type": "package",
       "serviceable": true,

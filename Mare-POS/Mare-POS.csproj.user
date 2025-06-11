@@ -8,8 +8,20 @@
     <Compile Update="CashboxFolder\AddExpenseComponent.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="CashboxFolder\CashboxForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="CashboxFolder\EditExpense.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Dashboard\DashboardAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="EmployeeCard\EmployeeCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="EmployeeLogsUserView\StaffPage.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="inventory\AddQuantityComponent.cs">
       <SubType>Form</SubType>
@@ -20,46 +32,27 @@
     <Compile Update="inventory\LinkIngredients.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="CashboxFolder\CashboxForm.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Update="NavbarFolder\NavBar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="SaleshistoryFolder\SaleshistoryForm.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="CashboxFolder\CashboxForm.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="SaleshistoryFolder\SaleshistoryForm.cs">
-    <Compile Update="CashBox\CashboxForm.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="DashboardAdmin.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="EmployeeCard\EmployeeCard.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="EmployeeLogsUserView\StaffPage.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="ExpensesComponet\AddExpenseComponent.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="NavBar\NavbarForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="PasswordPrompt\PasswordPrompt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="StaffPageAdmin.cs">
+    <Compile Update="SaleshistoryFolder\SaleshistoryForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="StaffAdmin\AddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="StaffAdmin\ResetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="StaffAdmin\StaffPageAdmin.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Update="CashboxFolder\CashboxForm.resx">
+    <EmbeddedResource Update="inventory\LinkIngredients.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>

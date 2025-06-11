@@ -221,7 +221,7 @@ namespace Mare_POS
 
             for (int i = 0; i < 5; i++)
                 summaryPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20));
-            
+
 
             // Add summary items (you can fetch these from your database later)
             summaryPanel.Controls.Add(CreateSummaryCard("Gross Sales", $"₱{sales.GrossSales:0.00}", "+₱287.00 (+100%)", Color.ForestGreen), 0, 0);
@@ -291,7 +291,7 @@ namespace Mare_POS
         private void ShowSalesByProductChart()
         {
             chartContainer.Controls.Clear();
-            
+
             // TODO: Replace this with actual sales by product data from the database
             var productSales = new Dictionary<string, double>
             {
@@ -301,10 +301,10 @@ namespace Mare_POS
             };
 
             var legendPaint = new SolidColorPaint
-            {          
+            {
                 Color = SKColors.Black,
             };
-            
+
             var pieSeries = productSales.Select(ps => new PieSeries<double>
             {
                 Values = new double[] { ps.Value },
@@ -324,7 +324,7 @@ namespace Mare_POS
                 LegendTextPaint = legendPaint
             };
             pieChart.LegendTextSize = 16;
-            
+
             chartContainer.Controls.Add(pieChart);
         }
 
@@ -452,6 +452,11 @@ namespace Mare_POS
         }
 
         private void DashboardAdmin_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chartContainer_Paint(object sender, PaintEventArgs e)
         {
 
         }
