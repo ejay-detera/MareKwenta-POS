@@ -3,6 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\Liberty Keith\\source\\repos\\MareKwenta-POS\\Mare-POS\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|C:\\Users\\Liberty Keith\\source\\repos\\MareKwenta-POS\\Mare-POS\\receiptform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:receiptform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -156,6 +157,14 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Liberty Keith\\AppData\\Local\\Temp\\.vsdbgsrc\\1848df9958f93ff6e5e829b8e882077c1bde7d7893ca061160ba0da30964967e\\HandCursorFix.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\angela raquedan\\source\\repos\\marekwenta-pos\\mare-pos\\navbarfolder\\navbarform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:navbarfolder\\navbarform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\angela raquedan\\source\\repos\\marekwenta-pos\\mare-pos\\navbarfolder\\navbarform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:navbarfolder\\navbarform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+>>>>>>> a440485 (Merge remote-tracking branch 'origin/dev-angela' into dev-iyah)
     }
   ],
   "DocumentGroupContainers": [
@@ -169,7 +178,22 @@
           "Children": [
             {
               "$type": "Bookmark",
+<<<<<<< HEAD
+=======
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+>>>>>>> a440485 (Merge remote-tracking branch 'origin/dev-angela' into dev-iyah)
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{25f7e850-ffa1-11d0-b63f-00a0c922e851}"
             },
             {
               "$type": "Document",
@@ -214,6 +238,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< HEAD
               "Title": "ReceiptForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Liberty Keith\\source\\repos\\MareKwenta-POS\\Mare-POS\\ReceiptForm.cs",
               "RelativeDocumentMoniker": "ReceiptForm.cs",
@@ -466,10 +491,21 @@
               "ViewState": "AgIAADwAAAAAAAAAAAAIwDsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-06T15:53:31.012Z",
+=======
+              "Title": "NavbarForm.cs",
+              "DocumentMoniker": "C:\\Users\\Angela Raquedan\\source\\repos\\MareKwenta-POS\\Mare-POS\\NavbarFolder\\NavbarForm.cs",
+              "RelativeDocumentMoniker": "NavbarFolder\\NavbarForm.cs",
+              "ToolTip": "C:\\Users\\Angela Raquedan\\source\\repos\\MareKwenta-POS\\Mare-POS\\NavbarFolder\\NavbarForm.cs*",
+              "RelativeToolTip": "NavbarFolder\\NavbarForm.cs*",
+              "ViewState": "AgIAALMAAAAAAAAAAAAqwL8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T11:33:33.027Z",
+>>>>>>> a440485 (Merge remote-tracking branch 'origin/dev-angela' into dev-iyah)
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 30,
               "Title": "AddExpenseComponent.cs",
               "DocumentMoniker": "C:\\Users\\Liberty Keith\\source\\repos\\MareKwenta-POS\\Mare-POS\\AddExpenseComponent.cs",
@@ -642,6 +678,17 @@
               "RelativeToolTip": "Ticket\\TicketForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-06T09:45:36.543Z"
+=======
+              "DocumentIndex": 1,
+              "Title": "NavbarForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Angela Raquedan\\source\\repos\\MareKwenta-POS\\Mare-POS\\NavbarFolder\\NavbarForm.cs",
+              "RelativeDocumentMoniker": "NavbarFolder\\NavbarForm.cs",
+              "ToolTip": "C:\\Users\\Angela Raquedan\\source\\repos\\MareKwenta-POS\\Mare-POS\\NavbarFolder\\NavbarForm.cs [Design]*",
+              "RelativeToolTip": "NavbarFolder\\NavbarForm.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T11:22:32.745Z",
+              "EditorCaption": " [Design]"
+>>>>>>> a440485 (Merge remote-tracking branch 'origin/dev-angela' into dev-iyah)
             }
           ]
         }
