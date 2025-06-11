@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Iyah\\source\\repos\\MareKwenta-POS\\Mare-POS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\iyah\\source\\repos\\marekwenta-pos\\mare-pos\\mare-pos.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:mare-pos.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\angela raquedan\\source\\repos\\marekwenta-pos\\mare-pos\\navbarfolder\\navbarform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:navbarfolder\\navbarform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\iyah\\source\\repos\\marekwenta-pos\\mare-pos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\angela raquedan\\source\\repos\\marekwenta-pos\\mare-pos\\navbarfolder\\navbarform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:navbarfolder\\navbarform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,25 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Mare-POS",
-              "DocumentMoniker": "C:\\Users\\Iyah\\Source\\Repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj",
-              "RelativeDocumentMoniker": "Mare-POS.csproj",
-              "ToolTip": "C:\\Users\\Iyah\\Source\\Repos\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj",
-              "RelativeToolTip": "Mare-POS.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-11T01:52:33.973Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -51,20 +34,32 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "Name": "ST:0:0:{25f7e850-ffa1-11d0-b63f-00a0c922e851}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NavbarForm.cs",
+              "DocumentMoniker": "C:\\Users\\Angela Raquedan\\source\\repos\\MareKwenta-POS\\Mare-POS\\NavbarFolder\\NavbarForm.cs",
+              "RelativeDocumentMoniker": "NavbarFolder\\NavbarForm.cs",
+              "ToolTip": "C:\\Users\\Angela Raquedan\\source\\repos\\MareKwenta-POS\\Mare-POS\\NavbarFolder\\NavbarForm.cs*",
+              "RelativeToolTip": "NavbarFolder\\NavbarForm.cs*",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAADUAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T11:33:33.027Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Iyah\\source\\repos\\MareKwenta-POS\\Mare-POS\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Iyah\\source\\repos\\MareKwenta-POS\\Mare-POS\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "NavbarForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Angela Raquedan\\source\\repos\\MareKwenta-POS\\Mare-POS\\NavbarFolder\\NavbarForm.cs",
+              "RelativeDocumentMoniker": "NavbarFolder\\NavbarForm.cs",
+              "ToolTip": "C:\\Users\\Angela Raquedan\\source\\repos\\MareKwenta-POS\\Mare-POS\\NavbarFolder\\NavbarForm.cs [Design]*",
+              "RelativeToolTip": "NavbarFolder\\NavbarForm.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T10:58:39.183Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T11:22:32.745Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
