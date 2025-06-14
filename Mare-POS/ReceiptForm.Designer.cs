@@ -78,6 +78,8 @@
             label5 = new Label();
             label29 = new Label();
             panel16 = new Panel();
+            label39 = new Label();
+            label38 = new Label();
             cuiLabel5 = new CuoreUI.Controls.cuiLabel();
             label34 = new Label();
             label33 = new Label();
@@ -90,6 +92,8 @@
             label36 = new Label();
             label35 = new Label();
             cuiButton1 = new CuoreUI.Controls.cuiButton();
+            label40 = new Label();
+            label41 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -628,6 +632,10 @@
             // 
             // panel16
             // 
+            panel16.Controls.Add(label41);
+            panel16.Controls.Add(label40);
+            panel16.Controls.Add(label39);
+            panel16.Controls.Add(label38);
             panel16.Controls.Add(cuiLabel5);
             panel16.Controls.Add(label34);
             panel16.Controls.Add(label33);
@@ -638,8 +646,26 @@
             panel16.Dock = DockStyle.Top;
             panel16.Location = new Point(0, 548);
             panel16.Name = "panel16";
-            panel16.Size = new Size(391, 129);
+            panel16.Size = new Size(391, 157);
             panel16.TabIndex = 4;
+            // 
+            // label39
+            // 
+            label39.Font = new Font("Inter 28pt 28pt", 10F);
+            label39.Location = new Point(18, 92);
+            label39.Name = "label39";
+            label39.Size = new Size(80, 26);
+            label39.TabIndex = 38;
+            label39.Text = "Maya";
+            // 
+            // label38
+            // 
+            label38.Font = new Font("Inter 28pt 28pt", 10F);
+            label38.Location = new Point(18, 73);
+            label38.Name = "label38";
+            label38.Size = new Size(80, 26);
+            label38.TabIndex = 37;
+            label38.Text = "Gcash";
             // 
             // cuiLabel5
             // 
@@ -649,7 +675,7 @@
             cuiLabel5.Font = new Font("Unbounded Light", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cuiLabel5.ForeColor = Color.Black;
             cuiLabel5.HorizontalAlignment = StringAlignment.Center;
-            cuiLabel5.Location = new Point(13, 104);
+            cuiLabel5.Location = new Point(12, 133);
             cuiLabel5.Margin = new Padding(0);
             cuiLabel5.Name = "cuiLabel5";
             cuiLabel5.Size = new Size(366, 22);
@@ -660,7 +686,7 @@
             // 
             label34.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label34.Font = new Font("Inter 28pt 28pt", 10F);
-            label34.Location = new Point(257, 73);
+            label34.Location = new Point(257, 115);
             label34.Name = "label34";
             label34.Size = new Size(98, 26);
             label34.TabIndex = 7;
@@ -679,7 +705,7 @@
             // label32
             // 
             label32.Font = new Font("Inter 28pt 28pt", 10F);
-            label32.Location = new Point(18, 73);
+            label32.Location = new Point(17, 115);
             label32.Name = "label32";
             label32.Size = new Size(80, 26);
             label32.TabIndex = 5;
@@ -711,9 +737,9 @@
             panel17.Controls.Add(label36);
             panel17.Controls.Add(label35);
             panel17.Dock = DockStyle.Top;
-            panel17.Location = new Point(0, 677);
+            panel17.Location = new Point(0, 705);
             panel17.Name = "panel17";
-            panel17.Size = new Size(391, 67);
+            panel17.Size = new Size(391, 56);
             panel17.TabIndex = 5;
             // 
             // cuiLabel6
@@ -724,7 +750,7 @@
             cuiLabel6.Font = new Font("Unbounded Light", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cuiLabel6.ForeColor = Color.Black;
             cuiLabel6.HorizontalAlignment = StringAlignment.Center;
-            cuiLabel6.Location = new Point(10, 38);
+            cuiLabel6.Location = new Point(9, 34);
             cuiLabel6.Margin = new Padding(0);
             cuiLabel6.Name = "cuiLabel6";
             cuiLabel6.Size = new Size(370, 20);
@@ -761,7 +787,7 @@
             // 
             // cuiButton1
             // 
-            cuiButton1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            cuiButton1.Anchor = AnchorStyles.None;
             cuiButton1.CheckButton = false;
             cuiButton1.Checked = false;
             cuiButton1.CheckedBackground = Color.FromArgb(255, 106, 0);
@@ -780,7 +806,7 @@
             cuiButton1.ImageAutoCenter = true;
             cuiButton1.ImageExpand = new Point(0, 0);
             cuiButton1.ImageOffset = new Point(0, 0);
-            cuiButton1.Location = new Point(271, 757);
+            cuiButton1.Location = new Point(276, 760);
             cuiButton1.Name = "cuiButton1";
             cuiButton1.NormalBackground = Color.FromArgb(78, 45, 24);
             cuiButton1.NormalForeColor = Color.White;
@@ -792,11 +818,31 @@
             cuiButton1.PressedImageTint = Color.White;
             cuiButton1.PressedOutline = Color.FromArgb(64, 128, 128, 128);
             cuiButton1.Rounding = new Padding(8);
-            cuiButton1.Size = new Size(101, 28);
+            cuiButton1.Size = new Size(101, 39);
             cuiButton1.TabIndex = 6;
             cuiButton1.TextAlignment = StringAlignment.Center;
             cuiButton1.TextOffset = new Point(0, 0);
             cuiButton1.Click += cuiButton1_Click;
+            // 
+            // label40
+            // 
+            label40.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label40.Font = new Font("Inter 28pt 28pt", 10F);
+            label40.Location = new Point(257, 73);
+            label40.Name = "label40";
+            label40.Size = new Size(98, 26);
+            label40.TabIndex = 39;
+            label40.Text = "₱";
+            // 
+            // label41
+            // 
+            label41.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label41.Font = new Font("Inter 28pt 28pt", 10F);
+            label41.Location = new Point(257, 92);
+            label41.Name = "label41";
+            label41.Size = new Size(98, 26);
+            label41.TabIndex = 40;
+            label41.Text = "₱";
             // 
             // ReceiptForm
             // 
@@ -906,5 +952,9 @@
         private CuoreUI.Controls.cuiButton cuiButton1;
         private CuoreUI.Controls.cuiLabel cuiLabel2;
         private CuoreUI.Controls.cuiLabel cuiLabel6;
+        private Label label39;
+        private Label label38;
+        private Label label41;
+        private Label label40;
     }
 }

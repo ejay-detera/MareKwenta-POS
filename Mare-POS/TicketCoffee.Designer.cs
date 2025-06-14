@@ -1471,11 +1471,11 @@
             cuiTextBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             cuiTextBox1.BackgroundColor = Color.WhiteSmoke;
             cuiTextBox1.BorderColor = Color.FromArgb(242, 239, 234);
-            cuiTextBox1.Content = "₱ _______________";
+            cuiTextBox1.Content = "₱";
             cuiTextBox1.FocusBackgroundColor = Color.White;
             cuiTextBox1.FocusBorderColor = Color.FromArgb(255, 106, 0);
             cuiTextBox1.FocusImageTint = Color.White;
-            cuiTextBox1.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cuiTextBox1.Font = new Font("Unbounded", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cuiTextBox1.ForeColor = Color.FromArgb(78, 45, 24);
             cuiTextBox1.Image = null;
             cuiTextBox1.ImageExpand = new Point(0, 0);
@@ -1485,7 +1485,7 @@
             cuiTextBox1.Multiline = true;
             cuiTextBox1.Name = "cuiTextBox1";
             cuiTextBox1.NormalImageTint = Color.White;
-            cuiTextBox1.Padding = new Padding(18, 6, 18, 6);
+            cuiTextBox1.Padding = new Padding(19, 6, 19, 6);
             cuiTextBox1.PasswordChar = false;
             cuiTextBox1.PlaceholderColor = SystemColors.WindowText;
             cuiTextBox1.PlaceholderText = "";

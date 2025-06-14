@@ -133,7 +133,7 @@
             cuiTextBox1 = new CuoreUI.Controls.cuiTextBox();
             tableLayoutPanel7 = new TableLayoutPanel();
             cuiPanel3 = new CuoreUI.Controls.cuiPanel();
-            button6 = new Button();
+            btnDiscount = new Button();
             button5 = new Button();
             tableLayoutPanel6 = new TableLayoutPanel();
             panel11 = new Panel();
@@ -258,6 +258,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(945, 1024);
             panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint;
             // 
             // tableLayoutPanel13
             // 
@@ -297,7 +298,7 @@
             label36.Name = "label36";
             label36.Size = new Size(139, 49);
             label36.TabIndex = 3;
-            label36.Text = "Beef Pares";
+            label36.Text = "Hamsilog";
             // 
             // pictureBox12
             // 
@@ -509,6 +510,7 @@
             label39.Size = new Size(157, 25);
             label39.TabIndex = 3;
             label39.Text = "Tocilog";
+            label39.Click += label39_Click;
             // 
             // pictureBox15
             // 
@@ -931,6 +933,7 @@
             // 
             // tableLayoutPanel2
             // 
+            tableLayoutPanel2.Anchor = AnchorStyles.None;
             tableLayoutPanel2.AutoSize = true;
             tableLayoutPanel2.ColumnCount = 5;
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
@@ -943,7 +946,7 @@
             tableLayoutPanel2.Controls.Add(panel6, 2, 0);
             tableLayoutPanel2.Controls.Add(panel7, 1, 0);
             tableLayoutPanel2.Controls.Add(panel8, 0, 0);
-            tableLayoutPanel2.Location = new Point(43, 198);
+            tableLayoutPanel2.Location = new Point(1, 191);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 1;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
@@ -1243,6 +1246,7 @@
             // 
             // label5
             // 
+            label5.Anchor = AnchorStyles.None;
             label5.BackColor = Color.White;
             label5.Font = new Font("Unbounded Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.FromArgb(78, 45, 24);
@@ -1254,6 +1258,7 @@
             // 
             // pictureBox4
             // 
+            pictureBox4.Anchor = AnchorStyles.None;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
             pictureBox4.Location = new Point(16, 15);
             pictureBox4.Name = "pictureBox4";
@@ -1263,6 +1268,7 @@
             // 
             // btnAmericano
             // 
+            btnAmericano.Anchor = AnchorStyles.None;
             btnAmericano.CheckButton = false;
             btnAmericano.Checked = false;
             btnAmericano.CheckedBackground = Color.FromArgb(255, 106, 0);
@@ -1468,6 +1474,7 @@
             cuiPanel1.Rounding = new Padding(0);
             cuiPanel1.Size = new Size(489, 1018);
             cuiPanel1.TabIndex = 1;
+            cuiPanel1.Paint += cuiPanel1_Paint_1;
             // 
             // tableLayoutPanel11
             // 
@@ -2133,11 +2140,11 @@
             cuiTextBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             cuiTextBox1.BackgroundColor = Color.WhiteSmoke;
             cuiTextBox1.BorderColor = Color.FromArgb(242, 239, 234);
-            cuiTextBox1.Content = "₱ _______________";
+            cuiTextBox1.Content = "₱";
             cuiTextBox1.FocusBackgroundColor = Color.White;
             cuiTextBox1.FocusBorderColor = Color.FromArgb(255, 106, 0);
             cuiTextBox1.FocusImageTint = Color.White;
-            cuiTextBox1.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cuiTextBox1.Font = new Font("Unbounded", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cuiTextBox1.ForeColor = Color.FromArgb(78, 45, 24);
             cuiTextBox1.Image = null;
             cuiTextBox1.ImageExpand = new Point(0, 0);
@@ -2147,7 +2154,7 @@
             cuiTextBox1.Multiline = true;
             cuiTextBox1.Name = "cuiTextBox1";
             cuiTextBox1.NormalImageTint = Color.White;
-            cuiTextBox1.Padding = new Padding(18, 6, 18, 6);
+            cuiTextBox1.Padding = new Padding(19, 6, 19, 6);
             cuiTextBox1.PasswordChar = false;
             cuiTextBox1.PlaceholderColor = SystemColors.WindowText;
             cuiTextBox1.PlaceholderText = "";
@@ -2175,7 +2182,7 @@
             // cuiPanel3
             // 
             cuiPanel3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            cuiPanel3.Controls.Add(button6);
+            cuiPanel3.Controls.Add(btnDiscount);
             cuiPanel3.Controls.Add(button5);
             cuiPanel3.Location = new Point(0, 0);
             cuiPanel3.Margin = new Padding(0);
@@ -2187,20 +2194,21 @@
             cuiPanel3.Size = new Size(483, 58);
             cuiPanel3.TabIndex = 0;
             // 
-            // button6
+            // btnDiscount
             // 
-            button6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            button6.BackColor = Color.Transparent;
-            button6.FlatAppearance.BorderSize = 0;
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.Font = new Font("Unbounded", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button6.ForeColor = Color.FromArgb(78, 45, 24);
-            button6.Location = new Point(259, 9);
-            button6.Name = "button6";
-            button6.Size = new Size(135, 40);
-            button6.TabIndex = 6;
-            button6.Text = "Discount";
-            button6.UseVisualStyleBackColor = false;
+            btnDiscount.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnDiscount.BackColor = Color.Transparent;
+            btnDiscount.FlatAppearance.BorderSize = 0;
+            btnDiscount.FlatStyle = FlatStyle.Flat;
+            btnDiscount.Font = new Font("Unbounded", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnDiscount.ForeColor = Color.FromArgb(78, 45, 24);
+            btnDiscount.Location = new Point(259, 9);
+            btnDiscount.Name = "btnDiscount";
+            btnDiscount.Size = new Size(135, 40);
+            btnDiscount.TabIndex = 6;
+            btnDiscount.Text = "Discount";
+            btnDiscount.UseVisualStyleBackColor = false;
+            btnDiscount.Click += btnDiscount_Click;
             // 
             // button5
             // 
@@ -2708,7 +2716,7 @@
         private TableLayoutPanel tableLayoutPanel7;
         private CuoreUI.Controls.cuiPanel cuiPanel3;
         private Button button5;
-        private Button button6;
+        private Button btnDiscount;
         private TableLayoutPanel tableLayoutPanel8;
         private CuoreUI.Controls.cuiButton cuiButton6;
         private CuoreUI.Controls.cuiButton cuiButton7;
