@@ -78,6 +78,8 @@
             label5 = new Label();
             label29 = new Label();
             panel16 = new Panel();
+            label41 = new Label();
+            label40 = new Label();
             label39 = new Label();
             label38 = new Label();
             cuiLabel5 = new CuoreUI.Controls.cuiLabel();
@@ -92,8 +94,6 @@
             label36 = new Label();
             label35 = new Label();
             cuiButton1 = new CuoreUI.Controls.cuiButton();
-            label40 = new Label();
-            label41 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -127,6 +127,7 @@
             // 
             // cuiLabel1
             // 
+            cuiLabel1.Anchor = AnchorStyles.None;
             cuiLabel1.Content = "Don\\ Fabian,\\ Quezon\\ City,\\ 1121\\ Metro\\ Manila";
             cuiLabel1.Font = new Font("Inter 28pt 28pt", 11F);
             cuiLabel1.HorizontalAlignment = StringAlignment.Center;
@@ -139,9 +140,10 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.None;
             label1.Font = new Font("Unbounded Medium", 13.7999992F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(78, 45, 24);
-            label1.Location = new Point(80, 22);
+            label1.Location = new Point(83, 22);
             label1.Name = "label1";
             label1.Size = new Size(228, 42);
             label1.TabIndex = 0;
@@ -649,6 +651,26 @@
             panel16.Size = new Size(391, 157);
             panel16.TabIndex = 4;
             // 
+            // label41
+            // 
+            label41.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label41.Font = new Font("Inter 28pt 28pt", 10F);
+            label41.Location = new Point(257, 92);
+            label41.Name = "label41";
+            label41.Size = new Size(98, 26);
+            label41.TabIndex = 40;
+            label41.Text = "₱";
+            // 
+            // label40
+            // 
+            label40.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label40.Font = new Font("Inter 28pt 28pt", 10F);
+            label40.Location = new Point(257, 73);
+            label40.Name = "label40";
+            label40.Size = new Size(98, 26);
+            label40.TabIndex = 39;
+            label40.Text = "₱";
+            // 
             // label39
             // 
             label39.Font = new Font("Inter 28pt 28pt", 10F);
@@ -787,7 +809,7 @@
             // 
             // cuiButton1
             // 
-            cuiButton1.Anchor = AnchorStyles.None;
+            cuiButton1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             cuiButton1.CheckButton = false;
             cuiButton1.Checked = false;
             cuiButton1.CheckedBackground = Color.FromArgb(255, 106, 0);
@@ -823,26 +845,6 @@
             cuiButton1.TextAlignment = StringAlignment.Center;
             cuiButton1.TextOffset = new Point(0, 0);
             cuiButton1.Click += cuiButton1_Click;
-            // 
-            // label40
-            // 
-            label40.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label40.Font = new Font("Inter 28pt 28pt", 10F);
-            label40.Location = new Point(257, 73);
-            label40.Name = "label40";
-            label40.Size = new Size(98, 26);
-            label40.TabIndex = 39;
-            label40.Text = "₱";
-            // 
-            // label41
-            // 
-            label41.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label41.Font = new Font("Inter 28pt 28pt", 10F);
-            label41.Location = new Point(257, 92);
-            label41.Name = "label41";
-            label41.Size = new Size(98, 26);
-            label41.TabIndex = 40;
-            label41.Text = "₱";
             // 
             // ReceiptForm
             // 

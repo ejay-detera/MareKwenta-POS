@@ -219,7 +219,7 @@
             tableLayoutPanel3.Controls.Add(panel6, 3, 0);
             tableLayoutPanel3.Controls.Add(panel2, 1, 0);
             tableLayoutPanel3.Controls.Add(panel8, 0, 0);
-            tableLayoutPanel3.Location = new Point(31, 186);
+            tableLayoutPanel3.Location = new Point(38, 206);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 1;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));

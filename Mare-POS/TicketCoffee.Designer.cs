@@ -31,11 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TicketCoffee));
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
-            tableLayoutPanel13 = new TableLayoutPanel();
-            panel19 = new Panel();
-            label39 = new Label();
-            pictureBox8 = new PictureBox();
-            cuiButton15 = new CuoreUI.Controls.cuiButton();
             panel5 = new Panel();
             label3 = new Label();
             pictureBox2 = new PictureBox();
@@ -137,11 +132,12 @@
             label18 = new Label();
             panel7 = new Panel();
             label6 = new Label();
+            panel9 = new Panel();
+            label36 = new Label();
+            pictureBox5 = new PictureBox();
+            cuiButton5 = new CuoreUI.Controls.cuiButton();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
-            tableLayoutPanel13.SuspendLayout();
-            panel19.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             tableLayoutPanel3.SuspendLayout();
@@ -177,6 +173,8 @@
             tableLayoutPanel5.SuspendLayout();
             cuiPanel18.SuspendLayout();
             panel7.SuspendLayout();
+            panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -201,8 +199,6 @@
             // 
             panel1.AutoScroll = true;
             panel1.BackColor = Color.FromArgb(242, 239, 234);
-            panel1.Controls.Add(tableLayoutPanel13);
-            panel1.Controls.Add(panel5);
             panel1.Controls.Add(tableLayoutPanel3);
             panel1.Controls.Add(panel4);
             panel1.Controls.Add(panel3);
@@ -213,94 +209,12 @@
             panel1.Size = new Size(945, 1024);
             panel1.TabIndex = 0;
             // 
-            // tableLayoutPanel13
-            // 
-            tableLayoutPanel13.AutoSize = true;
-            tableLayoutPanel13.ColumnCount = 1;
-            tableLayoutPanel13.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            tableLayoutPanel13.Controls.Add(panel19, 0, 0);
-            tableLayoutPanel13.Location = new Point(42, 441);
-            tableLayoutPanel13.Name = "tableLayoutPanel13";
-            tableLayoutPanel13.RowCount = 1;
-            tableLayoutPanel13.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel13.Size = new Size(217, 249);
-            tableLayoutPanel13.TabIndex = 10;
-            // 
-            // panel19
-            // 
-            panel19.Controls.Add(label39);
-            panel19.Controls.Add(pictureBox8);
-            panel19.Controls.Add(cuiButton15);
-            panel19.Location = new Point(3, 3);
-            panel19.Name = "panel19";
-            panel19.Size = new Size(198, 232);
-            panel19.TabIndex = 4;
-            // 
-            // label39
-            // 
-            label39.BackColor = Color.White;
-            label39.Font = new Font("Unbounded Medium", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label39.ForeColor = Color.FromArgb(78, 45, 24);
-            label39.Location = new Point(16, 168);
-            label39.Name = "label39";
-            label39.Size = new Size(157, 25);
-            label39.TabIndex = 3;
-            label39.Text = "Cappuccino";
-            // 
-            // pictureBox8
-            // 
-            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(21, 15);
-            pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(152, 152);
-            pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox8.TabIndex = 1;
-            pictureBox8.TabStop = false;
-            // 
-            // cuiButton15
-            // 
-            cuiButton15.CheckButton = false;
-            cuiButton15.Checked = false;
-            cuiButton15.CheckedBackground = Color.FromArgb(255, 106, 0);
-            cuiButton15.CheckedForeColor = Color.White;
-            cuiButton15.CheckedImageTint = Color.White;
-            cuiButton15.CheckedOutline = Color.FromArgb(255, 106, 0);
-            cuiButton15.Content = "";
-            cuiButton15.DialogResult = DialogResult.None;
-            cuiButton15.Font = new Font("Microsoft Sans Serif", 9.75F);
-            cuiButton15.ForeColor = Color.Black;
-            cuiButton15.HoverBackground = Color.White;
-            cuiButton15.HoveredImageTint = Color.White;
-            cuiButton15.HoverForeColor = Color.Black;
-            cuiButton15.HoverOutline = Color.FromArgb(32, 128, 128, 128);
-            cuiButton15.Image = null;
-            cuiButton15.ImageAutoCenter = true;
-            cuiButton15.ImageExpand = new Point(0, 0);
-            cuiButton15.ImageOffset = new Point(0, 0);
-            cuiButton15.Location = new Point(0, 0);
-            cuiButton15.Name = "cuiButton15";
-            cuiButton15.NormalBackground = Color.White;
-            cuiButton15.NormalForeColor = Color.Black;
-            cuiButton15.NormalImageTint = Color.White;
-            cuiButton15.NormalOutline = Color.FromArgb(64, 128, 128, 128);
-            cuiButton15.OutlineThickness = 1F;
-            cuiButton15.Padding = new Padding(5);
-            cuiButton15.PressedBackground = Color.WhiteSmoke;
-            cuiButton15.PressedForeColor = Color.FromArgb(32, 32, 32);
-            cuiButton15.PressedImageTint = Color.White;
-            cuiButton15.PressedOutline = Color.FromArgb(64, 128, 128, 128);
-            cuiButton15.Rounding = new Padding(8);
-            cuiButton15.Size = new Size(193, 229);
-            cuiButton15.TabIndex = 0;
-            cuiButton15.TextAlignment = StringAlignment.Center;
-            cuiButton15.TextOffset = new Point(0, 0);
-            // 
             // panel5
             // 
             panel5.Controls.Add(label3);
             panel5.Controls.Add(pictureBox2);
             panel5.Controls.Add(cuiButton2);
-            panel5.Location = new Point(481, 188);
+            panel5.Location = new Point(433, 3);
             panel5.Name = "panel5";
             panel5.Size = new Size(198, 232);
             panel5.TabIndex = 5;
@@ -369,18 +283,21 @@
             // 
             tableLayoutPanel3.AutoSize = true;
             tableLayoutPanel3.ColumnCount = 4;
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableLayoutPanel3.Controls.Add(panel5, 2, 0);
             tableLayoutPanel3.Controls.Add(panel6, 3, 0);
             tableLayoutPanel3.Controls.Add(panel2, 1, 0);
             tableLayoutPanel3.Controls.Add(panel8, 0, 0);
-            tableLayoutPanel3.Location = new Point(42, 186);
+            tableLayoutPanel3.Controls.Add(panel9, 0, 1);
+            tableLayoutPanel3.Location = new Point(42, 210);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
-            tableLayoutPanel3.RowCount = 1;
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel3.Size = new Size(866, 249);
+            tableLayoutPanel3.RowCount = 2;
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel3.Size = new Size(861, 513);
             tableLayoutPanel3.TabIndex = 8;
             // 
             // panel6
@@ -388,7 +305,7 @@
             panel6.Controls.Add(label4);
             panel6.Controls.Add(pictureBox3);
             panel6.Controls.Add(cuiButton3);
-            panel6.Location = new Point(651, 3);
+            panel6.Location = new Point(648, 3);
             panel6.Name = "panel6";
             panel6.Size = new Size(198, 232);
             panel6.TabIndex = 5;
@@ -458,7 +375,7 @@
             panel2.Controls.Add(label2);
             panel2.Controls.Add(pictureBox1);
             panel2.Controls.Add(cuiButton1);
-            panel2.Location = new Point(219, 3);
+            panel2.Location = new Point(218, 3);
             panel2.Name = "panel2";
             panel2.Size = new Size(198, 232);
             panel2.TabIndex = 5;
@@ -1989,6 +1906,75 @@
             label6.TabIndex = 8;
             label6.Text = "Ticket";
             // 
+            // panel9
+            // 
+            panel9.Controls.Add(label36);
+            panel9.Controls.Add(pictureBox5);
+            panel9.Controls.Add(cuiButton5);
+            panel9.Location = new Point(3, 259);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(198, 232);
+            panel9.TabIndex = 6;
+            // 
+            // label36
+            // 
+            label36.BackColor = Color.White;
+            label36.Font = new Font("Unbounded Medium", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label36.ForeColor = Color.FromArgb(78, 45, 24);
+            label36.Location = new Point(16, 168);
+            label36.Name = "label36";
+            label36.Size = new Size(139, 25);
+            label36.TabIndex = 3;
+            label36.Text = "Americano";
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(21, 15);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(152, 152);
+            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox5.TabIndex = 1;
+            pictureBox5.TabStop = false;
+            // 
+            // cuiButton5
+            // 
+            cuiButton5.CheckButton = false;
+            cuiButton5.Checked = false;
+            cuiButton5.CheckedBackground = Color.FromArgb(255, 106, 0);
+            cuiButton5.CheckedForeColor = Color.White;
+            cuiButton5.CheckedImageTint = Color.White;
+            cuiButton5.CheckedOutline = Color.FromArgb(255, 106, 0);
+            cuiButton5.Content = "";
+            cuiButton5.DialogResult = DialogResult.None;
+            cuiButton5.Font = new Font("Microsoft Sans Serif", 9.75F);
+            cuiButton5.ForeColor = Color.Black;
+            cuiButton5.HoverBackground = Color.White;
+            cuiButton5.HoveredImageTint = Color.White;
+            cuiButton5.HoverForeColor = Color.Black;
+            cuiButton5.HoverOutline = Color.FromArgb(32, 128, 128, 128);
+            cuiButton5.Image = null;
+            cuiButton5.ImageAutoCenter = true;
+            cuiButton5.ImageExpand = new Point(0, 0);
+            cuiButton5.ImageOffset = new Point(0, 0);
+            cuiButton5.Location = new Point(0, 0);
+            cuiButton5.Name = "cuiButton5";
+            cuiButton5.NormalBackground = Color.White;
+            cuiButton5.NormalForeColor = Color.Black;
+            cuiButton5.NormalImageTint = Color.White;
+            cuiButton5.NormalOutline = Color.FromArgb(64, 128, 128, 128);
+            cuiButton5.OutlineThickness = 1F;
+            cuiButton5.Padding = new Padding(5);
+            cuiButton5.PressedBackground = Color.WhiteSmoke;
+            cuiButton5.PressedForeColor = Color.FromArgb(32, 32, 32);
+            cuiButton5.PressedImageTint = Color.White;
+            cuiButton5.PressedOutline = Color.FromArgb(64, 128, 128, 128);
+            cuiButton5.Rounding = new Padding(8);
+            cuiButton5.Size = new Size(193, 229);
+            cuiButton5.TabIndex = 0;
+            cuiButton5.TextAlignment = StringAlignment.Center;
+            cuiButton5.TextOffset = new Point(0, 0);
+            // 
             // TicketCoffee
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -2000,9 +1986,6 @@
             tableLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            tableLayoutPanel13.ResumeLayout(false);
-            panel19.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             tableLayoutPanel3.ResumeLayout(false);
@@ -2042,6 +2025,8 @@
             tableLayoutPanel5.ResumeLayout(false);
             cuiPanel18.ResumeLayout(false);
             panel7.ResumeLayout(false);
+            panel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ResumeLayout(false);
         }
 
@@ -2150,10 +2135,9 @@
         private CuoreUI.Controls.cuiButton cuiButton25;
         private CuoreUI.Controls.cuiButton cuiButton23;
         private CuoreUI.Controls.cuiButton cuiButton24;
-        private TableLayoutPanel tableLayoutPanel13;
-        private Panel panel19;
-        private Label label39;
-        private PictureBox pictureBox8;
-        private CuoreUI.Controls.cuiButton cuiButton15;
+        private Panel panel9;
+        private Label label36;
+        private PictureBox pictureBox5;
+        private CuoreUI.Controls.cuiButton cuiButton5;
     }
 }
