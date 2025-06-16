@@ -31,11 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TicketNonCoffee));
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
-            tableLayoutPanel13 = new TableLayoutPanel();
-            panel19 = new Panel();
-            label39 = new Label();
-            pictureBox8 = new PictureBox();
-            cuiButton15 = new CuoreUI.Controls.cuiButton();
             tableLayoutPanel3 = new TableLayoutPanel();
             panel5 = new Panel();
             label3 = new Label();
@@ -145,11 +140,12 @@
             label18 = new Label();
             panel7 = new Panel();
             label6 = new Label();
+            panel19 = new Panel();
+            label39 = new Label();
+            pictureBox8 = new PictureBox();
+            cuiButton15 = new CuoreUI.Controls.cuiButton();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
-            tableLayoutPanel13.SuspendLayout();
-            panel19.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             tableLayoutPanel3.SuspendLayout();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -184,6 +180,8 @@
             tableLayoutPanel5.SuspendLayout();
             cuiPanel18.SuspendLayout();
             panel7.SuspendLayout();
+            panel19.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -203,7 +201,6 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(tableLayoutPanel13);
             panel1.Controls.Add(tableLayoutPanel3);
             panel1.Controls.Add(panel4);
             panel1.Controls.Add(panel3);
@@ -214,107 +211,25 @@
             panel1.Size = new Size(945, 1024);
             panel1.TabIndex = 0;
             // 
-            // tableLayoutPanel13
-            // 
-            tableLayoutPanel13.AutoSize = true;
-            tableLayoutPanel13.ColumnCount = 1;
-            tableLayoutPanel13.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            tableLayoutPanel13.Controls.Add(panel19, 0, 0);
-            tableLayoutPanel13.Location = new Point(30, 441);
-            tableLayoutPanel13.Name = "tableLayoutPanel13";
-            tableLayoutPanel13.RowCount = 1;
-            tableLayoutPanel13.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel13.Size = new Size(217, 249);
-            tableLayoutPanel13.TabIndex = 11;
-            // 
-            // panel19
-            // 
-            panel19.Controls.Add(label39);
-            panel19.Controls.Add(pictureBox8);
-            panel19.Controls.Add(cuiButton15);
-            panel19.Location = new Point(3, 3);
-            panel19.Name = "panel19";
-            panel19.Size = new Size(198, 232);
-            panel19.TabIndex = 4;
-            // 
-            // label39
-            // 
-            label39.BackColor = Color.White;
-            label39.Font = new Font("Unbounded Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label39.ForeColor = Color.FromArgb(78, 45, 24);
-            label39.Location = new Point(16, 168);
-            label39.Name = "label39";
-            label39.Size = new Size(177, 48);
-            label39.TabIndex = 3;
-            label39.Text = "Chocolate Chip Frappe";
-            label39.Click += label39_Click;
-            // 
-            // pictureBox8
-            // 
-            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(21, 15);
-            pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(152, 152);
-            pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox8.TabIndex = 1;
-            pictureBox8.TabStop = false;
-            // 
-            // cuiButton15
-            // 
-            cuiButton15.CheckButton = false;
-            cuiButton15.Checked = false;
-            cuiButton15.CheckedBackground = Color.FromArgb(255, 106, 0);
-            cuiButton15.CheckedForeColor = Color.White;
-            cuiButton15.CheckedImageTint = Color.White;
-            cuiButton15.CheckedOutline = Color.FromArgb(255, 106, 0);
-            cuiButton15.Content = "";
-            cuiButton15.DialogResult = DialogResult.None;
-            cuiButton15.Font = new Font("Microsoft Sans Serif", 9.75F);
-            cuiButton15.ForeColor = Color.Black;
-            cuiButton15.HoverBackground = Color.White;
-            cuiButton15.HoveredImageTint = Color.White;
-            cuiButton15.HoverForeColor = Color.Black;
-            cuiButton15.HoverOutline = Color.FromArgb(32, 128, 128, 128);
-            cuiButton15.Image = null;
-            cuiButton15.ImageAutoCenter = true;
-            cuiButton15.ImageExpand = new Point(0, 0);
-            cuiButton15.ImageOffset = new Point(0, 0);
-            cuiButton15.Location = new Point(0, 0);
-            cuiButton15.Name = "cuiButton15";
-            cuiButton15.NormalBackground = Color.White;
-            cuiButton15.NormalForeColor = Color.Black;
-            cuiButton15.NormalImageTint = Color.White;
-            cuiButton15.NormalOutline = Color.FromArgb(64, 128, 128, 128);
-            cuiButton15.OutlineThickness = 1F;
-            cuiButton15.Padding = new Padding(5);
-            cuiButton15.PressedBackground = Color.WhiteSmoke;
-            cuiButton15.PressedForeColor = Color.FromArgb(32, 32, 32);
-            cuiButton15.PressedImageTint = Color.White;
-            cuiButton15.PressedOutline = Color.FromArgb(64, 128, 128, 128);
-            cuiButton15.Rounding = new Padding(8);
-            cuiButton15.Size = new Size(193, 229);
-            cuiButton15.TabIndex = 0;
-            cuiButton15.TextAlignment = StringAlignment.Center;
-            cuiButton15.TextOffset = new Point(0, 0);
-            cuiButton15.Click += cuiButton15_Click;
-            // 
             // tableLayoutPanel3
             // 
             tableLayoutPanel3.AutoSize = true;
             tableLayoutPanel3.ColumnCount = 4;
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableLayoutPanel3.Controls.Add(panel19, 0, 1);
             tableLayoutPanel3.Controls.Add(panel5, 2, 0);
             tableLayoutPanel3.Controls.Add(panel6, 3, 0);
             tableLayoutPanel3.Controls.Add(panel2, 1, 0);
             tableLayoutPanel3.Controls.Add(panel8, 0, 0);
-            tableLayoutPanel3.Location = new Point(33, 186);
+            tableLayoutPanel3.Location = new Point(37, 202);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
-            tableLayoutPanel3.RowCount = 1;
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel3.Size = new Size(866, 249);
+            tableLayoutPanel3.RowCount = 2;
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel3.Size = new Size(866, 505);
             tableLayoutPanel3.TabIndex = 10;
             // 
             // panel5
@@ -1522,11 +1437,11 @@
             cuiTextBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             cuiTextBox1.BackgroundColor = Color.WhiteSmoke;
             cuiTextBox1.BorderColor = Color.FromArgb(242, 239, 234);
-            cuiTextBox1.Content = "₱ _______________";
+            cuiTextBox1.Content = "₱ ";
             cuiTextBox1.FocusBackgroundColor = Color.White;
             cuiTextBox1.FocusBorderColor = Color.FromArgb(255, 106, 0);
             cuiTextBox1.FocusImageTint = Color.White;
-            cuiTextBox1.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cuiTextBox1.Font = new Font("Unbounded", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cuiTextBox1.ForeColor = Color.FromArgb(78, 45, 24);
             cuiTextBox1.Image = null;
             cuiTextBox1.ImageExpand = new Point(0, 0);
@@ -1536,7 +1451,7 @@
             cuiTextBox1.Multiline = true;
             cuiTextBox1.Name = "cuiTextBox1";
             cuiTextBox1.NormalImageTint = Color.White;
-            cuiTextBox1.Padding = new Padding(18, 6, 18, 6);
+            cuiTextBox1.Padding = new Padding(19, 6, 19, 6);
             cuiTextBox1.PasswordChar = false;
             cuiTextBox1.PlaceholderColor = SystemColors.WindowText;
             cuiTextBox1.PlaceholderText = "";
@@ -2095,6 +2010,75 @@
             label6.TabIndex = 8;
             label6.Text = "Ticket";
             // 
+            // panel19
+            // 
+            panel19.Controls.Add(label39);
+            panel19.Controls.Add(pictureBox8);
+            panel19.Controls.Add(cuiButton15);
+            panel19.Location = new Point(3, 255);
+            panel19.Name = "panel19";
+            panel19.Size = new Size(198, 232);
+            panel19.TabIndex = 7;
+            // 
+            // label39
+            // 
+            label39.BackColor = Color.White;
+            label39.Font = new Font("Unbounded Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label39.ForeColor = Color.FromArgb(78, 45, 24);
+            label39.Location = new Point(16, 168);
+            label39.Name = "label39";
+            label39.Size = new Size(177, 48);
+            label39.TabIndex = 3;
+            label39.Text = "Chocolate Chip Frappe";
+            // 
+            // pictureBox8
+            // 
+            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
+            pictureBox8.Location = new Point(21, 15);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(152, 152);
+            pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox8.TabIndex = 1;
+            pictureBox8.TabStop = false;
+            // 
+            // cuiButton15
+            // 
+            cuiButton15.CheckButton = false;
+            cuiButton15.Checked = false;
+            cuiButton15.CheckedBackground = Color.FromArgb(255, 106, 0);
+            cuiButton15.CheckedForeColor = Color.White;
+            cuiButton15.CheckedImageTint = Color.White;
+            cuiButton15.CheckedOutline = Color.FromArgb(255, 106, 0);
+            cuiButton15.Content = "";
+            cuiButton15.DialogResult = DialogResult.None;
+            cuiButton15.Font = new Font("Microsoft Sans Serif", 9.75F);
+            cuiButton15.ForeColor = Color.Black;
+            cuiButton15.HoverBackground = Color.White;
+            cuiButton15.HoveredImageTint = Color.White;
+            cuiButton15.HoverForeColor = Color.Black;
+            cuiButton15.HoverOutline = Color.FromArgb(32, 128, 128, 128);
+            cuiButton15.Image = null;
+            cuiButton15.ImageAutoCenter = true;
+            cuiButton15.ImageExpand = new Point(0, 0);
+            cuiButton15.ImageOffset = new Point(0, 0);
+            cuiButton15.Location = new Point(0, 0);
+            cuiButton15.Name = "cuiButton15";
+            cuiButton15.NormalBackground = Color.White;
+            cuiButton15.NormalForeColor = Color.Black;
+            cuiButton15.NormalImageTint = Color.White;
+            cuiButton15.NormalOutline = Color.FromArgb(64, 128, 128, 128);
+            cuiButton15.OutlineThickness = 1F;
+            cuiButton15.Padding = new Padding(5);
+            cuiButton15.PressedBackground = Color.WhiteSmoke;
+            cuiButton15.PressedForeColor = Color.FromArgb(32, 32, 32);
+            cuiButton15.PressedImageTint = Color.White;
+            cuiButton15.PressedOutline = Color.FromArgb(64, 128, 128, 128);
+            cuiButton15.Rounding = new Padding(8);
+            cuiButton15.Size = new Size(193, 229);
+            cuiButton15.TabIndex = 0;
+            cuiButton15.TextAlignment = StringAlignment.Center;
+            cuiButton15.TextOffset = new Point(0, 0);
+            // 
             // TicketNonCoffee
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -2106,9 +2090,6 @@
             tableLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            tableLayoutPanel13.ResumeLayout(false);
-            panel19.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             tableLayoutPanel3.ResumeLayout(false);
             panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -2146,6 +2127,8 @@
             tableLayoutPanel5.ResumeLayout(false);
             cuiPanel18.ResumeLayout(false);
             panel7.ResumeLayout(false);
+            panel19.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ResumeLayout(false);
         }
 
@@ -2181,11 +2164,6 @@
         private Label label5;
         private PictureBox pictureBox4;
         private CuoreUI.Controls.cuiButton cuiButton4;
-        private TableLayoutPanel tableLayoutPanel13;
-        private Panel panel19;
-        private Label label39;
-        private PictureBox pictureBox8;
-        private CuoreUI.Controls.cuiButton cuiButton15;
         private Panel panel7;
         private Label label6;
         private TableLayoutPanel tableLayoutPanel4;
@@ -2267,5 +2245,9 @@
         private CuoreUI.Controls.cuiButton cuiButton25;
         private CuoreUI.Controls.cuiButton cuiButton23;
         private CuoreUI.Controls.cuiButton cuiButton24;
+        private Panel panel19;
+        private Label label39;
+        private PictureBox pictureBox8;
+        private CuoreUI.Controls.cuiButton cuiButton15;
     }
 }

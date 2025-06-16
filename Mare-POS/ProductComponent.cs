@@ -61,5 +61,10 @@ namespace Mare_POS.Ticket_Components
         {
             this.Close();
         }
+
+        private void cuiButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

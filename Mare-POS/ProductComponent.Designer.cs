@@ -328,6 +328,7 @@
             cuiButton1.TabIndex = 7;
             cuiButton1.TextAlignment = StringAlignment.Center;
             cuiButton1.TextOffset = new Point(0, 0);
+            cuiButton1.Click += cuiButton1_Click;
             // 
             // label5
             // 

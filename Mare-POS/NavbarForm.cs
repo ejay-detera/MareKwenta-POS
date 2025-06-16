@@ -1,6 +1,4 @@
 using Mare_POS.Ticket_Components;
-using Mare_POS.CashboxFolder;
-using Mare_POS.SaleshistoryFolder;
 
 namespace Mare_POS
 {
@@ -35,17 +33,19 @@ namespace Mare_POS
         {
             InitializeComponent();
             InitializeContentPanel();
+             // show ticket screen initially
             // Set default user type (you can change this based on login)
             CurrentUserType = UserType.Admin; // Default to User access
         }
 
+        
         private void InitializeContentPanel()
         {
             contentPanel.Dock = DockStyle.Fill;
             contentPanel.BackColor = Color.White;
             contentPanel.Location = new Point(navbarPanel.Width, 0);
             contentPanel.Name = "contentPanel";
-            contentPanel.Size = new Size(1440, 1024);
+            contentPanel.Size = new Size(1304, 985);
             Controls.Add(contentPanel);
             Controls.SetChildIndex(contentPanel, 0);
         }
@@ -152,7 +152,7 @@ namespace Mare_POS
 
         private void btn_receipt_Click(object sender, EventArgs e)
         {
-            LoadPage(new SaleshistoryForm()); // change the "ReceiptPage" to the name of you user control
+            LoadPage(new ReceiptPage()); // change the "ReceiptPage" to the name of you user control
             HighlightButton((Button)sender);
         }
 
@@ -180,6 +180,7 @@ namespace Mare_POS
             HighlightButton(btn_ticket);
         }
 
+        private void navbarPanel_Paint_1(object sender, PaintEventArgs e) { }
         private void bottomMarker_Paint(object sender, PaintEventArgs e) { }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -187,12 +188,11 @@ namespace Mare_POS
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void logo_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
 
-     }
+        }
+    }
 
     public class InventoryPage : UserControl
     {
@@ -251,24 +251,24 @@ namespace Mare_POS
         }
     }
 
-    //public class CashboxPage : UserControl
-    //{
-    //    public CashboxPage()
-    //    {
-    //        InitializeComponent();
-    //    }
+    public class CashboxPage : UserControl
+    {
+        public CashboxPage()
+        {
+            InitializeComponent();
+        }
 
-    //    private void InitializeComponent()
-    //    {
-    //        this.BackColor = Color.FromArgb(242, 239, 234);
-    //        Label label = new Label();
-    //        label.Text = "This is the Cashbox Page";
-    //        label.Font = new Font("Segoe UI", 16);
-    //        label.Dock = DockStyle.Fill;
-    //        label.TextAlign = ContentAlignment.MiddleCenter;
-    //        Controls.Add(label);
-    //    }
-    //}
+        private void InitializeComponent()
+        {
+            this.BackColor = Color.FromArgb(242, 239, 234);
+            Label label = new Label();
+            label.Text = "This is the Cashbox Page";
+            label.Font = new Font("Segoe UI", 16);
+            label.Dock = DockStyle.Fill;
+            label.TextAlign = ContentAlignment.MiddleCenter;
+            Controls.Add(label);
+        }
+    }
 
     public class TicketPage : UserControl
     {
