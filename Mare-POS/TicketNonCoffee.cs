@@ -149,5 +149,31 @@ namespace Mare_POS
                                 $"Extras: {extras}", "Order Summary");
             }
         }
+
+        private void label39_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cuiButton15_Click_1(object sender, EventArgs e)
+        {
+            var popup = new ProductComponent();
+            popup.StartPosition = FormStartPosition.CenterParent;  // Center the popup on the current form
+
+            if (popup.ShowDialog(this) == DialogResult.OK)  // Block parent form until popup is done
+            {
+                // Access the selected values
+                string size = popup.SelectedSize ?? "N/A";
+                string type = popup.SelectedType ?? "N/A";
+                int qty = popup.Quantity;
+                string extras = popup.SelectedExtras.Count > 0 ? string.Join(", ", popup.SelectedExtras) : "None";
+
+                // Display the result (or add to order/cart)
+                MessageBox.Show($"Added {qty}x Americano\n" +
+                                $"Size: {size}\n" +
+                                $"Type: {type}\n" +
+                                $"Extras: {extras}", "Order Summary");
+            }
+        }
     }
 }

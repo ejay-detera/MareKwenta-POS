@@ -278,7 +278,7 @@
             cuiButton2.ImageAutoCenter = true;
             cuiButton2.ImageExpand = new Point(0, 0);
             cuiButton2.ImageOffset = new Point(0, 0);
-            cuiButton2.Location = new Point(0, 0);
+            cuiButton2.Location = new Point(5, 3);
             cuiButton2.Name = "cuiButton2";
             cuiButton2.NormalBackground = Color.White;
             cuiButton2.NormalForeColor = Color.Black;
