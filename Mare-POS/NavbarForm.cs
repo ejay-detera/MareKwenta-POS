@@ -33,10 +33,12 @@ namespace Mare_POS
         {
             InitializeComponent();
             InitializeContentPanel();
+             // show ticket screen initially
             // Set default user type (you can change this based on login)
             CurrentUserType = UserType.Admin; // Default to User access
         }
 
+        
         private void InitializeContentPanel()
         {
             contentPanel.Dock = DockStyle.Fill;

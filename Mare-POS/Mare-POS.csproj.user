@@ -7,6 +7,12 @@
     <Compile Update="CashboxForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="DiscountButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="FoodQuantity.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="NavbarForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -28,33 +28,5 @@ C:\Users\Liberty Keith\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-win
 C:\Users\Liberty Keith\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.TicketFood.resources
 C:\Users\Liberty Keith\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.PopUpSplitComponent.resources
 C:\Users\Liberty Keith\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.ReceiptForm.resources
-C:\Users\Yanna\Source\Repos\MareKwenta-POS\Mare-POS\bin\Debug\net8.0-windows\Mare-POS.exe
-C:\Users\Yanna\Source\Repos\MareKwenta-POS\Mare-POS\bin\Debug\net8.0-windows\Mare-POS.deps.json
-C:\Users\Yanna\Source\Repos\MareKwenta-POS\Mare-POS\bin\Debug\net8.0-windows\Mare-POS.runtimeconfig.json
-C:\Users\Yanna\Source\Repos\MareKwenta-POS\Mare-POS\bin\Debug\net8.0-windows\Mare-POS.dll
-C:\Users\Yanna\Source\Repos\MareKwenta-POS\Mare-POS\bin\Debug\net8.0-windows\Mare-POS.pdb
-C:\Users\Yanna\Source\Repos\MareKwenta-POS\Mare-POS\bin\Debug\net8.0-windows\CuoreUI.dll
-C:\Users\Yanna\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare-POS.csproj.AssemblyReference.cache
-C:\Users\Yanna\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.AddExpenseForm.resources
-C:\Users\Yanna\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.CashboxForm.resources
-C:\Users\Yanna\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.NavbarForm.resources
-C:\Users\Yanna\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.PopUpSplitComponent.resources
-C:\Users\Yanna\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.Ticket_Components.ProductComponent.resources
-C:\Users\Yanna\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.Properties.Resources.resources
-C:\Users\Yanna\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.ReceiptForm.resources
-C:\Users\Yanna\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.Ticket_Components.TicketCoffee.resources
-C:\Users\Yanna\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.TicketFood.resources
-C:\Users\Yanna\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.TicketForm.resources
-C:\Users\Yanna\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.TicketNonCoffee.resources
-C:\Users\Yanna\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare-POS.csproj.GenerateResource.cache
-C:\Users\Yanna\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare-POS.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Yanna\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare-POS.AssemblyInfoInputs.cache
-C:\Users\Yanna\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare-POS.AssemblyInfo.cs
-C:\Users\Yanna\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare-POS.csproj.CoreCompileInputs.cache
-C:\Users\Yanna\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare-POS.sourcelink.json
-C:\Users\Yanna\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare-POS.csproj.Up2Date
-C:\Users\Yanna\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare-POS.dll
-C:\Users\Yanna\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\refint\Mare-POS.dll
-C:\Users\Yanna\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare-POS.pdb
-C:\Users\Yanna\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare-POS.genruntimeconfig.cache
-C:\Users\Yanna\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\ref\Mare-POS.dll
+C:\Users\Liberty Keith\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.DiscountButton.resources
+C:\Users\Liberty Keith\Source\Repos\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.FoodQuantity.resources

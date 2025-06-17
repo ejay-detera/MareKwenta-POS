@@ -47,10 +47,10 @@
             panel4 = new Panel();
             cuiSeparator3 = new CuoreUI.Controls.cuiSeparator();
             cuiSeparator4 = new CuoreUI.Controls.cuiSeparator();
-            cuiButton6 = new CuoreUI.Controls.cuiButton();
             label6 = new Label();
             comboBox2 = new ComboBox();
             cuiButton7 = new CuoreUI.Controls.cuiButton();
+            cuiButton6 = new CuoreUI.Controls.cuiButton();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -215,7 +215,7 @@
             // 
             label2.Font = new Font("Unbounded Medium", 13.7999992F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.FromArgb(78, 45, 24);
-            label2.Location = new Point(152, 9);
+            label2.Location = new Point(155, 9);
             label2.Name = "label2";
             label2.Size = new Size(176, 36);
             label2.TabIndex = 0;
@@ -368,43 +368,6 @@
             cuiSeparator4.Thickness = 0.5F;
             cuiSeparator4.Vertical = false;
             // 
-            // cuiButton6
-            // 
-            cuiButton6.CheckButton = false;
-            cuiButton6.Checked = false;
-            cuiButton6.CheckedBackground = Color.FromArgb(255, 106, 0);
-            cuiButton6.CheckedForeColor = Color.White;
-            cuiButton6.CheckedImageTint = Color.White;
-            cuiButton6.CheckedOutline = Color.FromArgb(255, 106, 0);
-            cuiButton6.Content = "CHARGE";
-            cuiButton6.DialogResult = DialogResult.None;
-            cuiButton6.Font = new Font("Unbounded", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiButton6.ForeColor = Color.White;
-            cuiButton6.HoverBackground = Color.White;
-            cuiButton6.HoveredImageTint = Color.White;
-            cuiButton6.HoverForeColor = Color.Black;
-            cuiButton6.HoverOutline = Color.FromArgb(32, 128, 128, 128);
-            cuiButton6.Image = null;
-            cuiButton6.ImageAutoCenter = true;
-            cuiButton6.ImageExpand = new Point(6, 6);
-            cuiButton6.ImageOffset = new Point(0, 0);
-            cuiButton6.Location = new Point(368, 374);
-            cuiButton6.Name = "cuiButton6";
-            cuiButton6.NormalBackground = Color.FromArgb(112, 138, 46);
-            cuiButton6.NormalForeColor = Color.White;
-            cuiButton6.NormalImageTint = Color.White;
-            cuiButton6.NormalOutline = Color.Transparent;
-            cuiButton6.OutlineThickness = 1F;
-            cuiButton6.PressedBackground = Color.WhiteSmoke;
-            cuiButton6.PressedForeColor = Color.FromArgb(32, 32, 32);
-            cuiButton6.PressedImageTint = Color.White;
-            cuiButton6.PressedOutline = Color.FromArgb(64, 128, 128, 128);
-            cuiButton6.Rounding = new Padding(8);
-            cuiButton6.Size = new Size(104, 35);
-            cuiButton6.TabIndex = 5;
-            cuiButton6.TextAlignment = StringAlignment.Center;
-            cuiButton6.TextOffset = new Point(0, 0);
-            // 
             // label6
             // 
             label6.Font = new Font("Unbounded", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -464,6 +427,43 @@
             cuiButton7.TabIndex = 1;
             cuiButton7.TextAlignment = StringAlignment.Center;
             cuiButton7.TextOffset = new Point(0, 0);
+            // 
+            // cuiButton6
+            // 
+            cuiButton6.CheckButton = false;
+            cuiButton6.Checked = false;
+            cuiButton6.CheckedBackground = Color.FromArgb(255, 106, 0);
+            cuiButton6.CheckedForeColor = Color.White;
+            cuiButton6.CheckedImageTint = Color.White;
+            cuiButton6.CheckedOutline = Color.FromArgb(255, 106, 0);
+            cuiButton6.Content = "CHARGE";
+            cuiButton6.DialogResult = DialogResult.None;
+            cuiButton6.Font = new Font("Unbounded", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cuiButton6.ForeColor = Color.White;
+            cuiButton6.HoverBackground = Color.White;
+            cuiButton6.HoveredImageTint = Color.White;
+            cuiButton6.HoverForeColor = Color.Black;
+            cuiButton6.HoverOutline = Color.FromArgb(32, 128, 128, 128);
+            cuiButton6.Image = null;
+            cuiButton6.ImageAutoCenter = true;
+            cuiButton6.ImageExpand = new Point(6, 6);
+            cuiButton6.ImageOffset = new Point(0, 0);
+            cuiButton6.Location = new Point(368, 374);
+            cuiButton6.Name = "cuiButton6";
+            cuiButton6.NormalBackground = Color.FromArgb(112, 138, 46);
+            cuiButton6.NormalForeColor = Color.White;
+            cuiButton6.NormalImageTint = Color.White;
+            cuiButton6.NormalOutline = Color.Transparent;
+            cuiButton6.OutlineThickness = 1F;
+            cuiButton6.PressedBackground = Color.WhiteSmoke;
+            cuiButton6.PressedForeColor = Color.FromArgb(32, 32, 32);
+            cuiButton6.PressedImageTint = Color.White;
+            cuiButton6.PressedOutline = Color.FromArgb(64, 128, 128, 128);
+            cuiButton6.Rounding = new Padding(8);
+            cuiButton6.Size = new Size(104, 35);
+            cuiButton6.TabIndex = 5;
+            cuiButton6.TextAlignment = StringAlignment.Center;
+            cuiButton6.TextOffset = new Point(0, 0);
             // 
             // PopUpSplitComponent
             // 
