@@ -354,6 +354,7 @@
             cuiButton16.TabIndex = 0;
             cuiButton16.TextAlignment = StringAlignment.Center;
             cuiButton16.TextOffset = new Point(0, 0);
+            cuiButton16.Click += cuiButton16_Click_1;
             // 
             // panel19
             // 
@@ -423,6 +424,7 @@
             cuiButton15.TabIndex = 0;
             cuiButton15.TextAlignment = StringAlignment.Center;
             cuiButton15.TextOffset = new Point(0, 0);
+            cuiButton15.Click += cuiButton15_Click_2;
             // 
             // panel18
             // 
@@ -492,6 +494,7 @@
             cuiButton14.TabIndex = 0;
             cuiButton14.TextAlignment = StringAlignment.Center;
             cuiButton14.TextOffset = new Point(0, 0);
+            cuiButton14.Click += cuiButton14_Click_1;
             // 
             // panel17
             // 
@@ -560,6 +563,7 @@
             cuiButton13.TabIndex = 0;
             cuiButton13.TextAlignment = StringAlignment.Center;
             cuiButton13.TextOffset = new Point(0, 0);
+            cuiButton13.Click += cuiButton13_Click_1;
             // 
             // panel30
             // 
@@ -629,6 +633,7 @@
             cuiButton28.TabIndex = 0;
             cuiButton28.TextAlignment = StringAlignment.Center;
             cuiButton28.TextOffset = new Point(0, 0);
+            cuiButton28.Click += cuiButton28_Click;
             // 
             // panel29
             // 
@@ -698,6 +703,7 @@
             cuiButton27.TabIndex = 0;
             cuiButton27.TextAlignment = StringAlignment.Center;
             cuiButton27.TextOffset = new Point(0, 0);
+            cuiButton27.Click += cuiButton27_Click;
             // 
             // panel28
             // 
@@ -767,6 +773,7 @@
             cuiButton18.TabIndex = 0;
             cuiButton18.TextAlignment = StringAlignment.Center;
             cuiButton18.TextOffset = new Point(0, 0);
+            cuiButton18.Click += cuiButton18_Click_1;
             // 
             // panel27
             // 
@@ -836,6 +843,7 @@
             cuiButton4.TabIndex = 0;
             cuiButton4.TextAlignment = StringAlignment.Center;
             cuiButton4.TextOffset = new Point(0, 0);
+            cuiButton4.Click += cuiButton4_Click;
             // 
             // panel22
             // 
@@ -904,6 +912,7 @@
             cuiButton1.TabIndex = 0;
             cuiButton1.TextAlignment = StringAlignment.Center;
             cuiButton1.TextOffset = new Point(0, 0);
+            cuiButton1.Click += cuiButton1_Click;
             // 
             // panel9
             // 
