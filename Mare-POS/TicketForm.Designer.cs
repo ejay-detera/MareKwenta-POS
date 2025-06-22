@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TicketForm));
             panelMain = new TableLayoutPanel();
             panel1 = new Panel();
+            cuiPanel5 = new CuoreUI.Controls.cuiPanel();
+            ticketNonCoffee1 = new TicketNonCoffee();
             tableLayoutPanel2 = new TableLayoutPanel();
             panel20 = new Panel();
             label33 = new Label();
@@ -85,8 +87,8 @@
             pictureBox1 = new PictureBox();
             btnCafeLatte = new CuoreUI.Controls.cuiButton();
             panel8 = new Panel();
-            label5 = new Label();
             pictureBox4 = new PictureBox();
+            label5 = new Label();
             btnAmericano = new CuoreUI.Controls.cuiButton();
             panel4 = new Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
@@ -98,6 +100,7 @@
             btnNonCoffee = new Button();
             panel3 = new Panel();
             label1 = new Label();
+            panel21 = new Panel();
             cuiPanel1 = new CuoreUI.Controls.cuiPanel();
             tableLayoutPanel11 = new TableLayoutPanel();
             cuiButton22 = new CuoreUI.Controls.cuiButton();
@@ -165,6 +168,7 @@
             label6 = new Label();
             panelMain.SuspendLayout();
             panel1.SuspendLayout();
+            cuiPanel5.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             panel20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
@@ -246,6 +250,8 @@
             panel1.Controls.Add(tableLayoutPanel2);
             panel1.Controls.Add(panel4);
             panel1.Controls.Add(panel3);
+            panel1.Controls.Add(panel21);
+            panel1.Controls.Add(cuiPanel5);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(0);
@@ -253,6 +259,27 @@
             panel1.Size = new Size(945, 1024);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
+            // 
+            // cuiPanel5
+            // 
+            cuiPanel5.Controls.Add(ticketNonCoffee1);
+            cuiPanel5.Location = new Point(11, 202);
+            cuiPanel5.Name = "cuiPanel5";
+            cuiPanel5.OutlineThickness = 1F;
+            cuiPanel5.PanelColor = Color.FromArgb(242, 239, 234);
+            cuiPanel5.PanelOutlineColor = Color.FromArgb(242, 239, 234);
+            cuiPanel5.Rounding = new Padding(8);
+            cuiPanel5.Size = new Size(934, 745);
+            cuiPanel5.TabIndex = 9;
+            cuiPanel5.Paint += cuiPanel5_Paint;
+            // 
+            // ticketNonCoffee1
+            // 
+            ticketNonCoffee1.BackColor = Color.FromArgb(242, 239, 234);
+            ticketNonCoffee1.Location = new Point(5, -1);
+            ticketNonCoffee1.Name = "ticketNonCoffee1";
+            ticketNonCoffee1.Size = new Size(907, 725);
+            ticketNonCoffee1.TabIndex = 0;
             // 
             // tableLayoutPanel2
             // 
@@ -277,13 +304,13 @@
             tableLayoutPanel2.Controls.Add(panel6, 2, 0);
             tableLayoutPanel2.Controls.Add(panel7, 1, 0);
             tableLayoutPanel2.Controls.Add(panel8, 0, 0);
-            tableLayoutPanel2.Location = new Point(42, 205);
+            tableLayoutPanel2.Location = new Point(15, 202);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 3;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
-            tableLayoutPanel2.Size = new Size(982, 727);
+            tableLayoutPanel2.Size = new Size(933, 745);
             tableLayoutPanel2.TabIndex = 7;
             // 
             // panel20
@@ -291,7 +318,7 @@
             panel20.Controls.Add(label33);
             panel20.Controls.Add(pictureBox9);
             panel20.Controls.Add(cuiButton16);
-            panel20.Location = new Point(591, 487);
+            panel20.Location = new Point(561, 499);
             panel20.Name = "panel20";
             panel20.Size = new Size(176, 215);
             panel20.TabIndex = 15;
@@ -299,7 +326,7 @@
             // label33
             // 
             label33.BackColor = Color.White;
-            label33.Font = new Font("Unbounded Medium", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label33.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label33.ForeColor = Color.FromArgb(78, 45, 24);
             label33.Location = new Point(16, 165);
             label33.Name = "label33";
@@ -354,13 +381,14 @@
             cuiButton16.TabIndex = 0;
             cuiButton16.TextAlignment = StringAlignment.Center;
             cuiButton16.TextOffset = new Point(0, 0);
+            cuiButton16.Click += cuiButton16_Click_1;
             // 
             // panel19
             // 
             panel19.Controls.Add(label32);
             panel19.Controls.Add(pictureBox8);
             panel19.Controls.Add(cuiButton15);
-            panel19.Location = new Point(395, 487);
+            panel19.Location = new Point(375, 499);
             panel19.Name = "panel19";
             panel19.Size = new Size(176, 215);
             panel19.TabIndex = 14;
@@ -368,7 +396,7 @@
             // label32
             // 
             label32.BackColor = Color.White;
-            label32.Font = new Font("Unbounded Medium", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label32.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label32.ForeColor = Color.FromArgb(78, 45, 24);
             label32.Location = new Point(16, 164);
             label32.Name = "label32";
@@ -423,13 +451,14 @@
             cuiButton15.TabIndex = 0;
             cuiButton15.TextAlignment = StringAlignment.Center;
             cuiButton15.TextOffset = new Point(0, 0);
+            cuiButton15.Click += cuiButton15_Click_2;
             // 
             // panel18
             // 
             panel18.Controls.Add(label31);
             panel18.Controls.Add(pictureBox7);
             panel18.Controls.Add(cuiButton14);
-            panel18.Location = new Point(199, 487);
+            panel18.Location = new Point(189, 499);
             panel18.Name = "panel18";
             panel18.Size = new Size(176, 215);
             panel18.TabIndex = 13;
@@ -437,7 +466,7 @@
             // label31
             // 
             label31.BackColor = Color.White;
-            label31.Font = new Font("Unbounded Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label31.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label31.ForeColor = Color.FromArgb(78, 45, 24);
             label31.Location = new Point(13, 165);
             label31.Name = "label31";
@@ -492,13 +521,14 @@
             cuiButton14.TabIndex = 0;
             cuiButton14.TextAlignment = StringAlignment.Center;
             cuiButton14.TextOffset = new Point(0, 0);
+            cuiButton14.Click += cuiButton14_Click_1;
             // 
             // panel17
             // 
             panel17.Controls.Add(label25);
             panel17.Controls.Add(pictureBox6);
             panel17.Controls.Add(cuiButton13);
-            panel17.Location = new Point(3, 487);
+            panel17.Location = new Point(3, 499);
             panel17.Name = "panel17";
             panel17.Size = new Size(176, 215);
             panel17.TabIndex = 12;
@@ -506,7 +536,7 @@
             // label25
             // 
             label25.BackColor = Color.White;
-            label25.Font = new Font("Unbounded Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label25.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label25.ForeColor = Color.FromArgb(78, 45, 24);
             label25.Location = new Point(16, 165);
             label25.Name = "label25";
@@ -560,13 +590,14 @@
             cuiButton13.TabIndex = 0;
             cuiButton13.TextAlignment = StringAlignment.Center;
             cuiButton13.TextOffset = new Point(0, 0);
+            cuiButton13.Click += cuiButton13_Click_1;
             // 
             // panel30
             // 
             panel30.Controls.Add(label49);
             panel30.Controls.Add(pictureBox19);
             panel30.Controls.Add(cuiButton28);
-            panel30.Location = new Point(787, 245);
+            panel30.Location = new Point(747, 251);
             panel30.Name = "panel30";
             panel30.Size = new Size(176, 215);
             panel30.TabIndex = 11;
@@ -574,7 +605,7 @@
             // label49
             // 
             label49.BackColor = Color.White;
-            label49.Font = new Font("Unbounded Medium", 7F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label49.Font = new Font("Microsoft Sans Serif", 7F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label49.ForeColor = Color.FromArgb(78, 45, 24);
             label49.Location = new Point(16, 165);
             label49.Name = "label49";
@@ -629,13 +660,14 @@
             cuiButton28.TabIndex = 0;
             cuiButton28.TextAlignment = StringAlignment.Center;
             cuiButton28.TextOffset = new Point(0, 0);
+            cuiButton28.Click += cuiButton28_Click;
             // 
             // panel29
             // 
             panel29.Controls.Add(label48);
             panel29.Controls.Add(pictureBox18);
             panel29.Controls.Add(cuiButton27);
-            panel29.Location = new Point(591, 245);
+            panel29.Location = new Point(561, 251);
             panel29.Name = "panel29";
             panel29.Size = new Size(176, 215);
             panel29.TabIndex = 10;
@@ -643,7 +675,7 @@
             // label48
             // 
             label48.BackColor = Color.White;
-            label48.Font = new Font("Unbounded Medium", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label48.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label48.ForeColor = Color.FromArgb(78, 45, 24);
             label48.Location = new Point(16, 165);
             label48.Name = "label48";
@@ -698,13 +730,14 @@
             cuiButton27.TabIndex = 0;
             cuiButton27.TextAlignment = StringAlignment.Center;
             cuiButton27.TextOffset = new Point(0, 0);
+            cuiButton27.Click += cuiButton27_Click;
             // 
             // panel28
             // 
             panel28.Controls.Add(label47);
             panel28.Controls.Add(pictureBox17);
             panel28.Controls.Add(cuiButton18);
-            panel28.Location = new Point(395, 245);
+            panel28.Location = new Point(375, 251);
             panel28.Name = "panel28";
             panel28.Size = new Size(176, 215);
             panel28.TabIndex = 9;
@@ -712,7 +745,7 @@
             // label47
             // 
             label47.BackColor = Color.White;
-            label47.Font = new Font("Unbounded Medium", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label47.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label47.ForeColor = Color.FromArgb(78, 45, 24);
             label47.Location = new Point(16, 164);
             label47.Name = "label47";
@@ -767,13 +800,14 @@
             cuiButton18.TabIndex = 0;
             cuiButton18.TextAlignment = StringAlignment.Center;
             cuiButton18.TextOffset = new Point(0, 0);
+            cuiButton18.Click += cuiButton18_Click_1;
             // 
             // panel27
             // 
             panel27.Controls.Add(label46);
             panel27.Controls.Add(pictureBox16);
             panel27.Controls.Add(cuiButton4);
-            panel27.Location = new Point(199, 245);
+            panel27.Location = new Point(189, 251);
             panel27.Name = "panel27";
             panel27.Size = new Size(176, 215);
             panel27.TabIndex = 8;
@@ -781,7 +815,7 @@
             // label46
             // 
             label46.BackColor = Color.White;
-            label46.Font = new Font("Unbounded Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label46.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label46.ForeColor = Color.FromArgb(78, 45, 24);
             label46.Location = new Point(13, 165);
             label46.Name = "label46";
@@ -836,13 +870,14 @@
             cuiButton4.TabIndex = 0;
             cuiButton4.TextAlignment = StringAlignment.Center;
             cuiButton4.TextOffset = new Point(0, 0);
+            cuiButton4.Click += cuiButton4_Click;
             // 
             // panel22
             // 
             panel22.Controls.Add(label45);
             panel22.Controls.Add(pictureBox11);
             panel22.Controls.Add(cuiButton1);
-            panel22.Location = new Point(3, 245);
+            panel22.Location = new Point(3, 251);
             panel22.Name = "panel22";
             panel22.Size = new Size(176, 215);
             panel22.TabIndex = 7;
@@ -850,7 +885,7 @@
             // label45
             // 
             label45.BackColor = Color.White;
-            label45.Font = new Font("Unbounded Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label45.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label45.ForeColor = Color.FromArgb(78, 45, 24);
             label45.Location = new Point(16, 165);
             label45.Name = "label45";
@@ -904,13 +939,14 @@
             cuiButton1.TabIndex = 0;
             cuiButton1.TextAlignment = StringAlignment.Center;
             cuiButton1.TextOffset = new Point(0, 0);
+            cuiButton1.Click += cuiButton1_Click;
             // 
             // panel9
             // 
             panel9.Controls.Add(label9);
             panel9.Controls.Add(pictureBox5);
             panel9.Controls.Add(cuiButton5);
-            panel9.Location = new Point(787, 3);
+            panel9.Location = new Point(747, 3);
             panel9.Name = "panel9";
             panel9.Size = new Size(176, 215);
             panel9.TabIndex = 6;
@@ -918,7 +954,7 @@
             // label9
             // 
             label9.BackColor = Color.White;
-            label9.Font = new Font("Unbounded Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label9.ForeColor = Color.FromArgb(78, 45, 24);
             label9.Location = new Point(16, 165);
             label9.Name = "label9";
@@ -980,7 +1016,7 @@
             panel5.Controls.Add(label4);
             panel5.Controls.Add(pictureBox3);
             panel5.Controls.Add(cuiButton3);
-            panel5.Location = new Point(591, 3);
+            panel5.Location = new Point(561, 3);
             panel5.Name = "panel5";
             panel5.Size = new Size(176, 215);
             panel5.TabIndex = 5;
@@ -988,7 +1024,7 @@
             // label4
             // 
             label4.BackColor = Color.White;
-            label4.Font = new Font("Unbounded Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.FromArgb(78, 45, 24);
             label4.Location = new Point(16, 165);
             label4.Name = "label4";
@@ -1050,7 +1086,7 @@
             panel6.Controls.Add(label3);
             panel6.Controls.Add(pictureBox2);
             panel6.Controls.Add(cuiButton2);
-            panel6.Location = new Point(395, 3);
+            panel6.Location = new Point(375, 3);
             panel6.Name = "panel6";
             panel6.Size = new Size(176, 215);
             panel6.TabIndex = 5;
@@ -1058,7 +1094,7 @@
             // label3
             // 
             label3.BackColor = Color.White;
-            label3.Font = new Font("Unbounded Medium", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.FromArgb(78, 45, 24);
             label3.Location = new Point(16, 164);
             label3.Name = "label3";
@@ -1120,7 +1156,7 @@
             panel7.Controls.Add(label2);
             panel7.Controls.Add(pictureBox1);
             panel7.Controls.Add(btnCafeLatte);
-            panel7.Location = new Point(199, 3);
+            panel7.Location = new Point(189, 3);
             panel7.Name = "panel7";
             panel7.Size = new Size(176, 215);
             panel7.TabIndex = 5;
@@ -1128,7 +1164,7 @@
             // label2
             // 
             label2.BackColor = Color.White;
-            label2.Font = new Font("Unbounded Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.FromArgb(78, 45, 24);
             label2.Location = new Point(13, 165);
             label2.Name = "label2";
@@ -1188,25 +1224,13 @@
             // 
             // panel8
             // 
-            panel8.Controls.Add(label5);
             panel8.Controls.Add(pictureBox4);
+            panel8.Controls.Add(label5);
             panel8.Controls.Add(btnAmericano);
             panel8.Location = new Point(3, 3);
             panel8.Name = "panel8";
             panel8.Size = new Size(176, 215);
             panel8.TabIndex = 4;
-            // 
-            // label5
-            // 
-            label5.Anchor = AnchorStyles.None;
-            label5.BackColor = Color.White;
-            label5.Font = new Font("Unbounded Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.FromArgb(78, 45, 24);
-            label5.Location = new Point(16, 165);
-            label5.Name = "label5";
-            label5.Size = new Size(139, 25);
-            label5.TabIndex = 3;
-            label5.Text = "Americano";
             // 
             // pictureBox4
             // 
@@ -1217,6 +1241,18 @@
             pictureBox4.Size = new Size(147, 147);
             pictureBox4.TabIndex = 1;
             pictureBox4.TabStop = false;
+            // 
+            // label5
+            // 
+            label5.Anchor = AnchorStyles.None;
+            label5.BackColor = Color.White;
+            label5.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.FromArgb(78, 45, 24);
+            label5.Location = new Point(16, 165);
+            label5.Name = "label5";
+            label5.Size = new Size(139, 25);
+            label5.TabIndex = 3;
+            label5.Text = "Americano";
             // 
             // btnAmericano
             // 
@@ -1265,7 +1301,7 @@
             panel4.Location = new Point(0, 87);
             panel4.Margin = new Padding(3, 4, 3, 4);
             panel4.Name = "panel4";
-            panel4.Size = new Size(1024, 92);
+            panel4.Size = new Size(948, 92);
             panel4.TabIndex = 6;
             // 
             // tableLayoutPanel1
@@ -1280,7 +1316,7 @@
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(759, 58);
+            tableLayoutPanel1.Size = new Size(683, 58);
             tableLayoutPanel1.TabIndex = 23;
             // 
             // cuiPanel4
@@ -1294,7 +1330,7 @@
             cuiPanel4.PanelColor = Color.FromArgb(242, 239, 234);
             cuiPanel4.PanelOutlineColor = Color.Silver;
             cuiPanel4.Rounding = new Padding(0);
-            cuiPanel4.Size = new Size(759, 58);
+            cuiPanel4.Size = new Size(683, 58);
             cuiPanel4.TabIndex = 0;
             // 
             // tableLayoutPanel14
@@ -1322,7 +1358,7 @@
             btnFood.AutoSize = true;
             btnFood.FlatAppearance.BorderSize = 0;
             btnFood.FlatStyle = FlatStyle.Flat;
-            btnFood.Font = new Font("Unbounded", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnFood.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnFood.ForeColor = Color.FromArgb(78, 45, 24);
             btnFood.Location = new Point(552, 4);
             btnFood.Margin = new Padding(3, 4, 3, 4);
@@ -1338,7 +1374,7 @@
             btnAll.AutoSize = true;
             btnAll.FlatAppearance.BorderSize = 0;
             btnAll.FlatStyle = FlatStyle.Flat;
-            btnAll.Font = new Font("Unbounded", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAll.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnAll.ForeColor = Color.FromArgb(78, 45, 24);
             btnAll.Location = new Point(3, 4);
             btnAll.Margin = new Padding(3, 4, 3, 4);
@@ -1355,7 +1391,7 @@
             btnCoffee.AutoSize = true;
             btnCoffee.FlatAppearance.BorderSize = 0;
             btnCoffee.FlatStyle = FlatStyle.Flat;
-            btnCoffee.Font = new Font("Unbounded", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCoffee.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnCoffee.ForeColor = Color.FromArgb(78, 45, 24);
             btnCoffee.Location = new Point(160, 4);
             btnCoffee.Margin = new Padding(3, 4, 3, 4);
@@ -1372,7 +1408,7 @@
             btnNonCoffee.AutoSize = true;
             btnNonCoffee.FlatAppearance.BorderSize = 0;
             btnNonCoffee.FlatStyle = FlatStyle.Flat;
-            btnNonCoffee.Font = new Font("Unbounded", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnNonCoffee.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnNonCoffee.ForeColor = Color.FromArgb(78, 45, 24);
             btnNonCoffee.Location = new Point(356, 4);
             btnNonCoffee.Margin = new Padding(3, 4, 3, 4);
@@ -1390,12 +1426,12 @@
             panel3.Location = new Point(0, 0);
             panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1024, 87);
+            panel3.Size = new Size(948, 87);
             panel3.TabIndex = 5;
             // 
             // label1
             // 
-            label1.Font = new Font("Unbounded Medium", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(78, 45, 24);
             label1.Location = new Point(1, 15);
             label1.Name = "label1";
@@ -1403,6 +1439,13 @@
             label1.Size = new Size(363, 68);
             label1.TabIndex = 6;
             label1.Text = "Hello, User";
+            // 
+            // panel21
+            // 
+            panel21.Location = new Point(39, 205);
+            panel21.Name = "panel21";
+            panel21.Size = new Size(903, 727);
+            panel21.TabIndex = 8;
             // 
             // cuiPanel1
             // 
@@ -1459,7 +1502,7 @@
             cuiButton22.CheckedOutline = Color.FromArgb(255, 106, 0);
             cuiButton22.Content = "Gcash";
             cuiButton22.DialogResult = DialogResult.None;
-            cuiButton22.Font = new Font("Unbounded SemiBold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cuiButton22.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiButton22.ForeColor = Color.White;
             cuiButton22.HoverBackground = Color.White;
             cuiButton22.HoveredImageTint = Color.White;
@@ -1498,7 +1541,7 @@
             cuiButton25.CheckedOutline = Color.FromArgb(255, 106, 0);
             cuiButton25.Content = "Charge";
             cuiButton25.DialogResult = DialogResult.None;
-            cuiButton25.Font = new Font("Unbounded SemiBold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cuiButton25.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiButton25.ForeColor = Color.White;
             cuiButton25.HoverBackground = Color.White;
             cuiButton25.HoveredImageTint = Color.White;
@@ -1538,7 +1581,7 @@
             cuiButton23.CheckedOutline = Color.FromArgb(255, 106, 0);
             cuiButton23.Content = "Maya";
             cuiButton23.DialogResult = DialogResult.None;
-            cuiButton23.Font = new Font("Unbounded SemiBold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cuiButton23.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiButton23.ForeColor = Color.White;
             cuiButton23.HoverBackground = Color.White;
             cuiButton23.HoveredImageTint = Color.White;
@@ -1577,7 +1620,7 @@
             cuiButton24.CheckedOutline = Color.FromArgb(255, 106, 0);
             cuiButton24.Content = "Split";
             cuiButton24.DialogResult = DialogResult.None;
-            cuiButton24.Font = new Font("Unbounded SemiBold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cuiButton24.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiButton24.ForeColor = Color.White;
             cuiButton24.HoverBackground = Color.White;
             cuiButton24.HoveredImageTint = Color.White;
@@ -1635,7 +1678,7 @@
             // label29
             // 
             label29.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            label29.Font = new Font("Unbounded", 21F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label29.Font = new Font("Microsoft Sans Serif", 21F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label29.ForeColor = Color.FromArgb(78, 45, 24);
             label29.Location = new Point(80, 1);
             label29.Name = "label29";
@@ -1646,7 +1689,7 @@
             // label17
             // 
             label17.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            label17.Font = new Font("Unbounded Light", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label17.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label17.ForeColor = Color.FromArgb(78, 45, 24);
             label17.Location = new Point(114, 13);
             label17.Name = "label17";
@@ -1657,7 +1700,7 @@
             // label22
             // 
             label22.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            label22.Font = new Font("Unbounded", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label22.Font = new Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label22.ForeColor = Color.FromArgb(78, 45, 24);
             label22.Location = new Point(110, 3);
             label22.Name = "label22";
@@ -1679,7 +1722,7 @@
             // label30
             // 
             label30.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label30.Font = new Font("Unbounded", 21F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label30.Font = new Font("Microsoft Sans Serif", 21F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label30.ForeColor = Color.FromArgb(78, 45, 24);
             label30.Location = new Point(9, 1);
             label30.Name = "label30";
@@ -1690,7 +1733,7 @@
             // label23
             // 
             label23.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label23.Font = new Font("Unbounded Light", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label23.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label23.ForeColor = Color.FromArgb(78, 45, 24);
             label23.Location = new Point(26, 13);
             label23.Name = "label23";
@@ -1701,7 +1744,7 @@
             // label24
             // 
             label24.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            label24.Font = new Font("Unbounded SemiBold", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label24.Font = new Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label24.ForeColor = Color.FromArgb(78, 45, 24);
             label24.Location = new Point(65, 2);
             label24.Name = "label24";
@@ -1738,7 +1781,7 @@
             // label16
             // 
             label16.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            label16.Font = new Font("Unbounded Light", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label16.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label16.ForeColor = Color.FromArgb(78, 45, 24);
             label16.Location = new Point(67, 13);
             label16.Name = "label16";
@@ -1749,7 +1792,7 @@
             // label14
             // 
             label14.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            label14.Font = new Font("Unbounded", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label14.Font = new Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label14.ForeColor = Color.FromArgb(78, 45, 24);
             label14.Location = new Point(63, 3);
             label14.Name = "label14";
@@ -1770,7 +1813,7 @@
             // label28
             // 
             label28.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label28.Font = new Font("Unbounded Light", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label28.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label28.ForeColor = Color.FromArgb(78, 45, 24);
             label28.Location = new Point(26, 13);
             label28.Name = "label28";
@@ -1781,7 +1824,7 @@
             // label15
             // 
             label15.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            label15.Font = new Font("Unbounded SemiBold", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label15.Font = new Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label15.ForeColor = Color.FromArgb(78, 45, 24);
             label15.Location = new Point(64, 2);
             label15.Name = "label15";
@@ -1826,7 +1869,7 @@
             cuiButton6.CheckedOutline = Color.FromArgb(255, 106, 0);
             cuiButton6.Content = "₱1000";
             cuiButton6.DialogResult = DialogResult.None;
-            cuiButton6.Font = new Font("Unbounded Medium", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cuiButton6.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiButton6.ForeColor = Color.FromArgb(0, 145, 247);
             cuiButton6.HoverBackground = Color.FromArgb(0, 145, 247);
             cuiButton6.HoveredImageTint = Color.White;
@@ -1865,7 +1908,7 @@
             cuiButton7.CheckedOutline = Color.FromArgb(255, 213, 0);
             cuiButton7.Content = "₱500";
             cuiButton7.DialogResult = DialogResult.None;
-            cuiButton7.Font = new Font("Unbounded Medium", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cuiButton7.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiButton7.ForeColor = Color.FromArgb(255, 213, 0);
             cuiButton7.HoverBackground = Color.FromArgb(255, 213, 0);
             cuiButton7.HoveredImageTint = Color.White;
@@ -1904,7 +1947,7 @@
             cuiButton8.CheckedOutline = Color.FromArgb(135, 167, 10);
             cuiButton8.Content = "₱200";
             cuiButton8.DialogResult = DialogResult.None;
-            cuiButton8.Font = new Font("Unbounded Medium", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cuiButton8.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiButton8.ForeColor = Color.FromArgb(135, 167, 10);
             cuiButton8.HoverBackground = Color.FromArgb(135, 167, 10);
             cuiButton8.HoveredImageTint = Color.White;
@@ -1943,7 +1986,7 @@
             cuiButton9.CheckedOutline = Color.FromArgb(255, 106, 0);
             cuiButton9.Content = "₱100";
             cuiButton9.DialogResult = DialogResult.None;
-            cuiButton9.Font = new Font("Unbounded Medium", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cuiButton9.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiButton9.ForeColor = Color.FromArgb(92, 0, 153);
             cuiButton9.HoverBackground = Color.FromArgb(92, 0, 153);
             cuiButton9.HoveredImageTint = Color.White;
@@ -1982,7 +2025,7 @@
             cuiButton10.CheckedOutline = Color.FromArgb(195, 14, 14);
             cuiButton10.Content = "₱50";
             cuiButton10.DialogResult = DialogResult.None;
-            cuiButton10.Font = new Font("Unbounded Medium", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cuiButton10.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiButton10.ForeColor = Color.FromArgb(195, 14, 14);
             cuiButton10.HoverBackground = Color.FromArgb(195, 14, 14);
             cuiButton10.HoveredImageTint = Color.White;
@@ -2021,7 +2064,7 @@
             cuiButton11.CheckedOutline = Color.FromArgb(255, 106, 0);
             cuiButton11.Content = "₱20";
             cuiButton11.DialogResult = DialogResult.None;
-            cuiButton11.Font = new Font("Unbounded Medium", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cuiButton11.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiButton11.ForeColor = Color.FromArgb(248, 150, 30);
             cuiButton11.HoverBackground = Color.FromArgb(248, 150, 30);
             cuiButton11.HoveredImageTint = Color.White;
@@ -2060,7 +2103,7 @@
             cuiButton12.CheckedOutline = Color.FromArgb(158, 43, 43);
             cuiButton12.Content = "Clear";
             cuiButton12.DialogResult = DialogResult.None;
-            cuiButton12.Font = new Font("Unbounded Medium", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cuiButton12.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiButton12.ForeColor = Color.FromArgb(158, 43, 43);
             cuiButton12.HoverBackground = Color.FromArgb(158, 43, 43);
             cuiButton12.HoveredImageTint = Color.White;
@@ -2096,7 +2139,7 @@
             cuiTextBox1.FocusBackgroundColor = Color.White;
             cuiTextBox1.FocusBorderColor = Color.FromArgb(255, 106, 0);
             cuiTextBox1.FocusImageTint = Color.White;
-            cuiTextBox1.Font = new Font("Unbounded", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cuiTextBox1.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cuiTextBox1.ForeColor = Color.FromArgb(78, 45, 24);
             cuiTextBox1.Image = null;
             cuiTextBox1.ImageExpand = new Point(0, 0);
@@ -2106,7 +2149,7 @@
             cuiTextBox1.Multiline = true;
             cuiTextBox1.Name = "cuiTextBox1";
             cuiTextBox1.NormalImageTint = Color.White;
-            cuiTextBox1.Padding = new Padding(19, 6, 19, 6);
+            cuiTextBox1.Padding = new Padding(17, 6, 17, 6);
             cuiTextBox1.PasswordChar = false;
             cuiTextBox1.PlaceholderColor = SystemColors.WindowText;
             cuiTextBox1.PlaceholderText = "";
@@ -2152,7 +2195,7 @@
             btnDiscount.BackColor = Color.Transparent;
             btnDiscount.FlatAppearance.BorderSize = 0;
             btnDiscount.FlatStyle = FlatStyle.Flat;
-            btnDiscount.Font = new Font("Unbounded", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnDiscount.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnDiscount.ForeColor = Color.FromArgb(78, 45, 24);
             btnDiscount.Location = new Point(259, 9);
             btnDiscount.Name = "btnDiscount";
@@ -2168,7 +2211,7 @@
             button5.BackColor = Color.Transparent;
             button5.FlatAppearance.BorderSize = 0;
             button5.FlatStyle = FlatStyle.Flat;
-            button5.Font = new Font("Unbounded", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button5.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button5.ForeColor = Color.FromArgb(78, 45, 24);
             button5.Location = new Point(87, 9);
             button5.Name = "button5";
@@ -2204,7 +2247,7 @@
             // label26
             // 
             label26.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            label26.Font = new Font("Unbounded", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label26.Font = new Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label26.ForeColor = Color.FromArgb(78, 45, 24);
             label26.Location = new Point(16, 3);
             label26.Name = "label26";
@@ -2224,7 +2267,7 @@
             // label27
             // 
             label27.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            label27.Font = new Font("Unbounded SemiBold", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label27.Font = new Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label27.ForeColor = Color.FromArgb(78, 45, 24);
             label27.Location = new Point(63, 2);
             label27.Name = "label27";
@@ -2259,7 +2302,7 @@
             // 
             cuiLabel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             cuiLabel1.Content = "-----------------------------------------------------------------------------------------------";
-            cuiLabel1.Font = new Font("Unbounded Medium", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cuiLabel1.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiLabel1.ForeColor = Color.FromArgb(139, 99, 65);
             cuiLabel1.HorizontalAlignment = StringAlignment.Center;
             cuiLabel1.Location = new Point(9, 5);
@@ -2308,7 +2351,7 @@
             // label44
             // 
             label44.BackColor = Color.Transparent;
-            label44.Font = new Font("Unbounded ExtraLight", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label44.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label44.ForeColor = Color.FromArgb(78, 45, 24);
             label44.Location = new Point(106, 88);
             label44.Name = "label44";
@@ -2319,7 +2362,7 @@
             // label43
             // 
             label43.BackColor = Color.Transparent;
-            label43.Font = new Font("Unbounded ExtraLight", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label43.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label43.ForeColor = Color.FromArgb(78, 45, 24);
             label43.Location = new Point(77, 66);
             label43.Name = "label43";
@@ -2330,7 +2373,7 @@
             // label42
             // 
             label42.BackColor = Color.Transparent;
-            label42.Font = new Font("Unbounded ExtraLight", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label42.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label42.ForeColor = Color.FromArgb(78, 45, 24);
             label42.Location = new Point(74, 43);
             label42.Name = "label42";
@@ -2342,7 +2385,7 @@
             // 
             label8.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             label8.BackColor = Color.Transparent;
-            label8.Font = new Font("Unbounded SemiBold", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.ForeColor = Color.FromArgb(112, 138, 46);
             label8.Location = new Point(336, 92);
             label8.Name = "label8";
@@ -2353,7 +2396,7 @@
             // label10
             // 
             label10.BackColor = Color.Transparent;
-            label10.Font = new Font("Unbounded ExtraLight", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label10.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label10.ForeColor = Color.FromArgb(78, 45, 24);
             label10.Location = new Point(17, 88);
             label10.Name = "label10";
@@ -2364,7 +2407,7 @@
             // label11
             // 
             label11.BackColor = Color.Transparent;
-            label11.Font = new Font("Unbounded ExtraLight", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label11.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label11.ForeColor = Color.FromArgb(78, 45, 24);
             label11.Location = new Point(17, 66);
             label11.Name = "label11";
@@ -2375,7 +2418,7 @@
             // label12
             // 
             label12.BackColor = Color.Transparent;
-            label12.Font = new Font("Unbounded ExtraLight", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label12.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label12.ForeColor = Color.FromArgb(78, 45, 24);
             label12.Location = new Point(17, 43);
             label12.Name = "label12";
@@ -2386,7 +2429,7 @@
             // label13
             // 
             label13.BackColor = Color.White;
-            label13.Font = new Font("Unbounded Medium", 13.7999992F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label13.Font = new Font("Microsoft Sans Serif", 13.7999992F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label13.ForeColor = Color.FromArgb(78, 45, 24);
             label13.Location = new Point(17, 8);
             label13.Name = "label13";
@@ -2432,7 +2475,7 @@
             // label41
             // 
             label41.BackColor = Color.Transparent;
-            label41.Font = new Font("Unbounded ExtraLight", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label41.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label41.ForeColor = Color.FromArgb(78, 45, 24);
             label41.Location = new Point(106, 88);
             label41.Name = "label41";
@@ -2443,7 +2486,7 @@
             // label40
             // 
             label40.BackColor = Color.Transparent;
-            label40.Font = new Font("Unbounded ExtraLight", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label40.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label40.ForeColor = Color.FromArgb(78, 45, 24);
             label40.Location = new Point(74, 66);
             label40.Name = "label40";
@@ -2454,7 +2497,7 @@
             // label35
             // 
             label35.BackColor = Color.Transparent;
-            label35.Font = new Font("Unbounded ExtraLight", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label35.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label35.ForeColor = Color.FromArgb(78, 45, 24);
             label35.Location = new Point(71, 43);
             label35.Name = "label35";
@@ -2466,7 +2509,7 @@
             // 
             label7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             label7.BackColor = Color.Transparent;
-            label7.Font = new Font("Unbounded SemiBold", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.FromArgb(112, 138, 46);
             label7.Location = new Point(336, 92);
             label7.Name = "label7";
@@ -2477,7 +2520,7 @@
             // label21
             // 
             label21.BackColor = Color.Transparent;
-            label21.Font = new Font("Unbounded ExtraLight", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label21.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label21.ForeColor = Color.FromArgb(78, 45, 24);
             label21.Location = new Point(17, 88);
             label21.Name = "label21";
@@ -2488,7 +2531,7 @@
             // label20
             // 
             label20.BackColor = Color.Transparent;
-            label20.Font = new Font("Unbounded ExtraLight", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label20.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label20.ForeColor = Color.FromArgb(78, 45, 24);
             label20.Location = new Point(17, 66);
             label20.Name = "label20";
@@ -2499,7 +2542,7 @@
             // label19
             // 
             label19.BackColor = Color.Transparent;
-            label19.Font = new Font("Unbounded ExtraLight", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label19.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label19.ForeColor = Color.FromArgb(78, 45, 24);
             label19.Location = new Point(17, 43);
             label19.Name = "label19";
@@ -2510,7 +2553,7 @@
             // label18
             // 
             label18.BackColor = Color.White;
-            label18.Font = new Font("Unbounded Medium", 13.7999992F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label18.Font = new Font("Microsoft Sans Serif", 13.7999992F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label18.ForeColor = Color.FromArgb(78, 45, 24);
             label18.Location = new Point(17, 8);
             label18.Name = "label18";
@@ -2529,7 +2572,7 @@
             // 
             // label6
             // 
-            label6.Font = new Font("Unbounded Medium", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.FromArgb(78, 45, 24);
             label6.Location = new Point(3, 8);
             label6.Name = "label6";
@@ -2549,6 +2592,7 @@
             panelMain.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            cuiPanel5.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
             panel20.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
@@ -2614,30 +2658,9 @@
 
         private TableLayoutPanel panelMain;
         private Panel panel1;
-        private TableLayoutPanel tableLayoutPanel2;
-        private Panel panel5;
-        private PictureBox pictureBox3;
-        private CuoreUI.Controls.cuiButton cuiButton3;
-        private Panel panel6;
-        private PictureBox pictureBox2;
-        private CuoreUI.Controls.cuiButton cuiButton2;
-        private Panel panel7;
-        private PictureBox pictureBox1;
-        private CuoreUI.Controls.cuiButton btnCafeLatte;
-        private Panel panel8;
-        private PictureBox pictureBox4;
-        private CuoreUI.Controls.cuiButton btnAmericano;
         private Panel panel4;
         private Panel panel3;
         private Label label1;
-        private Panel panel9;
-        private PictureBox pictureBox5;
-        private CuoreUI.Controls.cuiButton cuiButton5;
-        private Label label5;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label9;
         private CuoreUI.Controls.cuiPanel cuiPanel1;
         private Panel panel2;
         private Label label6;
@@ -2710,6 +2733,8 @@
         private Label label44;
         private Label label43;
         private Label label42;
+        private Panel panel21;
+        private TableLayoutPanel tableLayoutPanel2;
         private Panel panel20;
         private Label label33;
         private PictureBox pictureBox9;
@@ -2746,5 +2771,27 @@
         private Label label45;
         private PictureBox pictureBox11;
         private CuoreUI.Controls.cuiButton cuiButton1;
+        private Panel panel9;
+        private Label label9;
+        private PictureBox pictureBox5;
+        private CuoreUI.Controls.cuiButton cuiButton5;
+        private Panel panel5;
+        private Label label4;
+        private PictureBox pictureBox3;
+        private CuoreUI.Controls.cuiButton cuiButton3;
+        private Panel panel6;
+        private Label label3;
+        private PictureBox pictureBox2;
+        private CuoreUI.Controls.cuiButton cuiButton2;
+        private Panel panel7;
+        private Label label2;
+        private PictureBox pictureBox1;
+        private CuoreUI.Controls.cuiButton btnCafeLatte;
+        private Panel panel8;
+        private PictureBox pictureBox4;
+        private Label label5;
+        private CuoreUI.Controls.cuiButton btnAmericano;
+        private CuoreUI.Controls.cuiPanel cuiPanel5;
+        private TicketNonCoffee ticketNonCoffee1;
     }
 }

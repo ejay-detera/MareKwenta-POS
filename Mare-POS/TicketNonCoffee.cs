@@ -149,5 +149,10 @@ namespace Mare_POS
                                 $"Extras: {extras}", "Order Summary");
             }
         }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

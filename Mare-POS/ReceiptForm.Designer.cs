@@ -129,7 +129,7 @@
             // 
             cuiLabel1.Anchor = AnchorStyles.None;
             cuiLabel1.Content = "Don\\ Fabian,\\ Quezon\\ City,\\ 1121\\ Metro\\ Manila";
-            cuiLabel1.Font = new Font("Inter 28pt 28pt", 11F);
+            cuiLabel1.Font = new Font("Microsoft Sans Serif", 11F);
             cuiLabel1.HorizontalAlignment = StringAlignment.Center;
             cuiLabel1.Location = new Point(13, 60);
             cuiLabel1.Margin = new Padding(4, 5, 4, 5);
@@ -141,7 +141,7 @@
             // label1
             // 
             label1.Anchor = AnchorStyles.None;
-            label1.Font = new Font("Unbounded Medium", 13.7999992F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 13.7999992F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(78, 45, 24);
             label1.Location = new Point(83, 22);
             label1.Name = "label1";
@@ -168,7 +168,7 @@
             cuiLabel2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             cuiLabel2.BackColor = Color.White;
             cuiLabel2.Content = "------------------------------------------------------------------------------------";
-            cuiLabel2.Font = new Font("Unbounded Light", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cuiLabel2.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cuiLabel2.ForeColor = Color.Black;
             cuiLabel2.HorizontalAlignment = StringAlignment.Center;
             cuiLabel2.Location = new Point(12, 91);
@@ -180,19 +180,20 @@
             // 
             // label4
             // 
-            label4.Font = new Font("Inter 28pt 28pt", 10F, FontStyle.Bold);
+            label4.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             label4.Location = new Point(13, 66);
             label4.Name = "label4";
             label4.Size = new Size(74, 25);
             label4.TabIndex = 33;
             label4.Text = "Dine in";
+            label4.Click += label4_Click;
             // 
             // cuiLabel3
             // 
             cuiLabel3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             cuiLabel3.BackColor = Color.White;
             cuiLabel3.Content = "------------------------------------------------------------------------------------";
-            cuiLabel3.Font = new Font("Unbounded Light", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cuiLabel3.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cuiLabel3.ForeColor = Color.Black;
             cuiLabel3.HorizontalAlignment = StringAlignment.Center;
             cuiLabel3.Location = new Point(13, 41);
@@ -204,7 +205,7 @@
             // 
             // label3
             // 
-            label3.Font = new Font("Inter 28pt 28pt", 10F, FontStyle.Bold);
+            label3.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             label3.Location = new Point(110, 22);
             label3.Name = "label3";
             label3.Size = new Size(69, 25);
@@ -213,7 +214,7 @@
             // 
             // label2
             // 
-            label2.Font = new Font("Inter 28pt 28pt", 10F, FontStyle.Bold);
+            label2.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             label2.Location = new Point(13, 22);
             label2.Name = "label2";
             label2.Size = new Size(97, 25);
@@ -235,7 +236,7 @@
             cuiLabel4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             cuiLabel4.BackColor = Color.White;
             cuiLabel4.Content = "------------------------------------------------------------------------------";
-            cuiLabel4.Font = new Font("Unbounded Light", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cuiLabel4.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cuiLabel4.ForeColor = Color.Black;
             cuiLabel4.HorizontalAlignment = StringAlignment.Center;
             cuiLabel4.Location = new Point(13, 274);
@@ -287,7 +288,7 @@
             // 
             // label28
             // 
-            label28.Font = new Font("Inter 28pt 28pt", 11F, FontStyle.Bold);
+            label28.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Bold);
             label28.Location = new Point(6, 11);
             label28.Name = "label28";
             label28.Size = new Size(93, 27);
@@ -306,7 +307,7 @@
             // 
             // label27
             // 
-            label27.Font = new Font("Inter 28pt 28pt", 9F);
+            label27.Font = new Font("Microsoft Sans Serif", 9F);
             label27.Location = new Point(3, 11);
             label27.Name = "label27";
             label27.Size = new Size(79, 19);
@@ -328,7 +329,7 @@
             // 
             // label23
             // 
-            label23.Font = new Font("Inter 28pt 28pt", 9F, FontStyle.Bold);
+            label23.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
             label23.Location = new Point(74, 30);
             label23.Name = "label23";
             label23.Size = new Size(54, 19);
@@ -337,7 +338,7 @@
             // 
             // label24
             // 
-            label24.Font = new Font("Inter 28pt 28pt", 9F, FontStyle.Bold);
+            label24.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
             label24.Location = new Point(49, 30);
             label24.Name = "label24";
             label24.Size = new Size(24, 19);
@@ -346,7 +347,7 @@
             // 
             // label25
             // 
-            label25.Font = new Font("Inter 28pt 28pt", 9F, FontStyle.Bold);
+            label25.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
             label25.Location = new Point(33, 30);
             label25.Name = "label25";
             label25.Size = new Size(23, 19);
@@ -355,7 +356,7 @@
             // 
             // label26
             // 
-            label26.Font = new Font("Inter 28pt 28pt", 9F);
+            label26.Font = new Font("Microsoft Sans Serif", 9F);
             label26.Location = new Point(27, 11);
             label26.Name = "label26";
             label26.Size = new Size(125, 19);
@@ -374,7 +375,7 @@
             // 
             // label22
             // 
-            label22.Font = new Font("Inter 28pt 28pt", 11F, FontStyle.Bold);
+            label22.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Bold);
             label22.Location = new Point(6, 11);
             label22.Name = "label22";
             label22.Size = new Size(93, 27);
@@ -393,7 +394,7 @@
             // 
             // label21
             // 
-            label21.Font = new Font("Inter 28pt 28pt", 9F);
+            label21.Font = new Font("Microsoft Sans Serif", 9F);
             label21.Location = new Point(3, 11);
             label21.Name = "label21";
             label21.Size = new Size(79, 19);
@@ -415,7 +416,7 @@
             // 
             // label17
             // 
-            label17.Font = new Font("Inter 28pt 28pt", 9F, FontStyle.Bold);
+            label17.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
             label17.Location = new Point(74, 30);
             label17.Name = "label17";
             label17.Size = new Size(54, 19);
@@ -424,7 +425,7 @@
             // 
             // label18
             // 
-            label18.Font = new Font("Inter 28pt 28pt", 9F, FontStyle.Bold);
+            label18.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
             label18.Location = new Point(49, 30);
             label18.Name = "label18";
             label18.Size = new Size(24, 19);
@@ -433,7 +434,7 @@
             // 
             // label19
             // 
-            label19.Font = new Font("Inter 28pt 28pt", 9F, FontStyle.Bold);
+            label19.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
             label19.Location = new Point(33, 30);
             label19.Name = "label19";
             label19.Size = new Size(23, 19);
@@ -442,7 +443,7 @@
             // 
             // label20
             // 
-            label20.Font = new Font("Inter 28pt 28pt", 9F);
+            label20.Font = new Font("Microsoft Sans Serif", 9F);
             label20.Location = new Point(26, 11);
             label20.Name = "label20";
             label20.Size = new Size(133, 19);
@@ -461,7 +462,7 @@
             // 
             // label16
             // 
-            label16.Font = new Font("Inter 28pt 28pt", 11F, FontStyle.Bold);
+            label16.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Bold);
             label16.Location = new Point(8, 11);
             label16.Name = "label16";
             label16.Size = new Size(91, 27);
@@ -480,7 +481,7 @@
             // 
             // label15
             // 
-            label15.Font = new Font("Inter 28pt 28pt", 9F);
+            label15.Font = new Font("Microsoft Sans Serif", 9F);
             label15.Location = new Point(3, 11);
             label15.Name = "label15";
             label15.Size = new Size(79, 19);
@@ -502,7 +503,7 @@
             // 
             // label11
             // 
-            label11.Font = new Font("Inter 28pt 28pt", 9F, FontStyle.Bold);
+            label11.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
             label11.Location = new Point(74, 30);
             label11.Name = "label11";
             label11.Size = new Size(54, 19);
@@ -511,7 +512,7 @@
             // 
             // label12
             // 
-            label12.Font = new Font("Inter 28pt 28pt", 9F, FontStyle.Bold);
+            label12.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
             label12.Location = new Point(49, 30);
             label12.Name = "label12";
             label12.Size = new Size(24, 19);
@@ -520,7 +521,7 @@
             // 
             // label13
             // 
-            label13.Font = new Font("Inter 28pt 28pt", 9F, FontStyle.Bold);
+            label13.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
             label13.Location = new Point(33, 30);
             label13.Name = "label13";
             label13.Size = new Size(23, 19);
@@ -529,7 +530,7 @@
             // 
             // label14
             // 
-            label14.Font = new Font("Inter 28pt 28pt", 9F);
+            label14.Font = new Font("Microsoft Sans Serif", 9F);
             label14.Location = new Point(3, 11);
             label14.Name = "label14";
             label14.Size = new Size(181, 19);
@@ -548,7 +549,7 @@
             // 
             // label8
             // 
-            label8.Font = new Font("Inter 28pt 28pt", 11F, FontStyle.Bold);
+            label8.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Bold);
             label8.Location = new Point(8, 11);
             label8.Name = "label8";
             label8.Size = new Size(94, 27);
@@ -567,7 +568,7 @@
             // 
             // label6
             // 
-            label6.Font = new Font("Inter 28pt 28pt", 9F);
+            label6.Font = new Font("Microsoft Sans Serif", 9F);
             label6.Location = new Point(3, 11);
             label6.Name = "label6";
             label6.Size = new Size(53, 19);
@@ -589,7 +590,7 @@
             // 
             // label10
             // 
-            label10.Font = new Font("Inter 28pt 28pt", 9F, FontStyle.Bold);
+            label10.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
             label10.Location = new Point(74, 30);
             label10.Name = "label10";
             label10.Size = new Size(54, 19);
@@ -598,7 +599,7 @@
             // 
             // label9
             // 
-            label9.Font = new Font("Inter 28pt 28pt", 9F, FontStyle.Bold);
+            label9.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
             label9.Location = new Point(49, 30);
             label9.Name = "label9";
             label9.Size = new Size(24, 19);
@@ -607,7 +608,7 @@
             // 
             // label7
             // 
-            label7.Font = new Font("Inter 28pt 28pt", 9F, FontStyle.Bold);
+            label7.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
             label7.Location = new Point(33, 30);
             label7.Name = "label7";
             label7.Size = new Size(23, 19);
@@ -616,7 +617,7 @@
             // 
             // label5
             // 
-            label5.Font = new Font("Inter 28pt 28pt", 9F);
+            label5.Font = new Font("Microsoft Sans Serif", 9F);
             label5.Location = new Point(24, 11);
             label5.Name = "label5";
             label5.Size = new Size(112, 19);
@@ -625,10 +626,10 @@
             // 
             // label29
             // 
-            label29.Font = new Font("Inter 28pt 28pt", 12F, FontStyle.Bold);
+            label29.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             label29.Location = new Point(14, 15);
             label29.Name = "label29";
-            label29.Size = new Size(80, 26);
+            label29.Size = new Size(96, 26);
             label29.TabIndex = 3;
             label29.Text = "TOTAL";
             // 
@@ -654,7 +655,7 @@
             // label41
             // 
             label41.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label41.Font = new Font("Inter 28pt 28pt", 10F);
+            label41.Font = new Font("Microsoft Sans Serif", 10F);
             label41.Location = new Point(257, 92);
             label41.Name = "label41";
             label41.Size = new Size(98, 26);
@@ -664,7 +665,7 @@
             // label40
             // 
             label40.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label40.Font = new Font("Inter 28pt 28pt", 10F);
+            label40.Font = new Font("Microsoft Sans Serif", 10F);
             label40.Location = new Point(257, 73);
             label40.Name = "label40";
             label40.Size = new Size(98, 26);
@@ -673,7 +674,7 @@
             // 
             // label39
             // 
-            label39.Font = new Font("Inter 28pt 28pt", 10F);
+            label39.Font = new Font("Microsoft Sans Serif", 10F);
             label39.Location = new Point(18, 92);
             label39.Name = "label39";
             label39.Size = new Size(80, 26);
@@ -682,7 +683,7 @@
             // 
             // label38
             // 
-            label38.Font = new Font("Inter 28pt 28pt", 10F);
+            label38.Font = new Font("Microsoft Sans Serif", 10F);
             label38.Location = new Point(18, 73);
             label38.Name = "label38";
             label38.Size = new Size(80, 26);
@@ -694,7 +695,7 @@
             cuiLabel5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             cuiLabel5.BackColor = Color.White;
             cuiLabel5.Content = "-------------------------------------------------------------------------------";
-            cuiLabel5.Font = new Font("Unbounded Light", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cuiLabel5.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cuiLabel5.ForeColor = Color.Black;
             cuiLabel5.HorizontalAlignment = StringAlignment.Center;
             cuiLabel5.Location = new Point(12, 133);
@@ -707,7 +708,7 @@
             // label34
             // 
             label34.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label34.Font = new Font("Inter 28pt 28pt", 10F);
+            label34.Font = new Font("Microsoft Sans Serif", 10F);
             label34.Location = new Point(257, 115);
             label34.Name = "label34";
             label34.Size = new Size(98, 26);
@@ -717,7 +718,7 @@
             // label33
             // 
             label33.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label33.Font = new Font("Inter 28pt 28pt", 10F);
+            label33.Font = new Font("Microsoft Sans Serif", 10F);
             label33.Location = new Point(257, 51);
             label33.Name = "label33";
             label33.Size = new Size(98, 26);
@@ -726,7 +727,7 @@
             // 
             // label32
             // 
-            label32.Font = new Font("Inter 28pt 28pt", 10F);
+            label32.Font = new Font("Microsoft Sans Serif", 10F);
             label32.Location = new Point(17, 115);
             label32.Name = "label32";
             label32.Size = new Size(80, 26);
@@ -735,7 +736,7 @@
             // 
             // label31
             // 
-            label31.Font = new Font("Inter 28pt 28pt", 10F);
+            label31.Font = new Font("Microsoft Sans Serif", 10F);
             label31.Location = new Point(18, 52);
             label31.Name = "label31";
             label31.Size = new Size(80, 26);
@@ -745,7 +746,7 @@
             // label30
             // 
             label30.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label30.Font = new Font("Inter 28pt 28pt", 14F, FontStyle.Bold);
+            label30.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold);
             label30.Location = new Point(254, 12);
             label30.Name = "label30";
             label30.Size = new Size(124, 39);
@@ -769,7 +770,7 @@
             cuiLabel6.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             cuiLabel6.BackColor = Color.White;
             cuiLabel6.Content = "------------------------------------------------------------------------------------";
-            cuiLabel6.Font = new Font("Unbounded Light", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cuiLabel6.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cuiLabel6.ForeColor = Color.Black;
             cuiLabel6.HorizontalAlignment = StringAlignment.Center;
             cuiLabel6.Location = new Point(9, 34);
@@ -782,7 +783,7 @@
             // label37
             // 
             label37.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label37.Font = new Font("Inter 28pt 28pt", 11F);
+            label37.Font = new Font("Microsoft Sans Serif", 11F);
             label37.Location = new Point(268, 12);
             label37.Name = "label37";
             label37.Size = new Size(106, 26);
@@ -791,7 +792,7 @@
             // 
             // label36
             // 
-            label36.Font = new Font("Inter 28pt 28pt", 11F);
+            label36.Font = new Font("Microsoft Sans Serif", 11F);
             label36.Location = new Point(80, 12);
             label36.Name = "label36";
             label36.Size = new Size(85, 26);
@@ -800,7 +801,7 @@
             // 
             // label35
             // 
-            label35.Font = new Font("Inter 28pt 28pt", 11F);
+            label35.Font = new Font("Microsoft Sans Serif", 11F);
             label35.Location = new Point(18, 12);
             label35.Name = "label35";
             label35.Size = new Size(70, 26);
@@ -818,7 +819,7 @@
             cuiButton1.CheckedOutline = Color.FromArgb(255, 106, 0);
             cuiButton1.Content = "DONE";
             cuiButton1.DialogResult = DialogResult.None;
-            cuiButton1.Font = new Font("Unbounded", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cuiButton1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cuiButton1.ForeColor = Color.White;
             cuiButton1.HoverBackground = Color.White;
             cuiButton1.HoveredImageTint = Color.White;

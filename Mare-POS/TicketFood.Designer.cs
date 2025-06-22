@@ -239,7 +239,7 @@
             // label3
             // 
             label3.BackColor = Color.White;
-            label3.Font = new Font("Unbounded Medium", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.FromArgb(78, 45, 24);
             label3.Location = new Point(16, 168);
             label3.Name = "label3";
@@ -310,7 +310,7 @@
             // label4
             // 
             label4.BackColor = Color.White;
-            label4.Font = new Font("Unbounded Medium", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.FromArgb(78, 45, 24);
             label4.Location = new Point(16, 167);
             label4.Name = "label4";
@@ -380,7 +380,7 @@
             // label2
             // 
             label2.BackColor = Color.White;
-            label2.Font = new Font("Unbounded Medium", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.FromArgb(78, 45, 24);
             label2.Location = new Point(16, 168);
             label2.Name = "label2";
@@ -450,7 +450,7 @@
             // label5
             // 
             label5.BackColor = Color.White;
-            label5.Font = new Font("Unbounded Medium", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.FromArgb(78, 45, 24);
             label5.Location = new Point(16, 168);
             label5.Name = "label5";
@@ -571,7 +571,7 @@
             btnFood.AutoSize = true;
             btnFood.FlatAppearance.BorderSize = 0;
             btnFood.FlatStyle = FlatStyle.Flat;
-            btnFood.Font = new Font("Unbounded", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnFood.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnFood.ForeColor = Color.FromArgb(78, 45, 24);
             btnFood.Location = new Point(552, 4);
             btnFood.Margin = new Padding(3, 4, 3, 4);
@@ -587,7 +587,7 @@
             btnAll.AutoSize = true;
             btnAll.FlatAppearance.BorderSize = 0;
             btnAll.FlatStyle = FlatStyle.Flat;
-            btnAll.Font = new Font("Unbounded", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAll.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnAll.ForeColor = Color.FromArgb(78, 45, 24);
             btnAll.Location = new Point(3, 4);
             btnAll.Margin = new Padding(3, 4, 3, 4);
@@ -603,7 +603,7 @@
             btnCoffee.AutoSize = true;
             btnCoffee.FlatAppearance.BorderSize = 0;
             btnCoffee.FlatStyle = FlatStyle.Flat;
-            btnCoffee.Font = new Font("Unbounded", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCoffee.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnCoffee.ForeColor = Color.FromArgb(78, 45, 24);
             btnCoffee.Location = new Point(160, 4);
             btnCoffee.Margin = new Padding(3, 4, 3, 4);
@@ -619,7 +619,7 @@
             btnNonCoffee.AutoSize = true;
             btnNonCoffee.FlatAppearance.BorderSize = 0;
             btnNonCoffee.FlatStyle = FlatStyle.Flat;
-            btnNonCoffee.Font = new Font("Unbounded", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnNonCoffee.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnNonCoffee.ForeColor = Color.FromArgb(78, 45, 24);
             btnNonCoffee.Location = new Point(356, 4);
             btnNonCoffee.Margin = new Padding(3, 4, 3, 4);
@@ -641,7 +641,7 @@
             // 
             // label1
             // 
-            label1.Font = new Font("Unbounded Medium", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(78, 45, 24);
             label1.Location = new Point(1, 15);
             label1.Name = "label1";
@@ -703,7 +703,7 @@
             cuiButton22.CheckedOutline = Color.FromArgb(255, 106, 0);
             cuiButton22.Content = "Gcash";
             cuiButton22.DialogResult = DialogResult.None;
-            cuiButton22.Font = new Font("Unbounded SemiBold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cuiButton22.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiButton22.ForeColor = Color.White;
             cuiButton22.HoverBackground = Color.White;
             cuiButton22.HoveredImageTint = Color.White;
@@ -742,7 +742,7 @@
             cuiButton25.CheckedOutline = Color.FromArgb(255, 106, 0);
             cuiButton25.Content = "Charge";
             cuiButton25.DialogResult = DialogResult.None;
-            cuiButton25.Font = new Font("Unbounded SemiBold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cuiButton25.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiButton25.ForeColor = Color.White;
             cuiButton25.HoverBackground = Color.White;
             cuiButton25.HoveredImageTint = Color.White;
@@ -782,7 +782,7 @@
             cuiButton23.CheckedOutline = Color.FromArgb(255, 106, 0);
             cuiButton23.Content = "Maya";
             cuiButton23.DialogResult = DialogResult.None;
-            cuiButton23.Font = new Font("Unbounded SemiBold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cuiButton23.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiButton23.ForeColor = Color.White;
             cuiButton23.HoverBackground = Color.White;
             cuiButton23.HoveredImageTint = Color.White;
@@ -821,7 +821,7 @@
             cuiButton24.CheckedOutline = Color.FromArgb(255, 106, 0);
             cuiButton24.Content = "Split";
             cuiButton24.DialogResult = DialogResult.None;
-            cuiButton24.Font = new Font("Unbounded SemiBold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cuiButton24.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiButton24.ForeColor = Color.White;
             cuiButton24.HoverBackground = Color.White;
             cuiButton24.HoveredImageTint = Color.White;
@@ -881,7 +881,7 @@
             // label45
             // 
             label45.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            label45.Font = new Font("Unbounded", 21F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label45.Font = new Font("Microsoft Sans Serif", 21F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label45.ForeColor = Color.FromArgb(78, 45, 24);
             label45.Location = new Point(78, 1);
             label45.Name = "label45";
@@ -892,7 +892,7 @@
             // label33
             // 
             label33.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            label33.Font = new Font("Unbounded", 21F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label33.Font = new Font("Microsoft Sans Serif", 21F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label33.ForeColor = Color.FromArgb(78, 45, 24);
             label33.Location = new Point(91, 1);
             label33.Name = "label33";
@@ -903,7 +903,7 @@
             // label29
             // 
             label29.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            label29.Font = new Font("Unbounded", 21F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label29.Font = new Font("Microsoft Sans Serif", 21F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label29.ForeColor = Color.FromArgb(78, 45, 24);
             label29.Location = new Point(174, 1);
             label29.Name = "label29";
@@ -914,7 +914,7 @@
             // label17
             // 
             label17.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            label17.Font = new Font("Unbounded Light", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label17.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label17.ForeColor = Color.FromArgb(78, 45, 24);
             label17.Location = new Point(208, 13);
             label17.Name = "label17";
@@ -925,7 +925,7 @@
             // label22
             // 
             label22.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            label22.Font = new Font("Unbounded", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label22.Font = new Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label22.ForeColor = Color.FromArgb(78, 45, 24);
             label22.Location = new Point(204, 3);
             label22.Name = "label22";
@@ -949,7 +949,7 @@
             // label46
             // 
             label46.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label46.Font = new Font("Unbounded", 21F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label46.Font = new Font("Microsoft Sans Serif", 21F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label46.ForeColor = Color.FromArgb(78, 45, 24);
             label46.Location = new Point(10, 2);
             label46.Name = "label46";
@@ -960,7 +960,7 @@
             // label34
             // 
             label34.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label34.Font = new Font("Unbounded", 21F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label34.Font = new Font("Microsoft Sans Serif", 21F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label34.ForeColor = Color.FromArgb(78, 45, 24);
             label34.Location = new Point(33, 2);
             label34.Name = "label34";
@@ -971,7 +971,7 @@
             // label30
             // 
             label30.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label30.Font = new Font("Unbounded", 21F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label30.Font = new Font("Microsoft Sans Serif", 21F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label30.ForeColor = Color.FromArgb(78, 45, 24);
             label30.Location = new Point(9, 1);
             label30.Name = "label30";
@@ -982,7 +982,7 @@
             // label23
             // 
             label23.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label23.Font = new Font("Unbounded Light", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label23.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label23.ForeColor = Color.FromArgb(78, 45, 24);
             label23.Location = new Point(26, 13);
             label23.Name = "label23";
@@ -993,7 +993,7 @@
             // label24
             // 
             label24.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            label24.Font = new Font("Unbounded SemiBold", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label24.Font = new Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label24.ForeColor = Color.FromArgb(78, 45, 24);
             label24.Location = new Point(67, 2);
             label24.Name = "label24";
@@ -1032,7 +1032,7 @@
             // label38
             // 
             label38.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            label38.Font = new Font("Unbounded Light", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label38.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label38.ForeColor = Color.FromArgb(78, 45, 24);
             label38.Location = new Point(44, 13);
             label38.Name = "label38";
@@ -1043,7 +1043,7 @@
             // label31
             // 
             label31.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            label31.Font = new Font("Unbounded Light", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label31.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label31.ForeColor = Color.FromArgb(78, 45, 24);
             label31.Location = new Point(91, 13);
             label31.Name = "label31";
@@ -1054,7 +1054,7 @@
             // label25
             // 
             label25.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            label25.Font = new Font("Unbounded Light", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label25.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label25.ForeColor = Color.FromArgb(78, 45, 24);
             label25.Location = new Point(161, 13);
             label25.Name = "label25";
@@ -1065,7 +1065,7 @@
             // label28
             // 
             label28.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            label28.Font = new Font("Unbounded", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label28.Font = new Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label28.ForeColor = Color.FromArgb(78, 45, 24);
             label28.Location = new Point(157, 3);
             label28.Name = "label28";
@@ -1088,7 +1088,7 @@
             // label39
             // 
             label39.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label39.Font = new Font("Unbounded Light", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label39.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label39.ForeColor = Color.FromArgb(78, 45, 24);
             label39.Location = new Point(25, 13);
             label39.Name = "label39";
@@ -1099,7 +1099,7 @@
             // label32
             // 
             label32.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label32.Font = new Font("Unbounded Light", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label32.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label32.ForeColor = Color.FromArgb(78, 45, 24);
             label32.Location = new Point(25, 13);
             label32.Name = "label32";
@@ -1110,7 +1110,7 @@
             // label36
             // 
             label36.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label36.Font = new Font("Unbounded Light", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label36.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label36.ForeColor = Color.FromArgb(78, 45, 24);
             label36.Location = new Point(26, 13);
             label36.Name = "label36";
@@ -1121,7 +1121,7 @@
             // label37
             // 
             label37.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            label37.Font = new Font("Unbounded SemiBold", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label37.Font = new Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label37.ForeColor = Color.FromArgb(78, 45, 24);
             label37.Location = new Point(66, 2);
             label37.Name = "label37";
@@ -1166,7 +1166,7 @@
             cuiButton6.CheckedOutline = Color.FromArgb(255, 106, 0);
             cuiButton6.Content = "₱1000";
             cuiButton6.DialogResult = DialogResult.None;
-            cuiButton6.Font = new Font("Unbounded Medium", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cuiButton6.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiButton6.ForeColor = Color.FromArgb(0, 145, 247);
             cuiButton6.HoverBackground = Color.FromArgb(0, 145, 247);
             cuiButton6.HoveredImageTint = Color.White;
@@ -1205,7 +1205,7 @@
             cuiButton7.CheckedOutline = Color.FromArgb(255, 213, 0);
             cuiButton7.Content = "₱500";
             cuiButton7.DialogResult = DialogResult.None;
-            cuiButton7.Font = new Font("Unbounded Medium", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cuiButton7.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiButton7.ForeColor = Color.FromArgb(255, 213, 0);
             cuiButton7.HoverBackground = Color.FromArgb(255, 213, 0);
             cuiButton7.HoveredImageTint = Color.White;
@@ -1244,7 +1244,7 @@
             cuiButton8.CheckedOutline = Color.FromArgb(135, 167, 10);
             cuiButton8.Content = "₱200";
             cuiButton8.DialogResult = DialogResult.None;
-            cuiButton8.Font = new Font("Unbounded Medium", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cuiButton8.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiButton8.ForeColor = Color.FromArgb(135, 167, 10);
             cuiButton8.HoverBackground = Color.FromArgb(135, 167, 10);
             cuiButton8.HoveredImageTint = Color.White;
@@ -1283,7 +1283,7 @@
             cuiButton9.CheckedOutline = Color.FromArgb(255, 106, 0);
             cuiButton9.Content = "₱100";
             cuiButton9.DialogResult = DialogResult.None;
-            cuiButton9.Font = new Font("Unbounded Medium", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cuiButton9.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiButton9.ForeColor = Color.FromArgb(92, 0, 153);
             cuiButton9.HoverBackground = Color.FromArgb(92, 0, 153);
             cuiButton9.HoveredImageTint = Color.White;
@@ -1322,7 +1322,7 @@
             cuiButton10.CheckedOutline = Color.FromArgb(195, 14, 14);
             cuiButton10.Content = "₱50";
             cuiButton10.DialogResult = DialogResult.None;
-            cuiButton10.Font = new Font("Unbounded Medium", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cuiButton10.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiButton10.ForeColor = Color.FromArgb(195, 14, 14);
             cuiButton10.HoverBackground = Color.FromArgb(195, 14, 14);
             cuiButton10.HoveredImageTint = Color.White;
@@ -1361,7 +1361,7 @@
             cuiButton11.CheckedOutline = Color.FromArgb(255, 106, 0);
             cuiButton11.Content = "₱20";
             cuiButton11.DialogResult = DialogResult.None;
-            cuiButton11.Font = new Font("Unbounded Medium", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cuiButton11.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiButton11.ForeColor = Color.FromArgb(248, 150, 30);
             cuiButton11.HoverBackground = Color.FromArgb(248, 150, 30);
             cuiButton11.HoveredImageTint = Color.White;
@@ -1400,7 +1400,7 @@
             cuiButton12.CheckedOutline = Color.FromArgb(158, 43, 43);
             cuiButton12.Content = "Clear";
             cuiButton12.DialogResult = DialogResult.None;
-            cuiButton12.Font = new Font("Unbounded Medium", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cuiButton12.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiButton12.ForeColor = Color.FromArgb(158, 43, 43);
             cuiButton12.HoverBackground = Color.FromArgb(158, 43, 43);
             cuiButton12.HoveredImageTint = Color.White;
@@ -1436,7 +1436,7 @@
             cuiTextBox1.FocusBackgroundColor = Color.White;
             cuiTextBox1.FocusBorderColor = Color.FromArgb(255, 106, 0);
             cuiTextBox1.FocusImageTint = Color.White;
-            cuiTextBox1.Font = new Font("Unbounded", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cuiTextBox1.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cuiTextBox1.ForeColor = Color.FromArgb(78, 45, 24);
             cuiTextBox1.Image = null;
             cuiTextBox1.ImageExpand = new Point(0, 0);
@@ -1446,7 +1446,7 @@
             cuiTextBox1.Multiline = true;
             cuiTextBox1.Name = "cuiTextBox1";
             cuiTextBox1.NormalImageTint = Color.White;
-            cuiTextBox1.Padding = new Padding(19, 6, 19, 6);
+            cuiTextBox1.Padding = new Padding(17, 6, 17, 6);
             cuiTextBox1.PasswordChar = false;
             cuiTextBox1.PlaceholderColor = SystemColors.WindowText;
             cuiTextBox1.PlaceholderText = "";
@@ -1496,7 +1496,7 @@
             button3.BackColor = Color.Transparent;
             button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Unbounded", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button3.ForeColor = Color.FromArgb(78, 45, 24);
             button3.Location = new Point(259, 9);
             button3.Name = "button3";
@@ -1511,7 +1511,7 @@
             button4.BackColor = Color.Transparent;
             button4.FlatAppearance.BorderSize = 0;
             button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Unbounded", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button4.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button4.ForeColor = Color.FromArgb(78, 45, 24);
             button4.Location = new Point(88, 9);
             button4.Name = "button4";
@@ -1526,7 +1526,7 @@
             button2.BackColor = Color.Transparent;
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Unbounded", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.FromArgb(78, 45, 24);
             button2.Location = new Point(260, 9);
             button2.Name = "button2";
@@ -1541,7 +1541,7 @@
             button1.BackColor = Color.Transparent;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Unbounded", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.FromArgb(78, 45, 24);
             button1.Location = new Point(89, 9);
             button1.Name = "button1";
@@ -1556,7 +1556,7 @@
             button6.BackColor = Color.Transparent;
             button6.FlatAppearance.BorderSize = 0;
             button6.FlatStyle = FlatStyle.Flat;
-            button6.Font = new Font("Unbounded", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button6.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button6.ForeColor = Color.FromArgb(78, 45, 24);
             button6.Location = new Point(259, 9);
             button6.Name = "button6";
@@ -1571,7 +1571,7 @@
             button5.BackColor = Color.Transparent;
             button5.FlatAppearance.BorderSize = 0;
             button5.FlatStyle = FlatStyle.Flat;
-            button5.Font = new Font("Unbounded", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button5.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button5.ForeColor = Color.FromArgb(78, 45, 24);
             button5.Location = new Point(89, 9);
             button5.Name = "button5";
@@ -1609,7 +1609,7 @@
             // label15
             // 
             label15.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            label15.Font = new Font("Unbounded", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label15.Font = new Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label15.ForeColor = Color.FromArgb(78, 45, 24);
             label15.Location = new Point(12, 4);
             label15.Name = "label15";
@@ -1620,7 +1620,7 @@
             // label9
             // 
             label9.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            label9.Font = new Font("Unbounded", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.Font = new Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label9.ForeColor = Color.FromArgb(78, 45, 24);
             label9.Location = new Point(14, 4);
             label9.Name = "label9";
@@ -1631,7 +1631,7 @@
             // label26
             // 
             label26.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            label26.Font = new Font("Unbounded", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label26.Font = new Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label26.ForeColor = Color.FromArgb(78, 45, 24);
             label26.Location = new Point(20, 3);
             label26.Name = "label26";
@@ -1653,7 +1653,7 @@
             // label16
             // 
             label16.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            label16.Font = new Font("Unbounded SemiBold", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label16.Font = new Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label16.ForeColor = Color.FromArgb(78, 45, 24);
             label16.Location = new Point(61, 3);
             label16.Name = "label16";
@@ -1664,7 +1664,7 @@
             // label14
             // 
             label14.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            label14.Font = new Font("Unbounded SemiBold", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label14.Font = new Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label14.ForeColor = Color.FromArgb(78, 45, 24);
             label14.Location = new Point(118, 3);
             label14.Name = "label14";
@@ -1675,7 +1675,7 @@
             // label27
             // 
             label27.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            label27.Font = new Font("Unbounded SemiBold", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label27.Font = new Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label27.ForeColor = Color.FromArgb(78, 45, 24);
             label27.Location = new Point(173, 2);
             label27.Name = "label27";
@@ -1713,7 +1713,7 @@
             cuiLabel3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             cuiLabel3.BackColor = Color.FromArgb(242, 239, 234);
             cuiLabel3.Content = "-----------------------------------------------------------------------------------------------";
-            cuiLabel3.Font = new Font("Unbounded Medium", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cuiLabel3.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiLabel3.ForeColor = Color.FromArgb(139, 99, 65);
             cuiLabel3.HorizontalAlignment = StringAlignment.Center;
             cuiLabel3.Location = new Point(9, 5);
@@ -1728,7 +1728,7 @@
             cuiLabel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             cuiLabel2.BackColor = Color.FromArgb(242, 239, 234);
             cuiLabel2.Content = "-----------------------------------------------------------------------------------------------";
-            cuiLabel2.Font = new Font("Unbounded Medium", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cuiLabel2.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiLabel2.ForeColor = Color.FromArgb(139, 99, 65);
             cuiLabel2.HorizontalAlignment = StringAlignment.Center;
             cuiLabel2.Location = new Point(9, 5);
@@ -1742,7 +1742,7 @@
             // 
             cuiLabel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             cuiLabel1.Content = "-----------------------------------------------------------------------------------------------";
-            cuiLabel1.Font = new Font("Unbounded Medium", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cuiLabel1.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiLabel1.ForeColor = Color.FromArgb(139, 99, 65);
             cuiLabel1.HorizontalAlignment = StringAlignment.Center;
             cuiLabel1.Location = new Point(9, 5);
@@ -1790,7 +1790,7 @@
             // label44
             // 
             label44.BackColor = Color.Transparent;
-            label44.Font = new Font("Unbounded ExtraLight", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label44.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label44.ForeColor = Color.FromArgb(78, 45, 24);
             label44.Location = new Point(106, 88);
             label44.Name = "label44";
@@ -1801,7 +1801,7 @@
             // label43
             // 
             label43.BackColor = Color.Transparent;
-            label43.Font = new Font("Unbounded ExtraLight", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label43.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label43.ForeColor = Color.FromArgb(78, 45, 24);
             label43.Location = new Point(77, 66);
             label43.Name = "label43";
@@ -1812,7 +1812,7 @@
             // label42
             // 
             label42.BackColor = Color.Transparent;
-            label42.Font = new Font("Unbounded ExtraLight", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label42.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label42.ForeColor = Color.FromArgb(78, 45, 24);
             label42.Location = new Point(74, 43);
             label42.Name = "label42";
@@ -1824,7 +1824,7 @@
             // 
             label8.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             label8.BackColor = Color.Transparent;
-            label8.Font = new Font("Unbounded SemiBold", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.ForeColor = Color.FromArgb(112, 138, 46);
             label8.Location = new Point(453, 91);
             label8.Name = "label8";
@@ -1835,7 +1835,7 @@
             // label10
             // 
             label10.BackColor = Color.Transparent;
-            label10.Font = new Font("Unbounded ExtraLight", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label10.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label10.ForeColor = Color.FromArgb(78, 45, 24);
             label10.Location = new Point(17, 88);
             label10.Name = "label10";
@@ -1846,7 +1846,7 @@
             // label11
             // 
             label11.BackColor = Color.Transparent;
-            label11.Font = new Font("Unbounded ExtraLight", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label11.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label11.ForeColor = Color.FromArgb(78, 45, 24);
             label11.Location = new Point(17, 66);
             label11.Name = "label11";
@@ -1857,7 +1857,7 @@
             // label12
             // 
             label12.BackColor = Color.Transparent;
-            label12.Font = new Font("Unbounded ExtraLight", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label12.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label12.ForeColor = Color.FromArgb(78, 45, 24);
             label12.Location = new Point(17, 43);
             label12.Name = "label12";
@@ -1868,7 +1868,7 @@
             // label13
             // 
             label13.BackColor = Color.White;
-            label13.Font = new Font("Unbounded Medium", 13.7999992F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label13.Font = new Font("Microsoft Sans Serif", 13.7999992F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label13.ForeColor = Color.FromArgb(78, 45, 24);
             label13.Location = new Point(17, 8);
             label13.Name = "label13";
@@ -1914,7 +1914,7 @@
             // label41
             // 
             label41.BackColor = Color.Transparent;
-            label41.Font = new Font("Unbounded ExtraLight", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label41.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label41.ForeColor = Color.FromArgb(78, 45, 24);
             label41.Location = new Point(106, 88);
             label41.Name = "label41";
@@ -1925,7 +1925,7 @@
             // label40
             // 
             label40.BackColor = Color.Transparent;
-            label40.Font = new Font("Unbounded ExtraLight", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label40.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label40.ForeColor = Color.FromArgb(78, 45, 24);
             label40.Location = new Point(74, 66);
             label40.Name = "label40";
@@ -1936,7 +1936,7 @@
             // label35
             // 
             label35.BackColor = Color.Transparent;
-            label35.Font = new Font("Unbounded ExtraLight", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label35.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label35.ForeColor = Color.FromArgb(78, 45, 24);
             label35.Location = new Point(71, 43);
             label35.Name = "label35";
@@ -1948,7 +1948,7 @@
             // 
             label7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             label7.BackColor = Color.Transparent;
-            label7.Font = new Font("Unbounded SemiBold", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.FromArgb(112, 138, 46);
             label7.Location = new Point(454, 90);
             label7.Name = "label7";
@@ -1959,7 +1959,7 @@
             // label21
             // 
             label21.BackColor = Color.Transparent;
-            label21.Font = new Font("Unbounded ExtraLight", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label21.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label21.ForeColor = Color.FromArgb(78, 45, 24);
             label21.Location = new Point(17, 88);
             label21.Name = "label21";
@@ -1970,7 +1970,7 @@
             // label20
             // 
             label20.BackColor = Color.Transparent;
-            label20.Font = new Font("Unbounded ExtraLight", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label20.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label20.ForeColor = Color.FromArgb(78, 45, 24);
             label20.Location = new Point(17, 66);
             label20.Name = "label20";
@@ -1981,7 +1981,7 @@
             // label19
             // 
             label19.BackColor = Color.Transparent;
-            label19.Font = new Font("Unbounded ExtraLight", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label19.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label19.ForeColor = Color.FromArgb(78, 45, 24);
             label19.Location = new Point(17, 43);
             label19.Name = "label19";
@@ -1992,7 +1992,7 @@
             // label18
             // 
             label18.BackColor = Color.White;
-            label18.Font = new Font("Unbounded Medium", 13.7999992F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label18.Font = new Font("Microsoft Sans Serif", 13.7999992F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label18.ForeColor = Color.FromArgb(78, 45, 24);
             label18.Location = new Point(17, 8);
             label18.Name = "label18";
@@ -2011,7 +2011,7 @@
             // 
             // label6
             // 
-            label6.Font = new Font("Unbounded Medium", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.FromArgb(78, 45, 24);
             label6.Location = new Point(3, 8);
             label6.Name = "label6";

@@ -10,16 +10,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="NewFolder1\**" />
+    <Compile Remove="NewFolder\**" />
     <Compile Remove="Ticket Dashboard\**" />
     <Compile Remove="Ticket\**" />
+    <EmbeddedResource Remove="NewFolder1\**" />
+    <EmbeddedResource Remove="NewFolder\**" />
     <EmbeddedResource Remove="Ticket Dashboard\**" />
     <EmbeddedResource Remove="Ticket\**" />
+    <None Remove="NewFolder1\**" />
+    <None Remove="NewFolder\**" />
     <None Remove="Ticket Dashboard\**" />
     <None Remove="Ticket\**" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="CuoreUI.Winforms" Version="2025.6.5" />
+    <PackageReference Include="MySql.Data" Version="9.3.0" />
   </ItemGroup>
 
 </Project>
