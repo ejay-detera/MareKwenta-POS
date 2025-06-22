@@ -21,6 +21,32 @@ namespace Mare_POS
             InitializeComponent();
         }
 
+        // Shows only the selected product panel
+        private void ShowPanel(CuoreUI.Controls.cuiPanel selectedPanel)
+        {
+            AllPanel.Visible = false;
+            CoffeePanel.Visible = false;
+            NonCoffeePanel.Visible = false;
+            FoodPanel.Visible = false;
+
+            selectedPanel.Visible = true;
+            selectedPanel.BringToFront();
+        }
+
+        // Moves the indicator panel under the active button
+        private void MoveIndicator(Button activeButton)
+        {
+            PanelIndicator.Width = (int)(activeButton.Width * 0.6); 
+            PanelIndicator.Left = activeButton.Left + (activeButton.Width - PanelIndicator.Width) / 2;
+        }
+
+        private void TicketForm_Load(object sender, EventArgs e)
+        {
+            ShowPanel(AllPanel);           
+            MoveIndicator(btnAll);        
+        }
+
+
         private void cuiPanel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -57,10 +83,8 @@ namespace Mare_POS
 
         private void btnCoffee_Click(object sender, EventArgs e)
         {
-            panelMain.Controls.Clear();
-            TicketCoffee coffeeControl = new TicketCoffee();
-            coffeeControl.Dock = DockStyle.Fill;
-            panelMain.Controls.Add(coffeeControl);
+            ShowPanel(CoffeePanel);
+            MoveIndicator(btnCoffee);
         }
 
         private void btnAll_Click(object sender, EventArgs e)
@@ -108,18 +132,8 @@ namespace Mare_POS
 
         private void btnCoffee_Click_1(object sender, EventArgs e)
         {
-            //panelMain.Controls.Clear();
-
-            //TicketCoffee coffeeControl = new TicketCoffee();
-            //coffeeControl.AutoScroll = true; // allow scroll if content exceeds visible area
-            //coffeeControl.Dock = DockStyle.Fill; // <-- Remove this
-            //coffeeControl.Anchor = AnchorStyles.Top | AnchorStyles.Left; // optional
-
-            //panelMain.Controls.Add(coffeeControl);
-
-            NavigateToTicketCoffee?.Invoke();
-
-
+            ShowPanel(CoffeePanel);
+            MoveIndicator(btnCoffee);
         }
 
         private void btnAmericano_Click_1(object sender, EventArgs e)
@@ -145,7 +159,8 @@ namespace Mare_POS
 
         private void btnNonCoffee_Click(object sender, EventArgs e)
         {
-
+            ShowPanel(NonCoffeePanel);
+            MoveIndicator(btnNonCoffee);
         }
 
         private void cuiButton24_Click(object sender, EventArgs e)
@@ -455,7 +470,8 @@ namespace Mare_POS
 
         private void btnAll_Click_1(object sender, EventArgs e)
         {
-
+            ShowPanel(AllPanel);
+            MoveIndicator(btnAll);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -585,91 +601,97 @@ namespace Mare_POS
 
         private void cuiButton13_Click_1(object sender, EventArgs e)
         {
-            var popup = new ProductComponent();
+            var popup = new FoodQuantity();
             popup.StartPosition = FormStartPosition.CenterParent;  // Center the popup on the current form
 
             if (popup.ShowDialog(this) == DialogResult.OK)  // Block parent form until popup is done
             {
                 // Access the selected values
-                string size = popup.SelectedSize ?? "N/A";
-                string type = popup.SelectedType ?? "N/A";
-                int qty = popup.Quantity;
-                string extras = popup.SelectedExtras.Count > 0 ? string.Join(", ", popup.SelectedExtras) : "None";
+                //string size = popup.SelectedSize ?? "N/A";
+                //string type = popup.SelectedType ?? "N/A";
+                //int qty = popup.Quantity;
+                //string extras = popup.SelectedExtras.Count > 0 ? string.Join(", ", popup.SelectedExtras) : "None";
 
                 // Display the result (or add to order/cart)
-                MessageBox.Show($"Added {qty}x Americano\n" +
-                                $"Size: {size}\n" +
-                                $"Type: {type}\n" +
-                                $"Extras: {extras}", "Order Summary");
+                //MessageBox.Show($"Added {qty}x Americano\n" +
+                // $"Size: {size}\n" +
+                // $"Type: {type}\n" +
+                // $"Extras: {extras}", "Order Summary");
             }
         }
 
         private void cuiButton14_Click_1(object sender, EventArgs e)
         {
-            var popup = new ProductComponent();
+            var popup = new FoodQuantity();
             popup.StartPosition = FormStartPosition.CenterParent;  // Center the popup on the current form
 
             if (popup.ShowDialog(this) == DialogResult.OK)  // Block parent form until popup is done
             {
                 // Access the selected values
-                string size = popup.SelectedSize ?? "N/A";
-                string type = popup.SelectedType ?? "N/A";
-                int qty = popup.Quantity;
-                string extras = popup.SelectedExtras.Count > 0 ? string.Join(", ", popup.SelectedExtras) : "None";
+                //string size = popup.SelectedSize ?? "N/A";
+                //string type = popup.SelectedType ?? "N/A";
+                //int qty = popup.Quantity;
+                //string extras = popup.SelectedExtras.Count > 0 ? string.Join(", ", popup.SelectedExtras) : "None";
 
                 // Display the result (or add to order/cart)
-                MessageBox.Show($"Added {qty}x Americano\n" +
-                                $"Size: {size}\n" +
-                                $"Type: {type}\n" +
-                                $"Extras: {extras}", "Order Summary");
+                //MessageBox.Show($"Added {qty}x Americano\n" +
+                // $"Size: {size}\n" +
+                // $"Type: {type}\n" +
+                // $"Extras: {extras}", "Order Summary");
             }
         }
 
         private void cuiButton15_Click_2(object sender, EventArgs e)
         {
-            var popup = new ProductComponent();
+            var popup = new FoodQuantity();
             popup.StartPosition = FormStartPosition.CenterParent;  // Center the popup on the current form
 
             if (popup.ShowDialog(this) == DialogResult.OK)  // Block parent form until popup is done
             {
                 // Access the selected values
-                string size = popup.SelectedSize ?? "N/A";
-                string type = popup.SelectedType ?? "N/A";
-                int qty = popup.Quantity;
-                string extras = popup.SelectedExtras.Count > 0 ? string.Join(", ", popup.SelectedExtras) : "None";
+                //string size = popup.SelectedSize ?? "N/A";
+                //string type = popup.SelectedType ?? "N/A";
+                //int qty = popup.Quantity;
+                //string extras = popup.SelectedExtras.Count > 0 ? string.Join(", ", popup.SelectedExtras) : "None";
 
                 // Display the result (or add to order/cart)
-                MessageBox.Show($"Added {qty}x Americano\n" +
-                                $"Size: {size}\n" +
-                                $"Type: {type}\n" +
-                                $"Extras: {extras}", "Order Summary");
+                //MessageBox.Show($"Added {qty}x Americano\n" +
+                // $"Size: {size}\n" +
+                // $"Type: {type}\n" +
+                // $"Extras: {extras}", "Order Summary");
             }
         }
 
         private void cuiButton16_Click_1(object sender, EventArgs e)
         {
-            var popup = new ProductComponent();
+            var popup = new FoodQuantity();
             popup.StartPosition = FormStartPosition.CenterParent;  // Center the popup on the current form
 
             if (popup.ShowDialog(this) == DialogResult.OK)  // Block parent form until popup is done
             {
                 // Access the selected values
-                string size = popup.SelectedSize ?? "N/A";
-                string type = popup.SelectedType ?? "N/A";
-                int qty = popup.Quantity;
-                string extras = popup.SelectedExtras.Count > 0 ? string.Join(", ", popup.SelectedExtras) : "None";
+                //string size = popup.SelectedSize ?? "N/A";
+                //string type = popup.SelectedType ?? "N/A";
+                //int qty = popup.Quantity;
+                //string extras = popup.SelectedExtras.Count > 0 ? string.Join(", ", popup.SelectedExtras) : "None";
 
                 // Display the result (or add to order/cart)
-                MessageBox.Show($"Added {qty}x Americano\n" +
-                                $"Size: {size}\n" +
-                                $"Type: {type}\n" +
-                                $"Extras: {extras}", "Order Summary");
+                //MessageBox.Show($"Added {qty}x Americano\n" +
+                // $"Size: {size}\n" +
+                // $"Type: {type}\n" +
+                // $"Extras: {extras}", "Order Summary");
             }
         }
 
         private void cuiPanel5_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnFood_Click_1(object sender, EventArgs e)
+        {
+            ShowPanel(FoodPanel);
+            MoveIndicator(btnFood);
         }
     }
 }

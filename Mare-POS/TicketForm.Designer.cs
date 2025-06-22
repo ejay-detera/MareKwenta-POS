@@ -31,8 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TicketForm));
             panelMain = new TableLayoutPanel();
             panel1 = new Panel();
-            cuiPanel5 = new CuoreUI.Controls.cuiPanel();
-            ticketNonCoffee1 = new TicketNonCoffee();
+            NonCoffeePanel = new CuoreUI.Controls.cuiPanel();
+            CoffeePanel = new CuoreUI.Controls.cuiPanel();
+            AllPanel = new CuoreUI.Controls.cuiPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
             panel20 = new Panel();
             label33 = new Label();
@@ -90,9 +91,14 @@
             pictureBox4 = new PictureBox();
             label5 = new Label();
             btnAmericano = new CuoreUI.Controls.cuiButton();
+            ticketCoffee1 = new Mare_POS.Ticket_Components.TicketCoffee();
+            ticketNonCoffee1 = new TicketNonCoffee();
+            FoodPanel = new CuoreUI.Controls.cuiPanel();
+            ticketFood1 = new TicketFood();
             panel4 = new Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
             cuiPanel4 = new CuoreUI.Controls.cuiPanel();
+            PanelIndicator = new CuoreUI.Controls.cuiPanel();
             tableLayoutPanel14 = new TableLayoutPanel();
             btnFood = new Button();
             btnAll = new Button();
@@ -100,7 +106,6 @@
             btnNonCoffee = new Button();
             panel3 = new Panel();
             label1 = new Label();
-            panel21 = new Panel();
             cuiPanel1 = new CuoreUI.Controls.cuiPanel();
             tableLayoutPanel11 = new TableLayoutPanel();
             cuiButton22 = new CuoreUI.Controls.cuiButton();
@@ -168,7 +173,9 @@
             label6 = new Label();
             panelMain.SuspendLayout();
             panel1.SuspendLayout();
-            cuiPanel5.SuspendLayout();
+            NonCoffeePanel.SuspendLayout();
+            CoffeePanel.SuspendLayout();
+            AllPanel.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             panel20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
@@ -198,6 +205,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            FoodPanel.SuspendLayout();
             panel4.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             cuiPanel4.SuspendLayout();
@@ -247,11 +255,10 @@
             // panel1
             // 
             panel1.AutoScroll = true;
-            panel1.Controls.Add(tableLayoutPanel2);
+            panel1.Controls.Add(NonCoffeePanel);
+            panel1.Controls.Add(FoodPanel);
             panel1.Controls.Add(panel4);
             panel1.Controls.Add(panel3);
-            panel1.Controls.Add(panel21);
-            panel1.Controls.Add(cuiPanel5);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(0);
@@ -260,26 +267,42 @@
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
-            // cuiPanel5
+            // NonCoffeePanel
             // 
-            cuiPanel5.Controls.Add(ticketNonCoffee1);
-            cuiPanel5.Location = new Point(11, 202);
-            cuiPanel5.Name = "cuiPanel5";
-            cuiPanel5.OutlineThickness = 1F;
-            cuiPanel5.PanelColor = Color.FromArgb(242, 239, 234);
-            cuiPanel5.PanelOutlineColor = Color.FromArgb(242, 239, 234);
-            cuiPanel5.Rounding = new Padding(8);
-            cuiPanel5.Size = new Size(934, 745);
-            cuiPanel5.TabIndex = 9;
-            cuiPanel5.Paint += cuiPanel5_Paint;
+            NonCoffeePanel.Controls.Add(ticketNonCoffee1);
+            NonCoffeePanel.Location = new Point(6, 209);
+            NonCoffeePanel.Name = "NonCoffeePanel";
+            NonCoffeePanel.OutlineThickness = 1F;
+            NonCoffeePanel.PanelColor = Color.FromArgb(242, 239, 234);
+            NonCoffeePanel.PanelOutlineColor = Color.FromArgb(242, 239, 234);
+            NonCoffeePanel.Rounding = new Padding(8);
+            NonCoffeePanel.Size = new Size(930, 694);
+            NonCoffeePanel.TabIndex = 1;
             // 
-            // ticketNonCoffee1
+            // CoffeePanel
             // 
-            ticketNonCoffee1.BackColor = Color.FromArgb(242, 239, 234);
-            ticketNonCoffee1.Location = new Point(5, -1);
-            ticketNonCoffee1.Name = "ticketNonCoffee1";
-            ticketNonCoffee1.Size = new Size(907, 725);
-            ticketNonCoffee1.TabIndex = 0;
+            CoffeePanel.Controls.Add(ticketCoffee1);
+            CoffeePanel.Location = new Point(0, 0);
+            CoffeePanel.Name = "CoffeePanel";
+            CoffeePanel.OutlineThickness = 1F;
+            CoffeePanel.PanelColor = Color.FromArgb(242, 239, 234);
+            CoffeePanel.PanelOutlineColor = Color.FromArgb(242, 239, 234);
+            CoffeePanel.Rounding = new Padding(8);
+            CoffeePanel.Size = new Size(933, 694);
+            CoffeePanel.TabIndex = 1;
+            // 
+            // AllPanel
+            // 
+            AllPanel.Controls.Add(tableLayoutPanel2);
+            AllPanel.Location = new Point(0, 0);
+            AllPanel.Name = "AllPanel";
+            AllPanel.OutlineThickness = 1F;
+            AllPanel.PanelColor = Color.FromArgb(242, 239, 234);
+            AllPanel.PanelOutlineColor = Color.FromArgb(242, 239, 234);
+            AllPanel.Rounding = new Padding(8);
+            AllPanel.Size = new Size(942, 781);
+            AllPanel.TabIndex = 9;
+            AllPanel.Paint += cuiPanel5_Paint;
             // 
             // tableLayoutPanel2
             // 
@@ -304,13 +327,13 @@
             tableLayoutPanel2.Controls.Add(panel6, 2, 0);
             tableLayoutPanel2.Controls.Add(panel7, 1, 0);
             tableLayoutPanel2.Controls.Add(panel8, 0, 0);
-            tableLayoutPanel2.Location = new Point(15, 202);
+            tableLayoutPanel2.Location = new Point(4, 7);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 3;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
-            tableLayoutPanel2.Size = new Size(933, 745);
+            tableLayoutPanel2.Size = new Size(933, 694);
             tableLayoutPanel2.TabIndex = 7;
             // 
             // panel20
@@ -318,7 +341,7 @@
             panel20.Controls.Add(label33);
             panel20.Controls.Add(pictureBox9);
             panel20.Controls.Add(cuiButton16);
-            panel20.Location = new Point(561, 499);
+            panel20.Location = new Point(561, 465);
             panel20.Name = "panel20";
             panel20.Size = new Size(176, 215);
             panel20.TabIndex = 15;
@@ -388,7 +411,7 @@
             panel19.Controls.Add(label32);
             panel19.Controls.Add(pictureBox8);
             panel19.Controls.Add(cuiButton15);
-            panel19.Location = new Point(375, 499);
+            panel19.Location = new Point(375, 465);
             panel19.Name = "panel19";
             panel19.Size = new Size(176, 215);
             panel19.TabIndex = 14;
@@ -458,7 +481,7 @@
             panel18.Controls.Add(label31);
             panel18.Controls.Add(pictureBox7);
             panel18.Controls.Add(cuiButton14);
-            panel18.Location = new Point(189, 499);
+            panel18.Location = new Point(189, 465);
             panel18.Name = "panel18";
             panel18.Size = new Size(176, 215);
             panel18.TabIndex = 13;
@@ -528,7 +551,7 @@
             panel17.Controls.Add(label25);
             panel17.Controls.Add(pictureBox6);
             panel17.Controls.Add(cuiButton13);
-            panel17.Location = new Point(3, 499);
+            panel17.Location = new Point(3, 465);
             panel17.Name = "panel17";
             panel17.Size = new Size(176, 215);
             panel17.TabIndex = 12;
@@ -597,7 +620,7 @@
             panel30.Controls.Add(label49);
             panel30.Controls.Add(pictureBox19);
             panel30.Controls.Add(cuiButton28);
-            panel30.Location = new Point(747, 251);
+            panel30.Location = new Point(747, 234);
             panel30.Name = "panel30";
             panel30.Size = new Size(176, 215);
             panel30.TabIndex = 11;
@@ -667,7 +690,7 @@
             panel29.Controls.Add(label48);
             panel29.Controls.Add(pictureBox18);
             panel29.Controls.Add(cuiButton27);
-            panel29.Location = new Point(561, 251);
+            panel29.Location = new Point(561, 234);
             panel29.Name = "panel29";
             panel29.Size = new Size(176, 215);
             panel29.TabIndex = 10;
@@ -737,7 +760,7 @@
             panel28.Controls.Add(label47);
             panel28.Controls.Add(pictureBox17);
             panel28.Controls.Add(cuiButton18);
-            panel28.Location = new Point(375, 251);
+            panel28.Location = new Point(375, 234);
             panel28.Name = "panel28";
             panel28.Size = new Size(176, 215);
             panel28.TabIndex = 9;
@@ -807,7 +830,7 @@
             panel27.Controls.Add(label46);
             panel27.Controls.Add(pictureBox16);
             panel27.Controls.Add(cuiButton4);
-            panel27.Location = new Point(189, 251);
+            panel27.Location = new Point(189, 234);
             panel27.Name = "panel27";
             panel27.Size = new Size(176, 215);
             panel27.TabIndex = 8;
@@ -877,7 +900,7 @@
             panel22.Controls.Add(label45);
             panel22.Controls.Add(pictureBox11);
             panel22.Controls.Add(cuiButton1);
-            panel22.Location = new Point(3, 251);
+            panel22.Location = new Point(3, 234);
             panel22.Name = "panel22";
             panel22.Size = new Size(176, 215);
             panel22.TabIndex = 7;
@@ -1294,6 +1317,41 @@
             btnAmericano.TextOffset = new Point(0, 0);
             btnAmericano.Click += btnAmericano_Click_1;
             // 
+            // ticketCoffee1
+            // 
+            ticketCoffee1.AutoScroll = true;
+            ticketCoffee1.Location = new Point(8, 8);
+            ticketCoffee1.Name = "ticketCoffee1";
+            ticketCoffee1.Size = new Size(931, 685);
+            ticketCoffee1.TabIndex = 0;
+            // 
+            // ticketNonCoffee1
+            // 
+            ticketNonCoffee1.BackColor = Color.FromArgb(242, 239, 234);
+            ticketNonCoffee1.Location = new Point(3, 6);
+            ticketNonCoffee1.Name = "ticketNonCoffee1";
+            ticketNonCoffee1.Size = new Size(927, 700);
+            ticketNonCoffee1.TabIndex = 0;
+            // 
+            // FoodPanel
+            // 
+            FoodPanel.Controls.Add(ticketFood1);
+            FoodPanel.Location = new Point(6, 209);
+            FoodPanel.Name = "FoodPanel";
+            FoodPanel.OutlineThickness = 1F;
+            FoodPanel.PanelColor = Color.FromArgb(242, 239, 234);
+            FoodPanel.PanelOutlineColor = Color.FromArgb(242, 239, 234);
+            FoodPanel.Rounding = new Padding(8);
+            FoodPanel.Size = new Size(936, 694);
+            FoodPanel.TabIndex = 24;
+            // 
+            // ticketFood1
+            // 
+            ticketFood1.Location = new Point(5, 2);
+            ticketFood1.Name = "ticketFood1";
+            ticketFood1.Size = new Size(928, 359);
+            ticketFood1.TabIndex = 0;
+            // 
             // panel4
             // 
             panel4.Controls.Add(tableLayoutPanel1);
@@ -1301,7 +1359,7 @@
             panel4.Location = new Point(0, 87);
             panel4.Margin = new Padding(3, 4, 3, 4);
             panel4.Name = "panel4";
-            panel4.Size = new Size(948, 92);
+            panel4.Size = new Size(945, 92);
             panel4.TabIndex = 6;
             // 
             // tableLayoutPanel1
@@ -1316,13 +1374,14 @@
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(683, 58);
+            tableLayoutPanel1.Size = new Size(680, 58);
             tableLayoutPanel1.TabIndex = 23;
             // 
             // cuiPanel4
             // 
-            cuiPanel4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            cuiPanel4.Controls.Add(PanelIndicator);
             cuiPanel4.Controls.Add(tableLayoutPanel14);
+            cuiPanel4.Dock = DockStyle.Top;
             cuiPanel4.Location = new Point(0, 0);
             cuiPanel4.Margin = new Padding(0);
             cuiPanel4.Name = "cuiPanel4";
@@ -1330,8 +1389,19 @@
             cuiPanel4.PanelColor = Color.FromArgb(242, 239, 234);
             cuiPanel4.PanelOutlineColor = Color.Silver;
             cuiPanel4.Rounding = new Padding(0);
-            cuiPanel4.Size = new Size(683, 58);
+            cuiPanel4.Size = new Size(680, 58);
             cuiPanel4.TabIndex = 0;
+            // 
+            // PanelIndicator
+            // 
+            PanelIndicator.Location = new Point(15, 42);
+            PanelIndicator.Name = "PanelIndicator";
+            PanelIndicator.OutlineThickness = 1F;
+            PanelIndicator.PanelColor = Color.FromArgb(78, 45, 24);
+            PanelIndicator.PanelOutlineColor = Color.FromArgb(78, 45, 24);
+            PanelIndicator.Rounding = new Padding(0);
+            PanelIndicator.Size = new Size(118, 5);
+            PanelIndicator.TabIndex = 24;
             // 
             // tableLayoutPanel14
             // 
@@ -1349,7 +1419,8 @@
             tableLayoutPanel14.Name = "tableLayoutPanel14";
             tableLayoutPanel14.RowCount = 1;
             tableLayoutPanel14.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel14.Size = new Size(746, 47);
+            tableLayoutPanel14.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel14.Size = new Size(673, 47);
             tableLayoutPanel14.TabIndex = 1;
             // 
             // btnFood
@@ -1360,13 +1431,14 @@
             btnFood.FlatStyle = FlatStyle.Flat;
             btnFood.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnFood.ForeColor = Color.FromArgb(78, 45, 24);
-            btnFood.Location = new Point(552, 4);
+            btnFood.Location = new Point(498, 4);
             btnFood.Margin = new Padding(3, 4, 3, 4);
             btnFood.Name = "btnFood";
-            btnFood.Size = new Size(191, 39);
+            btnFood.Size = new Size(172, 39);
             btnFood.TabIndex = 3;
             btnFood.Text = "Food";
             btnFood.UseVisualStyleBackColor = true;
+            btnFood.Click += btnFood_Click_1;
             // 
             // btnAll
             // 
@@ -1379,7 +1451,7 @@
             btnAll.Location = new Point(3, 4);
             btnAll.Margin = new Padding(3, 4, 3, 4);
             btnAll.Name = "btnAll";
-            btnAll.Size = new Size(151, 39);
+            btnAll.Size = new Size(135, 39);
             btnAll.TabIndex = 0;
             btnAll.Text = "All";
             btnAll.UseVisualStyleBackColor = true;
@@ -1393,10 +1465,10 @@
             btnCoffee.FlatStyle = FlatStyle.Flat;
             btnCoffee.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnCoffee.ForeColor = Color.FromArgb(78, 45, 24);
-            btnCoffee.Location = new Point(160, 4);
+            btnCoffee.Location = new Point(144, 4);
             btnCoffee.Margin = new Padding(3, 4, 3, 4);
             btnCoffee.Name = "btnCoffee";
-            btnCoffee.Size = new Size(190, 39);
+            btnCoffee.Size = new Size(171, 39);
             btnCoffee.TabIndex = 1;
             btnCoffee.Text = "Coffee";
             btnCoffee.UseVisualStyleBackColor = true;
@@ -1410,10 +1482,10 @@
             btnNonCoffee.FlatStyle = FlatStyle.Flat;
             btnNonCoffee.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnNonCoffee.ForeColor = Color.FromArgb(78, 45, 24);
-            btnNonCoffee.Location = new Point(356, 4);
+            btnNonCoffee.Location = new Point(321, 4);
             btnNonCoffee.Margin = new Padding(3, 4, 3, 4);
             btnNonCoffee.Name = "btnNonCoffee";
-            btnNonCoffee.Size = new Size(190, 39);
+            btnNonCoffee.Size = new Size(171, 39);
             btnNonCoffee.TabIndex = 2;
             btnNonCoffee.Text = "Non-Coffee";
             btnNonCoffee.UseVisualStyleBackColor = true;
@@ -1426,7 +1498,7 @@
             panel3.Location = new Point(0, 0);
             panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(948, 87);
+            panel3.Size = new Size(945, 87);
             panel3.TabIndex = 5;
             // 
             // label1
@@ -1439,13 +1511,6 @@
             label1.Size = new Size(363, 68);
             label1.TabIndex = 6;
             label1.Text = "Hello, User";
-            // 
-            // panel21
-            // 
-            panel21.Location = new Point(39, 205);
-            panel21.Name = "panel21";
-            panel21.Size = new Size(903, 727);
-            panel21.TabIndex = 8;
             // 
             // cuiPanel1
             // 
@@ -2589,10 +2654,18 @@
             Controls.Add(panelMain);
             Name = "TicketForm";
             Size = new Size(1440, 1024);
+            Load += new System.EventHandler(this.TicketForm_Load);
+            AllPanel.Location = new Point(6, 209);
+            CoffeePanel.Location = new Point(6, 209);
+            NonCoffeePanel.Location = new Point(6, 209);
+            FoodPanel.Location = new Point(6, 209);
+
             panelMain.ResumeLayout(false);
             panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            cuiPanel5.ResumeLayout(false);
+            NonCoffeePanel.ResumeLayout(false);
+            CoffeePanel.ResumeLayout(false);
+            AllPanel.ResumeLayout(false);
+            AllPanel.PerformLayout();
             tableLayoutPanel2.ResumeLayout(false);
             panel20.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
@@ -2622,6 +2695,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            FoodPanel.ResumeLayout(false);
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
@@ -2651,6 +2725,14 @@
             tableLayoutPanel5.ResumeLayout(false);
             cuiPanel18.ResumeLayout(false);
             panel2.ResumeLayout(false);
+            Controls.Add(AllPanel);
+            Controls.Add(CoffeePanel);
+            Controls.Add(NonCoffeePanel);
+            Controls.Add(FoodPanel);
+            AllPanel.Visible = true;
+            CoffeePanel.Visible = false;
+            NonCoffeePanel.Visible = false;
+            FoodPanel.Visible = false;
             ResumeLayout(false);
         }
 
@@ -2791,7 +2873,13 @@
         private PictureBox pictureBox4;
         private Label label5;
         private CuoreUI.Controls.cuiButton btnAmericano;
-        private CuoreUI.Controls.cuiPanel cuiPanel5;
+        private CuoreUI.Controls.cuiPanel CoffeePanel;
         private TicketNonCoffee ticketNonCoffee1;
+        private CuoreUI.Controls.cuiPanel NonCoffeePanel;
+        private CuoreUI.Controls.cuiPanel AllPanel;
+        private CuoreUI.Controls.cuiPanel FoodPanel;
+        private TicketFood ticketFood1;
+        private Ticket_Components.TicketCoffee ticketCoffee1;
+        private CuoreUI.Controls.cuiPanel PanelIndicator;
     }
 }
