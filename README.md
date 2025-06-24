@@ -41,7 +41,7 @@ This guide will walk you through setting up an environment to run MareKwenta-POS
 2. Run the following command to clone the repo:
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/ejay-detera/MareKwenta-POS.git
 `````
 `````bash
 git fetch --all
@@ -62,7 +62,8 @@ Install-Package LiveChartsCore
 Install-Package LiveChartsCore.SkiaSharpView
 Install-Package LiveChartsCore.SkiaSharpView.WinForms
 `````
-
+**Or You can use Tools > NuGet Package Manager > Manage NuGet Package For Solution....
+Then search for the needed packages.
 ---
 
 ## 👨‍💻 Project Team
