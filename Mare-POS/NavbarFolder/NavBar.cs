@@ -8,6 +8,7 @@ namespace Mare_POS
     {
         private Panel contentPanel = new Panel();
         private Button activeButton = new Button();
+        private Inventory_backend dbHelper = new Inventory_backend();
 
         // Enum to define user types
         public enum UserType
@@ -215,25 +216,6 @@ namespace Mare_POS
         }
     }
 
-    public class InventoryPage : UserControl
-    {
-        public InventoryPage()
-        {
-            InitializeComponent();
-        }
-
-        private void InitializeComponent()
-        {
-            this.BackColor = Color.FromArgb(242, 239, 234);
-            Label label = new Label();
-            label.Text = "This is the Inventory Page";
-            label.Font = new Font("Segoe UI", 16);
-            label.Dock = DockStyle.Fill;
-            label.TextAlign = ContentAlignment.MiddleCenter;
-            Controls.Add(label);
-        }
-    }
-
     
 
     public class ReceiptPage : UserControl
@@ -255,24 +237,6 @@ namespace Mare_POS
         }
     }
 
-    //public class CashboxPage : UserControl
-    //{
-    //    public CashboxPage()
-    //    {
-    //        InitializeComponent();
-    //    }
-
-    //    private void InitializeComponent()
-    //    {
-    //        this.BackColor = Color.FromArgb(242, 239, 234);
-    //        Label label = new Label();
-    //        label.Text = "This is the Cashbox Page";
-    //        label.Font = new Font("Segoe UI", 16);
-    //        label.Dock = DockStyle.Fill;
-    //        label.TextAlign = ContentAlignment.MiddleCenter;
-    //        Controls.Add(label);
-    //    }
-    //}
 
     public class TicketPage : UserControl
     {
@@ -292,24 +256,4 @@ namespace Mare_POS
             Controls.Add(label);
         }
     }
-
-    public class DashboardPage : UserControl
-    {
-        public DashboardPage()
-        {
-            InitializeComponent();
-        }
-
-        private void InitializeComponent()
-        {
-            this.BackColor = Color.FromArgb(242, 239, 234);
-            Label label = new Label();
-            label.Text = "This is the Dashboard Page";
-            label.Font = new Font("Segoe UI", 16);
-            label.Dock = DockStyle.Fill;
-            label.TextAlign = ContentAlignment.MiddleCenter;
-            Controls.Add(label);
-        }
-    }
-
 }

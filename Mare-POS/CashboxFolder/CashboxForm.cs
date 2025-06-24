@@ -19,6 +19,7 @@ namespace Mare_POS.CashboxFolder
             InitializeComponent();
             LoadExpenseItems(); // Load expenses when the form is initialized
             DateChanger(); // Set the current date
+            updateText(); // Update the text labels with current data
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -131,7 +132,6 @@ namespace Mare_POS.CashboxFolder
                 else
                 {
                     ExpenseRow.Visible = false;
-                    MessageBox.Show("No expense items found.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
@@ -534,7 +534,7 @@ namespace Mare_POS.CashboxFolder
                     "Are you sure you want to delete this expense?",
                     "Confirm Delete",
                     MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Question);
+                    MessageBoxIcon.Warning);
 
                 if (result == DialogResult.Yes)
                 {
@@ -620,6 +620,77 @@ namespace Mare_POS.CashboxFolder
             }
         }
 
+        private void updateText()
+        {
+            Cashbox_backend cashboxBackend = new Cashbox_backend();
+            DataTable dt = cashboxBackend.GetAllTicket();
+            DataTable dt2 = cashboxBackend.GetAllExpenses();
+
+            // Initialize totals
+            decimal cash = 0;
+            decimal nonCashSales = 0;
+            decimal cashExpenses = 0;
+            decimal nonCashExpenses = 0;
+            decimal gcashTotal = 0;
+            decimal mayaTotal = 0;
+
+            // Process ticket data (sales)
+            foreach (DataRow row in dt.Rows)
+            {
+                string paymentType = row["paymentType"]?.ToString() ?? "";
+                decimal totalAmount = Convert.ToDecimal(row["totalAmount"] ?? 0);
+                string category = row["Category"]?.ToString() ?? "";
+
+                if (paymentType == "Cash")
+                {
+                    cash += totalAmount;
+                }
+                else if (paymentType == "Non-Cash")
+                {
+                    nonCashSales += totalAmount;
+
+                    // Check for specific categories within Non-Cash
+                    if (category == "Gcash")
+                    {
+                        gcashTotal += totalAmount;
+                    }
+                    else if (category == "Maya")
+                    {
+                        mayaTotal += totalAmount;
+                    }
+                }
+            }
+
+            // Process expenses data
+            foreach (DataRow row in dt2.Rows)
+            {
+                string category = row["Category"]?.ToString() ?? "";
+                decimal expenseAmount = Convert.ToDecimal(row["expenseAmount"] ?? 0);
+
+                if (category == "Cash")
+                {
+                    cashExpenses += expenseAmount;
+                }
+                else if (category == "Non-Cash")
+                {
+                    nonCashExpenses += expenseAmount;
+                }
+            }
+
+            // Update labels
+            noncashlabel.Text = "₱" + nonCashExpenses.ToString("F2");
+            cashlabel.Text = "₱" + cash.ToString("F2");
+            cashexpenseslabel.Text = "₱" + cashExpenses.ToString("F2");
+            gcashlabel.Text = "₱" + gcashTotal.ToString("F2");
+            mayalabel.Text = "₱" + mayaTotal.ToString("F2"); // Assuming you have a maya label
+
+            // Calculate net cash (Cash + Non-Cash sales - Cash expenses - Non-Cash expenses)
+            decimal netCash = cash + nonCashSales - cashExpenses - nonCashExpenses;
+
+            cashsaleslabel.Text = "₱" + netCash.ToString("F2");
+            // If you want to display the net cash calculation somewhere
+            // netcashlabel.Text = netCash.ToString("F2");
+        }
         private void DateChanger()
         {
             DateToday.Text = DateTime.Now.ToString("MMMM dd, yyyy");
@@ -656,6 +727,16 @@ namespace Mare_POS.CashboxFolder
         }
 
         private void ExpenseRow_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cuiPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ExpenseAmount_Click(object sender, EventArgs e)
         {
 
         }

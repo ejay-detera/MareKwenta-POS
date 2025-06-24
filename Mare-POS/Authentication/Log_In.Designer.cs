@@ -232,6 +232,7 @@
             ForeColor = Color.FromArgb(78, 45, 24);
             Name = "Log_In";
             Text = "Mare POS";
+            Load += Log_In_Load;
             cuiPanel1.ResumeLayout(false);
             cuiPanel1.PerformLayout();
             ResumeLayout(false);

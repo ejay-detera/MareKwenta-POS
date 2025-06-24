@@ -35,6 +35,7 @@ public class DatabaseSeeder
             SeedEmployees(connection);
             SeedInventory(connection);
             SeedExpenses(connection);
+            SeedProducts(connection);
 
             Console.WriteLine("Database seeding completed successfully!");
         }
@@ -64,83 +65,101 @@ public class DatabaseSeeder
             return builder.ToString();
         }
     }
+    private void SeedProducts(MySqlConnection connection)
+    {
+        string productQuery = @"
+        INSERT INTO product (ProductName, UnitPrice, SellingPrice)
+        VALUES (@ProductName, @UnitPrice, @SellingPrice)";
+
+        var products = new[]
+        {
+        // Coffee - Hot & Iced
+        new { Name = "Americano", UnitPrice = 25.00m, SellingPrice = 75.00m },
+        new { Name = "Cafe Latte", UnitPrice = 35.00m, SellingPrice = 95.00m },
+        new { Name = "Caramel Macchiato", UnitPrice = 45.00m, SellingPrice = 110.00m },
+        new { Name = "Mocha", UnitPrice = 45.00m, SellingPrice = 110.00m },
+        new { Name = "Cappuccino", UnitPrice = 35.00m, SellingPrice = 95.00m },
+
+        // Non-Coffee - Hot & Iced
+        new { Name = "Matcha Latte", UnitPrice = 40.00m, SellingPrice = 105.00m },
+        new { Name = "Chocolate", UnitPrice = 35.00m, SellingPrice = 100.00m },
+        new { Name = "Strawberry Frappe", UnitPrice = 50.00m, SellingPrice = 120.00m },
+        new { Name = "Caramel Frappe", UnitPrice = 50.00m, SellingPrice = 120.00m },
+        new { Name = "Chocolate Chip Frappe", UnitPrice = 55.00m, SellingPrice = 125.00m },
+
+        // Food
+        new { Name = "Tosilog", UnitPrice = 35.00m, SellingPrice = 90.00m },
+        new { Name = "Garlic Rice", UnitPrice = 10.00m, SellingPrice = 25.00m },
+        new { Name = "Pork Siomai Rice", UnitPrice = 25.00m, SellingPrice = 70.00m },
+        new { Name = "Beef Pares", UnitPrice = 40.00m, SellingPrice = 95.00m }
+    };
+
+        foreach (var product in products)
+        {
+            using (MySqlCommand cmd = new MySqlCommand(productQuery, connection))
+            {
+                cmd.Parameters.AddWithValue("@ProductName", product.Name);
+                cmd.Parameters.AddWithValue("@UnitPrice", product.UnitPrice);
+                cmd.Parameters.AddWithValue("@SellingPrice", product.SellingPrice);
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+    }
 
     private void SeedEmployees(MySqlConnection connection)
     {
-        // Admin/Owner
         string employeeQuery = @"
-            INSERT INTO employees (LastName, FirstName, MiddleName, Role, Password, Username, OwnerID, TimeIn, TimeOut)
-            VALUES (@LastName, @FirstName, @MiddleName, @Role, @Password, @Username, @OwnerID, @TimeIn, @TimeOut)";
+        INSERT INTO employees (LastName, FirstName, MiddleName, Role, Password, Username, OwnerID)
+        VALUES (@LastName, @FirstName, @MiddleName, @Role, @Password, @Username, @OwnerID)";
 
+        int ownerId;
+
+        // Insert Admin (E-jay P. Detera)
         using (MySqlCommand cmd = new MySqlCommand(employeeQuery, connection))
         {
-            cmd.Parameters.AddWithValue("@LastName", "Johnson");
-            cmd.Parameters.AddWithValue("@FirstName", "Sarah");
-            cmd.Parameters.AddWithValue("@MiddleName", "Marie");
+            cmd.Parameters.AddWithValue("@LastName", "Detera");
+            cmd.Parameters.AddWithValue("@FirstName", "E-jay");
+            cmd.Parameters.AddWithValue("@MiddleName", "P.");
             cmd.Parameters.AddWithValue("@Role", "Admin");
             cmd.Parameters.AddWithValue("@Password", HashPassword("admin123"));
-            cmd.Parameters.AddWithValue("@Username", "sarah.johnson");
+            cmd.Parameters.AddWithValue("@Username", "ejay.detera");
             cmd.Parameters.AddWithValue("@OwnerID", null);
-            cmd.Parameters.AddWithValue("@TimeIn", null);
-            cmd.Parameters.AddWithValue("@TimeOut", null);
             cmd.ExecuteNonQuery();
         }
 
-        // Get the actual OwnerID that was just inserted
-        string getOwnerIdQuery = "SELECT LAST_INSERT_ID()";
-        int ownerId;
-        using (MySqlCommand cmd = new MySqlCommand(getOwnerIdQuery, connection))
+        // Get OwnerID
+        using (MySqlCommand cmd = new MySqlCommand("SELECT LAST_INSERT_ID()", connection))
         {
             ownerId = Convert.ToInt32(cmd.ExecuteScalar());
         }
 
-        // Employee 1
-        using (MySqlCommand cmd = new MySqlCommand(employeeQuery, connection))
+        // List of employees
+        var employees = new[]
         {
-            cmd.Parameters.AddWithValue("@LastName", "Rodriguez");
-            cmd.Parameters.AddWithValue("@FirstName", "Miguel");
-            cmd.Parameters.AddWithValue("@MiddleName", "Antonio");
-            cmd.Parameters.AddWithValue("@Role", "Employee");
-            cmd.Parameters.AddWithValue("@Password", HashPassword("employee123"));
-            cmd.Parameters.AddWithValue("@Username", "miguel.rodriguez");
-            cmd.Parameters.AddWithValue("@OwnerID", ownerId);
-            cmd.Parameters.AddWithValue("@TimeIn", null);
-            cmd.Parameters.AddWithValue("@TimeOut", null);
-            cmd.ExecuteNonQuery();
-        }
+        new { First = "Aliah", Middle = "IDK", Last = "Del Rosario", Username = "aya.delrosario" },
+        new { First = "Rheana", Middle = "IDK", Last = "Aquino", Username = "rheana.aquino" },
+        new { First = "Angela", Middle = "IDK", Last = "Raquedan", Username = "angela.raquedan" },
+        new { First = "Liberty", Middle = "IDK", Last = "Canares", Username = "liberty.canares" },
+        new { First = "Iyah", Middle = "IDK", Last = "Puso", Username = "iyah.puso" },
+    };
 
-        // Employee 2
-        using (MySqlCommand cmd = new MySqlCommand(employeeQuery, connection))
+        foreach (var emp in employees)
         {
-            cmd.Parameters.AddWithValue("@LastName", "Chen");
-            cmd.Parameters.AddWithValue("@FirstName", "Li");
-            cmd.Parameters.AddWithValue("@MiddleName", "Wei");
-            cmd.Parameters.AddWithValue("@Role", "Employee");
-            cmd.Parameters.AddWithValue("@Password", HashPassword("employee123"));
-            cmd.Parameters.AddWithValue("@Username", "li.chen");
-            cmd.Parameters.AddWithValue("@OwnerID", ownerId);
-            cmd.Parameters.AddWithValue("@TimeIn", null);
-            cmd.Parameters.AddWithValue("@TimeOut", null);
-            cmd.ExecuteNonQuery();
+            using (MySqlCommand cmd = new MySqlCommand(employeeQuery, connection))
+            {
+                cmd.Parameters.AddWithValue("@LastName", emp.Last);
+                cmd.Parameters.AddWithValue("@FirstName", emp.First);
+                cmd.Parameters.AddWithValue("@MiddleName", emp.Middle);
+                cmd.Parameters.AddWithValue("@Role", "Employee");
+                cmd.Parameters.AddWithValue("@Password", HashPassword("employee123"));
+                cmd.Parameters.AddWithValue("@Username", emp.Username);
+                cmd.Parameters.AddWithValue("@OwnerID", null);
+                cmd.ExecuteNonQuery();
+            }
         }
-
-        // Employee 3
-        using (MySqlCommand cmd = new MySqlCommand(employeeQuery, connection))
-        {
-            cmd.Parameters.AddWithValue("@LastName", "Williams");
-            cmd.Parameters.AddWithValue("@FirstName", "Emma");
-            cmd.Parameters.AddWithValue("@MiddleName", "Grace");
-            cmd.Parameters.AddWithValue("@Role", "Employee");
-            cmd.Parameters.AddWithValue("@Password", HashPassword("employee123"));
-            cmd.Parameters.AddWithValue("@Username", "emma.williams");
-            cmd.Parameters.AddWithValue("@OwnerID", ownerId);
-            cmd.Parameters.AddWithValue("@TimeIn", null);
-            cmd.Parameters.AddWithValue("@TimeOut", null);
-            cmd.ExecuteNonQuery();
-        }
-
-        Console.WriteLine("Employees seeded successfully!");
     }
+
 
     private void SeedInventory(MySqlConnection connection)
     {
@@ -151,26 +170,29 @@ public class DatabaseSeeder
         // Coffee shop inventory items
         var inventoryItems = new[]
         {
-            new { Name = "Arabica Coffee Beans", Quantity = 25.50m, Cost = 12.99m, Measurement = "grams" },
-            new { Name = "Robusta Coffee Beans", Quantity = 15.75m, Cost = 8.99m, Measurement = "grams" },
-            new { Name = "Whole Milk", Quantity = 20.00m, Cost = 3.49m, Measurement = "ml" },
-            new { Name = "Oat Milk", Quantity = 12.50m, Cost = 4.99m, Measurement = "ml" },
-            new { Name = "Almond Milk", Quantity = 8.25m, Cost = 4.79m, Measurement = "ml" },
-            new { Name = "Heavy Cream", Quantity = 6.00m, Cost = 5.99m, Measurement = "ml" },
-            new { Name = "Vanilla Syrup", Quantity = 4.50m, Cost = 8.99m, Measurement = "oz" },
-            new { Name = "Caramel Syrup", Quantity = 3.75m, Cost = 8.99m, Measurement = "oz" },
-            new { Name = "Hazelnut Syrup", Quantity = 2.25m, Cost = 8.99m, Measurement = "oz" },
-            new { Name = "Sugar", Quantity = 10.00m, Cost = 2.99m, Measurement = "grams" },
-            new { Name = "Brown Sugar", Quantity = 5.50m, Cost = 3.49m, Measurement = "grams" },
-            new { Name = "Artificial Sweetener", Quantity = 200.00m, Cost = 12.99m, Measurement = "oz" },
-            new { Name = "Paper Cups 12oz", Quantity = 500.00m, Cost = 45.99m, Measurement = "pcs" },
-            new { Name = "Paper Cups 16oz", Quantity = 400.00m, Cost = 52.99m, Measurement = "pcs" },
-            new { Name = "Coffee Lids", Quantity = 1000.00m, Cost = 25.99m, Measurement = "pcs" },
-            new { Name = "Napkins", Quantity = 2000.00m, Cost = 15.99m, Measurement = "pcs" },
-            new { Name = "Stirrers", Quantity = 1500.00m, Cost = 8.99m, Measurement = "pcs" },
-            new { Name = "Croissants", Quantity = 24.00m, Cost = 18.99m, Measurement = "pcs" },
-            new { Name = "Muffins", Quantity = 18.00m, Cost = 22.50m, Measurement = "pcs" },
-            new { Name = "Bagels", Quantity = 30.00m, Cost = 15.99m, Measurement = "pcs" }
+        // Coffee Ingredients
+        new { Name = "Coffee Beans", Quantity = 1000m, Cost = 800.00m, Measurement = "grams" },
+        new { Name = "Water", Quantity = 5000m, Cost = 50.00m, Measurement = "ml" },
+        new { Name = "Milk", Quantity = 3000m, Cost = 250.00m, Measurement = "ml" },
+        new { Name = "Caramel Syrup", Quantity = 1000m, Cost = 120.00m, Measurement = "ml" },
+        new { Name = "Chocolate Sauce", Quantity = 1000m, Cost = 150.00m, Measurement = "ml" },
+        new { Name = "Ice", Quantity = 2000m, Cost = 30.00m, Measurement = "oz" },
+
+        // Non-Coffee Ingredients
+        new { Name = "Matcha Powder", Quantity = 500m, Cost = 400.00m, Measurement = "grams" },
+        new { Name = "Strawberry Jam", Quantity = 800m, Cost = 100.00m, Measurement = "ml" },
+        new { Name = "Sweetener", Quantity = 500m, Cost = 80.00m, Measurement = "ml" },
+        new { Name = "Chocolate Syrup", Quantity = 1000m, Cost = 150.00m, Measurement = "ml" },
+        new { Name = "Chocolate Chip", Quantity = 500m, Cost = 200.00m, Measurement = "grams" },
+        new { Name = "Whipped Cream", Quantity = 1000m, Cost = 180.00m, Measurement = "ml" },
+
+        // Food Ingredients
+        new { Name = "Tocino", Quantity = 1000m, Cost = 300.00m, Measurement = "grams" },
+        new { Name = "Cooking Oil", Quantity = 1000m, Cost = 90.00m, Measurement = "ml" },
+        new { Name = "Rice", Quantity = 10000m, Cost = 500.00m, Measurement = "grams" },
+        new { Name = "Egg", Quantity = 100m, Cost = 120.00m, Measurement = "pcs" },
+        new { Name = "Garlic Clove", Quantity = 100m, Cost = 60.00m, Measurement = "pcs" },
+        new { Name = "Pork Siomai", Quantity = 100m, Cost = 300.00m, Measurement = "pcs" }
         };
 
         foreach (var item in inventoryItems)
@@ -199,21 +221,14 @@ public class DatabaseSeeder
         // Coffee shop expenses
         var expenses = new[]
         {
-            new { Name = "Monthly Rent", Amount = 2500.00m, Category = "Rent" },
-            new { Name = "Electricity Bill", Amount = 185.50m, Category = "Utilities" },
-            new { Name = "Water Bill", Amount = 75.25m, Category = "Utilities" },
-            new { Name = "Internet Service", Amount = 89.99m, Category = "Utilities" },
-            new { Name = "Coffee Bean Supplier", Amount = 450.75m, Category = "Inventory" },
-            new { Name = "Milk & Dairy Products", Amount = 125.80m, Category = "Inventory" },
-            new { Name = "Disposable Cups & Supplies", Amount = 89.45m, Category = "Supplies" },
-            new { Name = "Cleaning Supplies", Amount = 45.60m, Category = "Supplies" },
-            new { Name = "Equipment Maintenance", Amount = 150.00m, Category = "Maintenance" },
-            new { Name = "Business Insurance", Amount = 275.00m, Category = "Insurance" },
-            new { Name = "Marketing & Advertising", Amount = 125.00m, Category = "Marketing" },
-            new { Name = "Staff Training", Amount = 200.00m, Category = "Training" },
-            new { Name = "Point of Sale System", Amount = 49.99m, Category = "Software" },
-            new { Name = "Business License Renewal", Amount = 85.00m, Category = "Legal" },
-            new { Name = "Pastry Supplier", Amount = 180.25m, Category = "Inventory" }
+            new { Name = "Internet Service", Amount = 89.99m, Category = "Non-Cash" },
+            new { Name = "Coffee Bean Supplier", Amount = 450.75m, Category = "Cash" },
+            new { Name = "Milk & Dairy Products", Amount = 125.80m, Category = "Non-Cash" },
+            new { Name = "Disposable Cups & Supplies", Amount = 89.45m, Category = "Cash" },
+            new { Name = "Cleaning Supplies", Amount = 45.60m, Category = "Non-Cash" },
+            new { Name = "Equipment Maintenance", Amount = 150.00m, Category = "Cash" },
+            new { Name = "Business Insurance", Amount = 275.00m, Category = "Non-Cash" },
+            new { Name = "Pastry Supplier", Amount = 180.25m, Category = "Cash" }
         };
 
         foreach (var expense in expenses)

@@ -60,11 +60,14 @@
             statusControl = new Label();
             SeparatorInventory = new CuoreUI.Controls.cuiSeparator();
             InventoryPanel = new CuoreUI.Controls.cuiPanel();
+            linkingredientspanel = new CuoreUI.Controls.cuiPanel();
+            linkIngredients1 = new Mare_POS.inventory.LinkIngredients();
             cuiPanel1.SuspendLayout();
             cuiPanel3.SuspendLayout();
             cuiPanel2.SuspendLayout();
             InventoryRow.SuspendLayout();
             InventoryPanel.SuspendLayout();
+            linkingredientspanel.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -637,11 +640,36 @@
             InventoryPanel.TabIndex = 4;
             InventoryPanel.Paint += cuiPanel1_Paint_1;
             // 
+            // linkingredientspanel
+            // 
+            linkingredientspanel.Anchor = AnchorStyles.None;
+            linkingredientspanel.Controls.Add(linkIngredients1);
+            linkingredientspanel.Location = new Point(99, 173);
+            linkingredientspanel.Name = "linkingredientspanel";
+            linkingredientspanel.OutlineThickness = 1F;
+            linkingredientspanel.PanelColor = Color.FromArgb(242, 239, 234);
+            linkingredientspanel.PanelOutlineColor = Color.FromArgb(242, 239, 234);
+            linkingredientspanel.Rounding = new Padding(0);
+            linkingredientspanel.Size = new Size(1419, 826);
+            linkingredientspanel.TabIndex = 20;
+            // 
+            // linkIngredients1
+            // 
+            linkIngredients1.Anchor = AnchorStyles.None;
+            linkIngredients1.AutoScroll = true;
+            linkIngredients1.BackColor = Color.FromArgb(242, 239, 234);
+            linkIngredients1.Location = new Point(-3, 0);
+            linkIngredients1.Name = "linkIngredients1";
+            linkIngredients1.Size = new Size(1332, 826);
+            linkIngredients1.TabIndex = 0;
+            linkIngredients1.Load += linkIngredients1_Load_1;
+            // 
             // Inventory
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(242, 239, 234);
+            Controls.Add(linkingredientspanel);
             Controls.Add(LinkIngredientName);
             Controls.Add(InventoryName);
             Controls.Add(InventoryPanel);
@@ -659,6 +687,7 @@
             InventoryRow.ResumeLayout(false);
             InventoryRow.PerformLayout();
             InventoryPanel.ResumeLayout(false);
+            linkingredientspanel.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -696,5 +725,7 @@
         private CuoreUI.Controls.cuiPanel InventoryPanel;
         private Label label8;
         private CuoreUI.Controls.cuiComboBox Action;
+        private CuoreUI.Controls.cuiPanel linkingredientspanel;
+        private inventory.LinkIngredients linkIngredients1;
     }
 }

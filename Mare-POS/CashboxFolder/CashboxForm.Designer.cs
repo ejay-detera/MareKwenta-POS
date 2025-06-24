@@ -35,25 +35,25 @@
             label17 = new Label();
             cashSales = new CuoreUI.Controls.cuiPanel();
             cuiButton10 = new CuoreUI.Controls.cuiButton();
-            label23 = new Label();
+            cashsaleslabel = new Label();
             label24 = new Label();
             cashExpenses = new CuoreUI.Controls.cuiPanel();
             label25 = new Label();
             cuiButton11 = new CuoreUI.Controls.cuiButton();
-            label26 = new Label();
+            cashexpenseslabel = new Label();
             label27 = new Label();
             noncashExpenses = new CuoreUI.Controls.cuiPanel();
             label28 = new Label();
             cuiButton12 = new CuoreUI.Controls.cuiButton();
-            label29 = new Label();
+            noncashlabel = new Label();
             label30 = new Label();
             gCash = new CuoreUI.Controls.cuiPanel();
             cuiButton13 = new CuoreUI.Controls.cuiButton();
-            label31 = new Label();
+            gcashlabel = new Label();
             label32 = new Label();
             maYa = new CuoreUI.Controls.cuiPanel();
             cuiButton14 = new CuoreUI.Controls.cuiButton();
-            label33 = new Label();
+            mayalabel = new Label();
             label34 = new Label();
             cuiPanel1 = new CuoreUI.Controls.cuiPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
@@ -72,11 +72,11 @@
             tableLayoutPanel1 = new TableLayoutPanel();
             casH = new CuoreUI.Controls.cuiPanel();
             cuiButton2 = new CuoreUI.Controls.cuiButton();
-            label3 = new Label();
+            cashlabel = new Label();
             label4 = new Label();
             pettyCash = new CuoreUI.Controls.cuiPanel();
             cuiButton1 = new CuoreUI.Controls.cuiButton();
-            label1 = new Label();
+            pettycashlabel = new Label();
             label2 = new Label();
             cuiPanel8.SuspendLayout();
             cashSales.SuspendLayout();
@@ -154,7 +154,7 @@
             // 
             cashSales.BackColor = Color.Transparent;
             cashSales.Controls.Add(cuiButton10);
-            cashSales.Controls.Add(label23);
+            cashSales.Controls.Add(cashsaleslabel);
             cashSales.Controls.Add(label24);
             cashSales.Dock = DockStyle.Fill;
             cashSales.Location = new Point(14, 312);
@@ -207,16 +207,16 @@
             cuiButton10.TextAlignment = StringAlignment.Center;
             cuiButton10.TextOffset = new Point(0, 0);
             // 
-            // label23
+            // cashsaleslabel
             // 
-            label23.AutoSize = true;
-            label23.Font = new Font("Inter SemiBold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label23.ForeColor = Color.FromArgb(78, 45, 24);
-            label23.Location = new Point(29, 92);
-            label23.Name = "label23";
-            label23.Size = new Size(174, 43);
-            label23.TabIndex = 2;
-            label23.Text = "₱ 3,100.00";
+            cashsaleslabel.AutoSize = true;
+            cashsaleslabel.Font = new Font("Inter SemiBold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cashsaleslabel.ForeColor = Color.FromArgb(78, 45, 24);
+            cashsaleslabel.Location = new Point(29, 66);
+            cashsaleslabel.Name = "cashsaleslabel";
+            cashsaleslabel.Size = new Size(174, 43);
+            cashsaleslabel.TabIndex = 2;
+            cashsaleslabel.Text = "₱ 3,100.00";
             // 
             // label24
             // 
@@ -234,7 +234,7 @@
             cashExpenses.BackColor = Color.Transparent;
             cashExpenses.Controls.Add(label25);
             cashExpenses.Controls.Add(cuiButton11);
-            cashExpenses.Controls.Add(label26);
+            cashExpenses.Controls.Add(cashexpenseslabel);
             cashExpenses.Controls.Add(label27);
             cashExpenses.Dock = DockStyle.Fill;
             cashExpenses.Location = new Point(14, 461);
@@ -298,16 +298,16 @@
             cuiButton11.TextAlignment = StringAlignment.Center;
             cuiButton11.TextOffset = new Point(0, 0);
             // 
-            // label26
+            // cashexpenseslabel
             // 
-            label26.AutoSize = true;
-            label26.Font = new Font("Inter SemiBold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label26.ForeColor = Color.FromArgb(78, 45, 24);
-            label26.Location = new Point(29, 92);
-            label26.Name = "label26";
-            label26.Size = new Size(174, 43);
-            label26.TabIndex = 2;
-            label26.Text = "₱ 3,100.00";
+            cashexpenseslabel.AutoSize = true;
+            cashexpenseslabel.Font = new Font("Inter SemiBold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cashexpenseslabel.ForeColor = Color.FromArgb(78, 45, 24);
+            cashexpenseslabel.Location = new Point(29, 80);
+            cashexpenseslabel.Name = "cashexpenseslabel";
+            cashexpenseslabel.Size = new Size(174, 43);
+            cashexpenseslabel.TabIndex = 2;
+            cashexpenseslabel.Text = "₱ 3,100.00";
             // 
             // label27
             // 
@@ -325,7 +325,7 @@
             noncashExpenses.BackColor = Color.Transparent;
             noncashExpenses.Controls.Add(label28);
             noncashExpenses.Controls.Add(cuiButton12);
-            noncashExpenses.Controls.Add(label29);
+            noncashExpenses.Controls.Add(noncashlabel);
             noncashExpenses.Controls.Add(label30);
             noncashExpenses.Dock = DockStyle.Top;
             noncashExpenses.Location = new Point(14, 610);
@@ -389,16 +389,16 @@
             cuiButton12.TextAlignment = StringAlignment.Center;
             cuiButton12.TextOffset = new Point(0, 0);
             // 
-            // label29
+            // noncashlabel
             // 
-            label29.AutoSize = true;
-            label29.Font = new Font("Inter SemiBold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label29.ForeColor = Color.FromArgb(78, 45, 24);
-            label29.Location = new Point(29, 96);
-            label29.Name = "label29";
-            label29.Size = new Size(174, 43);
-            label29.TabIndex = 2;
-            label29.Text = "₱ 3,100.00";
+            noncashlabel.AutoSize = true;
+            noncashlabel.Font = new Font("Inter SemiBold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            noncashlabel.ForeColor = Color.FromArgb(78, 45, 24);
+            noncashlabel.Location = new Point(29, 84);
+            noncashlabel.Name = "noncashlabel";
+            noncashlabel.Size = new Size(174, 43);
+            noncashlabel.TabIndex = 2;
+            noncashlabel.Text = "₱ 3,100.00";
             // 
             // label30
             // 
@@ -416,7 +416,7 @@
             gCash.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             gCash.BackColor = Color.Transparent;
             gCash.Controls.Add(cuiButton13);
-            gCash.Controls.Add(label31);
+            gCash.Controls.Add(gcashlabel);
             gCash.Controls.Add(label32);
             gCash.Dock = DockStyle.Fill;
             gCash.Location = new Point(266, 14);
@@ -469,17 +469,17 @@
             cuiButton13.TextAlignment = StringAlignment.Center;
             cuiButton13.TextOffset = new Point(0, 0);
             // 
-            // label31
+            // gcashlabel
             // 
-            label31.AutoSize = true;
-            label31.Font = new Font("Inter SemiBold", 18.2F, FontStyle.Bold);
-            label31.ForeColor = Color.FromArgb(0, 145, 247);
-            label31.Location = new Point(13, 84);
-            label31.Name = "label31";
-            label31.Size = new Size(216, 44);
-            label31.TabIndex = 2;
-            label31.Text = "₱ 893,100.00";
-            label31.Click += label31_Click;
+            gcashlabel.AutoSize = true;
+            gcashlabel.Font = new Font("Inter SemiBold", 18.2F, FontStyle.Bold);
+            gcashlabel.ForeColor = Color.FromArgb(0, 145, 247);
+            gcashlabel.Location = new Point(13, 67);
+            gcashlabel.Name = "gcashlabel";
+            gcashlabel.Size = new Size(216, 44);
+            gcashlabel.TabIndex = 2;
+            gcashlabel.Text = "₱ 893,100.00";
+            gcashlabel.Click += label31_Click;
             // 
             // label32
             // 
@@ -497,7 +497,7 @@
             maYa.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             maYa.BackColor = Color.Transparent;
             maYa.Controls.Add(cuiButton14);
-            maYa.Controls.Add(label33);
+            maYa.Controls.Add(mayalabel);
             maYa.Controls.Add(label34);
             maYa.Dock = DockStyle.Fill;
             maYa.Location = new Point(266, 163);
@@ -550,16 +550,16 @@
             cuiButton14.TextAlignment = StringAlignment.Center;
             cuiButton14.TextOffset = new Point(0, 0);
             // 
-            // label33
+            // mayalabel
             // 
-            label33.AutoSize = true;
-            label33.Font = new Font("Inter SemiBold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label33.ForeColor = Color.FromArgb(0, 137, 76);
-            label33.Location = new Point(33, 90);
-            label33.Name = "label33";
-            label33.Size = new Size(174, 43);
-            label33.TabIndex = 2;
-            label33.Text = "₱ 3,100.00";
+            mayalabel.AutoSize = true;
+            mayalabel.Font = new Font("Inter SemiBold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            mayalabel.ForeColor = Color.FromArgb(0, 137, 76);
+            mayalabel.Location = new Point(34, 68);
+            mayalabel.Name = "mayalabel";
+            mayalabel.Size = new Size(174, 43);
+            mayalabel.TabIndex = 2;
+            mayalabel.Text = "₱ 3,100.00";
             // 
             // label34
             // 
@@ -587,6 +587,7 @@
             cuiPanel1.Rounding = new Padding(0);
             cuiPanel1.Size = new Size(1440, 943);
             cuiPanel1.TabIndex = 8;
+            cuiPanel1.Paint += cuiPanel1_Paint;
             // 
             // tableLayoutPanel2
             // 
@@ -763,6 +764,7 @@
             ExpenseAmount.Size = new Size(120, 32);
             ExpenseAmount.TabIndex = 10;
             ExpenseAmount.Text = "₱ 300.00";
+            ExpenseAmount.Click += ExpenseAmount_Click;
             // 
             // Category
             // 
@@ -902,7 +904,7 @@
             // 
             casH.BackColor = Color.Transparent;
             casH.Controls.Add(cuiButton2);
-            casH.Controls.Add(label3);
+            casH.Controls.Add(cashlabel);
             casH.Controls.Add(label4);
             casH.Dock = DockStyle.Fill;
             casH.Location = new Point(14, 14);
@@ -955,17 +957,17 @@
             cuiButton2.TextAlignment = StringAlignment.Center;
             cuiButton2.TextOffset = new Point(0, 0);
             // 
-            // label3
+            // cashlabel
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Inter SemiBold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.FromArgb(78, 45, 24);
-            label3.Location = new Point(29, 85);
-            label3.Margin = new Padding(0);
-            label3.Name = "label3";
-            label3.Size = new Size(174, 43);
-            label3.TabIndex = 2;
-            label3.Text = "₱ 3,100.00";
+            cashlabel.AutoSize = true;
+            cashlabel.Font = new Font("Inter SemiBold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cashlabel.ForeColor = Color.FromArgb(78, 45, 24);
+            cashlabel.Location = new Point(29, 68);
+            cashlabel.Margin = new Padding(0);
+            cashlabel.Name = "cashlabel";
+            cashlabel.Size = new Size(174, 43);
+            cashlabel.TabIndex = 2;
+            cashlabel.Text = "₱ 3,100.00";
             // 
             // label4
             // 
@@ -982,7 +984,7 @@
             // 
             pettyCash.BackColor = Color.Transparent;
             pettyCash.Controls.Add(cuiButton1);
-            pettyCash.Controls.Add(label1);
+            pettyCash.Controls.Add(pettycashlabel);
             pettyCash.Controls.Add(label2);
             pettyCash.Dock = DockStyle.Fill;
             pettyCash.Location = new Point(14, 163);
@@ -1035,16 +1037,16 @@
             cuiButton1.TextAlignment = StringAlignment.Center;
             cuiButton1.TextOffset = new Point(0, 0);
             // 
-            // label1
+            // pettycashlabel
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Inter SemiBold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(78, 45, 24);
-            label1.Location = new Point(29, 90);
-            label1.Name = "label1";
-            label1.Size = new Size(174, 43);
-            label1.TabIndex = 2;
-            label1.Text = "₱ 3,100.00";
+            pettycashlabel.AutoSize = true;
+            pettycashlabel.Font = new Font("Inter SemiBold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            pettycashlabel.ForeColor = Color.FromArgb(78, 45, 24);
+            pettycashlabel.Location = new Point(29, 68);
+            pettycashlabel.Name = "pettycashlabel";
+            pettycashlabel.Size = new Size(178, 43);
+            pettycashlabel.TabIndex = 2;
+            pettycashlabel.Text = "₱ 1,000.00";
             // 
             // label2
             // 
@@ -1107,41 +1109,41 @@
 
         private CuoreUI.Controls.cuiPanel cashSales;
         private CuoreUI.Controls.cuiButton cuiButton10;
-        private Label label23;
+        private Label cashsaleslabel;
         private Label label24;
 
         private CuoreUI.Controls.cuiPanel cashExpenses;
         private Label label25;
         private CuoreUI.Controls.cuiButton cuiButton11;
-        private Label label26;
+        private Label cashexpenseslabel;
         private Label label27;
 
         private CuoreUI.Controls.cuiPanel noncashExpenses;
         private Label label28;
         private CuoreUI.Controls.cuiButton cuiButton12;
-        private Label label29;
+        private Label noncashlabel;
         private Label label30;
 
         private CuoreUI.Controls.cuiPanel gCash;
         private CuoreUI.Controls.cuiButton cuiButton13;
-        private Label label31;
+        private Label gcashlabel;
         private Label label32;
 
         private CuoreUI.Controls.cuiPanel maYa;
         private CuoreUI.Controls.cuiButton cuiButton14;
-        private Label label33;
+        private Label mayalabel;
         private Label label34;
         private CuoreUI.Controls.cuiPanel cuiPanel1;
         private TableLayoutPanel tableLayoutPanel1;
 
         private CuoreUI.Controls.cuiPanel pettyCash;
         private CuoreUI.Controls.cuiButton cuiButton1;
-        private Label label1;
+        private Label pettycashlabel;
         private Label label2;
 
         private CuoreUI.Controls.cuiPanel casH;
         private CuoreUI.Controls.cuiButton cuiButton2;
-        private Label label3;
+        private Label cashlabel;
         private Label label4;
         private CuoreUI.Controls.cuiButton addExpenseButton;
         private Label label5;

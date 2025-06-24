@@ -214,11 +214,12 @@ namespace Mare_POS
                             e.LastName, 
                             e.Username, 
                             e.Password,
+                            e.Role,
                             tl.TimeIn,
                             tl.TimeOut,
                             tl.Date
                         FROM employees e
-                        LEFT JOIN timelog tl ON e.EmployeeID = tl.EmployeeID AND DATE(tl.Date) = @Date WHERE e.OwnerID is NULL
+                        LEFT JOIN timelog tl ON e.EmployeeID = tl.EmployeeID AND DATE(tl.Date) = @Date WHERE e.Role = 'Employee'
                         ORDER BY e.FirstName";
 
                     using (MySqlCommand command = new MySqlCommand(query, connection))

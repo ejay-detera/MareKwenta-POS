@@ -187,7 +187,9 @@ namespace Mare_POS
         {
             InventorySeparator.Visible = true;
             LinkIngredientSeparator.Visible = false;
+            linkingredientspanel.Visible = false;
             LoadInventoryItems();
+            dbHelper.CheckLowInventory(); // Check for low inventory items on load
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -195,6 +197,7 @@ namespace Mare_POS
             InventoryPanel.Visible = true;
             LinkIngredientSeparator.Visible = false;
             InventorySeparator.Visible = true;
+            linkingredientspanel.Visible = false;
 
         }
 
@@ -241,6 +244,7 @@ namespace Mare_POS
             // Hide the InventoryPanel
             InventoryPanel.Visible = false;
             LinkIngredientSeparator.Visible = true;
+            linkingredientspanel.Visible = true;
             InventorySeparator.Visible = false;
         }
 
@@ -818,6 +822,11 @@ namespace Mare_POS
         }
 
         private void Action_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkIngredients1_Load_1(object sender, EventArgs e)
         {
 
         }

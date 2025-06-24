@@ -50,18 +50,20 @@ namespace Mare_POS
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
-            label1.Font = new Font("Unbounded", 27F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Unbounded", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(78, 45, 24);
-            label1.Location = new Point(12, 0);
+            label1.Location = new Point(70, -21);
             label1.Name = "label1";
-            label1.Size = new Size(349, 70);
+            label1.Size = new Size(310, 61);
             label1.TabIndex = 0;
             label1.Text = "Dashboard";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // comboBox1
             // 
+            comboBox1.Anchor = AnchorStyles.None;
             comboBox1.BackColor = Color.White;
             comboBox1.DropDownHeight = 140;
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -78,6 +80,7 @@ namespace Mare_POS
             // 
             // cbTimeRange
             // 
+            cbTimeRange.Anchor = AnchorStyles.None;
             cbTimeRange.BackColor = Color.White;
             cbTimeRange.DropDownHeight = 140;
             cbTimeRange.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -94,6 +97,7 @@ namespace Mare_POS
             // 
             // cbDateFilter
             // 
+            cbDateFilter.Anchor = AnchorStyles.None;
             cbDateFilter.BackColor = Color.White;
             cbDateFilter.DropDownHeight = 140;
             cbDateFilter.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -110,48 +114,53 @@ namespace Mare_POS
             // 
             // chartContainer
             // 
+            chartContainer.Anchor = AnchorStyles.None;
             chartContainer.BackColor = Color.FromArgb(242, 239, 234);
             chartContainer.Font = new Font("Inter", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             chartContainer.ForeColor = Color.FromArgb(78, 45, 24);
-            chartContainer.Location = new Point(36, 195);
+            chartContainer.Location = new Point(70, 230);
             chartContainer.Name = "chartContainer";
-            chartContainer.Size = new Size(1419, 802);
+            chartContainer.Size = new Size(1329, 642);
             chartContainer.TabIndex = 3;
             chartContainer.Paint += chartContainer_Paint;
             // 
             // panelRoundedContainer
             // 
+            panelRoundedContainer.Anchor = AnchorStyles.None;
             panelRoundedContainer.BackColor = Color.White;
             panelRoundedContainer.Controls.Add(comboBox1);
-            panelRoundedContainer.Location = new Point(36, 119);
+            panelRoundedContainer.Location = new Point(70, 147);
             panelRoundedContainer.Name = "panelRoundedContainer";
             panelRoundedContainer.Size = new Size(335, 50);
             panelRoundedContainer.TabIndex = 7;
             // 
             // panelRoundedContainer1
             // 
+            panelRoundedContainer1.Anchor = AnchorStyles.None;
             panelRoundedContainer1.BackColor = Color.White;
             panelRoundedContainer1.Controls.Add(cbTimeRange);
-            panelRoundedContainer1.Location = new Point(444, 119);
+            panelRoundedContainer1.Location = new Point(478, 147);
             panelRoundedContainer1.Name = "panelRoundedContainer1";
             panelRoundedContainer1.Size = new Size(335, 50);
             panelRoundedContainer1.TabIndex = 7;
             // 
             // panelRoundedContainer2
             // 
+            panelRoundedContainer2.Anchor = AnchorStyles.None;
             panelRoundedContainer2.BackColor = Color.White;
             panelRoundedContainer2.Controls.Add(cbDateFilter);
-            panelRoundedContainer2.Location = new Point(860, 119);
+            panelRoundedContainer2.Location = new Point(894, 147);
             panelRoundedContainer2.Name = "panelRoundedContainer2";
             panelRoundedContainer2.Size = new Size(338, 50);
             panelRoundedContainer2.TabIndex = 7;
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.Font = new Font("Inter SemiBold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.FromArgb(78, 45, 24);
-            label2.Location = new Point(39, 87);
+            label2.Location = new Point(73, 115);
             label2.Name = "label2";
             label2.Size = new Size(57, 26);
             label2.TabIndex = 8;
@@ -160,10 +169,11 @@ namespace Mare_POS
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.Font = new Font("Inter SemiBold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.FromArgb(78, 45, 24);
-            label3.Location = new Point(444, 87);
+            label3.Location = new Point(478, 118);
             label3.Name = "label3";
             label3.Size = new Size(106, 26);
             label3.TabIndex = 9;
@@ -171,10 +181,11 @@ namespace Mare_POS
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
             label4.Font = new Font("Inter SemiBold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.FromArgb(78, 45, 24);
-            label4.Location = new Point(860, 87);
+            label4.Location = new Point(894, 115);
             label4.Name = "label4";
             label4.Size = new Size(52, 26);
             label4.TabIndex = 10;
@@ -183,6 +194,7 @@ namespace Mare_POS
             // 
             // btnGenerateChart
             // 
+            btnGenerateChart.Anchor = AnchorStyles.None;
             btnGenerateChart.CheckButton = false;
             btnGenerateChart.Checked = false;
             btnGenerateChart.CheckedBackground = Color.FromArgb(255, 106, 0);
@@ -202,7 +214,7 @@ namespace Mare_POS
             btnGenerateChart.ImageAutoCenter = true;
             btnGenerateChart.ImageExpand = new Point(0, 0);
             btnGenerateChart.ImageOffset = new Point(0, 0);
-            btnGenerateChart.Location = new Point(1240, 119);
+            btnGenerateChart.Location = new Point(1274, 147);
             btnGenerateChart.Name = "btnGenerateChart";
             btnGenerateChart.NormalBackground = Color.FromArgb(78, 45, 24);
             btnGenerateChart.NormalForeColor = Color.White;
@@ -236,7 +248,7 @@ namespace Mare_POS
             Controls.Add(panelRoundedContainer2);
             ForeColor = Color.Coral;
             Name = "DashboardAdmin";
-            Size = new Size(1490, 1313);
+            Size = new Size(1490, 932);
             Load += DashboardAdmin_Load_1;
             panelRoundedContainer.ResumeLayout(false);
             panelRoundedContainer1.ResumeLayout(false);

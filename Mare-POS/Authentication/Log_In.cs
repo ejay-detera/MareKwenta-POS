@@ -137,7 +137,13 @@ namespace Mare_POS.Authentication
         {
 
         }
+
+        private void Log_In_Load(object sender, EventArgs e)
+        {
+
+        }
     }
+    
 
     // Static session management class
     public static class CurrentSession

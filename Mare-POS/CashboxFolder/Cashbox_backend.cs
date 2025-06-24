@@ -57,6 +57,30 @@ namespace Mare_POS
             }
         }
 
+        public DataTable GetAllTicket()
+            {
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "SELECT * FROM ticket WHERE Date = CURDATE() ORDER BY Date DESC;";
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+                        return dataTable;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error retrieving tickets: {ex.Message}", "Database Error",
+                              MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return new DataTable();
+            }
+        }
         public DataTable GetAllExpenses()
         {
             try

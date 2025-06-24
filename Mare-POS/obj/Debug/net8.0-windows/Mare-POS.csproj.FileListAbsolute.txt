@@ -69,3 +69,4 @@ C:\Users\Detera\Desktop\C# WINFORMS\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-win
 C:\Users\Detera\Desktop\C# WINFORMS\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\ref\Mare-POS.dll
 C:\Users\Detera\Desktop\C# WINFORMS\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.StaffAdmin.AddEmployee.resources
 C:\Users\Detera\Desktop\C# WINFORMS\MareKwenta-POS\Mare-POS\obj\Debug\net8.0-windows\Mare_POS.StaffAdmin.ResetPassword.resources
+C:\Users\Detera\Desktop\C# WINFORMS\MareKwenta-POS\Mare-POS\bin\Debug\net8.0-windows\Newtonsoft.Json.dll

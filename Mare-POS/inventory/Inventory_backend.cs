@@ -1,6 +1,8 @@
-﻿using System;
-using System.Data;
+﻿using CuoreUI;
 using MySql.Data.MySqlClient;
+using System;
+using System.Data;
+using static Mare_POS.inventory.LinkIngredients;
 
 namespace Mare_POS
 {
@@ -14,9 +16,8 @@ namespace Mare_POS
 
             public DatabaseSetup()
             {
-                // Connection string without database specified (for creating database)
+                
                 serverConnectionString = "server=localhost;uid=root;pwd=ejaydetera12;";
-                // Connection string with database specified (for creating tables)
                 databaseConnectionString = "server=localhost;uid=root;pwd=ejaydetera12;database=marepos-db;";
             }
 
@@ -93,53 +94,6 @@ namespace Mare_POS
                 }
             }
 
-
-            public void CreateIngredientUsageLogTable()
-            {
-                using (MySqlConnection connection = new MySqlConnection(databaseConnectionString))
-                {
-                    try
-                    {
-                        connection.Open();
-
-                        string createLogTableQuery = @"
-                        CREATE TABLE IF NOT EXISTS `ingredient_usage_log` (
-                            `LogID` INT AUTO_INCREMENT PRIMARY KEY,
-                            `ingredient_id` INT NOT NULL,
-                            `quantity_used` DECIMAL(10,2) NOT NULL,
-                            `reason` VARCHAR(255),
-                            `date_used` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                            FOREIGN KEY (`ingredient_id`) REFERENCES `inventory`(`InventoryID`) ON DELETE CASCADE
-                        ) ENGINE=InnoDB;";
-
-                        using (MySqlCommand command = new MySqlCommand(createLogTableQuery, connection))
-                        {
-                            command.ExecuteNonQuery();
-                            Console.WriteLine("Ingredient usage log table created or already exists.");
-                        }
-                    }
-                    catch (MySqlException ex)
-                    {
-                        throw new Exception($"Error creating ingredient usage log table: {ex.Message}");
-                    }
-                }
-            }
-
-            // Method to initialize everything including the log table
-            public void InitializeCompleteDatabase()
-            {
-                try
-                {
-                    CreateDatabaseIfNotExists();
-                    CreateInventoryTableIfNotExists();
-                    CreateIngredientUsageLogTable();
-                    Console.WriteLine("Complete database initialization completed successfully.");
-                }
-                catch (Exception ex)
-                {
-                    throw new Exception($"Complete database initialization failed: {ex.Message}");
-                }
-            }
         }
 
         public Inventory_backend()
@@ -187,6 +141,37 @@ namespace Mare_POS
             }
         }
 
+        public void CheckLowInventory()
+        {
+            using (MySqlConnection con = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    con.Open();
+                    string query = "SELECT IngredientName, Quantity FROM inventory WHERE Quantity < 10";
+                    using (MySqlCommand cmd = new MySqlCommand(query, con))
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            string ingredientName = reader["IngredientName"].ToString();
+                            decimal quantity = Convert.ToDecimal(reader["Quantity"]);
+                            // Display or log the low inventory item
+                            MessageBox.Show($"Low inventory alert: {ingredientName} - Quantity: {quantity}", "Low Inventory Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                }
+                catch (MySqlException ex)
+                {
+                    throw new Exception($"Database error: {ex.Message}");
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception($"Unexpected error: {ex.Message}");
+                }
+            }
+        }
+
         public DataTable GetInventoryData()
         {
             using (MySqlConnection con = new MySqlConnection(connectionString))
@@ -211,11 +196,36 @@ namespace Mare_POS
                 }
             }
         }
+        public List<string> GetIngredientNamesForDropDown()
+        {
+            using (MySqlConnection con = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    con.Open();
+                    string query = "SELECT IngredientName FROM inventory ORDER BY IngredientName";
+                    MySqlCommand cmd = new MySqlCommand(query, con);
+                    MySqlDataReader reader = cmd.ExecuteReader();
 
+                    List<string> ingredientNames = new List<string>();
+                    while (reader.Read())
+                    {
+                        ingredientNames.Add(reader["IngredientName"].ToString());
+                    }
+                    return ingredientNames;
+                }
+                catch (MySqlException ex)
+                {
+                    throw new Exception($"Database error: {ex.Message}");
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception($"Unexpected error: {ex.Message}");
+                }
+            }
+        }
         public bool UpdateInventoryItem(int id, string ingredientName, decimal quantity, string measurement)
         {
-            // Round to 2 decimal places
-            quantity = Math.Round(quantity, 2);
 
             using (MySqlConnection con = new MySqlConnection(connectionString))
             {
@@ -242,7 +252,7 @@ namespace Mare_POS
             }
         }
 
-        // Fixed DeleteInventoryItem method
+        
         public bool DeleteInventoryItem(int id)
         {
             using (MySqlConnection con = new MySqlConnection(connectionString))
@@ -250,7 +260,7 @@ namespace Mare_POS
                 try
                 {
                     con.Open();
-                    string query = "DELETE FROM inventory WHERE InventoryID = @id"; // Changed from 'id' to 'InventoryID'
+                    string query = "DELETE FROM inventory WHERE InventoryID = @id"; 
 
                     using (MySqlCommand cmd = new MySqlCommand(query, con))
                     {
@@ -265,68 +275,7 @@ namespace Mare_POS
                 }
             }
         }
-        public void UpdateIngredientQuantity(int ingredientId, decimal quantityToAdd)
-        {
-            // Round to 2 decimal places
-            quantityToAdd = Math.Round(quantityToAdd, 2);
 
-            string query = "UPDATE inventory SET Quantity = ROUND(Quantity + @quantityToAdd, 2) WHERE InventoryID = @ingredientId";
-            using (MySqlConnection connection = new MySqlConnection(connectionString))
-            {
-                using (MySqlCommand command = new MySqlCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@quantityToAdd", quantityToAdd);
-                    command.Parameters.AddWithValue("@ingredientId", ingredientId);
-
-                    connection.Open();
-                    command.ExecuteNonQuery();
-                }
-            }
-        }
-
-        public void DeductIngredientQuantity(int ingredientId, decimal quantityToDeduct, string reason)
-        {
-            // Round to 2 decimal places
-            quantityToDeduct = Math.Round(quantityToDeduct, 2);
-
-            string updateQuery = "UPDATE inventory SET Quantity = ROUND(Quantity - @quantityToDeduct, 2) WHERE InventoryID = @ingredientId";
-            string logQuery = "INSERT INTO ingredient_usage_log (ingredient_id, quantity_used, reason, date_used) VALUES (@ingredientId, @quantityUsed, @reason, @dateUsed)";
-
-            using (MySqlConnection connection = new MySqlConnection(connectionString))
-            {
-                connection.Open();
-                using (MySqlTransaction transaction = connection.BeginTransaction())
-                {
-                    try
-                    {
-                        // Update inventory
-                        using (MySqlCommand updateCommand = new MySqlCommand(updateQuery, connection, transaction))
-                        {
-                            updateCommand.Parameters.AddWithValue("@quantityToDeduct", quantityToDeduct);
-                            updateCommand.Parameters.AddWithValue("@ingredientId", ingredientId);
-                            updateCommand.ExecuteNonQuery();
-                        }
-
-                        // Log the usage
-                        using (MySqlCommand logCommand = new MySqlCommand(logQuery, connection, transaction))
-                        {
-                            logCommand.Parameters.AddWithValue("@ingredientId", ingredientId);
-                            logCommand.Parameters.AddWithValue("@quantityUsed", quantityToDeduct);
-                            logCommand.Parameters.AddWithValue("@reason", reason);
-                            logCommand.Parameters.AddWithValue("@dateUsed", DateTime.Now);
-                            logCommand.ExecuteNonQuery();
-                        }
-
-                        transaction.Commit();
-                    }
-                    catch
-                    {
-                        transaction.Rollback();
-                        throw;
-                    }
-                }
-            }
-        }
         public bool AddQuantityToInventoryItem(int inventoryId, decimal quantityToAdd)
         {
             try
@@ -380,7 +329,254 @@ namespace Mare_POS
                 return false;
             }
         }
-        private MySqlConnection GetConnection()
+        public bool InsertIngredientsToDatabase(List<IngredientData> ingredients)
+        {
+            try
+            {
+                using (MySqlConnection connection = GetConnection())
+                {
+                    connection.Open();
+                    using (MySqlTransaction transaction = connection.BeginTransaction())
+                    {
+                        try
+                        {
+                            foreach (IngredientData ingredient in ingredients)
+                            {
+                                // Get ProductID based on product name and category
+                                int productId = GetProductNameByID(ingredient.ProductName, ingredient.Category, connection, transaction);
+
+                                // Get InventoryID based on ingredient name
+                                int inventoryId = GetInventoryIdByIngredientName(ingredient.IngredientName, connection, transaction);
+
+                                if (productId > 0 && inventoryId > 0)
+                                {
+                                    // Insert into productingredient table with category
+                                    string insertQuery = @"
+                               INSERT INTO productingredient (ProductID, InventoryID, Quantity, Category) 
+                               VALUES (@productID, @inventoryID, @quantity, @category)";
+
+                                    using (MySqlCommand cmd = new MySqlCommand(insertQuery, connection, transaction))
+                                    {
+                                        cmd.Parameters.AddWithValue("@productID", productId);
+                                        cmd.Parameters.AddWithValue("@inventoryID", inventoryId);
+                                        cmd.Parameters.AddWithValue("@quantity", ingredient.Quantity);
+                                        cmd.Parameters.AddWithValue("@category", ingredient.Category);
+
+                                        cmd.ExecuteNonQuery();
+                                    }
+                                }
+                                else
+                                {
+                                    throw new Exception($"Could not find ProductID or InventoryID for: {ingredient.ProductName} - {ingredient.IngredientName} in category {ingredient.Category}");
+                                }
+                            }
+
+                            transaction.Commit();
+                            return true;
+                        }
+                        catch (Exception)
+                        {
+                            transaction.Rollback();
+                            throw;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Log the error or handle it appropriately
+                MessageBox.Show($"Database error: {ex.Message}", "Database Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
+        public int GetProductNameByID(string productName, string category, MySqlConnection connection, MySqlTransaction transaction)
+        {
+            string query = "SELECT ProductID FROM product WHERE ProductName = @productName";
+
+            using (MySqlCommand cmd = new MySqlCommand(query, connection, transaction))
+            {
+                cmd.Parameters.AddWithValue("@productName", productName);
+                cmd.Parameters.AddWithValue("@category", category);
+                object result = cmd.ExecuteScalar();
+
+                if (result != null && int.TryParse(result.ToString(), out int productId))
+                {
+                    return productId;
+                }
+            }
+
+            return 0;
+        }
+
+        public int GetInventoryIdByIngredientName(string ingredientName, MySqlConnection connection, MySqlTransaction transaction)
+        {
+            string query = "SELECT InventoryID FROM inventory WHERE IngredientName = @ingredientName";
+
+            using (MySqlCommand cmd = new MySqlCommand(query, connection, transaction))
+            {
+                cmd.Parameters.AddWithValue("@ingredientName", ingredientName);
+                object result = cmd.ExecuteScalar();
+
+                if (result != null && int.TryParse(result.ToString(), out int inventoryId))
+                {
+                    return inventoryId;
+                }
+            }
+
+            return 0;
+        }
+
+        public List<IngredientData> GetExistingIngredientsForProduct(string productName, string category)
+        {
+            List<IngredientData> ingredients = new List<IngredientData>();
+
+            try
+            {
+                using (MySqlConnection connection = GetConnection())
+                {
+                    connection.Open();
+
+                    string query = @"
+               SELECT i.IngredientName, pi.Quantity, pi.Category
+               FROM productingredient pi
+               INNER JOIN product p ON pi.ProductID = p.ProductID
+               INNER JOIN inventory i ON pi.InventoryID = i.InventoryID
+               WHERE p.ProductName = @productName AND pi.Category = @category
+               ORDER BY pi.ProductIngredientID";
+
+                    using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@productName", productName);
+                        cmd.Parameters.AddWithValue("@category", category);
+
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                ingredients.Add(new IngredientData
+                                {
+                                    IngredientName = reader["IngredientName"].ToString(),
+                                    Quantity = reader["Quantity"].ToString(),
+                                    ProductName = productName,
+                                    Category = reader["Category"].ToString()
+                                });
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error retrieving existing ingredients: {ex.Message}", "Database Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return ingredients;
+        }
+
+
+        public bool InsertOrUpdateIngredientsToDatabase(List<IngredientData> ingredients)
+        {
+            try
+            {
+                using (MySqlConnection connection = GetConnection())
+                {
+                    connection.Open();
+                    using (MySqlTransaction transaction = connection.BeginTransaction())
+                    {
+                        try
+                        {
+                            foreach (IngredientData ingredient in ingredients)
+                            {
+                                // Get ProductID based on product name and category
+                                int productId = GetProductNameByID(ingredient.ProductName, ingredient.Category, connection, transaction);
+
+                                // Get InventoryID based on ingredient name
+                                int inventoryId = GetInventoryIdByIngredientName(ingredient.IngredientName, connection, transaction);
+
+                                if (productId > 0 && inventoryId > 0)
+                                {
+                                    // Check if this combination already exists with category
+                                    if (ProductIngredientExists(productId, inventoryId, ingredient.Category, connection, transaction))
+                                    {
+                                        // Update existing record
+                                        string updateQuery = @"
+                                   UPDATE productingredient 
+                                   SET Quantity = @quantity 
+                                   WHERE ProductID = @productID AND InventoryID = @inventoryID AND Category = @category";
+
+                                        using (MySqlCommand cmd = new MySqlCommand(updateQuery, connection, transaction))
+                                        {
+                                            cmd.Parameters.AddWithValue("@quantity", ingredient.Quantity);
+                                            cmd.Parameters.AddWithValue("@productID", productId);
+                                            cmd.Parameters.AddWithValue("@inventoryID", inventoryId);
+                                            cmd.Parameters.AddWithValue("@category", ingredient.Category);
+
+                                            cmd.ExecuteNonQuery();
+                                        }
+                                    }
+                                    else
+                                    {
+                                        // Insert new record with category
+                                        string insertQuery = @"
+                                   INSERT INTO productingredient (ProductID, InventoryID, Quantity, Category) 
+                                   VALUES (@productID, @inventoryID, @quantity, @category)";
+
+                                        using (MySqlCommand cmd = new MySqlCommand(insertQuery, connection, transaction))
+                                        {
+                                            cmd.Parameters.AddWithValue("@productID", productId);
+                                            cmd.Parameters.AddWithValue("@inventoryID", inventoryId);
+                                            cmd.Parameters.AddWithValue("@quantity", ingredient.Quantity);
+                                            cmd.Parameters.AddWithValue("@category", ingredient.Category);
+
+                                            cmd.ExecuteNonQuery();
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    throw new Exception($"Could not find ProductID or InventoryID for: {ingredient.ProductName} - {ingredient.IngredientName} in category {ingredient.Category}");
+                                }
+                            }
+
+                            transaction.Commit();
+                            return true;
+                        }
+                        catch (Exception)
+                        {
+                            transaction.Rollback();
+                            throw;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Database error: {ex.Message}", "Database Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
+
+        private bool ProductIngredientExists(int productId, int inventoryId, string category, MySqlConnection connection, MySqlTransaction transaction)
+        {
+            string query = "SELECT COUNT(*) FROM productingredient WHERE ProductID = @productID AND InventoryID = @inventoryID AND Category = @category";
+
+            using (MySqlCommand cmd = new MySqlCommand(query, connection, transaction))
+            {
+                cmd.Parameters.AddWithValue("@productID", productId);
+                cmd.Parameters.AddWithValue("@inventoryID", inventoryId);
+                cmd.Parameters.AddWithValue("@category", category);
+
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                return count > 0;
+            }
+        }
+
+        public MySqlConnection GetConnection()
         {
             string connectionString = "server=localhost;uid=root;pwd=ejaydetera12;database=marepos-db;";
             return new MySqlConnection(connectionString);
