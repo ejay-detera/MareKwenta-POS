@@ -299,7 +299,7 @@
             // label33
             // 
             label33.BackColor = Color.White;
-            label33.Font = new Font("Unbounded Medium", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label33.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label33.ForeColor = Color.FromArgb(78, 45, 24);
             label33.Location = new Point(16, 165);
             label33.Name = "label33";
@@ -439,7 +439,7 @@
             // label31
             // 
             label31.BackColor = Color.White;
-            label31.Font = new Font("Unbounded Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label31.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label31.ForeColor = Color.FromArgb(78, 45, 24);
             label31.Location = new Point(13, 165);
             label31.Name = "label31";
@@ -509,7 +509,7 @@
             // label25
             // 
             label25.BackColor = Color.White;
-            label25.Font = new Font("Unbounded Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label25.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label25.ForeColor = Color.FromArgb(78, 45, 24);
             label25.Location = new Point(16, 165);
             label25.Name = "label25";
@@ -578,13 +578,14 @@
             // label49
             // 
             label49.BackColor = Color.White;
-            label49.Font = new Font("Unbounded Medium", 7F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label49.Font = new Font("Microsoft Sans Serif", 7F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label49.ForeColor = Color.FromArgb(78, 45, 24);
             label49.Location = new Point(16, 165);
             label49.Name = "label49";
             label49.Size = new Size(139, 40);
             label49.TabIndex = 3;
             label49.Text = "Chocolate Chip Frappe";
+            label49.Click += label49_Click;
             // 
             // pictureBox19
             // 
@@ -648,13 +649,14 @@
             // label48
             // 
             label48.BackColor = Color.White;
-            label48.Font = new Font("Unbounded Medium", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label48.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label48.ForeColor = Color.FromArgb(78, 45, 24);
             label48.Location = new Point(16, 165);
             label48.Name = "label48";
             label48.Size = new Size(139, 49);
             label48.TabIndex = 3;
             label48.Text = "Caramel Frappe";
+            label48.Click += label48_Click;
             // 
             // pictureBox18
             // 
@@ -718,7 +720,7 @@
             // label47
             // 
             label47.BackColor = Color.White;
-            label47.Font = new Font("Unbounded Medium", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label47.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label47.ForeColor = Color.FromArgb(78, 45, 24);
             label47.Location = new Point(16, 164);
             label47.Name = "label47";
@@ -788,7 +790,7 @@
             // label46
             // 
             label46.BackColor = Color.White;
-            label46.Font = new Font("Unbounded Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label46.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label46.ForeColor = Color.FromArgb(78, 45, 24);
             label46.Location = new Point(13, 165);
             label46.Name = "label46";
@@ -858,7 +860,7 @@
             // label45
             // 
             label45.BackColor = Color.White;
-            label45.Font = new Font("Unbounded Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label45.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label45.ForeColor = Color.FromArgb(78, 45, 24);
             label45.Location = new Point(16, 165);
             label45.Name = "label45";
@@ -2105,7 +2107,7 @@
             cuiTextBox1.FocusBackgroundColor = Color.White;
             cuiTextBox1.FocusBorderColor = Color.FromArgb(255, 106, 0);
             cuiTextBox1.FocusImageTint = Color.White;
-            cuiTextBox1.Font = new Font("Unbounded", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cuiTextBox1.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cuiTextBox1.ForeColor = Color.FromArgb(78, 45, 24);
             cuiTextBox1.Image = null;
             cuiTextBox1.ImageExpand = new Point(0, 0);
@@ -2115,7 +2117,7 @@
             cuiTextBox1.Multiline = true;
             cuiTextBox1.Name = "cuiTextBox1";
             cuiTextBox1.NormalImageTint = Color.White;
-            cuiTextBox1.Padding = new Padding(19, 6, 19, 6);
+            cuiTextBox1.Padding = new Padding(17, 6, 17, 6);
             cuiTextBox1.PasswordChar = false;
             cuiTextBox1.PlaceholderColor = SystemColors.WindowText;
             cuiTextBox1.PlaceholderText = "";
@@ -2161,7 +2163,7 @@
             btnDiscount.BackColor = Color.Transparent;
             btnDiscount.FlatAppearance.BorderSize = 0;
             btnDiscount.FlatStyle = FlatStyle.Flat;
-            btnDiscount.Font = new Font("Unbounded", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnDiscount.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnDiscount.ForeColor = Color.FromArgb(78, 45, 24);
             btnDiscount.Location = new Point(259, 9);
             btnDiscount.Name = "btnDiscount";

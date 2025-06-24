@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mare_POS.Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,36 +16,37 @@ namespace Mare_POS.Ticket_Components
         public ProductComponent()
         {
             InitializeComponent();
+
+            radioGrande.Checked = true;
+            radioHot.Checked = true;
+            quantity = 1;
+            labelQuantity.Text = "1";
+
+            UpdateSubtotal(); // ✅ Set initial subtotal
         }
+
+        public int ProductId { get; set; }
+        public string ProductName { get; set; } = "";
 
         public string? SelectedSize { get; private set; }
         public string? SelectedType { get; private set; }
         public List<string> SelectedExtras { get; private set; } = new List<string>();
         public int Quantity { get; private set; }
 
-        private void btnDone_Click(object sender, EventArgs e)
-        {
-            // Example: logic to set these values based on controls
-            if (radioGrande.Checked) SelectedSize = "Grande";
-            else if (radioVenti.Checked) SelectedSize = "Venti";
+        private int quantity = 1;
 
-            if (radioHot.Checked) SelectedType = "Hot";
-            else if (radioCold.Checked) SelectedType = "Cold";
+        private void radioGrande_CheckedChanged(object sender, EventArgs e) => UpdateSubtotal();
+        private void radioVenti_CheckedChanged_1(object sender, EventArgs e) => UpdateSubtotal();
+        private void radioHot_CheckedChanged(object sender, EventArgs e) => UpdateSubtotal();
+        private void radioCold_CheckedChanged(object sender, EventArgs e) => UpdateSubtotal();
 
-            SelectedExtras.Clear();
-            if (chkSoloShot.Checked) SelectedExtras.Add("Solo Shot");
-            if (chkDoppioShot.Checked) SelectedExtras.Add("Doppio Shot");
-            if (chkWhipCream.Checked) SelectedExtras.Add("Whip Cream");
+        private void chkSoloShot_CheckedChanged_1(object sender, EventArgs e) => UpdateSubtotal();
+        private void chkDoppioShot_CheckedChanged_1(object sender, EventArgs e) => UpdateSubtotal();
+        private void chkWhipCream_CheckedChanged_1(object sender, EventArgs e) => UpdateSubtotal();
 
-            //Quantity = (int)numericUpDownQuantity.Value;
-
-            this.DialogResult = DialogResult.OK;
-            this.Close();
-        }
 
         private void label2_Click(object sender, EventArgs e)
         {
-
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -64,7 +66,97 @@ namespace Mare_POS.Ticket_Components
 
         private void cuiButton1_Click(object sender, EventArgs e)
         {
+            // ✅ Handle Size (only one should be selected)
+            if (radioGrande.Checked)
+                SelectedSize = "Grande";
+            else if (radioVenti.Checked)
+                SelectedSize = "Venti";
+            else
+            {
+                MessageBox.Show("Please select a size.");
+                return;
+            }
 
+            // ✅ Handle Type (only one should be selected)
+            if (radioHot.Checked)
+                SelectedType = "Hot";
+            else if (radioCold.Checked)
+                SelectedType = "Cold";
+            else
+            {
+                MessageBox.Show("Please select a type.");
+                return;
+            }
+
+            // ✅ Handle Extras (multiple allowed)
+            SelectedExtras.Clear();
+            if (chkSoloShot.Checked) SelectedExtras.Add("Solo Shot");
+            if (chkDoppioShot.Checked) SelectedExtras.Add("Doppio Shot");
+            if (chkWhipCream.Checked) SelectedExtras.Add("Whip Cream");
+
+            // ✅ Handle Quantity
+            Quantity = quantity;
+
+            // ✅ Close the popup with result
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        private void cuiButton3_Click(object sender, EventArgs e)
+        {
+            quantity++;
+            labelQuantity.Text = quantity.ToString();
+            UpdateSubtotal();
+        }
+
+        private void QuantityLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MinusButton_Click(object sender, EventArgs e)
+        {
+            if (quantity > 1)
+            {
+                quantity--;
+                labelQuantity.Text = quantity.ToString();
+                UpdateSubtotal();
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UpdateSubtotal()
+        {
+            try
+            {
+                int productId = ProductId;
+                string size = radioGrande.Checked ? "Grande" : "Venti";
+                string type = radioHot.Checked ? "Hot" : "Cold";
+
+                List<string> extras = new List<string>();
+                if (chkSoloShot.Checked) extras.Add("Solo Shot");
+                if (chkDoppioShot.Checked) extras.Add("Doppio Shot");
+                if (chkWhipCream.Checked) extras.Add("Whip Cream");
+
+                decimal basePrice = ProductDataAccess.GetBasePrice(productId, size, type);
+                decimal extrasPrice = ProductDataAccess.GetExtrasTotal(extras);
+                decimal total = (basePrice + extrasPrice) * quantity;
+
+                labelSubtotal.Text = $"{total:0.00}";
+            }
+            catch
+            {
+                labelSubtotal.Text = "₱0.00"; // fallback
+            }
         }
     }
 }
