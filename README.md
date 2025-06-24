@@ -62,7 +62,7 @@ Install-Package LiveChartsCore
 Install-Package LiveChartsCore.SkiaSharpView
 Install-Package LiveChartsCore.SkiaSharpView.WinForms
 `````
-**Or You can use Tools > NuGet Package Manager > Manage NuGet Package For Solution....
+Or You can use Tools > NuGet Package Manager > Manage NuGet Package For Solution....
 Then search for the needed packages.
 ---
 
