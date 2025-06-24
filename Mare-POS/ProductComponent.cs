@@ -22,6 +22,8 @@ namespace Mare_POS.Ticket_Components
         public List<string> SelectedExtras { get; private set; } = new List<string>();
         public int Quantity { get; private set; }
 
+        private int quantity = 1; // Default quantity
+
         private void btnDone_Click(object sender, EventArgs e)
         {
             // Example: logic to set these values based on controls
@@ -64,7 +66,15 @@ namespace Mare_POS.Ticket_Components
 
         private void cuiButton1_Click(object sender, EventArgs e)
         {
-
+            if (radioGrande.Checked)
+                SelectedSize = "Grande";
+            else if (radioVenti.Checked)
+                SelectedSize = "Venti";
+            else
+            {
+                MessageBox.Show("Please select a size.");
+                return;
+            }
         }
     }
 }

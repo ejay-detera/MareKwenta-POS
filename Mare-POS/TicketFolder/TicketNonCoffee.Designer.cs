@@ -1,4 +1,4 @@
-﻿namespace Mare_POS
+﻿namespace Mare_POS.TicketFolder
 {
     partial class TicketNonCoffee
     {

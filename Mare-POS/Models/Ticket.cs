@@ -23,14 +23,15 @@ namespace MareKwenta.Models
         public string? PaymentType { get; set; }
         public string? DiscountType { get; set; }
         public DateTime Date { get; set; }
-        public required string Category { get; set; }
+        public string? Category { get; set; }
         public decimal CashAmount { get; set; }
         public decimal GcashAmount { get; set; }
         public decimal MayaAmount { get; set; }
+        public int TransactionNo { get; set; }
 
-        // Optional: You can include related data like product or employee names if needed for display
-        public string ProductName { get; set; }       
-        public string EmployeeName { get; set; }
+        //Product Name and Employee Name display
+        public string? ProductName { get; set; }       
+        public string? EmployeeName { get; set; }
 
     }
 

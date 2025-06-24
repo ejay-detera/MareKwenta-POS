@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Mare_POS
+namespace Mare_POS.TicketFolder
 {
     public partial class TicketNonCoffee : UserControl
     {

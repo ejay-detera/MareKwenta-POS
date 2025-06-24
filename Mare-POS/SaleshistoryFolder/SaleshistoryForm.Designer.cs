@@ -32,9 +32,6 @@
             SalesHistoryHeader = new Label();
             record_pnl = new CuoreUI.Controls.cuiPanel();
             flowLayoutPanel1 = new FlowLayoutPanel();
-            panel1 = new Panel();
-            cuiButton2 = new CuoreUI.Controls.cuiButton();
-            cuiTextBox1 = new CuoreUI.Controls.cuiTextBox();
             date_label = new Label();
             cardRecord = new CuoreUI.Controls.cuiPanel();
             orderNo_label = new Label();
@@ -59,25 +56,21 @@
             cuiPanel20 = new CuoreUI.Controls.cuiPanel();
             label29 = new Label();
             pictureBox2 = new PictureBox();
+            cuiButton2 = new CuoreUI.Controls.cuiButton();
+            cuiTextBox1 = new CuoreUI.Controls.cuiTextBox();
             receipt_info = new CuoreUI.Controls.cuiPanel();
             flow_receipt_info = new FlowLayoutPanel();
             cuiPanel6 = new CuoreUI.Controls.cuiPanel();
             label6 = new Label();
-            label5 = new Label();
+            lblOrderNo = new Label();
             cuiPanel7 = new CuoreUI.Controls.cuiPanel();
-            label9 = new Label();
-            label7 = new Label();
+            lblPOS = new Label();
+            lblEmployeeName = new Label();
             label8 = new Label();
             cuiPanel9 = new CuoreUI.Controls.cuiPanel();
-            cuiPanel10 = new CuoreUI.Controls.cuiPanel();
-            label14 = new Label();
-            label13 = new Label();
-            label10 = new Label();
-            label11 = new Label();
-            label12 = new Label();
-            cuiPanel12 = new CuoreUI.Controls.cuiPanel();
+            flow_receipt_items = new FlowLayoutPanel();
             cuiPanel8 = new CuoreUI.Controls.cuiPanel();
-            label25 = new Label();
+            lblTotal = new Label();
             label17 = new Label();
             label15 = new Label();
             label16 = new Label();
@@ -85,22 +78,22 @@
             cuiPanel13 = new CuoreUI.Controls.cuiPanel();
             cuiPanel14 = new CuoreUI.Controls.cuiPanel();
             cuiPanel11 = new CuoreUI.Controls.cuiPanel();
-            label33 = new Label();
-            label32 = new Label();
+            lblChange = new Label();
+            lblMaya = new Label();
             label31 = new Label();
             label30 = new Label();
-            label20 = new Label();
-            label18 = new Label();
+            lblGCash = new Label();
+            lblCash = new Label();
             label21 = new Label();
             label22 = new Label();
             label23 = new Label();
             cuiPanel15 = new CuoreUI.Controls.cuiPanel();
             cuiPanel16 = new CuoreUI.Controls.cuiPanel();
             cuiPanel17 = new CuoreUI.Controls.cuiPanel();
-            label24 = new Label();
+            lblDate = new Label();
+            cuiPanel21 = new CuoreUI.Controls.cuiPanel();
             record_pnl.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
-            panel1.SuspendLayout();
             cardRecord.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)icon_labels).BeginInit();
             cuiPanel1.SuspendLayout();
@@ -111,9 +104,9 @@
             flow_receipt_info.SuspendLayout();
             cuiPanel6.SuspendLayout();
             cuiPanel7.SuspendLayout();
-            cuiPanel10.SuspendLayout();
             cuiPanel8.SuspendLayout();
             cuiPanel11.SuspendLayout();
+            cuiPanel21.SuspendLayout();
             SuspendLayout();
             // 
             // SalesHistoryHeader
@@ -137,21 +130,20 @@
             record_pnl.BackColor = Color.Transparent;
             record_pnl.Controls.Add(flowLayoutPanel1);
             record_pnl.Cursor = Cursors.Hand;
-            record_pnl.Location = new Point(34, 144);
+            record_pnl.Location = new Point(34, 236);
             record_pnl.Margin = new Padding(34, 40, 34, 40);
             record_pnl.Name = "record_pnl";
             record_pnl.OutlineThickness = 1F;
             record_pnl.PanelColor = Color.White;
             record_pnl.PanelOutlineColor = Color.Transparent;
             record_pnl.Rounding = new Padding(24);
-            record_pnl.Size = new Size(434, 1181);
+            record_pnl.Size = new Size(434, 1112);
             record_pnl.TabIndex = 2;
             record_pnl.Paint += record_pnl_Paint;
             // 
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.AutoScroll = true;
-            flowLayoutPanel1.Controls.Add(panel1);
             flowLayoutPanel1.Controls.Add(date_label);
             flowLayoutPanel1.Controls.Add(cardRecord);
             flowLayoutPanel1.Controls.Add(label1);
@@ -164,96 +156,17 @@
             flowLayoutPanel1.Margin = new Padding(0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Padding = new Padding(23, 27, 23, 27);
-            flowLayoutPanel1.Size = new Size(434, 1181);
+            flowLayoutPanel1.Size = new Size(434, 1112);
             flowLayoutPanel1.TabIndex = 0;
+            flowLayoutPanel1.WrapContents = false;
             flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
-            // 
-            // panel1
-            // 
-            panel1.Controls.Add(cuiButton2);
-            panel1.Controls.Add(cuiTextBox1);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(23, 27);
-            panel1.Margin = new Padding(0, 0, 0, 40);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(389, 67);
-            panel1.TabIndex = 3;
-            // 
-            // cuiButton2
-            // 
-            cuiButton2.Anchor = AnchorStyles.Left;
-            cuiButton2.BackColor = Color.FromArgb(242, 239, 234);
-            cuiButton2.CheckButton = false;
-            cuiButton2.Checked = false;
-            cuiButton2.CheckedBackground = Color.FromArgb(255, 106, 0);
-            cuiButton2.CheckedForeColor = Color.FromArgb(242, 239, 234);
-            cuiButton2.CheckedImageTint = Color.FromArgb(242, 239, 234);
-            cuiButton2.CheckedOutline = Color.FromArgb(255, 106, 0);
-            cuiButton2.Content = "";
-            cuiButton2.DialogResult = DialogResult.None;
-            cuiButton2.Font = new Font("Microsoft Sans Serif", 9.75F);
-            cuiButton2.ForeColor = Color.Transparent;
-            cuiButton2.HoverBackground = Color.FromArgb(60, 78, 45, 24);
-            cuiButton2.HoveredImageTint = Color.FromArgb(242, 239, 234);
-            cuiButton2.HoverForeColor = Color.FromArgb(78, 45, 24);
-            cuiButton2.HoverOutline = Color.FromArgb(242, 239, 234);
-            cuiButton2.Image = (Image)resources.GetObject("cuiButton2.Image");
-            cuiButton2.ImageAutoCenter = true;
-            cuiButton2.ImageExpand = new Point(6, 6);
-            cuiButton2.ImageOffset = new Point(0, 0);
-            cuiButton2.Location = new Point(339, 11);
-            cuiButton2.Margin = new Padding(14, 16, 14, 16);
-            cuiButton2.Name = "cuiButton2";
-            cuiButton2.NormalBackground = Color.FromArgb(242, 239, 234);
-            cuiButton2.NormalForeColor = Color.Transparent;
-            cuiButton2.NormalImageTint = Color.White;
-            cuiButton2.NormalOutline = Color.FromArgb(242, 239, 234);
-            cuiButton2.OutlineThickness = 1F;
-            cuiButton2.PressedBackground = Color.FromArgb(60, 78, 45, 24);
-            cuiButton2.PressedForeColor = Color.FromArgb(78, 45, 24);
-            cuiButton2.PressedImageTint = Color.FromArgb(78, 45, 24);
-            cuiButton2.PressedOutline = Color.FromArgb(242, 239, 234);
-            cuiButton2.Rounding = new Padding(6);
-            cuiButton2.Size = new Size(41, 48);
-            cuiButton2.TabIndex = 8;
-            cuiButton2.TextAlignment = StringAlignment.Center;
-            cuiButton2.TextOffset = new Point(0, 0);
-            cuiButton2.Click += cuiButton2_Click;
-            // 
-            // cuiTextBox1
-            // 
-            cuiTextBox1.BackgroundColor = Color.FromArgb(242, 239, 234);
-            cuiTextBox1.BorderColor = Color.Gainsboro;
-            cuiTextBox1.Content = "";
-            cuiTextBox1.FocusBackgroundColor = Color.FromArgb(242, 239, 234);
-            cuiTextBox1.FocusBorderColor = Color.FromArgb(112, 138, 46);
-            cuiTextBox1.FocusImageTint = Color.FromArgb(242, 239, 234);
-            cuiTextBox1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiTextBox1.ForeColor = Color.FromArgb(78, 45, 24);
-            cuiTextBox1.Image = null;
-            cuiTextBox1.ImageExpand = new Point(0, 0);
-            cuiTextBox1.ImageOffset = new Point(0, 0);
-            cuiTextBox1.Location = new Point(0, 0);
-            cuiTextBox1.Margin = new Padding(0, 0, 14, 40);
-            cuiTextBox1.Multiline = false;
-            cuiTextBox1.Name = "cuiTextBox1";
-            cuiTextBox1.NormalImageTint = Color.FromArgb(242, 239, 234);
-            cuiTextBox1.Padding = new Padding(23, 22, 23, 0);
-            cuiTextBox1.PasswordChar = false;
-            cuiTextBox1.PlaceholderColor = Color.FromArgb(70, 78, 45, 24);
-            cuiTextBox1.PlaceholderText = "Search";
-            cuiTextBox1.Rounding = new Padding(12);
-            cuiTextBox1.Size = new Size(389, 67);
-            cuiTextBox1.TabIndex = 4;
-            cuiTextBox1.TextOffset = new Size(0, 0);
-            cuiTextBox1.UnderlinedStyle = true;
             // 
             // date_label
             // 
             date_label.AutoSize = true;
             date_label.Font = new Font("Microsoft Sans Serif", 12F);
             date_label.ForeColor = Color.FromArgb(112, 138, 46);
-            date_label.Location = new Point(26, 134);
+            date_label.Location = new Point(26, 27);
             date_label.Name = "date_label";
             date_label.Size = new Size(210, 25);
             date_label.TabIndex = 0;
@@ -267,7 +180,7 @@
             cardRecord.Controls.Add(cuiPanel3);
             cardRecord.Controls.Add(price_label);
             cardRecord.Controls.Add(icon_labels);
-            cardRecord.Location = new Point(23, 186);
+            cardRecord.Location = new Point(23, 79);
             cardRecord.Margin = new Padding(0, 27, 0, 27);
             cardRecord.Name = "cardRecord";
             cardRecord.OutlineThickness = 1F;
@@ -361,7 +274,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft Sans Serif", 12F);
             label1.ForeColor = Color.FromArgb(112, 138, 46);
-            label1.Location = new Point(26, 325);
+            label1.Location = new Point(26, 218);
             label1.Name = "label1";
             label1.Size = new Size(205, 25);
             label1.TabIndex = 2;
@@ -375,7 +288,7 @@
             cuiPanel1.Controls.Add(cuiPanel5);
             cuiPanel1.Controls.Add(label4);
             cuiPanel1.Controls.Add(pictureBox1);
-            cuiPanel1.Location = new Point(23, 377);
+            cuiPanel1.Location = new Point(23, 270);
             cuiPanel1.Margin = new Padding(0, 27, 0, 27);
             cuiPanel1.Name = "cuiPanel1";
             cuiPanel1.OutlineThickness = 1F;
@@ -466,7 +379,7 @@
             label26.AutoSize = true;
             label26.Font = new Font("Microsoft Sans Serif", 12F);
             label26.ForeColor = Color.FromArgb(112, 138, 46);
-            label26.Location = new Point(26, 516);
+            label26.Location = new Point(26, 409);
             label26.Name = "label26";
             label26.Size = new Size(205, 25);
             label26.TabIndex = 4;
@@ -480,7 +393,7 @@
             cuiPanel18.Controls.Add(cuiPanel20);
             cuiPanel18.Controls.Add(label29);
             cuiPanel18.Controls.Add(pictureBox2);
-            cuiPanel18.Location = new Point(23, 568);
+            cuiPanel18.Location = new Point(23, 461);
             cuiPanel18.Margin = new Padding(0, 27, 0, 27);
             cuiPanel18.Name = "cuiPanel18";
             cuiPanel18.OutlineThickness = 1F;
@@ -566,6 +479,76 @@
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
             // 
+            // cuiButton2
+            // 
+            cuiButton2.Anchor = AnchorStyles.Left;
+            cuiButton2.BackColor = Color.FromArgb(242, 239, 234);
+            cuiButton2.CheckButton = false;
+            cuiButton2.Checked = false;
+            cuiButton2.CheckedBackground = Color.FromArgb(255, 106, 0);
+            cuiButton2.CheckedForeColor = Color.FromArgb(242, 239, 234);
+            cuiButton2.CheckedImageTint = Color.FromArgb(242, 239, 234);
+            cuiButton2.CheckedOutline = Color.FromArgb(255, 106, 0);
+            cuiButton2.Content = "";
+            cuiButton2.DialogResult = DialogResult.None;
+            cuiButton2.Font = new Font("Microsoft Sans Serif", 9.75F);
+            cuiButton2.ForeColor = Color.Transparent;
+            cuiButton2.HoverBackground = Color.FromArgb(60, 78, 45, 24);
+            cuiButton2.HoveredImageTint = Color.FromArgb(242, 239, 234);
+            cuiButton2.HoverForeColor = Color.FromArgb(78, 45, 24);
+            cuiButton2.HoverOutline = Color.FromArgb(242, 239, 234);
+            cuiButton2.Image = (Image)resources.GetObject("cuiButton2.Image");
+            cuiButton2.ImageAutoCenter = true;
+            cuiButton2.ImageExpand = new Point(6, 6);
+            cuiButton2.ImageOffset = new Point(0, 0);
+            cuiButton2.Location = new Point(358, 27);
+            cuiButton2.Margin = new Padding(14, 16, 14, 16);
+            cuiButton2.Name = "cuiButton2";
+            cuiButton2.NormalBackground = Color.FromArgb(242, 239, 234);
+            cuiButton2.NormalForeColor = Color.Transparent;
+            cuiButton2.NormalImageTint = Color.White;
+            cuiButton2.NormalOutline = Color.FromArgb(242, 239, 234);
+            cuiButton2.OutlineThickness = 1F;
+            cuiButton2.PressedBackground = Color.FromArgb(60, 78, 45, 24);
+            cuiButton2.PressedForeColor = Color.FromArgb(78, 45, 24);
+            cuiButton2.PressedImageTint = Color.FromArgb(78, 45, 24);
+            cuiButton2.PressedOutline = Color.FromArgb(242, 239, 234);
+            cuiButton2.Rounding = new Padding(6);
+            cuiButton2.Size = new Size(41, 48);
+            cuiButton2.TabIndex = 8;
+            cuiButton2.TextAlignment = StringAlignment.Center;
+            cuiButton2.TextOffset = new Point(0, 0);
+            cuiButton2.Click += cuiButton2_Click;
+            // 
+            // cuiTextBox1
+            // 
+            cuiTextBox1.BackgroundColor = Color.FromArgb(242, 239, 234);
+            cuiTextBox1.BorderColor = Color.Gainsboro;
+            cuiTextBox1.Content = "";
+            cuiTextBox1.FocusBackgroundColor = Color.FromArgb(242, 239, 234);
+            cuiTextBox1.FocusBorderColor = Color.FromArgb(112, 138, 46);
+            cuiTextBox1.FocusImageTint = Color.FromArgb(242, 239, 234);
+            cuiTextBox1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cuiTextBox1.ForeColor = Color.FromArgb(78, 45, 24);
+            cuiTextBox1.Image = null;
+            cuiTextBox1.ImageExpand = new Point(0, 0);
+            cuiTextBox1.ImageOffset = new Point(0, 0);
+            cuiTextBox1.Location = new Point(24, 17);
+            cuiTextBox1.Margin = new Padding(0, 0, 14, 40);
+            cuiTextBox1.Multiline = false;
+            cuiTextBox1.Name = "cuiTextBox1";
+            cuiTextBox1.NormalImageTint = Color.FromArgb(242, 239, 234);
+            cuiTextBox1.Padding = new Padding(23, 22, 23, 0);
+            cuiTextBox1.PasswordChar = false;
+            cuiTextBox1.PlaceholderColor = Color.FromArgb(70, 78, 45, 24);
+            cuiTextBox1.PlaceholderText = "Search";
+            cuiTextBox1.Rounding = new Padding(12);
+            cuiTextBox1.Size = new Size(389, 67);
+            cuiTextBox1.TabIndex = 4;
+            cuiTextBox1.TextOffset = new Size(0, 0);
+            cuiTextBox1.UnderlinedStyle = true;
+            cuiTextBox1.ContentChanged += cuiTextBox1_ContentChanged_1;
+            // 
             // receipt_info
             // 
             receipt_info.AllowDrop = true;
@@ -586,14 +569,15 @@
             // flow_receipt_info
             // 
             flow_receipt_info.AutoScroll = true;
+            flow_receipt_info.AutoSize = true;
             flow_receipt_info.BackColor = Color.Transparent;
             flow_receipt_info.Controls.Add(cuiPanel6);
             flow_receipt_info.Controls.Add(cuiPanel7);
-            flow_receipt_info.Controls.Add(cuiPanel10);
+            flow_receipt_info.Controls.Add(flow_receipt_items);
             flow_receipt_info.Controls.Add(cuiPanel8);
             flow_receipt_info.Controls.Add(cuiPanel11);
             flow_receipt_info.Controls.Add(cuiPanel17);
-            flow_receipt_info.Controls.Add(label24);
+            flow_receipt_info.Controls.Add(lblDate);
             flow_receipt_info.Dock = DockStyle.Fill;
             flow_receipt_info.FlowDirection = FlowDirection.TopDown;
             flow_receipt_info.Location = new Point(0, 0);
@@ -602,11 +586,12 @@
             flow_receipt_info.Padding = new Padding(23, 27, 23, 27);
             flow_receipt_info.Size = new Size(723, 783);
             flow_receipt_info.TabIndex = 0;
+            flow_receipt_info.WrapContents = false;
             // 
             // cuiPanel6
             // 
             cuiPanel6.Controls.Add(label6);
-            cuiPanel6.Controls.Add(label5);
+            cuiPanel6.Controls.Add(lblOrderNo);
             cuiPanel6.Location = new Point(23, 27);
             cuiPanel6.Margin = new Padding(0);
             cuiPanel6.Name = "cuiPanel6";
@@ -630,24 +615,24 @@
             label6.TabIndex = 5;
             label6.Text = "Order No.";
             // 
-            // label5
+            // lblOrderNo
             // 
-            label5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label5.AutoSize = true;
-            label5.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Bold);
-            label5.ForeColor = Color.FromArgb(78, 45, 24);
-            label5.Location = new Point(269, 25);
-            label5.Margin = new Padding(14, 0, 14, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(149, 39);
-            label5.TabIndex = 4;
-            label5.Text = "#1-1031";
-            label5.TextAlign = ContentAlignment.TopCenter;
+            lblOrderNo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lblOrderNo.AutoSize = true;
+            lblOrderNo.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Bold);
+            lblOrderNo.ForeColor = Color.FromArgb(78, 45, 24);
+            lblOrderNo.Location = new Point(280, 33);
+            lblOrderNo.Margin = new Padding(14, 0, 14, 0);
+            lblOrderNo.Name = "lblOrderNo";
+            lblOrderNo.Size = new Size(117, 39);
+            lblOrderNo.TabIndex = 4;
+            lblOrderNo.Text = "#1001";
+            lblOrderNo.TextAlign = ContentAlignment.TopCenter;
             // 
             // cuiPanel7
             // 
-            cuiPanel7.Controls.Add(label9);
-            cuiPanel7.Controls.Add(label7);
+            cuiPanel7.Controls.Add(lblPOS);
+            cuiPanel7.Controls.Add(lblEmployeeName);
             cuiPanel7.Controls.Add(label8);
             cuiPanel7.Controls.Add(cuiPanel9);
             cuiPanel7.Location = new Point(23, 168);
@@ -660,31 +645,31 @@
             cuiPanel7.Size = new Size(678, 112);
             cuiPanel7.TabIndex = 2;
             // 
-            // label9
+            // lblPOS
             // 
-            label9.Anchor = AnchorStyles.Right;
-            label9.AutoSize = true;
-            label9.Font = new Font("Microsoft Sans Serif", 12F);
-            label9.ForeColor = Color.FromArgb(78, 45, 24);
-            label9.Location = new Point(31, 64);
-            label9.Margin = new Padding(14, 0, 14, 0);
-            label9.Name = "label9";
-            label9.Size = new Size(125, 25);
-            label9.TabIndex = 4;
-            label9.Text = "POS: POS 1";
+            lblPOS.Anchor = AnchorStyles.Right;
+            lblPOS.AutoSize = true;
+            lblPOS.Font = new Font("Microsoft Sans Serif", 12F);
+            lblPOS.ForeColor = Color.FromArgb(78, 45, 24);
+            lblPOS.Location = new Point(31, 64);
+            lblPOS.Margin = new Padding(14, 0, 14, 0);
+            lblPOS.Name = "lblPOS";
+            lblPOS.Size = new Size(125, 25);
+            lblPOS.TabIndex = 4;
+            lblPOS.Text = "POS: POS 1";
             // 
-            // label7
+            // lblEmployeeName
             // 
-            label7.Anchor = AnchorStyles.Right;
-            label7.AutoSize = true;
-            label7.Font = new Font("Microsoft Sans Serif", 12F);
-            label7.ForeColor = Color.FromArgb(78, 45, 24);
-            label7.Location = new Point(32, 28);
-            label7.Margin = new Padding(14, 0, 14, 0);
-            label7.Name = "label7";
-            label7.Size = new Size(280, 25);
-            label7.TabIndex = 3;
-            label7.Text = "Employee Name: Lorem Ipsum";
+            lblEmployeeName.Anchor = AnchorStyles.Right;
+            lblEmployeeName.AutoSize = true;
+            lblEmployeeName.Font = new Font("Microsoft Sans Serif", 12F);
+            lblEmployeeName.ForeColor = Color.FromArgb(78, 45, 24);
+            lblEmployeeName.Location = new Point(32, 28);
+            lblEmployeeName.Margin = new Padding(14, 0, 14, 0);
+            lblEmployeeName.Name = "lblEmployeeName";
+            lblEmployeeName.Size = new Size(280, 25);
+            lblEmployeeName.TabIndex = 3;
+            lblEmployeeName.Text = "Employee Name: Lorem Ipsum";
             // 
             // label8
             // 
@@ -709,109 +694,28 @@
             cuiPanel9.Size = new Size(678, 3);
             cuiPanel9.TabIndex = 2;
             // 
-            // cuiPanel10
+            // flow_receipt_items
             // 
-            cuiPanel10.Controls.Add(label14);
-            cuiPanel10.Controls.Add(label13);
-            cuiPanel10.Controls.Add(label10);
-            cuiPanel10.Controls.Add(label11);
-            cuiPanel10.Controls.Add(label12);
-            cuiPanel10.Controls.Add(cuiPanel12);
-            cuiPanel10.Location = new Point(23, 280);
-            cuiPanel10.Margin = new Padding(0);
-            cuiPanel10.Name = "cuiPanel10";
-            cuiPanel10.OutlineThickness = 1F;
-            cuiPanel10.PanelColor = Color.White;
-            cuiPanel10.PanelOutlineColor = Color.White;
-            cuiPanel10.Rounding = new Padding(0);
-            cuiPanel10.Size = new Size(678, 156);
-            cuiPanel10.TabIndex = 3;
-            // 
-            // label14
-            // 
-            label14.Anchor = AnchorStyles.Right;
-            label14.AutoSize = true;
-            label14.Font = new Font("Microsoft Sans Serif", 14F);
-            label14.ForeColor = Color.FromArgb(78, 45, 24);
-            label14.Location = new Point(569, 33);
-            label14.Margin = new Padding(14, 0, 14, 0);
-            label14.Name = "label14";
-            label14.Size = new Size(100, 29);
-            label14.TabIndex = 6;
-            label14.Text = "₱120.00";
-            // 
-            // label13
-            // 
-            label13.Anchor = AnchorStyles.Right;
-            label13.AutoSize = true;
-            label13.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold);
-            label13.ForeColor = Color.FromArgb(78, 45, 24);
-            label13.Location = new Point(30, 31);
-            label13.Margin = new Padding(14, 0, 14, 0);
-            label13.Name = "label13";
-            label13.Size = new Size(203, 29);
-            label13.TabIndex = 5;
-            label13.Text = "Strawberry Latte";
-            // 
-            // label10
-            // 
-            label10.Anchor = AnchorStyles.Right;
-            label10.AutoSize = true;
-            label10.Font = new Font("Microsoft Sans Serif", 12F);
-            label10.ForeColor = Color.FromArgb(78, 45, 24);
-            label10.Location = new Point(32, 71);
-            label10.Margin = new Padding(14, 0, 14, 0);
-            label10.Name = "label10";
-            label10.Size = new Size(107, 25);
-            label10.TabIndex = 4;
-            label10.Text = "Quantity: 1";
-            // 
-            // label11
-            // 
-            label11.Anchor = AnchorStyles.Right;
-            label11.AutoSize = true;
-            label11.Font = new Font("Microsoft Sans Serif", 12F);
-            label11.ForeColor = Color.FromArgb(78, 45, 24);
-            label11.Location = new Point(32, 103);
-            label11.Margin = new Padding(14, 0, 14, 0);
-            label11.Name = "label11";
-            label11.Size = new Size(199, 25);
-            label11.TabIndex = 3;
-            label11.Text = "Size: Venti (₱120.00)";
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Microsoft Sans Serif", 10F);
-            label12.ForeColor = Color.FromArgb(78, 45, 24);
-            label12.Location = new Point(85, 64);
-            label12.Name = "label12";
-            label12.Size = new Size(0, 20);
-            label12.TabIndex = 2;
-            // 
-            // cuiPanel12
-            // 
-            cuiPanel12.Dock = DockStyle.Top;
-            cuiPanel12.Location = new Point(0, 0);
-            cuiPanel12.Margin = new Padding(3, 4, 3, 4);
-            cuiPanel12.Name = "cuiPanel12";
-            cuiPanel12.OutlineThickness = 1F;
-            cuiPanel12.PanelColor = Color.FromArgb(242, 239, 234);
-            cuiPanel12.PanelOutlineColor = Color.FromArgb(242, 239, 234);
-            cuiPanel12.Rounding = new Padding(0);
-            cuiPanel12.Size = new Size(678, 3);
-            cuiPanel12.TabIndex = 2;
+            flow_receipt_items.AutoSize = true;
+            flow_receipt_items.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            flow_receipt_items.Dock = DockStyle.Top;
+            flow_receipt_items.FlowDirection = FlowDirection.TopDown;
+            flow_receipt_items.Location = new Point(26, 283);
+            flow_receipt_items.Name = "flow_receipt_items";
+            flow_receipt_items.Size = new Size(672, 0);
+            flow_receipt_items.TabIndex = 7;
+            flow_receipt_items.WrapContents = false;
             // 
             // cuiPanel8
             // 
-            cuiPanel8.Controls.Add(label25);
+            cuiPanel8.Controls.Add(lblTotal);
             cuiPanel8.Controls.Add(label17);
             cuiPanel8.Controls.Add(label15);
             cuiPanel8.Controls.Add(label16);
             cuiPanel8.Controls.Add(label19);
             cuiPanel8.Controls.Add(cuiPanel13);
             cuiPanel8.Controls.Add(cuiPanel14);
-            cuiPanel8.Location = new Point(23, 436);
+            cuiPanel8.Location = new Point(23, 286);
             cuiPanel8.Margin = new Padding(0);
             cuiPanel8.Name = "cuiPanel8";
             cuiPanel8.OutlineThickness = 1F;
@@ -821,18 +725,18 @@
             cuiPanel8.Size = new Size(678, 75);
             cuiPanel8.TabIndex = 4;
             // 
-            // label25
+            // lblTotal
             // 
-            label25.Anchor = AnchorStyles.Right;
-            label25.AutoSize = true;
-            label25.Font = new Font("Microsoft Sans Serif", 14F);
-            label25.ForeColor = Color.FromArgb(78, 45, 24);
-            label25.Location = new Point(569, 24);
-            label25.Margin = new Padding(14, 0, 14, 0);
-            label25.Name = "label25";
-            label25.Size = new Size(100, 29);
-            label25.TabIndex = 8;
-            label25.Text = "₱120.00";
+            lblTotal.Anchor = AnchorStyles.Right;
+            lblTotal.AutoSize = true;
+            lblTotal.Font = new Font("Microsoft Sans Serif", 14F);
+            lblTotal.ForeColor = Color.FromArgb(78, 45, 24);
+            lblTotal.Location = new Point(553, 22);
+            lblTotal.Margin = new Padding(14, 0, 14, 0);
+            lblTotal.Name = "lblTotal";
+            lblTotal.Size = new Size(100, 29);
+            lblTotal.TabIndex = 8;
+            lblTotal.Text = "₱120.00";
             // 
             // label17
             // 
@@ -910,18 +814,18 @@
             // 
             // cuiPanel11
             // 
-            cuiPanel11.Controls.Add(label33);
-            cuiPanel11.Controls.Add(label32);
+            cuiPanel11.Controls.Add(lblChange);
+            cuiPanel11.Controls.Add(lblMaya);
             cuiPanel11.Controls.Add(label31);
             cuiPanel11.Controls.Add(label30);
-            cuiPanel11.Controls.Add(label20);
-            cuiPanel11.Controls.Add(label18);
+            cuiPanel11.Controls.Add(lblGCash);
+            cuiPanel11.Controls.Add(lblCash);
             cuiPanel11.Controls.Add(label21);
             cuiPanel11.Controls.Add(label22);
             cuiPanel11.Controls.Add(label23);
             cuiPanel11.Controls.Add(cuiPanel15);
             cuiPanel11.Controls.Add(cuiPanel16);
-            cuiPanel11.Location = new Point(23, 515);
+            cuiPanel11.Location = new Point(23, 365);
             cuiPanel11.Margin = new Padding(0, 4, 0, 4);
             cuiPanel11.Name = "cuiPanel11";
             cuiPanel11.OutlineThickness = 1F;
@@ -931,31 +835,34 @@
             cuiPanel11.Size = new Size(678, 156);
             cuiPanel11.TabIndex = 5;
             // 
-            // label33
+            // lblChange
             // 
-            label33.Anchor = AnchorStyles.Right;
-            label33.AutoSize = true;
-            label33.Font = new Font("Microsoft Sans Serif", 14F);
-            label33.ForeColor = Color.FromArgb(78, 45, 24);
-            label33.Location = new Point(579, 109);
-            label33.Margin = new Padding(14, 0, 14, 0);
-            label33.Name = "label33";
-            label33.Size = new Size(87, 29);
-            label33.TabIndex = 18;
-            label33.Text = "₱60.00";
+            lblChange.Anchor = AnchorStyles.Right;
+            lblChange.AutoSize = true;
+            lblChange.Font = new Font("Microsoft Sans Serif", 14F);
+            lblChange.ForeColor = Color.FromArgb(78, 45, 24);
+            lblChange.Location = new Point(553, 109);
+            lblChange.Margin = new Padding(14, 0, 14, 0);
+            lblChange.Name = "lblChange";
+            lblChange.Size = new Size(87, 29);
+            lblChange.TabIndex = 18;
+            lblChange.Text = "₱60.00";
+            lblChange.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // label32
+            // lblMaya
             // 
-            label32.Anchor = AnchorStyles.Right;
-            label32.AutoSize = true;
-            label32.Font = new Font("Microsoft Sans Serif", 14F);
-            label32.ForeColor = Color.FromArgb(78, 45, 24);
-            label32.Location = new Point(579, 79);
-            label32.Margin = new Padding(14, 0, 14, 0);
-            label32.Name = "label32";
-            label32.Size = new Size(87, 29);
-            label32.TabIndex = 17;
-            label32.Text = "₱60.00";
+            lblMaya.Anchor = AnchorStyles.Right;
+            lblMaya.AutoSize = true;
+            lblMaya.Font = new Font("Microsoft Sans Serif", 14F);
+            lblMaya.ForeColor = Color.FromArgb(78, 45, 24);
+            lblMaya.Location = new Point(553, 77);
+            lblMaya.Margin = new Padding(14, 0, 14, 0);
+            lblMaya.Name = "lblMaya";
+            lblMaya.Size = new Size(87, 29);
+            lblMaya.TabIndex = 17;
+            lblMaya.Text = "₱60.00";
+            lblMaya.TextAlign = ContentAlignment.MiddleLeft;
+            lblMaya.Click += lblMaya_Click;
             // 
             // label31
             // 
@@ -983,31 +890,33 @@
             label30.TabIndex = 15;
             label30.Text = "Cash";
             // 
-            // label20
+            // lblGCash
             // 
-            label20.Anchor = AnchorStyles.Right;
-            label20.AutoSize = true;
-            label20.Font = new Font("Microsoft Sans Serif", 14F);
-            label20.ForeColor = Color.FromArgb(78, 45, 24);
-            label20.Location = new Point(579, 47);
-            label20.Margin = new Padding(14, 0, 14, 0);
-            label20.Name = "label20";
-            label20.Size = new Size(87, 29);
-            label20.TabIndex = 14;
-            label20.Text = "₱60.00";
+            lblGCash.Anchor = AnchorStyles.Right;
+            lblGCash.AutoSize = true;
+            lblGCash.Font = new Font("Microsoft Sans Serif", 14F);
+            lblGCash.ForeColor = Color.FromArgb(78, 45, 24);
+            lblGCash.Location = new Point(553, 44);
+            lblGCash.Margin = new Padding(14, 0, 14, 0);
+            lblGCash.Name = "lblGCash";
+            lblGCash.Size = new Size(87, 29);
+            lblGCash.TabIndex = 14;
+            lblGCash.Text = "₱60.00";
+            lblGCash.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // label18
+            // lblCash
             // 
-            label18.Anchor = AnchorStyles.Right;
-            label18.AutoSize = true;
-            label18.Font = new Font("Microsoft Sans Serif", 14F);
-            label18.ForeColor = Color.FromArgb(78, 45, 24);
-            label18.Location = new Point(579, 15);
-            label18.Margin = new Padding(14, 0, 14, 0);
-            label18.Name = "label18";
-            label18.Size = new Size(87, 29);
-            label18.TabIndex = 13;
-            label18.Text = "₱60.00";
+            lblCash.Anchor = AnchorStyles.Right;
+            lblCash.AutoSize = true;
+            lblCash.Font = new Font("Microsoft Sans Serif", 14F);
+            lblCash.ForeColor = Color.FromArgb(78, 45, 24);
+            lblCash.Location = new Point(553, 15);
+            lblCash.Margin = new Padding(14, 0, 14, 0);
+            lblCash.Name = "lblCash";
+            lblCash.Size = new Size(100, 29);
+            lblCash.TabIndex = 13;
+            lblCash.Text = "₱200.00";
+            lblCash.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // label21
             // 
@@ -1076,7 +985,7 @@
             // cuiPanel17
             // 
             cuiPanel17.Dock = DockStyle.Bottom;
-            cuiPanel17.Location = new Point(23, 675);
+            cuiPanel17.Location = new Point(23, 525);
             cuiPanel17.Margin = new Padding(0);
             cuiPanel17.Name = "cuiPanel17";
             cuiPanel17.OutlineThickness = 1F;
@@ -1086,23 +995,37 @@
             cuiPanel17.Size = new Size(678, 3);
             cuiPanel17.TabIndex = 7;
             // 
-            // label24
+            // lblDate
             // 
-            label24.AutoSize = true;
-            label24.Font = new Font("Microsoft Sans Serif", 12F);
-            label24.ForeColor = Color.FromArgb(112, 138, 46);
-            label24.Location = new Point(23, 694);
-            label24.Margin = new Padding(0, 16, 0, 0);
-            label24.Name = "label24";
-            label24.Size = new Size(188, 25);
-            label24.TabIndex = 6;
-            label24.Text = "25/05/2025 5:06 pm";
+            lblDate.AutoSize = true;
+            lblDate.Font = new Font("Microsoft Sans Serif", 12F);
+            lblDate.ForeColor = Color.FromArgb(112, 138, 46);
+            lblDate.Location = new Point(23, 544);
+            lblDate.Margin = new Padding(0, 16, 0, 0);
+            lblDate.Name = "lblDate";
+            lblDate.Size = new Size(188, 25);
+            lblDate.TabIndex = 6;
+            lblDate.Text = "25/05/2025 5:06 pm";
+            // 
+            // cuiPanel21
+            // 
+            cuiPanel21.Controls.Add(cuiButton2);
+            cuiPanel21.Controls.Add(cuiTextBox1);
+            cuiPanel21.Location = new Point(34, 115);
+            cuiPanel21.Name = "cuiPanel21";
+            cuiPanel21.OutlineThickness = 1F;
+            cuiPanel21.PanelColor = Color.White;
+            cuiPanel21.PanelOutlineColor = Color.White;
+            cuiPanel21.Rounding = new Padding(8);
+            cuiPanel21.Size = new Size(435, 101);
+            cuiPanel21.TabIndex = 4;
             // 
             // SaleshistoryForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(242, 239, 234);
+            Controls.Add(cuiPanel21);
             Controls.Add(receipt_info);
             Controls.Add(record_pnl);
             Controls.Add(SalesHistoryHeader);
@@ -1112,7 +1035,6 @@
             record_pnl.ResumeLayout(false);
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.PerformLayout();
-            panel1.ResumeLayout(false);
             cardRecord.ResumeLayout(false);
             cardRecord.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)icon_labels).EndInit();
@@ -1123,18 +1045,18 @@
             cuiPanel18.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             receipt_info.ResumeLayout(false);
+            receipt_info.PerformLayout();
             flow_receipt_info.ResumeLayout(false);
             flow_receipt_info.PerformLayout();
             cuiPanel6.ResumeLayout(false);
             cuiPanel6.PerformLayout();
             cuiPanel7.ResumeLayout(false);
             cuiPanel7.PerformLayout();
-            cuiPanel10.ResumeLayout(false);
-            cuiPanel10.PerformLayout();
             cuiPanel8.ResumeLayout(false);
             cuiPanel8.PerformLayout();
             cuiPanel11.ResumeLayout(false);
             cuiPanel11.PerformLayout();
+            cuiPanel21.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1161,18 +1083,17 @@
         private Label label4;
         private PictureBox pictureBox1;
         private CuoreUI.Controls.cuiTextBox cuiTextBox1;
-        private Panel panel1;
         private CuoreUI.Controls.cuiButton cuiButton2;
         private CuoreUI.Controls.cuiPanel receipt_info;
         private FlowLayoutPanel flow_receipt_info;
         private CuoreUI.Controls.cuiPanel cuiPanel6;
-        private Label label5;
+        private Label lblOrderNo;
         private Label label6;
         private CuoreUI.Controls.cuiPanel cuiPanel7;
-        private Label label7;
+        private Label lblEmployeeName;
         private Label label8;
         private CuoreUI.Controls.cuiPanel cuiPanel9;
-        private Label label9;
+        private Label lblPOS;
         private CuoreUI.Controls.cuiPanel cuiPanel10;
         private Label label14;
         private Label label13;
@@ -1194,10 +1115,10 @@
         private CuoreUI.Controls.cuiPanel cuiPanel15;
         private CuoreUI.Controls.cuiPanel cuiPanel16;
         private CuoreUI.Controls.cuiPanel cuiPanel17;
-        private Label label24;
-        private Label label25;
-        private Label label20;
-        private Label label18;
+        private Label lblDate;
+        private Label lblTotal;
+        private Label lblGCash;
+        private Label lblCash;
         private Label label26;
         private CuoreUI.Controls.cuiPanel cuiPanel18;
         private Label label27;
@@ -1207,8 +1128,11 @@
         private Label label29;
         private PictureBox pictureBox2;
         private Label label30;
-        private Label label33;
-        private Label label32;
+        private Label lblChange;
+        private Label lblMaya;
         private Label label31;
+        private CuoreUI.Controls.cuiPanel cuiPanel21;
+        private FlowLayoutPanel flowLayoutPanel2;
+        private FlowLayoutPanel flow_receipt_items;
     }
 }

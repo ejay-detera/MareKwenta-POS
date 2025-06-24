@@ -1,6 +1,8 @@
 using Mare_POS.Ticket_Components;
 using Mare_POS.CashboxFolder;
 using Mare_POS.SaleshistoryFolder;
+using Mare_POS.TicketFolder;
+
 
 namespace Mare_POS
 {

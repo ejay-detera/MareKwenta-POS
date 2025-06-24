@@ -33,9 +33,7 @@
             label1 = new Label();
             label2 = new Label();
             panel2 = new Panel();
-            cuiPanel2 = new CuoreUI.Controls.cuiPanel();
             radioGrande = new RadioButton();
-            cuiPanel1 = new CuoreUI.Controls.cuiPanel();
             radioVenti = new RadioButton();
             label3 = new Label();
             panel3 = new Panel();
@@ -59,8 +57,6 @@
             label6 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
-            cuiPanel2.SuspendLayout();
-            cuiPanel1.SuspendLayout();
             panel3.SuspendLayout();
             cuiPanel5.SuspendLayout();
             cuiPanel4.SuspendLayout();
@@ -85,7 +81,7 @@
             // 
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Unbounded", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.FromArgb(78, 45, 24);
             button1.Location = new Point(13, 9);
             button1.Name = "button1";
@@ -97,7 +93,7 @@
             // 
             // label1
             // 
-            label1.Font = new Font("Unbounded Medium", 17F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 17F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(78, 45, 24);
             label1.Location = new Point(84, 13);
             label1.Name = "label1";
@@ -107,7 +103,7 @@
             // 
             // label2
             // 
-            label2.Font = new Font("Inter 28pt 28pt", 17F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Microsoft Sans Serif", 17F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.FromArgb(78, 45, 24);
             label2.Location = new Point(24, 73);
             label2.Name = "label2";
@@ -118,32 +114,19 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(cuiPanel2);
-            panel2.Controls.Add(cuiPanel1);
+            panel2.Controls.Add(radioVenti);
+            panel2.Controls.Add(radioGrande);
             panel2.Location = new Point(0, 111);
             panel2.Name = "panel2";
             panel2.Size = new Size(702, 48);
             panel2.TabIndex = 4;
             // 
-            // cuiPanel2
-            // 
-            cuiPanel2.BackColor = Color.Transparent;
-            cuiPanel2.Controls.Add(radioGrande);
-            cuiPanel2.Location = new Point(362, 3);
-            cuiPanel2.Name = "cuiPanel2";
-            cuiPanel2.OutlineThickness = 1F;
-            cuiPanel2.PanelColor = Color.FromArgb(242, 239, 234);
-            cuiPanel2.PanelOutlineColor = Color.FromArgb(78, 45, 24);
-            cuiPanel2.Rounding = new Padding(0);
-            cuiPanel2.Size = new Size(170, 42);
-            cuiPanel2.TabIndex = 10;
-            // 
             // radioGrande
             // 
             radioGrande.FlatAppearance.BorderColor = Color.Black;
             radioGrande.FlatAppearance.BorderSize = 4;
-            radioGrande.Font = new Font("Inter 28pt 28pt", 15F);
-            radioGrande.Location = new Point(17, 3);
+            radioGrande.Font = new Font("Microsoft Sans Serif", 15F);
+            radioGrande.Location = new Point(379, 3);
             radioGrande.Name = "radioGrande";
             radioGrande.Size = new Size(137, 37);
             radioGrande.TabIndex = 1;
@@ -152,25 +135,12 @@
             radioGrande.TextAlign = ContentAlignment.MiddleCenter;
             radioGrande.UseVisualStyleBackColor = true;
             // 
-            // cuiPanel1
-            // 
-            cuiPanel1.BackColor = Color.Transparent;
-            cuiPanel1.Controls.Add(radioVenti);
-            cuiPanel1.Location = new Point(146, 3);
-            cuiPanel1.Name = "cuiPanel1";
-            cuiPanel1.OutlineThickness = 1F;
-            cuiPanel1.PanelColor = Color.FromArgb(242, 239, 234);
-            cuiPanel1.PanelOutlineColor = Color.FromArgb(78, 45, 24);
-            cuiPanel1.Rounding = new Padding(0);
-            cuiPanel1.Size = new Size(170, 42);
-            cuiPanel1.TabIndex = 2;
-            // 
             // radioVenti
             // 
             radioVenti.FlatAppearance.BorderColor = Color.Black;
             radioVenti.FlatAppearance.BorderSize = 4;
-            radioVenti.Font = new Font("Inter 28pt 28pt", 15F);
-            radioVenti.Location = new Point(17, 3);
+            radioVenti.Font = new Font("Microsoft Sans Serif", 15F);
+            radioVenti.Location = new Point(163, 5);
             radioVenti.Name = "radioVenti";
             radioVenti.Size = new Size(137, 37);
             radioVenti.TabIndex = 1;
@@ -181,7 +151,7 @@
             // 
             // label3
             // 
-            label3.Font = new Font("Inter 28pt 28pt", 17F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Microsoft Sans Serif", 17F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.FromArgb(78, 45, 24);
             label3.Location = new Point(24, 267);
             label3.Name = "label3";
@@ -215,7 +185,7 @@
             // 
             // chkWhipCream
             // 
-            chkWhipCream.Font = new Font("Inter 28pt 28pt", 15F);
+            chkWhipCream.Font = new Font("Microsoft Sans Serif", 15F);
             chkWhipCream.Location = new Point(6, 5);
             chkWhipCream.Name = "chkWhipCream";
             chkWhipCream.Size = new Size(194, 32);
@@ -239,7 +209,7 @@
             // 
             // chkDoppioShot
             // 
-            chkDoppioShot.Font = new Font("Inter 28pt 28pt", 15F);
+            chkDoppioShot.Font = new Font("Microsoft Sans Serif", 15F);
             chkDoppioShot.Location = new Point(6, 6);
             chkDoppioShot.Name = "chkDoppioShot";
             chkDoppioShot.Size = new Size(194, 35);
@@ -263,7 +233,7 @@
             // 
             // chkSoloShot
             // 
-            chkSoloShot.Font = new Font("Inter 28pt 28pt", 15F);
+            chkSoloShot.Font = new Font("Microsoft Sans Serif", 15F);
             chkSoloShot.Location = new Point(6, 7);
             chkSoloShot.Name = "chkSoloShot";
             chkSoloShot.Size = new Size(194, 28);
@@ -274,7 +244,7 @@
             // 
             // label4
             // 
-            label4.Font = new Font("Inter 28pt 28pt", 17F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Font = new Font("Microsoft Sans Serif", 17F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.FromArgb(78, 45, 24);
             label4.Location = new Point(24, 422);
             label4.Name = "label4";
@@ -302,7 +272,7 @@
             cuiButton1.CheckedOutline = Color.FromArgb(255, 106, 0);
             cuiButton1.Content = "DONE";
             cuiButton1.DialogResult = DialogResult.None;
-            cuiButton1.Font = new Font("Unbounded", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cuiButton1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cuiButton1.ForeColor = Color.White;
             cuiButton1.HoverBackground = Color.White;
             cuiButton1.HoveredImageTint = Color.White;
@@ -332,7 +302,7 @@
             // 
             // label5
             // 
-            label5.Font = new Font("Inter 28pt 28pt", 17F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Font = new Font("Microsoft Sans Serif", 17F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.FromArgb(78, 45, 24);
             label5.Location = new Point(24, 167);
             label5.Name = "label5";
@@ -366,7 +336,7 @@
             // 
             radioCold.FlatAppearance.BorderColor = Color.Black;
             radioCold.FlatAppearance.BorderSize = 4;
-            radioCold.Font = new Font("Inter 28pt 28pt", 15F);
+            radioCold.Font = new Font("Microsoft Sans Serif", 15F);
             radioCold.Location = new Point(17, 3);
             radioCold.Name = "radioCold";
             radioCold.Size = new Size(137, 37);
@@ -393,7 +363,7 @@
             // 
             radioHot.FlatAppearance.BorderColor = Color.Black;
             radioHot.FlatAppearance.BorderSize = 4;
-            radioHot.Font = new Font("Inter 28pt 28pt", 15F);
+            radioHot.Font = new Font("Microsoft Sans Serif", 15F);
             radioHot.Location = new Point(17, 3);
             radioHot.Name = "radioHot";
             radioHot.Size = new Size(137, 37);
@@ -413,7 +383,7 @@
             cuiButton3.CheckedOutline = Color.FromArgb(255, 106, 0);
             cuiButton3.Content = "+";
             cuiButton3.DialogResult = DialogResult.None;
-            cuiButton3.Font = new Font("Unbounded SemiBold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cuiButton3.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiButton3.ForeColor = Color.Black;
             cuiButton3.HoverBackground = Color.FromArgb(242, 239, 234);
             cuiButton3.HoveredImageTint = Color.Transparent;
@@ -450,7 +420,7 @@
             cuiButton2.CheckedOutline = Color.FromArgb(255, 106, 0);
             cuiButton2.Content = "–";
             cuiButton2.DialogResult = DialogResult.None;
-            cuiButton2.Font = new Font("Unbounded SemiBold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cuiButton2.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiButton2.ForeColor = Color.Black;
             cuiButton2.HoverBackground = Color.FromArgb(242, 239, 234);
             cuiButton2.HoveredImageTint = Color.Transparent;
@@ -479,13 +449,13 @@
             // 
             // label6
             // 
-            label6.Font = new Font("Unbounded", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.Black;
             label6.Location = new Point(319, 434);
             label6.Name = "label6";
             label6.Size = new Size(48, 44);
             label6.TabIndex = 12;
-            label6.Text = "2";
+            label6.Text = "1";
             // 
             // ProductComponent
             // 
@@ -516,8 +486,6 @@
             TransparencyKey = Color.Transparent;
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
-            cuiPanel2.ResumeLayout(false);
-            cuiPanel1.ResumeLayout(false);
             panel3.ResumeLayout(false);
             cuiPanel5.ResumeLayout(false);
             cuiPanel4.ResumeLayout(false);
@@ -542,8 +510,6 @@
         private CheckBox chkSoloShot;
         private Label label4;
         private Panel panel4;
-        private CuoreUI.Controls.cuiPanel cuiPanel1;
-        private CuoreUI.Controls.cuiPanel cuiPanel2;
         private RadioButton radioGrande;
         private CuoreUI.Controls.cuiPanel cuiPanel3;
         private CuoreUI.Controls.cuiPanel cuiPanel5;

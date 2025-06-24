@@ -28,19 +28,19 @@
     <Compile Update="SaleshistoryFolder\SaleshistoryForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="TicketCoffee.cs">
+    <Compile Update="TicketFolder\TicketCoffee.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Ticket Dashboard\ProductComponent.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Update="TicketFood.cs">
+    <Compile Update="TicketFolder\TicketFood.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="TicketForm.cs">
+    <Compile Update="TicketFolder\TicketForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="TicketNonCoffee.cs">
+    <Compile Update="TicketFolder\TicketNonCoffee.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Ticket\TicketForm.cs">

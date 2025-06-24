@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Mare_POS
+namespace Mare_POS.TicketFolder
 {
     public partial class TicketForm : UserControl
     {
@@ -36,14 +36,23 @@ namespace Mare_POS
         // Moves the indicator panel under the active button
         private void MoveIndicator(Button activeButton)
         {
-            PanelIndicator.Width = (int)(activeButton.Width * 0.6); 
+            PanelIndicator.Width = (int)(activeButton.Width * 0.6);
             PanelIndicator.Left = activeButton.Left + (activeButton.Width - PanelIndicator.Width) / 2;
         }
 
+        private void MoveIndicatorChangeDiscount(Button activeButton)
+        {
+            SecondIndicator.Width = (int)(activeButton.Width * 0.6);
+            SecondIndicator.Left = activeButton.Left + (activeButton.Width - SecondIndicator.Width) / 2;
+        }
         private void TicketForm_Load(object sender, EventArgs e)
         {
-            ShowPanel(AllPanel);           
-            MoveIndicator(btnAll);        
+            ShowPanel(AllPanel);
+            MoveIndicator(btnAll);
+
+            ChangePanel.Visible = true;
+            DiscountPanel.Visible = false;
+            MoveIndicatorChangeDiscount(button5);
         }
 
 
@@ -481,7 +490,9 @@ namespace Mare_POS
 
         private void btnDiscount_Click(object sender, EventArgs e)
         {
-
+            ChangePanel.Visible = false;
+            DiscountPanel.Visible = true;
+            MoveIndicatorChangeDiscount(btnDiscount);
         }
 
         private void cuiPanel1_Paint_1(object sender, PaintEventArgs e)
@@ -692,6 +703,45 @@ namespace Mare_POS
         {
             ShowPanel(FoodPanel);
             MoveIndicator(btnFood);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ChangePanel.Visible = true;
+            DiscountPanel.Visible = false;
+            MoveIndicatorChangeDiscount(button5);
+        }
+
+        private void tableLayoutPanel10_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            ChangePanel.Visible = true;
+            DiscountPanel.Visible = false;
+            MoveIndicatorChangeDiscount(button5);
+        }
+
+        private void tableLayoutPanel8_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void discountButton1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel11_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cuiTextBox1_ContentChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
