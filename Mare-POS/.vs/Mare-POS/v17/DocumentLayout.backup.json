@@ -1,38 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Iyah\\source\\repos\\MareKwenta-POS\\Mare-POS\\",
+  "WorkspaceRootPath": "C:\\Users\\Yanna\\source\\repos\\MareKwenta-POS\\Mare-POS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\iyah\\source\\repos\\marekwenta-pos\\mare-pos\\saleshistoryfolder\\saleshistoryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:saleshistoryfolder\\saleshistoryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\yanna\\source\\repos\\marekwenta-pos\\mare-pos\\ticketform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:ticketform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\iyah\\source\\repos\\marekwenta-pos\\mare-pos\\properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
-      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\iyah\\source\\repos\\marekwenta-pos\\mare-pos\\saleshistoryfolder\\saleshistoryform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:saleshistoryfolder\\saleshistoryform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|C:\\Users\\Iyah\\source\\repos\\MareKwenta-POS\\Mare-POS\\saleshistoryfolder\\saleshistoryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:saleshistoryfolder\\saleshistoryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\iyah\\source\\repos\\marekwenta-pos\\mare-pos\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\iyah\\source\\repos\\marekwenta-pos\\mare-pos\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\iyah\\source\\repos\\marekwenta-pos\\mare-pos\\models\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:models\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\iyah\\source\\repos\\marekwenta-pos\\mare-pos\\saleshistoryfolder\\saleshistorybackend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:saleshistoryfolder\\saleshistorybackend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\yanna\\source\\repos\\marekwenta-pos\\mare-pos\\ticketform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:ticketform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,116 +18,53 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{25f7e850-ffa1-11d0-b63f-00a0c922e851}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Resources.resx",
-              "DocumentMoniker": "C:\\Users\\Iyah\\source\\repos\\MareKwenta-POS\\Mare-POS\\Properties\\Resources.resx",
-              "RelativeDocumentMoniker": "Properties\\Resources.resx",
-              "ToolTip": "C:\\Users\\Iyah\\source\\repos\\MareKwenta-POS\\Mare-POS\\Properties\\Resources.resx",
-              "RelativeToolTip": "Properties\\Resources.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-06-24T06:17:21.241Z",
+              "Title": "TicketForm.cs",
+              "DocumentMoniker": "C:\\Users\\Yanna\\source\\repos\\MareKwenta-POS\\Mare-POS\\TicketForm.cs",
+              "RelativeDocumentMoniker": "TicketForm.cs",
+              "ToolTip": "C:\\Users\\Yanna\\source\\repos\\MareKwenta-POS\\Mare-POS\\TicketForm.cs",
+              "RelativeToolTip": "TicketForm.cs",
+              "ViewState": "AgIAACkEAAAAAAAAAAAtwDYEAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T07:48:38.431Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SaleshistoryForm.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Iyah\\source\\repos\\MareKwenta-POS\\Mare-POS\\SaleshistoryFolder\\SaleshistoryForm.Designer.cs",
-              "RelativeDocumentMoniker": "SaleshistoryFolder\\SaleshistoryForm.Designer.cs",
-              "ToolTip": "C:\\Users\\Iyah\\source\\repos\\MareKwenta-POS\\Mare-POS\\SaleshistoryFolder\\SaleshistoryForm.Designer.cs",
-              "RelativeToolTip": "SaleshistoryFolder\\SaleshistoryForm.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkEAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T17:47:17.902Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Ticket.cs",
-              "DocumentMoniker": "C:\\Users\\Iyah\\source\\repos\\MareKwenta-POS\\Mare-POS\\Models\\Ticket.cs",
-              "RelativeDocumentMoniker": "Models\\Ticket.cs",
-              "ToolTip": "C:\\Users\\Iyah\\source\\repos\\MareKwenta-POS\\Mare-POS\\Models\\Ticket.cs",
-              "RelativeToolTip": "Models\\Ticket.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAA3wCEAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T16:22:06.588Z"
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\Iyah\\source\\repos\\MareKwenta-POS\\Mare-POS\\Models\\Product.cs",
-              "RelativeDocumentMoniker": "Models\\Product.cs",
-              "ToolTip": "C:\\Users\\Iyah\\source\\repos\\MareKwenta-POS\\Mare-POS\\Models\\Product.cs",
-              "RelativeToolTip": "Models\\Product.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAuwBQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T16:21:27.208Z"
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Employee.cs",
-              "DocumentMoniker": "C:\\Users\\Iyah\\source\\repos\\MareKwenta-POS\\Mare-POS\\Models\\Employee.cs",
-              "RelativeDocumentMoniker": "Models\\Employee.cs",
-              "ToolTip": "C:\\Users\\Iyah\\source\\repos\\MareKwenta-POS\\Mare-POS\\Models\\Employee.cs",
-              "RelativeToolTip": "Models\\Employee.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAuwBQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T16:20:57.576Z"
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SaleshistoryForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Iyah\\source\\repos\\MareKwenta-POS\\Mare-POS\\SaleshistoryFolder\\SaleshistoryForm.cs",
-              "RelativeDocumentMoniker": "SaleshistoryFolder\\SaleshistoryForm.cs",
-              "ToolTip": "C:\\Users\\Iyah\\source\\repos\\MareKwenta-POS\\Mare-POS\\SaleshistoryFolder\\SaleshistoryForm.cs [Design]",
-              "RelativeToolTip": "SaleshistoryFolder\\SaleshistoryForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T15:26:06.513Z",
-              "EditorCaption": " [Design]"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SaleshistoryForm.cs",
-              "DocumentMoniker": "C:\\Users\\Iyah\\source\\repos\\MareKwenta-POS\\Mare-POS\\SaleshistoryFolder\\SaleshistoryForm.cs",
-              "RelativeDocumentMoniker": "SaleshistoryFolder\\SaleshistoryForm.cs",
-              "ToolTip": "C:\\Users\\Iyah\\source\\repos\\MareKwenta-POS\\Mare-POS\\SaleshistoryFolder\\SaleshistoryForm.cs",
-              "RelativeToolTip": "SaleshistoryFolder\\SaleshistoryForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAALkAAAA4AAAAAAAAAA==",
+              "Title": "TicketForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Yanna\\source\\repos\\MareKwenta-POS\\Mare-POS\\TicketForm.cs",
+              "RelativeDocumentMoniker": "TicketForm.cs",
+              "ToolTip": "C:\\Users\\Yanna\\source\\repos\\MareKwenta-POS\\Mare-POS\\TicketForm.cs [Design]",
+              "RelativeToolTip": "TicketForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T15:26:14.926Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SalesHistoryBackend.cs",
-              "DocumentMoniker": "C:\\Users\\Iyah\\source\\repos\\MareKwenta-POS\\Mare-POS\\SaleshistoryFolder\\SalesHistoryBackend.cs",
-              "RelativeDocumentMoniker": "SaleshistoryFolder\\SalesHistoryBackend.cs",
-              "ToolTip": "C:\\Users\\Iyah\\source\\repos\\MareKwenta-POS\\Mare-POS\\SaleshistoryFolder\\SalesHistoryBackend.cs",
-              "RelativeToolTip": "SaleshistoryFolder\\SalesHistoryBackend.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAMwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T15:26:03.966Z"
+              "WhenOpened": "2025-06-25T03:11:08.977Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

@@ -1,4 +1,6 @@
-﻿using Mare_POS.Ticket_Components;
+﻿using Mare_POS.Models;
+using Mare_POS.Database;
+using Mare_POS.Ticket_Components;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +19,8 @@ namespace Mare_POS.TicketFolder
         {
             InitializeComponent();
         }
+
+        private List<Item> currentOrder = new List<Item>();
 
         private void cuiButton25_Click(object sender, EventArgs e)
         {
@@ -44,20 +48,38 @@ namespace Mare_POS.TicketFolder
         {
             var popup = new FoodQuantity();
             popup.StartPosition = FormStartPosition.CenterParent;  // Center the popup on the current form
+            popup.ProductId = 11;
+            popup.ProductName = "Tocilog";
 
             if (popup.ShowDialog(this) == DialogResult.OK)  // Block parent form until popup is done
             {
-                // Access the selected values
-                //string size = popup.SelectedSize ?? "N/A";
-                //string type = popup.SelectedType ?? "N/A";
-                //int qty = popup.Quantity;
-                //string extras = popup.SelectedExtras.Count > 0 ? string.Join(", ", popup.SelectedExtras) : "None";
+                // Popup selection
+                int qty = popup.Quantity;
 
-                // Display the result (or add to order/cart)
-                //MessageBox.Show($"Added {qty}x Americano\n" +
-                // $"Size: {size}\n" +
-                // $"Type: {type}\n" +
-                // $"Extras: {extras}", "Order Summary");
+                // Product info
+                int productId = 11;
+                string productName = "Tocilog";
+                string category = "Food";
+
+                // ✅ Get prices dynamically
+                decimal basePrice = ProductDataAccess.GetBasePrice(productId);
+                decimal itemTotal = (basePrice) * qty;
+
+                // Add to cart
+                currentOrder.Add(new Item
+                {
+                    ProductID = productId,
+                    ProductName = productName,
+                    Quantity = qty,
+                    Amount = itemTotal,
+                    Category = category
+                });
+
+                MessageBox.Show(
+                    $"✅ Added {qty}x {productName}\n" +
+                    $"Subtotal: ₱{itemTotal}",
+                    "Added to Order"
+                );
             }
         }
 
@@ -65,20 +87,38 @@ namespace Mare_POS.TicketFolder
         {
             var popup = new FoodQuantity();
             popup.StartPosition = FormStartPosition.CenterParent;  // Center the popup on the current form
+            popup.ProductId = 12;
+            popup.ProductName = "Garlic Rice";
 
             if (popup.ShowDialog(this) == DialogResult.OK)  // Block parent form until popup is done
             {
-                // Access the selected values
-                //string size = popup.SelectedSize ?? "N/A";
-                //string type = popup.SelectedType ?? "N/A";
-                //int qty = popup.Quantity;
-                //string extras = popup.SelectedExtras.Count > 0 ? string.Join(", ", popup.SelectedExtras) : "None";
+                // Popup selection
+                int qty = popup.Quantity;
 
-                // Display the result (or add to order/cart)
-                //MessageBox.Show($"Added {qty}x Americano\n" +
-                // $"Size: {size}\n" +
-                // $"Type: {type}\n" +
-                // $"Extras: {extras}", "Order Summary");
+                // Product info
+                int productId = 12;
+                string productName = "Garlic Rice";
+                string category = "Food";
+
+                // ✅ Get prices dynamically
+                decimal basePrice = ProductDataAccess.GetBasePrice(productId);
+                decimal itemTotal = (basePrice) * qty;
+
+                // Add to cart
+                currentOrder.Add(new Item
+                {
+                    ProductID = productId,
+                    ProductName = productName,
+                    Quantity = qty,
+                    Amount = itemTotal,
+                    Category = category
+                });
+
+                MessageBox.Show(
+                    $"✅ Added {qty}x {productName}\n" +
+                    $"Subtotal: ₱{itemTotal}",
+                    "Added to Order"
+                );
             }
         }
 
@@ -91,20 +131,38 @@ namespace Mare_POS.TicketFolder
         {
             var popup = new FoodQuantity();
             popup.StartPosition = FormStartPosition.CenterParent;  // Center the popup on the current form
+            popup.ProductId = 13;
+            popup.ProductName = "Pork Siomai Rice";
 
             if (popup.ShowDialog(this) == DialogResult.OK)  // Block parent form until popup is done
             {
-                // Access the selected values
-                //string size = popup.SelectedSize ?? "N/A";
-                //string type = popup.SelectedType ?? "N/A";
-                //int qty = popup.Quantity;
-                //string extras = popup.SelectedExtras.Count > 0 ? string.Join(", ", popup.SelectedExtras) : "None";
+                // Popup selection
+                int qty = popup.Quantity;
 
-                // Display the result (or add to order/cart)
-                //MessageBox.Show($"Added {qty}x Americano\n" +
-                // $"Size: {size}\n" +
-                // $"Type: {type}\n" +
-                // $"Extras: {extras}", "Order Summary");
+                // Product info
+                int productId = 13;
+                string productName = "Pork Siomai Rice";
+                string category = "Food";
+
+                // ✅ Get prices dynamically
+                decimal basePrice = ProductDataAccess.GetBasePrice(productId);
+                decimal itemTotal = (basePrice) * qty;
+
+                // Add to cart
+                currentOrder.Add(new Item
+                {
+                    ProductID = productId,
+                    ProductName = productName,
+                    Quantity = qty,
+                    Amount = itemTotal,
+                    Category = category
+                });
+
+                MessageBox.Show(
+                    $"✅ Added {qty}x {productName}\n" +
+                    $"Subtotal: ₱{itemTotal}",
+                    "Added to Order"
+                );
             }
         }
 
@@ -112,20 +170,38 @@ namespace Mare_POS.TicketFolder
         {
             var popup = new FoodQuantity();
             popup.StartPosition = FormStartPosition.CenterParent;  // Center the popup on the current form
+            popup.ProductId = 14;
+            popup.ProductName = "Hamsilog";
 
             if (popup.ShowDialog(this) == DialogResult.OK)  // Block parent form until popup is done
             {
-                // Access the selected values
-                //string size = popup.SelectedSize ?? "N/A";
-                //string type = popup.SelectedType ?? "N/A";
-                //int qty = popup.Quantity;
-                //string extras = popup.SelectedExtras.Count > 0 ? string.Join(", ", popup.SelectedExtras) : "None";
+                // Popup selection
+                int qty = popup.Quantity;
 
-                // Display the result (or add to order/cart)
-                //MessageBox.Show($"Added {qty}x Americano\n" +
-                // $"Size: {size}\n" +
-                // $"Type: {type}\n" +
-                // $"Extras: {extras}", "Order Summary");
+                // Product info
+                int productId = 14;
+                string productName = "Hamsilog";
+                string category = "Food";
+
+                // ✅ Get prices dynamically
+                decimal basePrice = ProductDataAccess.GetBasePrice(productId);
+                decimal itemTotal = (basePrice) * qty;
+
+                // Add to cart
+                currentOrder.Add(new Item
+                {
+                    ProductID = productId,
+                    ProductName = productName,
+                    Quantity = qty,
+                    Amount = itemTotal,
+                    Category = category
+                });
+
+                MessageBox.Show(
+                    $"✅ Added {qty}x {productName}\n" +
+                    $"Subtotal: ₱{itemTotal}",
+                    "Added to Order"
+                );
             }
         }
     }

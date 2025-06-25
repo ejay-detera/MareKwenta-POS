@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            labelSubtotal = new Label();
             button1 = new Button();
             label1 = new Label();
             label4 = new Label();
             panel2 = new Panel();
             panel3 = new Panel();
-            cuiButton3 = new CuoreUI.Controls.cuiButton();
-            cuiButton2 = new CuoreUI.Controls.cuiButton();
-            label6 = new Label();
+            AddButton = new CuoreUI.Controls.cuiButton();
+            MinusButton = new CuoreUI.Controls.cuiButton();
+            labelQuantity = new Label();
             cuiButton1 = new CuoreUI.Controls.cuiButton();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -45,6 +46,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(labelSubtotal);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
@@ -53,11 +55,22 @@
             panel1.Size = new Size(493, 96);
             panel1.TabIndex = 1;
             // 
+            // labelSubtotal
+            // 
+            labelSubtotal.Font = new Font("Microsoft Sans Serif", 17F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelSubtotal.ForeColor = Color.FromArgb(78, 45, 24);
+            labelSubtotal.Location = new Point(180, 21);
+            labelSubtotal.Name = "labelSubtotal";
+            labelSubtotal.Size = new Size(263, 49);
+            labelSubtotal.TabIndex = 3;
+            labelSubtotal.Text = "0.00";
+            labelSubtotal.Click += label2_Click;
+            // 
             // button1
             // 
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Unbounded", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.FromArgb(78, 45, 24);
             button1.Location = new Point(22, 17);
             button1.Name = "button1";
@@ -69,17 +82,18 @@
             // 
             // label1
             // 
-            label1.Font = new Font("Unbounded Medium", 17F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 17F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(78, 45, 24);
             label1.Location = new Point(84, 21);
             label1.Name = "label1";
             label1.Size = new Size(263, 49);
             label1.TabIndex = 1;
-            label1.Text = "Item ₱ 0.00";
+            label1.Text = "Item ₱";
+            label1.Click += label1_Click;
             // 
             // label4
             // 
-            label4.Font = new Font("Inter 28pt 28pt", 19F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Font = new Font("Microsoft Sans Serif", 19F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.FromArgb(78, 45, 24);
             label4.Location = new Point(32, 21);
             label4.Name = "label4";
@@ -98,97 +112,99 @@
             // 
             // panel3
             // 
-            panel3.Controls.Add(cuiButton3);
-            panel3.Controls.Add(cuiButton2);
-            panel3.Controls.Add(label6);
+            panel3.Controls.Add(AddButton);
+            panel3.Controls.Add(MinusButton);
+            panel3.Controls.Add(labelQuantity);
             panel3.Location = new Point(0, 202);
             panel3.Name = "panel3";
             panel3.Size = new Size(493, 99);
             panel3.TabIndex = 10;
             // 
-            // cuiButton3
+            // AddButton
             // 
-            cuiButton3.CheckButton = false;
-            cuiButton3.Checked = false;
-            cuiButton3.CheckedBackground = Color.FromArgb(255, 106, 0);
-            cuiButton3.CheckedForeColor = Color.White;
-            cuiButton3.CheckedImageTint = Color.White;
-            cuiButton3.CheckedOutline = Color.FromArgb(255, 106, 0);
-            cuiButton3.Content = "+";
-            cuiButton3.DialogResult = DialogResult.None;
-            cuiButton3.Font = new Font("Unbounded SemiBold", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cuiButton3.ForeColor = Color.Black;
-            cuiButton3.HoverBackground = Color.FromArgb(242, 239, 234);
-            cuiButton3.HoveredImageTint = Color.Transparent;
-            cuiButton3.HoverForeColor = Color.Black;
-            cuiButton3.HoverOutline = Color.Transparent;
-            cuiButton3.Image = null;
-            cuiButton3.ImageAutoCenter = true;
-            cuiButton3.ImageExpand = new Point(0, 0);
-            cuiButton3.ImageOffset = new Point(0, 0);
-            cuiButton3.Location = new Point(273, 22);
-            cuiButton3.Name = "cuiButton3";
-            cuiButton3.NormalBackground = Color.FromArgb(242, 239, 234);
-            cuiButton3.NormalForeColor = Color.Black;
-            cuiButton3.NormalImageTint = Color.White;
-            cuiButton3.NormalOutline = Color.Transparent;
-            cuiButton3.OutlineThickness = 1F;
-            cuiButton3.PressedBackground = Color.WhiteSmoke;
-            cuiButton3.PressedForeColor = Color.FromArgb(32, 32, 32);
-            cuiButton3.PressedImageTint = Color.White;
-            cuiButton3.PressedOutline = Color.FromArgb(64, 128, 128, 128);
-            cuiButton3.Rounding = new Padding(30);
-            cuiButton3.Size = new Size(68, 60);
-            cuiButton3.TabIndex = 17;
-            cuiButton3.TextAlignment = StringAlignment.Center;
-            cuiButton3.TextOffset = new Point(0, 0);
+            AddButton.CheckButton = false;
+            AddButton.Checked = false;
+            AddButton.CheckedBackground = Color.FromArgb(255, 106, 0);
+            AddButton.CheckedForeColor = Color.White;
+            AddButton.CheckedImageTint = Color.White;
+            AddButton.CheckedOutline = Color.FromArgb(255, 106, 0);
+            AddButton.Content = "+";
+            AddButton.DialogResult = DialogResult.None;
+            AddButton.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            AddButton.ForeColor = Color.Black;
+            AddButton.HoverBackground = Color.FromArgb(242, 239, 234);
+            AddButton.HoveredImageTint = Color.Transparent;
+            AddButton.HoverForeColor = Color.Black;
+            AddButton.HoverOutline = Color.Transparent;
+            AddButton.Image = null;
+            AddButton.ImageAutoCenter = true;
+            AddButton.ImageExpand = new Point(0, 0);
+            AddButton.ImageOffset = new Point(0, 0);
+            AddButton.Location = new Point(273, 22);
+            AddButton.Name = "AddButton";
+            AddButton.NormalBackground = Color.FromArgb(242, 239, 234);
+            AddButton.NormalForeColor = Color.Black;
+            AddButton.NormalImageTint = Color.White;
+            AddButton.NormalOutline = Color.Transparent;
+            AddButton.OutlineThickness = 1F;
+            AddButton.PressedBackground = Color.WhiteSmoke;
+            AddButton.PressedForeColor = Color.FromArgb(32, 32, 32);
+            AddButton.PressedImageTint = Color.White;
+            AddButton.PressedOutline = Color.FromArgb(64, 128, 128, 128);
+            AddButton.Rounding = new Padding(30);
+            AddButton.Size = new Size(68, 60);
+            AddButton.TabIndex = 17;
+            AddButton.TextAlignment = StringAlignment.Center;
+            AddButton.TextOffset = new Point(0, 0);
+            AddButton.Click += AddButton_Click;
             // 
-            // cuiButton2
+            // MinusButton
             // 
-            cuiButton2.CheckButton = false;
-            cuiButton2.Checked = false;
-            cuiButton2.CheckedBackground = Color.FromArgb(255, 106, 0);
-            cuiButton2.CheckedForeColor = Color.White;
-            cuiButton2.CheckedImageTint = Color.White;
-            cuiButton2.CheckedOutline = Color.FromArgb(255, 106, 0);
-            cuiButton2.Content = "–";
-            cuiButton2.DialogResult = DialogResult.None;
-            cuiButton2.Font = new Font("Unbounded SemiBold", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cuiButton2.ForeColor = Color.Black;
-            cuiButton2.HoverBackground = Color.FromArgb(242, 239, 234);
-            cuiButton2.HoveredImageTint = Color.Transparent;
-            cuiButton2.HoverForeColor = Color.Black;
-            cuiButton2.HoverOutline = Color.Transparent;
-            cuiButton2.Image = null;
-            cuiButton2.ImageAutoCenter = true;
-            cuiButton2.ImageExpand = new Point(0, 0);
-            cuiButton2.ImageOffset = new Point(0, 0);
-            cuiButton2.Location = new Point(139, 22);
-            cuiButton2.Name = "cuiButton2";
-            cuiButton2.NormalBackground = Color.FromArgb(242, 239, 234);
-            cuiButton2.NormalForeColor = Color.Black;
-            cuiButton2.NormalImageTint = Color.White;
-            cuiButton2.NormalOutline = Color.Transparent;
-            cuiButton2.OutlineThickness = 1F;
-            cuiButton2.PressedBackground = Color.WhiteSmoke;
-            cuiButton2.PressedForeColor = Color.FromArgb(32, 32, 32);
-            cuiButton2.PressedImageTint = Color.White;
-            cuiButton2.PressedOutline = Color.FromArgb(64, 128, 128, 128);
-            cuiButton2.Rounding = new Padding(30);
-            cuiButton2.Size = new Size(68, 60);
-            cuiButton2.TabIndex = 16;
-            cuiButton2.TextAlignment = StringAlignment.Center;
-            cuiButton2.TextOffset = new Point(0, 0);
+            MinusButton.CheckButton = false;
+            MinusButton.Checked = false;
+            MinusButton.CheckedBackground = Color.FromArgb(255, 106, 0);
+            MinusButton.CheckedForeColor = Color.White;
+            MinusButton.CheckedImageTint = Color.White;
+            MinusButton.CheckedOutline = Color.FromArgb(255, 106, 0);
+            MinusButton.Content = "–";
+            MinusButton.DialogResult = DialogResult.None;
+            MinusButton.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            MinusButton.ForeColor = Color.Black;
+            MinusButton.HoverBackground = Color.FromArgb(242, 239, 234);
+            MinusButton.HoveredImageTint = Color.Transparent;
+            MinusButton.HoverForeColor = Color.Black;
+            MinusButton.HoverOutline = Color.Transparent;
+            MinusButton.Image = null;
+            MinusButton.ImageAutoCenter = true;
+            MinusButton.ImageExpand = new Point(0, 0);
+            MinusButton.ImageOffset = new Point(0, 0);
+            MinusButton.Location = new Point(139, 22);
+            MinusButton.Name = "MinusButton";
+            MinusButton.NormalBackground = Color.FromArgb(242, 239, 234);
+            MinusButton.NormalForeColor = Color.Black;
+            MinusButton.NormalImageTint = Color.White;
+            MinusButton.NormalOutline = Color.Transparent;
+            MinusButton.OutlineThickness = 1F;
+            MinusButton.PressedBackground = Color.WhiteSmoke;
+            MinusButton.PressedForeColor = Color.FromArgb(32, 32, 32);
+            MinusButton.PressedImageTint = Color.White;
+            MinusButton.PressedOutline = Color.FromArgb(64, 128, 128, 128);
+            MinusButton.Rounding = new Padding(30);
+            MinusButton.Size = new Size(68, 60);
+            MinusButton.TabIndex = 16;
+            MinusButton.TextAlignment = StringAlignment.Center;
+            MinusButton.TextOffset = new Point(0, 0);
+            MinusButton.Click += MinusButton_Click;
             // 
-            // label6
+            // labelQuantity
             // 
-            label6.Font = new Font("Unbounded", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.ForeColor = Color.Black;
-            label6.Location = new Point(221, 26);
-            label6.Name = "label6";
-            label6.Size = new Size(48, 48);
-            label6.TabIndex = 15;
-            label6.Text = "2";
+            labelQuantity.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelQuantity.ForeColor = Color.Black;
+            labelQuantity.Location = new Point(221, 26);
+            labelQuantity.Name = "labelQuantity";
+            labelQuantity.Size = new Size(48, 48);
+            labelQuantity.TabIndex = 15;
+            labelQuantity.Text = "1";
             // 
             // cuiButton1
             // 
@@ -201,7 +217,7 @@
             cuiButton1.CheckedOutline = Color.FromArgb(255, 106, 0);
             cuiButton1.Content = "DONE";
             cuiButton1.DialogResult = DialogResult.None;
-            cuiButton1.Font = new Font("Unbounded", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cuiButton1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cuiButton1.ForeColor = Color.White;
             cuiButton1.HoverBackground = Color.White;
             cuiButton1.HoveredImageTint = Color.White;
@@ -227,6 +243,7 @@
             cuiButton1.TabIndex = 11;
             cuiButton1.TextAlignment = StringAlignment.Center;
             cuiButton1.TextOffset = new Point(0, 0);
+            cuiButton1.Click += cuiButton1_Click;
             // 
             // FoodQuantity
             // 
@@ -244,6 +261,7 @@
             Name = "FoodQuantity";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FoodQuantity";
+            Load += FoodQuantity_Load;
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel3.ResumeLayout(false);
@@ -258,9 +276,10 @@
         private Label label4;
         private Panel panel2;
         private Panel panel3;
-        private CuoreUI.Controls.cuiButton cuiButton3;
-        private CuoreUI.Controls.cuiButton cuiButton2;
-        private Label label6;
+        private CuoreUI.Controls.cuiButton AddButton;
+        private CuoreUI.Controls.cuiButton MinusButton;
+        private Label labelQuantity;
         private CuoreUI.Controls.cuiButton cuiButton1;
+        private Label labelSubtotal;
     }
 }

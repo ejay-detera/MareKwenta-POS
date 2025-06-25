@@ -29,46 +29,38 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            labelSubtotal = new Label();
             button1 = new Button();
             label1 = new Label();
             label2 = new Label();
             panel2 = new Panel();
-            radioGrande = new RadioButton();
             radioVenti = new RadioButton();
+            radioGrande = new RadioButton();
             label3 = new Label();
             panel3 = new Panel();
-            cuiPanel5 = new CuoreUI.Controls.cuiPanel();
             chkWhipCream = new CheckBox();
-            cuiPanel4 = new CuoreUI.Controls.cuiPanel();
             chkDoppioShot = new CheckBox();
-            cuiPanel3 = new CuoreUI.Controls.cuiPanel();
             chkSoloShot = new CheckBox();
             label4 = new Label();
             panel4 = new Panel();
             cuiButton1 = new CuoreUI.Controls.cuiButton();
             label5 = new Label();
             panel5 = new Panel();
-            cuiPanel6 = new CuoreUI.Controls.cuiPanel();
-            radioCold = new RadioButton();
-            cuiPanel7 = new CuoreUI.Controls.cuiPanel();
             radioHot = new RadioButton();
-            cuiButton3 = new CuoreUI.Controls.cuiButton();
-            cuiButton2 = new CuoreUI.Controls.cuiButton();
-            label6 = new Label();
+            radioCold = new RadioButton();
+            btnPlus = new CuoreUI.Controls.cuiButton();
+            btnMinus = new CuoreUI.Controls.cuiButton();
+            labelQuantity = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
-            cuiPanel5.SuspendLayout();
-            cuiPanel4.SuspendLayout();
-            cuiPanel3.SuspendLayout();
             panel4.SuspendLayout();
             panel5.SuspendLayout();
-            cuiPanel6.SuspendLayout();
-            cuiPanel7.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(labelSubtotal);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
@@ -76,6 +68,17 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(702, 70);
             panel1.TabIndex = 0;
+            // 
+            // labelSubtotal
+            // 
+            labelSubtotal.Font = new Font("Microsoft Sans Serif", 17F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelSubtotal.ForeColor = Color.FromArgb(78, 45, 24);
+            labelSubtotal.Location = new Point(185, 13);
+            labelSubtotal.Name = "labelSubtotal";
+            labelSubtotal.Size = new Size(263, 49);
+            labelSubtotal.TabIndex = 3;
+            labelSubtotal.Text = "0.00";
+            labelSubtotal.Click += label6_Click;
             // 
             // button1
             // 
@@ -99,7 +102,8 @@
             label1.Name = "label1";
             label1.Size = new Size(263, 49);
             label1.TabIndex = 1;
-            label1.Text = "Item ₱ 0.00";
+            label1.Text = "Item ₱";
+            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -121,26 +125,12 @@
             panel2.Size = new Size(702, 48);
             panel2.TabIndex = 4;
             // 
-            // radioGrande
-            // 
-            radioGrande.FlatAppearance.BorderColor = Color.Black;
-            radioGrande.FlatAppearance.BorderSize = 4;
-            radioGrande.Font = new Font("Microsoft Sans Serif", 15F);
-            radioGrande.Location = new Point(379, 3);
-            radioGrande.Name = "radioGrande";
-            radioGrande.Size = new Size(137, 37);
-            radioGrande.TabIndex = 1;
-            radioGrande.TabStop = true;
-            radioGrande.Text = "Grande";
-            radioGrande.TextAlign = ContentAlignment.MiddleCenter;
-            radioGrande.UseVisualStyleBackColor = true;
-            // 
             // radioVenti
             // 
             radioVenti.FlatAppearance.BorderColor = Color.Black;
             radioVenti.FlatAppearance.BorderSize = 4;
             radioVenti.Font = new Font("Microsoft Sans Serif", 15F);
-            radioVenti.Location = new Point(163, 5);
+            radioVenti.Location = new Point(163, 6);
             radioVenti.Name = "radioVenti";
             radioVenti.Size = new Size(137, 37);
             radioVenti.TabIndex = 1;
@@ -148,6 +138,22 @@
             radioVenti.Text = "Venti";
             radioVenti.TextAlign = ContentAlignment.MiddleCenter;
             radioVenti.UseVisualStyleBackColor = true;
+            radioVenti.CheckedChanged += radioVenti_CheckedChanged_1;
+            // 
+            // radioGrande
+            // 
+            radioGrande.FlatAppearance.BorderColor = Color.Black;
+            radioGrande.FlatAppearance.BorderSize = 4;
+            radioGrande.Font = new Font("Microsoft Sans Serif", 15F);
+            radioGrande.Location = new Point(379, 6);
+            radioGrande.Name = "radioGrande";
+            radioGrande.Size = new Size(137, 37);
+            radioGrande.TabIndex = 1;
+            radioGrande.TabStop = true;
+            radioGrande.Text = "Grande";
+            radioGrande.TextAlign = ContentAlignment.MiddleCenter;
+            radioGrande.UseVisualStyleBackColor = true;
+            radioGrande.CheckedChanged += radioGrande_CheckedChanged;
             // 
             // label3
             // 
@@ -162,85 +168,49 @@
             // 
             // panel3
             // 
-            panel3.Controls.Add(cuiPanel5);
-            panel3.Controls.Add(cuiPanel4);
-            panel3.Controls.Add(cuiPanel3);
+            panel3.Controls.Add(chkWhipCream);
+            panel3.Controls.Add(chkDoppioShot);
+            panel3.Controls.Add(chkSoloShot);
             panel3.Location = new Point(0, 307);
             panel3.Name = "panel3";
             panel3.Size = new Size(702, 103);
             panel3.TabIndex = 6;
             // 
-            // cuiPanel5
-            // 
-            cuiPanel5.BackColor = Color.Transparent;
-            cuiPanel5.Controls.Add(chkWhipCream);
-            cuiPanel5.Location = new Point(230, 56);
-            cuiPanel5.Name = "cuiPanel5";
-            cuiPanel5.OutlineThickness = 1F;
-            cuiPanel5.PanelColor = Color.FromArgb(242, 239, 234);
-            cuiPanel5.PanelOutlineColor = Color.FromArgb(78, 45, 24);
-            cuiPanel5.Rounding = new Padding(0);
-            cuiPanel5.Size = new Size(203, 42);
-            cuiPanel5.TabIndex = 5;
-            // 
             // chkWhipCream
             // 
             chkWhipCream.Font = new Font("Microsoft Sans Serif", 15F);
-            chkWhipCream.Location = new Point(6, 5);
+            chkWhipCream.Location = new Point(237, 55);
             chkWhipCream.Name = "chkWhipCream";
             chkWhipCream.Size = new Size(194, 32);
             chkWhipCream.TabIndex = 0;
             chkWhipCream.Text = "Whip Cream";
             chkWhipCream.TextAlign = ContentAlignment.MiddleCenter;
             chkWhipCream.UseVisualStyleBackColor = true;
-            // 
-            // cuiPanel4
-            // 
-            cuiPanel4.BackColor = Color.Transparent;
-            cuiPanel4.Controls.Add(chkDoppioShot);
-            cuiPanel4.Location = new Point(351, 8);
-            cuiPanel4.Name = "cuiPanel4";
-            cuiPanel4.OutlineThickness = 1F;
-            cuiPanel4.PanelColor = Color.FromArgb(242, 239, 234);
-            cuiPanel4.PanelOutlineColor = Color.FromArgb(78, 45, 24);
-            cuiPanel4.Rounding = new Padding(0);
-            cuiPanel4.Size = new Size(203, 42);
-            cuiPanel4.TabIndex = 4;
+            chkWhipCream.CheckedChanged += chkWhipCream_CheckedChanged_1;
             // 
             // chkDoppioShot
             // 
             chkDoppioShot.Font = new Font("Microsoft Sans Serif", 15F);
-            chkDoppioShot.Location = new Point(6, 6);
+            chkDoppioShot.Location = new Point(371, 14);
             chkDoppioShot.Name = "chkDoppioShot";
             chkDoppioShot.Size = new Size(194, 35);
             chkDoppioShot.TabIndex = 0;
             chkDoppioShot.Text = "Doppio Shot";
             chkDoppioShot.TextAlign = ContentAlignment.MiddleCenter;
             chkDoppioShot.UseVisualStyleBackColor = true;
-            // 
-            // cuiPanel3
-            // 
-            cuiPanel3.BackColor = Color.Transparent;
-            cuiPanel3.Controls.Add(chkSoloShot);
-            cuiPanel3.Location = new Point(128, 8);
-            cuiPanel3.Name = "cuiPanel3";
-            cuiPanel3.OutlineThickness = 1F;
-            cuiPanel3.PanelColor = Color.FromArgb(242, 239, 234);
-            cuiPanel3.PanelOutlineColor = Color.FromArgb(78, 45, 24);
-            cuiPanel3.Rounding = new Padding(0);
-            cuiPanel3.Size = new Size(203, 42);
-            cuiPanel3.TabIndex = 3;
+            chkDoppioShot.CheckedChanged += chkDoppioShot_CheckedChanged_1;
             // 
             // chkSoloShot
             // 
             chkSoloShot.Font = new Font("Microsoft Sans Serif", 15F);
-            chkSoloShot.Location = new Point(6, 7);
+            chkSoloShot.Location = new Point(111, 17);
             chkSoloShot.Name = "chkSoloShot";
             chkSoloShot.Size = new Size(194, 28);
             chkSoloShot.TabIndex = 0;
             chkSoloShot.Text = "Solo Shot";
             chkSoloShot.TextAlign = ContentAlignment.MiddleCenter;
             chkSoloShot.UseVisualStyleBackColor = true;
+            chkSoloShot.CheckedChanged += chkSoloShot_CheckedChanged_1;
             // 
             // label4
             // 
@@ -312,59 +282,19 @@
             // 
             // panel5
             // 
-            panel5.Controls.Add(cuiPanel6);
-            panel5.Controls.Add(cuiPanel7);
+            panel5.Controls.Add(radioHot);
+            panel5.Controls.Add(radioCold);
             panel5.Location = new Point(0, 208);
             panel5.Name = "panel5";
             panel5.Size = new Size(702, 48);
             panel5.TabIndex = 11;
-            // 
-            // cuiPanel6
-            // 
-            cuiPanel6.BackColor = Color.Transparent;
-            cuiPanel6.Controls.Add(radioCold);
-            cuiPanel6.Location = new Point(362, 3);
-            cuiPanel6.Name = "cuiPanel6";
-            cuiPanel6.OutlineThickness = 1F;
-            cuiPanel6.PanelColor = Color.FromArgb(242, 239, 234);
-            cuiPanel6.PanelOutlineColor = Color.FromArgb(78, 45, 24);
-            cuiPanel6.Rounding = new Padding(0);
-            cuiPanel6.Size = new Size(170, 42);
-            cuiPanel6.TabIndex = 10;
-            // 
-            // radioCold
-            // 
-            radioCold.FlatAppearance.BorderColor = Color.Black;
-            radioCold.FlatAppearance.BorderSize = 4;
-            radioCold.Font = new Font("Microsoft Sans Serif", 15F);
-            radioCold.Location = new Point(17, 3);
-            radioCold.Name = "radioCold";
-            radioCold.Size = new Size(137, 37);
-            radioCold.TabIndex = 1;
-            radioCold.TabStop = true;
-            radioCold.Text = "Iced";
-            radioCold.TextAlign = ContentAlignment.MiddleCenter;
-            radioCold.UseVisualStyleBackColor = true;
-            // 
-            // cuiPanel7
-            // 
-            cuiPanel7.BackColor = Color.Transparent;
-            cuiPanel7.Controls.Add(radioHot);
-            cuiPanel7.Location = new Point(146, 3);
-            cuiPanel7.Name = "cuiPanel7";
-            cuiPanel7.OutlineThickness = 1F;
-            cuiPanel7.PanelColor = Color.FromArgb(242, 239, 234);
-            cuiPanel7.PanelOutlineColor = Color.FromArgb(78, 45, 24);
-            cuiPanel7.Rounding = new Padding(0);
-            cuiPanel7.Size = new Size(170, 42);
-            cuiPanel7.TabIndex = 2;
             // 
             // radioHot
             // 
             radioHot.FlatAppearance.BorderColor = Color.Black;
             radioHot.FlatAppearance.BorderSize = 4;
             radioHot.Font = new Font("Microsoft Sans Serif", 15F);
-            radioHot.Location = new Point(17, 3);
+            radioHot.Location = new Point(163, 6);
             radioHot.Name = "radioHot";
             radioHot.Size = new Size(137, 37);
             radioHot.TabIndex = 1;
@@ -372,90 +302,109 @@
             radioHot.Text = "Hot";
             radioHot.TextAlign = ContentAlignment.MiddleCenter;
             radioHot.UseVisualStyleBackColor = true;
+            radioHot.CheckedChanged += radioHot_CheckedChanged;
             // 
-            // cuiButton3
+            // radioCold
             // 
-            cuiButton3.CheckButton = false;
-            cuiButton3.Checked = false;
-            cuiButton3.CheckedBackground = Color.FromArgb(255, 106, 0);
-            cuiButton3.CheckedForeColor = Color.White;
-            cuiButton3.CheckedImageTint = Color.White;
-            cuiButton3.CheckedOutline = Color.FromArgb(255, 106, 0);
-            cuiButton3.Content = "+";
-            cuiButton3.DialogResult = DialogResult.None;
-            cuiButton3.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cuiButton3.ForeColor = Color.Black;
-            cuiButton3.HoverBackground = Color.FromArgb(242, 239, 234);
-            cuiButton3.HoveredImageTint = Color.Transparent;
-            cuiButton3.HoverForeColor = Color.Black;
-            cuiButton3.HoverOutline = Color.Transparent;
-            cuiButton3.Image = null;
-            cuiButton3.ImageAutoCenter = true;
-            cuiButton3.ImageExpand = new Point(0, 0);
-            cuiButton3.ImageOffset = new Point(0, 0);
-            cuiButton3.Location = new Point(371, 430);
-            cuiButton3.Name = "cuiButton3";
-            cuiButton3.NormalBackground = Color.FromArgb(242, 239, 234);
-            cuiButton3.NormalForeColor = Color.Black;
-            cuiButton3.NormalImageTint = Color.White;
-            cuiButton3.NormalOutline = Color.Transparent;
-            cuiButton3.OutlineThickness = 1F;
-            cuiButton3.PressedBackground = Color.WhiteSmoke;
-            cuiButton3.PressedForeColor = Color.FromArgb(32, 32, 32);
-            cuiButton3.PressedImageTint = Color.White;
-            cuiButton3.PressedOutline = Color.FromArgb(64, 128, 128, 128);
-            cuiButton3.Rounding = new Padding(30);
-            cuiButton3.Size = new Size(68, 56);
-            cuiButton3.TabIndex = 14;
-            cuiButton3.TextAlignment = StringAlignment.Center;
-            cuiButton3.TextOffset = new Point(0, 0);
+            radioCold.FlatAppearance.BorderColor = Color.Black;
+            radioCold.FlatAppearance.BorderSize = 4;
+            radioCold.Font = new Font("Microsoft Sans Serif", 15F);
+            radioCold.Location = new Point(379, 6);
+            radioCold.Name = "radioCold";
+            radioCold.Size = new Size(137, 37);
+            radioCold.TabIndex = 1;
+            radioCold.TabStop = true;
+            radioCold.Text = "Iced";
+            radioCold.TextAlign = ContentAlignment.MiddleCenter;
+            radioCold.UseVisualStyleBackColor = true;
+            radioCold.CheckedChanged += radioCold_CheckedChanged;
             // 
-            // cuiButton2
+            // btnPlus
             // 
-            cuiButton2.CheckButton = false;
-            cuiButton2.Checked = false;
-            cuiButton2.CheckedBackground = Color.FromArgb(255, 106, 0);
-            cuiButton2.CheckedForeColor = Color.White;
-            cuiButton2.CheckedImageTint = Color.White;
-            cuiButton2.CheckedOutline = Color.FromArgb(255, 106, 0);
-            cuiButton2.Content = "–";
-            cuiButton2.DialogResult = DialogResult.None;
-            cuiButton2.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cuiButton2.ForeColor = Color.Black;
-            cuiButton2.HoverBackground = Color.FromArgb(242, 239, 234);
-            cuiButton2.HoveredImageTint = Color.Transparent;
-            cuiButton2.HoverForeColor = Color.Black;
-            cuiButton2.HoverOutline = Color.Transparent;
-            cuiButton2.Image = null;
-            cuiButton2.ImageAutoCenter = true;
-            cuiButton2.ImageExpand = new Point(0, 0);
-            cuiButton2.ImageOffset = new Point(0, 0);
-            cuiButton2.Location = new Point(237, 430);
-            cuiButton2.Name = "cuiButton2";
-            cuiButton2.NormalBackground = Color.FromArgb(242, 239, 234);
-            cuiButton2.NormalForeColor = Color.Black;
-            cuiButton2.NormalImageTint = Color.White;
-            cuiButton2.NormalOutline = Color.Transparent;
-            cuiButton2.OutlineThickness = 1F;
-            cuiButton2.PressedBackground = Color.WhiteSmoke;
-            cuiButton2.PressedForeColor = Color.FromArgb(32, 32, 32);
-            cuiButton2.PressedImageTint = Color.White;
-            cuiButton2.PressedOutline = Color.FromArgb(64, 128, 128, 128);
-            cuiButton2.Rounding = new Padding(30);
-            cuiButton2.Size = new Size(68, 56);
-            cuiButton2.TabIndex = 13;
-            cuiButton2.TextAlignment = StringAlignment.Center;
-            cuiButton2.TextOffset = new Point(0, 0);
+            btnPlus.CheckButton = false;
+            btnPlus.Checked = false;
+            btnPlus.CheckedBackground = Color.FromArgb(255, 106, 0);
+            btnPlus.CheckedForeColor = Color.White;
+            btnPlus.CheckedImageTint = Color.White;
+            btnPlus.CheckedOutline = Color.FromArgb(255, 106, 0);
+            btnPlus.Content = "+";
+            btnPlus.DialogResult = DialogResult.None;
+            btnPlus.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnPlus.ForeColor = Color.Black;
+            btnPlus.HoverBackground = Color.FromArgb(242, 239, 234);
+            btnPlus.HoveredImageTint = Color.Transparent;
+            btnPlus.HoverForeColor = Color.Black;
+            btnPlus.HoverOutline = Color.Transparent;
+            btnPlus.Image = null;
+            btnPlus.ImageAutoCenter = true;
+            btnPlus.ImageExpand = new Point(0, 0);
+            btnPlus.ImageOffset = new Point(0, 0);
+            btnPlus.Location = new Point(371, 430);
+            btnPlus.Name = "btnPlus";
+            btnPlus.NormalBackground = Color.FromArgb(242, 239, 234);
+            btnPlus.NormalForeColor = Color.Black;
+            btnPlus.NormalImageTint = Color.White;
+            btnPlus.NormalOutline = Color.Transparent;
+            btnPlus.OutlineThickness = 1F;
+            btnPlus.PressedBackground = Color.WhiteSmoke;
+            btnPlus.PressedForeColor = Color.FromArgb(32, 32, 32);
+            btnPlus.PressedImageTint = Color.White;
+            btnPlus.PressedOutline = Color.FromArgb(64, 128, 128, 128);
+            btnPlus.Rounding = new Padding(30);
+            btnPlus.Size = new Size(68, 56);
+            btnPlus.TabIndex = 14;
+            btnPlus.TextAlignment = StringAlignment.Center;
+            btnPlus.TextOffset = new Point(0, 0);
+            btnPlus.Click += cuiButton3_Click;
             // 
-            // label6
+            // btnMinus
             // 
-            label6.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.ForeColor = Color.Black;
-            label6.Location = new Point(319, 434);
-            label6.Name = "label6";
-            label6.Size = new Size(48, 44);
-            label6.TabIndex = 12;
-            label6.Text = "1";
+            btnMinus.CheckButton = false;
+            btnMinus.Checked = false;
+            btnMinus.CheckedBackground = Color.FromArgb(255, 106, 0);
+            btnMinus.CheckedForeColor = Color.White;
+            btnMinus.CheckedImageTint = Color.White;
+            btnMinus.CheckedOutline = Color.FromArgb(255, 106, 0);
+            btnMinus.Content = "–";
+            btnMinus.DialogResult = DialogResult.None;
+            btnMinus.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnMinus.ForeColor = Color.Black;
+            btnMinus.HoverBackground = Color.FromArgb(242, 239, 234);
+            btnMinus.HoveredImageTint = Color.Transparent;
+            btnMinus.HoverForeColor = Color.Black;
+            btnMinus.HoverOutline = Color.Transparent;
+            btnMinus.Image = null;
+            btnMinus.ImageAutoCenter = true;
+            btnMinus.ImageExpand = new Point(0, 0);
+            btnMinus.ImageOffset = new Point(0, 0);
+            btnMinus.Location = new Point(237, 430);
+            btnMinus.Name = "btnMinus";
+            btnMinus.NormalBackground = Color.FromArgb(242, 239, 234);
+            btnMinus.NormalForeColor = Color.Black;
+            btnMinus.NormalImageTint = Color.White;
+            btnMinus.NormalOutline = Color.Transparent;
+            btnMinus.OutlineThickness = 1F;
+            btnMinus.PressedBackground = Color.WhiteSmoke;
+            btnMinus.PressedForeColor = Color.FromArgb(32, 32, 32);
+            btnMinus.PressedImageTint = Color.White;
+            btnMinus.PressedOutline = Color.FromArgb(64, 128, 128, 128);
+            btnMinus.Rounding = new Padding(30);
+            btnMinus.Size = new Size(68, 56);
+            btnMinus.TabIndex = 13;
+            btnMinus.TextAlignment = StringAlignment.Center;
+            btnMinus.TextOffset = new Point(0, 0);
+            btnMinus.Click += MinusButton_Click;
+            // 
+            // labelQuantity
+            // 
+            labelQuantity.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelQuantity.ForeColor = Color.Black;
+            labelQuantity.Location = new Point(319, 434);
+            labelQuantity.Name = "labelQuantity";
+            labelQuantity.Size = new Size(48, 44);
+            labelQuantity.TabIndex = 12;
+            labelQuantity.Text = "1";
+            labelQuantity.Click += QuantityLabel_Click;
             // 
             // ProductComponent
             // 
@@ -465,9 +414,9 @@
             BackColor = Color.FromArgb(242, 239, 234);
             ClientSize = new Size(702, 578);
             ControlBox = false;
-            Controls.Add(cuiButton3);
-            Controls.Add(cuiButton2);
-            Controls.Add(label6);
+            Controls.Add(btnPlus);
+            Controls.Add(btnMinus);
+            Controls.Add(labelQuantity);
             Controls.Add(panel5);
             Controls.Add(label5);
             Controls.Add(panel4);
@@ -487,13 +436,8 @@
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel3.ResumeLayout(false);
-            cuiPanel5.ResumeLayout(false);
-            cuiPanel4.ResumeLayout(false);
-            cuiPanel3.ResumeLayout(false);
             panel4.ResumeLayout(false);
             panel5.ResumeLayout(false);
-            cuiPanel6.ResumeLayout(false);
-            cuiPanel7.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -511,20 +455,16 @@
         private Label label4;
         private Panel panel4;
         private RadioButton radioGrande;
-        private CuoreUI.Controls.cuiPanel cuiPanel3;
-        private CuoreUI.Controls.cuiPanel cuiPanel5;
         private CheckBox chkWhipCream;
-        private CuoreUI.Controls.cuiPanel cuiPanel4;
         private CheckBox chkDoppioShot;
         private Label label5;
         private Panel panel5;
-        private CuoreUI.Controls.cuiPanel cuiPanel6;
         private RadioButton radioCold;
-        private CuoreUI.Controls.cuiPanel cuiPanel7;
         private RadioButton radioHot;
-        private CuoreUI.Controls.cuiButton cuiButton3;
-        private CuoreUI.Controls.cuiButton cuiButton2;
-        private Label label6;
+        private CuoreUI.Controls.cuiButton btnPlus;
+        private CuoreUI.Controls.cuiButton btnMinus;
+        private Label labelQuantity;
         private CuoreUI.Controls.cuiButton cuiButton1;
+        private Label labelSubtotal;
     }
 }
