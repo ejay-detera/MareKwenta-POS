@@ -138,5 +138,10 @@ namespace Mare_POS.StaffAdmin
         {
 
         }
+
+        private void RoleText_ContentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

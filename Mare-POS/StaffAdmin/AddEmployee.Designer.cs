@@ -257,7 +257,8 @@
             // 
             RoleText.BackgroundColor = Color.White;
             RoleText.BorderColor = Color.FromArgb(128, 128, 128, 128);
-            RoleText.Content = "";
+            RoleText.Content = "Employee";
+            RoleText.Enabled = false;
             RoleText.FocusBackgroundColor = Color.White;
             RoleText.FocusBorderColor = Color.FromArgb(78, 45, 24);
             RoleText.FocusImageTint = Color.White;
@@ -280,6 +281,7 @@
             RoleText.TabIndex = 14;
             RoleText.TextOffset = new Size(0, 0);
             RoleText.UnderlinedStyle = true;
+            RoleText.ContentChanged += RoleText_ContentChanged;
             // 
             // UsernameText
             // 

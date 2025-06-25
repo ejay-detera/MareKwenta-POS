@@ -84,7 +84,13 @@ namespace Mare_POS.inventory
 
                         for (int j = 0; j < Math.Min(existingIngredients.Count, Math.Min(comboBoxes.Count, textBoxes.Count)); j++)
                         {
-                            comboBoxes[j].SelectedItem = existingIngredients[j].IngredientName;
+                            string targetIngredient = existingIngredients[j].IngredientName;
+
+                            if (comboBoxes[j].Items.Contains(targetIngredient))
+                            {
+                                comboBoxes[j].SelectedItem = targetIngredient;
+                            }
+
                             //MessageBox.Show($"Ingredient: {existingIngredients[j].IngredientName} Quantity: {existingIngredients[j].Quantity}");
                             textBoxes[j].Content = existingIngredients[j].Quantity;
                         }
@@ -136,7 +142,7 @@ namespace Mare_POS.inventory
                     {
                         if (j < textBoxes.Count)
                         {
-                            string ingredientName = "";
+                            string ingredientName = comboBoxes[j].SelectedItem?.ToString() ?? "";
                             if (comboBoxes[j].SelectedIndex >= 0 && comboBoxes[j].SelectedIndex < comboBoxes[j].Items.Length)
                             {
                                 ingredientName = comboBoxes[j].Items[comboBoxes[j].SelectedIndex];
