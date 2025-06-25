@@ -11,7 +11,6 @@ namespace Mare_POS
     {
         private Panel contentPanel = new Panel();
         private Button activeButton = new Button();
-        private Inventory_backend dbHelper = new Inventory_backend();
 
         // Enum to define user types
         public enum UserType
@@ -39,8 +38,7 @@ namespace Mare_POS
             InitializeComponent();
             InitializeContentPanel();
             // show ticket screen initially
-            // Set default user type (you can change this based on login)
-            CurrentUserType = UserType.Admin;
+            this.AutoScaleMode = AutoScaleMode.None;
         }
 
 
@@ -85,6 +83,7 @@ namespace Mare_POS
             btn_staff.Visible = true;
             btn_receipt.Visible = true;
             btn_cashbox.Visible = true;
+            logout.Visible = true;
         }
 
         // Show only specific buttons for User
@@ -99,6 +98,7 @@ namespace Mare_POS
             btn_staff.Visible = true;
             btn_receipt.Visible = true;
             btn_cashbox.Visible = true;
+            logout.Visible = true;
         }
 
         // Method to set user type (call this after login validation)
@@ -201,6 +201,7 @@ namespace Mare_POS
                 return;
             }
 
+            UpdateSidebarVisibility();
             if (SessionManager.HasRole("Admin"))
             {
                 LoadPage(new Inventory());
@@ -219,11 +220,68 @@ namespace Mare_POS
         {
 
         }
-                private void button1_Click_1(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult result = MessageBox.Show(
+                "Are you sure you want to log out?",
+                "Confirm Logout",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                // Call the logout method from SessionManager
+                SessionManager.Logout();
+
+                // Hide current form first
+                this.Hide();
+
+                try
+                {
+                    // Show login form
+                    Log_In loginForm = new Log_In();
+                    DialogResult loginResult = loginForm.ShowDialog();
+
+                    if (loginResult == DialogResult.OK)
+                    {
+                        // Login successful - refresh the UI and show form again
+                        UpdateSidebarVisibility(); // Add this line
+
+                        // Also reload the appropriate page based on new user role
+                        if (SessionManager.HasRole("Admin"))
+                        {
+                            LoadPage(new Inventory());
+                            HighlightButton(btn_inventory);
+                        }
+                        else
+                        {
+                            LoadPage(new StaffPage());
+                            HighlightButton(btn_staff);
+                        }
+
+                        this.Show();
+                    }
+                    else
+                    {
+                        // Login cancelled or failed - close application
+                        Application.Exit();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error during login process: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.Show();
+                }
+            }
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
+
 
     public class ReceiptPage : UserControl
     {

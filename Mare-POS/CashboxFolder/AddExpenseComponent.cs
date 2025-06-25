@@ -187,9 +187,5 @@ namespace Mare_POS
             MessageBox.Show(message, "Expense Summary", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void AddExpenseForm_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

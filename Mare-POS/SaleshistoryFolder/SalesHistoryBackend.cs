@@ -7,7 +7,7 @@ namespace Mare_POS.SaleshistoryFolder
 {
     public class SalesHistoryBackend
     {
-        private string connectionString = "server=localhost;database=marepos-db;user=root;password=IyahMikaela_23;";
+        private string connectionString = "server=localhost;database=marepos-db;user=root;password=ejaydetera12;";
 
         // Get all ticket summaries (one per transaction)
         public List<Ticket> GetAllTicketSummaries()
@@ -102,7 +102,7 @@ namespace Mare_POS.SaleshistoryFolder
                 CONCAT(e.FirstName, ' ', LEFT(e.MiddleName, 1), '. ', e.LastName) AS EmployeeName
             FROM ticket t
             LEFT JOIN product p ON p.ProductID = t.ProductID
-            LEFT JOIN employee e ON e.EmployeeID = t.EmployeeID
+            LEFT JOIN employees e ON e.EmployeeID = t.EmployeeID
             WHERE t.TransactionNo = @TransactionNo
             ORDER BY t.TicketID ASC";
 

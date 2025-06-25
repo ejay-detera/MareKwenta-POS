@@ -140,7 +140,6 @@ namespace Mare_POS.CashboxFolder
             }
         }
 
-        // NEW METHOD: Attach event handlers to buttons in the original ExpenseRow
         private void AttachEventHandlersToExpenseRow(Panel expenseRow, int rowIndex)
         {
             foreach (Control control in expenseRow.Controls)
@@ -737,6 +736,11 @@ namespace Mare_POS.CashboxFolder
         }
 
         private void ExpenseAmount_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
         {
 
         }

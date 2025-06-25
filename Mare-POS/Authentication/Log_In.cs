@@ -90,10 +90,23 @@ namespace Mare_POS.Authentication
 
         private void HandleSuccessfulLogin()
         {
-            this.Hide();
-            NavbarForm mainForm = new NavbarForm();
-            mainForm.FormClosed += (s, e) => this.Close();
-            mainForm.Show();
+            // Set DialogResult to OK to indicate successful login
+            this.DialogResult = DialogResult.OK;
+
+            // Check if this form was shown as a dialog (from logout)
+            if (this.Modal)
+            {
+                // If shown as dialog, just close - the calling code will handle navigation
+                this.Close();
+            }
+            else
+            {
+                // If shown normally (app startup), proceed with normal navigation
+                this.Hide();
+                NavbarForm mainForm = new NavbarForm();
+                mainForm.FormClosed += (s, e) => this.Close();
+                mainForm.Show();
+            }
         }
 
         private void HandleFailedLogin()
@@ -140,10 +153,10 @@ namespace Mare_POS.Authentication
 
         private void Log_In_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
-    
+
 
     // Static session management class
     public static class CurrentSession

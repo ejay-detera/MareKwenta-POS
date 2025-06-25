@@ -32,25 +32,25 @@
     <Compile Update="inventory\LinkIngredients.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="DiscountButton.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="FoodQuantity.cs">
+    <Compile Update="NavbarFolder\NavBar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="NavbarFolder\NavBar.cs">
+    <Compile Update="TicketFolder\DiscountButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="TicketFolder\FoodQuantity.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="PasswordPrompt\PasswordPrompt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="PopUpSplitComponent.cs">
+    <Compile Update="TicketFolder\PopUpSplitComponent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ProductComponent.cs">
+    <Compile Update="TicketFolder\ProductComponent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ReceiptForm.cs">
+    <Compile Update="TicketFolder\ReceiptForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="SaleshistoryFolder\SaleshistoryForm.cs">

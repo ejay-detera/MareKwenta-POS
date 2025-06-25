@@ -70,119 +70,114 @@ namespace Mare_POS
         }
 
 
-        private void cuiButton1_Click_1(object sender, EventArgs e)
-        {
+private void cuiButton1_Click_1(object sender, EventArgs e)
+{
+    string IngredientName = "";
+    string quantityText = "";
+    string costText = "";
 
-            string IngredientName = "";
-            string quantityText = "";
-            string costText = "";
+    if (!string.IsNullOrEmpty(AddIngredient.Text))
+        IngredientName = AddIngredient.Text.Trim();
+    else if (AddIngredient.GetType().GetProperty("Content") != null)
+    {
+        var contentProp = AddIngredient.GetType().GetProperty("Content");
+        IngredientName = contentProp?.GetValue(AddIngredient)?.ToString()?.Trim() ?? "";
+    }
+    else if (AddIngredient.GetType().GetProperty("Value") != null)
+    {
+        var valueProp = AddIngredient.GetType().GetProperty("Value");
+        IngredientName = valueProp?.GetValue(AddIngredient)?.ToString()?.Trim() ?? "";
+    }
 
+    if (!string.IsNullOrEmpty(AddAmountStock.Text))
+        quantityText = AddAmountStock.Text.Trim();
+    else if (AddAmountStock.GetType().GetProperty("Content") != null)
+    {
+        var contentProp = AddAmountStock.GetType().GetProperty("Content");
+        quantityText = contentProp?.GetValue(AddAmountStock)?.ToString()?.Trim() ?? "";
+    }
+    else if (AddAmountStock.GetType().GetProperty("Value") != null)
+    {
+        var valueProp = AddAmountStock.GetType().GetProperty("Value");
+        quantityText = valueProp?.GetValue(AddAmountStock)?.ToString()?.Trim() ?? "";
+    }
 
-            if (!string.IsNullOrEmpty(AddIngredient.Text))
-                IngredientName = AddIngredient.Text.Trim();
-            else if (AddIngredient.GetType().GetProperty("Content") != null)
-            {
-                var contentProp = AddIngredient.GetType().GetProperty("Content");
-                IngredientName = contentProp?.GetValue(AddIngredient)?.ToString()?.Trim() ?? "";
-            }
-            else if (AddIngredient.GetType().GetProperty("Value") != null)
-            {
-                var valueProp = AddIngredient.GetType().GetProperty("Value");
-                IngredientName = valueProp?.GetValue(AddIngredient)?.ToString()?.Trim() ?? "";
-            }
+    if (!string.IsNullOrEmpty(Cost.Text))
+        costText = Cost.Text.Trim();
+    else if (Cost.GetType().GetProperty("Content") != null)
+    {
+        var contentProp = Cost.GetType().GetProperty("Content");
+        costText = contentProp?.GetValue(Cost)?.ToString()?.Trim() ?? "";
+    }
+    else if (Cost.GetType().GetProperty("Value") != null)
+    {
+        var valueProp = Cost.GetType().GetProperty("Value");
+        costText = valueProp?.GetValue(Cost)?.ToString()?.Trim() ?? "";
+    }
 
-            if (!string.IsNullOrEmpty(AddAmountStock.Text))
-                quantityText = AddAmountStock.Text.Trim();
-            else if (AddAmountStock.GetType().GetProperty("Content") != null)
-            {
-                var contentProp = AddAmountStock.GetType().GetProperty("Content");
-                quantityText = contentProp?.GetValue(AddAmountStock)?.ToString()?.Trim() ?? "";
-            }
-            else if (AddAmountStock.GetType().GetProperty("Value") != null)
-            {
-                var valueProp = AddAmountStock.GetType().GetProperty("Value");
-                quantityText = valueProp?.GetValue(AddAmountStock)?.ToString()?.Trim() ?? "";
-            }
+    // Fixed validation for UnitOfMeasurement - checking for null, empty, or whitespace
+    string selectedUnit = UnitOfMeasurement.SelectedItem?.ToString()?.Trim() ?? "";
+    if (UnitOfMeasurement.SelectedItem == null || 
+        string.IsNullOrEmpty(selectedUnit) ||
+        UnitOfMeasurement.SelectedIndex == 0) // Also check if first item (empty/placeholder) is selected
+    {
+        MessageBox.Show("Please select a measurement unit.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        UnitOfMeasurement.Focus();
+        return;
+    }
 
-            if (!string.IsNullOrEmpty(Cost.Text))
-                costText = Cost.Text.Trim();
-            else if (Cost.GetType().GetProperty("Content") != null)
-            {
-                var contentProp = Cost.GetType().GetProperty("Content");
-                costText = contentProp?.GetValue(Cost)?.ToString()?.Trim() ?? "";
-            }
-            else if (Cost.GetType().GetProperty("Value") != null)
-            {
-                var valueProp = Cost.GetType().GetProperty("Value");
-                costText = valueProp?.GetValue(Cost)?.ToString()?.Trim() ?? "";
-            }
+    if (string.IsNullOrWhiteSpace(IngredientName))
+    {
+        MessageBox.Show("Please enter an ingredient name.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        AddIngredient.Focus();
+        return;
+    }
 
-            // Debug: Show what we're getting from the textboxes
-            //MessageBox.Show($"Ingredient: '{IngredientName1}'\nQuantity: '{quantityText}'\nCost: '{costText}'\nIngredient Type: {AddIngredient.GetType().Name}\nQuantity Type: {AddAmountStock.GetType().Name}", "Debug Values");
+    if (string.IsNullOrWhiteSpace(quantityText))
+    {
+        MessageBox.Show("Please enter a quantity.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        AddAmountStock.Focus();
+        return;
+    }
 
+    if (string.IsNullOrWhiteSpace(costText))
+    {
+        MessageBox.Show("Please enter a cost.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        Cost.Focus();
+        return;
+    }
 
-            if (string.IsNullOrWhiteSpace(IngredientName))
-            {
-                MessageBox.Show("Please enter an ingredient name.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                AddIngredient.Focus();
-                return;
-            }
+    if (!decimal.TryParse(quantityText, out decimal quantity))
+    {
+        MessageBox.Show("Please enter a valid numeric quantity.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        AddAmountStock.Focus();
+        return;
+    }
 
-            if (string.IsNullOrWhiteSpace(quantityText))
-            {
-                MessageBox.Show("Please enter a quantity.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                AddAmountStock.Focus();
-                return;
-            }
+    if (!decimal.TryParse(costText, out decimal cost))
+    {
+        MessageBox.Show("Please enter a valid numeric cost.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        Cost.Focus();
+        return;
+    }
 
-            if (string.IsNullOrWhiteSpace(costText))
-            {
-                MessageBox.Show("Please enter a cost.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Cost.Focus();
-                return;
-            }
+    try
+    {
+        dbHelper.AddIngredientToInventory(IngredientName, quantity, UnitOfMeasurement.SelectedItem.ToString(), cost);
 
-            if (UnitOfMeasurement.SelectedItem == null)
-            {
-                MessageBox.Show("Please select a measurement unit.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                UnitOfMeasurement.Focus();
-                return;
-            }
+        AddAmountStock.Content = "";
+        AddIngredient.Content = "";
+        Cost.Content = "";
+        UnitOfMeasurement.SelectedItem = UnitOfMeasurement.Items[0];
 
-
-            if (!decimal.TryParse(quantityText, out decimal quantity))
-            {
-                MessageBox.Show("Please enter a valid numeric quantity.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                AddAmountStock.Focus();
-                return;
-            }
-
-            if (!decimal.TryParse(costText, out decimal cost))
-            {
-                MessageBox.Show("Please enter a valid numeric cost.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Cost.Focus();
-                return;
-            }
-
-            try
-            {
-                dbHelper.AddIngredientToInventory(IngredientName, quantity, UnitOfMeasurement.SelectedItem.ToString(), cost);
-
-
-                AddAmountStock.Content = "";
-                AddIngredient.Content = "";
-                Cost.Content = "";
-                UnitOfMeasurement.SelectedItem = UnitOfMeasurement.Items[0];
-
-                LoadInventoryItems();
-                MessageBox.Show("Ingredient added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error adding ingredient: {ex.Message}", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
+        LoadInventoryItems();
+        MessageBox.Show("Ingredient added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+    }
+    catch (Exception ex)
+    {
+        MessageBox.Show($"Error adding ingredient: {ex.Message}", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+    }
+}
         private void Inventory_Load(object sender, EventArgs e)
         {
             InventorySeparator.Visible = true;
@@ -795,24 +790,27 @@ namespace Mare_POS
                 else if (selectedAction == "Delete")
                 {
                     // Confirm deletion
-                    DialogResult result = MessageBox.Show("Are you sure you want to remove this ingredient?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    DialogResult result = MessageBox.Show(
+                        "Are you sure you want to delete this expense?",
+                        "Confirm Delete",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Warning);
+
                     if (result == DialogResult.Yes)
                     {
-                        try
+                        if (dbHelper.DeleteInventoryItem(inventoryId))
                         {
-                            dbHelper.DeleteInventoryItem(inventoryId);
-                            LoadInventoryItems();
-                            MessageBox.Show("Ingredient removed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Expense deleted successfully!", "Success",
+                                          MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
-                        catch (Exception ex)
+                        else
                         {
-                            MessageBox.Show($"Error removing ingredient: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Failed to delete expense. Please try again.", "Error",
+                                          MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
-                }
 
-                // Reset the ComboBox selection to prevent accidental re-triggers
-                actionComboBox.SelectedItem = actionComboBox.Items[0];
+                }
             }
         }
 

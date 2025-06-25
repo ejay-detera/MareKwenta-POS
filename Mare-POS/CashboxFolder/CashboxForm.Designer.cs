@@ -831,6 +831,7 @@
             DeleteButton.TabIndex = 6;
             DeleteButton.TextAlignment = StringAlignment.Center;
             DeleteButton.TextOffset = new Point(0, 0);
+            DeleteButton.Click += DeleteButton_Click;
             // 
             // EditButton
             // 

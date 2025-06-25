@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 
 namespace Mare_POS.Authentication
@@ -49,9 +51,20 @@ namespace Mare_POS.Authentication
         // Logout method
         public static void Logout()
         {
-            _currentUser = null;
-            _loginTime = default;
-            _lastActivity = default;
+            try
+            {
+                // Clear session data
+                _currentUser = null;
+                _loginTime = default(DateTime);
+                _lastActivity = default(DateTime);
+                MessageBox.Show("You have been logged out successfully.", "Logout",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error during logout: {ex.Message}", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         // Update last activity (call this on user interactions)
@@ -85,18 +98,42 @@ namespace Mare_POS.Authentication
         // Show login form
         public static void ShowLoginForm()
         {
-            // Hide all open forms except login
-            foreach (Form form in Application.OpenForms)
+            try
             {
-                if (form.Name != "LoginForm")
+                // Create and show login form
+                Log_In loginForm = new Log_In();
+                loginForm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error showing login form: {ex.Message}", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private static void CloseAllForms()
+        {
+            try
+            {
+                var formsToClose = new List<Form>();
+
+                foreach (Form form in Application.OpenForms)
                 {
-                    form.Hide();
+                    formsToClose.Add(form);
+                }
+
+                foreach (Form form in formsToClose)
+                {
+                    if (!form.IsDisposed)
+                    {
+                        form.Close();
+                    }
                 }
             }
-
-            // Show login form (you'll need to create this)
-            Log_In loginForm = new Log_In();
-            loginForm.ShowDialog();
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error closing forms: {ex.Message}");
+            }
         }
 
         // Check if user has required role
@@ -106,20 +143,6 @@ namespace Mare_POS.Authentication
             return _currentUser.Role.Equals(requiredRole, StringComparison.OrdinalIgnoreCase);
         }
 
-        // Check if user has any of the required roles
-        public static bool HasAnyRole(params string[] requiredRoles)
-        {
-            if (!IsLoggedIn) return false;
-
-            foreach (string role in requiredRoles)
-            {
-                if (_currentUser.Role.Equals(role, StringComparison.OrdinalIgnoreCase))
-                    return true;
-            }
-            return false;
-        }
-
-        // Require authentication - call this at the start of protected forms/methods
         public static bool RequireAuthentication()
         {
             if (!IsLoggedIn)
@@ -133,37 +156,6 @@ namespace Mare_POS.Authentication
             CheckSessionTimeout();
             UpdateActivity();
             return IsLoggedIn;
-        }
-
-        // Require specific role - call this for role-based access
-        public static bool RequireRole(string requiredRole)
-        {
-            if (!RequireAuthentication()) return false;
-
-            if (!HasRole(requiredRole))
-            {
-                MessageBox.Show($"Access denied. This feature requires '{requiredRole}' role.", "Access Denied",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-
-            return true;
-        }
-
-        // Require any of the specified roles
-        public static bool RequireAnyRole(params string[] requiredRoles)
-        {
-            if (!RequireAuthentication()) return false;
-
-            if (!HasAnyRole(requiredRoles))
-            {
-                string roleList = string.Join(" or ", requiredRoles);
-                MessageBox.Show($"Access denied. This feature requires one of these roles: {roleList}", "Access Denied",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-
-            return true;
         }
     }
 }

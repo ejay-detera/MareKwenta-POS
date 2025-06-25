@@ -191,8 +191,8 @@ namespace Mare_POS.Dashboard
                             SUM(t.TotalAmount) as SalesAmount
                         FROM ticket t
                         WHERE t.Date >= @StartDate AND t.Date <= @EndDate
-                        GROUP BY YEAR(t.Date), WEEK(t.Date, 1)
-                        ORDER BY YEAR(t.Date), WEEK(t.Date, 1)";
+                        GROUP BY Period, YEAR(t.Date), WEEK(t.Date, 1)
+                        ORDER BY Period, YEAR(t.Date), WEEK(t.Date, 1)";
 
                 case "Monthly":
                     return @"

@@ -17,6 +17,7 @@ namespace Mare_POS.inventory
         public LinkIngredients()
         {
             InitializeComponent();
+            LoadExistingIngredientData();
         }
 
         private Inventory_backend dbHelper = new Inventory_backend();
@@ -314,6 +315,16 @@ namespace Mare_POS.inventory
 
         }
         private void label39_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cuiComboBox7_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chgrow_Paint(object sender, PaintEventArgs e)
         {
 
         }

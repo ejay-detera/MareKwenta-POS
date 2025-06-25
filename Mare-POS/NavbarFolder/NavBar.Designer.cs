@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NavbarForm));
             navbarPanel = new Panel();
             logo = new Label();
             flowLayoutPanel1 = new FlowLayoutPanel();
@@ -38,8 +37,8 @@
             btn_cashbox = new Button();
             btn_ticket = new Button();
             btn_dashboard = new Button();
+            logout = new Button();
             panel1 = new Panel();
-            button1 = new Button();
             navbarPanel.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
@@ -79,13 +78,14 @@
             flowLayoutPanel1.Controls.Add(btn_cashbox);
             flowLayoutPanel1.Controls.Add(btn_ticket);
             flowLayoutPanel1.Controls.Add(btn_dashboard);
-            flowLayoutPanel1.Controls.Add(button1);
+            flowLayoutPanel1.Controls.Add(logout);
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel1.Location = new Point(0, 151);
+            flowLayoutPanel1.Location = new Point(0, 158);
             flowLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(137, 1099);
             flowLayoutPanel1.TabIndex = 1;
+            flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
             // 
             // btn_inventory
             // 
@@ -99,7 +99,7 @@
             btn_inventory.Margin = new Padding(0, 0, 0, 19);
             btn_inventory.Name = "btn_inventory";
             btn_inventory.RightToLeft = RightToLeft.No;
-            btn_inventory.Size = new Size(137, 120);
+            btn_inventory.Size = new Size(137, 102);
             btn_inventory.TabIndex = 3;
             btn_inventory.Text = "Inventory";
             btn_inventory.TextAlign = ContentAlignment.BottomCenter;
@@ -115,11 +115,11 @@
             btn_staff.Font = new Font("Unbounded Light", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_staff.ForeColor = Color.FromArgb(78, 45, 24);
             btn_staff.Image = Properties.Resources.User;
-            btn_staff.Location = new Point(0, 139);
+            btn_staff.Location = new Point(0, 121);
             btn_staff.Margin = new Padding(0, 0, 0, 19);
             btn_staff.Name = "btn_staff";
             btn_staff.RightToLeft = RightToLeft.No;
-            btn_staff.Size = new Size(137, 120);
+            btn_staff.Size = new Size(137, 102);
             btn_staff.TabIndex = 5;
             btn_staff.Text = "Staff";
             btn_staff.TextAlign = ContentAlignment.BottomCenter;
@@ -135,11 +135,11 @@
             btn_receipt.Font = new Font("Unbounded Light", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_receipt.ForeColor = Color.FromArgb(78, 45, 24);
             btn_receipt.Image = Properties.Resources.List;
-            btn_receipt.Location = new Point(0, 278);
+            btn_receipt.Location = new Point(0, 242);
             btn_receipt.Margin = new Padding(0, 0, 0, 20);
             btn_receipt.Name = "btn_receipt";
             btn_receipt.RightToLeft = RightToLeft.No;
-            btn_receipt.Size = new Size(137, 120);
+            btn_receipt.Size = new Size(137, 102);
             btn_receipt.TabIndex = 7;
             btn_receipt.Text = "Receipt";
             btn_receipt.TextAlign = ContentAlignment.BottomCenter;
@@ -155,11 +155,11 @@
             btn_cashbox.Font = new Font("Unbounded Light", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_cashbox.ForeColor = Color.FromArgb(78, 45, 24);
             btn_cashbox.Image = Properties.Resources.DollarSign;
-            btn_cashbox.Location = new Point(0, 418);
+            btn_cashbox.Location = new Point(0, 364);
             btn_cashbox.Margin = new Padding(0, 0, 0, 20);
             btn_cashbox.Name = "btn_cashbox";
             btn_cashbox.RightToLeft = RightToLeft.No;
-            btn_cashbox.Size = new Size(137, 120);
+            btn_cashbox.Size = new Size(137, 102);
             btn_cashbox.TabIndex = 5;
             btn_cashbox.Text = "Cash Box";
             btn_cashbox.TextAlign = ContentAlignment.BottomCenter;
@@ -175,11 +175,11 @@
             btn_ticket.Font = new Font("Unbounded Light", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_ticket.ForeColor = Color.FromArgb(78, 45, 24);
             btn_ticket.Image = Properties.Resources.Ticket;
-            btn_ticket.Location = new Point(0, 558);
+            btn_ticket.Location = new Point(0, 486);
             btn_ticket.Margin = new Padding(0, 0, 0, 20);
             btn_ticket.Name = "btn_ticket";
             btn_ticket.RightToLeft = RightToLeft.No;
-            btn_ticket.Size = new Size(137, 120);
+            btn_ticket.Size = new Size(137, 102);
             btn_ticket.TabIndex = 9;
             btn_ticket.Text = "Ticket";
             btn_ticket.TextAlign = ContentAlignment.BottomCenter;
@@ -195,17 +195,37 @@
             btn_dashboard.Font = new Font("Unbounded Light", 9.249998F);
             btn_dashboard.ForeColor = Color.FromArgb(78, 45, 24);
             btn_dashboard.Image = Properties.Resources.BarChart;
-            btn_dashboard.Location = new Point(0, 698);
+            btn_dashboard.Location = new Point(0, 608);
             btn_dashboard.Margin = new Padding(0);
             btn_dashboard.Name = "btn_dashboard";
             btn_dashboard.RightToLeft = RightToLeft.No;
-            btn_dashboard.Size = new Size(137, 120);
+            btn_dashboard.Size = new Size(137, 102);
             btn_dashboard.TabIndex = 5;
             btn_dashboard.Text = "Dashboard";
             btn_dashboard.TextAlign = ContentAlignment.BottomCenter;
             btn_dashboard.TextImageRelation = TextImageRelation.ImageAboveText;
             btn_dashboard.UseVisualStyleBackColor = false;
             btn_dashboard.Click += btn_dashboard_Click;
+            // 
+            // logout
+            // 
+            logout.BackColor = Color.FromArgb(242, 239, 234);
+            logout.FlatAppearance.BorderSize = 0;
+            logout.FlatStyle = FlatStyle.Flat;
+            logout.Font = new Font("Unbounded SemiBold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            logout.ForeColor = Color.FromArgb(192, 0, 0);
+            logout.Image = Properties.Resources.Log_out;
+            logout.Location = new Point(0, 730);
+            logout.Margin = new Padding(0, 20, 0, 0);
+            logout.Name = "logout";
+            logout.RightToLeft = RightToLeft.No;
+            logout.Size = new Size(137, 104);
+            logout.TabIndex = 10;
+            logout.Text = "Log Out";
+            logout.TextAlign = ContentAlignment.BottomCenter;
+            logout.TextImageRelation = TextImageRelation.ImageAboveText;
+            logout.UseVisualStyleBackColor = false;
+            logout.Click += button1_Click_1;
             // 
             // panel1
             // 
@@ -216,26 +236,6 @@
             panel1.Size = new Size(3, 1313);
             panel1.TabIndex = 2;
             panel1.Paint += panel1_Paint;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.FromArgb(242, 239, 234);
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Unbounded Light", 11.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.FromArgb(78, 45, 24);
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(0, 633);
-            button1.Margin = new Padding(0, 20, 0, 0);
-            button1.Name = "button1";
-            button1.RightToLeft = RightToLeft.No;
-            button1.Size = new Size(120, 90);
-            button1.TabIndex = 10;
-            button1.Text = "LOG OUT";
-            button1.TextAlign = ContentAlignment.BottomCenter;
-            button1.TextImageRelation = TextImageRelation.ImageAboveText;
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click_1;
             // 
             // NavbarForm
             // 
@@ -273,6 +273,6 @@
         private Button btn_staff;
         private Panel panel1;
         private FlowLayoutPanel flowLayoutPanel1;
-        private Button button1;
+        private Button logout;
     }
 }

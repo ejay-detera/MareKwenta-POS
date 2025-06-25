@@ -16,7 +16,7 @@ namespace Mare_POS
 
             public DatabaseSetup()
             {
-                
+
                 serverConnectionString = "server=localhost;uid=root;pwd=ejaydetera12;";
                 databaseConnectionString = "server=localhost;uid=root;pwd=ejaydetera12;database=marepos-db;";
             }
@@ -252,7 +252,7 @@ namespace Mare_POS
             }
         }
 
-        
+
         public bool DeleteInventoryItem(int id)
         {
             using (MySqlConnection con = new MySqlConnection(connectionString))
@@ -260,7 +260,7 @@ namespace Mare_POS
                 try
                 {
                     con.Open();
-                    string query = "DELETE FROM inventory WHERE InventoryID = @id"; 
+                    string query = "DELETE FROM inventory WHERE InventoryID = @id";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, con))
                     {
