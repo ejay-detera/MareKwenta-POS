@@ -361,3 +361,19 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Additional Visual Studio cache and temporary files
+*.dtbcache*
+*.futdcache*
+
+# Project evaluation files
+*.metadata.v*.bin
+*.projects.v*.bin
+*.strings.v*.bin
+
+# Assembly info files (auto-generated)
+*AssemblyInfo.cs
+*AssemblyInfoInputs.cache
+
+# Application host executable
+apphost.exe

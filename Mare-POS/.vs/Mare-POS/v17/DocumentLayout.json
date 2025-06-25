@@ -3,6 +3,34 @@
   "WorkspaceRootPath": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\detera\\desktop\\c# winforms\\marekwenta-pos\\mare-pos\\navbarfolder\\navbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:navbarfolder\\navbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\navbarfolder\\navbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:navbarfolder\\navbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\cashboxfolder\\cashboxform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:cashboxfolder\\cashboxform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\detera\\desktop\\c# winforms\\marekwenta-pos\\mare-pos\\navbarfolder\\navbar.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:navbarfolder\\navbar.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\detera\\desktop\\c# winforms\\marekwenta-pos\\mare-pos\\sessionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:sessionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\detera\\desktop\\c# winforms\\marekwenta-pos\\mare-pos\\cashboxfolder\\cashboxform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:cashboxfolder\\cashboxform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\detera\\desktop\\c# winforms\\marekwenta-pos\\mare-pos\\cashboxfolder\\cashbox_backend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:cashboxfolder\\cashbox_backend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\detera\\desktop\\c# winforms\\marekwenta-pos\\mare-pos\\dashboard\\dashboardadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:dashboard\\dashboardadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,14 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\detera\\desktop\\c# winforms\\marekwenta-pos\\mare-pos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\detera\\desktop\\c# winforms\\marekwenta-pos\\mare-pos\\navbarfolder\\navbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:navbarfolder\\navbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\navbarfolder\\navbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:navbarfolder\\navbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\detera\\desktop\\c# winforms\\marekwenta-pos\\mare-pos\\authentication\\log_in.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -53,10 +73,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\cashboxfolder\\addexpensecomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:cashboxfolder\\addexpensecomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\detera\\desktop\\c# winforms\\marekwenta-pos\\mare-pos\\cashboxfolder\\cashbox_backend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:cashboxfolder\\cashbox_backend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\detera\\desktop\\c# winforms\\marekwenta-pos\\mare-pos\\inventory\\linkingredients.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -105,18 +121,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\detera\\desktop\\c# winforms\\marekwenta-pos\\mare-pos\\inventory\\linkingredients.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:inventory\\linkingredients.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\cashboxfolder\\cashboxform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:cashboxfolder\\cashboxform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\detera\\desktop\\c# winforms\\marekwenta-pos\\mare-pos\\sessionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:sessionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\detera\\desktop\\c# winforms\\marekwenta-pos\\mare-pos\\cashboxfolder\\cashboxform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:cashboxfolder\\cashboxform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\detera\\desktop\\c# winforms\\marekwenta-pos\\mare-pos\\cashboxfolder\\editexpense.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -197,10 +201,6 @@
       "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:inventory\\addquantitycomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\detera\\desktop\\c# winforms\\marekwenta-pos\\mare-pos\\navbarfolder\\navbar.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:navbarfolder\\navbar.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|c:\\users\\detera\\desktop\\c# winforms\\marekwenta-pos\\mare-pos\\inventory\\addquantitycomponent.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E8C9130-6882-40D6-91F0-1A55D1CBDBCF}|Mare-POS.csproj|solutionrelative:inventory\\addquantitycomponent.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -236,11 +236,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "NavBar.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\NavbarFolder\\NavBar.cs",
               "RelativeDocumentMoniker": "NavbarFolder\\NavBar.cs",
@@ -257,42 +257,84 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Log_In.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\Authentication\\Log_In.cs",
-              "RelativeDocumentMoniker": "Authentication\\Log_In.cs",
-              "ToolTip": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\Authentication\\Log_In.cs [Design]",
-              "RelativeToolTip": "Authentication\\Log_In.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "NavBar.cs",
+              "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\NavbarFolder\\NavBar.cs",
+              "RelativeDocumentMoniker": "NavbarFolder\\NavBar.cs",
+              "ToolTip": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\NavbarFolder\\NavBar.cs",
+              "RelativeToolTip": "NavbarFolder\\NavBar.cs",
+              "ViewState": "AgIAAOEAAAAAAAAAAAAiwAIBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T12:48:26.16Z"
+              "WhenOpened": "2025-06-10T19:34:50.907Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Log_In.cs",
-              "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\Authentication\\Log_In.cs",
-              "RelativeDocumentMoniker": "Authentication\\Log_In.cs",
-              "ToolTip": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\Authentication\\Log_In.cs",
-              "RelativeToolTip": "Authentication\\Log_In.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHMAAAANAAAAAAAAAA==",
+              "Title": "Cashbox_backend.cs",
+              "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\CashboxFolder\\Cashbox_backend.cs",
+              "RelativeDocumentMoniker": "CashboxFolder\\Cashbox_backend.cs",
+              "ToolTip": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\CashboxFolder\\Cashbox_backend.cs",
+              "RelativeToolTip": "CashboxFolder\\Cashbox_backend.cs",
+              "ViewState": "AgIAALQAAAAAAAAAAAAuwNgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T19:45:30.663Z"
+              "WhenOpened": "2025-06-23T05:24:01.019Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "DashboardAdmin.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\Dashboard\\DashboardAdmin.cs",
-              "RelativeDocumentMoniker": "Dashboard\\DashboardAdmin.cs",
-              "ToolTip": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\Dashboard\\DashboardAdmin.cs [Design]",
-              "RelativeToolTip": "Dashboard\\DashboardAdmin.cs [Design]",
+              "Title": "CashboxForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\CashboxFolder\\CashboxForm.cs",
+              "RelativeDocumentMoniker": "CashboxFolder\\CashboxForm.cs",
+              "ToolTip": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\CashboxFolder\\CashboxForm.cs [Design]",
+              "RelativeToolTip": "CashboxFolder\\CashboxForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T12:19:38.172Z",
+              "WhenOpened": "2025-06-10T15:40:20.451Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
+              "Title": "CashboxForm.cs",
+              "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\CashboxFolder\\CashboxForm.cs",
+              "RelativeDocumentMoniker": "CashboxFolder\\CashboxForm.cs",
+              "ToolTip": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\CashboxFolder\\CashboxForm.cs",
+              "RelativeToolTip": "CashboxFolder\\CashboxForm.cs",
+              "ViewState": "AgIAAAMCAAAAAAAAAAAAABUCAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T23:40:31.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SessionManager.cs",
+              "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\SessionManager.cs",
+              "RelativeDocumentMoniker": "SessionManager.cs",
+              "ToolTip": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\SessionManager.cs",
+              "RelativeToolTip": "SessionManager.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAswC4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T20:52:25.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NavBar.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\NavbarFolder\\NavBar.Designer.cs",
+              "RelativeDocumentMoniker": "NavbarFolder\\NavBar.Designer.cs",
+              "ToolTip": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\NavbarFolder\\NavBar.Designer.cs",
+              "RelativeToolTip": "NavbarFolder\\NavBar.Designer.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAuwB0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T20:58:19.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "DashboardAdmin.cs",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\Dashboard\\DashboardAdmin.cs",
               "RelativeDocumentMoniker": "Dashboard\\DashboardAdmin.cs",
@@ -305,20 +347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:31:02.64Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "SalesDataProcessor.cs",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\Dashboard\\SalesDataProcessor.cs",
               "RelativeDocumentMoniker": "Dashboard\\SalesDataProcessor.cs",
@@ -331,20 +360,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "NavBar.cs",
-              "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\NavbarFolder\\NavBar.cs",
-              "RelativeDocumentMoniker": "NavbarFolder\\NavBar.cs",
-              "ToolTip": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\NavbarFolder\\NavBar.cs",
-              "RelativeToolTip": "NavbarFolder\\NavBar.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAzAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T19:34:50.907Z",
+              "WhenOpened": "2025-06-03T11:31:02.64Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
+              "Title": "DashboardAdmin.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\Dashboard\\DashboardAdmin.cs",
+              "RelativeDocumentMoniker": "Dashboard\\DashboardAdmin.cs",
+              "ToolTip": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\Dashboard\\DashboardAdmin.cs [Design]",
+              "RelativeToolTip": "Dashboard\\DashboardAdmin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T12:19:38.172Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Log_In.cs",
+              "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\Authentication\\Log_In.cs",
+              "RelativeDocumentMoniker": "Authentication\\Log_In.cs",
+              "ToolTip": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\Authentication\\Log_In.cs",
+              "RelativeToolTip": "Authentication\\Log_In.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T19:45:30.663Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Log_In.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\Authentication\\Log_In.cs",
+              "RelativeDocumentMoniker": "Authentication\\Log_In.cs",
+              "ToolTip": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\Authentication\\Log_In.cs [Design]",
+              "RelativeToolTip": "Authentication\\Log_In.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T12:48:26.16Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\Authentication\\AuthService.cs",
               "RelativeDocumentMoniker": "Authentication\\AuthService.cs",
@@ -356,7 +420,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "EditExpense.cs",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\CashboxFolder\\EditExpense.cs",
               "RelativeDocumentMoniker": "CashboxFolder\\EditExpense.cs",
@@ -369,7 +433,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "EditExpense.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\CashboxFolder\\EditExpense.cs",
               "RelativeDocumentMoniker": "CashboxFolder\\EditExpense.cs",
@@ -380,7 +444,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "AddExpenseComponent.cs",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\CashboxFolder\\AddExpenseComponent.cs",
               "RelativeDocumentMoniker": "CashboxFolder\\AddExpenseComponent.cs",
@@ -393,7 +457,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "AddExpenseComponent.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\CashboxFolder\\AddExpenseComponent.cs",
               "RelativeDocumentMoniker": "CashboxFolder\\AddExpenseComponent.cs",
@@ -404,19 +468,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Cashbox_backend.cs",
-              "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\CashboxFolder\\Cashbox_backend.cs",
-              "RelativeDocumentMoniker": "CashboxFolder\\Cashbox_backend.cs",
-              "ToolTip": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\CashboxFolder\\Cashbox_backend.cs",
-              "RelativeToolTip": "CashboxFolder\\Cashbox_backend.cs",
-              "ViewState": "AgIAALQAAAAAAAAAAAAuwNgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T05:24:01.019Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "LinkIngredients.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\inventory\\LinkIngredients.cs",
               "RelativeDocumentMoniker": "inventory\\LinkIngredients.cs",
@@ -427,7 +479,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "Inventory.cs",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\inventory\\Inventory.cs",
               "RelativeDocumentMoniker": "inventory\\Inventory.cs",
@@ -440,7 +492,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "DatabaseSeeder.cs",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\DatabaseSeeder.cs",
               "RelativeDocumentMoniker": "DatabaseSeeder.cs",
@@ -452,7 +504,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "StaffPage.cs",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\EmployeeLogsUserView\\StaffPage.cs",
               "RelativeDocumentMoniker": "EmployeeLogsUserView\\StaffPage.cs",
@@ -465,7 +517,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "EmployeeCard.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\EmployeeCard\\EmployeeCard.cs",
               "RelativeDocumentMoniker": "EmployeeCard\\EmployeeCard.cs",
@@ -476,7 +528,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "LinkIngredients.cs",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\inventory\\LinkIngredients.cs",
               "RelativeDocumentMoniker": "inventory\\LinkIngredients.cs",
@@ -488,7 +540,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 27,
               "Title": "Resources.resx",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\Properties\\Resources.resx",
               "RelativeDocumentMoniker": "Properties\\Resources.resx",
@@ -499,7 +551,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 23,
               "Title": "StaffPage.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\EmployeeLogsUserView\\StaffPage.cs",
               "RelativeDocumentMoniker": "EmployeeLogsUserView\\StaffPage.cs",
@@ -510,7 +562,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 25,
               "Title": "Inventory_backend.cs",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\inventory\\Inventory_backend.cs",
               "RelativeDocumentMoniker": "inventory\\Inventory_backend.cs",
@@ -522,7 +574,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 26,
               "Title": "Inventory.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\inventory\\Inventory.cs",
               "RelativeDocumentMoniker": "inventory\\Inventory.cs",
@@ -533,7 +585,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 28,
               "Title": "AddEmployee.cs",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\StaffAdmin\\AddEmployee.cs",
               "RelativeDocumentMoniker": "StaffAdmin\\AddEmployee.cs",
@@ -546,7 +598,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 29,
               "Title": "LinkIngredients.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\inventory\\LinkIngredients.Designer.cs",
               "RelativeDocumentMoniker": "inventory\\LinkIngredients.Designer.cs",
@@ -558,43 +610,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "CashboxForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\CashboxFolder\\CashboxForm.cs",
-              "RelativeDocumentMoniker": "CashboxFolder\\CashboxForm.cs",
-              "ToolTip": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\CashboxFolder\\CashboxForm.cs [Design]*",
-              "RelativeToolTip": "CashboxFolder\\CashboxForm.cs [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T15:40:20.451Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "SessionManager.cs",
-              "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\SessionManager.cs",
-              "RelativeDocumentMoniker": "SessionManager.cs",
-              "ToolTip": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\SessionManager.cs",
-              "RelativeToolTip": "SessionManager.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAYwAQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T20:52:25.558Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "CashboxForm.cs",
-              "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\CashboxFolder\\CashboxForm.cs",
-              "RelativeDocumentMoniker": "CashboxFolder\\CashboxForm.cs",
-              "ToolTip": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\CashboxFolder\\CashboxForm.cs",
-              "RelativeToolTip": "CashboxFolder\\CashboxForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKYCAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T23:40:31.38Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "EditExpense.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\CashboxFolder\\EditExpense.Designer.cs",
               "RelativeDocumentMoniker": "CashboxFolder\\EditExpense.Designer.cs",
@@ -606,7 +622,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "AddQuantityComponent.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\inventory\\AddQuantityComponent.cs",
               "RelativeDocumentMoniker": "inventory\\AddQuantityComponent.cs",
@@ -617,7 +633,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "StaffPageAdmin.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\StaffAdmin\\StaffPageAdmin.cs",
               "RelativeDocumentMoniker": "StaffAdmin\\StaffPageAdmin.cs",
@@ -628,7 +644,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "ResetPassword.cs",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\StaffAdmin\\ResetPassword.cs",
               "RelativeDocumentMoniker": "StaffAdmin\\ResetPassword.cs",
@@ -641,7 +657,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "ResetPassword.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\StaffAdmin\\ResetPassword.cs",
               "RelativeDocumentMoniker": "StaffAdmin\\ResetPassword.cs",
@@ -652,7 +668,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "ResetPassword.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\StaffAdmin\\ResetPassword.Designer.cs",
               "RelativeDocumentMoniker": "StaffAdmin\\ResetPassword.Designer.cs",
@@ -664,7 +680,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "AddEmployee.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\StaffAdmin\\AddEmployee.cs",
               "RelativeDocumentMoniker": "StaffAdmin\\AddEmployee.cs",
@@ -675,7 +691,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "StaffPageAdmin.cs",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\StaffAdmin\\StaffPageAdmin.cs",
               "RelativeDocumentMoniker": "StaffAdmin\\StaffPageAdmin.cs",
@@ -687,7 +703,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "Log_In.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\Authentication\\Log_In.Designer.cs",
               "RelativeDocumentMoniker": "Authentication\\Log_In.Designer.cs",
@@ -710,7 +726,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "EmployeeCard.cs",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\EmployeeCard\\EmployeeCard.cs",
               "RelativeDocumentMoniker": "EmployeeCard\\EmployeeCard.cs",
@@ -722,7 +738,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "PasswordPrompt.cs",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\PasswordPrompt\\PasswordPrompt.cs",
               "RelativeDocumentMoniker": "PasswordPrompt\\PasswordPrompt.cs",
@@ -735,7 +751,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "PasswordPrompt.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\PasswordPrompt\\PasswordPrompt.cs",
               "RelativeDocumentMoniker": "PasswordPrompt\\PasswordPrompt.cs",
@@ -746,7 +762,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "SaleshistoryForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\SaleshistoryFolder\\SaleshistoryForm.cs",
               "RelativeDocumentMoniker": "SaleshistoryFolder\\SaleshistoryForm.cs",
@@ -757,20 +773,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "CashboxForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\CashboxFolder\\CashboxForm.Designer.cs",
               "RelativeDocumentMoniker": "CashboxFolder\\CashboxForm.Designer.cs",
-              "ToolTip": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\CashboxFolder\\CashboxForm.Designer.cs*",
-              "RelativeToolTip": "CashboxFolder\\CashboxForm.Designer.cs*",
-              "ViewState": "AgIAABYAAAAAAAAAAAAYwIcEAAABAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\CashboxFolder\\CashboxForm.Designer.cs",
+              "RelativeToolTip": "CashboxFolder\\CashboxForm.Designer.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAYwIgEAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-10T14:18:16.309Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "Mare-POS.csproj",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\Mare-POS.csproj",
               "RelativeDocumentMoniker": "Mare-POS.csproj",
@@ -782,7 +798,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "ApplicationConfiguration.g.cs",
               "DocumentMoniker": "C:\\Users\\Detera\\AppData\\Local\\Temp\\.vsdbgsrc\\a134c0f702ec8b6c6a0fa4e2011759b3e77cafa2\\ApplicationConfiguration.g.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\a134c0f702ec8b6c6a0fa4e2011759b3e77cafa2\\ApplicationConfiguration.g.cs",
@@ -795,7 +811,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "Microsoft.Common.CurrentVersion.targets",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
@@ -807,7 +823,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 47,
               "Title": "LinkIngredients.resx",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\inventory\\LinkIngredients.resx",
               "RelativeDocumentMoniker": "inventory\\LinkIngredients.resx",
@@ -819,7 +835,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 48,
               "Title": "App.config",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\App.config",
               "RelativeDocumentMoniker": "App.config",
@@ -831,7 +847,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 49,
               "Title": "AddQuantityComponent.cs",
               "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\inventory\\AddQuantityComponent.cs",
               "RelativeDocumentMoniker": "inventory\\AddQuantityComponent.cs",
@@ -840,19 +856,6 @@
               "ViewState": "AgIAAHAAAAAAAAAAAADwv40AAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-07T16:43:09.52Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "NavBar.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\NavbarFolder\\NavBar.Designer.cs",
-              "RelativeDocumentMoniker": "NavbarFolder\\NavBar.Designer.cs",
-              "ToolTip": "C:\\Users\\Detera\\Desktop\\C# WINFORMS\\MareKwenta-POS\\Mare-POS\\NavbarFolder\\NavBar.Designer.cs",
-              "RelativeToolTip": "NavbarFolder\\NavBar.Designer.cs",
-              "ViewState": "AgIAANsAAAAAAAAAAAASwOgAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T20:58:19.993Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
