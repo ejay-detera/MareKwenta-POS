@@ -15,9 +15,15 @@ namespace Mare_POS
 {
     public partial class TicketFood : UserControl
     {
+        private int transactionNo;
+        private decimal finalAmount;
+
         public TicketFood()
         {
             InitializeComponent();
+            this.transactionNo = transactionNo;
+            this.finalAmount = finalAmount;
+
         }
 
         private List<Item> currentOrder = new List<Item>();
@@ -25,13 +31,13 @@ namespace Mare_POS
         private void cuiButton25_Click(object sender, EventArgs e)
         {
             // Create and show the ReceiptForm
-            ReceiptForm receiptForm = new ReceiptForm();
+            ReceiptForm receiptForm = new ReceiptForm(transactionNo);
             receiptForm.ShowDialog(); // Use Show() if you don't want it modal
         }
 
         private void cuiButton24_Click(object sender, EventArgs e)
         {
-            PopUpSplitComponent splitForm = new PopUpSplitComponent();
+            PopUpSplitComponent splitForm = new PopUpSplitComponent(transactionNo, finalAmount);
             splitForm.StartPosition = FormStartPosition.CenterParent; // Center it over parent form
 
             if (splitForm.ShowDialog(this) == DialogResult.OK)

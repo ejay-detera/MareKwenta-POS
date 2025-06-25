@@ -27,5 +27,7 @@ namespace Mare_POS.Models
         public decimal GcashAmount { get; set; }
         public decimal MayaAmount { get; set; }
         public decimal SubTotal { get; set; }
+
+        public string? ProductName { get; set; }
     }
 }

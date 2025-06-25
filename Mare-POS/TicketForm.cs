@@ -1,5 +1,5 @@
-﻿using Mare_POS.Models;
-using Mare_POS.Database;
+﻿using Mare_POS.Database;
+using Mare_POS.Models;
 using Mare_POS.Ticket_Components;
 using System;
 using System.Collections.Generic;
@@ -10,6 +10,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 using System.Windows.Forms;
 
 namespace Mare_POS
@@ -18,12 +19,24 @@ namespace Mare_POS
     {
         public event Action NavigateToTicketCoffee;
         public event Action NavigateToTicketForm;
+
+        private decimal currentDiscountAmount = 0;
+        private decimal currentDiscountRate = 0;
+
+        private int transactionNo;
+
+
         public TicketForm()
         {
             InitializeComponent();
 
             // Wire the event manually
             txtManualAmount.KeyUp += txtManualAmount_KeyUp;
+
+            this.Load += TicketForm_Load;
+
+            transactionNo = TicketPaymentBackend.GetNextTransactionNo();
+
         }
 
         private List<Item> currentOrder = new List<Item>();
@@ -183,7 +196,7 @@ namespace Mare_POS
 
         private void cuiButton24_Click(object sender, EventArgs e)
         {
-            PopUpSplitComponent splitForm = new PopUpSplitComponent();
+            PopUpSplitComponent splitForm = new PopUpSplitComponent(this);
             splitForm.StartPosition = FormStartPosition.CenterParent; // Center it over parent form
 
             if (splitForm.ShowDialog(this) == DialogResult.OK)
@@ -198,9 +211,12 @@ namespace Mare_POS
 
         private void cuiButton25_Click(object sender, EventArgs e)
         {
-            // Create and show the ReceiptForm
-            ReceiptForm receiptForm = new ReceiptForm();
-            receiptForm.ShowDialog(); // Use Show() if you don't want it modal
+            decimal finalAmount = Convert.ToDecimal(labelSubtotal.Text.Replace("₱", "").Trim());
+            decimal cashReceived = Convert.ToDecimal(labelCashReceived.Text.Replace("₱", "").Replace(",", "").Trim());
+            decimal change = cashReceived - finalAmount;
+
+            TicketPaymentBackend.SavePayment(transactionNo, finalAmount, 0, 0, change);
+            ShowReceipt(transactionNo);
         }
 
         private void btnCafeLatte_Click(object sender, EventArgs e)
@@ -590,7 +606,8 @@ namespace Mare_POS
 
         private void btnDiscount_Click(object sender, EventArgs e)
         {
-
+            pnlChange.Visible = false;
+            pnlDiscount.Visible = true;
         }
 
         private void cuiPanel1_Paint_1(object sender, PaintEventArgs e)
@@ -1035,9 +1052,12 @@ namespace Mare_POS
 
         private void UpdateSubtotalLabel()
         {
-            decimal subtotal = currentOrder.Sum(item => item.Amount);
-            labelSubtotal.Text = $"₱{subtotal:0.00}";
+            decimal subtotal = currentOrder.Sum(x => x.Amount);
+            decimal finalTotal = subtotal - currentDiscountAmount;
+            labelSubtotal.Text = $"₱{finalTotal:0.00}";
         }
+
+
 
         private void btnMoney_Click(object sender, EventArgs e)
         {
@@ -1046,7 +1066,15 @@ namespace Mare_POS
                 if (decimal.TryParse(btn.Tag.ToString(), out decimal value))
                 {
                     cashReceived += value;
-                    UpdateCashAndChangeUI();
+
+                    // Get the latest total amount after discount
+                    decimal totalAmount = currentOrder.FirstOrDefault(x => x.Amount > 0)?.Amount ?? 0;
+                    totalAmount = Math.Round(totalAmount, 2, MidpointRounding.AwayFromZero);
+
+                    decimal finalTotal = totalAmount - currentDiscountAmount;
+                    finalTotal = Math.Round(finalTotal, 2, MidpointRounding.AwayFromZero);
+
+                    UpdateCashAndChangeUI(finalTotal); // ✅ Now passes the real total
                 }
             }
         }
@@ -1063,23 +1091,27 @@ namespace Mare_POS
                 txtManualAmount.TextChanged += txtManualAmount_TextChanged;
 
                 cashReceived = value;
-                UpdateCashAndChangeUI();
+                UpdateCashAndChangeUI(GetFinalTotal());
             }
         }
 
         private void btnClearPayment_Click(object sender, EventArgs e)
         {
             cashReceived = 0;
-            UpdateCashAndChangeUI();
+            UpdateCashAndChangeUI(GetFinalTotal());
             if (txtManualAmount != null) txtManualAmount.Text = "";
         }
 
-        private void UpdateCashAndChangeUI()
+        private void UpdateCashAndChangeUI(decimal finalTotal)
         {
             labelCashReceived.Text = $"₱{cashReceived:0.00}";
-            decimal change = cashReceived - GetSubtotal();
+
+            decimal change = cashReceived - finalTotal;
+            change = Math.Round(change, 2, MidpointRounding.AwayFromZero);
+
             labelChange.Text = $"₱{(change >= 0 ? change : 0):0.00}";
         }
+
 
         private void txtManualAmount_TextChanged(object sender, EventArgs e)
         {
@@ -1090,5 +1122,133 @@ namespace Mare_POS
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            pnlChange.Visible = true;
+            pnlDiscount.Visible = false;
+        }
+        private void TicketForm_Load(object sender, EventArgs e)
+        {
+            // Make sure you're referencing the correct control placed on the form
+            discountButton2.DiscountClicked += percent => ApplyDiscount(discountRate: percent);
+
+            discountButton2.PesoDiscountEntered += amount =>
+            {
+                ApplyDiscount(discountAmount: amount);
+            };
+
+            discountButton2.PercentDiscountEntered += percent =>
+            {
+                ApplyDiscount(discountRate: percent);
+            };
+
+            discountButton2.DiscountCleared += () =>
+            {
+                currentDiscountAmount = 0;
+                currentDiscountRate = 0;
+                UpdateSubtotalLabel();
+                UpdateCashAndChangeUI(GetFinalTotal());
+            };
+
+            transactionNo = TicketPaymentBackend.GetNextTransactionNo(); // this sets a fresh TransactionNo
+        }
+
+        private void ApplyDiscount(decimal discountRate = 0, decimal discountAmount = 0)
+        {
+            decimal subtotal = currentOrder.Sum(item => item.Amount);
+            subtotal = Math.Round(subtotal, 2, MidpointRounding.AwayFromZero);
+
+            if (discountAmount > 0)
+            {
+                currentDiscountAmount = Math.Round(discountAmount, 2, MidpointRounding.AwayFromZero);
+                currentDiscountRate = 0;
+            }
+            else if (discountRate > 0)
+            {
+                currentDiscountRate = discountRate;
+                currentDiscountAmount = Math.Round(subtotal * (discountRate / 100), 2, MidpointRounding.AwayFromZero);
+            }
+            else
+            {
+                currentDiscountAmount = 0;
+                currentDiscountRate = 0;
+            }
+
+            decimal finalTotal = subtotal - currentDiscountAmount;
+            finalTotal = Math.Round(finalTotal, 2, MidpointRounding.AwayFromZero);
+
+            labelSubtotal.Text = $"₱{finalTotal:0.00}";
+            UpdateCashAndChangeUI(finalTotal);
+        }
+
+        public decimal GetFinalTotal()
+        {
+            return currentOrder.Sum(x => x.Amount) - currentDiscountAmount;
+        }
+
+        private void cuiButton23_Click(object sender, EventArgs e)
+        {
+            decimal finalAmount = Convert.ToDecimal(labelSubtotal.Text.Replace("₱", "").Trim());
+            decimal change = 0;
+
+            TicketPaymentBackend.SavePayment(transactionNo, 0, 0, finalAmount, change);
+
+            ShowReceipt(transactionNo);
+        }
+
+        private void cuiButton22_Click(object sender, EventArgs e)
+        {
+            decimal finalAmount = Convert.ToDecimal(labelSubtotal.Text.Replace("₱", "").Trim());
+            decimal change = 0; 
+
+            TicketPaymentBackend.SavePayment(transactionNo, 0, finalAmount, 0, change);
+
+            ShowReceipt(transactionNo);
+        }
+
+        public void FinalizeSplitPayment(List<(string Method, decimal Amount)> payments)
+        {
+            string transactionNo = Guid.NewGuid().ToString();
+
+            decimal total = payments.Sum(p => p.Amount);
+            decimal cash = 0, gcash = 0, maya = 0;
+
+            foreach (var payment in payments)
+            {
+                switch (payment.Method)
+                {
+                    case "Cash": cash += payment.Amount; break;
+                    case "GCash": gcash += payment.Amount; break;
+                    case "Maya": maya += payment.Amount; break;
+                }
+            }
+        }
+
+        private void ApplyPesoDiscount(decimal peso)
+        {
+            MessageBox.Show($"ApplyPesoDiscount received: {peso}");
+            currentDiscountAmount = peso;
+            currentDiscountRate = 0;
+            UpdateSubtotalLabel();
+            UpdateCashAndChangeUI(GetFinalTotal());
+        }
+
+        private void ApplyPercentDiscount(decimal percent)
+        {
+            decimal subtotal = currentOrder.Sum(x => x.Amount);
+            currentDiscountRate = percent;
+            currentDiscountAmount = subtotal * (percent / 100m);
+            UpdateSubtotalLabel();
+            UpdateCashAndChangeUI(GetFinalTotal());
+        }
+
+        private void ShowReceipt(int transactionNo)
+        {
+            ReceiptForm receipt = new ReceiptForm(transactionNo);
+            receipt.Show();
+        }
+
+
     }
 }

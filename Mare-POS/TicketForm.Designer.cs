@@ -99,6 +99,18 @@
             panel3 = new Panel();
             label1 = new Label();
             cuiPanel1 = new CuoreUI.Controls.cuiPanel();
+            pnlChange = new CuoreUI.Controls.cuiPanel();
+            tableLayoutPanel8 = new TableLayoutPanel();
+            btn1000 = new CuoreUI.Controls.cuiButton();
+            txtManualAmount = new TextBox();
+            btn500 = new CuoreUI.Controls.cuiButton();
+            btn200 = new CuoreUI.Controls.cuiButton();
+            btn100 = new CuoreUI.Controls.cuiButton();
+            btn50 = new CuoreUI.Controls.cuiButton();
+            btn20 = new CuoreUI.Controls.cuiButton();
+            btnClearPayment = new CuoreUI.Controls.cuiButton();
+            pnlDiscount = new CuoreUI.Controls.cuiPanel();
+            discountButton2 = new DiscountButton();
             flowTicketPanel = new FlowLayoutPanel();
             panelTemplateCartItem = new CuoreUI.Controls.cuiPanel();
             lblQuantityTemplate = new Label();
@@ -130,15 +142,6 @@
             panel14 = new Panel();
             label28 = new Label();
             label15 = new Label();
-            tableLayoutPanel8 = new TableLayoutPanel();
-            btn1000 = new CuoreUI.Controls.cuiButton();
-            btn500 = new CuoreUI.Controls.cuiButton();
-            btn200 = new CuoreUI.Controls.cuiButton();
-            btn100 = new CuoreUI.Controls.cuiButton();
-            btn50 = new CuoreUI.Controls.cuiButton();
-            btn20 = new CuoreUI.Controls.cuiButton();
-            btnClearPayment = new CuoreUI.Controls.cuiButton();
-            txtManualAmount = new TextBox();
             tableLayoutPanel7 = new TableLayoutPanel();
             cuiPanel3 = new CuoreUI.Controls.cuiPanel();
             btnDiscount = new Button();
@@ -190,6 +193,9 @@
             tableLayoutPanel14.SuspendLayout();
             panel3.SuspendLayout();
             cuiPanel1.SuspendLayout();
+            pnlChange.SuspendLayout();
+            tableLayoutPanel8.SuspendLayout();
+            pnlDiscount.SuspendLayout();
             flowTicketPanel.SuspendLayout();
             panelTemplateCartItem.SuspendLayout();
             tableLayoutPanel11.SuspendLayout();
@@ -199,7 +205,6 @@
             tableLayoutPanel9.SuspendLayout();
             panel13.SuspendLayout();
             panel14.SuspendLayout();
-            tableLayoutPanel8.SuspendLayout();
             tableLayoutPanel7.SuspendLayout();
             cuiPanel3.SuspendLayout();
             tableLayoutPanel6.SuspendLayout();
@@ -1406,11 +1411,12 @@
             // cuiPanel1
             // 
             cuiPanel1.AutoScroll = true;
+            cuiPanel1.Controls.Add(pnlChange);
+            cuiPanel1.Controls.Add(pnlDiscount);
             cuiPanel1.Controls.Add(flowTicketPanel);
             cuiPanel1.Controls.Add(tableLayoutPanel11);
             cuiPanel1.Controls.Add(tableLayoutPanel10);
             cuiPanel1.Controls.Add(tableLayoutPanel9);
-            cuiPanel1.Controls.Add(tableLayoutPanel8);
             cuiPanel1.Controls.Add(tableLayoutPanel7);
             cuiPanel1.Controls.Add(tableLayoutPanel6);
             cuiPanel1.Controls.Add(tableLayoutPanel4);
@@ -1425,6 +1431,366 @@
             cuiPanel1.Size = new Size(489, 1018);
             cuiPanel1.TabIndex = 1;
             cuiPanel1.Paint += cuiPanel1_Paint_1;
+            // 
+            // pnlChange
+            // 
+            pnlChange.Controls.Add(tableLayoutPanel8);
+            pnlChange.Location = new Point(6, 672);
+            pnlChange.Name = "pnlChange";
+            pnlChange.OutlineThickness = 1F;
+            pnlChange.PanelColor = Color.FromArgb(242, 239, 234);
+            pnlChange.PanelOutlineColor = Color.FromArgb(242, 239, 234);
+            pnlChange.Rounding = new Padding(8);
+            pnlChange.Size = new Size(478, 123);
+            pnlChange.TabIndex = 1;
+            // 
+            // tableLayoutPanel8
+            // 
+            tableLayoutPanel8.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel8.AutoSize = true;
+            tableLayoutPanel8.ColumnCount = 4;
+            tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableLayoutPanel8.Controls.Add(btn1000, 1, 1);
+            tableLayoutPanel8.Controls.Add(txtManualAmount, 2, 1);
+            tableLayoutPanel8.Controls.Add(btn500, 0, 1);
+            tableLayoutPanel8.Controls.Add(btn200, 3, 0);
+            tableLayoutPanel8.Controls.Add(btn100, 2, 0);
+            tableLayoutPanel8.Controls.Add(btn50, 1, 0);
+            tableLayoutPanel8.Controls.Add(btn20, 0, 0);
+            tableLayoutPanel8.Controls.Add(btnClearPayment, 3, 1);
+            tableLayoutPanel8.Location = new Point(0, 0);
+            tableLayoutPanel8.Name = "tableLayoutPanel8";
+            tableLayoutPanel8.RowCount = 2;
+            tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel8.Size = new Size(452, 124);
+            tableLayoutPanel8.TabIndex = 31;
+            tableLayoutPanel8.Paint += tableLayoutPanel8_Paint;
+            // 
+            // btn1000
+            // 
+            btn1000.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btn1000.BackColor = Color.Transparent;
+            btn1000.CheckButton = false;
+            btn1000.Checked = false;
+            btn1000.CheckedBackground = Color.FromArgb(255, 106, 0);
+            btn1000.CheckedForeColor = Color.Transparent;
+            btn1000.CheckedImageTint = Color.Transparent;
+            btn1000.CheckedOutline = Color.FromArgb(255, 106, 0);
+            btn1000.Content = "₱1000";
+            btn1000.DialogResult = DialogResult.None;
+            btn1000.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn1000.ForeColor = Color.FromArgb(0, 145, 247);
+            btn1000.HoverBackground = Color.FromArgb(0, 145, 247);
+            btn1000.HoveredImageTint = Color.White;
+            btn1000.HoverForeColor = Color.Black;
+            btn1000.HoverOutline = Color.FromArgb(32, 128, 128, 128);
+            btn1000.Image = null;
+            btn1000.ImageAutoCenter = true;
+            btn1000.ImageExpand = new Point(0, 0);
+            btn1000.ImageOffset = new Point(0, 0);
+            btn1000.Location = new Point(116, 65);
+            btn1000.Name = "btn1000";
+            btn1000.NormalBackground = Color.WhiteSmoke;
+            btn1000.NormalForeColor = Color.FromArgb(0, 145, 247);
+            btn1000.NormalImageTint = Color.White;
+            btn1000.NormalOutline = Color.FromArgb(0, 145, 247);
+            btn1000.OutlineThickness = 1F;
+            btn1000.PressedBackground = Color.WhiteSmoke;
+            btn1000.PressedForeColor = Color.FromArgb(32, 32, 32);
+            btn1000.PressedImageTint = Color.White;
+            btn1000.PressedOutline = Color.FromArgb(64, 128, 128, 128);
+            btn1000.Rounding = new Padding(8);
+            btn1000.Size = new Size(107, 56);
+            btn1000.TabIndex = 6;
+            btn1000.Tag = "1000";
+            btn1000.TextAlignment = StringAlignment.Center;
+            btn1000.TextOffset = new Point(0, 0);
+            btn1000.Click += btnMoney_Click;
+            // 
+            // txtManualAmount
+            // 
+            txtManualAmount.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtManualAmount.BackColor = Color.FromArgb(242, 239, 234);
+            txtManualAmount.BorderStyle = BorderStyle.FixedSingle;
+            txtManualAmount.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold);
+            txtManualAmount.ForeColor = Color.FromArgb(78, 45, 24);
+            txtManualAmount.Location = new Point(231, 66);
+            txtManualAmount.Margin = new Padding(5, 4, 5, 4);
+            txtManualAmount.Multiline = true;
+            txtManualAmount.Name = "txtManualAmount";
+            txtManualAmount.Size = new Size(103, 54);
+            txtManualAmount.TabIndex = 8;
+            txtManualAmount.TextAlign = HorizontalAlignment.Center;
+            txtManualAmount.TextChanged += txtManualAmount_TextChanged;
+            // 
+            // btn500
+            // 
+            btn500.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btn500.BackColor = Color.Transparent;
+            btn500.CheckButton = false;
+            btn500.Checked = false;
+            btn500.CheckedBackground = Color.FromArgb(255, 213, 0);
+            btn500.CheckedForeColor = Color.Transparent;
+            btn500.CheckedImageTint = Color.Transparent;
+            btn500.CheckedOutline = Color.FromArgb(255, 213, 0);
+            btn500.Content = "₱500";
+            btn500.DialogResult = DialogResult.None;
+            btn500.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn500.ForeColor = Color.FromArgb(255, 213, 0);
+            btn500.HoverBackground = Color.FromArgb(255, 213, 0);
+            btn500.HoveredImageTint = Color.White;
+            btn500.HoverForeColor = Color.Black;
+            btn500.HoverOutline = Color.FromArgb(32, 128, 128, 128);
+            btn500.Image = null;
+            btn500.ImageAutoCenter = true;
+            btn500.ImageExpand = new Point(0, 0);
+            btn500.ImageOffset = new Point(0, 0);
+            btn500.Location = new Point(3, 65);
+            btn500.Name = "btn500";
+            btn500.NormalBackground = Color.WhiteSmoke;
+            btn500.NormalForeColor = Color.FromArgb(255, 213, 0);
+            btn500.NormalImageTint = Color.White;
+            btn500.NormalOutline = Color.FromArgb(255, 213, 0);
+            btn500.OutlineThickness = 1F;
+            btn500.PressedBackground = Color.WhiteSmoke;
+            btn500.PressedForeColor = Color.FromArgb(32, 32, 32);
+            btn500.PressedImageTint = Color.White;
+            btn500.PressedOutline = Color.FromArgb(64, 128, 128, 128);
+            btn500.Rounding = new Padding(8);
+            btn500.Size = new Size(107, 56);
+            btn500.TabIndex = 5;
+            btn500.Tag = "500";
+            btn500.TextAlignment = StringAlignment.Center;
+            btn500.TextOffset = new Point(0, 0);
+            btn500.Click += btnMoney_Click;
+            // 
+            // btn200
+            // 
+            btn200.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btn200.BackColor = Color.Transparent;
+            btn200.CheckButton = false;
+            btn200.Checked = false;
+            btn200.CheckedBackground = Color.FromArgb(135, 167, 10);
+            btn200.CheckedForeColor = Color.Transparent;
+            btn200.CheckedImageTint = Color.Transparent;
+            btn200.CheckedOutline = Color.FromArgb(135, 167, 10);
+            btn200.Content = "₱200";
+            btn200.DialogResult = DialogResult.None;
+            btn200.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn200.ForeColor = Color.FromArgb(135, 167, 10);
+            btn200.HoverBackground = Color.FromArgb(135, 167, 10);
+            btn200.HoveredImageTint = Color.White;
+            btn200.HoverForeColor = Color.Black;
+            btn200.HoverOutline = Color.FromArgb(32, 128, 128, 128);
+            btn200.Image = null;
+            btn200.ImageAutoCenter = true;
+            btn200.ImageExpand = new Point(0, 0);
+            btn200.ImageOffset = new Point(0, 0);
+            btn200.Location = new Point(342, 3);
+            btn200.Name = "btn200";
+            btn200.NormalBackground = Color.WhiteSmoke;
+            btn200.NormalForeColor = Color.FromArgb(135, 167, 10);
+            btn200.NormalImageTint = Color.White;
+            btn200.NormalOutline = Color.FromArgb(135, 167, 10);
+            btn200.OutlineThickness = 1F;
+            btn200.PressedBackground = Color.WhiteSmoke;
+            btn200.PressedForeColor = Color.FromArgb(32, 32, 32);
+            btn200.PressedImageTint = Color.White;
+            btn200.PressedOutline = Color.FromArgb(64, 128, 128, 128);
+            btn200.Rounding = new Padding(8);
+            btn200.Size = new Size(107, 56);
+            btn200.TabIndex = 4;
+            btn200.Tag = "200";
+            btn200.TextAlignment = StringAlignment.Center;
+            btn200.TextOffset = new Point(0, 0);
+            btn200.Click += btnMoney_Click;
+            // 
+            // btn100
+            // 
+            btn100.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btn100.BackColor = Color.Transparent;
+            btn100.CheckButton = false;
+            btn100.Checked = false;
+            btn100.CheckedBackground = Color.FromArgb(255, 106, 0);
+            btn100.CheckedForeColor = Color.Transparent;
+            btn100.CheckedImageTint = Color.Transparent;
+            btn100.CheckedOutline = Color.FromArgb(255, 106, 0);
+            btn100.Content = "₱100";
+            btn100.DialogResult = DialogResult.None;
+            btn100.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn100.ForeColor = Color.FromArgb(92, 0, 153);
+            btn100.HoverBackground = Color.FromArgb(92, 0, 153);
+            btn100.HoveredImageTint = Color.White;
+            btn100.HoverForeColor = Color.Black;
+            btn100.HoverOutline = Color.FromArgb(32, 128, 128, 128);
+            btn100.Image = null;
+            btn100.ImageAutoCenter = true;
+            btn100.ImageExpand = new Point(0, 0);
+            btn100.ImageOffset = new Point(0, 0);
+            btn100.Location = new Point(229, 3);
+            btn100.Name = "btn100";
+            btn100.NormalBackground = Color.WhiteSmoke;
+            btn100.NormalForeColor = Color.FromArgb(92, 0, 153);
+            btn100.NormalImageTint = Color.White;
+            btn100.NormalOutline = Color.FromArgb(92, 0, 153);
+            btn100.OutlineThickness = 1F;
+            btn100.PressedBackground = Color.WhiteSmoke;
+            btn100.PressedForeColor = Color.FromArgb(32, 32, 32);
+            btn100.PressedImageTint = Color.White;
+            btn100.PressedOutline = Color.FromArgb(64, 128, 128, 128);
+            btn100.Rounding = new Padding(8);
+            btn100.Size = new Size(107, 56);
+            btn100.TabIndex = 3;
+            btn100.Tag = "100";
+            btn100.TextAlignment = StringAlignment.Center;
+            btn100.TextOffset = new Point(0, 0);
+            btn100.Click += btnMoney_Click;
+            // 
+            // btn50
+            // 
+            btn50.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btn50.BackColor = Color.Transparent;
+            btn50.CheckButton = false;
+            btn50.Checked = false;
+            btn50.CheckedBackground = Color.FromArgb(195, 14, 14);
+            btn50.CheckedForeColor = Color.Transparent;
+            btn50.CheckedImageTint = Color.Transparent;
+            btn50.CheckedOutline = Color.FromArgb(195, 14, 14);
+            btn50.Content = "₱50";
+            btn50.DialogResult = DialogResult.None;
+            btn50.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn50.ForeColor = Color.FromArgb(195, 14, 14);
+            btn50.HoverBackground = Color.FromArgb(195, 14, 14);
+            btn50.HoveredImageTint = Color.White;
+            btn50.HoverForeColor = Color.Black;
+            btn50.HoverOutline = Color.FromArgb(32, 128, 128, 128);
+            btn50.Image = null;
+            btn50.ImageAutoCenter = true;
+            btn50.ImageExpand = new Point(0, 0);
+            btn50.ImageOffset = new Point(0, 0);
+            btn50.Location = new Point(116, 3);
+            btn50.Name = "btn50";
+            btn50.NormalBackground = Color.WhiteSmoke;
+            btn50.NormalForeColor = Color.FromArgb(195, 14, 14);
+            btn50.NormalImageTint = Color.White;
+            btn50.NormalOutline = Color.FromArgb(195, 14, 14);
+            btn50.OutlineThickness = 1F;
+            btn50.PressedBackground = Color.WhiteSmoke;
+            btn50.PressedForeColor = Color.FromArgb(32, 32, 32);
+            btn50.PressedImageTint = Color.White;
+            btn50.PressedOutline = Color.FromArgb(64, 128, 128, 128);
+            btn50.Rounding = new Padding(8);
+            btn50.Size = new Size(107, 56);
+            btn50.TabIndex = 2;
+            btn50.Tag = "50";
+            btn50.TextAlignment = StringAlignment.Center;
+            btn50.TextOffset = new Point(0, 0);
+            btn50.Click += btnMoney_Click;
+            // 
+            // btn20
+            // 
+            btn20.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btn20.BackColor = Color.Transparent;
+            btn20.CheckButton = false;
+            btn20.Checked = false;
+            btn20.CheckedBackground = Color.FromArgb(255, 106, 0);
+            btn20.CheckedForeColor = Color.Transparent;
+            btn20.CheckedImageTint = Color.Transparent;
+            btn20.CheckedOutline = Color.FromArgb(255, 106, 0);
+            btn20.Content = "₱20";
+            btn20.DialogResult = DialogResult.None;
+            btn20.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn20.ForeColor = Color.FromArgb(248, 150, 30);
+            btn20.HoverBackground = Color.FromArgb(248, 150, 30);
+            btn20.HoveredImageTint = Color.White;
+            btn20.HoverForeColor = Color.Black;
+            btn20.HoverOutline = Color.FromArgb(32, 128, 128, 128);
+            btn20.Image = null;
+            btn20.ImageAutoCenter = true;
+            btn20.ImageExpand = new Point(0, 0);
+            btn20.ImageOffset = new Point(0, 0);
+            btn20.Location = new Point(3, 3);
+            btn20.Name = "btn20";
+            btn20.NormalBackground = Color.WhiteSmoke;
+            btn20.NormalForeColor = Color.FromArgb(248, 150, 30);
+            btn20.NormalImageTint = Color.White;
+            btn20.NormalOutline = Color.FromArgb(248, 150, 30);
+            btn20.OutlineThickness = 1F;
+            btn20.PressedBackground = Color.WhiteSmoke;
+            btn20.PressedForeColor = Color.FromArgb(32, 32, 32);
+            btn20.PressedImageTint = Color.White;
+            btn20.PressedOutline = Color.FromArgb(64, 128, 128, 128);
+            btn20.Rounding = new Padding(8);
+            btn20.Size = new Size(107, 56);
+            btn20.TabIndex = 1;
+            btn20.Tag = "20";
+            btn20.TextAlignment = StringAlignment.Center;
+            btn20.TextOffset = new Point(0, 0);
+            btn20.Click += btnMoney_Click;
+            // 
+            // btnClearPayment
+            // 
+            btnClearPayment.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnClearPayment.BackColor = Color.Transparent;
+            btnClearPayment.CheckButton = false;
+            btnClearPayment.Checked = false;
+            btnClearPayment.CheckedBackground = Color.FromArgb(158, 43, 43);
+            btnClearPayment.CheckedForeColor = Color.Transparent;
+            btnClearPayment.CheckedImageTint = Color.Transparent;
+            btnClearPayment.CheckedOutline = Color.FromArgb(158, 43, 43);
+            btnClearPayment.Content = "Clear";
+            btnClearPayment.DialogResult = DialogResult.None;
+            btnClearPayment.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnClearPayment.ForeColor = Color.FromArgb(158, 43, 43);
+            btnClearPayment.HoverBackground = Color.FromArgb(158, 43, 43);
+            btnClearPayment.HoveredImageTint = Color.White;
+            btnClearPayment.HoverForeColor = Color.Black;
+            btnClearPayment.HoverOutline = Color.FromArgb(32, 128, 128, 128);
+            btnClearPayment.Image = null;
+            btnClearPayment.ImageAutoCenter = true;
+            btnClearPayment.ImageExpand = new Point(0, 0);
+            btnClearPayment.ImageOffset = new Point(0, 0);
+            btnClearPayment.Location = new Point(342, 65);
+            btnClearPayment.Name = "btnClearPayment";
+            btnClearPayment.NormalBackground = Color.WhiteSmoke;
+            btnClearPayment.NormalForeColor = Color.FromArgb(158, 43, 43);
+            btnClearPayment.NormalImageTint = Color.White;
+            btnClearPayment.NormalOutline = Color.FromArgb(158, 43, 43);
+            btnClearPayment.OutlineThickness = 1F;
+            btnClearPayment.PressedBackground = Color.WhiteSmoke;
+            btnClearPayment.PressedForeColor = Color.FromArgb(32, 32, 32);
+            btnClearPayment.PressedImageTint = Color.White;
+            btnClearPayment.PressedOutline = Color.FromArgb(64, 128, 128, 128);
+            btnClearPayment.Rounding = new Padding(8);
+            btnClearPayment.Size = new Size(107, 56);
+            btnClearPayment.TabIndex = 7;
+            btnClearPayment.TextAlignment = StringAlignment.Center;
+            btnClearPayment.TextOffset = new Point(0, 0);
+            btnClearPayment.Click += btnClearPayment_Click;
+            // 
+            // pnlDiscount
+            // 
+            pnlDiscount.Controls.Add(discountButton2);
+            pnlDiscount.Location = new Point(6, 669);
+            pnlDiscount.Name = "pnlDiscount";
+            pnlDiscount.OutlineThickness = 1F;
+            pnlDiscount.PanelColor = Color.FromArgb(242, 239, 234);
+            pnlDiscount.PanelOutlineColor = Color.FromArgb(242, 239, 234);
+            pnlDiscount.Rounding = new Padding(8);
+            pnlDiscount.Size = new Size(478, 127);
+            pnlDiscount.TabIndex = 38;
+            // 
+            // discountButton2
+            // 
+            discountButton2.Location = new Point(0, 3);
+            discountButton2.Name = "discountButton2";
+            discountButton2.Size = new Size(475, 121);
+            discountButton2.TabIndex = 0;
             // 
             // flowTicketPanel
             // 
@@ -1604,6 +1970,7 @@
             cuiButton22.TabIndex = 4;
             cuiButton22.TextAlignment = StringAlignment.Center;
             cuiButton22.TextOffset = new Point(0, 0);
+            cuiButton22.Click += cuiButton22_Click;
             // 
             // cuiButton25
             // 
@@ -1683,6 +2050,7 @@
             cuiButton23.TabIndex = 1;
             cuiButton23.TextAlignment = StringAlignment.Center;
             cuiButton23.TextOffset = new Point(0, 0);
+            cuiButton23.Click += cuiButton23_Click;
             // 
             // cuiButton24
             // 
@@ -1733,7 +2101,7 @@
             tableLayoutPanel10.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 45F));
             tableLayoutPanel10.Controls.Add(panel15, 0, 0);
             tableLayoutPanel10.Controls.Add(panel16, 1, 0);
-            tableLayoutPanel10.Location = new Point(16, 838);
+            tableLayoutPanel10.Location = new Point(15, 867);
             tableLayoutPanel10.Name = "tableLayoutPanel10";
             tableLayoutPanel10.RowCount = 1;
             tableLayoutPanel10.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
@@ -1839,7 +2207,7 @@
             tableLayoutPanel9.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 45F));
             tableLayoutPanel9.Controls.Add(panel13, 0, 0);
             tableLayoutPanel9.Controls.Add(panel14, 1, 0);
-            tableLayoutPanel9.Location = new Point(16, 784);
+            tableLayoutPanel9.Location = new Point(15, 813);
             tableLayoutPanel9.Name = "tableLayoutPanel9";
             tableLayoutPanel9.RowCount = 1;
             tableLayoutPanel9.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
@@ -1912,335 +2280,6 @@
             label15.TabIndex = 30;
             label15.Text = "₱ 145.00";
             // 
-            // tableLayoutPanel8
-            // 
-            tableLayoutPanel8.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel8.AutoSize = true;
-            tableLayoutPanel8.ColumnCount = 4;
-            tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutPanel8.Controls.Add(btn1000, 1, 1);
-            tableLayoutPanel8.Controls.Add(txtManualAmount, 2, 1);
-            tableLayoutPanel8.Controls.Add(btn500, 0, 1);
-            tableLayoutPanel8.Controls.Add(btn200, 3, 0);
-            tableLayoutPanel8.Controls.Add(btn100, 2, 0);
-            tableLayoutPanel8.Controls.Add(btn50, 1, 0);
-            tableLayoutPanel8.Controls.Add(btn20, 0, 0);
-            tableLayoutPanel8.Controls.Add(btnClearPayment, 3, 1);
-            tableLayoutPanel8.Location = new Point(3, 682);
-            tableLayoutPanel8.Name = "tableLayoutPanel8";
-            tableLayoutPanel8.RowCount = 2;
-            tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel8.Size = new Size(483, 94);
-            tableLayoutPanel8.TabIndex = 31;
-            tableLayoutPanel8.Paint += tableLayoutPanel8_Paint;
-            // 
-            // btn1000
-            // 
-            btn1000.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            btn1000.BackColor = Color.Transparent;
-            btn1000.CheckButton = false;
-            btn1000.Checked = false;
-            btn1000.CheckedBackground = Color.FromArgb(255, 106, 0);
-            btn1000.CheckedForeColor = Color.Transparent;
-            btn1000.CheckedImageTint = Color.Transparent;
-            btn1000.CheckedOutline = Color.FromArgb(255, 106, 0);
-            btn1000.Content = "₱1000";
-            btn1000.DialogResult = DialogResult.None;
-            btn1000.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn1000.ForeColor = Color.FromArgb(0, 145, 247);
-            btn1000.HoverBackground = Color.FromArgb(0, 145, 247);
-            btn1000.HoveredImageTint = Color.White;
-            btn1000.HoverForeColor = Color.Black;
-            btn1000.HoverOutline = Color.FromArgb(32, 128, 128, 128);
-            btn1000.Image = null;
-            btn1000.ImageAutoCenter = true;
-            btn1000.ImageExpand = new Point(0, 0);
-            btn1000.ImageOffset = new Point(0, 0);
-            btn1000.Location = new Point(123, 50);
-            btn1000.Name = "btn1000";
-            btn1000.NormalBackground = Color.WhiteSmoke;
-            btn1000.NormalForeColor = Color.FromArgb(0, 145, 247);
-            btn1000.NormalImageTint = Color.White;
-            btn1000.NormalOutline = Color.FromArgb(0, 145, 247);
-            btn1000.OutlineThickness = 1F;
-            btn1000.PressedBackground = Color.WhiteSmoke;
-            btn1000.PressedForeColor = Color.FromArgb(32, 32, 32);
-            btn1000.PressedImageTint = Color.White;
-            btn1000.PressedOutline = Color.FromArgb(64, 128, 128, 128);
-            btn1000.Rounding = new Padding(8);
-            btn1000.Size = new Size(114, 41);
-            btn1000.TabIndex = 6;
-            btn1000.Tag = "1000";
-            btn1000.TextAlignment = StringAlignment.Center;
-            btn1000.TextOffset = new Point(0, 0);
-            btn1000.Click += btnMoney_Click;
-            // 
-            // btn500
-            // 
-            btn500.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            btn500.BackColor = Color.Transparent;
-            btn500.CheckButton = false;
-            btn500.Checked = false;
-            btn500.CheckedBackground = Color.FromArgb(255, 213, 0);
-            btn500.CheckedForeColor = Color.Transparent;
-            btn500.CheckedImageTint = Color.Transparent;
-            btn500.CheckedOutline = Color.FromArgb(255, 213, 0);
-            btn500.Content = "₱500";
-            btn500.DialogResult = DialogResult.None;
-            btn500.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn500.ForeColor = Color.FromArgb(255, 213, 0);
-            btn500.HoverBackground = Color.FromArgb(255, 213, 0);
-            btn500.HoveredImageTint = Color.White;
-            btn500.HoverForeColor = Color.Black;
-            btn500.HoverOutline = Color.FromArgb(32, 128, 128, 128);
-            btn500.Image = null;
-            btn500.ImageAutoCenter = true;
-            btn500.ImageExpand = new Point(0, 0);
-            btn500.ImageOffset = new Point(0, 0);
-            btn500.Location = new Point(3, 50);
-            btn500.Name = "btn500";
-            btn500.NormalBackground = Color.WhiteSmoke;
-            btn500.NormalForeColor = Color.FromArgb(255, 213, 0);
-            btn500.NormalImageTint = Color.White;
-            btn500.NormalOutline = Color.FromArgb(255, 213, 0);
-            btn500.OutlineThickness = 1F;
-            btn500.PressedBackground = Color.WhiteSmoke;
-            btn500.PressedForeColor = Color.FromArgb(32, 32, 32);
-            btn500.PressedImageTint = Color.White;
-            btn500.PressedOutline = Color.FromArgb(64, 128, 128, 128);
-            btn500.Rounding = new Padding(8);
-            btn500.Size = new Size(114, 41);
-            btn500.TabIndex = 5;
-            btn500.Tag = "500";
-            btn500.TextAlignment = StringAlignment.Center;
-            btn500.TextOffset = new Point(0, 0);
-            btn500.Click += btnMoney_Click;
-            // 
-            // btn200
-            // 
-            btn200.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            btn200.BackColor = Color.Transparent;
-            btn200.CheckButton = false;
-            btn200.Checked = false;
-            btn200.CheckedBackground = Color.FromArgb(135, 167, 10);
-            btn200.CheckedForeColor = Color.Transparent;
-            btn200.CheckedImageTint = Color.Transparent;
-            btn200.CheckedOutline = Color.FromArgb(135, 167, 10);
-            btn200.Content = "₱200";
-            btn200.DialogResult = DialogResult.None;
-            btn200.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn200.ForeColor = Color.FromArgb(135, 167, 10);
-            btn200.HoverBackground = Color.FromArgb(135, 167, 10);
-            btn200.HoveredImageTint = Color.White;
-            btn200.HoverForeColor = Color.Black;
-            btn200.HoverOutline = Color.FromArgb(32, 128, 128, 128);
-            btn200.Image = null;
-            btn200.ImageAutoCenter = true;
-            btn200.ImageExpand = new Point(0, 0);
-            btn200.ImageOffset = new Point(0, 0);
-            btn200.Location = new Point(363, 3);
-            btn200.Name = "btn200";
-            btn200.NormalBackground = Color.WhiteSmoke;
-            btn200.NormalForeColor = Color.FromArgb(135, 167, 10);
-            btn200.NormalImageTint = Color.White;
-            btn200.NormalOutline = Color.FromArgb(135, 167, 10);
-            btn200.OutlineThickness = 1F;
-            btn200.PressedBackground = Color.WhiteSmoke;
-            btn200.PressedForeColor = Color.FromArgb(32, 32, 32);
-            btn200.PressedImageTint = Color.White;
-            btn200.PressedOutline = Color.FromArgb(64, 128, 128, 128);
-            btn200.Rounding = new Padding(8);
-            btn200.Size = new Size(117, 41);
-            btn200.TabIndex = 4;
-            btn200.Tag = "200";
-            btn200.TextAlignment = StringAlignment.Center;
-            btn200.TextOffset = new Point(0, 0);
-            btn200.Click += btnMoney_Click;
-            // 
-            // btn100
-            // 
-            btn100.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            btn100.BackColor = Color.Transparent;
-            btn100.CheckButton = false;
-            btn100.Checked = false;
-            btn100.CheckedBackground = Color.FromArgb(255, 106, 0);
-            btn100.CheckedForeColor = Color.Transparent;
-            btn100.CheckedImageTint = Color.Transparent;
-            btn100.CheckedOutline = Color.FromArgb(255, 106, 0);
-            btn100.Content = "₱100";
-            btn100.DialogResult = DialogResult.None;
-            btn100.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn100.ForeColor = Color.FromArgb(92, 0, 153);
-            btn100.HoverBackground = Color.FromArgb(92, 0, 153);
-            btn100.HoveredImageTint = Color.White;
-            btn100.HoverForeColor = Color.Black;
-            btn100.HoverOutline = Color.FromArgb(32, 128, 128, 128);
-            btn100.Image = null;
-            btn100.ImageAutoCenter = true;
-            btn100.ImageExpand = new Point(0, 0);
-            btn100.ImageOffset = new Point(0, 0);
-            btn100.Location = new Point(243, 3);
-            btn100.Name = "btn100";
-            btn100.NormalBackground = Color.WhiteSmoke;
-            btn100.NormalForeColor = Color.FromArgb(92, 0, 153);
-            btn100.NormalImageTint = Color.White;
-            btn100.NormalOutline = Color.FromArgb(92, 0, 153);
-            btn100.OutlineThickness = 1F;
-            btn100.PressedBackground = Color.WhiteSmoke;
-            btn100.PressedForeColor = Color.FromArgb(32, 32, 32);
-            btn100.PressedImageTint = Color.White;
-            btn100.PressedOutline = Color.FromArgb(64, 128, 128, 128);
-            btn100.Rounding = new Padding(8);
-            btn100.Size = new Size(114, 41);
-            btn100.TabIndex = 3;
-            btn100.Tag = "100";
-            btn100.TextAlignment = StringAlignment.Center;
-            btn100.TextOffset = new Point(0, 0);
-            btn100.Click += btnMoney_Click;
-            // 
-            // btn50
-            // 
-            btn50.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            btn50.BackColor = Color.Transparent;
-            btn50.CheckButton = false;
-            btn50.Checked = false;
-            btn50.CheckedBackground = Color.FromArgb(195, 14, 14);
-            btn50.CheckedForeColor = Color.Transparent;
-            btn50.CheckedImageTint = Color.Transparent;
-            btn50.CheckedOutline = Color.FromArgb(195, 14, 14);
-            btn50.Content = "₱50";
-            btn50.DialogResult = DialogResult.None;
-            btn50.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn50.ForeColor = Color.FromArgb(195, 14, 14);
-            btn50.HoverBackground = Color.FromArgb(195, 14, 14);
-            btn50.HoveredImageTint = Color.White;
-            btn50.HoverForeColor = Color.Black;
-            btn50.HoverOutline = Color.FromArgb(32, 128, 128, 128);
-            btn50.Image = null;
-            btn50.ImageAutoCenter = true;
-            btn50.ImageExpand = new Point(0, 0);
-            btn50.ImageOffset = new Point(0, 0);
-            btn50.Location = new Point(123, 3);
-            btn50.Name = "btn50";
-            btn50.NormalBackground = Color.WhiteSmoke;
-            btn50.NormalForeColor = Color.FromArgb(195, 14, 14);
-            btn50.NormalImageTint = Color.White;
-            btn50.NormalOutline = Color.FromArgb(195, 14, 14);
-            btn50.OutlineThickness = 1F;
-            btn50.PressedBackground = Color.WhiteSmoke;
-            btn50.PressedForeColor = Color.FromArgb(32, 32, 32);
-            btn50.PressedImageTint = Color.White;
-            btn50.PressedOutline = Color.FromArgb(64, 128, 128, 128);
-            btn50.Rounding = new Padding(8);
-            btn50.Size = new Size(114, 41);
-            btn50.TabIndex = 2;
-            btn50.Tag = "50";
-            btn50.TextAlignment = StringAlignment.Center;
-            btn50.TextOffset = new Point(0, 0);
-            btn50.Click += btnMoney_Click;
-            // 
-            // btn20
-            // 
-            btn20.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            btn20.BackColor = Color.Transparent;
-            btn20.CheckButton = false;
-            btn20.Checked = false;
-            btn20.CheckedBackground = Color.FromArgb(255, 106, 0);
-            btn20.CheckedForeColor = Color.Transparent;
-            btn20.CheckedImageTint = Color.Transparent;
-            btn20.CheckedOutline = Color.FromArgb(255, 106, 0);
-            btn20.Content = "₱20";
-            btn20.DialogResult = DialogResult.None;
-            btn20.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn20.ForeColor = Color.FromArgb(248, 150, 30);
-            btn20.HoverBackground = Color.FromArgb(248, 150, 30);
-            btn20.HoveredImageTint = Color.White;
-            btn20.HoverForeColor = Color.Black;
-            btn20.HoverOutline = Color.FromArgb(32, 128, 128, 128);
-            btn20.Image = null;
-            btn20.ImageAutoCenter = true;
-            btn20.ImageExpand = new Point(0, 0);
-            btn20.ImageOffset = new Point(0, 0);
-            btn20.Location = new Point(3, 3);
-            btn20.Name = "btn20";
-            btn20.NormalBackground = Color.WhiteSmoke;
-            btn20.NormalForeColor = Color.FromArgb(248, 150, 30);
-            btn20.NormalImageTint = Color.White;
-            btn20.NormalOutline = Color.FromArgb(248, 150, 30);
-            btn20.OutlineThickness = 1F;
-            btn20.PressedBackground = Color.WhiteSmoke;
-            btn20.PressedForeColor = Color.FromArgb(32, 32, 32);
-            btn20.PressedImageTint = Color.White;
-            btn20.PressedOutline = Color.FromArgb(64, 128, 128, 128);
-            btn20.Rounding = new Padding(8);
-            btn20.Size = new Size(114, 41);
-            btn20.TabIndex = 1;
-            btn20.Tag = "20";
-            btn20.TextAlignment = StringAlignment.Center;
-            btn20.TextOffset = new Point(0, 0);
-            btn20.Click += btnMoney_Click;
-            // 
-            // btnClearPayment
-            // 
-            btnClearPayment.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            btnClearPayment.BackColor = Color.Transparent;
-            btnClearPayment.CheckButton = false;
-            btnClearPayment.Checked = false;
-            btnClearPayment.CheckedBackground = Color.FromArgb(158, 43, 43);
-            btnClearPayment.CheckedForeColor = Color.Transparent;
-            btnClearPayment.CheckedImageTint = Color.Transparent;
-            btnClearPayment.CheckedOutline = Color.FromArgb(158, 43, 43);
-            btnClearPayment.Content = "Clear";
-            btnClearPayment.DialogResult = DialogResult.None;
-            btnClearPayment.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnClearPayment.ForeColor = Color.FromArgb(158, 43, 43);
-            btnClearPayment.HoverBackground = Color.FromArgb(158, 43, 43);
-            btnClearPayment.HoveredImageTint = Color.White;
-            btnClearPayment.HoverForeColor = Color.Black;
-            btnClearPayment.HoverOutline = Color.FromArgb(32, 128, 128, 128);
-            btnClearPayment.Image = null;
-            btnClearPayment.ImageAutoCenter = true;
-            btnClearPayment.ImageExpand = new Point(0, 0);
-            btnClearPayment.ImageOffset = new Point(0, 0);
-            btnClearPayment.Location = new Point(363, 50);
-            btnClearPayment.Name = "btnClearPayment";
-            btnClearPayment.NormalBackground = Color.WhiteSmoke;
-            btnClearPayment.NormalForeColor = Color.FromArgb(158, 43, 43);
-            btnClearPayment.NormalImageTint = Color.White;
-            btnClearPayment.NormalOutline = Color.FromArgb(158, 43, 43);
-            btnClearPayment.OutlineThickness = 1F;
-            btnClearPayment.PressedBackground = Color.WhiteSmoke;
-            btnClearPayment.PressedForeColor = Color.FromArgb(32, 32, 32);
-            btnClearPayment.PressedImageTint = Color.White;
-            btnClearPayment.PressedOutline = Color.FromArgb(64, 128, 128, 128);
-            btnClearPayment.Rounding = new Padding(8);
-            btnClearPayment.Size = new Size(117, 41);
-            btnClearPayment.TabIndex = 7;
-            btnClearPayment.TextAlignment = StringAlignment.Center;
-            btnClearPayment.TextOffset = new Point(0, 0);
-            btnClearPayment.Click += btnClearPayment_Click;
-            // 
-            // txtManualAmount
-            // 
-            txtManualAmount.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txtManualAmount.BackColor = Color.FromArgb(242, 239, 234);
-            txtManualAmount.BorderStyle = BorderStyle.FixedSingle;
-            txtManualAmount.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold);
-            txtManualAmount.ForeColor = Color.FromArgb(78, 45, 24);
-            txtManualAmount.Location = new Point(245, 51);
-            txtManualAmount.Margin = new Padding(5, 4, 5, 4);
-            txtManualAmount.Multiline = true;
-            txtManualAmount.Name = "txtManualAmount";
-            txtManualAmount.Size = new Size(110, 39);
-            txtManualAmount.TabIndex = 8;
-            txtManualAmount.TextAlign = HorizontalAlignment.Center;
-            txtManualAmount.TextChanged += txtManualAmount_TextChanged;
-            // 
             // tableLayoutPanel7
             // 
             tableLayoutPanel7.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
@@ -2301,6 +2340,7 @@
             button5.TabIndex = 5;
             button5.Text = "Change";
             button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // tableLayoutPanel6
             // 
@@ -2464,6 +2504,11 @@
             panel3.ResumeLayout(false);
             cuiPanel1.ResumeLayout(false);
             cuiPanel1.PerformLayout();
+            pnlChange.ResumeLayout(false);
+            pnlChange.PerformLayout();
+            tableLayoutPanel8.ResumeLayout(false);
+            tableLayoutPanel8.PerformLayout();
+            pnlDiscount.ResumeLayout(false);
             flowTicketPanel.ResumeLayout(false);
             flowTicketPanel.PerformLayout();
             panelTemplateCartItem.ResumeLayout(false);
@@ -2474,8 +2519,6 @@
             tableLayoutPanel9.ResumeLayout(false);
             panel13.ResumeLayout(false);
             panel14.ResumeLayout(false);
-            tableLayoutPanel8.ResumeLayout(false);
-            tableLayoutPanel8.PerformLayout();
             tableLayoutPanel7.ResumeLayout(false);
             cuiPanel3.ResumeLayout(false);
             tableLayoutPanel6.ResumeLayout(false);
@@ -2613,5 +2656,9 @@
         private CuoreUI.Controls.cuiButton cuiButton1;
         private FlowLayoutPanel flowTicketPanel;
         private TextBox txtManualAmount;
+        private CuoreUI.Controls.cuiPanel pnlDiscount;
+        private DiscountButton discountButton1;
+        private CuoreUI.Controls.cuiPanel pnlChange;
+        private DiscountButton discountButton2;
     }
 }
