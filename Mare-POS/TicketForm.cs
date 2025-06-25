@@ -21,14 +21,20 @@ namespace Mare_POS
         public TicketForm()
         {
             InitializeComponent();
+
+            // Wire the event manually
+            txtManualAmount.KeyUp += txtManualAmount_KeyUp;
         }
 
         private List<Item> currentOrder = new List<Item>();
 
-        private void cuiPanel1_Paint(object sender, PaintEventArgs e)
-        {
+        private decimal cashReceived = 0;
 
+        private decimal GetSubtotal()
+        {
+            return currentOrder.Sum(item => item.Amount);
         }
+
 
         private void btnFood_Click(object sender, EventArgs e)
         {
@@ -165,12 +171,8 @@ namespace Mare_POS
                     Category = category
                 });
 
-                MessageBox.Show(
-                    $"✅ Added {qty}x {productName}\n" +
-                    $"Size: {size}\nType: {type}\nExtras: {extrasStr}\n" +
-                    $"Subtotal: ₱{itemTotal}",
-                    "Added to Order"
-                );
+                AddItemToTicketPanel(currentOrder.Last());
+                UpdateSubtotalLabel();
             }
         }
 
@@ -240,12 +242,8 @@ namespace Mare_POS
                     Category = category
                 });
 
-                MessageBox.Show(
-                    $"✅ Added {qty}x {productName}\n" +
-                    $"Size: {size}\nType: {type}\nExtras: {extrasStr}\n" +
-                    $"Subtotal: ₱{itemTotal}",
-                    "Added to Order"
-                );
+                AddItemToTicketPanel(currentOrder.Last());
+                UpdateSubtotalLabel();
             }
         }
 
@@ -288,12 +286,8 @@ namespace Mare_POS
                     Category = category
                 });
 
-                MessageBox.Show(
-                    $"✅ Added {qty}x {productName}\n" +
-                    $"Size: {size}\nType: {type}\nExtras: {extrasStr}\n" +
-                    $"Subtotal: ₱{itemTotal}",
-                    "Added to Order"
-                );
+                AddItemToTicketPanel(currentOrder.Last());
+                UpdateSubtotalLabel();
             }
         }
 
@@ -336,12 +330,8 @@ namespace Mare_POS
                     Category = category
                 });
 
-                MessageBox.Show(
-                    $"✅ Added {qty}x {productName}\n" +
-                    $"Size: {size}\nType: {type}\nExtras: {extrasStr}\n" +
-                    $"Subtotal: ₱{itemTotal}",
-                    "Added to Order"
-                );
+                AddItemToTicketPanel(currentOrder.Last());
+                UpdateSubtotalLabel();
             }
         }
 
@@ -384,12 +374,8 @@ namespace Mare_POS
                     Category = category
                 });
 
-                MessageBox.Show(
-                    $"✅ Added {qty}x {productName}\n" +
-                    $"Size: {size}\nType: {type}\nExtras: {extrasStr}\n" +
-                    $"Subtotal: ₱{itemTotal}",
-                    "Added to Order"
-                );
+                AddItemToTicketPanel(currentOrder.Last());
+                UpdateSubtotalLabel();
             }
         }
 
@@ -656,12 +642,8 @@ namespace Mare_POS
                     Category = category
                 });
 
-                MessageBox.Show(
-                    $"✅ Added {qty}x {productName}\n" +
-                    $"Size: {size}\nType: {type}\nExtras: {extrasStr}\n" +
-                    $"Subtotal: ₱{itemTotal}",
-                    "Added to Order"
-                );
+                AddItemToTicketPanel(currentOrder.Last());
+                UpdateSubtotalLabel();
             }
         }
 
@@ -704,12 +686,8 @@ namespace Mare_POS
                     Category = category
                 });
 
-                MessageBox.Show(
-                    $"✅ Added {qty}x {productName}\n" +
-                    $"Size: {size}\nType: {type}\nExtras: {extrasStr}\n" +
-                    $"Subtotal: ₱{itemTotal}",
-                    "Added to Order"
-                );
+                AddItemToTicketPanel(currentOrder.Last());
+                UpdateSubtotalLabel();
             }
         }
 
@@ -752,12 +730,8 @@ namespace Mare_POS
                     Category = category
                 });
 
-                MessageBox.Show(
-                    $"✅ Added {qty}x {productName}\n" +
-                    $"Size: {size}\nType: {type}\nExtras: {extrasStr}\n" +
-                    $"Subtotal: ₱{itemTotal}",
-                    "Added to Order"
-                );
+                AddItemToTicketPanel(currentOrder.Last());
+                UpdateSubtotalLabel();
             }
         }
 
@@ -800,12 +774,8 @@ namespace Mare_POS
                     Category = category
                 });
 
-                MessageBox.Show(
-                    $"✅ Added {qty}x {productName}\n" +
-                    $"Size: {size}\nType: {type}\nExtras: {extrasStr}\n" +
-                    $"Subtotal: ₱{itemTotal}",
-                    "Added to Order"
-                );
+                AddItemToTicketPanel(currentOrder.Last());
+                UpdateSubtotalLabel();
             }
         }
 
@@ -848,12 +818,8 @@ namespace Mare_POS
                     Category = category
                 });
 
-                MessageBox.Show(
-                    $"✅ Added {qty}x {productName}\n" +
-                    $"Size: {size}\nType: {type}\nExtras: {extrasStr}\n" +
-                    $"Subtotal: ₱{itemTotal}",
-                    "Added to Order"
-                );
+                AddItemToTicketPanel(currentOrder.Last());
+                UpdateSubtotalLabel();
             }
         }
 
@@ -888,11 +854,8 @@ namespace Mare_POS
                     Category = category
                 });
 
-                MessageBox.Show(
-                    $"✅ Added {qty}x {productName}\n" +
-                    $"Subtotal: ₱{itemTotal}",
-                    "Added to Order"
-                );
+                AddItemToTicketPanel(currentOrder.Last());
+                UpdateSubtotalLabel();
             }
         }
 
@@ -927,11 +890,8 @@ namespace Mare_POS
                     Category = category
                 });
 
-                MessageBox.Show(
-                    $"✅ Added {qty}x {productName}\n" +
-                    $"Subtotal: ₱{itemTotal}",
-                    "Added to Order"
-                );
+                AddItemToTicketPanel(currentOrder.Last());
+                UpdateSubtotalLabel();
             }
         }
 
@@ -966,11 +926,8 @@ namespace Mare_POS
                     Category = category
                 });
 
-                MessageBox.Show(
-                    $"✅ Added {qty}x {productName}\n" +
-                    $"Subtotal: ₱{itemTotal}",
-                    "Added to Order"
-                );
+                AddItemToTicketPanel(currentOrder.Last());
+                UpdateSubtotalLabel();
             }
         }
 
@@ -1005,11 +962,8 @@ namespace Mare_POS
                     Category = category
                 });
 
-                MessageBox.Show(
-                    $"✅ Added {qty}x {productName}\n" +
-                    $"Subtotal: ₱{itemTotal}",
-                    "Added to Order"
-                );
+                AddItemToTicketPanel(currentOrder.Last());
+                UpdateSubtotalLabel();
             }
         }
 
@@ -1019,6 +973,120 @@ namespace Mare_POS
         }
 
         private void label48_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddItemToTicketPanel(Item item)
+        {
+            Panel panelClone = new Panel
+            {
+                Size = panelTemplateCartItem.Size,
+                BackColor = panelTemplateCartItem.BackColor,
+                Margin = panelTemplateCartItem.Margin,
+                BorderStyle = panelTemplateCartItem.BorderStyle
+            };
+
+            // Clone labels from the template
+            foreach (Control ctrl in panelTemplateCartItem.Controls)
+            {
+                if (ctrl is Label templateLabel)
+                {
+                    Label lbl = new Label
+                    {
+                        AutoSize = templateLabel.AutoSize,
+                        Font = templateLabel.Font,
+                        ForeColor = templateLabel.ForeColor,
+                        Location = templateLabel.Location,
+                        Size = templateLabel.Size
+                    };
+
+                    switch (templateLabel.Name)
+                    {
+                        case "lblProductNameTemplate":
+                            lbl.Text = item.ProductName;
+                            break;
+                        case "lblSizeTemplate":
+                            lbl.Text = item.ProductSize;
+                            break;
+                        case "lblTypeTemplate":
+                            lbl.Text = item.ProductType;
+                            break;
+                        case "lblExtrasTemplate":
+                            lbl.Text = item.Extras != null && item.Extras.Any() ? string.Join(", ", item.Extras) : "-";
+                            break;
+                        case "lblQuantityTemplate":
+                            lbl.Text = $"x{item.Quantity}";
+                            break;
+                        case "lblPriceTemplate":
+                            lbl.Text = $"₱{item.Amount:0.00}";
+                            break;
+                        default:
+                            lbl.Text = templateLabel.Text;
+                            break;
+                    }
+
+                    panelClone.Controls.Add(lbl);
+                }
+            }
+
+            flowTicketPanel.Controls.Add(panelClone);
+        }
+
+        private void UpdateSubtotalLabel()
+        {
+            decimal subtotal = currentOrder.Sum(item => item.Amount);
+            labelSubtotal.Text = $"₱{subtotal:0.00}";
+        }
+
+        private void btnMoney_Click(object sender, EventArgs e)
+        {
+            if (sender is Control btn && btn.Tag != null)
+            {
+                if (decimal.TryParse(btn.Tag.ToString(), out decimal value))
+                {
+                    cashReceived += value;
+                    UpdateCashAndChangeUI();
+                }
+            }
+        }
+
+        private void txtManualAmount_KeyUp(object sender, KeyEventArgs e)
+        {
+            string input = txtManualAmount.Text.Replace("₱", "").Trim();
+
+            if (decimal.TryParse(input, out decimal value))
+            {
+                txtManualAmount.TextChanged -= txtManualAmount_TextChanged; // Temporarily unhook
+                txtManualAmount.Text = $"₱{value}";
+                txtManualAmount.SelectionStart = txtManualAmount.Text.Length;
+                txtManualAmount.TextChanged += txtManualAmount_TextChanged;
+
+                cashReceived = value;
+                UpdateCashAndChangeUI();
+            }
+        }
+
+        private void btnClearPayment_Click(object sender, EventArgs e)
+        {
+            cashReceived = 0;
+            UpdateCashAndChangeUI();
+            if (txtManualAmount != null) txtManualAmount.Text = "";
+        }
+
+        private void UpdateCashAndChangeUI()
+        {
+            labelCashReceived.Text = $"₱{cashReceived:0.00}";
+            decimal change = cashReceived - GetSubtotal();
+            labelChange.Text = $"₱{(change >= 0 ? change : 0):0.00}";
+        }
+
+        private void txtManualAmount_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel8_Paint(object sender, PaintEventArgs e)
         {
 
         }
