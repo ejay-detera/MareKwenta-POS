@@ -35,10 +35,10 @@ namespace Mare_POS
             dateHeader = new cuiLabel();
             dataGridView1 = new DataGridView();
             panelRoundedContainer = new Panel();
+            ResetPasswordButton = new cuiButton();
             CreateIngredient = new cuiButton();
             cuiPanel8 = new cuiPanel();
             label17 = new Label();
-            ResetPasswordButton = new cuiButton();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panelRoundedContainer.SuspendLayout();
             cuiPanel8.SuspendLayout();
@@ -100,6 +100,47 @@ namespace Mare_POS
             panelRoundedContainer.Name = "panelRoundedContainer";
             panelRoundedContainer.Size = new Size(1292, 851);
             panelRoundedContainer.TabIndex = 7;
+            panelRoundedContainer.Paint += panelRoundedContainer_Paint;
+            // 
+            // ResetPasswordButton
+            // 
+            ResetPasswordButton.Anchor = AnchorStyles.None;
+            ResetPasswordButton.BackColor = Color.Transparent;
+            ResetPasswordButton.CheckButton = false;
+            ResetPasswordButton.Checked = false;
+            ResetPasswordButton.CheckedBackground = Color.Transparent;
+            ResetPasswordButton.CheckedForeColor = Color.White;
+            ResetPasswordButton.CheckedImageTint = Color.White;
+            ResetPasswordButton.CheckedOutline = Color.Transparent;
+            ResetPasswordButton.Content = "";
+            ResetPasswordButton.DialogResult = DialogResult.None;
+            ResetPasswordButton.Font = new Font("Arial", 16.8F);
+            ResetPasswordButton.ForeColor = Color.White;
+            ResetPasswordButton.HoverBackground = Color.FromArgb(128, 64, 64);
+            ResetPasswordButton.HoveredImageTint = Color.Transparent;
+            ResetPasswordButton.HoverForeColor = Color.White;
+            ResetPasswordButton.HoverOutline = Color.Transparent;
+            ResetPasswordButton.Image = (Image)resources.GetObject("ResetPasswordButton.Image");
+            ResetPasswordButton.ImageAutoCenter = true;
+            ResetPasswordButton.ImageExpand = new Point(-2, -2);
+            ResetPasswordButton.ImageOffset = new Point(0, 0);
+            ResetPasswordButton.Location = new Point(1171, 717);
+            ResetPasswordButton.Name = "ResetPasswordButton";
+            ResetPasswordButton.NormalBackground = Color.FromArgb(78, 45, 24);
+            ResetPasswordButton.NormalForeColor = Color.White;
+            ResetPasswordButton.NormalImageTint = Color.White;
+            ResetPasswordButton.NormalOutline = Color.Transparent;
+            ResetPasswordButton.OutlineThickness = 1F;
+            ResetPasswordButton.PressedBackground = Color.FromArgb(128, 64, 64);
+            ResetPasswordButton.PressedForeColor = Color.FromArgb(32, 32, 32);
+            ResetPasswordButton.PressedImageTint = Color.White;
+            ResetPasswordButton.PressedOutline = Color.Transparent;
+            ResetPasswordButton.Rounding = new Padding(8);
+            ResetPasswordButton.Size = new Size(69, 60);
+            ResetPasswordButton.TabIndex = 8;
+            ResetPasswordButton.TextAlignment = StringAlignment.Center;
+            ResetPasswordButton.TextOffset = new Point(0, 0);
+            ResetPasswordButton.Click += cuiButton1_Click;
             // 
             // CreateIngredient
             // 
@@ -166,46 +207,6 @@ namespace Mare_POS
             label17.Size = new Size(80, 32);
             label17.TabIndex = 1;
             label17.Text = "DATE:";
-            // 
-            // ResetPasswordButton
-            // 
-            ResetPasswordButton.Anchor = AnchorStyles.None;
-            ResetPasswordButton.BackColor = Color.Transparent;
-            ResetPasswordButton.CheckButton = false;
-            ResetPasswordButton.Checked = false;
-            ResetPasswordButton.CheckedBackground = Color.Transparent;
-            ResetPasswordButton.CheckedForeColor = Color.White;
-            ResetPasswordButton.CheckedImageTint = Color.White;
-            ResetPasswordButton.CheckedOutline = Color.Transparent;
-            ResetPasswordButton.Content = "";
-            ResetPasswordButton.DialogResult = DialogResult.None;
-            ResetPasswordButton.Font = new Font("Arial", 16.8F);
-            ResetPasswordButton.ForeColor = Color.White;
-            ResetPasswordButton.HoverBackground = Color.FromArgb(128, 64, 64);
-            ResetPasswordButton.HoveredImageTint = Color.Transparent;
-            ResetPasswordButton.HoverForeColor = Color.White;
-            ResetPasswordButton.HoverOutline = Color.Transparent;
-            ResetPasswordButton.Image = (Image)resources.GetObject("ResetPasswordButton.Image");
-            ResetPasswordButton.ImageAutoCenter = true;
-            ResetPasswordButton.ImageExpand = new Point(-2, -2);
-            ResetPasswordButton.ImageOffset = new Point(0, 0);
-            ResetPasswordButton.Location = new Point(1171, 717);
-            ResetPasswordButton.Name = "ResetPasswordButton";
-            ResetPasswordButton.NormalBackground = Color.FromArgb(78, 45, 24);
-            ResetPasswordButton.NormalForeColor = Color.White;
-            ResetPasswordButton.NormalImageTint = Color.White;
-            ResetPasswordButton.NormalOutline = Color.Transparent;
-            ResetPasswordButton.OutlineThickness = 1F;
-            ResetPasswordButton.PressedBackground = Color.FromArgb(128, 64, 64);
-            ResetPasswordButton.PressedForeColor = Color.FromArgb(32, 32, 32);
-            ResetPasswordButton.PressedImageTint = Color.White;
-            ResetPasswordButton.PressedOutline = Color.Transparent;
-            ResetPasswordButton.Rounding = new Padding(8);
-            ResetPasswordButton.Size = new Size(69, 60);
-            ResetPasswordButton.TabIndex = 8;
-            ResetPasswordButton.TextAlignment = StringAlignment.Center;
-            ResetPasswordButton.TextOffset = new Point(0, 0);
-            ResetPasswordButton.Click += cuiButton1_Click;
             // 
             // StaffPageAdmin
             // 

@@ -399,6 +399,7 @@
             noncashlabel.Size = new Size(174, 43);
             noncashlabel.TabIndex = 2;
             noncashlabel.Text = "₱ 3,100.00";
+            noncashlabel.Click += noncashlabel_Click;
             // 
             // label30
             // 

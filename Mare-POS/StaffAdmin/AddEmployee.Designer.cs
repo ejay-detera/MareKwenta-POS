@@ -257,7 +257,8 @@
             // 
             RoleText.BackgroundColor = Color.White;
             RoleText.BorderColor = Color.FromArgb(128, 128, 128, 128);
-            RoleText.Content = "";
+            RoleText.Content = "Employee";
+            RoleText.Enabled = false;
             RoleText.FocusBackgroundColor = Color.White;
             RoleText.FocusBorderColor = Color.FromArgb(78, 45, 24);
             RoleText.FocusImageTint = Color.White;

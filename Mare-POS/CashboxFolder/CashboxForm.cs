@@ -44,6 +44,7 @@ namespace Mare_POS.CashboxFolder
                     {
                         addQuantityForm.ShowDialog();
                         LoadExpenseItems();
+                        updateText(); // Update the text labels with current data
                     }
                 }
                 else
@@ -545,6 +546,7 @@ namespace Mare_POS.CashboxFolder
 
                         // Reload the expense list to reflect changes
                         LoadExpenseItems();
+                        updateText(); // Update the text labels with current data   
                     }
                     else
                     {
@@ -604,6 +606,7 @@ namespace Mare_POS.CashboxFolder
                     {
                         // Reload the expense list to reflect changes
                         LoadExpenseItems();
+                        updateText(); // Update the text labels with current data
                     }
                 }
                 else
@@ -741,6 +744,11 @@ namespace Mare_POS.CashboxFolder
         }
 
         private void DeleteButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void noncashlabel_Click(object sender, EventArgs e)
         {
 
         }

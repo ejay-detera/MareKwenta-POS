@@ -45,33 +45,82 @@ namespace Mare_POS
         {
 
         }
+        
+        private void StaffPageAdmin_Load_1(object sender, EventArgs e)
+        {
+            // This method is intentionally left empty.
+            // The actual loading logic is handled in the StaffPageAdmin_Load method.
+        }
         public void getData()
         {
             string conString = "server=localhost; uid=root; pwd=ejaydetera12; database=marepos-db;";
             using (MySqlConnection connection = new MySqlConnection(conString))
             {
-
                 connection.Open();
 
-                string query = "SELECT t.EmployeeID, e.FirstName,e.LastName, t.Date, t.TimeIn, t.TimeOut FROM timelog t INNER JOIN employees e ON t.EmployeeID = e.EmployeeID WHERE e.OwnerID IS NULL AND t.Date = CURDATE() ORDER BY e.EmployeeID";
+                string query = @"
+            SELECT 
+                t.EmployeeID, 
+                e.FirstName,
+                e.LastName,
+                t.Date, 
+                t.TimeIn, 
+                t.TimeOut 
+            FROM timelog t 
+            INNER JOIN employees e ON t.EmployeeID = e.EmployeeID 
+            WHERE e.OwnerID IS NULL 
+              AND t.Date = CURDATE() 
+            ORDER BY e.EmployeeID";
 
                 MySqlCommand command = new MySqlCommand(query, connection);
                 MySqlDataReader reader = command.ExecuteReader();
                 DataTable dataTable = new DataTable();
                 dataTable.Load(reader);
 
+                // Add formatted columns
+                dataTable.Columns.Add("Date:", typeof(string));
+                dataTable.Columns.Add("Time In:", typeof(string));
+                dataTable.Columns.Add("Time Out:", typeof(string));
+
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    // Format Date
+                    if (row["Date"] != DBNull.Value)
+                    {
+                        DateTime date = Convert.ToDateTime(row["Date"]);
+                        row["Date:"] = date.ToString("MMMM dd, yyyy");
+                    }
+
+                    // Format TimeIn
+                    if (row["TimeIn"] != DBNull.Value)
+                    {
+                        TimeSpan timeIn = (TimeSpan)row["TimeIn"];
+                        row["Time In:"] = DateTime.Today.Add(timeIn).ToString("h:mm tt");
+                    }
+
+                    // Format TimeOut
+                    if (row["TimeOut"] != DBNull.Value)
+                    {
+                        TimeSpan timeOut = (TimeSpan)row["TimeOut"];
+                        row["Time Out:"] = DateTime.Today.Add(timeOut).ToString("h:mm tt");
+                    }
+                }
+
+                // Show only formatted columns + original name columns
                 dataGridView1.DataSource = dataTable;
 
                 this.BeginInvoke((MethodInvoker)delegate
                 {
                     dataGridView1.ClearSelection();
+
+                    // Optional: Hide raw columns if you want to show only formatted ones
+                    dataGridView1.Columns["Date"].Visible = false;
+                    dataGridView1.Columns["TimeIn"].Visible = false;
+                    dataGridView1.Columns["TimeOut"].Visible = false;
                 });
             }
         }
-        private void StaffPageAdmin_Load_1(object sender, EventArgs e)
-        {
 
-        }
 
         private void dateHeader_Load(object sender, EventArgs e)
         {
@@ -139,6 +188,11 @@ namespace Mare_POS
             {
                 MessageBox.Show($"Error opening Reset Password Form form: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void panelRoundedContainer_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

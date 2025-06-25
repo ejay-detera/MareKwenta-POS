@@ -115,7 +115,7 @@ namespace Mare_POS.Properties {
         /// </summary>
         public static System.Drawing.Bitmap Log_out {
             get {
-                object obj = ResourceManager.GetObject("Log out", resourceCulture);
+                object obj = ResourceManager.GetObject("Log_out", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -11076,7 +11076,7 @@
             ncgbutton.ImageAutoCenter = true;
             ncgbutton.ImageExpand = new Point(0, 0);
             ncgbutton.ImageOffset = new Point(0, 0);
-            ncgbutton.Location = new Point(1958, 30241);
+            ncgbutton.Location = new Point(2489, 32767);
             ncgbutton.Name = "ncgbutton";
             ncgbutton.NormalBackground = Color.FromArgb((int)(byte)78, (int)(byte)45, (int)(byte)24);
             ncgbutton.NormalForeColor = Color.White;
@@ -11116,7 +11116,7 @@
             nhvbutton.ImageAutoCenter = true;
             nhvbutton.ImageExpand = new Point(0, 0);
             nhvbutton.ImageOffset = new Point(0, 0);
-            nhvbutton.Location = new Point(1958, 30241);
+            nhvbutton.Location = new Point(2489, 32767);
             nhvbutton.Name = "nhvbutton";
             nhvbutton.NormalBackground = Color.FromArgb((int)(byte)78, (int)(byte)45, (int)(byte)24);
             nhvbutton.NormalForeColor = Color.White;
@@ -11156,7 +11156,7 @@
             nivbutton.ImageAutoCenter = true;
             nivbutton.ImageExpand = new Point(0, 0);
             nivbutton.ImageOffset = new Point(0, 0);
-            nivbutton.Location = new Point(1959, 30241);
+            nivbutton.Location = new Point(2490, 32767);
             nivbutton.Name = "nivbutton";
             nivbutton.NormalBackground = Color.FromArgb((int)(byte)78, (int)(byte)45, (int)(byte)24);
             nivbutton.NormalForeColor = Color.White;
@@ -11196,7 +11196,7 @@
             foodbutton.ImageAutoCenter = true;
             foodbutton.ImageExpand = new Point(0, 0);
             foodbutton.ImageOffset = new Point(0, 0);
-            foodbutton.Location = new Point(1959, 30241);
+            foodbutton.Location = new Point(2490, 32767);
             foodbutton.Name = "foodbutton";
             foodbutton.NormalBackground = Color.FromArgb((int)(byte)78, (int)(byte)45, (int)(byte)24);
             foodbutton.NormalForeColor = Color.White;
@@ -12111,7 +12111,7 @@
             this.Controls.Add(foodrow);
             this.Controls.Add(nhgrow);
             this.Name = "LinkIngredients";
-            this.Size = new Size(1229, 870);
+            this.Size = new Size(998, 639);
             this.Load += (this.LinkIngredients_Load);
             chgpanel1.ResumeLayout(false);
             chgpanel1.PerformLayout();
