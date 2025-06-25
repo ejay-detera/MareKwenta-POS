@@ -45,6 +45,7 @@
             label1.Font = new Font("Unbounded SemiBold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(78, 45, 24);
             label1.Location = new Point(9, 15);
+            label1.Location = new Point(9, 15);
             label1.Name = "label1";
             label1.Size = new Size(245, 43);
             label1.TabIndex = 0;
@@ -112,6 +113,7 @@
             label2.Font = new Font("Inter", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.FromArgb(78, 45, 24);
             label2.Location = new Point(15, 85);
+            label2.Location = new Point(15, 85);
             label2.Name = "label2";
             label2.Size = new Size(135, 24);
             label2.TabIndex = 3;
@@ -123,6 +125,7 @@
             label3.Font = new Font("Inter", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.FromArgb(78, 45, 24);
             label3.Location = new Point(15, 196);
+            label3.Location = new Point(15, 196);
             label3.Name = "label3";
             label3.Size = new Size(153, 24);
             label3.TabIndex = 4;
@@ -133,6 +136,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Inter", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.FromArgb(78, 45, 24);
+            label4.Location = new Point(15, 304);
             label4.Location = new Point(15, 304);
             label4.Name = "label4";
             label4.Size = new Size(117, 24);
@@ -212,6 +216,7 @@
             // AddExpenseForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(242, 239, 234);
             ClientSize = new Size(422, 461);
@@ -225,8 +230,10 @@
             Controls.Add(ExpenseNameText);
             Controls.Add(label1);
             Margin = new Padding(3, 4, 3, 4);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "AddExpenseForm";
             Text = "Add Expense";
+            Load += AddExpenseForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

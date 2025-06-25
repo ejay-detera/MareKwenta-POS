@@ -32,10 +32,25 @@
     <Compile Update="inventory\LinkIngredients.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="DiscountButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="FoodQuantity.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="NavbarFolder\NavBar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="PasswordPrompt\PasswordPrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PopUpSplitComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ProductComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ReceiptForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="SaleshistoryFolder\SaleshistoryForm.cs">
@@ -55,5 +70,23 @@
     <EmbeddedResource Update="inventory\LinkIngredients.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <Compile Update="TicketFolder\TicketCoffee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Ticket Dashboard\ProductComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="TicketFolder\TicketFood.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="TicketFolder\TicketForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="TicketFolder\TicketNonCoffee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Ticket\TicketForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

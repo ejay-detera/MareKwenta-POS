@@ -33,5 +33,43 @@
 			<LastGenOutput>Resources.Designer.cs</LastGenOutput>
 		</EmbeddedResource>
 	</ItemGroup>
+    <Compile Remove="NewFolder1\**" />
+    <Compile Remove="Ticket Dashboard\**" />
+    <Compile Remove="Ticket\**" />
+    <EmbeddedResource Remove="NewFolder1\**" />
+    <EmbeddedResource Remove="Ticket Dashboard\**" />
+    <EmbeddedResource Remove="Ticket\**" />
+    <None Remove="NewFolder1\**" />
+    <None Remove="Ticket Dashboard\**" />
+    <None Remove="Ticket\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\receipt_icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\receipt_icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CuoreUI.Winforms" Version="2025.6.5" />
+    <PackageReference Include="MySql.Data" Version="9.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
 
 </Project>

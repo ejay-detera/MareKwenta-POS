@@ -10,8 +10,9 @@
 
 namespace Mare_POS.Properties {
     using System;
-    
-    
+    using System.Drawing;
+
+
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -22,7 +23,7 @@ namespace Mare_POS.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +37,7 @@ namespace Mare_POS.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Mare_POS.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +52,7 @@ namespace Mare_POS.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -69,11 +70,12 @@ namespace Mare_POS.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+    
         
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Archive {
+        public static System.Drawing.Bitmap Archive {
             get {
                 object obj = ResourceManager.GetObject("Archive", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -83,7 +85,7 @@ namespace Mare_POS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap BarChart {
+        public static System.Drawing.Bitmap BarChart {
             get {
                 object obj = ResourceManager.GetObject("BarChart", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -93,7 +95,7 @@ namespace Mare_POS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap DollarSign {
+        public static System.Drawing.Bitmap DollarSign {
             get {
                 object obj = ResourceManager.GetObject("DollarSign", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -103,7 +105,7 @@ namespace Mare_POS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap List {
+        public static System.Drawing.Bitmap List {
             get {
                 object obj = ResourceManager.GetObject("List", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -120,10 +122,21 @@ namespace Mare_POS.Properties {
             }
         }
         
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Ticket {
+        public static System.Drawing.Bitmap receipt_icon {
+            get {
+                object obj = ResourceManager.GetObject("receipt_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Ticket {
             get {
                 object obj = ResourceManager.GetObject("Ticket", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -133,7 +146,7 @@ namespace Mare_POS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap User {
+        public static System.Drawing.Bitmap User {
             get {
                 object obj = ResourceManager.GetObject("User", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));

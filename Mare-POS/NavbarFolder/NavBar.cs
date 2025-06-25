@@ -1,6 +1,9 @@
+using Mare_POS.Ticket_Components;
 using Mare_POS.Authentication;
 using Mare_POS.CashboxFolder;
 using Mare_POS.SaleshistoryFolder;
+using Mare_POS.TicketFolder;
+
 
 namespace Mare_POS
 {
@@ -35,9 +38,11 @@ namespace Mare_POS
         {
             InitializeComponent();
             InitializeContentPanel();
+            // show ticket screen initially
             // Set default user type (you can change this based on login)
             CurrentUserType = UserType.Admin;
         }
+
 
         private void InitializeContentPanel()
         {
@@ -154,11 +159,11 @@ namespace Mare_POS
 
             if (SessionManager.HasRole("Admin"))
             {
-                LoadPage(new StaffPageAdmin()); 
+                LoadPage(new StaffPageAdmin());
             }
             else
             {
-                LoadPage(new StaffPage()); 
+                LoadPage(new StaffPage());
             }
 
             HighlightButton((Button)sender);
@@ -166,7 +171,7 @@ namespace Mare_POS
 
         private void btn_receipt_Click(object sender, EventArgs e)
         {
-            LoadPage(new SaleshistoryForm()); 
+            LoadPage(new SaleshistoryForm());
             HighlightButton((Button)sender);
         }
 
@@ -178,13 +183,13 @@ namespace Mare_POS
 
         private void btn_ticket_Click(object sender, EventArgs e)
         {
-            LoadPage(new TicketPage()); // change the "TicketPage" to the name of you user control
+            LoadPage(new TicketForm()); // change the "TicketPage" to the name of you user control
             HighlightButton((Button)sender);
         }
 
         private void btn_dashboard_Click(object sender, EventArgs e)
         {
-            LoadPage(new DashboardAdmin()); 
+            LoadPage(new DashboardAdmin());
             HighlightButton((Button)sender);
         }
 
@@ -195,10 +200,10 @@ namespace Mare_POS
                 this.Close();
                 return;
             }
-            
+
             if (SessionManager.HasRole("Admin"))
             {
-                LoadPage(new Inventory()); 
+                LoadPage(new Inventory());
                 HighlightButton(btn_inventory);
             }
             else
@@ -214,9 +219,11 @@ namespace Mare_POS
         {
 
         }
+                private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
-
-    
 
     public class ReceiptPage : UserControl
     {
