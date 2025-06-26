@@ -7,11 +7,11 @@ namespace Mare_POS.Database
 {
     public static class ReceiptBackend
     {
-        private static string connectionString = "server=localhost;database=marepos-db;user=root;password=IyahMikaela_23";
+        private static string connectionString = "server=localhost;database=marepos-db;user=root;password=ejaydetera12";
 
-        public static List<ticket> GetReceiptItems(int transactionNo)
+        public static List<Ticket> GetReceiptItems(int transactionNo)
         {
-            List<ticket> ticketItems = new List<ticket>();
+            List<Ticket> ticketItems = new List<Ticket>();
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
@@ -25,7 +25,7 @@ namespace Mare_POS.Database
                 {
                     while (reader.Read())
                     {
-                        ticket item = new ticket
+                        Ticket item = new Ticket
                         {
                             ProductName = reader["ProductName"].ToString(),
                             Size = reader["Size"].ToString(),

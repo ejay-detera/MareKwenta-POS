@@ -6,7 +6,7 @@ namespace Mare_POS.Database
 {
     public class ProductDataAccess
     {
-        private static string connectionString = "server=localhost;user=root;password=IyahMikaela_23;database=marepos-db;";
+        private static string connectionString = "server=localhost;user=root;password=ejaydetera12;database=marepos-db;";
 
         // Get base price of product by ID, size, type
         public static decimal GetBasePrice(int productId, string size, string type)

@@ -7,7 +7,7 @@ namespace Mare_POS.Database
 {
     public static class TicketPaymentBackend
     {
-        private static string connectionString = "server=localhost;database=marepos-db;user=root;password=IyahMikaela_23";
+        private static string connectionString = "server=localhost;database=marepos-db;user=root;password=ejaydetera12";
 
         public static void SavePayment(int transactionNo, decimal cash, decimal gcash, decimal maya, decimal change)
         {

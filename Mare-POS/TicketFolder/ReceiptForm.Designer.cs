@@ -33,85 +33,35 @@
             label1 = new Label();
             panel2 = new Panel();
             cuiLabel2 = new CuoreUI.Controls.cuiLabel();
-            label4 = new Label();
+            lblPOS = new Label();
             cuiLabel3 = new CuoreUI.Controls.cuiLabel();
             label3 = new Label();
             label2 = new Label();
-            panel3 = new Panel();
-            cuiLabel4 = new CuoreUI.Controls.cuiLabel();
-            tblItems = new TableLayoutPanel();
-            panel15 = new Panel();
-            label28 = new Label();
-            panel14 = new Panel();
-            label27 = new Label();
-            panel13 = new Panel();
-            label23 = new Label();
-            label24 = new Label();
-            label25 = new Label();
-            label26 = new Label();
-            panel12 = new Panel();
-            label22 = new Label();
-            panel11 = new Panel();
-            label21 = new Label();
-            panel10 = new Panel();
-            label17 = new Label();
-            label18 = new Label();
-            label19 = new Label();
-            label20 = new Label();
-            panel9 = new Panel();
-            label16 = new Label();
-            panel8 = new Panel();
-            label15 = new Label();
-            panel7 = new Panel();
-            label11 = new Label();
-            label12 = new Label();
-            label13 = new Label();
-            label14 = new Label();
-            panel6 = new Panel();
-            label8 = new Label();
-            panel5 = new Panel();
-            label6 = new Label();
-            panel4 = new Panel();
-            label10 = new Label();
-            label9 = new Label();
-            label7 = new Label();
-            label5 = new Label();
             label29 = new Label();
             panel16 = new Panel();
-            label41 = new Label();
-            label40 = new Label();
+            lblMaya = new Label();
+            lblGCash = new Label();
             label39 = new Label();
             label38 = new Label();
             cuiLabel5 = new CuoreUI.Controls.cuiLabel();
-            label34 = new Label();
-            label33 = new Label();
+            lblChange = new Label();
+            lblCash = new Label();
             label32 = new Label();
             label31 = new Label();
-            label30 = new Label();
+            lblTotal = new Label();
             panel17 = new Panel();
             cuiLabel6 = new CuoreUI.Controls.cuiLabel();
-            label37 = new Label();
-            label36 = new Label();
-            label35 = new Label();
+            lblTransaction = new Label();
+            lblDate = new Label();
             cuiButton1 = new CuoreUI.Controls.cuiButton();
+            cuiLabel4 = new CuoreUI.Controls.cuiLabel();
+            panel3 = new Panel();
+            flow_receipt_info = new FlowLayoutPanel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
-            panel3.SuspendLayout();
-            tblItems.SuspendLayout();
-            panel15.SuspendLayout();
-            panel14.SuspendLayout();
-            panel13.SuspendLayout();
-            panel12.SuspendLayout();
-            panel11.SuspendLayout();
-            panel10.SuspendLayout();
-            panel9.SuspendLayout();
-            panel8.SuspendLayout();
-            panel7.SuspendLayout();
-            panel6.SuspendLayout();
-            panel5.SuspendLayout();
-            panel4.SuspendLayout();
             panel16.SuspendLayout();
             panel17.SuspendLayout();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -152,7 +102,7 @@
             // panel2
             // 
             panel2.Controls.Add(cuiLabel2);
-            panel2.Controls.Add(label4);
+            panel2.Controls.Add(lblPOS);
             panel2.Controls.Add(cuiLabel3);
             panel2.Controls.Add(label3);
             panel2.Controls.Add(label2);
@@ -178,15 +128,14 @@
             cuiLabel2.TabIndex = 34;
             cuiLabel2.VerticalAlignment = StringAlignment.Near;
             // 
-            // label4
+            // lblPOS
             // 
-            label4.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
-            label4.Location = new Point(13, 66);
-            label4.Name = "label4";
-            label4.Size = new Size(74, 25);
-            label4.TabIndex = 33;
-            label4.Text = "Dine in";
-            label4.Click += label4_Click;
+            lblPOS.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
+            lblPOS.Location = new Point(13, 66);
+            lblPOS.Name = "lblPOS";
+            lblPOS.Size = new Size(121, 25);
+            lblPOS.TabIndex = 33;
+            lblPOS.Text = "POS: POS 1";
             // 
             // cuiLabel3
             // 
@@ -221,409 +170,6 @@
             label2.TabIndex = 0;
             label2.Text = "Employee:";
             // 
-            // panel3
-            // 
-            panel3.Controls.Add(cuiLabel4);
-            panel3.Controls.Add(tblItems);
-            panel3.Dock = DockStyle.Top;
-            panel3.Location = new Point(0, 244);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(391, 304);
-            panel3.TabIndex = 2;
-            // 
-            // cuiLabel4
-            // 
-            cuiLabel4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            cuiLabel4.BackColor = Color.White;
-            cuiLabel4.Content = "------------------------------------------------------------------------------";
-            cuiLabel4.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiLabel4.ForeColor = Color.Black;
-            cuiLabel4.HorizontalAlignment = StringAlignment.Center;
-            cuiLabel4.Location = new Point(13, 274);
-            cuiLabel4.Margin = new Padding(0);
-            cuiLabel4.Name = "cuiLabel4";
-            cuiLabel4.Size = new Size(369, 16);
-            cuiLabel4.TabIndex = 35;
-            cuiLabel4.VerticalAlignment = StringAlignment.Near;
-            // 
-            // tblItems
-            // 
-            tblItems.ColumnCount = 3;
-            tblItems.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tblItems.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 23F));
-            tblItems.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 27F));
-            tblItems.Controls.Add(panel15, 2, 3);
-            tblItems.Controls.Add(panel14, 1, 3);
-            tblItems.Controls.Add(panel13, 0, 3);
-            tblItems.Controls.Add(panel12, 2, 2);
-            tblItems.Controls.Add(panel11, 1, 2);
-            tblItems.Controls.Add(panel10, 0, 2);
-            tblItems.Controls.Add(panel9, 2, 1);
-            tblItems.Controls.Add(panel8, 1, 1);
-            tblItems.Controls.Add(panel7, 0, 1);
-            tblItems.Controls.Add(panel6, 2, 0);
-            tblItems.Controls.Add(panel5, 1, 0);
-            tblItems.Controls.Add(panel4, 0, 0);
-            tblItems.Location = new Point(3, 6);
-            tblItems.Margin = new Padding(0);
-            tblItems.Name = "tblItems";
-            tblItems.RowCount = 4;
-            tblItems.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            tblItems.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            tblItems.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            tblItems.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            tblItems.Size = new Size(383, 263);
-            tblItems.TabIndex = 0;
-            // 
-            // panel15
-            // 
-            panel15.AutoSize = true;
-            panel15.Controls.Add(label28);
-            panel15.Dock = DockStyle.Fill;
-            panel15.Location = new Point(282, 198);
-            panel15.Name = "panel15";
-            panel15.Size = new Size(98, 62);
-            panel15.TabIndex = 11;
-            panel15.Paint += panel15_Paint;
-            // 
-            // label28
-            // 
-            label28.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Bold);
-            label28.Location = new Point(6, 11);
-            label28.Name = "label28";
-            label28.Size = new Size(93, 27);
-            label28.TabIndex = 2;
-            label28.Text = "₱ 180.00";
-            // 
-            // panel14
-            // 
-            panel14.AutoSize = true;
-            panel14.Controls.Add(label27);
-            panel14.Dock = DockStyle.Fill;
-            panel14.Location = new Point(194, 198);
-            panel14.Name = "panel14";
-            panel14.Size = new Size(82, 62);
-            panel14.TabIndex = 10;
-            // 
-            // label27
-            // 
-            label27.Font = new Font("Microsoft Sans Serif", 9F);
-            label27.Location = new Point(3, 11);
-            label27.Name = "label27";
-            label27.Size = new Size(79, 19);
-            label27.TabIndex = 1;
-            label27.Text = "GRANDE";
-            // 
-            // panel13
-            // 
-            panel13.AutoSize = true;
-            panel13.Controls.Add(label23);
-            panel13.Controls.Add(label24);
-            panel13.Controls.Add(label25);
-            panel13.Controls.Add(label26);
-            panel13.Dock = DockStyle.Fill;
-            panel13.Location = new Point(3, 198);
-            panel13.Name = "panel13";
-            panel13.Size = new Size(185, 62);
-            panel13.TabIndex = 9;
-            // 
-            // label23
-            // 
-            label23.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
-            label23.Location = new Point(74, 30);
-            label23.Name = "label23";
-            label23.Size = new Size(54, 19);
-            label23.TabIndex = 3;
-            label23.Text = "₱ 180";
-            // 
-            // label24
-            // 
-            label24.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
-            label24.Location = new Point(49, 30);
-            label24.Name = "label24";
-            label24.Size = new Size(24, 19);
-            label24.TabIndex = 2;
-            label24.Text = "x ";
-            // 
-            // label25
-            // 
-            label25.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
-            label25.Location = new Point(33, 30);
-            label25.Name = "label25";
-            label25.Size = new Size(23, 19);
-            label25.TabIndex = 1;
-            label25.Text = "1";
-            // 
-            // label26
-            // 
-            label26.Font = new Font("Microsoft Sans Serif", 9F);
-            label26.Location = new Point(27, 11);
-            label26.Name = "label26";
-            label26.Size = new Size(125, 19);
-            label26.TabIndex = 0;
-            label26.Text = "CHOCOLATE";
-            // 
-            // panel12
-            // 
-            panel12.AutoSize = true;
-            panel12.Controls.Add(label22);
-            panel12.Dock = DockStyle.Fill;
-            panel12.Location = new Point(282, 133);
-            panel12.Name = "panel12";
-            panel12.Size = new Size(98, 59);
-            panel12.TabIndex = 8;
-            // 
-            // label22
-            // 
-            label22.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Bold);
-            label22.Location = new Point(6, 11);
-            label22.Name = "label22";
-            label22.Size = new Size(93, 27);
-            label22.TabIndex = 2;
-            label22.Text = "₱ 360.00";
-            // 
-            // panel11
-            // 
-            panel11.AutoSize = true;
-            panel11.Controls.Add(label21);
-            panel11.Dock = DockStyle.Fill;
-            panel11.Location = new Point(194, 133);
-            panel11.Name = "panel11";
-            panel11.Size = new Size(82, 59);
-            panel11.TabIndex = 7;
-            // 
-            // label21
-            // 
-            label21.Font = new Font("Microsoft Sans Serif", 9F);
-            label21.Location = new Point(3, 11);
-            label21.Name = "label21";
-            label21.Size = new Size(79, 19);
-            label21.TabIndex = 1;
-            label21.Text = "GRANDE";
-            // 
-            // panel10
-            // 
-            panel10.AutoSize = true;
-            panel10.Controls.Add(label17);
-            panel10.Controls.Add(label18);
-            panel10.Controls.Add(label19);
-            panel10.Controls.Add(label20);
-            panel10.Dock = DockStyle.Fill;
-            panel10.Location = new Point(3, 133);
-            panel10.Name = "panel10";
-            panel10.Size = new Size(185, 59);
-            panel10.TabIndex = 6;
-            // 
-            // label17
-            // 
-            label17.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
-            label17.Location = new Point(74, 30);
-            label17.Name = "label17";
-            label17.Size = new Size(54, 19);
-            label17.TabIndex = 3;
-            label17.Text = "₱ 180";
-            // 
-            // label18
-            // 
-            label18.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
-            label18.Location = new Point(49, 30);
-            label18.Name = "label18";
-            label18.Size = new Size(24, 19);
-            label18.TabIndex = 2;
-            label18.Text = "x ";
-            // 
-            // label19
-            // 
-            label19.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
-            label19.Location = new Point(33, 30);
-            label19.Name = "label19";
-            label19.Size = new Size(23, 19);
-            label19.TabIndex = 1;
-            label19.Text = "2";
-            // 
-            // label20
-            // 
-            label20.Font = new Font("Microsoft Sans Serif", 9F);
-            label20.Location = new Point(26, 11);
-            label20.Name = "label20";
-            label20.Size = new Size(133, 19);
-            label20.TabIndex = 0;
-            label20.Text = "CAFE LATTE";
-            // 
-            // panel9
-            // 
-            panel9.AutoSize = true;
-            panel9.Controls.Add(label16);
-            panel9.Dock = DockStyle.Fill;
-            panel9.Location = new Point(282, 68);
-            panel9.Name = "panel9";
-            panel9.Size = new Size(98, 59);
-            panel9.TabIndex = 5;
-            // 
-            // label16
-            // 
-            label16.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Bold);
-            label16.Location = new Point(8, 11);
-            label16.Name = "label16";
-            label16.Size = new Size(91, 27);
-            label16.TabIndex = 2;
-            label16.Text = "₱ 400.00";
-            // 
-            // panel8
-            // 
-            panel8.AutoSize = true;
-            panel8.Controls.Add(label15);
-            panel8.Dock = DockStyle.Fill;
-            panel8.Location = new Point(194, 68);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(82, 59);
-            panel8.TabIndex = 4;
-            // 
-            // label15
-            // 
-            label15.Font = new Font("Microsoft Sans Serif", 9F);
-            label15.Location = new Point(3, 11);
-            label15.Name = "label15";
-            label15.Size = new Size(79, 19);
-            label15.TabIndex = 1;
-            label15.Text = "GRANDE";
-            // 
-            // panel7
-            // 
-            panel7.AutoSize = true;
-            panel7.Controls.Add(label11);
-            panel7.Controls.Add(label12);
-            panel7.Controls.Add(label13);
-            panel7.Controls.Add(label14);
-            panel7.Dock = DockStyle.Fill;
-            panel7.Location = new Point(3, 68);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(185, 59);
-            panel7.TabIndex = 3;
-            // 
-            // label11
-            // 
-            label11.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
-            label11.Location = new Point(74, 30);
-            label11.Name = "label11";
-            label11.Size = new Size(54, 19);
-            label11.TabIndex = 3;
-            label11.Text = "₱ 200";
-            // 
-            // label12
-            // 
-            label12.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
-            label12.Location = new Point(49, 30);
-            label12.Name = "label12";
-            label12.Size = new Size(24, 19);
-            label12.TabIndex = 2;
-            label12.Text = "x ";
-            // 
-            // label13
-            // 
-            label13.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
-            label13.Location = new Point(33, 30);
-            label13.Name = "label13";
-            label13.Size = new Size(23, 19);
-            label13.TabIndex = 1;
-            label13.Text = "2";
-            // 
-            // label14
-            // 
-            label14.Font = new Font("Microsoft Sans Serif", 9F);
-            label14.Location = new Point(3, 11);
-            label14.Name = "label14";
-            label14.Size = new Size(181, 19);
-            label14.TabIndex = 0;
-            label14.Text = "STRAWBERRY FRAPPE\r\n";
-            // 
-            // panel6
-            // 
-            panel6.AutoSize = true;
-            panel6.Controls.Add(label8);
-            panel6.Dock = DockStyle.Fill;
-            panel6.Location = new Point(282, 3);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(98, 59);
-            panel6.TabIndex = 2;
-            // 
-            // label8
-            // 
-            label8.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Bold);
-            label8.Location = new Point(8, 11);
-            label8.Name = "label8";
-            label8.Size = new Size(94, 27);
-            label8.TabIndex = 2;
-            label8.Text = "₱ 145.00";
-            // 
-            // panel5
-            // 
-            panel5.AutoSize = true;
-            panel5.Controls.Add(label6);
-            panel5.Dock = DockStyle.Fill;
-            panel5.Location = new Point(194, 3);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(82, 59);
-            panel5.TabIndex = 1;
-            // 
-            // label6
-            // 
-            label6.Font = new Font("Microsoft Sans Serif", 9F);
-            label6.Location = new Point(3, 11);
-            label6.Name = "label6";
-            label6.Size = new Size(53, 19);
-            label6.TabIndex = 1;
-            label6.Text = "VENTI";
-            // 
-            // panel4
-            // 
-            panel4.AutoSize = true;
-            panel4.Controls.Add(label10);
-            panel4.Controls.Add(label9);
-            panel4.Controls.Add(label7);
-            panel4.Controls.Add(label5);
-            panel4.Dock = DockStyle.Fill;
-            panel4.Location = new Point(3, 3);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(185, 59);
-            panel4.TabIndex = 0;
-            // 
-            // label10
-            // 
-            label10.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
-            label10.Location = new Point(74, 30);
-            label10.Name = "label10";
-            label10.Size = new Size(54, 19);
-            label10.TabIndex = 3;
-            label10.Text = "₱ 145";
-            // 
-            // label9
-            // 
-            label9.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
-            label9.Location = new Point(49, 30);
-            label9.Name = "label9";
-            label9.Size = new Size(24, 19);
-            label9.TabIndex = 2;
-            label9.Text = "x ";
-            // 
-            // label7
-            // 
-            label7.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
-            label7.Location = new Point(33, 30);
-            label7.Name = "label7";
-            label7.Size = new Size(23, 19);
-            label7.TabIndex = 1;
-            label7.Text = "1 ";
-            // 
-            // label5
-            // 
-            label5.Font = new Font("Microsoft Sans Serif", 9F);
-            label5.Location = new Point(24, 11);
-            label5.Name = "label5";
-            label5.Size = new Size(112, 19);
-            label5.TabIndex = 0;
-            label5.Text = "MOCHA LATTE";
-            // 
             // label29
             // 
             label29.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
@@ -635,16 +181,16 @@
             // 
             // panel16
             // 
-            panel16.Controls.Add(label41);
-            panel16.Controls.Add(label40);
+            panel16.Controls.Add(lblMaya);
+            panel16.Controls.Add(lblGCash);
             panel16.Controls.Add(label39);
             panel16.Controls.Add(label38);
             panel16.Controls.Add(cuiLabel5);
-            panel16.Controls.Add(label34);
-            panel16.Controls.Add(label33);
+            panel16.Controls.Add(lblChange);
+            panel16.Controls.Add(lblCash);
             panel16.Controls.Add(label32);
             panel16.Controls.Add(label31);
-            panel16.Controls.Add(label30);
+            panel16.Controls.Add(lblTotal);
             panel16.Controls.Add(label29);
             panel16.Dock = DockStyle.Top;
             panel16.Location = new Point(0, 548);
@@ -652,25 +198,25 @@
             panel16.Size = new Size(391, 157);
             panel16.TabIndex = 4;
             // 
-            // label41
+            // lblMaya
             // 
-            label41.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label41.Font = new Font("Microsoft Sans Serif", 10F);
-            label41.Location = new Point(257, 92);
-            label41.Name = "label41";
-            label41.Size = new Size(98, 26);
-            label41.TabIndex = 40;
-            label41.Text = "₱";
+            lblMaya.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblMaya.Font = new Font("Microsoft Sans Serif", 10F);
+            lblMaya.Location = new Point(257, 92);
+            lblMaya.Name = "lblMaya";
+            lblMaya.Size = new Size(98, 26);
+            lblMaya.TabIndex = 40;
+            lblMaya.Text = "₱";
             // 
-            // label40
+            // lblGCash
             // 
-            label40.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label40.Font = new Font("Microsoft Sans Serif", 10F);
-            label40.Location = new Point(257, 73);
-            label40.Name = "label40";
-            label40.Size = new Size(98, 26);
-            label40.TabIndex = 39;
-            label40.Text = "₱";
+            lblGCash.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblGCash.Font = new Font("Microsoft Sans Serif", 10F);
+            lblGCash.Location = new Point(257, 73);
+            lblGCash.Name = "lblGCash";
+            lblGCash.Size = new Size(98, 26);
+            lblGCash.TabIndex = 39;
+            lblGCash.Text = "₱";
             // 
             // label39
             // 
@@ -705,25 +251,25 @@
             cuiLabel5.TabIndex = 36;
             cuiLabel5.VerticalAlignment = StringAlignment.Near;
             // 
-            // label34
+            // lblChange
             // 
-            label34.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label34.Font = new Font("Microsoft Sans Serif", 10F);
-            label34.Location = new Point(257, 115);
-            label34.Name = "label34";
-            label34.Size = new Size(98, 26);
-            label34.TabIndex = 7;
-            label34.Text = "₱ 15.00";
+            lblChange.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblChange.Font = new Font("Microsoft Sans Serif", 10F);
+            lblChange.Location = new Point(257, 115);
+            lblChange.Name = "lblChange";
+            lblChange.Size = new Size(98, 26);
+            lblChange.TabIndex = 7;
+            lblChange.Text = "₱ 15.00";
             // 
-            // label33
+            // lblCash
             // 
-            label33.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label33.Font = new Font("Microsoft Sans Serif", 10F);
-            label33.Location = new Point(257, 51);
-            label33.Name = "label33";
-            label33.Size = new Size(98, 26);
-            label33.TabIndex = 6;
-            label33.Text = "₱ 1100.00";
+            lblCash.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblCash.Font = new Font("Microsoft Sans Serif", 10F);
+            lblCash.Location = new Point(257, 51);
+            lblCash.Name = "lblCash";
+            lblCash.Size = new Size(98, 26);
+            lblCash.TabIndex = 6;
+            lblCash.Text = "₱ 1100.00";
             // 
             // label32
             // 
@@ -743,22 +289,21 @@
             label31.TabIndex = 4;
             label31.Text = "Cash";
             // 
-            // label30
+            // lblTotal
             // 
-            label30.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label30.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold);
-            label30.Location = new Point(254, 12);
-            label30.Name = "label30";
-            label30.Size = new Size(124, 39);
-            label30.TabIndex = 3;
-            label30.Text = "₱ 1085.00";
+            lblTotal.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblTotal.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold);
+            lblTotal.Location = new Point(254, 12);
+            lblTotal.Name = "lblTotal";
+            lblTotal.Size = new Size(124, 39);
+            lblTotal.TabIndex = 3;
+            lblTotal.Text = "₱ 1085.00";
             // 
             // panel17
             // 
             panel17.Controls.Add(cuiLabel6);
-            panel17.Controls.Add(label37);
-            panel17.Controls.Add(label36);
-            panel17.Controls.Add(label35);
+            panel17.Controls.Add(lblTransaction);
+            panel17.Controls.Add(lblDate);
             panel17.Dock = DockStyle.Top;
             panel17.Location = new Point(0, 705);
             panel17.Name = "panel17";
@@ -780,33 +325,24 @@
             cuiLabel6.TabIndex = 33;
             cuiLabel6.VerticalAlignment = StringAlignment.Near;
             // 
-            // label37
+            // lblTransaction
             // 
-            label37.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label37.Font = new Font("Microsoft Sans Serif", 11F);
-            label37.Location = new Point(268, 12);
-            label37.Name = "label37";
-            label37.Size = new Size(106, 26);
-            label37.TabIndex = 8;
-            label37.Text = "#2-13458";
+            lblTransaction.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblTransaction.Font = new Font("Microsoft Sans Serif", 11F);
+            lblTransaction.Location = new Point(268, 12);
+            lblTransaction.Name = "lblTransaction";
+            lblTransaction.Size = new Size(106, 26);
+            lblTransaction.TabIndex = 8;
+            lblTransaction.Text = "#2-13458";
             // 
-            // label36
+            // lblDate
             // 
-            label36.Font = new Font("Microsoft Sans Serif", 11F);
-            label36.Location = new Point(80, 12);
-            label36.Name = "label36";
-            label36.Size = new Size(85, 26);
-            label36.TabIndex = 7;
-            label36.Text = "4:00 PM";
-            // 
-            // label35
-            // 
-            label35.Font = new Font("Microsoft Sans Serif", 11F);
-            label35.Location = new Point(18, 12);
-            label35.Name = "label35";
-            label35.Size = new Size(70, 26);
-            label35.TabIndex = 6;
-            label35.Text = "6/9/25";
+            lblDate.Font = new Font("Microsoft Sans Serif", 11F);
+            lblDate.Location = new Point(18, 12);
+            lblDate.Name = "lblDate";
+            lblDate.Size = new Size(161, 26);
+            lblDate.TabIndex = 6;
+            lblDate.Text = "6/9/25";
             // 
             // cuiButton1
             // 
@@ -847,11 +383,43 @@
             cuiButton1.TextOffset = new Point(0, 0);
             cuiButton1.Click += cuiButton1_Click;
             // 
+            // cuiLabel4
+            // 
+            cuiLabel4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            cuiLabel4.BackColor = Color.White;
+            cuiLabel4.Content = "------------------------------------------------------------------------------";
+            cuiLabel4.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cuiLabel4.ForeColor = Color.Black;
+            cuiLabel4.HorizontalAlignment = StringAlignment.Center;
+            cuiLabel4.Location = new Point(13, 274);
+            cuiLabel4.Margin = new Padding(0);
+            cuiLabel4.Name = "cuiLabel4";
+            cuiLabel4.Size = new Size(369, 16);
+            cuiLabel4.TabIndex = 35;
+            cuiLabel4.VerticalAlignment = StringAlignment.Near;
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(flow_receipt_info);
+            panel3.Controls.Add(cuiLabel4);
+            panel3.Dock = DockStyle.Top;
+            panel3.Location = new Point(0, 244);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(391, 304);
+            panel3.TabIndex = 2;
+            // 
+            // flow_receipt_info
+            // 
+            flow_receipt_info.Dock = DockStyle.Top;
+            flow_receipt_info.Location = new Point(0, 0);
+            flow_receipt_info.Name = "flow_receipt_info";
+            flow_receipt_info.Size = new Size(391, 271);
+            flow_receipt_info.TabIndex = 36;
+            // 
             // ReceiptForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            AutoScroll = true;
             AutoSize = true;
             BackColor = Color.White;
             ClientSize = new Size(391, 803);
@@ -871,23 +439,9 @@
             Load += ReceiptForm_Load;
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
-            panel3.ResumeLayout(false);
-            tblItems.ResumeLayout(false);
-            tblItems.PerformLayout();
-            panel15.ResumeLayout(false);
-            panel14.ResumeLayout(false);
-            panel13.ResumeLayout(false);
-            panel12.ResumeLayout(false);
-            panel11.ResumeLayout(false);
-            panel10.ResumeLayout(false);
-            panel9.ResumeLayout(false);
-            panel8.ResumeLayout(false);
-            panel7.ResumeLayout(false);
-            panel6.ResumeLayout(false);
-            panel5.ResumeLayout(false);
-            panel4.ResumeLayout(false);
             panel16.ResumeLayout(false);
             panel17.ResumeLayout(false);
+            panel3.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -899,65 +453,28 @@
         private Panel panel2;
         private Label label2;
         private Label label3;
-        private Label label4;
+        private Label lblPOS;
         private CuoreUI.Controls.cuiLabel cuiLabel3;
-        private Panel panel3;
-        private TableLayoutPanel tblItems;
-        private Panel panel6;
-        private Panel panel5;
-        private Label label6;
-        private Panel panel4;
-        private Label label7;
-        private Label label5;
-        private Label label8;
-        private Label label10;
-        private Label label9;
-        private Panel panel9;
-        private Label label16;
-        private Panel panel8;
-        private Label label15;
-        private Panel panel7;
-        private Label label11;
-        private Label label12;
-        private Label label13;
-        private Label label14;
-        private Panel panel15;
-        private Label label28;
-        private Panel panel14;
-        private Label label27;
-        private Panel panel13;
-        private Label label23;
-        private Label label24;
-        private Label label25;
-        private Label label26;
-        private Panel panel12;
-        private Label label22;
-        private Panel panel11;
-        private Label label21;
-        private Panel panel10;
-        private Label label17;
-        private Label label18;
-        private Label label19;
-        private Label label20;
-        private CuoreUI.Controls.cuiLabel cuiLabel4;
         private Label label29;
         private Panel panel16;
-        private Label label33;
+        private Label lblCash;
         private Label label32;
         private Label label31;
-        private Label label30;
+        private Label lblTotal;
         private CuoreUI.Controls.cuiLabel cuiLabel5;
-        private Label label34;
+        private Label lblChange;
         private Panel panel17;
-        private Label label37;
-        private Label label36;
-        private Label label35;
+        private Label lblTransaction;
+        private Label lblDate;
         private CuoreUI.Controls.cuiButton cuiButton1;
         private CuoreUI.Controls.cuiLabel cuiLabel2;
         private CuoreUI.Controls.cuiLabel cuiLabel6;
         private Label label39;
         private Label label38;
-        private Label label41;
-        private Label label40;
+        private Label lblMaya;
+        private Label lblGCash;
+        private CuoreUI.Controls.cuiLabel cuiLabel4;
+        private Panel panel3;
+        private FlowLayoutPanel flow_receipt_info;
     }
 }

@@ -8,7 +8,7 @@ namespace Mare_POS.Database
 {
     public class TicketDataAccess
     {
-        private static string connectionString = "server=localhost;database=marepos-db;user=root;password=IyahMikaela_23";
+        private static string connectionString = "server=localhost;database=marepos-db;user=root;password=ejaydetera12";
 
         public static int GetNextTransactionNo()
         {

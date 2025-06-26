@@ -1,5 +1,5 @@
 ﻿using CuoreUI.Controls;
-using MareKwenta.Models;
+using Mare_POS.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
