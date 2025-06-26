@@ -1,4 +1,4 @@
-﻿using Mare_POS.Database;
+using Mare_POS.Database;
 using Mare_POS.Models;
 using System;
 using System.Collections.Generic;

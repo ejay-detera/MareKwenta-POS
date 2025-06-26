@@ -23,6 +23,9 @@
     <Compile Update="EmployeeLogsUserView\StaffPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="FoodQuantity.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="inventory\AddQuantityComponent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -33,6 +36,9 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="NavbarFolder\NavBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ProductComponent.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="TicketFolder\DiscountButton.cs">
