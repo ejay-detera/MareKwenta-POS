@@ -12,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Mare_POS
 {
@@ -635,7 +636,7 @@ private void cuiButton1_Click_1(object sender, EventArgs e)
                 {
                     childControl.Text = dataRow["IngredientMeasurement"]?.ToString() ?? "";
                 }
-                else if (childControl.Name.StartsWith("Notes") && childControl is TextBox)
+                else if (childControl.Name.StartsWith("Notes") && childControl is cuiTextBox)
                 {
                     childControl.Text = dataRow["Notes"]?.ToString() ?? "";
                 }
@@ -791,7 +792,7 @@ private void cuiButton1_Click_1(object sender, EventArgs e)
                 {
                     // Confirm deletion
                     DialogResult result = MessageBox.Show(
-                        "Are you sure you want to delete this expense?",
+                        "Are you sure you want to delete this item?",
                         "Confirm Delete",
                         MessageBoxButtons.YesNo,
                         MessageBoxIcon.Warning);
@@ -800,7 +801,7 @@ private void cuiButton1_Click_1(object sender, EventArgs e)
                     {
                         if (dbHelper.DeleteInventoryItem(inventoryId))
                         {
-                            MessageBox.Show("Expense deleted successfully!", "Success",
+                            MessageBox.Show("Inventory Item deleted successfully!", "Success",
                                           MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else

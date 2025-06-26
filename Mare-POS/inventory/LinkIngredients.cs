@@ -208,46 +208,55 @@ namespace Mare_POS.inventory
         private void chg_button_Click(object sender, EventArgs e)
         {
             HandlePanelDataInsertion("chgpanel", 5, "chg", "CHG");
+            LoadExistingIngredientData();
         }
 
         private void cig_button_Click(object sender, EventArgs e)
         {
             HandlePanelDataInsertion("cigpanel", 5, "cig", "CIG");
+            LoadExistingIngredientData();
         }
 
         private void chv_button_Click(object sender, EventArgs e)
         {
             HandlePanelDataInsertion("chvpanel", 5, "chv", "CHV");
+            LoadExistingIngredientData();
         }
 
         private void civ_button_Click(object sender, EventArgs e)
         {
             HandlePanelDataInsertion("civpanel", 5, "civ", "CIV");
+            LoadExistingIngredientData();
         }
 
         private void nhg_button_Click(object sender, EventArgs e)
         {
             HandlePanelDataInsertion("nhgpanel", 2, "nhg", "NHG");
+            LoadExistingIngredientData();
         }
 
         private void ncg_button_Click(object sender, EventArgs e)
         {
             HandlePanelDataInsertion("ncgpanel", 5, "ncg", "NCG");
+            LoadExistingIngredientData();
         }
 
         private void nhv_button_Click(object sender, EventArgs e)
         {
             HandlePanelDataInsertion("nhvpanel", 2, "nhv", "NHV");
+            LoadExistingIngredientData();
         }
 
         private void ncv_button_Click(object sender, EventArgs e)
         {
             HandlePanelDataInsertion("ncvpanel", 5, "ncv", "NCV");
+            LoadExistingIngredientData();
         }
 
         private void foods_button_Click(object sender, EventArgs e)
         {
             HandlePanelDataInsertion("foodpanel", 4, "food", "FOOD");
+            LoadExistingIngredientData();
         }
 
         private void cuiScrollbar1_Paint(object sender, PaintEventArgs e)
@@ -325,6 +334,11 @@ namespace Mare_POS.inventory
         }
 
         private void chgrow_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void chgpanel5_Paint(object sender, PaintEventArgs e)
         {
 
         }

@@ -260,13 +260,29 @@ namespace Mare_POS
                 try
                 {
                     con.Open();
-                    string query = "DELETE FROM inventory WHERE InventoryID = @id";
 
-                    using (MySqlCommand cmd = new MySqlCommand(query, con))
+                    // Start a transaction to keep things safe
+                    using (MySqlTransaction transaction = con.BeginTransaction())
                     {
-                        cmd.Parameters.AddWithValue("@id", id);
-                        int rowsAffected = cmd.ExecuteNonQuery();
-                        return rowsAffected > 0;
+                        // Delete from productingredient first
+                        string deleteProductIngredientQuery = "DELETE FROM productingredient WHERE InventoryID = @id";
+                        using (MySqlCommand cmd1 = new MySqlCommand(deleteProductIngredientQuery, con, transaction))
+                        {
+                            cmd1.Parameters.AddWithValue("@id", id);
+                            cmd1.ExecuteNonQuery();
+                        }
+
+                        // Then delete from inventory
+                        string deleteInventoryQuery = "DELETE FROM inventory WHERE InventoryID = @id";
+                        using (MySqlCommand cmd2 = new MySqlCommand(deleteInventoryQuery, con, transaction))
+                        {
+                            cmd2.Parameters.AddWithValue("@id", id);
+                            int rowsAffected = cmd2.ExecuteNonQuery();
+
+                            // Commit the transaction if successful
+                            transaction.Commit();
+                            return rowsAffected > 0;
+                        }
                     }
                 }
                 catch (MySqlException ex)
@@ -275,6 +291,7 @@ namespace Mare_POS
                 }
             }
         }
+
 
         public bool AddQuantityToInventoryItem(int inventoryId, decimal quantityToAdd)
         {
