@@ -193,6 +193,7 @@ namespace Mare_POS
 
         private void HandleItemAddedFromChild(Item item)
         {
+            //MessageBox.Show($"Item added from child control: {item.ProductName} {item.ProductID}");
             // ✅ Use centralized method with item data
             AddItemToOrder(item.ProductID, item.ProductName, item.ProductSize, item.ProductType, item.Quantity);
         }
@@ -200,6 +201,8 @@ namespace Mare_POS
         // ✅ Centralized method that ensures all items get proper EmployeeID
         private void AddItemToOrder(int productId, string productName, string size, string type, int quantity)
         {
+            //MessageBox.Show($"Adding item: {productName} (ID: {productId}, Size: {size}, Type: {type}, Qty: {quantity}");
+
             var currentEmployeeID = GetCurrentEmployeeID(); // ✅ Centralized EmployeeID
 
             string category = DetermineCategory(productName);

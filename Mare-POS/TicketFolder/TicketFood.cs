@@ -70,7 +70,7 @@ namespace Mare_POS
 
         private void cuiButton3_Click(object sender, EventArgs e)
         {
-            string productName = "Beef Pares";
+            string productName = "Hamsilog";
             HandleFoodSelection(productName);
         }
 
@@ -116,7 +116,6 @@ namespace Mare_POS
                     Category = "Food",
                     ProductSize = "N/A",        // ✅ Food items don't have size
                     ProductType = "N/A",       // ✅ Food items don't have type
-                    Extras = new List<string>() // ✅ Food items typically don't have extras
                 };
 
                 // ✅ Fire the event to notify TicketForm

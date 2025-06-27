@@ -44,7 +44,7 @@ namespace Mare_POS
                         connection.Open();
 
                         string createDatabaseQuery = @"
-                        CREATE DATABASE IF NOT EXISTS `marepos-db` 
+                        CREATE DATABASE IF NOT EXISTS `marepos-db`
                         CHARACTER SET utf8mb4 
                         COLLATE utf8mb4_unicode_ci;";
 
@@ -70,49 +70,21 @@ namespace Mare_POS
                         connection.Open();
 
                         string createTableQuery = @"
-                        CREATE TABLE IF NOT EXISTS `inventory` (
-                            `InventoryID` INT AUTO_INCREMENT PRIMARY KEY,
-                            `IngredientName` VARCHAR(255) NOT NULL,
-                            `Quantity` Decimal(10,2) NOT NULL DEFAULT 0,
-                            `IngredientCost` DECIMAL(10,2) NOT NULL DEFAULT 0,
-                            `IngredientMeasurement` VARCHAR(5) NOT NULL,
-                            `isDeleted` BOOLEAN NOT NULL DEFAULT FALSE,
-                            `DateAdded` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                            `LastUpdated` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-                            INDEX `idx_ingredient_name` (`IngredientName`),
-                            INDEX `idx_is_deleted` (`isDeleted`)
+                        CREATE TABLE IF NOT EXISTS inventory (
+                            InventoryID INT AUTO_INCREMENT PRIMARY KEY,
+                            IngredientName VARCHAR(255) NOT NULL,
+                            Quantity Decimal(10,2) NOT NULL DEFAULT 0,
+                            IngredientCost DECIMAL(10,2) NOT NULL DEFAULT 0,
+                            IngredientMeasurement VARCHAR(5) NOT NULL,
+                            DateAdded TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                            LastUpdated TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+                            INDEX idx_ingredient_name (IngredientName)
                         ) ENGINE=InnoDB;";
 
                         using (MySqlCommand command = new MySqlCommand(createTableQuery, connection))
                         {
                             command.ExecuteNonQuery();
                             Console.WriteLine("Inventory table created or already exists.");
-                        }
-
-                        // Check if isDeleted column exists, if not add it (for existing databases)
-                        string checkColumnQuery = @"
-                        SELECT COUNT(*) 
-                        FROM INFORMATION_SCHEMA.COLUMNS 
-                        WHERE TABLE_SCHEMA = 'marepos-db' 
-                        AND TABLE_NAME = 'inventory' 
-                        AND COLUMN_NAME = 'isDeleted'";
-
-                        using (MySqlCommand checkCmd = new MySqlCommand(checkColumnQuery, connection))
-                        {
-                            int columnExists = Convert.ToInt32(checkCmd.ExecuteScalar());
-                            if (columnExists == 0)
-                            {
-                                string addColumnQuery = @"
-                                ALTER TABLE `inventory` 
-                                ADD COLUMN `isDeleted` BOOLEAN NOT NULL DEFAULT FALSE,
-                                ADD INDEX `idx_is_deleted` (`isDeleted`)";
-
-                                using (MySqlCommand addCmd = new MySqlCommand(addColumnQuery, connection))
-                                {
-                                    addCmd.ExecuteNonQuery();
-                                    Console.WriteLine("isDeleted column added to inventory table.");
-                                }
-                            }
                         }
                     }
                     catch (MySqlException ex)
@@ -141,7 +113,7 @@ namespace Mare_POS
                 {
                     con.Open();
 
-                    string query = "INSERT INTO inventory (IngredientName, Quantity, IngredientMeasurement, IngredientCost, isDeleted) VALUES (@IngredientName, @Quantity, @IngredientMeasurement, @IngredientCost, FALSE)";
+                    string query = "INSERT INTO inventory (IngredientName, Quantity, IngredientMeasurement, IngredientCost) VALUES (@IngredientName, @Quantity, @IngredientMeasurement, @IngredientCost)";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, con))
                     {
@@ -176,7 +148,7 @@ namespace Mare_POS
                 try
                 {
                     con.Open();
-                    string query = "SELECT IngredientName, Quantity FROM inventory WHERE Quantity < 10 AND (isDeleted IS NULL OR isDeleted = 0)";
+                    string query = "SELECT IngredientName, Quantity FROM inventory WHERE Quantity < 10";
                     using (MySqlCommand cmd = new MySqlCommand(query, con))
                     using (MySqlDataReader reader = cmd.ExecuteReader())
                     {
@@ -207,7 +179,7 @@ namespace Mare_POS
                 try
                 {
                     con.Open();
-                    string query = "SELECT * FROM inventory WHERE (isDeleted IS NULL OR isDeleted = 0)";
+                    string query = "SELECT * FROM inventory";
                     MySqlCommand cmd = new MySqlCommand(query, con);
                     MySqlDataReader reader = cmd.ExecuteReader();
                     DataTable dt = new DataTable();
@@ -224,7 +196,6 @@ namespace Mare_POS
                 }
             }
         }
-
         public List<string> GetIngredientNamesForDropDown()
         {
             using (MySqlConnection con = new MySqlConnection(connectionString))
@@ -232,7 +203,7 @@ namespace Mare_POS
                 try
                 {
                     con.Open();
-                    string query = "SELECT IngredientName FROM inventory WHERE (isDeleted IS NULL OR isDeleted = 0) ORDER BY IngredientName";
+                    string query = "SELECT IngredientName FROM inventory ORDER BY IngredientName";
                     MySqlCommand cmd = new MySqlCommand(query, con);
                     MySqlDataReader reader = cmd.ExecuteReader();
 
@@ -253,7 +224,6 @@ namespace Mare_POS
                 }
             }
         }
-
         public bool UpdateInventoryItem(int id, string ingredientName, decimal quantity, string measurement)
         {
 
@@ -262,7 +232,7 @@ namespace Mare_POS
                 try
                 {
                     con.Open();
-                    string query = "UPDATE inventory SET IngredientName = @IngredientName, Quantity = @Quantity, IngredientMeasurement = @IngredientMeasurement WHERE InventoryID = @id AND (isDeleted IS NULL OR isDeleted = 0)";
+                    string query = "UPDATE inventory SET IngredientName = @IngredientName, Quantity = @Quantity, IngredientMeasurement = @IngredientMeasurement WHERE InventoryID = @id";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, con))
                     {
@@ -282,6 +252,7 @@ namespace Mare_POS
             }
         }
 
+
         public bool DeleteInventoryItem(int id)
         {
             using (MySqlConnection con = new MySqlConnection(connectionString))
@@ -293,7 +264,7 @@ namespace Mare_POS
                     // Start a transaction to keep things safe
                     using (MySqlTransaction transaction = con.BeginTransaction())
                     {
-
+                        // Delete from productingredient first
                         string deleteProductIngredientQuery = "DELETE FROM productingredient WHERE InventoryID = @id";
                         using (MySqlCommand cmd1 = new MySqlCommand(deleteProductIngredientQuery, con, transaction))
                         {
@@ -301,9 +272,9 @@ namespace Mare_POS
                             cmd1.ExecuteNonQuery();
                         }
 
-                        // Soft delete from inventory - set isDeleted = TRUE
-                        string softDeleteInventoryQuery = "UPDATE inventory SET isDeleted = TRUE WHERE InventoryID = @id";
-                        using (MySqlCommand cmd2 = new MySqlCommand(softDeleteInventoryQuery, con, transaction))
+                        // Then delete from inventory
+                        string deleteInventoryQuery = "DELETE FROM inventory WHERE InventoryID = @id";
+                        using (MySqlCommand cmd2 = new MySqlCommand(deleteInventoryQuery, con, transaction))
                         {
                             cmd2.Parameters.AddWithValue("@id", id);
                             int rowsAffected = cmd2.ExecuteNonQuery();
@@ -321,6 +292,7 @@ namespace Mare_POS
             }
         }
 
+
         public bool AddQuantityToInventoryItem(int inventoryId, decimal quantityToAdd)
         {
             try
@@ -332,8 +304,8 @@ namespace Mare_POS
                 {
                     connection.Open();
 
-                    // First, get the current quantity (only from non-deleted items)
-                    string selectQuery = "SELECT Quantity FROM inventory WHERE InventoryID = @inventoryId AND (isDeleted IS NULL OR isDeleted = 0)";
+                    // First, get the current quantity
+                    string selectQuery = "SELECT Quantity FROM inventory WHERE InventoryID = @inventoryId";
                     decimal currentQuantity = 0;
 
                     using (MySqlCommand selectCmd = new MySqlCommand(selectQuery, connection))
@@ -347,7 +319,7 @@ namespace Mare_POS
                         }
                         else
                         {
-                            // Inventory item not found or is deleted
+                            // Inventory item not found
                             return false;
                         }
                     }
@@ -355,8 +327,8 @@ namespace Mare_POS
                     // Calculate the new quantity and round it
                     decimal newQuantity = Math.Round(currentQuantity + quantityToAdd, 2);
 
-                    // Update the inventory with the new quantity (only non-deleted items)
-                    string updateQuery = "UPDATE inventory SET Quantity = @newQuantity WHERE InventoryID = @inventoryId AND (isDeleted IS NULL OR isDeleted = 0)";
+                    // Update the inventory with the new quantity
+                    string updateQuery = "UPDATE inventory SET Quantity = @newQuantity WHERE InventoryID = @inventoryId";
 
                     using (MySqlCommand updateCmd = new MySqlCommand(updateQuery, connection))
                     {
@@ -374,7 +346,6 @@ namespace Mare_POS
                 return false;
             }
         }
-
         public bool InsertIngredientsToDatabase(List<IngredientData> ingredients)
         {
             try
@@ -391,7 +362,7 @@ namespace Mare_POS
                                 // Get ProductID based on product name and category
                                 int productId = GetProductNameByID(ingredient.ProductName, ingredient.Category, connection, transaction);
 
-                                // Get InventoryID based on ingredient name (only non-deleted items)
+                                // Get InventoryID based on ingredient name
                                 int inventoryId = GetInventoryIdByIngredientName(ingredient.IngredientName, connection, transaction);
 
                                 if (productId > 0 && inventoryId > 0)
@@ -458,8 +429,7 @@ namespace Mare_POS
 
         public int GetInventoryIdByIngredientName(string ingredientName, MySqlConnection connection, MySqlTransaction transaction)
         {
-            // Only get non-deleted inventory items
-            string query = "SELECT InventoryID FROM inventory WHERE IngredientName = @ingredientName AND (isDeleted IS NULL OR isDeleted = 0)";
+            string query = "SELECT InventoryID FROM inventory WHERE IngredientName = @ingredientName";
 
             using (MySqlCommand cmd = new MySqlCommand(query, connection, transaction))
             {
@@ -485,13 +455,12 @@ namespace Mare_POS
                 {
                     connection.Open();
 
-                    // Only get ingredients from non-deleted inventory items
                     string query = @"
                SELECT i.IngredientName, pi.Quantity, pi.Category
                FROM productingredient pi
                INNER JOIN product p ON pi.ProductID = p.ProductID
                INNER JOIN inventory i ON pi.InventoryID = i.InventoryID
-               WHERE p.ProductName = @productName AND pi.Category = @category AND (i.isDeleted IS NULL OR i.isDeleted = 0)
+               WHERE p.ProductName = @productName AND pi.Category = @category
                ORDER BY pi.ProductIngredientID";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, connection))
@@ -524,6 +493,7 @@ namespace Mare_POS
             return ingredients;
         }
 
+
         public bool InsertOrUpdateIngredientsToDatabase(List<IngredientData> ingredients)
         {
             try
@@ -540,7 +510,7 @@ namespace Mare_POS
                                 // Get ProductID based on product name and category
                                 int productId = GetProductNameByID(ingredient.ProductName, ingredient.Category, connection, transaction);
 
-                                // Get InventoryID based on ingredient name (only non-deleted items)
+                                // Get InventoryID based on ingredient name
                                 int inventoryId = GetInventoryIdByIngredientName(ingredient.IngredientName, connection, transaction);
 
                                 if (productId > 0 && inventoryId > 0)
@@ -607,6 +577,7 @@ namespace Mare_POS
             }
         }
 
+
         private bool ProductIngredientExists(int productId, int inventoryId, string category, MySqlConnection connection, MySqlTransaction transaction)
         {
             string query = "SELECT COUNT(*) FROM productingredient WHERE ProductID = @productID AND InventoryID = @inventoryID AND Category = @category";
@@ -627,6 +598,5 @@ namespace Mare_POS
             string connectionString = "server=localhost;uid=root;pwd=ejaydetera12;database=marepos-db;";
             return new MySqlConnection(connectionString);
         }
-
     }
 }
