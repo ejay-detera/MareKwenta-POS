@@ -101,7 +101,6 @@ namespace Mare_POS.Dashboard
 
         protected override string GetQuery()
         {
-            // This method returns the chart query based on time range
             return GetChartQuery();
         }
 
