@@ -1,8 +1,95 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <ItemGroup>
-        <Compile Update="Form1.cs">
-            <SubType>Form</SubType>
-        </Compile>
-    </ItemGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="Authentication\Log_In.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CashboxFolder\AddExpenseComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CashboxFolder\CashboxForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="CashboxFolder\EditExpense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Dashboard\DashboardAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="EmployeeCard\EmployeeCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="EmployeeLogsUserView\StaffPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="inventory\AddQuantityComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="inventory\Inventory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="inventory\LinkIngredients.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="NavbarFolder\NavBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TicketFolder\DiscountButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="TicketFolder\FoodQuantity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PasswordPrompt\PasswordPrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TicketFolder\PopUpSplitComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TicketFolder\ProductComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TicketFolder\ReceiptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SaleshistoryFolder\SaleshistoryForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="StaffAdmin\AddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="StaffAdmin\ResetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="StaffAdmin\StaffPageAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="inventory\LinkIngredients.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="TicketFolder\TicketCoffee.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Update="TicketFolder\TicketCoffee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Ticket Dashboard\ProductComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="TicketFolder\TicketFood.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="TicketFolder\TicketForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="TicketFolder\TicketNonCoffee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Ticket\TicketForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
 </Project>
