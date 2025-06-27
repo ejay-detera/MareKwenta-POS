@@ -44,9 +44,9 @@ namespace Mare_POS.inventory
             try
             {
                 LoadPanelData("chgpanel", 5, "chg");
-                LoadPanelData("cigpanel", 5, "cig");
+                LoadPanelData("cigpanel", 5, "ccg");
                 LoadPanelData("chvpanel", 5, "chv");
-                LoadPanelData("civpanel", 5, "civ");
+                LoadPanelData("civpanel", 5, "ccv");
                 LoadPanelData("nhgpanel", 2, "nhg");
                 LoadPanelData("ncgpanel", 5, "ncg");
                 LoadPanelData("nhvpanel", 2, "nhv");
@@ -213,7 +213,7 @@ namespace Mare_POS.inventory
 
         private void cig_button_Click(object sender, EventArgs e)
         {
-            HandlePanelDataInsertion("cigpanel", 5, "cig", "CIG");
+            HandlePanelDataInsertion("cigpanel", 5, "ccg", "CIG");
             LoadExistingIngredientData();
         }
 
@@ -225,7 +225,7 @@ namespace Mare_POS.inventory
 
         private void civ_button_Click(object sender, EventArgs e)
         {
-            HandlePanelDataInsertion("civpanel", 5, "civ", "CIV");
+            HandlePanelDataInsertion("civpanel", 5, "ccv", "CIV");
             LoadExistingIngredientData();
         }
 
@@ -339,6 +339,16 @@ namespace Mare_POS.inventory
         }
 
         private void chgpanel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void chgpanel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void chgcapuccino_Click(object sender, EventArgs e)
         {
 
         }

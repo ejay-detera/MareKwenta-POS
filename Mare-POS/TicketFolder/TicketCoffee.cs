@@ -1,5 +1,5 @@
-using Mare_POS.Database;
-using Mare_POS.Models;
+using Mare_POS.TicketFolder.Database;
+using Mare_POS.TicketFolder.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,8 +24,8 @@ namespace Mare_POS.Ticket_Components
             this.transactionNo = transactionNo;
             this.finalAmount = finalAmount;
         }
-
-        private List<Item> currentOrder = new List<Item>();
+        public event Action<Item> ItemAdded;
+        //private List<Item> currentOrder = new List<Item>();
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -56,202 +56,50 @@ namespace Mare_POS.Ticket_Components
 
         private void cuiButton4_Click(object sender, EventArgs e)
         {
-            var popup = new ProductComponent();
-            popup.StartPosition = FormStartPosition.CenterParent;
-            popup.ProductId = 1;
-            popup.ProductName = "Americano";
-
-            if (popup.ShowDialog(this) == DialogResult.OK)
-            {
-                // Popup selection
-                string size = popup.SelectedSize ?? "N/A";
-                string type = popup.SelectedType ?? "N/A";
-                int qty = popup.Quantity;
-                List<string> extras = popup.SelectedExtras;
-                string extrasStr = extras.Count > 0 ? string.Join(", ", extras) : "None";
-
-                // Product info
-                int productId = 1;
-                string productName = "Americano";
-                string category = "Coffee";
-
-                // ✅ Get prices dynamically
-                decimal basePrice = ProductDataAccess.GetBasePrice(productId, size, type);
-                decimal extrasPrice = ProductDataAccess.GetExtrasTotal(extras);
-                decimal itemTotal = (basePrice + extrasPrice) * qty;
-
-                // Add to cart
-                currentOrder.Add(new Item
-                {
-                    ProductID = productId,
-                    ProductName = productName,
-                    ProductSize = size,
-                    ProductType = type,
-                    Extras = extras,
-                    Quantity = qty,
-                    Amount = itemTotal,
-                    Category = category
-                });
-
-                MessageBox.Show(
-                    $"✅ Added {qty}x {productName}\n" +
-                    $"Size: {size}\nType: {type}\nExtras: {extrasStr}\n" +
-                    $"Subtotal: ₱{itemTotal}",
-                    "Added to Order"
-                );
-            }
+            string productName = "Americano";
+            HandleProductSelection(productName);
         }
 
         private void cuiButton1_Click(object sender, EventArgs e)
         {
-            var popup = new ProductComponent();
-            popup.StartPosition = FormStartPosition.CenterParent;
-            popup.ProductId = 2;
-            popup.ProductName = "Cafe Latte";
-
-            if (popup.ShowDialog(this) == DialogResult.OK)
-            {
-                // Popup selection
-                string size = popup.SelectedSize ?? "N/A";
-                string type = popup.SelectedType ?? "N/A";
-                int qty = popup.Quantity;
-                List<string> extras = popup.SelectedExtras;
-                string extrasStr = extras.Count > 0 ? string.Join(", ", extras) : "None";
-
-                // Product info
-                int productId = 2;
-                string productName = "Cafe Latte";
-                string category = "Coffee";
-
-                // ✅ Get prices dynamically
-                decimal basePrice = ProductDataAccess.GetBasePrice(productId, size, type);
-                decimal extrasPrice = ProductDataAccess.GetExtrasTotal(extras);
-                decimal itemTotal = (basePrice + extrasPrice) * qty;
-
-                // Add to cart
-                currentOrder.Add(new Item
-                {
-                    ProductID = productId,
-                    ProductName = productName,
-                    ProductSize = size,
-                    ProductType = type,
-                    Extras = extras,
-                    Quantity = qty,
-                    Amount = itemTotal,
-                    Category = category
-                });
-
-                MessageBox.Show(
-                    $"✅ Added {qty}x {productName}\n" +
-                    $"Size: {size}\nType: {type}\nExtras: {extrasStr}\n" +
-                    $"Subtotal: ₱{itemTotal}",
-                    "Added to Order"
-                );
-            }
+            string productName = "Cafe Latte";
+            HandleProductSelection(productName);
         }
 
         private void cuiButton2_Click(object sender, EventArgs e)
         {
-            var popup = new ProductComponent();
-            popup.StartPosition = FormStartPosition.CenterParent;
-            popup.ProductId = 3;
-            popup.ProductName = "Caramel Macchiato";
-
-            if (popup.ShowDialog(this) == DialogResult.OK)
-            {
-                // Popup selection
-                string size = popup.SelectedSize ?? "N/A";
-                string type = popup.SelectedType ?? "N/A";
-                int qty = popup.Quantity;
-                List<string> extras = popup.SelectedExtras;
-                string extrasStr = extras.Count > 0 ? string.Join(", ", extras) : "None";
-
-                // Product info
-                int productId = 3;
-                string productName = "Caramel Macchiato";
-                string category = "Coffee";
-
-                // ✅ Get prices dynamically
-                decimal basePrice = ProductDataAccess.GetBasePrice(productId, size, type);
-                decimal extrasPrice = ProductDataAccess.GetExtrasTotal(extras);
-                decimal itemTotal = (basePrice + extrasPrice) * qty;
-
-                // Add to cart
-                currentOrder.Add(new Item
-                {
-                    ProductID = productId,
-                    ProductName = productName,
-                    ProductSize = size,
-                    ProductType = type,
-                    Extras = extras,
-                    Quantity = qty,
-                    Amount = itemTotal,
-                    Category = category
-                });
-
-                MessageBox.Show(
-                    $"✅ Added {qty}x {productName}\n" +
-                    $"Size: {size}\nType: {type}\nExtras: {extrasStr}\n" +
-                    $"Subtotal: ₱{itemTotal}",
-                    "Added to Order"
-                );
-            }
+            string productName = "Caramel Macchiato";
+            HandleProductSelection(productName);
         }
 
         private void cuiButton3_Click(object sender, EventArgs e)
         {
-            var popup = new ProductComponent();
-            popup.StartPosition = FormStartPosition.CenterParent;
-            popup.ProductId = 4;
-            popup.ProductName = "Mocha";
-
-            if (popup.ShowDialog(this) == DialogResult.OK)
-            {
-                // Popup selection
-                string size = popup.SelectedSize ?? "N/A";
-                string type = popup.SelectedType ?? "N/A";
-                int qty = popup.Quantity;
-                List<string> extras = popup.SelectedExtras;
-                string extrasStr = extras.Count > 0 ? string.Join(", ", extras) : "None";
-
-                // Product info
-                int productId = 4;
-                string productName = "Mocha";
-                string category = "Coffee";
-
-                // ✅ Get prices dynamically
-                decimal basePrice = ProductDataAccess.GetBasePrice(productId, size, type);
-                decimal extrasPrice = ProductDataAccess.GetExtrasTotal(extras);
-                decimal itemTotal = (basePrice + extrasPrice) * qty;
-
-                // Add to cart
-                currentOrder.Add(new Item
-                {
-                    ProductID = productId,
-                    ProductName = productName,
-                    ProductSize = size,
-                    ProductType = type,
-                    Extras = extras,
-                    Quantity = qty,
-                    Amount = itemTotal,
-                    Category = category
-                });
-
-                MessageBox.Show(
-                    $"✅ Added {qty}x {productName}\n" +
-                    $"Size: {size}\nType: {type}\nExtras: {extrasStr}\n" +
-                    $"Subtotal: ₱{itemTotal}",
-                    "Added to Order"
-                );
-            }
+            string productName = "Mocha";
+            HandleProductSelection(productName);
         }
 
         private void cuiButton5_Click(object sender, EventArgs e)
         {
+            string productName = "Cappuccino";
+            HandleProductSelection(productName);
+        }
+
+        // Centralized method to handle product selection
+        private void HandleProductSelection(string productName)
+        {
+            // Get ProductID dynamically from database
+            int productId = ProductDataAccess.GetProductId(productName);
+
+            if (productId == 0)
+            {
+                MessageBox.Show($"Product '{productName}' not found in database!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             var popup = new ProductComponent();
             popup.StartPosition = FormStartPosition.CenterParent;
-            popup.ProductId = 5;
-            popup.ProductName = "Cappucino";
+            popup.ProductId = productId;
+            popup.ProductName = productName;
 
             if (popup.ShowDialog(this) == DialogResult.OK)
             {
@@ -259,39 +107,55 @@ namespace Mare_POS.Ticket_Components
                 string size = popup.SelectedSize ?? "N/A";
                 string type = popup.SelectedType ?? "N/A";
                 int qty = popup.Quantity;
-                List<string> extras = popup.SelectedExtras;
-                string extrasStr = extras.Count > 0 ? string.Join(", ", extras) : "None";
 
                 // Product info
-                int productId = 5;
-                string productName = "Cappucino";
                 string category = "Coffee";
 
-                // ✅ Get prices dynamically
+                // ✅ Get prices dynamically using the correct ProductID
                 decimal basePrice = ProductDataAccess.GetBasePrice(productId, size, type);
-                decimal extrasPrice = ProductDataAccess.GetExtrasTotal(extras);
-                decimal itemTotal = (basePrice + extrasPrice) * qty;
+                decimal itemTotal = basePrice * qty;
+
+                // Debug info (remove after testing)
+                //MessageBox.Show($"Debug Info:\nProductName: {productName}\nProductID: {productId}\nSize: {size}\nType: {type}\nBase Price: {basePrice}", "Debug");
 
                 // Add to cart
-                currentOrder.Add(new Item
+                var item = new Item
                 {
                     ProductID = productId,
                     ProductName = productName,
                     ProductSize = size,
                     ProductType = type,
-                    Extras = extras,
                     Quantity = qty,
                     Amount = itemTotal,
-                    Category = category
-                });
-
-                MessageBox.Show(
-                    $"✅ Added {qty}x {productName}\n" +
-                    $"Size: {size}\nType: {type}\nExtras: {extrasStr}\n" +
-                    $"Subtotal: ₱{itemTotal}",
-                    "Added to Order"
-                );
+                    Category = "Coffee"
+                };
+                // ✅ DEBUG: Check if event has subscribers before firing
+                if (ItemAdded != null)
+                {
+                    //MessageBox.Show($"ItemAdded event has {ItemAdded.GetInvocationList().Length} subscribers. Firing event...");
+                    ItemAdded?.Invoke(item);
+                    //MessageBox.Show("Event fired successfully!");
+                }
+                else
+                {
+                    MessageBox.Show("ERROR: ItemAdded event is NULL! No subscribers attached!");
+                }
             }
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

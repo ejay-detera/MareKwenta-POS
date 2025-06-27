@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Mare_POS.Models
+namespace Mare_POS.TicketFolder.Models
 {
     public class product
     {

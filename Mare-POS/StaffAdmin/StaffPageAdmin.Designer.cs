@@ -51,7 +51,7 @@ namespace Mare_POS
             cuiLabel1.Font = new Font("Unbounded", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiLabel1.ForeColor = Color.FromArgb(78, 45, 24);
             cuiLabel1.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel1.Location = new Point(56, 36);
+            cuiLabel1.Location = new Point(57, 7);
             cuiLabel1.Margin = new Padding(6, 7, 6, 7);
             cuiLabel1.Name = "cuiLabel1";
             cuiLabel1.Size = new Size(208, 64);
@@ -188,7 +188,7 @@ namespace Mare_POS
             cuiPanel8.BackColor = Color.FromArgb(242, 239, 234);
             cuiPanel8.Controls.Add(label17);
             cuiPanel8.Controls.Add(dateHeader);
-            cuiPanel8.Location = new Point(1068, 52);
+            cuiPanel8.Location = new Point(1072, 15);
             cuiPanel8.Name = "cuiPanel8";
             cuiPanel8.OutlineThickness = 1F;
             cuiPanel8.PanelColor = Color.FromArgb(242, 239, 234);

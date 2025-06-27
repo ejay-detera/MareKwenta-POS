@@ -58,7 +58,7 @@
             panelDates.Anchor = AnchorStyles.None;
             panelDates.AutoScroll = true;
             panelDates.AutoScrollMargin = new Size(20, 20);
-            panelDates.Location = new Point(66, 96);
+            panelDates.Location = new Point(37, 96);
             panelDates.Margin = new Padding(3, 4, 3, 4);
             panelDates.Name = "panelDates";
             panelDates.OutlineThickness = 1F;
@@ -72,6 +72,7 @@
             // 
             // PanelEmployeeCards
             // 
+            PanelEmployeeCards.Anchor = AnchorStyles.None;
             PanelEmployeeCards.AutoScroll = true;
             PanelEmployeeCards.FlowDirection = FlowDirection.TopDown;
             PanelEmployeeCards.Location = new Point(533, 96);

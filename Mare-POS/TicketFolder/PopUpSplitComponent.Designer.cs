@@ -224,9 +224,9 @@
             // 
             label2.Font = new Font("Microsoft Sans Serif", 13.7999992F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.FromArgb(78, 45, 24);
-            label2.Location = new Point(155, 9);
+            label2.Location = new Point(176, 9);
             label2.Name = "label2";
-            label2.Size = new Size(176, 36);
+            label2.Size = new Size(134, 36);
             label2.TabIndex = 0;
             label2.Text = "Payments";
             // 
@@ -480,6 +480,7 @@
             paymentline3.Name = "paymentline3";
             paymentline3.Size = new Size(493, 66);
             paymentline3.TabIndex = 35;
+            paymentline3.Visible = false;
             // 
             // txtAmount3
             // 
@@ -524,6 +525,7 @@
             comboBox3.Name = "comboBox3";
             comboBox3.Size = new Size(154, 28);
             comboBox3.TabIndex = 3;
+            comboBox3.SelectedIndexChanged += comboBox3_SelectedIndexChanged;
             // 
             // cuiButton5
             // 
@@ -541,7 +543,7 @@
             cuiButton5.HoveredImageTint = Color.White;
             cuiButton5.HoverForeColor = Color.Black;
             cuiButton5.HoverOutline = Color.FromArgb(32, 128, 128, 128);
-            cuiButton5.Image = (Image)resources.GetObject("cuiButton5.Image");
+            cuiButton5.Image = null;
             cuiButton5.ImageAutoCenter = true;
             cuiButton5.ImageExpand = new Point(6, 6);
             cuiButton5.ImageOffset = new Point(0, 0);
@@ -576,12 +578,12 @@
             Controls.Add(cuiLabel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "PopUpSplitComponent";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "PopUpSplitComponent";
+            Text = "Split Payment";
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             paymentline1.ResumeLayout(false);

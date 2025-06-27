@@ -59,9 +59,9 @@
             // 
             labelSubtotal.Font = new Font("Microsoft Sans Serif", 17F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelSubtotal.ForeColor = Color.FromArgb(78, 45, 24);
-            labelSubtotal.Location = new Point(180, 21);
+            labelSubtotal.Location = new Point(176, 28);
             labelSubtotal.Name = "labelSubtotal";
-            labelSubtotal.Size = new Size(263, 49);
+            labelSubtotal.Size = new Size(138, 44);
             labelSubtotal.TabIndex = 3;
             labelSubtotal.Text = "0.00";
             labelSubtotal.Click += label2_Click;
@@ -84,7 +84,7 @@
             // 
             label1.Font = new Font("Microsoft Sans Serif", 17F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(78, 45, 24);
-            label1.Location = new Point(84, 21);
+            label1.Location = new Point(78, 28);
             label1.Name = "label1";
             label1.Size = new Size(263, 49);
             label1.TabIndex = 1;
@@ -208,7 +208,7 @@
             // 
             // cuiButton1
             // 
-            cuiButton1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            cuiButton1.Anchor = AnchorStyles.None;
             cuiButton1.CheckButton = false;
             cuiButton1.Checked = false;
             cuiButton1.CheckedBackground = Color.FromArgb(255, 106, 0);
@@ -227,7 +227,7 @@
             cuiButton1.ImageAutoCenter = true;
             cuiButton1.ImageExpand = new Point(0, 0);
             cuiButton1.ImageOffset = new Point(0, 0);
-            cuiButton1.Location = new Point(365, 361);
+            cuiButton1.Location = new Point(349, 357);
             cuiButton1.Name = "cuiButton1";
             cuiButton1.NormalBackground = Color.FromArgb(78, 45, 24);
             cuiButton1.NormalForeColor = Color.White;
@@ -239,7 +239,7 @@
             cuiButton1.PressedImageTint = Color.White;
             cuiButton1.PressedOutline = Color.FromArgb(64, 128, 128, 128);
             cuiButton1.Rounding = new Padding(8);
-            cuiButton1.Size = new Size(101, 47);
+            cuiButton1.Size = new Size(117, 51);
             cuiButton1.TabIndex = 11;
             cuiButton1.TextAlignment = StringAlignment.Center;
             cuiButton1.TextOffset = new Point(0, 0);
@@ -255,7 +255,7 @@
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FoodQuantity";

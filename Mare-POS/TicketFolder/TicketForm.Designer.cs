@@ -31,7 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TicketForm));
             panelMain = new TableLayoutPanel();
             panel1 = new Panel();
-            tableLayoutPanel2 = new TableLayoutPanel();
+            FoodPanel = new CuoreUI.Controls.cuiPanel();
+            ticketFood1 = new TicketFood();
+            PanelIndicator = new CuoreUI.Controls.cuiPanel();
+            NonCoffeePanel = new CuoreUI.Controls.cuiPanel();
+            ticketNonCoffee1 = new TicketNonCoffee();
+            CoffeePanel = new CuoreUI.Controls.cuiPanel();
+            ticketCoffee1 = new Mare_POS.Ticket_Components.TicketCoffee();
+            AllPanel = new CuoreUI.Controls.cuiPanel();
+            lahat = new TableLayoutPanel();
             panel20 = new Panel();
             label33 = new Label();
             pictureBox9 = new PictureBox();
@@ -122,9 +130,9 @@
             label19 = new Label();
             lblProductNameTemplate = new Label();
             tableLayoutPanel11 = new TableLayoutPanel();
-            cuiButton22 = new CuoreUI.Controls.cuiButton();
+            GCash = new CuoreUI.Controls.cuiButton();
             cuiButton25 = new CuoreUI.Controls.cuiButton();
-            cuiButton23 = new CuoreUI.Controls.cuiButton();
+            Maya = new CuoreUI.Controls.cuiButton();
             cuiButton24 = new CuoreUI.Controls.cuiButton();
             tableLayoutPanel10 = new TableLayoutPanel();
             panel15 = new Panel();
@@ -149,72 +157,6 @@
             tableLayoutPanel6 = new TableLayoutPanel();
             panel11 = new Panel();
             label26 = new Label();
-            panel12 = new Panel();
-            labelSubtotal = new Label();
-            tableLayoutPanel4 = new TableLayoutPanel();
-            panel10 = new Panel();
-            cuiLabel1 = new CuoreUI.Controls.cuiLabel();
-            panel2 = new Panel();
-            label6 = new Label();
-            panel4 = new Panel();
-            tableLayoutPanel1 = new TableLayoutPanel();
-            cuiPanel4 = new CuoreUI.Controls.cuiPanel();
-            tableLayoutPanel14 = new TableLayoutPanel();
-            btnFood = new Button();
-            btnAll = new Button();
-            btnCoffee = new Button();
-            btnNonCoffee = new Button();
-            panel3 = new Panel();
-            label1 = new Label();
-            cuiPanel1 = new CuoreUI.Controls.cuiPanel();
-            flowTicketPanel = new FlowLayoutPanel();
-            panelTemplateCartItem = new CuoreUI.Controls.cuiPanel();
-            lblQuantityTemplate = new Label();
-            lblTypeTemplate = new Label();
-            lblSizeTemplate = new Label();
-            lblPriceTemplate = new Label();
-            label21 = new Label();
-            label20 = new Label();
-            label19 = new Label();
-            lblProductNameTemplate = new Label();
-            tableLayoutPanel11 = new TableLayoutPanel();
-            cuiButton22 = new CuoreUI.Controls.cuiButton();
-            cuiButton25 = new CuoreUI.Controls.cuiButton();
-            cuiButton23 = new CuoreUI.Controls.cuiButton();
-            cuiButton24 = new CuoreUI.Controls.cuiButton();
-            tableLayoutPanel10 = new TableLayoutPanel();
-            panel15 = new Panel();
-            labelCashReceived = new Label();
-            label17 = new Label();
-            label22 = new Label();
-            panel16 = new Panel();
-            labelChange = new Label();
-            label23 = new Label();
-            label24 = new Label();
-            tableLayoutPanel9 = new TableLayoutPanel();
-            panel13 = new Panel();
-            label16 = new Label();
-            label14 = new Label();
-            panel14 = new Panel();
-            label28 = new Label();
-            label15 = new Label();
-            tableLayoutPanel8 = new TableLayoutPanel();
-            btn1000 = new CuoreUI.Controls.cuiButton();
-            btn500 = new CuoreUI.Controls.cuiButton();
-            btn200 = new CuoreUI.Controls.cuiButton();
-            btn100 = new CuoreUI.Controls.cuiButton();
-            btn50 = new CuoreUI.Controls.cuiButton();
-            btn20 = new CuoreUI.Controls.cuiButton();
-            btnClearPayment = new CuoreUI.Controls.cuiButton();
-            txtManualAmount = new TextBox();
-            tableLayoutPanel7 = new TableLayoutPanel();
-            cuiPanel3 = new CuoreUI.Controls.cuiPanel();
-            btnDiscount = new Button();
-            button5 = new Button();
-            tableLayoutPanel6 = new TableLayoutPanel();
-            panel11 = new Panel();
-            label26 = new Label();
-            panel12 = new Panel();
             labelSubtotal = new Label();
             tableLayoutPanel4 = new TableLayoutPanel();
             panel10 = new Panel();
@@ -223,7 +165,12 @@
             label6 = new Label();
             panelMain.SuspendLayout();
             panel1.SuspendLayout();
-            tableLayoutPanel2.SuspendLayout();
+            FoodPanel.SuspendLayout();
+            PanelIndicator.SuspendLayout();
+            NonCoffeePanel.SuspendLayout();
+            CoffeePanel.SuspendLayout();
+            AllPanel.SuspendLayout();
+            lahat.SuspendLayout();
             panel20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             panel19.SuspendLayout();
@@ -274,31 +221,6 @@
             cuiPanel3.SuspendLayout();
             tableLayoutPanel6.SuspendLayout();
             panel11.SuspendLayout();
-            panel12.SuspendLayout();
-            tableLayoutPanel4.SuspendLayout();
-            panel10.SuspendLayout();
-            panel2.SuspendLayout();
-            panel4.SuspendLayout();
-            tableLayoutPanel1.SuspendLayout();
-            cuiPanel4.SuspendLayout();
-            tableLayoutPanel14.SuspendLayout();
-            panel3.SuspendLayout();
-            cuiPanel1.SuspendLayout();
-            flowTicketPanel.SuspendLayout();
-            panelTemplateCartItem.SuspendLayout();
-            tableLayoutPanel11.SuspendLayout();
-            tableLayoutPanel10.SuspendLayout();
-            panel15.SuspendLayout();
-            panel16.SuspendLayout();
-            tableLayoutPanel9.SuspendLayout();
-            panel13.SuspendLayout();
-            panel14.SuspendLayout();
-            tableLayoutPanel8.SuspendLayout();
-            tableLayoutPanel7.SuspendLayout();
-            cuiPanel3.SuspendLayout();
-            tableLayoutPanel6.SuspendLayout();
-            panel11.SuspendLayout();
-            panel12.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
             panel10.SuspendLayout();
             panel2.SuspendLayout();
@@ -324,8 +246,8 @@
             // 
             // panel1
             // 
-            panel1.AutoScroll = true;
-            panel1.Controls.Add(tableLayoutPanel2);
+            panel1.Controls.Add(FoodPanel);
+            panel1.Controls.Add(PanelIndicator);
             panel1.Controls.Add(panel4);
             panel1.Controls.Add(panel3);
             panel1.Dock = DockStyle.Fill;
@@ -336,44 +258,132 @@
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
-            // tableLayoutPanel2
+            // FoodPanel
             // 
-            tableLayoutPanel2.AutoSize = true;
-            tableLayoutPanel2.ColumnCount = 5;
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            tableLayoutPanel2.Controls.Add(panel20, 3, 2);
-            tableLayoutPanel2.Controls.Add(panel19, 2, 2);
-            tableLayoutPanel2.Controls.Add(panel18, 1, 2);
-            tableLayoutPanel2.Controls.Add(panel17, 0, 2);
-            tableLayoutPanel2.Controls.Add(panel30, 4, 1);
-            tableLayoutPanel2.Controls.Add(panel29, 3, 1);
-            tableLayoutPanel2.Controls.Add(panel28, 2, 1);
-            tableLayoutPanel2.Controls.Add(panel27, 1, 1);
-            tableLayoutPanel2.Controls.Add(panel22, 0, 1);
-            tableLayoutPanel2.Controls.Add(panel9, 4, 0);
-            tableLayoutPanel2.Controls.Add(panel5, 3, 0);
-            tableLayoutPanel2.Controls.Add(panel6, 2, 0);
-            tableLayoutPanel2.Controls.Add(panel7, 1, 0);
-            tableLayoutPanel2.Controls.Add(panel8, 0, 0);
-            tableLayoutPanel2.Location = new Point(42, 205);
-            tableLayoutPanel2.Name = "tableLayoutPanel2";
-            tableLayoutPanel2.RowCount = 3;
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
-            tableLayoutPanel2.Size = new Size(982, 727);
-            tableLayoutPanel2.TabIndex = 7;
+            FoodPanel.Controls.Add(ticketFood1);
+            FoodPanel.Location = new Point(9, 187);
+            FoodPanel.Name = "FoodPanel";
+            FoodPanel.OutlineThickness = 1F;
+            FoodPanel.PanelColor = Color.FromArgb(242, 239, 234);
+            FoodPanel.PanelOutlineColor = Color.FromArgb(242, 239, 234);
+            FoodPanel.Rounding = new Padding(8);
+            FoodPanel.Size = new Size(913, 765);
+            FoodPanel.TabIndex = 11;
+            // 
+            // ticketFood1
+            // 
+            ticketFood1.BackColor = Color.FromArgb(242, 239, 234);
+            ticketFood1.Location = new Point(12, 17);
+            ticketFood1.Name = "ticketFood1";
+            ticketFood1.Size = new Size(875, 349);
+            ticketFood1.TabIndex = 0;
+            ticketFood1.Load += ticketFood1_Load;
+            // 
+            // PanelIndicator
+            // 
+            PanelIndicator.Anchor = AnchorStyles.None;
+            PanelIndicator.Controls.Add(NonCoffeePanel);
+            PanelIndicator.Controls.Add(CoffeePanel);
+            PanelIndicator.Controls.Add(AllPanel);
+            PanelIndicator.Location = new Point(9, 187);
+            PanelIndicator.Name = "PanelIndicator";
+            PanelIndicator.OutlineThickness = 1F;
+            PanelIndicator.PanelColor = Color.FromArgb(242, 239, 234);
+            PanelIndicator.PanelOutlineColor = Color.FromArgb(242, 239, 234);
+            PanelIndicator.Rounding = new Padding(8);
+            PanelIndicator.Size = new Size(1078, 801);
+            PanelIndicator.TabIndex = 9;
+            // 
+            // NonCoffeePanel
+            // 
+            NonCoffeePanel.Controls.Add(ticketNonCoffee1);
+            NonCoffeePanel.Location = new Point(3, 3);
+            NonCoffeePanel.Name = "NonCoffeePanel";
+            NonCoffeePanel.OutlineThickness = 1F;
+            NonCoffeePanel.PanelColor = Color.FromArgb(242, 239, 234);
+            NonCoffeePanel.PanelOutlineColor = Color.FromArgb(242, 239, 234);
+            NonCoffeePanel.Rounding = new Padding(8);
+            NonCoffeePanel.Size = new Size(916, 765);
+            NonCoffeePanel.TabIndex = 10;
+            // 
+            // ticketNonCoffee1
+            // 
+            ticketNonCoffee1.BackColor = Color.FromArgb(242, 239, 234);
+            ticketNonCoffee1.Location = new Point(17, 13);
+            ticketNonCoffee1.Name = "ticketNonCoffee1";
+            ticketNonCoffee1.Size = new Size(887, 664);
+            ticketNonCoffee1.TabIndex = 0;
+            // 
+            // CoffeePanel
+            // 
+            CoffeePanel.Controls.Add(ticketCoffee1);
+            CoffeePanel.Location = new Point(20, 3);
+            CoffeePanel.Name = "CoffeePanel";
+            CoffeePanel.OutlineThickness = 1F;
+            CoffeePanel.PanelColor = Color.FromArgb(242, 239, 234);
+            CoffeePanel.PanelOutlineColor = Color.FromArgb(242, 239, 234);
+            CoffeePanel.Rounding = new Padding(8);
+            CoffeePanel.Size = new Size(913, 765);
+            CoffeePanel.TabIndex = 9;
+            // 
+            // ticketCoffee1
+            // 
+            ticketCoffee1.Location = new Point(0, 0);
+            ticketCoffee1.Margin = new Padding(4, 6, 0, 0);
+            ticketCoffee1.Name = "ticketCoffee1";
+            ticketCoffee1.Size = new Size(881, 577);
+            ticketCoffee1.TabIndex = 0;
+            // 
+            // AllPanel
+            // 
+            AllPanel.Controls.Add(lahat);
+            AllPanel.Location = new Point(25, 18);
+            AllPanel.Name = "AllPanel";
+            AllPanel.OutlineThickness = 1F;
+            AllPanel.PanelColor = Color.FromArgb(242, 239, 234);
+            AllPanel.PanelOutlineColor = Color.FromArgb(242, 239, 234);
+            AllPanel.Rounding = new Padding(8);
+            AllPanel.Size = new Size(989, 765);
+            AllPanel.TabIndex = 8;
+            // 
+            // lahat
+            // 
+            lahat.AutoSize = true;
+            lahat.ColumnCount = 5;
+            lahat.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            lahat.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            lahat.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            lahat.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            lahat.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            lahat.Controls.Add(panel20, 3, 2);
+            lahat.Controls.Add(panel19, 2, 2);
+            lahat.Controls.Add(panel18, 1, 2);
+            lahat.Controls.Add(panel17, 0, 2);
+            lahat.Controls.Add(panel30, 4, 1);
+            lahat.Controls.Add(panel29, 3, 1);
+            lahat.Controls.Add(panel28, 2, 1);
+            lahat.Controls.Add(panel27, 1, 1);
+            lahat.Controls.Add(panel22, 0, 1);
+            lahat.Controls.Add(panel9, 4, 0);
+            lahat.Controls.Add(panel5, 3, 0);
+            lahat.Controls.Add(panel6, 2, 0);
+            lahat.Controls.Add(panel7, 1, 0);
+            lahat.Controls.Add(panel8, 0, 0);
+            lahat.Location = new Point(4, 14);
+            lahat.Name = "lahat";
+            lahat.RowCount = 3;
+            lahat.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
+            lahat.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
+            lahat.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
+            lahat.Size = new Size(947, 727);
+            lahat.TabIndex = 7;
             // 
             // panel20
             // 
             panel20.Controls.Add(label33);
             panel20.Controls.Add(pictureBox9);
             panel20.Controls.Add(cuiButton16);
-            panel20.Location = new Point(591, 487);
+            panel20.Location = new Point(570, 487);
             panel20.Name = "panel20";
             panel20.Size = new Size(176, 215);
             panel20.TabIndex = 15;
@@ -385,7 +395,7 @@
             label33.ForeColor = Color.FromArgb(78, 45, 24);
             label33.Location = new Point(16, 165);
             label33.Name = "label33";
-            label33.Size = new Size(139, 49);
+            label33.Size = new Size(88, 29);
             label33.TabIndex = 3;
             label33.Text = "Hamsilog";
             // 
@@ -443,7 +453,7 @@
             panel19.Controls.Add(label32);
             panel19.Controls.Add(pictureBox8);
             panel19.Controls.Add(cuiButton15);
-            panel19.Location = new Point(395, 487);
+            panel19.Location = new Point(381, 487);
             panel19.Name = "panel19";
             panel19.Size = new Size(176, 215);
             panel19.TabIndex = 14;
@@ -455,7 +465,7 @@
             label32.ForeColor = Color.FromArgb(78, 45, 24);
             label32.Location = new Point(16, 164);
             label32.Name = "label32";
-            label32.Size = new Size(139, 50);
+            label32.Size = new Size(139, 21);
             label32.TabIndex = 3;
             label32.Text = "Pork Siomai Rice";
             // 
@@ -513,7 +523,7 @@
             panel18.Controls.Add(label31);
             panel18.Controls.Add(pictureBox7);
             panel18.Controls.Add(cuiButton14);
-            panel18.Location = new Point(199, 487);
+            panel18.Location = new Point(192, 487);
             panel18.Name = "panel18";
             panel18.Size = new Size(176, 215);
             panel18.TabIndex = 13;
@@ -525,7 +535,7 @@
             label31.ForeColor = Color.FromArgb(78, 45, 24);
             label31.Location = new Point(13, 165);
             label31.Name = "label31";
-            label31.Size = new Size(139, 25);
+            label31.Size = new Size(102, 20);
             label31.TabIndex = 3;
             label31.Text = "Garlic Rice";
             // 
@@ -595,7 +605,7 @@
             label25.ForeColor = Color.FromArgb(78, 45, 24);
             label25.Location = new Point(16, 165);
             label25.Name = "label25";
-            label25.Size = new Size(157, 25);
+            label25.Size = new Size(76, 25);
             label25.TabIndex = 3;
             label25.Text = "Tocilog";
             // 
@@ -652,7 +662,7 @@
             panel30.Controls.Add(label49);
             panel30.Controls.Add(pictureBox19);
             panel30.Controls.Add(cuiButton28);
-            panel30.Location = new Point(787, 245);
+            panel30.Location = new Point(759, 245);
             panel30.Name = "panel30";
             panel30.Size = new Size(176, 215);
             panel30.TabIndex = 11;
@@ -664,7 +674,7 @@
             label49.ForeColor = Color.FromArgb(78, 45, 24);
             label49.Location = new Point(16, 165);
             label49.Name = "label49";
-            label49.Size = new Size(139, 40);
+            label49.Size = new Size(112, 45);
             label49.TabIndex = 3;
             label49.Text = "Chocolate Chip Frappe";
             label49.Click += label49_Click;
@@ -723,7 +733,7 @@
             panel29.Controls.Add(label48);
             panel29.Controls.Add(pictureBox18);
             panel29.Controls.Add(cuiButton27);
-            panel29.Location = new Point(591, 245);
+            panel29.Location = new Point(570, 245);
             panel29.Name = "panel29";
             panel29.Size = new Size(176, 215);
             panel29.TabIndex = 10;
@@ -735,7 +745,7 @@
             label48.ForeColor = Color.FromArgb(78, 45, 24);
             label48.Location = new Point(16, 165);
             label48.Name = "label48";
-            label48.Size = new Size(139, 49);
+            label48.Size = new Size(139, 25);
             label48.TabIndex = 3;
             label48.Text = "Caramel Frappe";
             label48.Click += label48_Click;
@@ -794,7 +804,7 @@
             panel28.Controls.Add(label47);
             panel28.Controls.Add(pictureBox17);
             panel28.Controls.Add(cuiButton18);
-            panel28.Location = new Point(395, 245);
+            panel28.Location = new Point(381, 245);
             panel28.Name = "panel28";
             panel28.Size = new Size(176, 215);
             panel28.TabIndex = 9;
@@ -806,7 +816,7 @@
             label47.ForeColor = Color.FromArgb(78, 45, 24);
             label47.Location = new Point(16, 164);
             label47.Name = "label47";
-            label47.Size = new Size(139, 50);
+            label47.Size = new Size(91, 37);
             label47.TabIndex = 3;
             label47.Text = "Strawberry Frappe";
             // 
@@ -864,7 +874,7 @@
             panel27.Controls.Add(label46);
             panel27.Controls.Add(pictureBox16);
             panel27.Controls.Add(cuiButton4);
-            panel27.Location = new Point(199, 245);
+            panel27.Location = new Point(192, 245);
             panel27.Name = "panel27";
             panel27.Size = new Size(176, 215);
             panel27.TabIndex = 8;
@@ -876,7 +886,7 @@
             label46.ForeColor = Color.FromArgb(78, 45, 24);
             label46.Location = new Point(13, 165);
             label46.Name = "label46";
-            label46.Size = new Size(139, 25);
+            label46.Size = new Size(89, 25);
             label46.TabIndex = 3;
             label46.Text = "Chocolate";
             // 
@@ -946,7 +956,7 @@
             label45.ForeColor = Color.FromArgb(78, 45, 24);
             label45.Location = new Point(16, 165);
             label45.Name = "label45";
-            label45.Size = new Size(157, 25);
+            label45.Size = new Size(108, 25);
             label45.TabIndex = 3;
             label45.Text = "Matcha Latte";
             // 
@@ -1003,7 +1013,7 @@
             panel9.Controls.Add(label9);
             panel9.Controls.Add(pictureBox5);
             panel9.Controls.Add(cuiButton5);
-            panel9.Location = new Point(787, 3);
+            panel9.Location = new Point(759, 3);
             panel9.Name = "panel9";
             panel9.Size = new Size(176, 215);
             panel9.TabIndex = 6;
@@ -1015,7 +1025,7 @@
             label9.ForeColor = Color.FromArgb(78, 45, 24);
             label9.Location = new Point(16, 165);
             label9.Name = "label9";
-            label9.Size = new Size(139, 25);
+            label9.Size = new Size(112, 25);
             label9.TabIndex = 3;
             label9.Text = "Cappuccino";
             // 
@@ -1073,7 +1083,7 @@
             panel5.Controls.Add(label4);
             panel5.Controls.Add(pictureBox3);
             panel5.Controls.Add(cuiButton3);
-            panel5.Location = new Point(591, 3);
+            panel5.Location = new Point(570, 3);
             panel5.Name = "panel5";
             panel5.Size = new Size(176, 215);
             panel5.TabIndex = 5;
@@ -1085,7 +1095,7 @@
             label4.ForeColor = Color.FromArgb(78, 45, 24);
             label4.Location = new Point(16, 165);
             label4.Name = "label4";
-            label4.Size = new Size(139, 25);
+            label4.Size = new Size(69, 25);
             label4.TabIndex = 3;
             label4.Text = "Mocha";
             // 
@@ -1143,7 +1153,7 @@
             panel6.Controls.Add(label3);
             panel6.Controls.Add(pictureBox2);
             panel6.Controls.Add(cuiButton2);
-            panel6.Location = new Point(395, 3);
+            panel6.Location = new Point(381, 3);
             panel6.Name = "panel6";
             panel6.Size = new Size(176, 215);
             panel6.TabIndex = 5;
@@ -1155,7 +1165,7 @@
             label3.ForeColor = Color.FromArgb(78, 45, 24);
             label3.Location = new Point(16, 164);
             label3.Name = "label3";
-            label3.Size = new Size(139, 50);
+            label3.Size = new Size(91, 34);
             label3.TabIndex = 3;
             label3.Text = "Caramel Macchiato";
             // 
@@ -1213,7 +1223,7 @@
             panel7.Controls.Add(label2);
             panel7.Controls.Add(pictureBox1);
             panel7.Controls.Add(btnCafeLatte);
-            panel7.Location = new Point(199, 3);
+            panel7.Location = new Point(192, 3);
             panel7.Name = "panel7";
             panel7.Size = new Size(176, 215);
             panel7.TabIndex = 5;
@@ -1225,7 +1235,7 @@
             label2.ForeColor = Color.FromArgb(78, 45, 24);
             label2.Location = new Point(13, 165);
             label2.Name = "label2";
-            label2.Size = new Size(139, 25);
+            label2.Size = new Size(102, 25);
             label2.TabIndex = 3;
             label2.Text = "Cafe Latte";
             // 
@@ -1297,7 +1307,7 @@
             label5.ForeColor = Color.FromArgb(78, 45, 24);
             label5.Location = new Point(16, 165);
             label5.Name = "label5";
-            label5.Size = new Size(139, 25);
+            label5.Size = new Size(89, 25);
             label5.TabIndex = 3;
             label5.Text = "Americano";
             // 
@@ -1358,7 +1368,7 @@
             panel4.Location = new Point(0, 87);
             panel4.Margin = new Padding(3, 4, 3, 4);
             panel4.Name = "panel4";
-            panel4.Size = new Size(1024, 92);
+            panel4.Size = new Size(945, 92);
             panel4.TabIndex = 6;
             // 
             // tableLayoutPanel1
@@ -1373,12 +1383,12 @@
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(759, 58);
+            tableLayoutPanel1.Size = new Size(765, 58);
             tableLayoutPanel1.TabIndex = 23;
             // 
             // cuiPanel4
             // 
-            cuiPanel4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            cuiPanel4.Anchor = AnchorStyles.None;
             cuiPanel4.Controls.Add(tableLayoutPanel14);
             cuiPanel4.Location = new Point(0, 0);
             cuiPanel4.Margin = new Padding(0);
@@ -1387,7 +1397,7 @@
             cuiPanel4.PanelColor = Color.FromArgb(242, 239, 234);
             cuiPanel4.PanelOutlineColor = Color.Silver;
             cuiPanel4.Rounding = new Padding(0);
-            cuiPanel4.Size = new Size(759, 58);
+            cuiPanel4.Size = new Size(765, 58);
             cuiPanel4.TabIndex = 0;
             // 
             // tableLayoutPanel14
@@ -1411,7 +1421,7 @@
             // 
             // btnFood
             // 
-            btnFood.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btnFood.Anchor = AnchorStyles.None;
             btnFood.AutoSize = true;
             btnFood.FlatAppearance.BorderSize = 0;
             btnFood.FlatStyle = FlatStyle.Flat;
@@ -1424,10 +1434,11 @@
             btnFood.TabIndex = 3;
             btnFood.Text = "Food";
             btnFood.UseVisualStyleBackColor = true;
+            btnFood.Click += btnFood_Click;
             // 
             // btnAll
             // 
-            btnAll.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btnAll.Anchor = AnchorStyles.None;
             btnAll.AutoSize = true;
             btnAll.FlatAppearance.BorderSize = 0;
             btnAll.FlatStyle = FlatStyle.Flat;
@@ -1440,11 +1451,11 @@
             btnAll.TabIndex = 0;
             btnAll.Text = "All";
             btnAll.UseVisualStyleBackColor = true;
-            btnAll.Click += btnAll_Click_1;
+            btnAll.Click += btnAll_Click;
             // 
             // btnCoffee
             // 
-            btnCoffee.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btnCoffee.Anchor = AnchorStyles.None;
             btnCoffee.AutoSize = true;
             btnCoffee.FlatAppearance.BorderSize = 0;
             btnCoffee.FlatStyle = FlatStyle.Flat;
@@ -1457,11 +1468,11 @@
             btnCoffee.TabIndex = 1;
             btnCoffee.Text = "Coffee";
             btnCoffee.UseVisualStyleBackColor = true;
-            btnCoffee.Click += btnCoffee_Click_1;
+            btnCoffee.Click += btnCoffee_Click;
             // 
             // btnNonCoffee
             // 
-            btnNonCoffee.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btnNonCoffee.Anchor = AnchorStyles.None;
             btnNonCoffee.AutoSize = true;
             btnNonCoffee.FlatAppearance.BorderSize = 0;
             btnNonCoffee.FlatStyle = FlatStyle.Flat;
@@ -1483,22 +1494,24 @@
             panel3.Location = new Point(0, 0);
             panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1024, 87);
+            panel3.Size = new Size(945, 87);
             panel3.TabIndex = 5;
             // 
             // label1
             // 
-            label1.Font = new Font("Microsoft Sans Serif", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Anchor = AnchorStyles.None;
+            label1.Font = new Font("Unbounded Medium", 22.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(78, 45, 24);
-            label1.Location = new Point(1, 15);
+            label1.Location = new Point(1, 25);
             label1.Name = "label1";
             label1.Padding = new Padding(21, 0, 0, 0);
-            label1.Size = new Size(363, 68);
+            label1.Size = new Size(318, 58);
             label1.TabIndex = 6;
-            label1.Text = "Hello, User";
+            label1.Text = "Mare Café";
             // 
             // cuiPanel1
             // 
+            cuiPanel1.Anchor = AnchorStyles.None;
             cuiPanel1.AutoScroll = true;
             cuiPanel1.Controls.Add(pnlChange);
             cuiPanel1.Controls.Add(pnlDiscount);
@@ -1510,7 +1523,6 @@
             cuiPanel1.Controls.Add(tableLayoutPanel6);
             cuiPanel1.Controls.Add(tableLayoutPanel4);
             cuiPanel1.Controls.Add(panel2);
-            cuiPanel1.Dock = DockStyle.Fill;
             cuiPanel1.Location = new Point(948, 3);
             cuiPanel1.Name = "cuiPanel1";
             cuiPanel1.OutlineThickness = 3F;
@@ -1523,8 +1535,9 @@
             // 
             // pnlChange
             // 
+            pnlChange.Anchor = AnchorStyles.None;
             pnlChange.Controls.Add(tableLayoutPanel8);
-            pnlChange.Location = new Point(6, 672);
+            pnlChange.Location = new Point(10, 694);
             pnlChange.Name = "pnlChange";
             pnlChange.OutlineThickness = 1F;
             pnlChange.PanelColor = Color.FromArgb(242, 239, 234);
@@ -1891,10 +1904,12 @@
             flowTicketPanel.Size = new Size(463, 375);
             flowTicketPanel.TabIndex = 37;
             flowTicketPanel.WrapContents = false;
+            flowTicketPanel.Paint += flowTicketPanel_Paint;
             // 
             // panelTemplateCartItem
             // 
             panelTemplateCartItem.AutoSize = true;
+            panelTemplateCartItem.BackColor = Color.White;
             panelTemplateCartItem.Controls.Add(lblQuantityTemplate);
             panelTemplateCartItem.Controls.Add(lblTypeTemplate);
             panelTemplateCartItem.Controls.Add(lblSizeTemplate);
@@ -1912,6 +1927,7 @@
             panelTemplateCartItem.Size = new Size(457, 133);
             panelTemplateCartItem.TabIndex = 0;
             panelTemplateCartItem.Visible = false;
+            panelTemplateCartItem.Paint += panelTemplateCartItem_Paint;
             // 
             // lblQuantityTemplate
             // 
@@ -1934,6 +1950,7 @@
             lblTypeTemplate.Size = new Size(77, 22);
             lblTypeTemplate.TabIndex = 6;
             lblTypeTemplate.Text = "Infos:";
+            lblTypeTemplate.Click += lblTypeTemplate_Click;
             // 
             // lblSizeTemplate
             // 
@@ -2001,6 +2018,7 @@
             lblProductNameTemplate.Size = new Size(240, 39);
             lblProductNameTemplate.TabIndex = 0;
             lblProductNameTemplate.Text = "Product Name";
+            lblProductNameTemplate.Click += lblProductNameTemplate_Click;
             // 
             // tableLayoutPanel11
             // 
@@ -2010,9 +2028,9 @@
             tableLayoutPanel11.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 21.7479668F));
             tableLayoutPanel11.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 24F));
             tableLayoutPanel11.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 32F));
-            tableLayoutPanel11.Controls.Add(cuiButton22, 0, 0);
+            tableLayoutPanel11.Controls.Add(GCash, 0, 0);
             tableLayoutPanel11.Controls.Add(cuiButton25, 3, 0);
-            tableLayoutPanel11.Controls.Add(cuiButton23, 1, 0);
+            tableLayoutPanel11.Controls.Add(Maya, 1, 0);
             tableLayoutPanel11.Controls.Add(cuiButton24, 2, 0);
             tableLayoutPanel11.Location = new Point(6, 952);
             tableLayoutPanel11.Name = "tableLayoutPanel11";
@@ -2021,45 +2039,45 @@
             tableLayoutPanel11.Size = new Size(481, 53);
             tableLayoutPanel11.TabIndex = 36;
             // 
-            // cuiButton22
+            // GCash
             // 
-            cuiButton22.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            cuiButton22.BackColor = Color.Transparent;
-            cuiButton22.CheckButton = false;
-            cuiButton22.Checked = false;
-            cuiButton22.CheckedBackground = Color.FromArgb(0, 145, 247);
-            cuiButton22.CheckedForeColor = Color.White;
-            cuiButton22.CheckedImageTint = Color.RosyBrown;
-            cuiButton22.CheckedOutline = Color.FromArgb(255, 106, 0);
-            cuiButton22.Content = "Gcash";
-            cuiButton22.DialogResult = DialogResult.None;
-            cuiButton22.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cuiButton22.ForeColor = Color.White;
-            cuiButton22.HoverBackground = Color.White;
-            cuiButton22.HoveredImageTint = Color.White;
-            cuiButton22.HoverForeColor = Color.Black;
-            cuiButton22.HoverOutline = Color.FromArgb(32, 128, 128, 128);
-            cuiButton22.Image = null;
-            cuiButton22.ImageAutoCenter = true;
-            cuiButton22.ImageExpand = new Point(0, 0);
-            cuiButton22.ImageOffset = new Point(0, 0);
-            cuiButton22.Location = new Point(3, 3);
-            cuiButton22.Name = "cuiButton22";
-            cuiButton22.NormalBackground = Color.FromArgb(0, 145, 247);
-            cuiButton22.NormalForeColor = Color.White;
-            cuiButton22.NormalImageTint = Color.White;
-            cuiButton22.NormalOutline = Color.FromArgb(0, 145, 247);
-            cuiButton22.OutlineThickness = 1F;
-            cuiButton22.PressedBackground = Color.WhiteSmoke;
-            cuiButton22.PressedForeColor = Color.FromArgb(32, 32, 32);
-            cuiButton22.PressedImageTint = Color.White;
-            cuiButton22.PressedOutline = Color.Gray;
-            cuiButton22.Rounding = new Padding(8);
-            cuiButton22.Size = new Size(100, 47);
-            cuiButton22.TabIndex = 4;
-            cuiButton22.TextAlignment = StringAlignment.Center;
-            cuiButton22.TextOffset = new Point(0, 0);
-            cuiButton22.Click += cuiButton22_Click;
+            GCash.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            GCash.BackColor = Color.Transparent;
+            GCash.CheckButton = false;
+            GCash.Checked = false;
+            GCash.CheckedBackground = Color.FromArgb(0, 145, 247);
+            GCash.CheckedForeColor = Color.White;
+            GCash.CheckedImageTint = Color.RosyBrown;
+            GCash.CheckedOutline = Color.FromArgb(255, 106, 0);
+            GCash.Content = "Gcash";
+            GCash.DialogResult = DialogResult.None;
+            GCash.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            GCash.ForeColor = Color.White;
+            GCash.HoverBackground = Color.White;
+            GCash.HoveredImageTint = Color.White;
+            GCash.HoverForeColor = Color.Black;
+            GCash.HoverOutline = Color.FromArgb(32, 128, 128, 128);
+            GCash.Image = null;
+            GCash.ImageAutoCenter = true;
+            GCash.ImageExpand = new Point(0, 0);
+            GCash.ImageOffset = new Point(0, 0);
+            GCash.Location = new Point(3, 3);
+            GCash.Name = "GCash";
+            GCash.NormalBackground = Color.FromArgb(0, 145, 247);
+            GCash.NormalForeColor = Color.White;
+            GCash.NormalImageTint = Color.White;
+            GCash.NormalOutline = Color.FromArgb(0, 145, 247);
+            GCash.OutlineThickness = 1F;
+            GCash.PressedBackground = Color.WhiteSmoke;
+            GCash.PressedForeColor = Color.FromArgb(32, 32, 32);
+            GCash.PressedImageTint = Color.White;
+            GCash.PressedOutline = Color.Gray;
+            GCash.Rounding = new Padding(8);
+            GCash.Size = new Size(100, 47);
+            GCash.TabIndex = 4;
+            GCash.TextAlignment = StringAlignment.Center;
+            GCash.TextOffset = new Point(0, 0);
+            GCash.Click += cuiButton22_Click;
             // 
             // cuiButton25
             // 
@@ -2101,45 +2119,45 @@
             cuiButton25.TextOffset = new Point(0, 0);
             cuiButton25.Click += cuiButton25_Click;
             // 
-            // cuiButton23
+            // Maya
             // 
-            cuiButton23.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            cuiButton23.BackColor = Color.Transparent;
-            cuiButton23.CheckButton = false;
-            cuiButton23.Checked = false;
-            cuiButton23.CheckedBackground = Color.Transparent;
-            cuiButton23.CheckedForeColor = Color.Transparent;
-            cuiButton23.CheckedImageTint = Color.Transparent;
-            cuiButton23.CheckedOutline = Color.FromArgb(255, 106, 0);
-            cuiButton23.Content = "Maya";
-            cuiButton23.DialogResult = DialogResult.None;
-            cuiButton23.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cuiButton23.ForeColor = Color.White;
-            cuiButton23.HoverBackground = Color.White;
-            cuiButton23.HoveredImageTint = Color.White;
-            cuiButton23.HoverForeColor = Color.Black;
-            cuiButton23.HoverOutline = Color.FromArgb(32, 128, 128, 128);
-            cuiButton23.Image = null;
-            cuiButton23.ImageAutoCenter = true;
-            cuiButton23.ImageExpand = new Point(0, 0);
-            cuiButton23.ImageOffset = new Point(0, 0);
-            cuiButton23.Location = new Point(109, 3);
-            cuiButton23.Name = "cuiButton23";
-            cuiButton23.NormalBackground = Color.FromArgb(154, 202, 31);
-            cuiButton23.NormalForeColor = Color.White;
-            cuiButton23.NormalImageTint = Color.White;
-            cuiButton23.NormalOutline = Color.FromArgb(154, 202, 31);
-            cuiButton23.OutlineThickness = 1F;
-            cuiButton23.PressedBackground = Color.WhiteSmoke;
-            cuiButton23.PressedForeColor = Color.FromArgb(32, 32, 32);
-            cuiButton23.PressedImageTint = Color.White;
-            cuiButton23.PressedOutline = Color.FromArgb(64, 128, 128, 128);
-            cuiButton23.Rounding = new Padding(8);
-            cuiButton23.Size = new Size(98, 47);
-            cuiButton23.TabIndex = 1;
-            cuiButton23.TextAlignment = StringAlignment.Center;
-            cuiButton23.TextOffset = new Point(0, 0);
-            cuiButton23.Click += cuiButton23_Click;
+            Maya.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            Maya.BackColor = Color.Transparent;
+            Maya.CheckButton = false;
+            Maya.Checked = false;
+            Maya.CheckedBackground = Color.Transparent;
+            Maya.CheckedForeColor = Color.Transparent;
+            Maya.CheckedImageTint = Color.Transparent;
+            Maya.CheckedOutline = Color.FromArgb(255, 106, 0);
+            Maya.Content = "Maya";
+            Maya.DialogResult = DialogResult.None;
+            Maya.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Maya.ForeColor = Color.White;
+            Maya.HoverBackground = Color.White;
+            Maya.HoveredImageTint = Color.White;
+            Maya.HoverForeColor = Color.Black;
+            Maya.HoverOutline = Color.FromArgb(32, 128, 128, 128);
+            Maya.Image = null;
+            Maya.ImageAutoCenter = true;
+            Maya.ImageExpand = new Point(0, 0);
+            Maya.ImageOffset = new Point(0, 0);
+            Maya.Location = new Point(109, 3);
+            Maya.Name = "Maya";
+            Maya.NormalBackground = Color.FromArgb(154, 202, 31);
+            Maya.NormalForeColor = Color.White;
+            Maya.NormalImageTint = Color.White;
+            Maya.NormalOutline = Color.FromArgb(154, 202, 31);
+            Maya.OutlineThickness = 1F;
+            Maya.PressedBackground = Color.WhiteSmoke;
+            Maya.PressedForeColor = Color.FromArgb(32, 32, 32);
+            Maya.PressedImageTint = Color.White;
+            Maya.PressedOutline = Color.FromArgb(64, 128, 128, 128);
+            Maya.Rounding = new Padding(8);
+            Maya.Size = new Size(98, 47);
+            Maya.TabIndex = 1;
+            Maya.TextAlignment = StringAlignment.Center;
+            Maya.TextOffset = new Point(0, 0);
+            Maya.Click += cuiButton23_Click;
             // 
             // cuiButton24
             // 
@@ -2194,7 +2212,7 @@
             tableLayoutPanel10.Name = "tableLayoutPanel10";
             tableLayoutPanel10.RowCount = 1;
             tableLayoutPanel10.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel10.Size = new Size(460, 62);
+            tableLayoutPanel10.Size = new Size(470, 62);
             tableLayoutPanel10.TabIndex = 33;
             // 
             // panel15
@@ -2205,7 +2223,7 @@
             panel15.Controls.Add(label22);
             panel15.Location = new Point(3, 3);
             panel15.Name = "panel15";
-            panel15.Size = new Size(247, 55);
+            panel15.Size = new Size(252, 55);
             panel15.TabIndex = 0;
             // 
             // labelCashReceived
@@ -2248,9 +2266,9 @@
             panel16.Controls.Add(labelChange);
             panel16.Controls.Add(label23);
             panel16.Controls.Add(label24);
-            panel16.Location = new Point(256, 3);
+            panel16.Location = new Point(261, 3);
             panel16.Name = "panel16";
-            panel16.Size = new Size(201, 55);
+            panel16.Size = new Size(206, 55);
             panel16.TabIndex = 1;
             // 
             // labelChange
@@ -2300,7 +2318,7 @@
             tableLayoutPanel9.Name = "tableLayoutPanel9";
             tableLayoutPanel9.RowCount = 1;
             tableLayoutPanel9.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel9.Size = new Size(460, 61);
+            tableLayoutPanel9.Size = new Size(470, 61);
             tableLayoutPanel9.TabIndex = 32;
             // 
             // panel13
@@ -2310,7 +2328,7 @@
             panel13.Controls.Add(label14);
             panel13.Location = new Point(3, 3);
             panel13.Name = "panel13";
-            panel13.Size = new Size(247, 55);
+            panel13.Size = new Size(252, 55);
             panel13.TabIndex = 0;
             // 
             // label16
@@ -2338,10 +2356,10 @@
             // 
             // panel14
             // 
-            panel14.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            panel14.Anchor = AnchorStyles.None;
             panel14.Controls.Add(label28);
             panel14.Controls.Add(label15);
-            panel14.Location = new Point(256, 3);
+            panel14.Location = new Point(263, 3);
             panel14.Name = "panel14";
             panel14.Size = new Size(201, 55);
             panel14.TabIndex = 1;
@@ -2386,7 +2404,7 @@
             // 
             // cuiPanel3
             // 
-            cuiPanel3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            cuiPanel3.Anchor = AnchorStyles.None;
             cuiPanel3.Controls.Add(btnDiscount);
             cuiPanel3.Controls.Add(button5);
             cuiPanel3.Location = new Point(0, 0);
@@ -2401,7 +2419,7 @@
             // 
             // btnDiscount
             // 
-            btnDiscount.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnDiscount.Anchor = AnchorStyles.None;
             btnDiscount.BackColor = Color.Transparent;
             btnDiscount.FlatAppearance.BorderSize = 0;
             btnDiscount.FlatStyle = FlatStyle.Flat;
@@ -2417,7 +2435,7 @@
             // 
             // button5
             // 
-            button5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            button5.Anchor = AnchorStyles.None;
             button5.BackColor = Color.Transparent;
             button5.FlatAppearance.BorderSize = 0;
             button5.FlatStyle = FlatStyle.Flat;
@@ -2433,18 +2451,18 @@
             // 
             // tableLayoutPanel6
             // 
-            tableLayoutPanel6.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel6.Anchor = AnchorStyles.None;
             tableLayoutPanel6.AutoSize = true;
             tableLayoutPanel6.ColumnCount = 2;
             tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 45F));
             tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 55F));
             tableLayoutPanel6.Controls.Add(panel11, 0, 0);
-            tableLayoutPanel6.Controls.Add(panel12, 1, 0);
+            tableLayoutPanel6.Controls.Add(labelSubtotal, 1, 0);
             tableLayoutPanel6.Location = new Point(10, 533);
             tableLayoutPanel6.Name = "tableLayoutPanel6";
             tableLayoutPanel6.RowCount = 1;
             tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel6.Size = new Size(474, 63);
+            tableLayoutPanel6.Size = new Size(485, 63);
             tableLayoutPanel6.TabIndex = 20;
             // 
             // panel11
@@ -2458,33 +2476,27 @@
             // label26
             // 
             label26.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            label26.Font = new Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label26.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label26.ForeColor = Color.FromArgb(78, 45, 24);
             label26.Location = new Point(16, 3);
             label26.Name = "label26";
             label26.Size = new Size(178, 46);
             label26.TabIndex = 29;
             label26.Text = "SubTotal";
-            // 
-            // panel12
-            // 
-            panel12.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            panel12.Controls.Add(labelSubtotal);
-            panel12.Location = new Point(216, 3);
-            panel12.Name = "panel12";
-            panel12.Size = new Size(255, 55);
-            panel12.TabIndex = 1;
+            label26.TextAlign = ContentAlignment.MiddleLeft;
+            label26.Click += label26_Click;
             // 
             // labelSubtotal
             // 
-            labelSubtotal.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            labelSubtotal.Font = new Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelSubtotal.Anchor = AnchorStyles.None;
+            labelSubtotal.Font = new Font("Inter SemiBold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelSubtotal.ForeColor = Color.FromArgb(78, 45, 24);
-            labelSubtotal.Location = new Point(63, 2);
+            labelSubtotal.Location = new Point(262, 8);
             labelSubtotal.Name = "labelSubtotal";
-            labelSubtotal.Size = new Size(185, 49);
+            labelSubtotal.Size = new Size(178, 46);
             labelSubtotal.TabIndex = 30;
-            labelSubtotal.Text = "₱ 0.00";
+            labelSubtotal.Text = "SubTotal";
+            labelSubtotal.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // tableLayoutPanel4
             // 
@@ -2497,7 +2509,7 @@
             tableLayoutPanel4.Name = "tableLayoutPanel4";
             tableLayoutPanel4.RowCount = 1;
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel4.Size = new Size(463, 38);
+            tableLayoutPanel4.Size = new Size(473, 38);
             tableLayoutPanel4.TabIndex = 19;
             // 
             // panel10
@@ -2506,7 +2518,7 @@
             panel10.Dock = DockStyle.Fill;
             panel10.Location = new Point(3, 3);
             panel10.Name = "panel10";
-            panel10.Size = new Size(457, 32);
+            panel10.Size = new Size(467, 32);
             panel10.TabIndex = 0;
             // 
             // cuiLabel1
@@ -2530,12 +2542,12 @@
             panel2.Controls.Add(label6);
             panel2.Location = new Point(18, 22);
             panel2.Name = "panel2";
-            panel2.Size = new Size(448, 62);
+            panel2.Size = new Size(458, 61);
             panel2.TabIndex = 0;
             // 
             // label6
             // 
-            label6.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Font = new Font("Unbounded Medium", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.FromArgb(78, 45, 24);
             label6.Location = new Point(3, 8);
             label6.Name = "label6";
@@ -2554,8 +2566,13 @@
             Size = new Size(1440, 1024);
             panelMain.ResumeLayout(false);
             panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            tableLayoutPanel2.ResumeLayout(false);
+            FoodPanel.ResumeLayout(false);
+            PanelIndicator.ResumeLayout(false);
+            NonCoffeePanel.ResumeLayout(false);
+            CoffeePanel.ResumeLayout(false);
+            AllPanel.ResumeLayout(false);
+            AllPanel.PerformLayout();
+            lahat.ResumeLayout(false);
             panel20.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             panel19.ResumeLayout(false);
@@ -2612,36 +2629,6 @@
             cuiPanel3.ResumeLayout(false);
             tableLayoutPanel6.ResumeLayout(false);
             panel11.ResumeLayout(false);
-            panel12.ResumeLayout(false);
-            tableLayoutPanel4.ResumeLayout(false);
-            panel10.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
-            tableLayoutPanel1.ResumeLayout(false);
-            cuiPanel4.ResumeLayout(false);
-            tableLayoutPanel14.ResumeLayout(false);
-            tableLayoutPanel14.PerformLayout();
-            panel3.ResumeLayout(false);
-            cuiPanel1.ResumeLayout(false);
-            cuiPanel1.PerformLayout();
-            flowTicketPanel.ResumeLayout(false);
-            flowTicketPanel.PerformLayout();
-            panelTemplateCartItem.ResumeLayout(false);
-            tableLayoutPanel11.ResumeLayout(false);
-            tableLayoutPanel10.ResumeLayout(false);
-            panel15.ResumeLayout(false);
-            panel16.ResumeLayout(false);
-            tableLayoutPanel9.ResumeLayout(false);
-            panel13.ResumeLayout(false);
-            panel14.ResumeLayout(false);
-            tableLayoutPanel8.ResumeLayout(false);
-            tableLayoutPanel8.PerformLayout();
-            tableLayoutPanel7.ResumeLayout(false);
-            cuiPanel3.ResumeLayout(false);
-            tableLayoutPanel6.ResumeLayout(false);
-            panel11.ResumeLayout(false);
-            panel12.ResumeLayout(false);
             tableLayoutPanel4.ResumeLayout(false);
             panel10.ResumeLayout(false);
             panel2.ResumeLayout(false);
@@ -2651,31 +2638,6 @@
         #endregion
 
         private TableLayoutPanel panelMain;
-        private Panel panel1;
-        private TableLayoutPanel tableLayoutPanel2;
-        private Panel panel5;
-        private PictureBox pictureBox3;
-        private CuoreUI.Controls.cuiButton cuiButton3;
-        private Panel panel6;
-        private PictureBox pictureBox2;
-        private CuoreUI.Controls.cuiButton cuiButton2;
-        private Panel panel7;
-        private PictureBox pictureBox1;
-        private CuoreUI.Controls.cuiButton btnCafeLatte;
-        private Panel panel8;
-        private PictureBox pictureBox4;
-        private CuoreUI.Controls.cuiButton btnAmericano;
-        private Panel panel4;
-        private Panel panel3;
-        private Label label1;
-        private Panel panel9;
-        private PictureBox pictureBox5;
-        private CuoreUI.Controls.cuiButton cuiButton5;
-        private Label label5;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label9;
         private CuoreUI.Controls.cuiPanel cuiPanel1;
         private Panel panel2;
         private Label label6;
@@ -2690,9 +2652,7 @@
         private CuoreUI.Controls.cuiLabel cuiLabel1;
         private TableLayoutPanel tableLayoutPanel6;
         private Panel panel11;
-        private Panel panel12;
         private Label label26;
-        private Label labelSubtotal;
         private TableLayoutPanel tableLayoutPanel7;
         private CuoreUI.Controls.cuiPanel cuiPanel3;
         private Button button5;
@@ -2722,20 +2682,25 @@
         private Label labelCashReceived;
         private Label labelChange;
         private TableLayoutPanel tableLayoutPanel11;
-        private CuoreUI.Controls.cuiButton cuiButton22;
+        private CuoreUI.Controls.cuiButton GCash;
         private CuoreUI.Controls.cuiButton cuiButton25;
-        private CuoreUI.Controls.cuiButton cuiButton23;
+        private CuoreUI.Controls.cuiButton Maya;
         private CuoreUI.Controls.cuiButton cuiButton24;
-        private TableLayoutPanel tableLayoutPanel1;
-        private CuoreUI.Controls.cuiPanel cuiPanel4;
-        private TableLayoutPanel tableLayoutPanel14;
-        private Button btnFood;
-        private Button btnNonCoffee;
-        private Button btnCoffee;
-        private Button btnAll;
         private Label lblQuantityTemplate;
         private Label lblTypeTemplate;
         private Label lblSizeTemplate;
+        private FlowLayoutPanel flowTicketPanel;
+        private TextBox txtManualAmount;
+        private CuoreUI.Controls.cuiPanel pnlDiscount;
+        private DiscountButton discountButton1;
+        private CuoreUI.Controls.cuiPanel pnlChange;
+        private DiscountButton discountButton2;
+        private Panel panel1;
+        private CuoreUI.Controls.cuiPanel PanelIndicator;
+        private CuoreUI.Controls.cuiPanel CoffeePanel;
+        private Ticket_Components.TicketCoffee ticketCoffee1;
+        private CuoreUI.Controls.cuiPanel AllPanel;
+        private TableLayoutPanel lahat;
         private Panel panel20;
         private Label label33;
         private PictureBox pictureBox9;
@@ -2772,11 +2737,40 @@
         private Label label45;
         private PictureBox pictureBox11;
         private CuoreUI.Controls.cuiButton cuiButton1;
-        private FlowLayoutPanel flowTicketPanel;
-        private TextBox txtManualAmount;
-        private CuoreUI.Controls.cuiPanel pnlDiscount;
-        private DiscountButton discountButton1;
-        private CuoreUI.Controls.cuiPanel pnlChange;
-        private DiscountButton discountButton2;
+        private Panel panel9;
+        private Label label9;
+        private PictureBox pictureBox5;
+        private CuoreUI.Controls.cuiButton cuiButton5;
+        private Panel panel5;
+        private Label label4;
+        private PictureBox pictureBox3;
+        private CuoreUI.Controls.cuiButton cuiButton3;
+        private Panel panel6;
+        private Label label3;
+        private PictureBox pictureBox2;
+        private CuoreUI.Controls.cuiButton cuiButton2;
+        private Panel panel7;
+        private Label label2;
+        private PictureBox pictureBox1;
+        private CuoreUI.Controls.cuiButton btnCafeLatte;
+        private Panel panel8;
+        private Label label5;
+        private PictureBox pictureBox4;
+        private CuoreUI.Controls.cuiButton btnAmericano;
+        private Panel panel4;
+        private TableLayoutPanel tableLayoutPanel1;
+        private CuoreUI.Controls.cuiPanel cuiPanel4;
+        private TableLayoutPanel tableLayoutPanel14;
+        private Button btnFood;
+        private Button btnAll;
+        private Button btnCoffee;
+        private Button btnNonCoffee;
+        private Panel panel3;
+        private Label label1;
+        private CuoreUI.Controls.cuiPanel FoodPanel;
+        private TicketFood ticketFood1;
+        private CuoreUI.Controls.cuiPanel NonCoffeePanel;
+        private TicketNonCoffee ticketNonCoffee1;
+        private Label labelSubtotal;
     }
 }

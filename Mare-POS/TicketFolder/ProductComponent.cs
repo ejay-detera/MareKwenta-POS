@@ -1,4 +1,4 @@
-﻿using Mare_POS.Database;
+﻿using Mare_POS.TicketFolder.Database;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,9 +16,6 @@ namespace Mare_POS.Ticket_Components
         public ProductComponent()
         {
             InitializeComponent();
-
-            radioGrande.Checked = true;
-            radioHot.Checked = true;
             quantity = 1;
             labelQuantity.Text = "1";
 
@@ -30,7 +27,6 @@ namespace Mare_POS.Ticket_Components
 
         public string? SelectedSize { get; private set; }
         public string? SelectedType { get; private set; }
-        public List<string> SelectedExtras { get; private set; } = new List<string>();
         public int Quantity { get; private set; }
 
         private int quantity = 1;
@@ -88,12 +84,6 @@ namespace Mare_POS.Ticket_Components
                 return;
             }
 
-            // ✅ Handle Extras (multiple allowed)
-            SelectedExtras.Clear();
-            if (chkSoloShot.Checked) SelectedExtras.Add("Solo Shot");
-            if (chkDoppioShot.Checked) SelectedExtras.Add("Doppio Shot");
-            if (chkWhipCream.Checked) SelectedExtras.Add("Whip Cream");
-
             // ✅ Handle Quantity
             Quantity = quantity;
 
@@ -142,14 +132,8 @@ namespace Mare_POS.Ticket_Components
                 string size = radioGrande.Checked ? "Grande" : "Venti";
                 string type = radioHot.Checked ? "Hot" : "Cold";
 
-                List<string> extras = new List<string>();
-                if (chkSoloShot.Checked) extras.Add("Solo Shot");
-                if (chkDoppioShot.Checked) extras.Add("Doppio Shot");
-                if (chkWhipCream.Checked) extras.Add("Whip Cream");
-
                 decimal basePrice = ProductDataAccess.GetBasePrice(productId, size, type);
-                decimal extrasPrice = ProductDataAccess.GetExtrasTotal(extras);
-                decimal total = (basePrice + extrasPrice) * quantity;
+                decimal total = basePrice * quantity;
 
                 labelSubtotal.Text = $"{total:0.00}";
             }
@@ -157,6 +141,11 @@ namespace Mare_POS.Ticket_Components
             {
                 labelSubtotal.Text = "₱0.00"; // fallback
             }
+        }
+
+        private void ProductComponent_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

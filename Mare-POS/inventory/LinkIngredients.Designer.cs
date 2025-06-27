@@ -62,6 +62,7 @@
             cuiTextBox10 = new CuoreUI.Controls.cuiTextBox();
             cuiTextBox11 = new CuoreUI.Controls.cuiTextBox();
             cuiTextBox12 = new CuoreUI.Controls.cuiTextBox();
+            label5 = new Label();
             chgcomboBox3 = new CuoreUI.Controls.cuiComboBox();
             chgcomboBox2 = new CuoreUI.Controls.cuiComboBox();
             chgcapuccino = new Label();
@@ -72,7 +73,6 @@
             cuiTextBox16 = new CuoreUI.Controls.cuiTextBox();
             cuiComboBox15 = new CuoreUI.Controls.cuiComboBox();
             cuiComboBox16 = new CuoreUI.Controls.cuiComboBox();
-            label5 = new Label();
             label7 = new Label();
             cigpanel1 = new CuoreUI.Controls.cuiPanel();
             cuiTextBox9 = new CuoreUI.Controls.cuiTextBox();
@@ -1241,9 +1241,9 @@
             chgpanel2.Controls.Add(cuiTextBox10);
             chgpanel2.Controls.Add(cuiTextBox11);
             chgpanel2.Controls.Add(cuiTextBox12);
+            chgpanel2.Controls.Add(label5);
             chgpanel2.Controls.Add(chgcomboBox3);
             chgpanel2.Controls.Add(chgcomboBox2);
-            chgpanel2.Controls.Add(chgcapuccino);
             chgpanel2.Location = new Point(0, 248);
             chgpanel2.Name = "chgpanel2";
             chgpanel2.OutlineThickness = 1F;
@@ -1451,6 +1451,18 @@
             cuiTextBox12.TextOffset = new Size(0, 0);
             cuiTextBox12.UnderlinedStyle = true;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.White;
+            label5.CausesValidation = false;
+            label5.Font = new Font("Unbounded Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point, (byte)0);
+            label5.Location = new Point(21, 19);
+            label5.Name = "label5";
+            label5.Size = new Size(85, 26);
+            label5.TabIndex = 4;
+            label5.Text = "Mocha";
+            // 
             // chgcomboBox3
             // 
             chgcomboBox3.Anchor = AnchorStyles.None;
@@ -1531,11 +1543,12 @@
             chgcapuccino.BackColor = Color.White;
             chgcapuccino.CausesValidation = false;
             chgcapuccino.Font = new Font("Unbounded Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point, (byte)0);
-            chgcapuccino.Location = new Point(12, 11);
+            chgcapuccino.Location = new Point(12, 18);
             chgcapuccino.Name = "chgcapuccino";
-            chgcapuccino.Size = new Size(126, 26);
+            chgcapuccino.Size = new Size(140, 26);
             chgcapuccino.TabIndex = 4;
-            chgcapuccino.Text = "Capuccino";
+            chgcapuccino.Text = "Cappuccino";
+            chgcapuccino.Click += (this.chgcapuccino_Click);
             // 
             // chgpanel4
             // 
@@ -1546,7 +1559,7 @@
             chgpanel4.Controls.Add(cuiTextBox16);
             chgpanel4.Controls.Add(cuiComboBox15);
             chgpanel4.Controls.Add(cuiComboBox16);
-            chgpanel4.Controls.Add(label5);
+            chgpanel4.Controls.Add(chgcapuccino);
             chgpanel4.Location = new Point(390, 307);
             chgpanel4.Name = "chgpanel4";
             chgpanel4.OutlineThickness = 1F;
@@ -1555,6 +1568,7 @@
             chgpanel4.Rounding = new Padding(24);
             chgpanel4.Size = new Size(364, 271);
             chgpanel4.TabIndex = 12;
+            chgpanel4.Paint += (this.chgpanel4_Paint);
             // 
             // cuiTextBox14
             // 
@@ -1759,18 +1773,6 @@
             cuiComboBox16.Rounding = 8;
             cuiComboBox16.Size = new Size(157, 47);
             cuiComboBox16.TabIndex = 6;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.White;
-            label5.CausesValidation = false;
-            label5.Font = new Font("Unbounded Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point, (byte)0);
-            label5.Location = new Point(12, 11);
-            label5.Name = "label5";
-            label5.Size = new Size(85, 26);
-            label5.TabIndex = 4;
-            label5.Text = "Mocha";
             // 
             // label7
             // 
@@ -3829,9 +3831,9 @@
             label16.Font = new Font("Unbounded Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point, (byte)0);
             label16.Location = new Point(11, 20);
             label16.Name = "label16";
-            label16.Size = new Size(216, 26);
+            label16.Size = new Size(221, 26);
             label16.TabIndex = 4;
-            label16.Text = "Carame Macchiato";
+            label16.Text = "Caramel Macchiato";
             // 
             // chvpanel2
             // 
@@ -4369,9 +4371,9 @@
             label18.Font = new Font("Unbounded Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point, (byte)0);
             label18.Location = new Point(11, 20);
             label18.Name = "label18";
-            label18.Size = new Size(126, 26);
+            label18.Size = new Size(140, 26);
             label18.TabIndex = 4;
-            label18.Text = "Capuccino";
+            label18.Text = "Cappuccino";
             // 
             // label20
             // 
@@ -5075,9 +5077,9 @@
             label21.Font = new Font("Unbounded Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point, (byte)0);
             label21.Location = new Point(12, 11);
             label21.Name = "label21";
-            label21.Size = new Size(126, 26);
+            label21.Size = new Size(140, 26);
             label21.TabIndex = 4;
-            label21.Text = "Capuccino";
+            label21.Text = "Cappuccino";
             // 
             // civpanel5
             // 
@@ -6416,9 +6418,9 @@
             label27.Font = new Font("Unbounded Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point, (byte)0);
             label27.Location = new Point(12, 11);
             label27.Name = "label27";
-            label27.Size = new Size(96, 26);
+            label27.Size = new Size(157, 26);
             label27.TabIndex = 4;
-            label27.Text = "Matcha";
+            label27.Text = "Matcha Latte";
             // 
             // ncgpanel3
             // 
@@ -8882,9 +8884,9 @@
             label36.Font = new Font("Unbounded Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point, (byte)0);
             label36.Location = new Point(12, 11);
             label36.Name = "label36";
-            label36.Size = new Size(96, 26);
+            label36.Size = new Size(157, 26);
             label36.TabIndex = 4;
-            label36.Text = "Matcha";
+            label36.Text = "Matcha Latte";
             // 
             // ncvpanel1
             // 
@@ -10885,9 +10887,9 @@
             label13.Font = new Font("Unbounded Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point, (byte)0);
             label13.Location = new Point(12, 11);
             label13.Name = "label13";
-            label13.Size = new Size(126, 26);
+            label13.Size = new Size(140, 26);
             label13.TabIndex = 4;
-            label13.Text = "Capuccino";
+            label13.Text = "Cappuccino";
             // 
             // foodpanel4
             // 
@@ -11077,7 +11079,7 @@
             ncgbutton.ImageAutoCenter = true;
             ncgbutton.ImageExpand = new Point(0, 0);
             ncgbutton.ImageOffset = new Point(0, 0);
-            ncgbutton.Location = new Point(3720, 32767);
+            ncgbutton.Location = new Point(8697, 32767);
             ncgbutton.Name = "ncgbutton";
             ncgbutton.NormalBackground = Color.FromArgb((int)(byte)78, (int)(byte)45, (int)(byte)24);
             ncgbutton.NormalForeColor = Color.White;
@@ -11117,7 +11119,7 @@
             nhvbutton.ImageAutoCenter = true;
             nhvbutton.ImageExpand = new Point(0, 0);
             nhvbutton.ImageOffset = new Point(0, 0);
-            nhvbutton.Location = new Point(3720, 32767);
+            nhvbutton.Location = new Point(8697, 32767);
             nhvbutton.Name = "nhvbutton";
             nhvbutton.NormalBackground = Color.FromArgb((int)(byte)78, (int)(byte)45, (int)(byte)24);
             nhvbutton.NormalForeColor = Color.White;
@@ -11157,7 +11159,7 @@
             nivbutton.ImageAutoCenter = true;
             nivbutton.ImageExpand = new Point(0, 0);
             nivbutton.ImageOffset = new Point(0, 0);
-            nivbutton.Location = new Point(3721, 32767);
+            nivbutton.Location = new Point(8698, 32767);
             nivbutton.Name = "nivbutton";
             nivbutton.NormalBackground = Color.FromArgb((int)(byte)78, (int)(byte)45, (int)(byte)24);
             nivbutton.NormalForeColor = Color.White;
@@ -11197,7 +11199,7 @@
             foodbutton.ImageAutoCenter = true;
             foodbutton.ImageExpand = new Point(0, 0);
             foodbutton.ImageOffset = new Point(0, 0);
-            foodbutton.Location = new Point(3721, 32767);
+            foodbutton.Location = new Point(8698, 32767);
             foodbutton.Name = "foodbutton";
             foodbutton.NormalBackground = Color.FromArgb((int)(byte)78, (int)(byte)45, (int)(byte)24);
             foodbutton.NormalForeColor = Color.White;
@@ -12112,7 +12114,7 @@
             this.Controls.Add(foodrow);
             this.Controls.Add(nhgrow);
             this.Name = "LinkIngredients";
-            this.Size = new Size(991, 665);
+            this.Size = new Size(804, 428);
             this.Load += (this.LinkIngredients_Load);
             chgpanel1.ResumeLayout(false);
             chgpanel1.PerformLayout();

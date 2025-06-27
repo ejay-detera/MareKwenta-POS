@@ -1,6 +1,4 @@
-﻿using Mare_POS.Models;
-using Mare_POS.Database;
-using Mare_POS.Ticket_Components;
+﻿using Mare_POS.Ticket_Components;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Mare_POS.TicketFolder.Database;
+using Mare_POS.TicketFolder.Models;
 
 namespace Mare_POS
 {
@@ -25,8 +25,8 @@ namespace Mare_POS
             this.finalAmount = finalAmount;
 
         }
-
-        private List<Item> currentOrder = new List<Item>();
+        public event Action<Item> ItemAdded;
+        // private List<Item> currentOrder = new List<Item>();
 
         private void cuiButton25_Click(object sender, EventArgs e)
         {
@@ -52,79 +52,75 @@ namespace Mare_POS
 
         private void cuiButton4_Click(object sender, EventArgs e)
         {
-            var popup = new FoodQuantity();
-            popup.StartPosition = FormStartPosition.CenterParent;  // Center the popup on the current form
-            popup.ProductId = 11;
-            popup.ProductName = "Tocilog";
-
-            if (popup.ShowDialog(this) == DialogResult.OK)  // Block parent form until popup is done
-            {
-                // Popup selection
-                int qty = popup.Quantity;
-
-                // Product info
-                int productId = 11;
-                string productName = "Tocilog";
-                string category = "Food";
-
-                // ✅ Get prices dynamically
-                decimal basePrice = ProductDataAccess.GetBasePrice(productId);
-                decimal itemTotal = (basePrice) * qty;
-
-                // Add to cart
-                currentOrder.Add(new Item
-                {
-                    ProductID = productId,
-                    ProductName = productName,
-                    Quantity = qty,
-                    Amount = itemTotal,
-                    Category = category
-                });
-
-                MessageBox.Show(
-                    $"✅ Added {qty}x {productName}\n" +
-                    $"Subtotal: ₱{itemTotal}",
-                    "Added to Order"
-                );
-            }
+            string productName = "Tocilog";
+            HandleFoodSelection(productName);
         }
 
         private void cuiButton1_Click(object sender, EventArgs e)
         {
-            var popup = new FoodQuantity();
-            popup.StartPosition = FormStartPosition.CenterParent;  // Center the popup on the current form
-            popup.ProductId = 12;
-            popup.ProductName = "Garlic Rice";
+            string productName = "Garlic Rice";
+            HandleFoodSelection(productName);
+        }
 
-            if (popup.ShowDialog(this) == DialogResult.OK)  // Block parent form until popup is done
+        private void cuiButton2_Click(object sender, EventArgs e)
+        {
+            string productName = "Pork Siomai Rice";
+            HandleFoodSelection(productName);
+        }
+
+        private void cuiButton3_Click(object sender, EventArgs e)
+        {
+            string productName = "Beef Pares";
+            HandleFoodSelection(productName);
+        }
+
+        // Centralized method to handle food selection
+        private void HandleFoodSelection(string productName)
+        {
+            // Get ProductID dynamically from database
+            int productId = ProductDataAccess.GetProductId(productName);
+
+            if (productId == 0)
+            {
+                MessageBox.Show($"Product '{productName}' not found in database!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            var popup = new FoodQuantity();
+            popup.StartPosition = FormStartPosition.CenterParent;
+            popup.ProductId = productId;
+            popup.ProductName = productName;
+
+            if (popup.ShowDialog(this) == DialogResult.OK)
             {
                 // Popup selection
                 int qty = popup.Quantity;
 
                 // Product info
-                int productId = 12;
-                string productName = "Garlic Rice";
                 string category = "Food";
 
-                // ✅ Get prices dynamically
+                // ✅ Get prices dynamically using the correct ProductID
                 decimal basePrice = ProductDataAccess.GetBasePrice(productId);
                 decimal itemTotal = (basePrice) * qty;
 
+                // Debug info (remove after testing)
+                //MessageBox.Show($"Debug Info:\nProductName: {productName}\nProductID: {productId}\nBase Price: {basePrice}", "Debug");
+
                 // Add to cart
-                currentOrder.Add(new Item
+                var item = new Item
                 {
                     ProductID = productId,
                     ProductName = productName,
                     Quantity = qty,
                     Amount = itemTotal,
-                    Category = category
-                });
+                    Category = "Food",
+                    ProductSize = "N/A",        // ✅ Food items don't have size
+                    ProductType = "N/A",       // ✅ Food items don't have type
+                    Extras = new List<string>() // ✅ Food items typically don't have extras
+                };
 
-                MessageBox.Show(
-                    $"✅ Added {qty}x {productName}\n" +
-                    $"Subtotal: ₱{itemTotal}",
-                    "Added to Order"
-                );
+                // ✅ Fire the event to notify TicketForm
+                ItemAdded?.Invoke(item);
             }
         }
 
@@ -133,82 +129,9 @@ namespace Mare_POS
 
         }
 
-        private void cuiButton2_Click(object sender, EventArgs e)
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
-            var popup = new FoodQuantity();
-            popup.StartPosition = FormStartPosition.CenterParent;  // Center the popup on the current form
-            popup.ProductId = 13;
-            popup.ProductName = "Pork Siomai Rice";
 
-            if (popup.ShowDialog(this) == DialogResult.OK)  // Block parent form until popup is done
-            {
-                // Popup selection
-                int qty = popup.Quantity;
-
-                // Product info
-                int productId = 13;
-                string productName = "Pork Siomai Rice";
-                string category = "Food";
-
-                // ✅ Get prices dynamically
-                decimal basePrice = ProductDataAccess.GetBasePrice(productId);
-                decimal itemTotal = (basePrice) * qty;
-
-                // Add to cart
-                currentOrder.Add(new Item
-                {
-                    ProductID = productId,
-                    ProductName = productName,
-                    Quantity = qty,
-                    Amount = itemTotal,
-                    Category = category
-                });
-
-                MessageBox.Show(
-                    $"✅ Added {qty}x {productName}\n" +
-                    $"Subtotal: ₱{itemTotal}",
-                    "Added to Order"
-                );
-            }
-        }
-
-        private void cuiButton3_Click(object sender, EventArgs e)
-        {
-            var popup = new FoodQuantity();
-            popup.StartPosition = FormStartPosition.CenterParent;  // Center the popup on the current form
-            popup.ProductId = 14;
-            popup.ProductName = "Hamsilog";
-
-            if (popup.ShowDialog(this) == DialogResult.OK)  // Block parent form until popup is done
-            {
-                // Popup selection
-                int qty = popup.Quantity;
-
-                // Product info
-                int productId = 14;
-                string productName = "Hamsilog";
-                string category = "Food";
-
-                // ✅ Get prices dynamically
-                decimal basePrice = ProductDataAccess.GetBasePrice(productId);
-                decimal itemTotal = (basePrice) * qty;
-
-                // Add to cart
-                currentOrder.Add(new Item
-                {
-                    ProductID = productId,
-                    ProductName = productName,
-                    Quantity = qty,
-                    Amount = itemTotal,
-                    Category = category
-                });
-
-                MessageBox.Show(
-                    $"✅ Added {qty}x {productName}\n" +
-                    $"Subtotal: ₱{itemTotal}",
-                    "Added to Order"
-                );
-            }
         }
     }
 }

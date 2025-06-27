@@ -1,5 +1,4 @@
-﻿using Mare_POS.Database;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,13 +19,12 @@ namespace Mare_POS
         private int transactionNo;
         private decimal finalAmount;
 
-
+        // Original constructor
         public PopUpSplitComponent(int transactionNo, decimal finalAmount)
         {
             InitializeComponent();
             this.transactionNo = transactionNo;
             this.finalAmount = finalAmount;
-
 
             btnPlus.Click += btnPlus_Click;
             btnMinus.Click += btnMinus_Click;
@@ -46,6 +44,7 @@ namespace Mare_POS
             comboBox3.SelectedIndexChanged += PaymentDropdown_Changed;
         }
 
+        private TicketForm ticketform = new TicketForm();
         public PopUpSplitComponent(TicketForm parent)
         {
             InitializeComponent();
@@ -101,55 +100,76 @@ namespace Mare_POS
 
         private void btnCharge_Click(object sender, EventArgs e)
         {
-            // Initialize payment amounts
-            decimal cash = 0, gcash = 0, maya = 0, charge = 0;
-
-            // Read all 3 dropdown-amount pairs
-            ApplyPayment(comboBox1.Text, txtAmount1.Text, ref cash, ref gcash, ref maya);
-            ApplyPayment(comboBox2.Text, txtAmount2.Text, ref cash, ref gcash, ref maya);
-            ApplyPayment(comboBox3.Text, txtAmount3.Text, ref cash, ref gcash, ref maya);
-
-            // Total entered
-            decimal totalPaid = cash + gcash + maya + charge;
-
-            // Validate payment
-            if (totalPaid < finalAmount)
+            try
             {
-                MessageBox.Show("Payment is not enough.");
-                return;
+                // Collect payment data from the form
+                var payments = new List<(string Method, decimal Amount)>();
+
+                // Add payments from visible inputs
+                AddPaymentIfValid(comboBox1.Text, txtAmount1.Text, payments);
+                AddPaymentIfValid(comboBox2.Text, txtAmount2.Text, payments);
+
+                if (splitCount >= 3)
+                {
+                    AddPaymentIfValid(comboBox3.Text, txtAmount3.Text, payments);
+                }
+
+                // Validate that we have at least one payment
+                if (payments.Count == 0)
+                {
+                    MessageBox.Show("Please enter at least one payment method and amount.", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Validate total payment amount
+                decimal totalPaid = payments.Sum(p => p.Amount);
+                if (totalPaid < finalAmount)
+                {
+                    MessageBox.Show($"Payment is not enough. Required: ₱{finalAmount:0.00}, Paid: ₱{totalPaid:0.00}",
+                        "Insufficient Payment", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Call the existing FinalizeSplitPayment method from TicketForm
+                if (parentForm != null)
+                {
+                    parentForm.FinalizeSplitPayment(payments);
+                }
+                else
+                {
+                    ticketform.FinalizeSplitPayment(payments);
+                }
+
+                // Show receipt after successful payment
+                ShowReceipt(transactionNo);
+
+                this.Close(); // Close the split payment popup
             }
-
-            // Compute change
-            decimal change = totalPaid - finalAmount;
-
-            // Save to database
-            TicketPaymentBackend.SavePayment(transactionNo, cash, gcash, maya, change);
-
-            // Show receipt
-            ReceiptForm receipt = new ReceiptForm(transactionNo);
-            receipt.Show();
-
-            // Close popup
-            this.Close();
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error processing payment: {ex.Message}", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void ApplyPayment(string method, string amountText, ref decimal cash, ref decimal gcash, ref decimal maya)
+        private void AddPaymentIfValid(string method, string amountText, List<(string Method, decimal Amount)> payments)
         {
-            if (!decimal.TryParse(amountText, out decimal amount) || amount <= 0)
+            if (string.IsNullOrEmpty(method) || string.IsNullOrEmpty(amountText))
                 return;
 
-            switch (method)
+            // Remove currency symbol and parse
+            string cleanAmount = amountText.Replace("₱", "").Trim();
+            if (decimal.TryParse(cleanAmount, out decimal amount) && amount > 0)
             {
-                case "Cash":
-                    cash += amount;
-                    break;
-                case "GCash":
-                    gcash += amount;
-                    break;
-                case "Maya":
-                    maya += amount;
-                    break;
+                payments.Add((method, amount));
             }
+        }
+
+        private void ShowReceipt(int transactionNo)
+        {
+            ReceiptForm receipt = new ReceiptForm(transactionNo);
+            receipt.Show();
         }
 
         private void FormatCurrency(object sender, EventArgs e)
@@ -200,5 +220,9 @@ namespace Mare_POS
             }
         }
 
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

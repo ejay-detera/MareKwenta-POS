@@ -113,13 +113,13 @@
             // 
             SalesHistoryHeader.AutoSize = true;
             SalesHistoryHeader.BackColor = Color.Transparent;
-            SalesHistoryHeader.Font = new Font("Microsoft Sans Serif", 27.7499962F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            SalesHistoryHeader.Font = new Font("Unbounded Medium", 22.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
             SalesHistoryHeader.ForeColor = Color.FromArgb(78, 45, 24);
             SalesHistoryHeader.Location = new Point(0, 0);
             SalesHistoryHeader.Margin = new Padding(23, 0, 23, 0);
             SalesHistoryHeader.Name = "SalesHistoryHeader";
             SalesHistoryHeader.Padding = new Padding(23, 13, 11, 13);
-            SalesHistoryHeader.Size = new Size(346, 80);
+            SalesHistoryHeader.Size = new Size(362, 84);
             SalesHistoryHeader.TabIndex = 1;
             SalesHistoryHeader.Text = "Sales History";
             // 
@@ -215,6 +215,7 @@
             time_label.Size = new Size(78, 20);
             time_label.TabIndex = 2;
             time_label.Text = "10:20 pm";
+            time_label.Click += time_label_Click;
             // 
             // cuiPanel4
             // 

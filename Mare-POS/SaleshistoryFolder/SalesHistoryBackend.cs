@@ -1,7 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using Mare_POS.Models;
+using Mare_POS.TicketFolder.Models;
 
 namespace Mare_POS.SaleshistoryFolder
 {
@@ -99,7 +99,13 @@ namespace Mare_POS.SaleshistoryFolder
                 t.EmployeeID,
                 t.Date,
                 p.ProductName,
-                CONCAT(e.FirstName, ' ', LEFT(e.MiddleName, 1), '. ', e.LastName) AS EmployeeName
+                CASE 
+                    WHEN e.FirstName IS NOT NULL AND e.LastName IS NOT NULL THEN
+                        CONCAT(e.FirstName, ' ', 
+                               CASE WHEN e.MiddleName IS NOT NULL THEN CONCAT(LEFT(e.MiddleName, 1), '. ') ELSE '' END,
+                               e.LastName)
+                    ELSE NULL
+                END AS EmployeeName
             FROM ticket t
             LEFT JOIN product p ON p.ProductID = t.ProductID
             LEFT JOIN employees e ON e.EmployeeID = t.EmployeeID
@@ -116,13 +122,13 @@ namespace Mare_POS.SaleshistoryFolder
                         {
                             var ticket = new Ticket
                             {
-                                TicketID = Convert.ToInt32(reader["TicketID"]),
-                                TransactionNo = Convert.ToInt32(reader["TransactionNo"]),
-                                ProductID = Convert.ToInt32(reader["ProductID"]),
-                                ProductQuantity = Convert.ToInt32(reader["ProductQuantity"]),
-                                Size = reader["Size"]?.ToString(),
-                                Type = reader["Type"]?.ToString(),
-                                Subtotal = Convert.ToDecimal(reader["Subtotal"]),
+                                TicketID = reader["TicketID"] != DBNull.Value ? Convert.ToInt32(reader["TicketID"]) : 0,
+                                TransactionNo = reader["TransactionNo"] != DBNull.Value ? Convert.ToInt32(reader["TransactionNo"]) : 0,
+                                ProductID = reader["ProductID"] != DBNull.Value ? Convert.ToInt32(reader["ProductID"]) : 0,
+                                ProductQuantity = reader["ProductQuantity"] != DBNull.Value ? Convert.ToInt32(reader["ProductQuantity"]) : 0,
+                                Size = reader["Size"] != DBNull.Value ? reader["Size"].ToString() : null,
+                                Type = reader["Type"] != DBNull.Value ? reader["Type"].ToString() : null,
+                                SubTotal = reader["Subtotal"] != DBNull.Value ? Convert.ToDecimal(reader["Subtotal"]) : 0,
                                 TotalAmount = reader["TotalAmount"] != DBNull.Value ? Convert.ToDecimal(reader["TotalAmount"]) : 0,
                                 PaymentAmount = reader["PaymentAmount"] != DBNull.Value ? Convert.ToDecimal(reader["PaymentAmount"]) : 0,
                                 CashAmount = reader["CashAmount"] != DBNull.Value ? Convert.ToDecimal(reader["CashAmount"]) : 0,
@@ -130,11 +136,11 @@ namespace Mare_POS.SaleshistoryFolder
                                 MayaAmount = reader["MayaAmount"] != DBNull.Value ? Convert.ToDecimal(reader["MayaAmount"]) : 0,
                                 Change = reader["Change"] != DBNull.Value ? Convert.ToDecimal(reader["Change"]) : 0,
                                 DiscountRate = reader["DiscountRate"] != DBNull.Value ? Convert.ToDecimal(reader["DiscountRate"]) : 0,
-                                PaymentType = reader["PaymentType"]?.ToString(),
-                                DiscountType = reader["DiscountType"]?.ToString(),
+                                PaymentType = reader["PaymentType"] != DBNull.Value ? reader["PaymentType"].ToString() : null,
+                                DiscountType = reader["DiscountType"] != DBNull.Value ? reader["DiscountType"].ToString() : null,
                                 Date = reader["Date"] != DBNull.Value ? Convert.ToDateTime(reader["Date"]) : DateTime.MinValue,
-                                ProductName = reader["ProductName"]?.ToString(),
-                                EmployeeName = reader["EmployeeName"]?.ToString()
+                                ProductName = reader["ProductName"] != DBNull.Value ? reader["ProductName"].ToString() : null,
+                                EmployeeName = reader["EmployeeName"] != DBNull.Value ? reader["EmployeeName"].ToString() : null
                             };
                             ticket.UnitPrice = GetUnitPrice(ticket.ProductID, ticket.Size, ticket.Type);
                             ticketItems.Add(ticket);

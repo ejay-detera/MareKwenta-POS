@@ -36,11 +36,6 @@
             panel2 = new Panel();
             radioVenti = new RadioButton();
             radioGrande = new RadioButton();
-            label3 = new Label();
-            panel3 = new Panel();
-            chkWhipCream = new CheckBox();
-            chkDoppioShot = new CheckBox();
-            chkSoloShot = new CheckBox();
             label4 = new Label();
             panel4 = new Panel();
             cuiButton1 = new CuoreUI.Controls.cuiButton();
@@ -53,7 +48,6 @@
             labelQuantity = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
-            panel3.SuspendLayout();
             panel4.SuspendLayout();
             panel5.SuspendLayout();
             SuspendLayout();
@@ -66,11 +60,12 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(702, 70);
+            panel1.Size = new Size(603, 70);
             panel1.TabIndex = 0;
             // 
             // labelSubtotal
             // 
+            labelSubtotal.Anchor = AnchorStyles.None;
             labelSubtotal.Font = new Font("Microsoft Sans Serif", 17F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelSubtotal.ForeColor = Color.FromArgb(78, 45, 24);
             labelSubtotal.Location = new Point(185, 13);
@@ -82,6 +77,7 @@
             // 
             // button1
             // 
+            button1.Anchor = AnchorStyles.None;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -96,6 +92,7 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.None;
             label1.Font = new Font("Microsoft Sans Serif", 17F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(78, 45, 24);
             label1.Location = new Point(84, 13);
@@ -118,6 +115,7 @@
             // 
             // panel2
             // 
+            panel2.Anchor = AnchorStyles.None;
             panel2.Controls.Add(radioVenti);
             panel2.Controls.Add(radioGrande);
             panel2.Location = new Point(0, 111);
@@ -155,68 +153,12 @@
             radioGrande.UseVisualStyleBackColor = true;
             radioGrande.CheckedChanged += radioGrande_CheckedChanged;
             // 
-            // label3
-            // 
-            label3.Font = new Font("Microsoft Sans Serif", 17F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.FromArgb(78, 45, 24);
-            label3.Location = new Point(24, 267);
-            label3.Name = "label3";
-            label3.Size = new Size(107, 29);
-            label3.TabIndex = 5;
-            label3.Text = "Extras";
-            label3.Click += label3_Click;
-            // 
-            // panel3
-            // 
-            panel3.Controls.Add(chkWhipCream);
-            panel3.Controls.Add(chkDoppioShot);
-            panel3.Controls.Add(chkSoloShot);
-            panel3.Location = new Point(0, 307);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(702, 103);
-            panel3.TabIndex = 6;
-            // 
-            // chkWhipCream
-            // 
-            chkWhipCream.Font = new Font("Microsoft Sans Serif", 15F);
-            chkWhipCream.Location = new Point(237, 55);
-            chkWhipCream.Name = "chkWhipCream";
-            chkWhipCream.Size = new Size(194, 32);
-            chkWhipCream.TabIndex = 0;
-            chkWhipCream.Text = "Whip Cream";
-            chkWhipCream.TextAlign = ContentAlignment.MiddleCenter;
-            chkWhipCream.UseVisualStyleBackColor = true;
-            chkWhipCream.CheckedChanged += chkWhipCream_CheckedChanged_1;
-            // 
-            // chkDoppioShot
-            // 
-            chkDoppioShot.Font = new Font("Microsoft Sans Serif", 15F);
-            chkDoppioShot.Location = new Point(371, 14);
-            chkDoppioShot.Name = "chkDoppioShot";
-            chkDoppioShot.Size = new Size(194, 35);
-            chkDoppioShot.TabIndex = 0;
-            chkDoppioShot.Text = "Doppio Shot";
-            chkDoppioShot.TextAlign = ContentAlignment.MiddleCenter;
-            chkDoppioShot.UseVisualStyleBackColor = true;
-            chkDoppioShot.CheckedChanged += chkDoppioShot_CheckedChanged_1;
-            // 
-            // chkSoloShot
-            // 
-            chkSoloShot.Font = new Font("Microsoft Sans Serif", 15F);
-            chkSoloShot.Location = new Point(111, 17);
-            chkSoloShot.Name = "chkSoloShot";
-            chkSoloShot.Size = new Size(194, 28);
-            chkSoloShot.TabIndex = 0;
-            chkSoloShot.Text = "Solo Shot";
-            chkSoloShot.TextAlign = ContentAlignment.MiddleCenter;
-            chkSoloShot.UseVisualStyleBackColor = true;
-            chkSoloShot.CheckedChanged += chkSoloShot_CheckedChanged_1;
-            // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.None;
             label4.Font = new Font("Microsoft Sans Serif", 17F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.FromArgb(78, 45, 24);
-            label4.Location = new Point(24, 422);
+            label4.Location = new Point(24, 276);
             label4.Name = "label4";
             label4.Size = new Size(140, 33);
             label4.TabIndex = 7;
@@ -226,9 +168,9 @@
             // 
             panel4.Controls.Add(cuiButton1);
             panel4.Dock = DockStyle.Bottom;
-            panel4.Location = new Point(0, 494);
+            panel4.Location = new Point(0, 455);
             panel4.Name = "panel4";
-            panel4.Size = new Size(702, 84);
+            panel4.Size = new Size(603, 84);
             panel4.TabIndex = 9;
             // 
             // cuiButton1
@@ -252,7 +194,7 @@
             cuiButton1.ImageAutoCenter = true;
             cuiButton1.ImageExpand = new Point(0, 0);
             cuiButton1.ImageOffset = new Point(0, 0);
-            cuiButton1.Location = new Point(566, 17);
+            cuiButton1.Location = new Point(433, 13);
             cuiButton1.Name = "cuiButton1";
             cuiButton1.NormalBackground = Color.FromArgb(78, 45, 24);
             cuiButton1.NormalForeColor = Color.White;
@@ -264,7 +206,7 @@
             cuiButton1.PressedImageTint = Color.White;
             cuiButton1.PressedOutline = Color.FromArgb(64, 128, 128, 128);
             cuiButton1.Rounding = new Padding(8);
-            cuiButton1.Size = new Size(101, 47);
+            cuiButton1.Size = new Size(148, 59);
             cuiButton1.TabIndex = 7;
             cuiButton1.TextAlignment = StringAlignment.Center;
             cuiButton1.TextOffset = new Point(0, 0);
@@ -282,6 +224,7 @@
             // 
             // panel5
             // 
+            panel5.Anchor = AnchorStyles.None;
             panel5.Controls.Add(radioHot);
             panel5.Controls.Add(radioCold);
             panel5.Location = new Point(0, 208);
@@ -321,6 +264,7 @@
             // 
             // btnPlus
             // 
+            btnPlus.Anchor = AnchorStyles.None;
             btnPlus.CheckButton = false;
             btnPlus.Checked = false;
             btnPlus.CheckedBackground = Color.FromArgb(255, 106, 0);
@@ -339,7 +283,7 @@
             btnPlus.ImageAutoCenter = true;
             btnPlus.ImageExpand = new Point(0, 0);
             btnPlus.ImageOffset = new Point(0, 0);
-            btnPlus.Location = new Point(371, 430);
+            btnPlus.Location = new Point(327, 339);
             btnPlus.Name = "btnPlus";
             btnPlus.NormalBackground = Color.FromArgb(242, 239, 234);
             btnPlus.NormalForeColor = Color.Black;
@@ -359,6 +303,7 @@
             // 
             // btnMinus
             // 
+            btnMinus.Anchor = AnchorStyles.None;
             btnMinus.CheckButton = false;
             btnMinus.Checked = false;
             btnMinus.CheckedBackground = Color.FromArgb(255, 106, 0);
@@ -377,7 +322,7 @@
             btnMinus.ImageAutoCenter = true;
             btnMinus.ImageExpand = new Point(0, 0);
             btnMinus.ImageOffset = new Point(0, 0);
-            btnMinus.Location = new Point(237, 430);
+            btnMinus.Location = new Point(180, 339);
             btnMinus.Name = "btnMinus";
             btnMinus.NormalBackground = Color.FromArgb(242, 239, 234);
             btnMinus.NormalForeColor = Color.Black;
@@ -397,9 +342,10 @@
             // 
             // labelQuantity
             // 
+            labelQuantity.Anchor = AnchorStyles.None;
             labelQuantity.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelQuantity.ForeColor = Color.Black;
-            labelQuantity.Location = new Point(319, 434);
+            labelQuantity.Location = new Point(273, 351);
             labelQuantity.Name = "labelQuantity";
             labelQuantity.Size = new Size(48, 44);
             labelQuantity.TabIndex = 12;
@@ -410,9 +356,8 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            AutoScroll = true;
             BackColor = Color.FromArgb(242, 239, 234);
-            ClientSize = new Size(702, 578);
+            ClientSize = new Size(603, 539);
             ControlBox = false;
             Controls.Add(btnPlus);
             Controls.Add(btnMinus);
@@ -421,21 +366,19 @@
             Controls.Add(label5);
             Controls.Add(panel4);
             Controls.Add(label4);
-            Controls.Add(panel3);
-            Controls.Add(label3);
             Controls.Add(panel2);
             Controls.Add(label2);
             Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "ProductComponent";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "ProductComponent";
+            Text = "Product Component";
             TransparencyKey = Color.Transparent;
+            Load += ProductComponent_Load;
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
-            panel3.ResumeLayout(false);
             panel4.ResumeLayout(false);
             panel5.ResumeLayout(false);
             ResumeLayout(false);
@@ -449,14 +392,9 @@
         private Label label2;
         private Panel panel2;
         private RadioButton radioVenti;
-        private Label label3;
-        private Panel panel3;
-        private CheckBox chkSoloShot;
         private Label label4;
         private Panel panel4;
         private RadioButton radioGrande;
-        private CheckBox chkWhipCream;
-        private CheckBox chkDoppioShot;
         private Label label5;
         private Panel panel5;
         private RadioButton radioCold;

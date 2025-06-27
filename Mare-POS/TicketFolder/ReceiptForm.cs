@@ -1,5 +1,5 @@
-﻿using Mare_POS.Database;
-using Mare_POS.Models;
+﻿using Mare_POS.TicketFolder.Database;
+using Mare_POS.TicketFolder.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,6 +36,7 @@ namespace Mare_POS
 
             Ticket first = items[0];
 
+
             lblPOS.Text = "POS: POS 1"; // if POS is fixed
 
             // Populate bottom labels
@@ -43,10 +44,11 @@ namespace Mare_POS
             lblTransaction.Text = $"#{first.TransactionNo}";
 
             // Populate payment breakdown
-            lblCash.Text = first.CashAmount > 0 ? $"₱ {first.CashAmount:N2}" : "₱";
-            lblGCash.Text = first.GcashAmount > 0 ? $"₱ {first.GcashAmount:N2}" : "₱";
+            lblCash.Text = first.CashAmount > 0 ? $"₱ {first.CashAmount:N2}" : "₱ 0.00";
+            lblGCash.Text = first.GcashAmount > 0 ? $"₱ {first.GcashAmount:N2}" : "₱ 0.00";
             lblMaya.Text = first.MayaAmount > 0 ? $"₱ {first.MayaAmount:N2}" : "₱";
             lblChange.Text = $"₱ {first.Change:N2}";
+            lbldiscount.Text = first.DiscountRate > 0 ? $"{first.DiscountRate:N0}%" : "0%";
             lblTotal.Text = $"₱ {first.TotalAmount:N2}";
 
             // Clear and populate items in FlowLayoutPanel
@@ -83,6 +85,16 @@ namespace Mare_POS
         private void cuiButton1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void flow_receipt_info_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

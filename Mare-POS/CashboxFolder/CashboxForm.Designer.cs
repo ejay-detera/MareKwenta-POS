@@ -561,6 +561,7 @@
             mayalabel.Size = new Size(174, 43);
             mayalabel.TabIndex = 2;
             mayalabel.Text = "₱ 3,100.00";
+            mayalabel.Click += mayalabel_Click;
             // 
             // label34
             // 

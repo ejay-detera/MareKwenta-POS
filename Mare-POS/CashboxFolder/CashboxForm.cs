@@ -641,7 +641,14 @@ namespace Mare_POS.CashboxFolder
             {
                 string paymentType = row["paymentType"]?.ToString() ?? "";
                 decimal totalAmount = Convert.ToDecimal(row["totalAmount"] ?? 0);
-                string category = row["Category"]?.ToString() ?? "";
+
+                // Get GCash and Maya amounts directly from the columns
+                decimal gcashAmount = Convert.ToDecimal(row["GCashAmount"] ?? 0);
+                decimal mayaAmount = Convert.ToDecimal(row["MayaAmount"] ?? 0);
+
+                // Add to respective totals
+                gcashTotal += gcashAmount;
+                mayaTotal += mayaAmount;
 
                 if (paymentType == "Cash")
                 {
@@ -650,16 +657,6 @@ namespace Mare_POS.CashboxFolder
                 else if (paymentType == "Non-Cash")
                 {
                     nonCashSales += totalAmount;
-
-                    // Check for specific categories within Non-Cash
-                    if (category == "Gcash")
-                    {
-                        gcashTotal += totalAmount;
-                    }
-                    else if (category == "Maya")
-                    {
-                        mayaTotal += totalAmount;
-                    }
                 }
             }
 
@@ -684,14 +681,11 @@ namespace Mare_POS.CashboxFolder
             cashlabel.Text = "₱" + cash.ToString("F2");
             cashexpenseslabel.Text = "₱" + cashExpenses.ToString("F2");
             gcashlabel.Text = "₱" + gcashTotal.ToString("F2");
-            mayalabel.Text = "₱" + mayaTotal.ToString("F2"); // Assuming you have a maya label
+            mayalabel.Text = "₱" + mayaTotal.ToString("F2");
 
             // Calculate net cash (Cash + Non-Cash sales - Cash expenses - Non-Cash expenses)
             decimal netCash = cash + nonCashSales - cashExpenses - nonCashExpenses;
-
             cashsaleslabel.Text = "₱" + netCash.ToString("F2");
-            // If you want to display the net cash calculation somewhere
-            // netcashlabel.Text = netCash.ToString("F2");
         }
         private void DateChanger()
         {
@@ -749,6 +743,11 @@ namespace Mare_POS.CashboxFolder
         }
 
         private void noncashlabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mayalabel_Click(object sender, EventArgs e)
         {
 
         }

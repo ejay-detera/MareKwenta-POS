@@ -39,16 +39,17 @@
             label2 = new Label();
             label29 = new Label();
             panel16 = new Panel();
+            label4 = new Label();
             lblMaya = new Label();
             lblGCash = new Label();
             label39 = new Label();
             label38 = new Label();
-            cuiLabel5 = new CuoreUI.Controls.cuiLabel();
             lblChange = new Label();
             lblCash = new Label();
             label32 = new Label();
             label31 = new Label();
             lblTotal = new Label();
+            cuiLabel5 = new CuoreUI.Controls.cuiLabel();
             panel17 = new Panel();
             cuiLabel6 = new CuoreUI.Controls.cuiLabel();
             lblTransaction = new Label();
@@ -57,6 +58,7 @@
             cuiLabel4 = new CuoreUI.Controls.cuiLabel();
             panel3 = new Panel();
             flow_receipt_info = new FlowLayoutPanel();
+            lbldiscount = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel16.SuspendLayout();
@@ -181,11 +183,12 @@
             // 
             // panel16
             // 
+            panel16.Controls.Add(lbldiscount);
+            panel16.Controls.Add(label4);
             panel16.Controls.Add(lblMaya);
             panel16.Controls.Add(lblGCash);
             panel16.Controls.Add(label39);
             panel16.Controls.Add(label38);
-            panel16.Controls.Add(cuiLabel5);
             panel16.Controls.Add(lblChange);
             panel16.Controls.Add(lblCash);
             panel16.Controls.Add(label32);
@@ -195,8 +198,18 @@
             panel16.Dock = DockStyle.Top;
             panel16.Location = new Point(0, 548);
             panel16.Name = "panel16";
-            panel16.Size = new Size(391, 157);
+            panel16.Size = new Size(391, 179);
             panel16.TabIndex = 4;
+            // 
+            // label4
+            // 
+            label4.Font = new Font("Microsoft Sans Serif", 10F);
+            label4.Location = new Point(17, 141);
+            label4.Name = "label4";
+            label4.Size = new Size(80, 26);
+            label4.TabIndex = 41;
+            label4.Text = "Discount";
+            label4.Click += label4_Click;
             // 
             // lblMaya
             // 
@@ -235,21 +248,6 @@
             label38.Size = new Size(80, 26);
             label38.TabIndex = 37;
             label38.Text = "Gcash";
-            // 
-            // cuiLabel5
-            // 
-            cuiLabel5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            cuiLabel5.BackColor = Color.White;
-            cuiLabel5.Content = "-------------------------------------------------------------------------------";
-            cuiLabel5.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiLabel5.ForeColor = Color.Black;
-            cuiLabel5.HorizontalAlignment = StringAlignment.Center;
-            cuiLabel5.Location = new Point(12, 133);
-            cuiLabel5.Margin = new Padding(0);
-            cuiLabel5.Name = "cuiLabel5";
-            cuiLabel5.Size = new Size(366, 22);
-            cuiLabel5.TabIndex = 36;
-            cuiLabel5.VerticalAlignment = StringAlignment.Near;
             // 
             // lblChange
             // 
@@ -299,15 +297,31 @@
             lblTotal.TabIndex = 3;
             lblTotal.Text = "₱ 1085.00";
             // 
+            // cuiLabel5
+            // 
+            cuiLabel5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            cuiLabel5.BackColor = Color.White;
+            cuiLabel5.Content = "-------------------------------------------------------------------------------";
+            cuiLabel5.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cuiLabel5.ForeColor = Color.Black;
+            cuiLabel5.HorizontalAlignment = StringAlignment.Center;
+            cuiLabel5.Location = new Point(9, 3);
+            cuiLabel5.Margin = new Padding(0);
+            cuiLabel5.Name = "cuiLabel5";
+            cuiLabel5.Size = new Size(366, 22);
+            cuiLabel5.TabIndex = 36;
+            cuiLabel5.VerticalAlignment = StringAlignment.Near;
+            // 
             // panel17
             // 
             panel17.Controls.Add(cuiLabel6);
             panel17.Controls.Add(lblTransaction);
             panel17.Controls.Add(lblDate);
-            panel17.Dock = DockStyle.Top;
-            panel17.Location = new Point(0, 705);
+            panel17.Controls.Add(cuiLabel5);
+            panel17.Dock = DockStyle.Fill;
+            panel17.Location = new Point(0, 727);
             panel17.Name = "panel17";
-            panel17.Size = new Size(391, 56);
+            panel17.Size = new Size(391, 134);
             panel17.TabIndex = 5;
             // 
             // cuiLabel6
@@ -318,7 +332,7 @@
             cuiLabel6.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cuiLabel6.ForeColor = Color.Black;
             cuiLabel6.HorizontalAlignment = StringAlignment.Center;
-            cuiLabel6.Location = new Point(9, 34);
+            cuiLabel6.Location = new Point(9, 51);
             cuiLabel6.Margin = new Padding(0);
             cuiLabel6.Name = "cuiLabel6";
             cuiLabel6.Size = new Size(370, 20);
@@ -329,7 +343,7 @@
             // 
             lblTransaction.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblTransaction.Font = new Font("Microsoft Sans Serif", 11F);
-            lblTransaction.Location = new Point(268, 12);
+            lblTransaction.Location = new Point(271, 25);
             lblTransaction.Name = "lblTransaction";
             lblTransaction.Size = new Size(106, 26);
             lblTransaction.TabIndex = 8;
@@ -338,7 +352,7 @@
             // lblDate
             // 
             lblDate.Font = new Font("Microsoft Sans Serif", 11F);
-            lblDate.Location = new Point(18, 12);
+            lblDate.Location = new Point(18, 25);
             lblDate.Name = "lblDate";
             lblDate.Size = new Size(161, 26);
             lblDate.TabIndex = 6;
@@ -365,7 +379,7 @@
             cuiButton1.ImageAutoCenter = true;
             cuiButton1.ImageExpand = new Point(0, 0);
             cuiButton1.ImageOffset = new Point(0, 0);
-            cuiButton1.Location = new Point(276, 760);
+            cuiButton1.Location = new Point(276, 818);
             cuiButton1.Name = "cuiButton1";
             cuiButton1.NormalBackground = Color.FromArgb(78, 45, 24);
             cuiButton1.NormalForeColor = Color.White;
@@ -415,6 +429,17 @@
             flow_receipt_info.Name = "flow_receipt_info";
             flow_receipt_info.Size = new Size(391, 271);
             flow_receipt_info.TabIndex = 36;
+            flow_receipt_info.Paint += flow_receipt_info_Paint;
+            // 
+            // lbldiscount
+            // 
+            lbldiscount.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lbldiscount.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbldiscount.Location = new Point(257, 141);
+            lbldiscount.Name = "lbldiscount";
+            lbldiscount.Size = new Size(98, 26);
+            lbldiscount.TabIndex = 42;
+            lbldiscount.Text = "20%";
             // 
             // ReceiptForm
             // 
@@ -422,7 +447,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = Color.White;
-            ClientSize = new Size(391, 803);
+            ClientSize = new Size(391, 861);
             ControlBox = false;
             Controls.Add(cuiButton1);
             Controls.Add(panel17);
@@ -476,5 +501,7 @@
         private CuoreUI.Controls.cuiLabel cuiLabel4;
         private Panel panel3;
         private FlowLayoutPanel flow_receipt_info;
+        private Label label4;
+        private Label lbldiscount;
     }
 }

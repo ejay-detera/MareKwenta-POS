@@ -1,10 +1,10 @@
-﻿using Mare_POS.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
+using Mare_POS.TicketFolder.Models;
 
-namespace Mare_POS.Database
+namespace Mare_POS.TicketFolder.Database
 {
     public class TicketDataAccess
     {

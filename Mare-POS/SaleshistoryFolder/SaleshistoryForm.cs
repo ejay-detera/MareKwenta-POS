@@ -1,5 +1,4 @@
 ﻿using CuoreUI.Controls;
-using Mare_POS.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -96,7 +95,7 @@ namespace Mare_POS.SaleshistoryFolder
 
             if (ticketID > 0)
             {
-                DisplayReceipt(ticketID); 
+                DisplayReceipt(ticketID);
             }
             else
             {
@@ -147,11 +146,11 @@ namespace Mare_POS.SaleshistoryFolder
                 {
                     var ticketPanel = new Panel
                     {
-                        Height = 90,  
+                        Height = 90,
                         Width = flowLayoutPanel1.Width - 60,
                         BackColor = Color.White,
                         Margin = new Padding(15, 5, 15, 5),
-                        BorderStyle = BorderStyle.None,  
+                        BorderStyle = BorderStyle.None,
                         Cursor = Cursors.Hand,
                         Tag = ticket.TicketID
                     };
@@ -171,7 +170,7 @@ namespace Mare_POS.SaleshistoryFolder
                         Image = Properties.Resources.receipt_icon,
                         SizeMode = PictureBoxSizeMode.StretchImage,
                         Location = new Point(10, 20),
-                        Size = new Size(35, 35)  
+                        Size = new Size(35, 35)
                     };
                     ticketPanel.Controls.Add(icon);
 
@@ -241,7 +240,7 @@ namespace Mare_POS.SaleshistoryFolder
             var summary = items.FirstOrDefault(t => t.TotalAmount > 0)
                         ?? items.OrderBy(t => t.TicketID).First();
 
-            decimal calculatedSubtotal = items.Sum(i => i.Subtotal);
+            decimal calculatedSubtotal = items.Sum(i => i.SubTotal);
 
             lblOrderNo.Text = $"#{summary?.TransactionNo}";
             lblEmployeeName.Text = $"Employee Name: {summary?.EmployeeName}";
@@ -287,7 +286,7 @@ namespace Mare_POS.SaleshistoryFolder
 
                 var lblAmount = new Label
                 {
-                    Text = $"₱{item.Subtotal:F2}",
+                    Text = $"₱{item.SubTotal:F2}",
                     Font = new Font("Segoe UI", 10, FontStyle.Bold),
                     AutoSize = true,
                     Location = new Point(itemPanel.Width - 90, 20)
@@ -307,6 +306,11 @@ namespace Mare_POS.SaleshistoryFolder
         }
 
         private void lblMaya_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void time_label_Click(object sender, EventArgs e)
         {
 
         }
