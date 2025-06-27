@@ -42,41 +42,42 @@ namespace Mare_POS
         public event Action<Item> ItemAdded;
 
         private decimal cashReceived = 0;
+        private decimal precalculated = 0;
 
 
         // ✅ Add event handler method for child controls
-        private void HandleProductSelection(string productName)
+ private void HandleProductSelection(string productName)
+{
+    // Get ProductID dynamically from database
+    int productId = ProductDataAccess.GetProductId(productName);
+    if (productId == 0)
+    {
+        MessageBox.Show($"Product '{productName}' not found in database!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        return;
+    }
+    
+    var popup = new ProductComponent();
+    popup.StartPosition = FormStartPosition.CenterParent;
+    popup.ProductId = productId;
+    popup.ProductName = productName;
+    
+    string category = DetermineCategory(productName);
+    if (popup.ShowDialog(this) == DialogResult.OK)
+    {
+        // ✅ Get the calculated total from the popup
+        decimal calculatedTotal = popup.Total;
+        
+        // ✅ Check and deduct inventory BEFORE adding to order
+        if (!DeductInventoryForProduct(productId, popup.Quantity, popup.SelectedSize, popup.SelectedType, category))
         {
-            // Get ProductID dynamically from database
-            int productId = ProductDataAccess.GetProductId(productName);
-            if (productId == 0)
-            {
-                MessageBox.Show($"Product '{productName}' not found in database!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            var popup = new ProductComponent();
-            popup.StartPosition = FormStartPosition.CenterParent;
-            popup.ProductId = productId;
-            popup.ProductName = productName;
-
-            // Use your existing DetermineCategory method instead of non-existent GetProductCategory
-            string category = DetermineCategory(productName);
-
-            if (popup.ShowDialog(this) == DialogResult.OK)
-            {
-                // ✅ Check and deduct inventory BEFORE adding to order
-                // Use category instead of popup.Ca (which doesn't exist)
-                if (!DeductInventoryForProduct(productId, popup.Quantity, popup.SelectedSize, popup.SelectedType, category))
-                {
-                    // Inventory deduction failed, don't add the item
-                    return;
-                }
-
-                // ✅ Use centralized method
-                AddItemToOrder(productId, productName, popup.SelectedSize, popup.SelectedType, popup.Quantity);
-            }
+            // Inventory deduction failed, don't add the item
+            return;
         }
+        
+        // ✅ Use centralized method with the calculated total
+        AddItemToOrder(productId, productName, popup.SelectedSize, popup.SelectedType, popup.Quantity, calculatedTotal);
+    }
+}
         private bool DeductInventoryForProduct(int productId, int orderQuantity, string size, string type, string category)
         {
             try
@@ -193,37 +194,44 @@ namespace Mare_POS
 
         private void HandleItemAddedFromChild(Item item)
         {
-            // ✅ Use centralized method with item data
-            AddItemToOrder(item.ProductID, item.ProductName, item.ProductSize, item.ProductType, item.Quantity);
+
+            try
+            {
+                AddItemToOrder(item.ProductID, item.ProductName, item.ProductSize, item.ProductType, item.Quantity, item.Amount);
+
+                //MessageBox.Show($"✅ AddItemToOrder completed successfully", "Debug - After AddItemToOrder");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"❌ ERROR in HandleItemAddedFromChild:\n{ex.Message}\n\nStack Trace:\n{ex.StackTrace}", "Error");
+            }
         }
 
-        // ✅ Centralized method that ensures all items get proper EmployeeID
-        private void AddItemToOrder(int productId, string productName, string size, string type, int quantity)
+        private void AddItemToOrder(int productId, string productName, string size, string type, int quantity, decimal preCalculatedAmount)
         {
-            var currentEmployeeID = GetCurrentEmployeeID(); // ✅ Centralized EmployeeID
 
+
+            var currentEmployeeID = GetCurrentEmployeeID();
             string category = DetermineCategory(productName);
 
-            // Get prices dynamically
-            decimal basePrice = ProductDataAccess.GetBasePrice(productId, size, type);
+            decimal itemTotal = preCalculatedAmount;
 
-            decimal itemTotal = basePrice * quantity;
-
-            // Add to cart with proper EmployeeID and all required fields
+            // Add to cart with the CORRECT amount
             currentOrder.Add(new Item
             {
-                EmployeeID = currentEmployeeID, // ✅ Always gets EmployeeID
+                EmployeeID = currentEmployeeID,
                 ProductID = productId,
                 ProductName = productName,
                 ProductSize = size ?? "Grande",
                 ProductType = type ?? "Hot",
                 Quantity = quantity,
-                Amount = itemTotal,
+                Amount = itemTotal, 
                 Category = category
             });
 
             AddItemToTicketPanel(currentOrder.Last());
             UpdateSubtotalLabel();
+
         }
         private void lblTypeTemplate_Click(object sender, EventArgs e)
         {
@@ -399,11 +407,7 @@ namespace Mare_POS
 
             if (splitForm.ShowDialog(this) == DialogResult.OK)
             {
-                // Access public properties from SplitForm
-                //string part1 = splitForm.Part1;
-                //string part2 = splitForm.Part2;
-
-                //MessageBox.Show($"Split result:\nPart 1: {part1}\nPart 2: {part2}");
+                
             }
         }
 
@@ -429,7 +433,7 @@ namespace Mare_POS
 
         private void cuiButton5_Click(object sender, EventArgs e)
         {
-            HandleProductSelection("Cappucino");
+            HandleProductSelection("Cappuccino");
         }
 
         private void cuiButton17_Click(object sender, EventArgs e)
@@ -993,15 +997,16 @@ namespace Mare_POS
                 decimal paymentAmount = cashAmount + gcashAmount + mayaAmount;
                 decimal change = paymentAmount - totalAmount;
 
-                // Ensure change is not negative (except for exact payments like GCash/Maya)
-                if (change < 0 && paymentMethod == "Cash")
+                // Validate sufficient payment
+                if (change < 0)
                 {
                     MessageBox.Show("Insufficient payment amount!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
-                // For digital payments, change should be 0
-                if (paymentMethod != "Cash")
+                // For pure digital payments (no cash), change should be 0
+                // For split payments or cash payments, calculate change normally
+                if (paymentMethod != "Cash" && paymentMethod != "Split" && cashAmount == 0)
                 {
                     change = 0;
                 }
@@ -1051,7 +1056,7 @@ namespace Mare_POS
         private void ShowReceipt(int transactionNo)
         {
             ReceiptForm receipt = new ReceiptForm(transactionNo);
-            receipt.Show();
+            receipt.ShowDialog();
         }
 
         private void btnFood_Click_1(object sender, EventArgs e)

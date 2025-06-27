@@ -141,9 +141,6 @@ namespace Mare_POS
                     ticketform.FinalizeSplitPayment(payments);
                 }
 
-                // Show receipt after successful payment
-                ShowReceipt(transactionNo);
-
                 this.Close(); // Close the split payment popup
             }
             catch (Exception ex)

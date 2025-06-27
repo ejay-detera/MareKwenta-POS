@@ -70,7 +70,7 @@ namespace Mare_POS
 
         private void cuiButton3_Click(object sender, EventArgs e)
         {
-            string productName = "Beef Pares";
+            string productName = "Hamsilog";
             HandleFoodSelection(productName);
         }
 
@@ -130,6 +130,11 @@ namespace Mare_POS
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

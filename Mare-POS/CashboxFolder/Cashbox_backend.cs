@@ -58,13 +58,14 @@ namespace Mare_POS
         }
 
         public DataTable GetAllTicket()
-            {
+        {
             try
             {
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
                     connection.Open();
-                    string query = "SELECT * FROM ticket WHERE Date = CURDATE() ORDER BY Date DESC;";
+                    // Fixed query - use DATE() function to extract just the date part
+                    string query = "SELECT * FROM ticket WHERE DATE(Date) = CURDATE() ORDER BY Date DESC;";
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
                         MySqlDataAdapter adapter = new MySqlDataAdapter(command);

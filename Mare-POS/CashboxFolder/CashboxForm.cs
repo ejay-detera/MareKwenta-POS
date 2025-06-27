@@ -628,64 +628,55 @@ namespace Mare_POS.CashboxFolder
             DataTable dt = cashboxBackend.GetAllTicket();
             DataTable dt2 = cashboxBackend.GetAllExpenses();
 
+
             // Initialize totals
-            decimal cash = 0;
-            decimal nonCashSales = 0;
+            decimal totalCashAmount = 0;      // From CashAmount column
+            decimal totalGCashAmount = 0;     // From GCashAmount column  
+            decimal totalMayaAmount = 0;      // From MayaAmount column
+            decimal totalSales = 0;           // Total of all sales
             decimal cashExpenses = 0;
             decimal nonCashExpenses = 0;
-            decimal gcashTotal = 0;
-            decimal mayaTotal = 0;
 
-            // Process ticket data (sales)
+            // Process ticket data (sales) - Handle each payment method separately
             foreach (DataRow row in dt.Rows)
             {
-                string paymentType = row["paymentType"]?.ToString() ?? "";
-                decimal totalAmount = Convert.ToDecimal(row["totalAmount"] ?? 0);
-
-                // Get GCash and Maya amounts directly from the columns
-                decimal gcashAmount = Convert.ToDecimal(row["GCashAmount"] ?? 0);
-                decimal mayaAmount = Convert.ToDecimal(row["MayaAmount"] ?? 0);
+                // Get amounts from specific columns (safer null handling)
+                decimal cashAmount = (row["CashAmount"] == DBNull.Value) ? 0 : Convert.ToDecimal(row["CashAmount"]);
+                decimal gcashAmount = (row["GCashAmount"] == DBNull.Value) ? 0 : Convert.ToDecimal(row["GCashAmount"]);
+                decimal mayaAmount = (row["MayaAmount"] == DBNull.Value) ? 0 : Convert.ToDecimal(row["MayaAmount"]);
 
                 // Add to respective totals
-                gcashTotal += gcashAmount;
-                mayaTotal += mayaAmount;
+                totalCashAmount += cashAmount;
+                totalGCashAmount += gcashAmount;
+                totalMayaAmount += mayaAmount;
 
-                if (paymentType == "Cash")
-                {
-                    cash += totalAmount;
-                }
-                else if (paymentType == "Non-Cash")
-                {
-                    nonCashSales += totalAmount;
-                }
+                totalSales += cashAmount + gcashAmount + mayaAmount;
             }
 
             // Process expenses data
             foreach (DataRow row in dt2.Rows)
             {
                 string category = row["Category"]?.ToString() ?? "";
-                decimal expenseAmount = Convert.ToDecimal(row["expenseAmount"] ?? 0);
+                decimal expenseAmount = Convert.ToDecimal(row["ExpenseAmount"] ?? 0);
 
-                if (category == "Cash")
+                if (category.Equals("Cash", StringComparison.OrdinalIgnoreCase))
                 {
                     cashExpenses += expenseAmount;
                 }
-                else if (category == "Non-Cash")
+                else if (category.Equals("Non-Cash", StringComparison.OrdinalIgnoreCase))
                 {
                     nonCashExpenses += expenseAmount;
                 }
             }
 
-            // Update labels
-            noncashlabel.Text = "₱" + nonCashExpenses.ToString("F2");
-            cashlabel.Text = "₱" + cash.ToString("F2");
-            cashexpenseslabel.Text = "₱" + cashExpenses.ToString("F2");
-            gcashlabel.Text = "₱" + gcashTotal.ToString("F2");
-            mayalabel.Text = "₱" + mayaTotal.ToString("F2");
+            cashlabel.Text = "₱" + totalCashAmount.ToString("F2");           // Cash from sales
+            gcashlabel.Text = "₱" + totalGCashAmount.ToString("F2");         // GCash total
+            mayalabel.Text = "₱" + totalMayaAmount.ToString("F2");           // Maya total
+            cashexpenseslabel.Text = "₱" + cashExpenses.ToString("F2");      // Cash expenses
+            noncashlabel.Text = "₱" + nonCashExpenses.ToString("F2");        // Non-cash expenses
 
-            // Calculate net cash (Cash + Non-Cash sales - Cash expenses - Non-Cash expenses)
-            decimal netCash = cash + nonCashSales - cashExpenses - nonCashExpenses;
-            cashsaleslabel.Text = "₱" + netCash.ToString("F2");
+            decimal netAmount = totalSales - cashExpenses - nonCashExpenses;
+            cashsaleslabel.Text = "₱" + netAmount.ToString("F2");            // Net amount
         }
         private void DateChanger()
         {

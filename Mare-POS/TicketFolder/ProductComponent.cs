@@ -29,6 +29,8 @@ namespace Mare_POS.Ticket_Components
         public string? SelectedType { get; private set; }
         public int Quantity { get; private set; }
 
+        public decimal Total { get; set; }
+
         private int quantity = 1;
 
         private void radioGrande_CheckedChanged(object sender, EventArgs e) => UpdateSubtotal();
@@ -39,7 +41,6 @@ namespace Mare_POS.Ticket_Components
         private void chkSoloShot_CheckedChanged_1(object sender, EventArgs e) => UpdateSubtotal();
         private void chkDoppioShot_CheckedChanged_1(object sender, EventArgs e) => UpdateSubtotal();
         private void chkWhipCream_CheckedChanged_1(object sender, EventArgs e) => UpdateSubtotal();
-
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -86,6 +87,9 @@ namespace Mare_POS.Ticket_Components
 
             // ✅ Handle Quantity
             Quantity = quantity;
+
+            // ✅ Calculate and store the final total
+            CalculateFinalTotal();
 
             // ✅ Close the popup with result
             this.DialogResult = DialogResult.OK;
@@ -135,11 +139,36 @@ namespace Mare_POS.Ticket_Components
                 decimal basePrice = ProductDataAccess.GetBasePrice(productId, size, type);
                 decimal total = basePrice * quantity;
 
-                labelSubtotal.Text = $"{total:0.00}";
+                // ✅ Update the Total property as well
+                Total = total;
+
+                labelSubtotal.Text = $"₱{total:0.00}";
             }
             catch
             {
+                Total = 0m; // ✅ Set Total to 0 on error
                 labelSubtotal.Text = "₱0.00"; // fallback
+            }
+        }
+
+        // ✅ New method to calculate final total with all add-ons
+        private void CalculateFinalTotal()
+        {
+            try
+            {
+                int productId = ProductId;
+                string size = SelectedSize ?? "Grande";
+                string type = SelectedType ?? "Hot";
+
+                decimal basePrice = ProductDataAccess.GetBasePrice(productId, size, type);
+                decimal total = basePrice * quantity;
+
+
+                Total = total;
+            }
+            catch
+            {
+                Total = 0m;
             }
         }
 
